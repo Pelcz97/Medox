@@ -6,6 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{ae}
 \usepackage{glossaries}
+\usepackage{graphicx}
 \usepackage[bookmarks,bookmarksnumbered]{hyperref}
 
 \makenoidxglossaries
@@ -14,28 +15,42 @@
 	plural=Apps,
 	description={Als Mobile App (auf Deutsch meist in der Kurzform die App, eine Abkürzung für den Fachbegriff Applikation) wird eine Anwendungssoftware für Mobilgeräte beziehungsweise mobile Betriebssysteme bezeichnet}
 }
+
+\newglossaryentry{Desktop Anwendung}
+{	name=Desktop Anwendung,
+	plural=Desktop Anwendungen,
+	description={Als Desktop Anwendungen (auch Anwendungsprogramm, kurz Anwendung oder Applikation; englisch application software, kurz App) werden Computerprogramme bezeichnet, die genutzt werden, um eine nützliche oder gewünschte nicht systemtechnische Funktionalität zu bearbeiten oder zu unterstützen. Sie dienen der „Lösung von Benutzerproblemen“}
+}
  
 \begin{document}
  
+
 \begin{titlepage}
+	\centering
+	\includegraphics[width=0.5\textwidth]{myMD_Logo}\par\vspace{0.5cm}
+	{\itshape\huge myMD \par}
+	\vspace{3cm}
+	{\scshape\Large Pflichtenheft\par}
+	\vspace{3cm}
+	{\Large\itshape Philipp Pelcz, Philipp Karcher, Jan-Luca Vettel\par}
+	\vfill
+	supervised by\par
+	Marc Aurel Kiefer \textsc{Brown}
 
-\title{myMD - Pflichtenheft}
-\author{Philipp Pelcz \and Philipp Karcher \and Jan-Luca Vettel}
+	\vfill
 
-\end{titlepage} 
-
-\maketitle
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
  
 
 % Platzierung des Inhaltsverzeichnisses
 \tableofcontents
  
 \chapter{Zielbestimmung}
-Dieses Kapitel dient der Bestimmung von Zielen und nicht für deren Verwendung
-notwendige Funktionen.
 
 \section{Einleitung}
-Dies ist ein Produkt, um medizinische Daten aufzulisten
+
  
 \section{Musskriterien (MK)}
 Musskriterien: Für das Produkt unabdingbare Leistungen, die in jedem Fall
@@ -106,7 +121,7 @@ TEXT...
 \section{Systemarchitektur}
 \section{Szenarien}
 \subsection{Szenario: Patient lädt sich neue Daten auf myMD}
-Max Mustermann ist ein neuer Nutzer von myMD. Deshalb hat er auf seinem Konto auch noch keine Arztbriefe eingetragen. Also geht er zu seinem Hausarzt, um seine Krankenakte für die myMD \gls{App} zu erhalten. Der Arzt öffnet dafür seine Praxissoftware und exportiert alle Arztbriefe, die zu Max gehören, und lädt diese in das Desktop-Sendetool von myMD. Nachdem die Arztbriefe in dem Sendetool angezeigt werden, klickt der Arzt auf den Button "Daten senden". Nun wechselt Max auf seiner myMD \gls{App} in das Senden-Menü und klickt "Daten empfangen". Auf Max's myMD \gls{App} erscheint jetzt die Nachricht, dass die Daten an ihn gesendet werden. Sobald der Sendeprozess beendet ist, kann der Arzt das Desktop-Sendetool von myMD schließen und sich dem nächsten Patienten widmen. Max hat jetzt all seine Arztbriefe auf seinem Handy und kann sich diese jederzeit in der myMD \gls{App} anzeigen lassen. Sie werden in dem Tab "Übersicht", chronologisch sortiert, dargestellt. Wenn er genauere Informationen zu einem bestimmten Arztbrief haben möchte, kann er auf den Arztbrief klicken und dieser wird nun auf dem ganzen Bildschirm, mit allen Informationen, dargestellt. So hat Max jederzeit eine Übersicht
+Max Mustermann ist ein neuer Nutzer von myMD. Deshalb hat er auf seinem Konto auch noch keine Arztbriefe eingetragen. Also geht er zu seinem Hausarzt, um seine Krankenakte für die myMD \gls{App} zu erhalten. Der Arzt öffnet dafür seine Praxissoftware und exportiert alle Arztbriefe, die zu Max gehören, und lädt diese in das \gls{Desktop Anwendung} von myMD. Nachdem die Arztbriefe in dem Sendetool angezeigt werden, klickt der Arzt auf den Button "Daten senden". Nun wechselt Max auf seiner myMD \gls{App} in das Senden-Menü und klickt "Daten empfangen". Auf Max's myMD \gls{App} erscheint jetzt die Nachricht, dass die Daten an ihn gesendet werden. Sobald der Sendeprozess beendet ist, kann der Arzt das \gls{Desktop Anwendung} von myMD schließen und sich dem nächsten Patienten widmen. Max hat jetzt all seine Arztbriefe auf seinem Handy und kann sich diese jederzeit in der myMD \gls{App} anzeigen lassen. Sie werden in dem Tab "Übersicht", chronologisch sortiert, dargestellt. Wenn er genauere Informationen zu einem bestimmten Arztbrief haben möchte, kann er auf den Arztbrief klicken und dieser wird nun auf dem ganzen Bildschirm, mit allen Informationen, dargestellt. So hat Max jederzeit eine Übersicht
 
 \subsection{Eigene Daten ansehen und editieren}
 Greg leidet seit einigen Tagen unter starken Magenbeschwerden. Sein Hausarzt findet keine Ursache für die Beschwerden und überweist ihn deshalb an den Spezialisten Dr. Haus und verschreibt ihm etwas gegen die Schmerzen. Dr. Haus glaubt die Ursache gefunden zu haben, diese lässt sich aber nur durch eine Operation beseitigen, für die er Greg an einen Chirurgen überweist. Bevor dem Eingriff zustimmt, will er sich noch eine zweite Meinung einholen. Dafür lässt er sich von seinem Hausarzt einen weiteren Spezialisten empfehlen, der jedoch keine medizinische Ursache für das Problem erkennen kann. Er empfiehlt Greg eine psychotherapeutische Behandlung und verschreibt ihm zur Überbrückung ein stärkeres Schmerzmittel. Bei so vielen verschieden Ärzten und Diagnosen hat Greg nun etwas den Überblick verloren. Glücklicherweise hat er bei seinen Arztbesuchen myMD verwendet und hat nun alle relevanten Daten auf seinem Handy gesammelt und kann sich in der App einen Überblick verschaffen. Letztendlich entscheidet sich Greg es mit der Psychotherapie zu versuchen und entfernt die nun überflüssigen schwächeren Schmerzmittel aus der Liste seiner Medikationen in myMD. seiner Krankengeschichte.
