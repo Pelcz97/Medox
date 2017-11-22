@@ -6,5 +6,7 @@
 *.pdf
 *.gz
 *.toc
-*.gitignore
+<<<<<<< HEAD
+=======
 !Kit_Logo.pdf
+>>>>>>> a59665d62f558d096c2d6a1b3987f840021e4cad
