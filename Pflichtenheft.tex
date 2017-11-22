@@ -170,15 +170,22 @@ TODO: Eintragen
 TODO: Eintragen
 
 \chapter{Systemmodelle}
-TODO: Eintragen
 \section{Systemarchitektur}
-TODO: Eintragen
+TODO: fancy Bild einfügen \\\\
+Die Softwarearchitektur lässt sich auf zwei Ebenen betrachten, das Gesamtsystem mit Desktopanwendung des Arztes und mobilen Anwendung des Patienten und die Teilsysteme auf den jeweiligen Geräten. \\\\
+Da die einzelnen Geräte im Gesamtsystem gleichberechtigt miteinander kommunizieren sollen, wird es als Partnernetz realisiert.\\\\
+Die Teilsysteme auf den Nutzergeräten enthalten lokale Daten, die in einer graphischen Benutzeroberfläche dargestellt werden sollen. Um die Datenverwaltung von der Darstellung zu trennen wird die Model-View-Controller Architektur verwendet.
+
 \section{Szenarien}
-\subsection{Szenario: Patient lädt sich neue Daten auf myMD}
+\subsection{Szenario 1: Patient lädt sich neue Daten auf myMD}
 Max Mustermann ist ein neuer Nutzer von myMD. Deshalb hat er auf seinem Konto auch noch keine Arztbriefe eingetragen. Also geht er zu seinem Hausarzt, um seine Krankenakte für die myMD \gls{App} zu erhalten. Der Arzt öffnet dafür seine Praxissoftware und exportiert alle Arztbriefe, die zu Max gehören, und lädt diese in das \gls{Desktop Anwendung} von myMD. Nachdem die Arztbriefe in dem Sendetool angezeigt werden, klickt der Arzt auf den Button "Daten senden". Nun wechselt Max auf seiner myMD \gls{App} in das Senden-Menü und klickt "Daten empfangen". Auf Max's myMD \gls{App} erscheint jetzt die Nachricht, dass die Daten an ihn gesendet werden. Sobald der Sendeprozess beendet ist, kann der Arzt das \gls{Desktop Anwendung} von myMD schließen und sich dem nächsten Patienten widmen. Max hat jetzt all seine Arztbriefe auf seinem Handy und kann sich diese jederzeit in der myMD \gls{App} anzeigen lassen. Sie werden in dem Tab "Übersicht", chronologisch sortiert, dargestellt. Wenn er genauere Informationen zu einem bestimmten Arztbrief haben möchte, kann er auf den Arztbrief klicken und dieser wird nun auf dem ganzen Bildschirm, mit allen Informationen, dargestellt. So hat Max jederzeit eine Übersicht
 
-\subsection{Eigene Daten ansehen und editieren}
+\subsection{Szenario 2: Eigene Daten ansehen und editieren}
 Greg leidet seit einigen Tagen unter starken Magenbeschwerden. Sein Hausarzt findet keine Ursache für die Beschwerden und überweist ihn deshalb an den Spezialisten Dr. Haus und verschreibt ihm etwas gegen die Schmerzen. Dr. Haus glaubt die Ursache gefunden zu haben, diese lässt sich aber nur durch eine Operation beseitigen, für die er Greg an einen Chirurgen überweist. Bevor dem Eingriff zustimmt, will er sich noch eine zweite Meinung einholen. Dafür lässt er sich von seinem Hausarzt einen weiteren Spezialisten empfehlen, der jedoch keine medizinische Ursache für das Problem erkennen kann. Er empfiehlt Greg eine psychotherapeutische Behandlung und verschreibt ihm zur Überbrückung ein stärkeres Schmerzmittel. Bei so vielen verschieden Ärzten und Diagnosen hat Greg nun etwas den Überblick verloren. Glücklicherweise hat er bei seinen Arztbesuchen myMD verwendet und hat nun alle relevanten Daten auf seinem Handy gesammelt und kann sich in der App einen Überblick verschaffen. Letztendlich entscheidet sich Greg es mit der Psychotherapie zu versuchen und entfernt die nun überflüssigen schwächeren Schmerzmittel aus der Liste seiner Medikationen in myMD. seiner Krankengeschichte.
+
+\subsection{Szenario 3: Patient übermittelt Daten an Arzt}
+Gregs Beschwerden wollen kein Ende nehmen. Um der Ursache auf die Schliche zu kommen, überweist ihn sein Hausarzt nun an einen Gastroenterologen. Wie üblich bei neuen Patienten, möchte sich dieser zunächst mittels einer Anamnese einen Überblick über den Stand der Dinge verschaffen. Dank der myMD App hat Greg jederzeit all seine Arztbriefe bei sich und kann diese nun seinem behandelnden Arzt zur Einsicht freigeben. Hierfür navigiert Greg in der myMD App in den Tab „Senden“, wo er nun aus einer Liste all seiner Arztbriefe jene auswählen kann, die er mit seinem Arzt teilen möchte. Greg entschließt sich dazu, nur Arztbriefe der letzten 6 Monate zu übertragen. \\
+Per Knopfdruck beginnt das verschlüsselte Senden der Daten per Bluetooth an den Computer des Arztes, auf welchem der Desktop-Klient von myMD die Daten verarbeitet und dem Arzt präsentiert. Schnell vermutet dieser, dass eine Wechselwirkung zwischen zwei eingenommenen Medikamenten die wahrscheinlichste Ursache für Gregs Leiden ist.
 
 \section{Anwendungsfälle}
 TODO: Diagramme erstellen und Eintragen
