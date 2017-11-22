@@ -6,6 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{ae}
 \usepackage[bookmarks,bookmarksnumbered]{hyperref}
+
  
 \begin{document}
  
@@ -37,32 +38,38 @@ unbedingt notwendig. Sie sollten nur angestrebt werden, falls noch ausreichend
 Kapazitäten vorhanden sind.
  
 \section{Abgrenzungskriterien (AK)}
-Abgrenzungskriterien: Diese Kriterien sollen bewusst nicht erreicht werden.
- 
+%Abgrenzungskriterien: Diese Kriterien sollen bewusst nicht erreicht werden.
+\begin{tabular}{ll}
+[KA1010] &  Die Anwendung selbst stellt keine medizinischen Diagnosen. \\
+{[KA1020]} &  Es werden keine Daten auf einem Server oder in einer Cloud gespeichert. \\
+{[KA1030]} &  Die Anwendung stellt keinen Ersatz zu einem Arzttermin dar. \\
+{[KA1040]} &  Die Anwendung stellt keinen Ersatz zu eine rVersichertenkarte dar. \\
+{[KA1050]} &  Es gibt keine Möglichkeit zur Terminvereinbarung. \\
+\end{tabular}
+
 \chapter{Produkteinsatz}
-Der geplante Einsatz des Systems ist die Grundlage für Benutzungsoberfläche und
-Qualitätsanforderungen.
+%Der geplante Einsatz des Systems ist die Grundlage für Benutzungsoberfläche und Qualitätsanforderungen.
 
 \section{Einsatzgebiet}
-Hier wird das Einsatzgebiet beschrieben
+myMD ist bei Arztebesuchen aller Art und in jeder anderen Situation in der man auf seine medizinschen Daten zugreifen möchte einsetzbar.
  
 \section{Produktumgebung}
 Ein Pflichtenheft wird bspw. in einer IT-Abteilung genutzt.
 
 \section{Betriebsbedingungen}
-Betriebsbedingungen: Die Betriebsbedingungen spezifiziert die physikalische
-Umgebung des Systems, die tägliche Betriebszeit, und ob das System ständiger
-Beobachtung durch Bediener ausgesetzt ist, oder ein unbeaufsichtigter Betrieb
-beabsichtigt ist.
+%Betriebsbedingungen: Die Betriebsbedingungen spezifiziert die physikalische Umgebung des Systems, die tägliche Betriebszeit, und ob das System ständiger Beobachtung durch Bediener ausgesetzt ist, oder ein unbeaufsichtigter Betrieb beabsichtigt ist.
  
  
 \section{Zielgruppe}
-Die Zielgruppe besteht also aus Informatikern, die mit der Projektplanung
-beauftragt wurden.
+%Die Zielgruppe besteht also aus Informatikern, die mit der Projektplanung beauftragt wurden.
+Die Anwendung richtet sich an zwei verschiedene Zielgruppen:  \\\\
+\begin{tabular}{lll}
+PATIENTEN &  \multicolumn{2}{p{12cm}}{Dies sind alle Menschen die momentan oder in der Vergangenheit eine medizinische Behandlung oder Beratung in Anspruch genommen haben. Ihr Ziel ist es alle Daten darüber auf ihrem Handy zu sammeln und einsehen zu können.}\\
+ÄRZTE &  \multicolumn{2}{p{12cm}}{Diese bieten medizinische Behandlung und Beratung an. Die Anwendung erlaubt ihnen alle relevanten medizinischen Daten über einen Patienten von diesem zu erhalten und ihm selbst erstellte Daten zu übermitteln.}  \\
+\end{tabular}
 
 \chapter{Produktfunktionen}
-Funktionalität: Spezifikation der einzelnen Produktfunktionen mit genauer und
-detaillierter Beschreibung.
+Funktionalität: Spezifikation der einzelnen Produktfunktionen mit genauer und detaillierter Beschreibung.
 
 \begin{itemize}
   \item Typische Arbeitsabläufe
@@ -87,6 +94,8 @@ TEXT...
 \chapter{Systemmodelle}
 \section{Systemarchitektur}
 \section{Szenarien}
+Szenario: Greg leidet seit einigen Tagen unter starken Magenbeschwerden. Sein Hausarzt findet keine Ursache für die Beschwerden und überweist ihn deshalb an den Spezialisten Dr. Haus und verschreibt ihm etwas gegen die Schmerzen. Dr. Haus glaubt die Ursache gefunden zu haben, diese lässt sich aber nur durch eine Operation beseitigen, für die er Greg an einen Chirurgen überweist. Bevor dem Eingriff zustimmt, will er sich noch eine zweite Meinung einholen. Dafür lässt er sich von seinem Hausarzt einen weiteren Spezialisten empfehlen, der jedoch keine medizinische Ursache für das Problem erkennen kann. Er empfiehlt Greg eine psychotherapeutische Behandlung und verschreibt ihm zur Überbrückung ein stärkeres Schmerzmittel. Bei so vielen verschieden Ärzten und Diagnosen hat Greg nun etwas den Überblick verloren. Glücklicherweise hat er bei seinen Arztbesuchen myMD verwendet und hat nun alle relevanten Daten auf seinem Handy gesammelt und kann sich in der App einen Überblick verschaffen. Letztendlich entscheidet sich Greg es mit der Psychotherapie zu versuchen und entfernt die nun überflüssigen schwächeren Schmerzmittel aus der Liste seiner Medikationen in myMD.
+
 \section{Anwendungsfälle}
 \section{Benutzungsoberfläche}
 Benutzungsoberfläche: grundlegende Anforderungen, Zugriffsrechte
