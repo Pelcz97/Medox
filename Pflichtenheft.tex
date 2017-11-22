@@ -5,13 +5,16 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{ae}
-\usepackage[onehalfspacing]{setspace}
 \usepackage[scaled]{uarial}
 \renewcommand\familydefault{\sfdefault} 
 \usepackage[T1]{fontenc}
 \usepackage{glossaries}
 \usepackage{graphicx}
 \usepackage[bookmarks,bookmarksnumbered]{hyperref}
+
+
+\setcounter{tocdepth}{1} 
+\setcounter{secnumdepth}{2} 
 
 \makenoidxglossaries
 \newglossaryentry{App}
@@ -25,13 +28,18 @@
 	plural=Desktop Anwendungen,
 	description={Als Desktop Anwendungen (auch Anwendungsprogramm, kurz Anwendung oder Applikation; englisch application software, kurz App) werden Computerprogramme bezeichnet, die genutzt werden, um eine nützliche oder gewünschte nicht systemtechnische Funktionalität zu bearbeiten oder zu unterstützen. Sie dienen der „Lösung von Benutzerproblemen“}
 }
+
+\newglossaryentry{Drag and Drop}
+{	name=Drag and Drop,
+	description={Drag and Drop, oft auch Drag’n’Drop, deutsch „Ziehen und Ablegen“, ist eine Methode zur Bedienung grafischer Benutzeroberflächen von Rechnern durch das Bewegen grafischer Elemente mittels eines Zeigegerätes. Ein Element wie z. B. ein Piktogramm kann damit gezogen und über einem möglichen Ziel losgelassen werden. Dieses kann zum Beispiel markierter Text oder das Symbol einer Datei sein. }
+}
  
 \begin{document}
  
 
 \begin{titlepage}
 \begin{figure}[h]
-	\vspace{-3cm}
+	\vspace{-4cm}
 	\hspace{-2cm}
 	\includegraphics[ width=0.3\textwidth]{Kit_Logo}
 	\label{fig:Aufg03_1}
@@ -57,22 +65,53 @@
 
 % Platzierung des Inhaltsverzeichnisses
 \tableofcontents
- 
+\addtocontents{toc}{\protect\enlargethispage{1cm}}
+
+
+
 \chapter{Zielbestimmung}
 
 \section{Einleitung}
-
+TODO: eine coole 1 seitige Einleitung schreiben
  
 \section{Musskriterien (MK)}
-Musskriterien: Für das Produkt unabdingbare Leistungen, die in jedem Fall
-erfüllt werden müssen \footnote{gezwungen sein, etwas zu tun (Dies ist eine
-beispielhafte Fußnote).}. Das System ist ohne diese Funktionen für seinen
-gedachten Zweck nicht einsetzbar.
+\subsection{Patientenseitige Datenübertragung}
+\begin{tabular}{lll}
+[MK1010] & \multicolumn{2}{p{12cm}}  {Die Arztbriefe können von der \gls{Desktop Anwendung} auf die myMD \gls{App} des Patienten übertragen werden.} \\
+{[MK1020]} & \multicolumn{2}{p{12cm}}  {Die Übertragung findet verschlüsselt über Bluetooth statt.} \\
+\end{tabular}
+
+\subsection{Darstellung}
+\begin{tabular}{lll}
+[MK2010] & \multicolumn{2}{p{12cm}}  {Arztbriefe werden chronologisch absteigend im Tab Übersicht dargestellt.} \\
+{[MK2020]} & \multicolumn{2}{p{12cm}}  {Der Nutzer kann nicht benötigte/nicht gewollte Arztbriefe löschen.} \\
+{[MK2030]} & \multicolumn{2}{p{12cm}}  {Aus einem dargestellten Arztbrief kann man immer die Diagnose, verordnete Medikament, das Datum und den Namen des Arztes entnehmen.} \\
+\end{tabular}
+
+\subsection{Patientenseitige Datenübertragung}
+\begin{tabular}{lll}
+[MK3010] & \multicolumn{2}{p{12cm}}  {Der Nutzer kann ein eigenes Profil anlegen, welches Daten wie den Namen, Blutgruppe, Versicherungsnummer und Allergien enthält.} \\
+{[MK3020]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird in Deutsch angeboten.} \\
+
+\end{tabular}
+
+\subsection{Desktop Anwendung}
+\begin{tabular}{lll}
+{[MK4010]} & \multicolumn{2}{p{12cm}}  {Die Desktop Anwendung kann die Geräte in der Nähe\footnote{Dies sind alle Bluetoothgeräte, die der Computer findet anzeigen }.} \\
+{[MK4020]} & \multicolumn{2}{p{12cm}}  {Der Arzt kann unter den Geräten in der Nähe das Handy des Patienten als Empfänger auswählen.} \\
+{[MK4030]} & \multicolumn{2}{p{12cm}}  {Die Dateien können entweder per \gls{Drag and Drop} oder über einen Explorer in die Desktop Anwendung geladen werden.} \\
+{[MK4040]} & \multicolumn{2}{p{12cm}}  {Die Daten werden auf Knopfdruck an das Handy des Patienten gesendet.} \\
+\end{tabular}
+
+\subsection{Kompabilität}
+\begin{tabular}{lll}
+[MK5010] & \multicolumn{2}{p{12cm}}  {Die \gls{Desktop Anwendung}wird von Microsoft Windows 10 unterstützt.} \\
+{[MK5020]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird von Android 6.0 (und höher) unterstützt.} \\
+
+\end{tabular}
  
 \section{Wunschkriterien (WK)}
-Kannkriterien: Die Erfüllung der Kannkriterien ist erwünscht, jedoch nicht
-unbedingt notwendig. Sie sollten nur angestrebt werden, falls noch ausreichend
-Kapazitäten vorhanden sind.
+TODO: WK eintragen
  
 \section{Abgrenzungskriterien (AK)}
 \begin{tabular}{ll}
@@ -81,6 +120,7 @@ Kapazitäten vorhanden sind.
 {[KA1030]} &  Die Anwendung stellt keinen Ersatz zu einem Arzttermin dar. \\
 {[KA1040]} &  Die Anwendung stellt keinen Ersatz zu einer Versichertenkarte dar. \\
 {[KA1050]} &  Es gibt keine Möglichkeit zur Terminvereinbarung. \\
+{[KA1060]} &  Der Nutzer kann einen Arztbrief nicht editieren. \\
 \end{tabular}
  
 \chapter{Produkteinsatz}
@@ -89,7 +129,7 @@ Kapazitäten vorhanden sind.
 myMD ist bei Arztebesuchen aller Art und in jeder anderen Situation in der man auf seine medizinschen Daten zugreifen möchte einsetzbar.
 
 \section{Produktumgebung}
-
+TODO: Eingeben
 
 \section{Betriebsbedingungen}
 \begin{tabular}{lll}
@@ -106,30 +146,27 @@ PATIENTEN &  \multicolumn{2}{p{12cm}}{Dies sind alle Menschen die momentan oder 
 \end{tabular}
 
 \chapter{Produktfunktionen}
-Funktionalität: Spezifikation der einzelnen Produktfunktionen mit genauer und detaillierter Beschreibung.
-
-\begin{itemize}
-  \item Typische Arbeitsabläufe
-  \item Keine Angabe von typischen Verwaltungsfunktionen (CRUD \footnote{Create,
-Read, Update, Delete}
-\end{itemize}
+TODO: Funktionen überlegen und eintragen, dazu am besten an Kriterien halten
 
 \section{Grundfunktionen}
-Hier stehen die Grundfunktionen
+TODO: Eintragen
 
 \section{Optionale Funktionen}
-Hier stehen optionale Funktionen
+TODO: Eintragen
 
 \section{Produktleistungen}
-Hier stehen die Produktleistungen
+TODO: Eintragen
 
 \section{Qualitäts-Zielbestimmungen}
-TEXT...
+TODO: Eintragen
 
 \chapter{Produktdaten}
+TODO: Eintragen
 
 \chapter{Systemmodelle}
+TODO: Eintragen
 \section{Systemarchitektur}
+TODO: Eintragen
 \section{Szenarien}
 \subsection{Szenario: Patient lädt sich neue Daten auf myMD}
 Max Mustermann ist ein neuer Nutzer von myMD. Deshalb hat er auf seinem Konto auch noch keine Arztbriefe eingetragen. Also geht er zu seinem Hausarzt, um seine Krankenakte für die myMD \gls{App} zu erhalten. Der Arzt öffnet dafür seine Praxissoftware und exportiert alle Arztbriefe, die zu Max gehören, und lädt diese in das \gls{Desktop Anwendung} von myMD. Nachdem die Arztbriefe in dem Sendetool angezeigt werden, klickt der Arzt auf den Button "Daten senden". Nun wechselt Max auf seiner myMD \gls{App} in das Senden-Menü und klickt "Daten empfangen". Auf Max's myMD \gls{App} erscheint jetzt die Nachricht, dass die Daten an ihn gesendet werden. Sobald der Sendeprozess beendet ist, kann der Arzt das \gls{Desktop Anwendung} von myMD schließen und sich dem nächsten Patienten widmen. Max hat jetzt all seine Arztbriefe auf seinem Handy und kann sich diese jederzeit in der myMD \gls{App} anzeigen lassen. Sie werden in dem Tab "Übersicht", chronologisch sortiert, dargestellt. Wenn er genauere Informationen zu einem bestimmten Arztbrief haben möchte, kann er auf den Arztbrief klicken und dieser wird nun auf dem ganzen Bildschirm, mit allen Informationen, dargestellt. So hat Max jederzeit eine Übersicht
@@ -138,9 +175,9 @@ Max Mustermann ist ein neuer Nutzer von myMD. Deshalb hat er auf seinem Konto au
 Greg leidet seit einigen Tagen unter starken Magenbeschwerden. Sein Hausarzt findet keine Ursache für die Beschwerden und überweist ihn deshalb an den Spezialisten Dr. Haus und verschreibt ihm etwas gegen die Schmerzen. Dr. Haus glaubt die Ursache gefunden zu haben, diese lässt sich aber nur durch eine Operation beseitigen, für die er Greg an einen Chirurgen überweist. Bevor dem Eingriff zustimmt, will er sich noch eine zweite Meinung einholen. Dafür lässt er sich von seinem Hausarzt einen weiteren Spezialisten empfehlen, der jedoch keine medizinische Ursache für das Problem erkennen kann. Er empfiehlt Greg eine psychotherapeutische Behandlung und verschreibt ihm zur Überbrückung ein stärkeres Schmerzmittel. Bei so vielen verschieden Ärzten und Diagnosen hat Greg nun etwas den Überblick verloren. Glücklicherweise hat er bei seinen Arztbesuchen myMD verwendet und hat nun alle relevanten Daten auf seinem Handy gesammelt und kann sich in der App einen Überblick verschaffen. Letztendlich entscheidet sich Greg es mit der Psychotherapie zu versuchen und entfernt die nun überflüssigen schwächeren Schmerzmittel aus der Liste seiner Medikationen in myMD. seiner Krankengeschichte.
 
 \section{Anwendungsfälle}
+TODO: Diagramme erstellen und Eintragen
 \section{Benutzungsoberfläche}
-Benutzungsoberfläche: grundlegende Anforderungen, Zugriffsrechte
- 
+TODO: GUI Entwürfe  einbinden
 \begin{figure}[ht]
   \centering
   \rule{8cm}{6cm}
@@ -149,8 +186,11 @@ Benutzungsoberfläche: grundlegende Anforderungen, Zugriffsrechte
 
 \chapter{Testfälle}
 \section{Basis Testfälle}
+TODO: Eintragen
 \section{Erweiterte Testfälle}
+TODO: Eintragen
 \section{TestSzenarien}
+TODO: Eintragen
  
 
 \chapter{Entwicklungsumgebung}
@@ -169,9 +209,6 @@ Versionierung & \multicolumn{2}{p{12cm}}{Git, GitLab} \\
 Omen by HP &  \multicolumn{2}{p{12cm}}{Intel Core i7-6700HQ CPU @ 2.60GHz \newline 16GB DDR3 RAM  \newline 64-Bit Microsoft Windows 10}\\
 \end{tabular}
  
-\section{Orgware}
-Orgware: Angabe der organisatorische Rahmenbedingungen, die vor Projektstart
-erfüllt sein müssen.
  
 \printnoidxglossaries
 
