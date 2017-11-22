@@ -6,7 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{ae}
 
-\usepackage[scaled]{uarial}
+\usepackage[scaled]{helvet}
 \renewcommand\familydefault{\sfdefault} 
 
 \usepackage[onehalfspacing]{setspace}
@@ -53,7 +53,7 @@
 	\vspace{1.5cm}
 	\centering
 	\includegraphics[width=0.5\textwidth]{myMD_Logo}\par\vspace{0.5cm}
-	{\itshape\huge myMD \par}
+	{\huge myMD \par}
 	\vspace{2cm}
 	{\scshape\Large Pflichtenheft\par}
 	\vspace{2cm}
@@ -80,39 +80,39 @@
 \section{Einleitung}
 TODO: eine coole 1 seitige Einleitung schreiben
  
-\section{Musskriterien (MK)}
+\section{Pflichtkriterien (MK)}
 \subsection{Patientenseitige Datenübertragung}
 \begin{tabular}{lll}
-[MK1010] & \multicolumn{2}{p{12cm}}  {Die Arztbriefe können von der \gls{Desktop Anwendung} auf die myMD \gls{App} des Patienten übertragen werden.} \\
-{[MK1020]} & \multicolumn{2}{p{12cm}}  {Die Übertragung findet verschlüsselt über Bluetooth statt.} \\
+[PK1010] & \multicolumn{2}{p{12cm}}  {Die Arztbriefe können von der \gls{Desktop Anwendung} auf die myMD \gls{App} des Patienten übertragen werden.} \\
+{[PK1020]} & \multicolumn{2}{p{12cm}}  {Die Übertragung erfolgt verschlüsselt über Bluetooth.} \\
 \end{tabular}
 
 \subsection{Darstellung}
 \begin{tabular}{lll}
-[MK2010] & \multicolumn{2}{p{12cm}}  {Arztbriefe werden chronologisch absteigend im Tab Übersicht dargestellt.} \\
-{[MK2020]} & \multicolumn{2}{p{12cm}}  {Der Nutzer kann nicht benötigte/nicht gewollte Arztbriefe löschen.} \\
-{[MK2030]} & \multicolumn{2}{p{12cm}}  {Aus einem dargestellten Arztbrief kann man immer die Diagnose, verordnete Medikament, das Datum und den Namen des Arztes entnehmen.} \\
+[PK2010] & \multicolumn{2}{p{12cm}}  {Arztbriefe werden chronologisch absteigend im Tab Übersicht dargestellt.} \\
+{[PK2020]} & \multicolumn{2}{p{12cm}}  {Der Nutzer kann überflüssige/unerwünschte Arztbriefe löschen.} \\
+{[PK2030]} & \multicolumn{2}{p{12cm}}  {Die Darstellung eines Arztbriefes umfasst die Diagnose, verordnete Medikamente, das Datum und den Namen des behandelnden Arztes.} \\
 \end{tabular}
 
 \subsection{Patientenseitige Datenübertragung}
 \begin{tabular}{lll}
-[MK3010] & \multicolumn{2}{p{12cm}}  {Der Nutzer kann ein eigenes Profil anlegen, welches Daten wie den Namen, Blutgruppe, Versicherungsnummer und Allergien enthält.} \\
-{[MK3020]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird in Deutsch angeboten.} \\
+[PK3010] & \multicolumn{2}{p{12cm}}  {Der Nutzer kann ein eigenes Profil anlegen, welches Daten wie den Namen, Versicherungsnummer, Blutgruppe und Allergien enthält.} \\
+{[PK3020]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird in Deutsch angeboten.} \\
 
 \end{tabular}
 
 \subsection{Desktop Anwendung}
 \begin{tabular}{lll}
-{[MK4010]} & \multicolumn{2}{p{12cm}}  {Die Desktop Anwendung kann die Geräte in der Nähe anzeigen.} \\
-{[MK4020]} & \multicolumn{2}{p{12cm}}  {Der Arzt kann unter den Geräten in der Nähe das Handy des Patienten als Empfänger auswählen.} \\
-{[MK4030]} & \multicolumn{2}{p{12cm}}  {Die Dateien können entweder per \gls{Drag and Drop} oder über einen Explorer in die Desktop Anwendung geladen werden.} \\
-{[MK4040]} & \multicolumn{2}{p{12cm}}  {Die Daten werden auf Knopfdruck an das Handy des Patienten gesendet.} \\
+{[PK4010]} & \multicolumn{2}{p{12cm}}  {Die Desktop Anwendung kann die Geräte in der Nähe anzeigen.} \\
+{[PK4020]} & \multicolumn{2}{p{12cm}}  {Der Arzt kann unter den Geräten in der Nähe das Mobilgerät des Patienten als Empfänger auswählen.} \\
+{[PK4030]} & \multicolumn{2}{p{12cm}}  {Die Dateien können entweder per \gls{Drag and Drop} oder über einen Explorer in die Desktop Anwendung geladen werden.} \\
+{[PK4040]} & \multicolumn{2}{p{12cm}}  {Die Daten werden auf Knopfdruck an das Mobilgerät des Patienten gesendet.} \\
 \end{tabular}
 
 \subsection{Kompabilität}
 \begin{tabular}{lll}
-[MK5010] & \multicolumn{2}{p{12cm}}  {Die \gls{Desktop Anwendung}wird von Microsoft Windows 10 unterstützt.} \\
-{[MK5020]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird von Android 6.0 (und höher) unterstützt.} \\
+[PK5010] & \multicolumn{2}{p{12cm}}  {Die \gls{Desktop Anwendung}wird von Microsoft Windows 10 unterstützt.} \\
+{[PK5020]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird von Android 6.0 (und höher) unterstützt.} \\
 
 \end{tabular}
  
@@ -121,34 +121,34 @@ TODO: WK eintragen
  
 \section{Abgrenzungskriterien (AK)}
 \begin{tabular}{ll}
-[KA1010] &  Die Anwendung selbst stellt keine medizinischen Diagnosen. \\
-{[KA1020]} &  Es werden keine Daten auf einem Server oder in einer Cloud gespeichert. \\
-{[KA1030]} &  Die Anwendung stellt keinen Ersatz zu einem Arzttermin dar. \\
-{[KA1040]} &  Die Anwendung stellt keinen Ersatz zu einer Versichertenkarte dar. \\
-{[KA1050]} &  Es gibt keine Möglichkeit zur Terminvereinbarung. \\
-{[KA1060]} &  Der Nutzer kann einen Arztbrief nicht editieren. \\
+[AK1010] &  Die Anwendung selbst stellt keine medizinischen Diagnosen. \\
+{[AK1020]} &  Es werden keine Daten auf einem Server oder in einer Cloud gespeichert. \\
+{[AK1030]} &  Die Anwendung stellt keinen Ersatz zu einem Arzttermin dar. \\
+{[AK1040]} &  Die Anwendung stellt keinen Ersatz zu einer Versichertenkarte dar. \\
+{[AK1050]} &  Es gibt keine Möglichkeit zur Terminvereinbarung. \\
+{[AK1060]} &  Der Nutzer kann einen Arztbrief nicht editieren. \\
 \end{tabular}
  
 \chapter{Produkteinsatz}
 
 \section{Einsatzgebiet}
-myMD ist bei Arztebesuchen aller Art und in jeder anderen Situation in der man auf seine medizinschen Daten zugreifen möchte einsetzbar.
+myMD ist bei Arztbesuchen aller Art und in jeder anderen Situation in der man auf seine medizinischen Daten zugreifen möchte einsetzbar.
 
 \section{Produktumgebung}
 TODO: Eingeben
 
 \section{Betriebsbedingungen}
 \begin{tabular}{lll}
-Bluetooth & \multicolumn{2}{p{12cm}}{Sowohl das Handy des Patienten als auch der Computer des Arztes müssen mindestens über Bluetooth 4.0 verfügen.} \\
-{\gls{App} Betriebssystem} & \multicolumn{2}{p{12cm}}  {Auf dem Handy des Patienten muss entweder Android 6.0 (oder höher) oder IOS 10.0 (oder höher) installiert sein.}\\
+Bluetooth & \multicolumn{2}{p{12cm}}{Sowohl das Mobilgerät des Patienten als auch der Computer des Arztes müssen mindestens über Bluetooth 4.0 verfügen.} \\
+{\gls{App} Betriebssystem} & \multicolumn{2}{p{12cm}}  {Auf dem Mobilgerät des Patienten muss entweder Android 6.0 (oder höher) oder iOS 10.0 (oder höher) installiert sein.}\\
 {Sendetool Betriebssystem} & \multicolumn{2}{p{12cm}} {Auf dem Computer des Arztes muss Windows 10 installiert sein.} \\
 \end{tabular} 
  
 \section{Zielgruppe}
 Die Anwendung richtet sich an zwei verschiedene Zielgruppen:  \\\\
 \begin{tabular}{lll}
-PATIENTEN &  \multicolumn{2}{p{12cm}}{Dies sind alle Menschen die momentan oder in der Vergangenheit eine medizinische Behandlung oder Beratung in Anspruch genommen haben. Ihr Ziel ist es alle Daten darüber auf ihrem Handy zu sammeln und einsehen zu können.}\\
-ÄRZTE &  \multicolumn{2}{p{12cm}}{Diese bieten medizinische Behandlung und Beratung an. Die Anwendung erlaubt ihnen alle relevanten medizinischen Daten über einen Patienten von diesem zu erhalten und ihm selbst erstellte Daten zu übermitteln.}  \\
+PATIENTEN &  \multicolumn{2}{p{12cm}}{Dies sind alle Menschen, die momentan oder in der Vergangenheit eine medizinische Behandlung oder Beratung in Anspruch nehmen oder genommen haben. Ihr Ziel ist es, alle Daten darüber auf ihrem Mobilgerät verwalten und einsehen zu können.}\\
+ÄRZTE &  \multicolumn{2}{p{12cm}}{Diese bieten medizinische Behandlung und Beratung an. Die Anwendung erlaubt es ihnen, alle relevanten medizinischen Daten über einen Patienten von diesem zu erhalten und ihm selbst erstellte Daten zu übermitteln.}  \\
 \end{tabular}
 
 \chapter{Produktfunktionen}
@@ -177,11 +177,23 @@ Da die einzelnen Geräte im Gesamtsystem gleichberechtigt miteinander kommunizie
 Die Teilsysteme auf den Nutzergeräten enthalten lokale Daten, die in einer graphischen Benutzeroberfläche dargestellt werden sollen. Um die Datenverwaltung von der Darstellung zu trennen wird die Model-View-Controller Architektur verwendet.
 
 \section{Szenarien}
+<<<<<<< HEAD
 \subsection{Szenario 1: Patient lädt sich neue Daten auf myMD}
 Max Mustermann ist ein neuer Nutzer von myMD. Deshalb hat er auf seinem Konto auch noch keine Arztbriefe eingetragen. Also geht er zu seinem Hausarzt, um seine Krankenakte für die myMD \gls{App} zu erhalten. Der Arzt öffnet dafür seine Praxissoftware und exportiert alle Arztbriefe, die zu Max gehören, und lädt diese in das \gls{Desktop Anwendung} von myMD. Nachdem die Arztbriefe in dem Sendetool angezeigt werden, klickt der Arzt auf den Button "Daten senden". Nun wechselt Max auf seiner myMD \gls{App} in das Senden-Menü und klickt "Daten empfangen". Auf Max's myMD \gls{App} erscheint jetzt die Nachricht, dass die Daten an ihn gesendet werden. Sobald der Sendeprozess beendet ist, kann der Arzt das \gls{Desktop Anwendung} von myMD schließen und sich dem nächsten Patienten widmen. Max hat jetzt all seine Arztbriefe auf seinem Handy und kann sich diese jederzeit in der myMD \gls{App} anzeigen lassen. Sie werden in dem Tab "Übersicht", chronologisch sortiert, dargestellt. Wenn er genauere Informationen zu einem bestimmten Arztbrief haben möchte, kann er auf den Arztbrief klicken und dieser wird nun auf dem ganzen Bildschirm, mit allen Informationen, dargestellt. So hat Max jederzeit eine Übersicht
 
 \subsection{Szenario 2: Eigene Daten ansehen und editieren}
 Greg leidet seit einigen Tagen unter starken Magenbeschwerden. Sein Hausarzt findet keine Ursache für die Beschwerden und überweist ihn deshalb an den Spezialisten Dr. Haus und verschreibt ihm etwas gegen die Schmerzen. Dr. Haus glaubt die Ursache gefunden zu haben, diese lässt sich aber nur durch eine Operation beseitigen, für die er Greg an einen Chirurgen überweist. Bevor dem Eingriff zustimmt, will er sich noch eine zweite Meinung einholen. Dafür lässt er sich von seinem Hausarzt einen weiteren Spezialisten empfehlen, der jedoch keine medizinische Ursache für das Problem erkennen kann. Er empfiehlt Greg eine psychotherapeutische Behandlung und verschreibt ihm zur Überbrückung ein stärkeres Schmerzmittel. Bei so vielen verschieden Ärzten und Diagnosen hat Greg nun etwas den Überblick verloren. Glücklicherweise hat er bei seinen Arztbesuchen myMD verwendet und hat nun alle relevanten Daten auf seinem Handy gesammelt und kann sich in der App einen Überblick verschaffen. Letztendlich entscheidet sich Greg es mit der Psychotherapie zu versuchen und entfernt die nun überflüssigen schwächeren Schmerzmittel aus der Liste seiner Medikationen in myMD. seiner Krankengeschichte.
+=======
+\subsection{Szenario: Patient lädt sich neue Daten auf myMD}
+Greg ist ein neuer Nutzer von myMD. Deshalb hat er auf seinem Konto auch noch keine Arztbriefe eingetragen. Also geht er zu seinem Hausarzt, um seine Krankenakte für die myMD \gls{App} zu erhalten. Der Arzt öffnet dafür seine Praxissoftware und exportiert alle Arztbriefe, die zu Greg gehören, und lädt diese in die \gls{Desktop Anwendung} von myMD. Sobald die Arztbriefe im Sendetool angezeigt werden, klickt der Arzt auf den Button "Daten senden". Nun erhält Greg in seiner myMD \gls{App} eine Meldung und klickt "Daten empfangen". Auf Gregs myMD \gls{App} erscheint jetzt die Nachricht, dass die Daten an ihn gesendet werden. Sobald der Sendeprozess beendet ist, kann der Arzt die \gls{Desktop Anwendung} von myMD schließen und sich dem nächsten Patienten widmen. Greg hat jetzt all seine Arztbriefe auf seinem Mobilgerät und kann sich diese jederzeit in der myMD \gls{App} anzeigen lassen. Sie werden im Tab "Übersicht" chronologisch sortiert dargestellt. Wenn er genauere Informationen zu einem bestimmten Arztbrief einsehen möchte, kann er auf den Arztbrief klicken und dieser wird nun auf dem ganzen Bildschirm, mit allen Informationen, dargestellt. So hat Greg jederzeit eine Übersicht
+
+\subsection{Szenario: Eigene Daten ansehen und editieren}
+Greg leidet seit einigen Tagen unter starken Magenbeschwerden. Sein Hausarzt findet keine Ursache für die Beschwerden und überweist ihn deshalb an den Spezialisten Dr. Haus und verschreibt ihm etwas gegen die Schmerzen. Dr. Haus glaubt die Ursache gefunden zu haben, diese lässt sich aber nur durch eine Operation beseitigen, für die er Greg an einen Chirurgen überweist. Bevor er dem Eingriff zustimmt, will er sich noch eine zweite Meinung einholen. Dafür lässt er sich von seinem Hausarzt einen weiteren Spezialisten empfehlen, der jedoch keine medizinische Ursache für das Problem erkennen kann. Er empfiehlt Greg eine psychotherapeutische Behandlung und verschreibt ihm zur Überbrückung ein stärkeres Schmerzmittel. Bei so vielen verschiedenen Ärzten und Diagnosen hat Greg nun etwas den Überblick verloren. Glücklicherweise hat er bei seinen Arztbesuchen myMD verwendet und hat nun alle relevanten Daten auf seinem Mobilgerät gesammelt und kann sich in der App einen Überblick verschaffen. Letztendlich entscheidet sich Greg, es mit der Psychotherapie zu versuchen und entfernt die nun überflüssigen, schwächeren Schmerzmittel aus der Liste seiner Medikationen in myMD. seiner Krankengeschichte.
+
+\subsection{Szenario: Patient gibt behandelndem Arzt Daten zur Einsicht frei}
+Gregs Beschwerden wollen kein Ende nehmen. Um der Ursache auf die Schliche zu kommen, überweist ihn sein Hausarzt nun an einen Gastroenterologen. Wie üblich bei neuen Patienten, möchte sich dieser zunächst mittels einer Anamnese einen Überblick über den Stand der Dinge verschaffen. Dank der myMD App hat Greg jederzeit all seine Arztbriefe bei sich und kann diese nun seinem behandelnden Arzt zur Einsicht freigeben. Hierfür navigiert Greg in der myMD App in den Tab „Senden“, wo er nun aus einer Liste all seiner Arztbriefe jene auswählen kann, die er mit seinem Arzt teilen möchte. Greg entschließt sich dazu, nur Arztbriefe der letzten 6 Monate zu übertragen.
+Per Knopfdruck beginnt das verschlüsselte Senden der Daten per Bluetooth an den Computer des Arztes, auf welchem der Desktop-Klient von myMD die Daten verarbeitet und dem Arzt präsentiert. Schnell vermutet dieser, dass eine Wechselwirkung zwischen zwei eingenommenen Medikamenten die wahrscheinlichste Ursache für Gregs Leiden ist.
+>>>>>>> 347d13e78c91bc7eecd3d9b6888ba2f80dd2b665
 
 \subsection{Szenario 3: Patient übermittelt Daten an Arzt}
 Gregs Beschwerden wollen kein Ende nehmen. Um der Ursache auf die Schliche zu kommen, überweist ihn sein Hausarzt nun an einen Gastroenterologen. Wie üblich bei neuen Patienten, möchte sich dieser zunächst mittels einer Anamnese einen Überblick über den Stand der Dinge verschaffen. Dank der myMD App hat Greg jederzeit all seine Arztbriefe bei sich und kann diese nun seinem behandelnden Arzt zur Einsicht freigeben. Hierfür navigiert Greg in der myMD App in den Tab „Senden“, wo er nun aus einer Liste all seiner Arztbriefe jene auswählen kann, die er mit seinem Arzt teilen möchte. Greg entschließt sich dazu, nur Arztbriefe der letzten 6 Monate zu übertragen. \\
@@ -202,7 +214,7 @@ TODO: GUI Entwürfe  einbinden
 TODO: Eintragen
 \section{Erweiterte Testfälle}
 TODO: Eintragen
-\section{TestSzenarien}
+\section{Testszenarien}
 TODO: Eintragen
  
 
