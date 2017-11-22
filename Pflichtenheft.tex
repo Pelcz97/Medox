@@ -53,7 +53,7 @@ Kapazitäten vorhanden sind.
 [KA1010] &  Die Anwendung selbst stellt keine medizinischen Diagnosen. \\
 {[KA1020]} &  Es werden keine Daten auf einem Server oder in einer Cloud gespeichert. \\
 {[KA1030]} &  Die Anwendung stellt keinen Ersatz zu einem Arzttermin dar. \\
-{[KA1040]} &  Die Anwendung stellt keinen Ersatz zu eine rVersichertenkarte dar. \\
+{[KA1040]} &  Die Anwendung stellt keinen Ersatz zu einer Versichertenkarte dar. \\
 {[KA1050]} &  Es gibt keine Möglichkeit zur Terminvereinbarung. \\
 \end{tabular}
  
@@ -63,14 +63,14 @@ Kapazitäten vorhanden sind.
 myMD ist bei Arztebesuchen aller Art und in jeder anderen Situation in der man auf seine medizinschen Daten zugreifen möchte einsetzbar.
 
 \section{Produktumgebung}
-Ein Pflichtenheft wird bspw. in einer IT-Abteilung genutzt.
+
 
 \section{Betriebsbedingungen}
-Betriebsbedingungen: Die Betriebsbedingungen spezifiziert die physikalische
-Umgebung des Systems, die tägliche Betriebszeit, und ob das System ständiger
-Beobachtung durch Bediener ausgesetzt ist, oder ein unbeaufsichtigter Betrieb
-beabsichtigt ist.
- 
+\begin{tabular}{lll}
+Bluetooth & \multicolumn{2}{p{12cm}}{Sowohl das Handy des Patienten als auch der Computer des Arztes müssen mindestens über Bluetooth 4.0 verfügen.} \\
+{\gls{App} Betriebssystem} & \multicolumn{2}{p{12cm}}  {Auf dem Handy des Patienten muss entweder Android 6.0 (oder höher) oder IOS 10.0 (oder höher) installiert sein.}\\
+{Sendetool Betriebssystem} & \multicolumn{2}{p{12cm}} {Auf dem Computer des Arztes muss Windows 10 installiert sein.} \\
+\end{tabular} 
  
 \section{Zielgruppe}
 Die Anwendung richtet sich an zwei verschiedene Zielgruppen:  \\\\
@@ -130,12 +130,18 @@ Benutzungsoberfläche: grundlegende Anforderungen, Zugriffsrechte
 \chapter{Entwicklungsumgebung}
  
 \section{Software}
-Software: Gibt an, welche Software zum Betrieb vorhanden sein muss. Eine
-Aufteilung für Server und Client ist ggf. sinnvoll. Weiterhin sind unbedingt die
-kleinsten benötigten Versionsnummern anzugeben.
+\begin{tabular}{lll}
+Entwicklungsumgebung &  \multicolumn{2}{p{12cm}}{Visual Studio 2017, Visual Studio for Mac}\\
+Dokumentation &  \multicolumn{2}{p{12cm}}{Microsoft PowerPoint, LaTeX}  \\
+GUI Entwürfe & \multicolumn{2}{p{12cm}}{Sketch} \\
+Versionierung & \multicolumn{2}{p{12cm}}{Git, GitLab} \\
+\end{tabular}
+
  
 \section{Hardware}
-Hardware: Hardware-Anforderungen des Systems.
+\begin{tabular}{lll}
+Omen by HP &  \multicolumn{2}{p{12cm}}{Intel Core i7-6700HQ CPU @ 2.60GHz \newline 16GB DDR3 RAM  \newline 64-Bit Microsoft Windows 10}\\
+\end{tabular}
  
 \section{Orgware}
 Orgware: Angabe der organisatorische Rahmenbedingungen, die vor Projektstart
