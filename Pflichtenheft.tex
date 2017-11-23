@@ -42,7 +42,7 @@
 
 \newglossaryentry{NFC}
 { 	name=NFC,
-	description={Die Nahfeldkommunikation (Near Field Communication, abgekürzt NFC) ist ein auf der RFID-Technik basierender internationaler Übertragungsstandard zum kontaktlosen Austausch von Daten per elektromagnetischer Induktion mittels loser gekoppelter Spulen über kurze Strecken von wenigen Zentimetern und einer Datenübertragungsrate von maximal 424 kBit/s.}
+	description={Die Nahfeldkommunikation (Near Field Communication, abgekürzt NFC) ist ein auf der RFID-Technik basierender internationaler Übertragungsstandard zum kontaktlosen Austausch von Daten per elektromagnetischer Induktion mittels loser gekoppelter Spulen über kurze Strecken von wenigen Zentimetern und einer Datenübertragungsrate von maximal 424 kBit/s}
 }
 
 \newglossaryentry{Bluetooth}
@@ -95,7 +95,7 @@ TODO: eine coole 1 seitige Einleitung schreiben
 \begin{tabular}{lll}
 
 [PK1010] & \multicolumn{2}{p{12cm}}  {Die Arztbriefe können von der \gls{Desktop Anwendung} auf die myMD \gls{App} des Patienten übertragen werden.} \\
-{[PK1020]} & \multicolumn{2}{p{12cm}}  {Die Übertragung erfolgt verschlüsselt über Bluetooth.} \\
+{[PK1020]} & \multicolumn{2}{p{12cm}}  {Die Übertragung erfolgt verschlüsselt über \gls{Bluetooth}.} \\
 {[PK1030]} & \multicolumn{2}{p{12cm}}  {Eine laufende Datenübertragung kann manuell abgebrochen werden.} \\
 
 \end{tabular}
@@ -338,8 +338,23 @@ Kein Einfluss auf Übertragungsraten
 \end{tabular}
 
 
-\chapter{Produktdaten}
-Die myMD \gls{App} speichert digitale Arztbriefe, Nutzerprofile, Laborwerte, Nutzereinstellungen, Medikamente, regelmäßige Termine (d.h. alle Daten, die der Nutzer in myMD überträgt) nur lokal auf dem Handy des Nutzers. Die Daten werden durch myMD niemals auf einem Server o.ä. gespeichert.\\
+\chapter{Produktdaten PD}
+\subsection{myMD \gls{App}}
+myMD speichert folgende Daten permanent, außer der Nutzer löscht sie manuell. Außerdem werden die Daten, die myMD nutzt, nur lokal auf dem Handy des Nutzers gespeichert.
+\newline
+\newline
+\begin{tabular}{lll}
+[PD1010]&  \multicolumn{2}{p{12cm}}{myMD speichert digitale Arztbriefe des Nutzers.}\\
+{[PD1020]} &  \multicolumn{2}{p{12cm}}{myMD speichert die Angaben zum Nutzerprofil.}\\
+{[PD1030]} &  \multicolumn{2}{p{12cm}}{myMD speichert die Laborwerte des Nutzers.}\\
+{[PD1040]} &  \multicolumn{2}{p{12cm}}{myMD speichert die Medikamente des Nutzers.}  \\
+{[PD1050]} &  \multicolumn{2}{p{12cm}}{myMD speichert regelmäßige Termine des Nutzers.}  \\
+{[PD1060]} &  \multicolumn{2}{p{12cm}}{myMD speichert die Einstellungen zu den nutzerspezifischen Gruppierungen.}  \\
+{[PD1070]} &  \multicolumn{2}{p{12cm}}{myMD speichert die Markierung von sensiblen Daten.}  \\
+
+\end{tabular}
+
+\subsection{\gls{Desktop Anwendung}}
 Die \gls{Desktop Anwendung} speichert keine Daten.
 
 
@@ -361,7 +376,7 @@ Bei so vielen verschiedenen Ärzten und Diagnosen hat Greg nun etwas den Überbl
 
 \subsection{Szenario: Patient gibt behandelndem Arzt Daten zur Einsicht frei}
 Gregs Beschwerden wollen kein Ende nehmen. Um der Ursache auf die Schliche zu kommen, überweist ihn sein Hausarzt nun an einen Gastroenterologen. Wie üblich bei neuen Patienten, möchte sich dieser zunächst mittels einer Anamnese einen Überblick über den Stand der Dinge verschaffen. Dank der myMD \gls{App} hat Greg jederzeit all seine Arztbriefe bei sich und kann diese nun seinem behandelnden Arzt zur Einsicht freigeben. Hierfür navigiert Greg in der myMD App in den Tab „Senden“, wo er nun aus einer Liste all seiner Arztbriefe jene auswählen kann, die er mit seinem Arzt teilen möchte. Greg entschließt sich dazu, nur Arztbriefe der letzten 6 Monate zu übertragen. \\
-Per Knopfdruck beginnt das verschlüsselte Senden der Daten per Bluetooth an den Computer des Arztes, auf welchem der Desktop-Klient von myMD die Daten verarbeitet und dem Arzt präsentiert. Schnell vermutet dieser, dass eine Wechselwirkung zwischen zwei eingenommenen Medikamenten die wahrscheinlichste Ursache für Gregs Leiden ist.
+Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} an den Computer des Arztes, auf welchem der Desktop-Klient von myMD die Daten verarbeitet und dem Arzt präsentiert. Schnell vermutet dieser, dass eine Wechselwirkung zwischen zwei eingenommenen Medikamenten die wahrscheinlichste Ursache für Gregs Leiden ist.
 
 \section{Anwendungsfälle}
 TODO: Diagramme erstellen und Eintragen
