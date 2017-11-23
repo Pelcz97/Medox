@@ -389,7 +389,44 @@ TODO: GUI Entwürfe  einbinden
 
 \chapter{Testfälle}
 \section{Basis Testfälle}
-TODO: Eintragen
+
+\subsection{Patientenseitige Datenübertragung}
+\begin{tabular}{lll}
+[BT1010] & \multicolumn{2}{p{12cm}}  {\gls{Desktop Anwendung} sendet eine Datei an die myMD \gls{App}.} \\
+{[BT1020]} & \multicolumn{2}{p{12cm}}  {Die Übertragung wird vom Nutzer unterbrochen.} \\
+{[BT1030]} & \multicolumn{2}{p{12cm}}  {\gls{Desktop Anwendung} sendet ein unzulässige Datei (nicht unterstütztes Dateiformat).} \\
+{[BT1040]} & \multicolumn{2}{p{12cm}}  {Die Übertragung wird durch äußere Umstände abgebrochen.} \\
+
+\end{tabular}
+
+\subsection{Darstellung}
+\begin{tabular}{lll}
+[BT2010] & \multicolumn{2}{p{12cm}}  {Ein neuer Arztbrief wird in eine leere Übersicht geladen.} \\
+{[BT2020]} & \multicolumn{2}{p{12cm}}  {Ein neuer Arztbrief wird in bereits gefüllte Übersicht geladen.} \\
+{[BT2030]} & \multicolumn{2}{p{12cm}}  {Ein digitaler Arztbrief wird angetippt/geöffnet.} \\
+{[BT2040]} & \multicolumn{2}{p{12cm}}  {Ein digitaler Arztbrief wird geschlossen.} \\
+{[BT2050]} & \multicolumn{2}{p{12cm}}  {Ein digitaler Arztbrief wird gelöscht.} \\
+
+\end{tabular}
+
+\subsection{Einstellungen}
+\begin{tabular}{lll}
+[BT3010] & \multicolumn{2}{p{12cm}}  {Ein Nutzerprofil wird angelegt.} \\
+{[BT3020]} & \multicolumn{2}{p{12cm}}  {Ein Nutzerprofil wird bearbeitet.} \\
+{[BT3030]} & \multicolumn{2}{p{12cm}}  {Ein Nutzerprofil wird gelöscht.} \\
+\end{tabular}
+
+\subsection{Desktop Anwendung}
+\begin{tabular}{lll}
+{[BT4010]} & \multicolumn{2}{p{12cm}}  {Unzulässige Datei wird zum Senden ausgewählt.} \\
+{[BT4020]} & \multicolumn{2}{p{12cm}}  {Kompatible Datei wird zum Senden ausgewählt.} \\
+{[BT4030]} & \multicolumn{2}{p{12cm}}  {Senden wird erfolgreich abgeschlossen.} \\
+{[BT4040]} & \multicolumn{2}{p{12cm}}  {Senden wird durch äußere Einflüsse unterbrochen.} \\
+{[BT4050]} & \multicolumn{2}{p{12cm}}  {Senden wird durch Nutzer unterbrochen.} \\
+
+
+\end{tabular}
+
 \section{Erweiterte Testfälle}
 TODO: Eintragen
 \section{Testszenarien}
