@@ -314,6 +314,7 @@ Kein Einfluss auf Übertragungsraten
 \subsection{Darstellung}
 \begin{tabular}{lll}
 [PL2010]&  \multicolumn{2}{p{12cm}}{Zwischen dem Ende der Übertragung eines digitalen Arztbriefes und dem Anzeigen des neuen Eintrages vergehen nicht mehr als 5 Sekunden.}\\
+{[PL2020]}&  \multicolumn{2}{p{12cm}}{Die Dauer zwischen dem Tippen auf einen Eintrag in der Ansicht Übersicht und dem Anzeigen des detaillierten Arztbriefes beträgt nicht mehr als 3 Sekunden.}\\
 
 \end{tabular}
 
@@ -378,7 +379,13 @@ Gregs Beschwerden wollen kein Ende nehmen. Um der Ursache auf die Schliche zu ko
 Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} an den Computer des Arztes, auf welchem der Desktop-Klient von myMD die Daten verarbeitet und dem Arzt präsentiert. Schnell vermutet dieser, dass eine Wechselwirkung zwischen zwei eingenommenen Medikamenten die wahrscheinlichste Ursache für Gregs Leiden ist.
 
 \section{Anwendungsfälle}
-TODO: Diagramme erstellen und Eintragen
+TODO: Diagramme erstellen und Eintragen \\
+Name: Datenübertragung Arzt-Patient \\
+Teilnehmende Akteure: Patient, Arzt \\
+Eingangsbedingung: Der Patient hat die myMD \gls{App} und der Arzt die \gls{Desktop Anwendung} installiert \\
+Ausgangsbedingung: Die Daten wurden erfolgreich übertragen oder der Vorgang wird abgebrochen \\
+Ereignisfluss: Verbindung zwischen Arzt und Patienten wird hergestellt --> Arzt fügt zu übertragende Daten in die Anwendung ein --> Die Daten werden vom Arzt zum Patienten übertragen --> Verbindung zwischen Arzt und Patient wird getrennt --> Patient kann Daten einsehen
+Spezielle Anforderungen: Drahtlosverbindung zwischen Arzt und Patient
 \section{Benutzungsoberfläche}
 TODO: GUI Entwürfe  einbinden
 \begin{figure}[ht]
