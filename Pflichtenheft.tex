@@ -39,6 +39,16 @@
 {	name=Drag and Drop,
 	description={Drag and Drop, oft auch Drag’n’Drop, deutsch „Ziehen und Ablegen“, ist eine Methode zur Bedienung grafischer Benutzeroberflächen von Rechnern durch das Bewegen grafischer Elemente mittels eines Zeigegerätes. Ein Element wie z. B. ein Piktogramm kann damit gezogen und über einem möglichen Ziel losgelassen werden. Dieses kann zum Beispiel markierter Text oder das Symbol einer Datei sein. }
 }
+
+\newglossaryentry{NFC}
+{ 	name=NFC,
+	description={Die Nahfeldkommunikation (Near Field Communication, abgekürzt NFC) ist ein auf der RFID-Technik basierender internationaler Übertragungsstandard zum kontaktlosen Austausch von Daten per elektromagnetischer Induktion mittels loser gekoppelter Spulen über kurze Strecken von wenigen Zentimetern und einer Datenübertragungsrate von maximal 424 kBit/s.}
+}
+
+\newglossaryentry{Bluetooth}
+{	name=Bluetooth,
+	description={Bluetooth ist ein in den 1990er Jahren durch die Bluetooth Special Interest Group (SIG) entwickelter Industriestandard gemäß IEEE 802.15.1 für die Datenübertragung zwischen Geräten über kurze Distanz per Funktechnik (WPAN). Dabei sind verbindungslose sowie verbindungsbehaftete Übertragungen von Punkt zu Punkt und Ad-hoc- oder Piconetze möglich}
+}
  
 \begin{document}
  
@@ -84,7 +94,7 @@ TODO: eine coole 1 seitige Einleitung schreiben
 \subsection{Patientenseitige Datenübertragung}
 \begin{tabular}{lll}
 [MK1010] & \multicolumn{2}{p{12cm}}  {Die Arztbriefe können von der \gls{Desktop Anwendung} auf die myMD \gls{App} des Patienten übertragen werden.} \\
-{[MK1020]} & \multicolumn{2}{p{12cm}}  {Die Übertragung findet verschlüsselt über Bluetooth statt.} \\
+{[MK1020]} & \multicolumn{2}{p{12cm}}  {Die Übertragung findet verschlüsselt über \gls{Bluetooth} statt.} \\
 \end{tabular}
 
 \subsection{Darstellung}
@@ -94,7 +104,7 @@ TODO: eine coole 1 seitige Einleitung schreiben
 {[MK2030]} & \multicolumn{2}{p{12cm}}  {Aus einem dargestellten Arztbrief kann man immer die Diagnose, verordnete Medikament, das Datum und den Namen des Arztes entnehmen.} \\
 \end{tabular}
 
-\subsection{Patientenseitige Datenübertragung}
+\subsection{Einstellungen}
 \begin{tabular}{lll}
 [MK3010] & \multicolumn{2}{p{12cm}}  {Der Nutzer kann ein eigenes Profil anlegen, welches Daten wie den Namen, Blutgruppe, Versicherungsnummer und Allergien enthält.} \\
 {[MK3020]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird in Deutsch angeboten.} \\
@@ -117,16 +127,54 @@ TODO: eine coole 1 seitige Einleitung schreiben
 \end{tabular}
  
 \section{Wunschkriterien (WK)}
-TODO: WK eintragen
+\subsection{Patientenseitige Datenübertragung}
+\begin{tabular}{lll}
+[MK1010] & \multicolumn{2}{p{12cm}}  {Ein Arztbriefe kann von der myMD \gls{App} des Patienten auf die \gls{Desktop Anwendung} übertragen werden.} \\
+{[MK1020]} & \multicolumn{2}{p{12cm}}  {Der Patient kann mehrere Arztbriefe aufeinmal senden.} \\
+{[MK1030]} & \multicolumn{2}{p{12cm}}  {\gls{NFC} steht als weiter Übertragunsmöglichkeit zur Verfügung.} \\
+{[MK1040]} & \multicolumn{2}{p{12cm}}  {Der Patient wird vor dem Senden von sensiblen Daten darauf hingewiesen, dass er sensible Daten versendet.} \\
+\end{tabular}
+
+\subsection{Darstellung}
+\begin{tabular}{lll}
+[MK2010] & \multicolumn{2}{p{12cm}}  {Eingenommene Medikamente werden in einem extra Tab, chronologisch ansteigend sortiert, dargestellt.} \\
+{[MK2020]} & \multicolumn{2}{p{12cm}}  {Laborwerte des Patienten werden in einem extra Tab, chronologisch absteigend sortiert, dargestellt.} \\
+{[MK2030]} & \multicolumn{2}{p{12cm}}  {Ein Arztbrief kann Röntgenbilder enthalten und die myMD \gls{App} kann diese originalgetreu und innerhalb des Arztbriefes darstellen.} \\
+{[MK2040]} & \multicolumn{2}{p{12cm}}  {Man kann die Arztbriefe nach eigenen Kriterien (Arzt, Krankheit o.ä.) gruppieren.} \\
+{[MK2020]} & \multicolumn{2}{p{12cm}}  {Es gibt eine Suchfunktion, die Daten in einem Arztbrief sucht.} \\
+\end{tabular}
+
+\subsection{Einstellungen}
+\begin{tabular}{lll}
+[WK3010] & \multicolumn{2}{p{12cm}}  { Auf einer myMD \gls{App} können mehrere Nutzer verwaltet werden.} \\
+{[WK3020]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird zusätzlich auch in Englisch angeboten.} \\
+{[WK3030]} & \multicolumn{2}{p{12cm}}  {Der Nutzer kann einzelne Arztbriefe oder ganze Gruppen als sensibel markieren.} \\
+{[WK3040]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} ermöglicht, dass man sich zu regelmäßigen Arztterminen (z.B. Zahnarzt,Augenarzt) erinnern lässt.} \\
+
+\end{tabular}
+
+\subsection{Desktop Anwendung}
+\begin{tabular}{lll}
+{[WK4010]} & \multicolumn{2}{p{12cm}}  {Die Versicherungsnummer, die in einem Arztbrief auf dem Computer des Arztes eingetragen ist, wird vor dem Senden mit der Versicherungsnummer, die in dem Profil des myMD Nutzers, verglichen und nur bei Übereinstimmung wird der Arztbrief gesendet.} \\
+
+
+\end{tabular}
+
+\subsection{Kompabilität}
+\begin{tabular}{lll}
+{[WK5010]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird von IOS 10 (und höher) unterstützt.} \\
+{[WK5020]} & \multicolumn{2}{p{12cm}}  {Die \gls{Desktop Anwendung}wird zusätzlich von macOS unterstützt.} \\
+
+\end{tabular}
  
 \section{Abgrenzungskriterien (AK)}
 \begin{tabular}{ll}
-[KA1010] &  Die Anwendung selbst stellt keine medizinischen Diagnosen. \\
-{[KA1020]} &  Es werden keine Daten auf einem Server oder in einer Cloud gespeichert. \\
-{[KA1030]} &  Die Anwendung stellt keinen Ersatz zu einem Arzttermin dar. \\
-{[KA1040]} &  Die Anwendung stellt keinen Ersatz zu einer Versichertenkarte dar. \\
-{[KA1050]} &  Es gibt keine Möglichkeit zur Terminvereinbarung. \\
-{[KA1060]} &  Der Nutzer kann einen Arztbrief nicht editieren. \\
+[AK0010] &  Die Anwendung selbst stellt keine medizinischen Diagnosen. \\
+{[AK0020]} &  Es werden keine Daten auf einem Server oder in einer Cloud gespeichert. \\
+{[AK0030]} &  Die Anwendung stellt keinen Ersatz zu einem Arzttermin dar. \\
+{[AK0040]} &  Die Anwendung stellt keinen Ersatz zu einer Versichertenkarte dar. \\
+{[AK0050]} &  Es gibt keine Möglichkeit zur Terminvereinbarung. \\
+{[AK0060]} &  Der Nutzer kann einen Arztbrief nicht editieren. \\
 \end{tabular}
  
 \chapter{Produkteinsatz}
@@ -139,7 +187,7 @@ TODO: Eingeben
 
 \section{Betriebsbedingungen}
 \begin{tabular}{lll}
-Bluetooth & \multicolumn{2}{p{12cm}}{Sowohl das Handy des Patienten als auch der Computer des Arztes müssen mindestens über Bluetooth 4.0 verfügen.} \\
+\gls{Bluetooth} & \multicolumn{2}{p{12cm}}{Sowohl das Handy des Patienten als auch der Computer des Arztes müssen mindestens über \gls{Bluetooth} 4.0 verfügen.} \\
 {\gls{App} Betriebssystem} & \multicolumn{2}{p{12cm}}  {Auf dem Handy des Patienten muss entweder Android 6.0 (oder höher) oder IOS 10.0 (oder höher) installiert sein.}\\
 {Sendetool Betriebssystem} & \multicolumn{2}{p{12cm}} {Auf dem Computer des Arztes muss Windows 10 installiert sein.} \\
 \end{tabular} 
@@ -170,7 +218,6 @@ TODO: Eintragen
 TODO: Eintragen
 
 \chapter{Systemmodelle}
-TODO: Eintragen
 \section{Systemarchitektur}
 TODO: Eintragen
 \section{Szenarien}
