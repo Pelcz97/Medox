@@ -17,6 +17,7 @@
 \usepackage{glossaries}
 \usepackage{graphicx}
 \usepackage[bookmarks,bookmarksnumbered]{hyperref}
+\usepackage{float}
 
 
 \setcounter{tocdepth}{1} 
@@ -376,8 +377,8 @@ Gregs Beschwerden wollen kein Ende nehmen. Um der Ursache auf die Schliche zu ko
 Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} an den Computer des Arztes, auf welchem der Desktop-Klient von myMD die Daten verarbeitet und dem Arzt präsentiert. Schnell vermutet dieser, dass eine Wechselwirkung zwischen zwei eingenommenen Medikamenten die wahrscheinlichste Ursache für Gregs Leiden ist.
 
 \section{Anwendungsfälle}
-
-\begin{figure}
+\subsection{Datenübertragung}
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{AF-ArztPatient}
 \caption{Anwendungsfall Datenübertragung Arzt-Patient}
@@ -392,7 +393,8 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 {Spezielle Anforderungen} & \multicolumn{2}{p{11.5cm}} {Drahtlosverbindung zwischen Arzt und Patient} \\
 \end{tabular} 
 
-\begin{figure}
+\subsection{Nutzerprofil}
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{AF-NeuerNutzer}
 \caption{Anwendungsfall Neuer Nutzer}
