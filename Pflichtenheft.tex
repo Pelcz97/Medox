@@ -388,7 +388,7 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 {Teilnehmende Akteure} & \multicolumn{2}{p{11.5cm}} {Patient, Arzt} \\
 {Eingangsbedingung} & \multicolumn{2}{p{11.5cm}} {Der Patient hat die myMD \gls{App}, der Arzt die \gls{Desktop Anwendung} installiert} \\
 {Ausgangsbedingung} & \multicolumn{2}{p{11.5cm}} {Die Daten wurden erfolgreich übertragen oder der Vorgang wird abgebrochen} \\
-{Ereignisfluss} & \multicolumn{2}{p{11.5cm}} {Verbindung zwischen Arzt und Patienten wird hergestellt --> Arzt fügt zu übertragende Daten in die Anwendung ein --> Die Daten werden vom Arzt zum Patienten übertragen --> Verbindung zwischen Arzt und Patient wird getrennt --> Patient kann Daten einsehen} \\
+{Ereignisfluss} & \multicolumn{2}{p{11.5cm}} {Verbindung zwischen Arzt und Patienten wird hergestellt $\Rightarrow$ Arzt fügt zu übertragende Daten in die Anwendung ein $\Rightarrow$ Die Daten werden vom Arzt zum Patienten übertragen $\Rightarrow$ Verbindung zwischen Arzt und Patient wird getrennt $\Rightarrow$ Patient kann Daten einsehen} \\
 {Spezielle Anforderungen} & \multicolumn{2}{p{11.5cm}} {Drahtlosverbindung zwischen Arzt und Patient} \\
 \end{tabular} 
 
@@ -403,7 +403,7 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 {Teilnehmende Akteure} & \multicolumn{2}{p{11.5cm}} {Nutzer} \\
 {Eingangsbedingung} & \multicolumn{2}{p{11.5cm}} {Der Nutzer hat die myMD \gls{App} installiert} \\
 {Ausgangsbedingung} & \multicolumn{2}{p{11.5cm}} {Der Nutzer hat alle gewünschten Daten eingegeben oder den Vorgang abgebrochen} \\
-{Ereignisfluss} & \multicolumn{2}{p{11.5cm}} {Nutzer startet App --> Neues Profil erstellen --> Nutzer-Informationen eingeben -->  Medikamente hinzufügen} \\
+{Ereignisfluss} & \multicolumn{2}{p{11.5cm}} {Ereignisfluss: Nutzer startet App $\Rightarrow$ Neues Profil erstellen $\Rightarrow$ Nutzer-Informationen eingeben $\Rightarrow$  Medikamente hinzufügen} \\
 {Spezielle Anforderungen} & \multicolumn{2}{p{11.5cm}} {Keine} \\
 \end{tabular} 
 
@@ -451,15 +451,120 @@ TODO: GUI Entwürfe  einbinden
 {[BT4030]} & \multicolumn{2}{p{12cm}}  {Senden wird erfolgreich abgeschlossen.} \\
 {[BT4040]} & \multicolumn{2}{p{12cm}}  {Senden wird durch äußere Einflüsse unterbrochen.} \\
 {[BT4050]} & \multicolumn{2}{p{12cm}}  {Senden wird durch Nutzer unterbrochen.} \\
+{[BT4060]} & \multicolumn{2}{p{12cm}}  {Geräte in der Nähe werden gesucht.} \\
+{[BT4070]} & \multicolumn{2}{p{12cm}}  {Nutzerhandy wird als Empfänger gewählt.} \\
+
 
 
 \end{tabular}
 
 \section{Erweiterte Testfälle (ET)}
-TODO: Eintragen
+\subsection{Patientenseitige Datenübertragung}
+\begin{tabular}{lll}
+[ET1010] & \multicolumn{2}{p{12cm}}  {myMD \gls{App} sendet eine Datei an die \gls{Desktop Anwendung}.} \\
+{[ET1020]} & \multicolumn{2}{p{12cm}}  {myMD \gls{App} sendet mehrere Dateien an die \gls{Desktop Anwendung}.} \\
+{[ET1030]} & \multicolumn{2}{p{12cm}}  {\gls{Desktop Anwendung} sendet mehrere Datei an die myMD \gls{App}.} \\
+{[ET1040]} & \multicolumn{2}{p{12cm}}  {Die Übertragung mehrerer Daten wird durch äußere Umstände abgebrochen.} \\
+{[ET1050]} & \multicolumn{2}{p{12cm}}  {Die Übertragung mehrerer Daten wird durch den Nutzer abgebrochen.} \\
+{[ET1060]} & \multicolumn{2}{p{12cm}}  {Sensible Daten werden von der myMD App an die Desktop Anwendung gesendet.} \\
+{[ET1070]} & \multicolumn{2}{p{12cm}}  {Die Verbindung wird über NFC hergetellt.} \\
+{[ET1080]} & \multicolumn{2}{p{12cm}}  {Ein Profil wird auf ein anderes Gerät übertragen.} \\
+
+\end{tabular}
+
+\subsection{Darstellung}
+\begin{tabular}{lll}
+[ET2010] & \multicolumn{2}{p{12cm}}  {Medikament wird hinzugefügt.} \\
+{[ET2020]} & \multicolumn{2}{p{12cm}}  {Medikament wird editiert.} \\
+{[ET2030]} & \multicolumn{2}{p{12cm}}  {Medikament wird gelöscht.} \\
+{[ET2040]} & \multicolumn{2}{p{12cm}}  {Laborwerte werden hinzugefügt.} \\
+{[ET2050]} & \multicolumn{2}{p{12cm}}  {Laborwerte werden gelöscht.} \\{[ET2060]} & \multicolumn{2}{p{12cm}}  {Bilddatei wird hinzugefügt und dargestellt.} \\
+{[ET2070]} & \multicolumn{2}{p{12cm}}  {Bilddatei wird mit einem Arztbrief verknüpft.} \\
+{[ET2080]} & \multicolumn{2}{p{12cm}}  {Verknüpfung zwischen Arztbrief und Bilddatei wird getrennt.} \\
+{[ET2090]} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Bilddatei originalgetreu ist.} \\
+{[ET2100]} & \multicolumn{2}{p{12cm}}  {Mehrere Arztbriefe gruppieren.} \\
+{[ET2110]} & \multicolumn{2}{p{12cm}}  {Einzelne Arztbriefe aus bestehender Gruppe entfernen.} \\
+{[ET2120]} & \multicolumn{2}{p{12cm}}  {Nach eigen Gruppen sortieren.} \\
+{[ET2130]} & \multicolumn{2}{p{12cm}}  {Überprüfen, ob Suchfunktion fehlerfrei funktioniert.} \\
+
+
+\end{tabular}
+
+\subsection{Einstellungen}
+\begin{tabular}{lll}
+[ET3010] & \multicolumn{2}{p{12cm}}  {Neues Nutzerprofil wird angelegt.} \\
+{[ET3020]} & \multicolumn{2}{p{12cm}}  {Ein weiteres Nutzerprofil wird angelegt.} \\
+{[ET3030]} & \multicolumn{2}{p{12cm}}  {Wechsel zwischen mehreren Nutzerprofilen.} \\
+{[ET3040]} & \multicolumn{2}{p{12cm}}  {Einzelnen Arztbrief als sensibel markieren.} \\
+{[ET3050]} & \multicolumn{2}{p{12cm}}  {Sensibel Markierung eines einzelnen Arztbriefes aufheben.} \\
+{[ET3060]} & \multicolumn{2}{p{12cm}}  {Gruppe von Arztbriefen als sensibel markieren.} \\
+{[ET3070]} & \multicolumn{2}{p{12cm}}  {Sensibel Markierung einer Gruppe von Arztbriefen aufheben.} \\
+{[ET3080]} & \multicolumn{2}{p{12cm}}  {Regelmäßiger Arzttermin wird hinzugefügt.} \\
+{[ET3090]} & \multicolumn{2}{p{12cm}}  {Regelmäßiger Arzttermin wird gelöscht.} \\
+
+\end{tabular}
+
+\subsection{Desktop Anwendung}
+\begin{tabular}{lll}
+{[ET4010]} & \multicolumn{2}{p{12cm}}  {Datei mit falscher Versicherungsnummer wird gesendet.} \\
+
+
+\end{tabular}
+
 \section{Testszenarien (TS)}
-TODO: Eintragen
- 
+\subsection{Typischer Arztbesuch}
+Der Nutzer geht wegen einer Beschwerde zum Arzt und lässt sich untersuchen. Sobald die Untersuchung fertig ist, verlangt der Nutzer, dass der Arzt ihm die eben aufgenommenen Daten für die myMD \gls{App} zur Verfügung stellt. Der Arzt öffnet dann die \gls{Desktop Anwendung} und schickt dem Patienten den Arztbrief und Labordaten auf die myMD \gls{App}. Der Nutzer schaut sich dann kurz den neuen Eintrag in der Übersicht an, schließt die App und geht nach Hause. \newline
+
+\begin{tabular}{lll}
+[BT4060] & \multicolumn{2}{p{12cm}}  {Geräte in der Nähe werden gesucht.} \\
+{[BT4070]} & \multicolumn{2}{p{12cm}}  {Das Handy des Nutzers wird als Empfänger ausgewählt.} \\
+{[BT4030]} & \multicolumn{2}{p{12cm}}  {Senden wird erfolgreich abgeschlossen.} \\
+{[BT2020]} & \multicolumn{2}{p{12cm}}  {Der neue Arztbrief wird in bereits gefüllte Übersicht geladen.} \\
+{[ET2040]} & \multicolumn{2}{p{12cm}}  {Die Laborwerte werden hinzugefügt.} \\
+{[BT2030]} & \multicolumn{2}{p{12cm}}  {Der neue Arztbrief wird geöffnet.} \\
+{[BT2040]} & \multicolumn{2}{p{12cm}}  {Der neue Arztbrief wird geschlossen.} \\
+
+
+\end{tabular}
+
+\subsection{Krankenhistorie wird überprüft}
+Der Nutzer ist daheim und schaut sich in der myMD \gls{App} seine Übersicht an. Er klickt auf ein paar Arztbriefe und liest sie sich durch, was darin steht. Dann bemerkt er, dass er alle Arztbriefe zu seinem gebrochenen Fuß gruppieren sollte und auch die Schmerzmittel, die für seinen Fuß bekommen hat, in den Tab Medikamente hinzufügen sollte. Aus versehen gibt er zuerst eine falsche Menge an, korrigiert diese aber und schließt daraufhin die App.\newline
+
+\begin{tabular}{lll}
+[BT2030] & \multicolumn{2}{p{12cm}}  {Ein Arztbrief wird geöffnet.} \\
+{[BT2040]} & \multicolumn{2}{p{12cm}}  {Ein Arztbrief wird geschlossen.} \\
+{[ET2100]} & \multicolumn{2}{p{12cm}}  {Alle Arztbriefe zum gebrochenen Fuß werden gruppiert.} \\
+{[ET2010]} & \multicolumn{2}{p{12cm}}  {Medikament wird hinzugefügt.} \\
+{[ET2020]} & \multicolumn{2}{p{12cm}}  {Medikament wird editiert.} \\
+
+\end{tabular}
+
+\subsection{Patient holt sich bei einem anderen Arzt eine zweite Meinung ein}
+Der Nutzer hat eine sehr komplexe Beschwerde und will sich von einem anderen Arzt eine zweite Meinung einholen. Dazu geht er zu dem andern Arzt und informiert ihn über die bisherige Diagnose, indem er ihm seine Arztbriefe von der myMD \gls{App} auf die \gls{Desktop Anwendung} schickt. Der Arzt schaut sich diese Arztbriefe in seiner Praxissoftware an, stellt seine eigene Diagnose, schreibt seinen Arztbrief und sendet ihn dem Patienten.\newline
+
+\begin{tabular}{lll}
+[ET1020] & \multicolumn{2}{p{12cm}}  {Die alten Arztbriefe werden dem Arzt gesendet.} \\
+{[BT4060]} & \multicolumn{2}{p{12cm}}  {Geräte in der Nähe werden gesucht.} \\
+{[BT4070]} & \multicolumn{2}{p{12cm}}  {Das Handy des Nutzers wird als Empfänger ausgewählt.} \\
+{[BT4030]} & \multicolumn{2}{p{12cm}}  {Senden wird erfolgreich abgeschlossen.} \\
+
+\end{tabular}
+
+\subsection{Eine Mutter führt mehrere Profile}
+Eine Mutter erstellt sich und ihrem Kind ein myMD Profil. Sie geht zum Arzt und lädt sich, zuerst für ihr eigenes Profil, alle Arztbriefe, die sie betreffen. Dann wechselt sie auf das Profil des Kindes und lädt sich wieder alle Arztbriefe in die App. Sobald das Kind seine eigene myMD App hat, überträgt die Mutter die alten Daten auf das Handy des Kindes. \newline
+
+\begin{tabular}{lll}
+[ET3010] & \multicolumn{2}{p{12cm}}  {Ein neues Nutzerprofil wird für die Mtter angelegt.} \\
+{[ET3020]} & \multicolumn{2}{p{12cm}}  {Ein neues Nutzerprofil wird für das Kind angelegt.} \\
+{[ET3030]} & \multicolumn{2}{p{12cm}}  {Es wird auf das Profil der Mutter gewechselt.} \\
+{[ET1030]} & \multicolumn{2}{p{12cm}}  {Mehrere Dateien werden an die myMD App gesendet und auf das Profil der Mutter geladen.} \\
+{[ET3030]} & \multicolumn{2}{p{12cm}}  {Es wird auf das Profil des Kindes gewechselt.} \\
+{[ET1030]} & \multicolumn{2}{p{12cm}}  {Mehrere Dateien werden an die myMD App gesendet und auf das Profil der Mutter geladen.} \\
+{[ET1080]} & \multicolumn{2}{p{12cm}}  {Das Profil des Kindes wird auf das Handy des Kindes übertragen.} \\
+
+\end{tabular}
+
+
 
 \chapter{Entwicklungsumgebung}
  
