@@ -376,14 +376,14 @@ Gregs Beschwerden wollen kein Ende nehmen. Um der Ursache auf die Schliche zu ko
 Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} an den Computer des Arztes, auf welchem der Desktop-Klient von myMD die Daten verarbeitet und dem Arzt präsentiert. Schnell vermutet dieser, dass eine Wechselwirkung zwischen zwei eingenommenen Medikamenten die wahrscheinlichste Ursache für Gregs Leiden ist.
 
 \section{Anwendungsfälle}
-TODO: Diagramm erstellen und Eintragen \\
+TODO: Diagramm erstellen \\
 Name: Datenübertragung Arzt-Patient \\
 Teilnehmende Akteure: Patient, Arzt \\
 Eingangsbedingung: Der Patient hat die myMD \gls{App}, der Arzt die \gls{Desktop Anwendung} installiert \\
 Ausgangsbedingung: Die Daten wurden erfolgreich übertragen oder der Vorgang wird abgebrochen \\
 Ereignisfluss: Verbindung zwischen Arzt und Patienten wird hergestellt $\Rightarrow$ Arzt fügt zu übertragende Daten in die Anwendung ein $\Rightarrow$ Die Daten werden vom Arzt zum Patienten übertragen $\Rightarrow$ Verbindung zwischen Arzt und Patient wird getrennt $\Rightarrow$ Patient kann Daten einsehen\\
 Spezielle Anforderungen: Drahtlosverbindung zwischen Arzt und Patient\\\\
-TODO: Diagramm erstellen und Eintragen \\
+TODO: Diagramm erstellen\\
 Name: Neuer Nutzer \\
 Teilnehmende Akteure: Nutzer\\
 Eingangsbedingung: Der Nutzer hat die myMD \gls{App} installiert \\
@@ -433,6 +433,8 @@ TODO: GUI Entwürfe  einbinden
 {[BT4030]} & \multicolumn{2}{p{12cm}}  {Senden wird erfolgreich abgeschlossen.} \\
 {[BT4040]} & \multicolumn{2}{p{12cm}}  {Senden wird durch äußere Einflüsse unterbrochen.} \\
 {[BT4050]} & \multicolumn{2}{p{12cm}}  {Senden wird durch Nutzer unterbrochen.} \\
+{[BT4060]} & \multicolumn{2}{p{12cm}}  {Geräte in der Nähe werden gesucht.} \\
+{[BT4070]} & \multicolumn{2}{p{12cm}}  {Nutzerhandy wird als Empfänger gewählt.} \\
 
 
 \end{tabular}
@@ -492,7 +494,45 @@ TODO: GUI Entwürfe  einbinden
 \end{tabular}
 
 \section{Testszenarien (TS)}
-TODO: Eintragen
+\subsection{Typischer Arztbesuch}
+Der Nutzer geht wegen einer Beschwerde zum Arzt und lässt sich untersuchen. Sobald die Untersuchung fertig ist, verlangt der Nutzer, dass der Arzt ihm die eben aufgenommenen Daten für die myMD \gls{App} zur Verfügung stellt. Der Arzt öffnet dann die \gls{Desktop Anwendung} und schickt dem Patienten den Arztbrief und Labordaten auf die myMD \gls{App}. Der Nutzer schaut sich dann kurz den neuen Eintrag in der Übersicht an, schließt die App und geht nach Hause. \newline
+
+\begin{tabular}{lll}
+[BT4060] & \multicolumn{2}{p{12cm}}  {Geräte in der Nähe werden gesucht.} \\
+{[BT4070]} & \multicolumn{2}{p{12cm}}  {Das Handy des Nutzers wird als Empfänger ausgewählt.} \\
+{[BT4030]} & \multicolumn{2}{p{12cm}}  {Senden wird erfolgreich abgeschlossen.} \\
+{[BT2020]} & \multicolumn{2}{p{12cm}}  {Der neue Arztbrief wird in bereits gefüllte Übersicht geladen.} \\
+{[ET2040]} & \multicolumn{2}{p{12cm}}  {Die Laborwerte werden hinzugefügt.} \\
+{[BT2030]} & \multicolumn{2}{p{12cm}}  {Der neue Arztbrief wird geöffnet.} \\
+{[BT2040]} & \multicolumn{2}{p{12cm}}  {Der neue Arztbrief wird geschlossen.} \\
+
+
+\end{tabular}
+
+\subsection{Krankenhistorie wird überprüft}
+Der Nutzer ist daheim und schaut sich in der myMD \gls{App} seine Übersicht an. Er klickt auf ein paar Arztbriefe und liest sich durch, was darin steht. Dann bemerkt er, dass er alle Arztbriefe zu seinem gebrochenen Fuß gruppieren sollte und auch die Schmerzmittel, die für seinen Fuß bekommen hat, in den Tab Medikamente hinzufügen. Aus versehen gibt er zuerst eine falsche Menge an, korrigiert diese aber und schließt daraufhin die App.\newline
+
+\begin{tabular}{lll}
+[BT2030] & \multicolumn{2}{p{12cm}}  {Ein Arztbrief wird geöffnet.} \\
+{[BT2040]} & \multicolumn{2}{p{12cm}}  {Ein Arztbrief wird geschlossen.} \\
+{[ET2100]} & \multicolumn{2}{p{12cm}}  {Alle Arztbriefe zum gebrochenen Fuß werden gruppiert.} \\
+{[ET2010]} & \multicolumn{2}{p{12cm}}  {Medikament wird hinzugefügt.} \\
+{[ET2020]} & \multicolumn{2}{p{12cm}}  {Medikament wird editiert.} \\
+
+\end{tabular}
+
+\subsection{Patienten holt sich bei einem anderen Arzt eine zweite Meinung ein}
+Der Nutzer hat eine sehr komplexe Beschwerde und will sich von einem anderen Arzt eine zweite Meinung einholen. Dazu geht er zu dem andern Arzt und informiert ihn über die bisherige Diagnose, indem er ihm seine Arztbriefe von der myMD \gls{App} auf die \gls{Desktop Anwendung} schickt. Der Arzt schaut sich diese Arztbriefe in seiner Praxissoftware an, stellt seine eigene Diagnose, schreibt seinen Arztbrief und sendet ihn dem Patienten.\newline
+
+\begin{tabular}{lll}
+[ET1020] & \multicolumn{2}{p{12cm}}  {Die alten Arztbriefe werden dem Arzt gesendet.} \\
+{[BT4060]} & \multicolumn{2}{p{12cm}}  {Geräte in der Nähe werden gesucht.} \\
+{[BT4070]} & \multicolumn{2}{p{12cm}}  {Das Handy des Nutzers wird als Empfänger ausgewählt.} \\
+{[BT4030]} & \multicolumn{2}{p{12cm}}  {Senden wird erfolgreich abgeschlossen.} \\
+
+\end{tabular}
+
+
  
 
 \chapter{Entwicklungsumgebung}
