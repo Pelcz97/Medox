@@ -190,7 +190,9 @@ TODO: eine coole 1 seitige Einleitung schreiben
 \chapter{Produkteinsatz}
 
 \section{Einsatzgebiete}
-myMD ist bei Arztbesuchen aller Art und in jeder anderen Situation in der man auf seine medizinischen Daten zugreifen möchte einsetzbar.
+In vielen Situationen kann myMD zum Einsatz kommen, zwei sind dabei besonders charakteristisch: \newline
+Zum Einen kann die App immer eine wichtige Unterstützung sein, wenn der Nutzer sich einen Überblick über die eigene Krankheitshistorie verschaffen möchte, 
+zum Anderen spielt myMD dann eine große Rolle, wenn Ärzte sich einen möglichst lückenlosen Überblick über den Patienten verschaffen müssen.
 
 \section{Produktumgebung}
 \begin{tabular}{lll}
@@ -252,9 +254,6 @@ Patienten &  \multicolumn{2}{p{12cm}}{Dies sind alle Menschen, die momentan oder
 \end{tabular}
 
 \section{Optionale Funktionen (OP)}
-\begin{tabular}{lll}
-[GF5010]&  \multicolumn{2}{p{12cm}}{Die Anwendung verhindert das Senden an eine myMD \gls{App}, falls die Versichertennummer im Arztbrief nicht mit der Versichertennummer im Profil der myMD App übereinstimmt [WK4010].}\\
-\end{tabular}
 
 \subsection{Patientenseitige Datenübertragung}
 \begin{tabular}{lll}
@@ -280,8 +279,6 @@ Patienten &  \multicolumn{2}{p{12cm}}{Dies sind alle Menschen, die momentan oder
 {[OF2080]} &  \multicolumn{2}{p{12cm}}{Der Nutzer kann seine Daten nach Schlagworten durchsuchen [WK2050].}  \\
 
 
-\end{tabular}
-
 \subsection{Einstellungen}
 \begin{tabular}{lll}
 [OF3010]&  \multicolumn{2}{p{12cm}}{Zusätzliche Nutzerprofile können hinzugefügt werden [WK3010].}\\
@@ -294,12 +291,7 @@ Patienten &  \multicolumn{2}{p{12cm}}{Dies sind alle Menschen, die momentan oder
 
 \subsection{Desktop Anwendung}
 \begin{tabular}{lll}
-[OF4010]&  \multicolumn{2}{p{12cm}}{Zusätzliche Nutzerprofile können hinzugefügt werden [WK3010].}\\
-{[OF4020]} &  \multicolumn{2}{p{12cm}}{Man kann zwischen den Nutzerprofilen wechseln [WK3010].}\\
-{[OF4030]} &  \multicolumn{2}{p{12cm}}{Man kann Nutzerprofile löschen [WK3010].}\\
-{[OF4040]} &  \multicolumn{2}{p{12cm}}{Einzelne oder Gruppen von Arztbriefe können mit einer Sensibilitätswertung versehen werden [WK3030].}  \\
-{[OF4050]} &  \multicolumn{2}{p{12cm}}{Hinzufügen von regelmäßigen Arztterminen [WK3040].}  \\
-{[OF4060]} &  \multicolumn{2}{p{12cm}}{Löschen von regelmäßigen Arztterminen [WK3040].}  \\
+{[GF4010]}&  \multicolumn{2}{p{12cm}}{Die Anwendung verhindert das Senden an eine myMD \gls{App}, falls die Versichertennummer im Arztbrief nicht mit der Versichertennummer im Profil der myMD App übereinstimmt [WK4010].}\\
 \end{tabular}
 
 
@@ -380,13 +372,20 @@ Gregs Beschwerden wollen kein Ende nehmen. Um der Ursache auf die Schliche zu ko
 Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} an den Computer des Arztes, auf welchem der Desktop-Klient von myMD die Daten verarbeitet und dem Arzt präsentiert. Schnell vermutet dieser, dass eine Wechselwirkung zwischen zwei eingenommenen Medikamenten die wahrscheinlichste Ursache für Gregs Leiden ist.
 
 \section{Anwendungsfälle}
-TODO: Diagramme erstellen und Eintragen \\
+TODO: Diagramm erstellen und Eintragen \\
 Name: Datenübertragung Arzt-Patient \\
 Teilnehmende Akteure: Patient, Arzt \\
 Eingangsbedingung: Der Patient hat die myMD \gls{App} und der Arzt die \gls{Desktop Anwendung} installiert \\
 Ausgangsbedingung: Die Daten wurden erfolgreich übertragen oder der Vorgang wird abgebrochen \\
-Ereignisfluss: Verbindung zwischen Arzt und Patienten wird hergestellt --> Arzt fügt zu übertragende Daten in die Anwendung ein --> Die Daten werden vom Arzt zum Patienten übertragen --> Verbindung zwischen Arzt und Patient wird getrennt --> Patient kann Daten einsehen
-Spezielle Anforderungen: Drahtlosverbindung zwischen Arzt und Patient
+Ereignisfluss: Verbindung zwischen Arzt und Patienten wird hergestellt --> Arzt fügt zu übertragende Daten in die Anwendung ein --> Die Daten werden vom Arzt zum Patienten übertragen --> Verbindung zwischen Arzt und Patient wird getrennt --> Patient kann Daten einsehen\\
+Spezielle Anforderungen: Drahtlosverbindung zwischen Arzt und Patient\\\\
+TODO: Diagramm erstellen und Eintragen \\
+Name: Neuer Nutzer \\
+Teilnehmende Akteure: Nutzer\\
+Eingangsbedingung: Der Nutzer hat die myMD \gls{App} installiert \\
+Ausgangsbedingung: Der Nutzer hat alle geünschten Daten eingegeben oder den Vorgang abgebrochen\\
+Ereignisfluss: Nutzer startet App --> Neues Profil erstellen --> Nutzer-Informationen eingeben -->  Medikamente hinzufügen\\
+Spezielle Anforderungen: Keine
 \section{Benutzungsoberfläche}
 TODO: GUI Entwürfe  einbinden
 \begin{figure}[ht]
