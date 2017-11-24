@@ -376,20 +376,37 @@ Gregs Beschwerden wollen kein Ende nehmen. Um der Ursache auf die Schliche zu ko
 Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} an den Computer des Arztes, auf welchem der Desktop-Klient von myMD die Daten verarbeitet und dem Arzt präsentiert. Schnell vermutet dieser, dass eine Wechselwirkung zwischen zwei eingenommenen Medikamenten die wahrscheinlichste Ursache für Gregs Leiden ist.
 
 \section{Anwendungsfälle}
-TODO: Diagramm erstellen und Eintragen \\
-Name: Datenübertragung Arzt-Patient \\
-Teilnehmende Akteure: Patient, Arzt \\
-Eingangsbedingung: Der Patient hat die myMD \gls{App}, der Arzt die \gls{Desktop Anwendung} installiert \\
-Ausgangsbedingung: Die Daten wurden erfolgreich übertragen oder der Vorgang wird abgebrochen \\
-Ereignisfluss: Verbindung zwischen Arzt und Patienten wird hergestellt --> Arzt fügt zu übertragende Daten in die Anwendung ein --> Die Daten werden vom Arzt zum Patienten übertragen --> Verbindung zwischen Arzt und Patient wird getrennt --> Patient kann Daten einsehen\\
-Spezielle Anforderungen: Drahtlosverbindung zwischen Arzt und Patient\\\\
-TODO: Diagramm erstellen und Eintragen \\
-Name: Neuer Nutzer \\
-Teilnehmende Akteure: Nutzer\\
-Eingangsbedingung: Der Nutzer hat die myMD \gls{App} installiert \\
-Ausgangsbedingung: Der Nutzer hat alle gewünschten Daten eingegeben oder den Vorgang abgebrochen\\
-Ereignisfluss: Nutzer startet App --> Neues Profil erstellen --> Nutzer-Informationen eingeben -->  Medikamente hinzufügen\\
-Spezielle Anforderungen: Keine
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{AF-ArztPatient}
+\caption{Anwendungsfall Datenübertragung Arzt-Patient}
+\end{figure}
+
+\begin{tabular}{lll}
+{Name} & \multicolumn{2}{p{11.5cm}}  {Datenübertragung Arzt-Patient}\\
+{Teilnehmende Akteure} & \multicolumn{2}{p{11.5cm}} {Patient, Arzt} \\
+{Eingangsbedingung} & \multicolumn{2}{p{11.5cm}} {Der Patient hat die myMD \gls{App}, der Arzt die \gls{Desktop Anwendung} installiert} \\
+{Ausgangsbedingung} & \multicolumn{2}{p{11.5cm}} {Die Daten wurden erfolgreich übertragen oder der Vorgang wird abgebrochen} \\
+{Ereignisfluss} & \multicolumn{2}{p{11.5cm}} {Verbindung zwischen Arzt und Patienten wird hergestellt --> Arzt fügt zu übertragende Daten in die Anwendung ein --> Die Daten werden vom Arzt zum Patienten übertragen --> Verbindung zwischen Arzt und Patient wird getrennt --> Patient kann Daten einsehen} \\
+{Spezielle Anforderungen} & \multicolumn{2}{p{11.5cm}} {Drahtlosverbindung zwischen Arzt und Patient} \\
+\end{tabular} 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{AF-NeuerNutzer}
+\caption{Anwendungsfall Neuer Nutzer}
+\end{figure}
+
+\begin{tabular}{lll}
+{Name} & \multicolumn{2}{p{11.5cm}} {Neuer Nutzer}\\
+{Teilnehmende Akteure} & \multicolumn{2}{p{11.5cm}} {Nutzer} \\
+{Eingangsbedingung} & \multicolumn{2}{p{11.5cm}} {Der Nutzer hat die myMD \gls{App} installiert} \\
+{Ausgangsbedingung} & \multicolumn{2}{p{11.5cm}} {Der Nutzer hat alle gewünschten Daten eingegeben oder den Vorgang abgebrochen} \\
+{Ereignisfluss} & \multicolumn{2}{p{11.5cm}} {Nutzer startet App --> Neues Profil erstellen --> Nutzer-Informationen eingeben -->  Medikamente hinzufügen} \\
+{Spezielle Anforderungen} & \multicolumn{2}{p{11.5cm}} {Keine} \\
+\end{tabular} 
+
 \section{Benutzungsoberfläche}
 TODO: GUI Entwürfe  einbinden
 \begin{figure}[ht]
