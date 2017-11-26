@@ -19,7 +19,7 @@
 \usepackage[bookmarks,bookmarksnumbered]{hyperref}
 \usepackage{float}
 \usepackage[font={footnotesize}]{caption}
-
+\captionsetup{singlelinecheck=false}
 
 \setcounter{tocdepth}{1} 
 \setcounter{secnumdepth}{2} 
@@ -411,15 +411,10 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 
 \begin{minipage}[t][][b]{0.45\textwidth}
 \includegraphics[width=0.8\textwidth]{mockups/OverviewTab}
-\begin{flushleft}
 \captionof{figure}{\gls{Tab} \textit{Übersicht}}
-\end{flushleft}
-
-
+~\\
 \includegraphics[width=0.8\textwidth]{mockups/ArztbriefDetailed}
-\begin{flushleft}
 \captionof{figure}{Arztbrief in detaillierter Ansicht}
-\end{flushleft}
 \end{minipage}%
 \hfill
 \begin{minipage}[t][][b]{0.45\textwidth}
@@ -435,15 +430,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 \begin{minipage}[t][][b]{0.45\textwidth}
 
 \includegraphics[width=0.8\textwidth]{mockups/MedTab}
-\begin{flushleft}
 \captionof{figure}{\gls{Tab} \textit{Medikation}}
-\end{flushleft}
-
-
+~\\
 \includegraphics[width=0.8\textwidth]{mockups/NewMed}
-\begin{flushleft}
 \captionof{figure}{Ansicht beim Hinzufügen eines Medikaments}
-\end{flushleft}
 
 \end{minipage}%
 \hfill
@@ -459,15 +449,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 \begin{minipage}[t][][b]{0.45\textwidth}
 
 \includegraphics[width=0.8\textwidth]{mockups/ReceiveData}
-\begin{flushleft}
 \captionof{figure}{Ansicht einer Übertragungsanfrage des Arztes}
-\end{flushleft}
-
-
+~\\
 \includegraphics[width=0.8\textwidth]{mockups/SendTab}
-\begin{flushleft}
 \captionof{figure}{\gls{Tab} \textit{Senden}}
-\end{flushleft}
 \end{minipage}%
 \hfill
 \begin{minipage}[t][][b]{0.45\textwidth}
@@ -476,8 +461,6 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 \end{minipage}%
 
 \begin{figure}[ht]
-  \centering
-  \rule{8cm}{6cm}
   \caption{Dies könnte ein Bild der Benutzungsoberfläche sein}
 \end{figure}
 
