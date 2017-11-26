@@ -19,7 +19,6 @@
 \usepackage[bookmarks,bookmarksnumbered]{hyperref}
 \usepackage{float}
 \usepackage[font={footnotesize}]{caption}
-\captionsetup{singlelinecheck=false}
 
 \setcounter{tocdepth}{1} 
 \setcounter{secnumdepth}{2} 
@@ -418,23 +417,23 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 \hfill
 \begin{minipage}[t][][b]{0.6\textwidth}
 
-\subsection{Tab \textit{Übersicht}}
+\subsection*{Tab \textit{Übersicht}}
 \textbf{Beschreibung}\\
-TODO\\
+{Darstellung der Übersicht über alle verfügbaren Arztbriefe}\\
 \textbf{Elemente}\\
-{Button: Löschen von Einträgen}\\
 {Arztbriefe als Listenelemente}\\
+{Button: Löschen von Einträgen}\\
 {Tab Bar: Navigieren durch die App}\\
 
 \textbf{Verwendung}\\
 {Tippen auf einen Listeneintrag öffnet eine detaillierte Vollbild-Ansicht zu diesem Eintrag}\\
 {Durch vertikales Wischen kann durch die Auflistung aller Arztbriefe navigiert werden}\\
 {Horzontales Wischen vom rechten Rand eines Listenelements nach links löscht den Eintrag}\\
-{Über die Tab-Bar am unteren Bildschirmrand sind weitere Funktionen der App erreichbar}
 
 
 
-\subsection{Detaillierter Arztbrief}
+
+\subsection*{Detaillierter Arztbrief}
 \textbf{Beschreibung}\\
 {Vollständige Darstellung eines Arztbriefes}\\
 \textbf{Elemente}\\
@@ -463,26 +462,22 @@ TODO\\
 \end{minipage}%
 \hfill
 \begin{minipage}[t][][b]{0.6\textwidth}
-\subsection{Tab \textit{Medikation}}
+\subsection*{Tab \textit{Medikation}}
 \textbf{Beschreibung}\\
 {Auflistung aller eingepflegter Medikamenteneinnahmen}\\
 \textbf{Elemente}\\
-{Button: Löschen von Einträgen}\\
 {Eingenommene Medikamente als Listenelemente}\\
-{Textfeld: Einnahmedauer eines Medikaments}\\
-{Textfeld: Einnahmehäufigkeit eines Medikaments}\\
-{Textbox: Datum der erstmaligen Einnahme}\\
-{Textbox: Dosierung des Wirkstoffes}\\
+{Button: Bearbeiten von Einträgen}\\
+{Textfelder: Details einer Medikamenteneinnahme}\\
 {Button: Hinzufügen eines Medikamentes}\\
 {Tab Bar: Navigieren durch die App}
 
 \textbf{Verwendung}\\
-{Durch vertikales Wischen kann durch die Auflistung aller Arztbriefe navigiert werden}\\
+{Durch vertikales Wischen kann durch die Auflistung aller eingenommener Medikamente navigiert werden}\\
 {Horizontales Wischen vom rechten Rand eines Listenelements nach links löscht den Eintrag}\\
 {Tippen auf Hinzufügen öffnet ein Formular zum Einpflegen eines neuen Medikamentes}\\
-{Über die Tab Bar am unteren Bildschirmrand sind weitere Funktionen der App erreichbar}
 
-\subsection{Neue Medikamenteneinnahme hinzufügen}
+\subsection*{Neue Medikamenteneinnahme hinzufügen}
 \textbf{Beschreibung}\\
 {Formular zum Festlegen von Medikamentenparameter}\\
 \textbf{Elemente}\\
@@ -512,7 +507,7 @@ TODO\\
 \end{minipage}%
 \hfill
 \begin{minipage}[t][][b]{0.6\textwidth}
-\subsection{Übermittlungsanfrage}
+\subsection*{Übermittlungsanfrage}
 \textbf{Beschreibung}\\
 {Meldung im Falle einer Übermittlungsanfrage des Arztes}\\
 \textbf{Elemente}\\
@@ -523,9 +518,15 @@ TODO\\
 \textbf{Verwendung}\\
 {Hier kann der Nutzer entscheiden, ob er einer Übertragungsanfrage des Arztes zustimmen oder sie ablehnen möchte.}
 
-\subsection{Senden von Arztbriefen}
+~\\
+~\\
+~\\
+~\\
+
+
+\subsection*{Senden von Arztbriefen}
 \textbf{Beschreibung}\\
-{TODO}\\
+{Darstellung des Tabs \textit{Senden}}\\
 \textbf{Elemente}\\
 {Textbox: Nutzerhinweise zum Sendevorgang}\\
 {Button: Starten des Auswahlvorgangs von Arztbriefen}\\
