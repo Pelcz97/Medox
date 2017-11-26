@@ -24,10 +24,21 @@
 \setcounter{secnumdepth}{2} 
 
 \makenoidxglossaries
+
+\newglossaryentry{Server}
+{	name=Server,
+	description={Ein Server (englisch server, wörtlich Diener oder Bediensteter, im weiteren Sinn auch Dienst) ist ein Computerprogramm oder ein Computer, der Computerfunktionalitäten wie Dienstprogramme, Daten oder andere Ressourcen bereitstellt, damit andere Computer oder Programme („Clients“) darauf zugreifen können}
+}
+
 \newglossaryentry{App}
 { 	name=App,
 	plural=Apps,
 	description={Als Mobile App (auf Deutsch meist in der Kurzform die App, eine Abkürzung für den Fachbegriff Applikation) wird eine Anwendungssoftware für Mobilgeräte beziehungsweise mobile Betriebssysteme bezeichnet}
+}
+
+\newglossaryentry{Nutzer}
+{	name=Nutzer,
+	description={Ein Benutzer (auch Endbenutzer, Bediener oder kurz Nutzer genannt sowie englisch User) ist eine Person, die ein Hilfs- oder Arbeitsmittel zur Erzielung eines Nutzens verwendet, beispielsweise für eine Zeitersparnis oder Kostensenkung}
 }
 
 \newglossaryentry{Desktop Anwendung}
@@ -41,14 +52,35 @@
 	description={Drag and Drop, oft auch Drag’n’Drop, deutsch „Ziehen und Ablegen“, ist eine Methode zur Bedienung grafischer Benutzeroberflächen von Rechnern durch das Bewegen grafischer Elemente mittels eines Zeigegerätes. Ein Element wie z. B. ein Piktogramm kann damit gezogen und über einem möglichen Ziel losgelassen werden. Dieses kann zum Beispiel markierter Text oder das Symbol einer Datei sein }
 }
 
+\newglossaryentry{Medikament}
+{	name=Medikament,
+	description={Arzneimittel oder gleichbedeutend Medikamente (lateinisch medicamentum „Heilmittel“) sind Stoffe oder Stoffzusammensetzungen, die „zur Heilung oder zur Verhütung menschlicher oder tierischer Krankheiten bestimmt sind“ oder sich dazu eignen, physiologische Funktionen zu beeinflussen oder eine medizinische Diagnose zu ermöglichen}
+}
+
 \newglossaryentry{NFC}
 { 	name=NFC,
-	description={Die Nahfeldkommunikation (Near Field Communication, abgekürzt NFC) ist ein auf der RFID-Technik basierender internationaler Übertragungsstandard zum kontaktlosen Austausch von Daten per elektromagnetischer Induktion mittels loser gekoppelter Spulen über kurze Strecken von wenigen Zentimetern und einer Datenübertragungsrate von maximal 424 kBit/s}
+	description={Die Nahfeldkommunikation (Near Field Communication, abgekürzt NFC) ist ein auf der RFID-Technik basierender internationaler Übertragungsstandard zum kontaktlosen Austausch von Daten per elektromagnetischer Induktion mittels loser gekoppelter Spulen über kurze Strecken von wenigen Zentimetern}
 }
+
+\newglossaryentry{Versichertennummer}
+{ 	name=Versichertennummer,
+	description={Die Krankenversichertennummer dient der Identifikation des Versicherten bei einer Krankenversicherung. Die Krankenversichertennummer wird benötigt, damit Leistungserbringer, z. B. Ärzte oder Zahnärzte ihre Leistungen mittels der Krankenversicherungskarte, über die Kassenärztlichen Vereinigungen, mit der zuständigen Krankenkasse abrechnen können}
+}
+
 
 \newglossaryentry{Bluetooth}
 {	name=Bluetooth,
 	description={Bluetooth ist ein in den 1990er Jahren durch die Bluetooth Special Interest Group (SIG) entwickelter Industriestandard gemäß IEEE 802.15.1 für die Datenübertragung zwischen Geräten über kurze Distanz per Funktechnik (WPAN). Dabei sind verbindungslose sowie verbindungsbehaftete Übertragungen von Punkt zu Punkt und Ad-hoc- oder Piconetze möglich}
+}
+
+\newglossaryentry{Pop-Up}
+{	name=Pop-Up,
+	description={Ein Pop-up (von englisch to pop up, „plötzlich auftauchen“) ist ein Element einer grafischen Benutzeroberfläche. In der Regel werden Pop-ups eingesetzt, um zusätzliche Inhalte anzuzeigen oder eine bestimmte Interaktion abzufragen. Typischerweise „springen“ Pop-ups auf und überdecken dabei andere Teile der Benutzeroberfläche}
+}
+
+\newglossaryentry{Cloud}
+{	name=Cloud,
+	description={Die Cloud ist keine physische Größe, sondern ein riesiges Netzwerk aus Remoteservern, die über die ganzen Welt verteilt aber miteinander verbunden sind, damit sie als ein einziges großes Ökosystem funktionieren können}
 }
 
 \newglossaryentry{Tab}
@@ -56,7 +88,16 @@
 	description={Eine Registerkarte, auch Reiter oder Tab genannt, ist ein Steuerelement einer grafischen Benutzeroberfläche, das einem Registerblatt aus Aktenschränken nachempfunden wurde }
 }
  
+\newglossaryentry{Arztbrief}
+{	name=Arztbrief,
+	plural=Arztbriefe,
+	description={Der Arztbrief, oft synonym als Epikrise, Entlassungsbrief, Patientenbrief oder Befundbericht bezeichnet, ist ein Transferdokument für die Kommunikation zwischen Ärzten. Der Arztbrief gibt einen zusammenfassenden Überblick über den Status des Patienten bei der Entlassung, einen Rückblick über den Krankheitsverlauf, die veranlasste Therapie, eine Interpretation des Geschehens zum Krankheitsverlauf im speziellen Fall}
+}
 
+\newglossaryentry{Anamnese}
+{	name=Anamnese,
+	description={Die Anamnese (von altgriechisch anámnēsis, deutsch ‚Erinnerung‘) ist die professionelle Erfragung von potenziell medizinisch relevanten Informationen durch Fachpersonal (z. B. einen Arzt)}
+}
  
 \begin{document}
 \begin{titlepage}
@@ -100,7 +141,7 @@ TODO: eine coole 1 seitige Einleitung schreiben
 \subsection{Patientenseitige Datenübertragung}
 \begin{tabular}{lll}
 
-[PK1010] & \multicolumn{2}{p{12cm}}  {Arztbriefe können von der \gls{Desktop Anwendung} auf die myMD \gls{App} des Patienten übertragen werden.} \\
+[PK1010] & \multicolumn{2}{p{12cm}}  {\glspl{Arztbrief} können von der \gls{Desktop Anwendung} auf die myMD \gls{App} des Patienten übertragen werden.} \\
 {[PK1020]} & \multicolumn{2}{p{12cm}}  {Die Übertragung erfolgt verschlüsselt über \gls{Bluetooth}.} \\
 {[PK1030]} & \multicolumn{2}{p{12cm}}  {Eine laufende Datenübertragung kann manuell abgebrochen werden.} \\
 
@@ -108,14 +149,14 @@ TODO: eine coole 1 seitige Einleitung schreiben
 
 \subsection{Darstellung}
 \begin{tabular}{lll}
-[PK2010] & \multicolumn{2}{p{12cm}}  {Arztbriefe werden chronologisch absteigend im \gls{Tab} \textit{Übersicht} dargestellt.} \\
-{[PK2020]} & \multicolumn{2}{p{12cm}}  {Der Nutzer kann überflüssige/unerwünschte Arztbriefe löschen.} \\
-{[PK2030]} & \multicolumn{2}{p{12cm}}  {Die Darstellung eines Arztbriefes umfasst die Diagnose, verordnete Medikamente, das Datum und den Namen des behandelnden Arztes.} \\
+[PK2010] & \multicolumn{2}{p{12cm}}  {\glspl{Arztbrief} werden chronologisch absteigend im \gls{Tab} \textit{Übersicht} dargestellt.} \\
+{[PK2020]} & \multicolumn{2}{p{12cm}}  {Der \gls{Nutzer} kann überflüssige/unerwünschte \glspl{Arztbrief} löschen.} \\
+{[PK2030]} & \multicolumn{2}{p{12cm}}  {Die Darstellung eines Arztbriefes umfasst die Diagnose, verordnete \gls{Medikament}e, das Datum und den Namen des behandelnden Arztes.} \\
 \end{tabular}
 
 \subsection{Einstellungen}
 \begin{tabular}{lll}
-[PK3010] & \multicolumn{2}{p{12cm}}  {Der Nutzer kann ein eigenes Profil anlegen, welches Daten wie den Namen, Versicherungsnummer, Blutgruppe und Allergien enthält.} \\
+[PK3010] & \multicolumn{2}{p{12cm}}  {Der \gls{Nutzer} kann ein eigenes Profil anlegen, welches Daten wie den Namen, Versicherungsnummer, Blutgruppe und Allergien enthält.} \\
 {[PK3020]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird in Deutsch angeboten.} \\
 
 \end{tabular}
@@ -132,15 +173,15 @@ TODO: eine coole 1 seitige Einleitung schreiben
 \begin{tabular}{lll}
 [PK5010] & \multicolumn{2}{p{12cm}}  {Die \gls{Desktop Anwendung} wird von Microsoft Windows 10 unterstützt.} \\
 {[PK5020]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird von Android 6.0 (und höher) unterstützt.} \\
-{[PK5030]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} kann Arztbriefe im .hl7 Dateiformat anzeigen.} \\
+{[PK5030]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} kann \glspl{Arztbrief} im .hl7 Dateiformat anzeigen.} \\
 
 \end{tabular}
  
 \section{Wunschkriterien (WK)}
 \subsection{Patientenseitige Datenübertragung}
 \begin{tabular}{lll}
-[WK1010] & \multicolumn{2}{p{12cm}}  {Ein Arztbrief kann von der myMD \gls{App} des Patienten auf die \gls{Desktop Anwendung} übertragen werden.} \\
-{[WK1020]} & \multicolumn{2}{p{12cm}}  {Der Patient kann mehrere Arztbriefe gleichzeitig senden.} \\
+[WK1010] & \multicolumn{2}{p{12cm}}  {Ein \gls{Arztbrief} kann von der myMD \gls{App} des Patienten auf die \gls{Desktop Anwendung} übertragen werden.} \\
+{[WK1020]} & \multicolumn{2}{p{12cm}}  {Der Patient kann mehrere \glspl{Arztbrief} gleichzeitig senden.} \\
 {[WK1030]} & \multicolumn{2}{p{12cm}}  {\gls{NFC} steht als weitere Übertragungsmöglichkeit zur Verfügung.} \\
 {[WK1040]} & \multicolumn{2}{p{12cm}}  {Der Patient wird vor dem Senden von sensiblen Daten darauf hingewiesen, dass er sensible Daten versendet.} \\
 {[WK1050]} & \multicolumn{2}{p{12cm}}  {Ein Profil auf einem Mobilgerät kann auf ein Anderes übertragen werden.} \\
@@ -149,25 +190,25 @@ TODO: eine coole 1 seitige Einleitung schreiben
 
 \subsection{Darstellung}
 \begin{tabular}{lll}
-[WK2010] & \multicolumn{2}{p{12cm}}  {Eingenommene Medikamente werden in einem extra \gls{Tab} chronologisch absteigend sortiert dargestellt.} \\
+[WK2010] & \multicolumn{2}{p{12cm}}  {Eingenommene \gls{Medikament}e werden in einem extra \gls{Tab} chronologisch absteigend sortiert dargestellt.} \\
 {[WK2020]} & \multicolumn{2}{p{12cm}}  {Laborwerte des Patienten werden in einem extra \gls{Tab} chronologisch absteigend sortiert dargestellt.} \\
-{[WK2030]} & \multicolumn{2}{p{12cm}}  {Ein Arztbrief kann Bilddateien enthalten und die myMD \gls{App} kann diese originalgetreu darstellen und einem Arztbrief zuordnen.} \\
-{[WK2040]} & \multicolumn{2}{p{12cm}}  {Es gibt die Möglichkeit, Arztbriefe nach eigenen Kriterien (Arzt, Krankheit o.ä.) zu gruppieren.} \\
-{[WK2050]} & \multicolumn{2}{p{12cm}}  {Es gibt eine Suchfunktion, die alle Arztbriefe nach Daten durchsucht.} \\
+{[WK2030]} & \multicolumn{2}{p{12cm}}  {Ein \gls{Arztbrief} kann Bilddateien enthalten und die myMD \gls{App} kann diese originalgetreu darstellen und einem \gls{Arztbrief} zuordnen.} \\
+{[WK2040]} & \multicolumn{2}{p{12cm}}  {Es gibt die Möglichkeit, \glspl{Arztbrief} nach eigenen Kriterien (Arzt, Krankheit o.ä.) zu gruppieren.} \\
+{[WK2050]} & \multicolumn{2}{p{12cm}}  {Es gibt eine Suchfunktion, die alle \glspl{Arztbrief} nach Daten durchsucht.} \\
 \end{tabular}
 
 \subsection{Einstellungen}
 \begin{tabular}{lll}
-[WK3010] & \multicolumn{2}{p{12cm}}  {Auf einer myMD \gls{App} können mehrere Nutzer verwaltet werden.} \\
+[WK3010] & \multicolumn{2}{p{12cm}}  {Auf einer myMD \gls{App} können mehrere \gls{Nutzer} verwaltet werden.} \\
 {[WK3020]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird zusätzlich auch auf Englisch angeboten.} \\
-{[WK3030]} & \multicolumn{2}{p{12cm}}  {Der Nutzer kann einzelne Arztbriefe oder ganze Gruppen als sensibel markieren.} \\
-{[WK3040]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} kann den Nutzer an regelmäßige Arzttermine (z.B. Zahnarzt, Augenarzt) erinnern.} \\
+{[WK3030]} & \multicolumn{2}{p{12cm}}  {Der \gls{Nutzer} kann einzelne \glspl{Arztbrief} oder ganze Gruppen als sensibel markieren.} \\
+{[WK3040]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} kann den \gls{Nutzer} an regelmäßige Arzttermine (z.B. Zahnarzt, Augenarzt) erinnern.} \\
 
 \end{tabular}
 
 \subsection{Desktop Anwendung}
 \begin{tabular}{lll}
-{[WK4010]} & \multicolumn{2}{p{12cm}}  {Die Versicherungsnummer, die in einem Arztbrief auf dem Computer des Arztes eingetragen ist, wird vor dem Senden mit der in der myMD App des Patienten hinterlegten Versicherungsnummer abgeglichen und nur bei Übereinstimmung wird der Arztbrief gesendet.} \\
+{[WK4010]} & \multicolumn{2}{p{12cm}}  {Die Versicherungsnummer, die in einem \gls{Arztbrief} auf dem Computer des Arztes eingetragen ist, wird vor dem Senden mit der in der myMD App des Patienten hinterlegten Versicherungsnummer abgeglichen und nur bei Übereinstimmung wird der \gls{Arztbrief} gesendet.} \\
 
 
 \end{tabular}
@@ -176,8 +217,8 @@ TODO: eine coole 1 seitige Einleitung schreiben
 \begin{tabular}{lll}
 {[WK5010]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird von iOS 10 (und höher) unterstützt.} \\
 {[WK5020]} & \multicolumn{2}{p{12cm}}  {Die \gls{Desktop Anwendung} wird zusätzlich von macOS 10.12 unterstützt.} \\
-{[WK5030]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} kann Arztbriefe im .pdf Dateiformat anzeigen.} \\
-{[WK5040]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} kann Arztbriefe im .csv Dateiformat anzeigen.} \\
+{[WK5030]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} kann \gls{Arztbrief}e im .pdf Dateiformat anzeigen.} \\
+{[WK5040]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} kann \gls{Arztbrief}e im .csv Dateiformat anzeigen.} \\
 
 \end{tabular}
  
@@ -185,11 +226,11 @@ TODO: eine coole 1 seitige Einleitung schreiben
 \begin{tabular}{ll}
 
 [AK0010] &  Die Anwendung selbst stellt keine medizinischen Diagnosen. \\
-{[AK0020]} &  Es werden keine Daten auf einem Server oder in einer Cloud gespeichert. \\
+{[AK0020]} &  Es werden keine Daten auf einem \gls{Server} oder in einer \gls{Cloud} gespeichert. \\
 {[AK0030]} &  Die Anwendung stellt keinen Ersatz zu einem Arzttermin dar. \\
 {[AK0040]} &  Die Anwendung stellt keinen Ersatz zu einer Versichertenkarte dar. \\
 {[AK0050]} &  Es gibt keine Möglichkeit zur Terminvereinbarung. \\
-{[AK0060]} &  Der Nutzer kann einen Arztbrief nicht editieren. \\
+{[AK0060]} &  Der \gls{Nutzer} kann einen \gls{Arztbrief} nicht editieren. \\
 
 \end{tabular}
  
@@ -197,7 +238,7 @@ TODO: eine coole 1 seitige Einleitung schreiben
 
 \section{Einsatzgebiete}
 In vielen Situationen kann myMD zum Einsatz kommen, zwei sind dabei besonders charakteristisch: \newline
-Zum Einen kann die App immer eine wichtige Unterstützung sein, wenn der Nutzer sich einen Überblick über die eigene Krankheitshistorie verschaffen möchte, 
+Zum Einen kann die App immer eine wichtige Unterstützung sein, wenn der \gls{Nutzer} sich einen Überblick über die eigene Krankheitshistorie verschaffen möchte, 
 zum Anderen spielt myMD dann eine große Rolle, wenn Ärzte sich einen möglichst lückenlosen Überblick über den Patienten verschaffen müssen.
 
 \section{Produktumgebung}
@@ -207,7 +248,7 @@ zum Anderen spielt myMD dann eine große Rolle, wenn Ärzte sich einen möglichs
 \end{tabular} 
 
 \section{Betriebsbedingungen}
-{\textbf{Um die korrekte Übertragung digitaler Arztbriefe zu gewährleisten, müssen folgende Bedingungen erfüllt sein:}} \newline\newline
+{\textbf{Um die korrekte Übertragung digitaler \glspl{Arztbrief} zu gewährleisten, müssen folgende Bedingungen erfüllt sein:}} \newline\newline
 \begin{tabular}{lll}
 \gls{Bluetooth} & \multicolumn{2}{p{11.5cm}}{Sowohl das Mobilgerät des Patienten, als auch der Computer des Arztes müssen mindestens über \gls{Bluetooth} 4.0 Low Energy verfügen.} \\
 \end{tabular} 
@@ -224,7 +265,7 @@ Patienten &  \multicolumn{2}{p{12cm}}{Dies sind alle Menschen, die momentan oder
 \section{Grundfunktionen (GF)}
 \subsection{Patientenseitige Datenübertragung}
 \begin{tabular}{lll}
-[GF1010]&  \multicolumn{2}{p{12cm}}{Die \gls{Desktop Anwendung} sendet einen Arztbrief an die myMD \gls{App} [PK1010].}\\
+[GF1010]&  \multicolumn{2}{p{12cm}}{Die \gls{Desktop Anwendung} sendet einen \gls{Arztbrief} an die myMD \gls{App} [PK1010].}\\
 {[GF1020]} &  \multicolumn{2}{p{12cm}}{Verschlüsselte Übertragung der Daten [PK1020].}  \\
 {[GF1030]} &  \multicolumn{2}{p{12cm}}{Lokale, drahtlose Übertragung der Daten [PK1020].}  \\
 {[GF1040]} &  \multicolumn{2}{p{12cm}}{Übertragung kann bei Bedarf abgebrochen werden [PK1030].}  \\
@@ -232,13 +273,13 @@ Patienten &  \multicolumn{2}{p{12cm}}{Dies sind alle Menschen, die momentan oder
 
 \subsection{Darstellung}
 \begin{tabular}{lll}
-{[GF2010]}&  \multicolumn{2}{p{12cm}}{Im \gls{Tab} \textit{Übersicht} werden alle geladenen Arztbriefe aufgelistet [PK2010].} \\
-{[GF2020]} &  \multicolumn{2}{p{12cm}}{Löschen einzelner Arztbriefe [PK2020].}  \\
-{[GF2030]} &  \multicolumn{2}{p{12cm}}{Der digitale Arztbrief zeigt die ausgestellte Diagnose an [PK2030].}  \\
-{[GF2040]} &  \multicolumn{2}{p{12cm}}{Der digitale Arztbrief zeigt die verschriebenen Medikamente an [PK2030].}  \\
-{[GF2050]} &  \multicolumn{2}{p{12cm}}{Der digitale Arztbrief zeigt das Erstellungsdatum des Artztbriefes an [PK2030].}  \\
-{[GF2060]} &  \multicolumn{2}{p{12cm}}{Der digitale Arztbrief zeigt den Namen des Arztes an [PK2030].}  \\
-{[GF2070]} &  \multicolumn{2}{p{12cm}}{Der digitale Arztbrief wird im \gls{Tab} \textit{Übersicht} kompakt dargestellt.}  \\
+{[GF2010]}&  \multicolumn{2}{p{12cm}}{Im \gls{Tab} \textit{Übersicht} werden alle geladenen \glspl{Arztbrief} aufgelistet [PK2010].} \\
+{[GF2020]} &  \multicolumn{2}{p{12cm}}{Löschen einzelner \glspl{Arztbrief} [PK2020].}  \\
+{[GF2030]} &  \multicolumn{2}{p{12cm}}{Der digitale \gls{Arztbrief} zeigt die ausgestellte Diagnose an [PK2030].}  \\
+{[GF2040]} &  \multicolumn{2}{p{12cm}}{Der digitale \gls{Arztbrief} zeigt die verschriebenen \gls{Medikament}e an [PK2030].}  \\
+{[GF2050]} &  \multicolumn{2}{p{12cm}}{Der digitale \gls{Arztbrief} zeigt das Erstellungsdatum des Artztbriefes an [PK2030].}  \\
+{[GF2060]} &  \multicolumn{2}{p{12cm}}{Der digitale \gls{Arztbrief} zeigt den Namen des Arztes an [PK2030].}  \\
+{[GF2070]} &  \multicolumn{2}{p{12cm}}{Der digitale \gls{Arztbrief} wird im \gls{Tab} \textit{Übersicht} kompakt dargestellt.}  \\
 {[GF2080]} &  \multicolumn{2}{p{12cm}}{Tippen auf einen Listeneintrag im \gls{Tab} \textit{Übersicht} öffnet eine ausführliche Ansicht des Arztbriefes.}  \\
 \end{tabular}
 
@@ -246,7 +287,7 @@ Patienten &  \multicolumn{2}{p{12cm}}{Dies sind alle Menschen, die momentan oder
 \begin{tabular}{lll}
 [GF3010]&  \multicolumn{2}{p{12cm}}{Anlegen eines Nutzerprofils [PK3010].}\\
 {[GF3020]} &  \multicolumn{2}{p{12cm}}{Hinzufügen des Vor-/Nachnamens zum Nutzerprofil [PK3010].}  \\
-{[GF3030]} &  \multicolumn{2}{p{12cm}}{Hinzufügen der Versichertennummer zum Nutzerprofil [PK3010].}  \\
+{[GF3030]} &  \multicolumn{2}{p{12cm}}{Hinzufügen der \gls{Versichertennummer} zum Nutzerprofil [PK3010].}  \\
 {[GF3040]} &  \multicolumn{2}{p{12cm}}{Hinzufügen der Blutgruppe zum Nutzerprofil [PK3010].}  \\
 {[GF3050]} &  \multicolumn{2}{p{12cm}}{Hinzufügen eines Profilbildes zum Nutzerprofil [PK3010].}  \\
 \end{tabular}
@@ -263,42 +304,42 @@ Patienten &  \multicolumn{2}{p{12cm}}{Dies sind alle Menschen, die momentan oder
 
 \subsection{Patientenseitige Datenübertragung}
 \begin{tabular}{lll}
-[OF1010]&  \multicolumn{2}{p{12cm}}{Die myMD \gls{App} sendet einen Arztbrief an die \gls{Desktop Anwendung} [WK1010].}\\
+[OF1010]&  \multicolumn{2}{p{12cm}}{Die myMD \gls{App} sendet einen \gls{Arztbrief} an die \gls{Desktop Anwendung} [WK1010].}\\
 {[OF1020]} &  \multicolumn{2}{p{12cm}}{Das Senden von mehreren Arztbriefen wird unterstützt [WK1020].}  \\
 {[OF1030]} &  \multicolumn{2}{p{12cm}}{Der Verbindungsaufbau (ggf. auch die Übertragung) erfolgt über \gls{NFC} [WK1030].}  \\
-{[OF1040]} &  \multicolumn{2}{p{12cm}}{Es wird erkannt, dass der Nutzer sensible Daten senden will, woraufhin er nochmals durch ein Pop-Up benachrichtigt wird [WK1040].}  \\
+{[OF1040]} &  \multicolumn{2}{p{12cm}}{Es wird erkannt, dass der \gls{Nutzer} sensible Daten senden will, woraufhin er nochmals durch ein \gls{Pop-Up} benachrichtigt wird [WK1040].}  \\
 {[OF1050]} &  \multicolumn{2}{p{12cm}}{Ein Profil kann auf ein anderes Mobilgerät exportiert werden [WK1050].}  \\
 
 \end{tabular}
 
 \subsection{Darstellung}
 \begin{tabular}{lll}
-[OF2010]&  \multicolumn{2}{p{12cm}}{Medikamente werden in einem eigenen \gls{Tab} dargestellt [WK2010].}\\
-{[OF2020]}&  \multicolumn{2}{p{12cm}}{Medikamente werden chronologisch absteigend sortiert [WK2010].}\\
+[OF2010]&  \multicolumn{2}{p{12cm}}{\gls{Medikament}e werden in einem eigenen \gls{Tab} dargestellt [WK2010].}\\
+{[OF2020]}&  \multicolumn{2}{p{12cm}}{\gls{Medikament}e werden chronologisch absteigend sortiert [WK2010].}\\
 {[OF2030]}&  \multicolumn{2}{p{12cm}}{Laborwerte werden in einem eigenen \gls{Tab} dargestellt [WK2020].}\\
 {[OF2040]}&  \multicolumn{2}{p{12cm}}{Laborwerte werden chronologisch absteigend sortiert [WK2020].}\\
 {[OF2030]} &  \multicolumn{2}{p{12cm}}{Bilddateien werden beim Senden zugelassen [WK2030].}  \\
-{[OF2040]} &  \multicolumn{2}{p{12cm}}{Bilddateien (z.B. Röntgenbilder) können manuell zu einem passenden Arztbrief zugeordnet werden [WK2030].}  \\
+{[OF2040]} &  \multicolumn{2}{p{12cm}}{Bilddateien (z.B. Röntgenbilder) können manuell zu einem passenden \gls{Arztbrief} zugeordnet werden [WK2030].}  \\
 {[OF2050]} &  \multicolumn{2}{p{12cm}}{Eine Bilddatei wird originalgetreu dargestellt [WK2030].}  \\
 {[OF2060]} &  \multicolumn{2}{p{12cm}}{Arztbriefe können nach eigenen Kriterien gruppiert werden [WK2040].}  \\
 {[OF2070]} &  \multicolumn{2}{p{12cm}}{Sortierung nach eigenen Gruppen [WK2040].}  \\
-{[OF2080]} &  \multicolumn{2}{p{12cm}}{Der Nutzer kann seine Daten nach Schlagworten durchsuchen [WK2050].}  \\
+{[OF2080]} &  \multicolumn{2}{p{12cm}}{Der \gls{Nutzer} kann seine Daten nach Schlagworten durchsuchen [WK2050].}  \\
 
 \end{tabular}
 
 \subsection{Einstellungen}
 \begin{tabular}{lll}
-[OF3010] &  \multicolumn{2}{p{12cm}}{Zusätzliche Nutzerprofile können hinzugefügt werden [WK3010].}\\
+[OF3010] &  \multicolumn{2}{p{12cm}}{Zusätzliche \gls{Nutzer}profile können hinzugefügt werden [WK3010].}\\
 {[OF3020]} &  \multicolumn{2}{p{12cm}}{Man kann zwischen den Nutzerprofilen wechseln [WK3010].}\\
 {[OF3030]} &  \multicolumn{2}{p{12cm}}{Man kann Nutzerprofile löschen [WK3010].}\\
-{[OF3040]} &  \multicolumn{2}{p{12cm}}{Einzelne oder Gruppen von Arztbriefe können mit einer Sensibilitätswertung versehen werden [WK3030].}  \\
+{[OF3040]} &  \multicolumn{2}{p{12cm}}{Einzelne oder Gruppen von \glspl{Arztbrief} können mit einer Sensibilitätswertung versehen werden [WK3030].}  \\
 {[OF3050]} &  \multicolumn{2}{p{12cm}}{Hinzufügen von regelmäßigen Arztterminen [WK3040].}  \\
 {[OF3060]} &  \multicolumn{2}{p{12cm}}{Löschen von regelmäßigen Arztterminen [WK3040].}  \\
 \end{tabular}
 
 \subsection{Desktop Anwendung}
 \begin{tabular}{lll}
-{[GF4010]}&  \multicolumn{2}{p{12cm}}{Die Anwendung verhindert das Senden an eine myMD \gls{App}, falls die Versichertennummer im Arztbrief nicht mit der Versichertennummer im Profil der myMD App übereinstimmt [WK4010].}\\
+{[GF4010]}&  \multicolumn{2}{p{12cm}}{Die Anwendung verhindert das Senden an eine myMD \gls{App}, falls die \gls{Versichertennummer} im \gls{Arztbrief} nicht mit der \gls{Versichertennummer} im Profil der myMD App übereinstimmt [WK4010].}\\
 \end{tabular}
 \newpage
 \section{Produktleistungen (PL)}
@@ -330,14 +371,14 @@ Bei einer drahtlosen Datenübertragung haben viele externe Faktoren, beispielswe
 
 \chapter{Produktdaten PD}
 \subsection{myMD \gls{App}}
-myMD speichert folgende Daten permanent, außer der Nutzer löscht sie manuell. Außerdem werden die Daten, die myMD nutzt, ausschließlich lokal auf dem Mobilgerät des Nutzers gespeichert.
+myMD speichert folgende Daten permanent, außer der \gls{Nutzer} löscht sie manuell. Außerdem werden die Daten, die myMD nutzt, ausschließlich lokal auf dem Mobilgerät des Nutzers gespeichert.
 \newline
 \newline
 \begin{tabular}{lll}
-[PD1010]&  \multicolumn{2}{p{12cm}}{myMD speichert digitale Arztbriefe des Nutzers.}\\
+[PD1010]&  \multicolumn{2}{p{12cm}}{myMD speichert digitale \glspl{Arztbrief} des Nutzers.}\\
 {[PD1020]} &  \multicolumn{2}{p{12cm}}{myMD speichert die Angaben zum Nutzerprofil.}\\
 {[PD1030]} &  \multicolumn{2}{p{12cm}}{myMD speichert die Laborwerte des Nutzers.}\\
-{[PD1040]} &  \multicolumn{2}{p{12cm}}{myMD speichert die Medikamente des Nutzers.}  \\
+{[PD1040]} &  \multicolumn{2}{p{12cm}}{myMD speichert die \gls{Medikament}e des Nutzers.}  \\
 {[PD1050]} &  \multicolumn{2}{p{12cm}}{myMD speichert regelmäßige Termine des Nutzers.}  \\
 {[PD1060]} &  \multicolumn{2}{p{12cm}}{myMD speichert die Einstellungen zu den nutzerspezifischen Gruppierungen.}  \\
 {[PD1070]} &  \multicolumn{2}{p{12cm}}{myMD speichert die Markierung von sensiblen Daten.}  \\
@@ -361,7 +402,7 @@ Die Teilsysteme auf den Nutzergeräten enthalten lokale Daten, die in einer grap
 
 \section{Szenarien}
 \subsection{Szenario: Patient lädt sich neue Daten auf myMD}
-Greg ist ein neuer Nutzer von myMD. Deshalb hat er auf seinem Konto auch noch keine Arztbriefe eingetragen. Also geht er zu seinem Hausarzt, um seine Krankenakte für die myMD \gls{App} zu erhalten. Der Arzt öffnet dafür seine Praxissoftware und exportiert alle Arztbriefe, die zu Greg gehören, und lädt diese in die \gls{Desktop Anwendung} von myMD. Sobald die Arztbriefe im Sendetool angezeigt werden, klickt der Arzt auf den Button "Daten senden". Nun erhält Greg in seiner myMD \gls{App} eine Meldung und klickt "Daten empfangen". Auf Gregs myMD \gls{App} erscheint jetzt die Nachricht, dass die Daten an ihn gesendet werden. Sobald der Sendeprozess beendet ist, kann der Arzt die \gls{Desktop Anwendung} von myMD schließen und sich dem nächsten Patienten widmen. Greg hat jetzt all seine Arztbriefe auf seinem Mobilgerät und kann sich diese jederzeit in der myMD \gls{App} anzeigen lassen. Sie werden im \gls{Tab} \textit{Übersicht} chronologisch sortiert dargestellt. Wenn er genauere Informationen zu einem bestimmten Arztbrief einsehen möchte, kann er auf den Arztbrief klicken und dieser wird nun auf dem ganzen Bildschirm, mit allen Informationen, dargestellt. So hat Greg jederzeit eine Übersicht.
+Greg ist ein neuer \gls{Nutzer} von myMD. Deshalb hat er auf seinem Konto auch noch keine \glspl{Arztbrief} eingetragen. Also geht er zu seinem Hausarzt, um seine Krankenakte für die myMD \gls{App} zu erhalten. Der Arzt öffnet dafür seine Praxissoftware und exportiert alle \glspl{Arztbrief}, die zu Greg gehören, und lädt diese in die \gls{Desktop Anwendung} von myMD. Sobald die \glspl{Arztbrief} im Sendetool angezeigt werden, klickt der Arzt auf den Button "Daten senden". Nun erhält Greg in seiner myMD \gls{App} eine Meldung und klickt "Daten empfangen". Auf Gregs myMD \gls{App} erscheint jetzt die Nachricht, dass die Daten an ihn gesendet werden. Sobald der Sendeprozess beendet ist, kann der Arzt die \gls{Desktop Anwendung} von myMD schließen und sich dem nächsten Patienten widmen. Greg hat jetzt all seine \glspl{Arztbrief} auf seinem Mobilgerät und kann sich diese jederzeit in der myMD \gls{App} anzeigen lassen. Sie werden im \gls{Tab} \textit{Übersicht} chronologisch sortiert dargestellt. Wenn er genauere Informationen zu einem bestimmten \gls{Arztbrief} einsehen möchte, kann er auf den \gls{Arztbrief} klicken und dieser wird nun auf dem ganzen Bildschirm, mit allen Informationen, dargestellt. So hat Greg jederzeit eine Übersicht.
 
 \subsection{Szenario: Eigene Daten ansehen und editieren}
 Greg leidet seit einigen Tagen unter starken Magenbeschwerden. Sein Hausarzt findet keine Ursache für die Beschwerden und überweist ihn deshalb an den Spezialisten Dr. Haus und verschreibt ihm etwas gegen die Schmerzen. Dr. Haus glaubt die Ursache gefunden zu haben, diese lässt sich aber nur durch eine Operation beseitigen, für die er Greg an einen Chirurgen überweist. \\
@@ -369,8 +410,8 @@ Bevor er dem Eingriff zustimmt, will er sich noch eine zweite Meinung einholen. 
 Bei so vielen verschiedenen Ärzten und Diagnosen hat Greg nun etwas den Überblick verloren. Glücklicherweise hat er bei seinen Arztbesuchen myMD verwendet und hat nun alle relevanten Daten auf seinem Mobilgerät gesammelt und kann sich in der App einen Überblick verschaffen. Letztendlich entscheidet sich Greg, es mit der Psychotherapie zu versuchen und entfernt die nun überflüssigen, schwächeren Schmerzmittel aus der Liste seiner Medikationen in myMD. 
 
 \subsection{Szenario: Patient gibt behandelndem Arzt Daten zur Einsicht frei}
-Gregs Beschwerden wollen kein Ende nehmen. Um der Ursache auf die Schliche zu kommen, überweist ihn sein Hausarzt nun an einen Gastroenterologen. Wie üblich bei neuen Patienten, möchte sich dieser zunächst mittels einer Anamnese einen Überblick über den Stand der Dinge verschaffen. Dank der myMD \gls{App} hat Greg jederzeit all seine Arztbriefe bei sich und kann diese nun seinem behandelnden Arzt zur Einsicht freigeben. Hierfür navigiert Greg in der myMD App in den \gls{Tab} \textit{Senden}, wo er nun aus einer Liste all seiner Arztbriefe jene auswählen kann, die er mit seinem Arzt teilen möchte. Greg entschließt sich dazu, nur Arztbriefe der letzten 6 Monate zu übertragen. \\
-Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} an den Computer des Arztes, auf welchem der Desktop-Klient von myMD die Daten verarbeitet und dem Arzt präsentiert. Schnell vermutet dieser, dass eine Wechselwirkung zwischen zwei eingenommenen Medikamenten die wahrscheinlichste Ursache für Gregs Leiden ist.
+Gregs Beschwerden wollen kein Ende nehmen. Um der Ursache auf die Schliche zu kommen, überweist ihn sein Hausarzt nun an einen Gastroenterologen. Wie üblich bei neuen Patienten, möchte sich dieser zunächst mittels einer \gls{Anamnese} einen Überblick über den Stand der Dinge verschaffen. Dank der myMD \gls{App} hat Greg jederzeit all seine \glspl{Arztbrief} bei sich und kann diese nun seinem behandelnden Arzt zur Einsicht freigeben. Hierfür navigiert Greg in der myMD App in den \gls{Tab} \textit{Senden}, wo er nun aus einer Liste all seiner \glspl{Arztbrief} jene auswählen kann, die er mit seinem Arzt teilen möchte. Greg entschließt sich dazu, nur \glspl{Arztbrief} der letzten 6 Monate zu übertragen. \\
+Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} an den Computer des Arztes, auf welchem der Desktop-Klient von myMD die Daten verarbeitet und dem Arzt präsentiert. Schnell vermutet dieser, dass eine Wechselwirkung zwischen zwei eingenommenen \gls{Medikament}en die wahrscheinlichste Ursache für Gregs Leiden ist.
 
 \section{Anwendungsfälle}
 \subsection{Datenübertragung}
@@ -393,15 +434,15 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{graphics/AF-NeuerNutzer}
-\caption{Anwendungsfall Neuer Nutzer}
+\caption{Anwendungsfall Neuer \gls{Nutzer}}
 \end{figure}
 
 \begin{tabular}{lll}
-{\textbf{Name}} & \multicolumn{2}{p{11.5cm}} {Neuer Nutzer}\\
-{\textbf{Teilnehmende Akteure}} & \multicolumn{2}{p{11.5cm}} {Nutzer} \\
-{\textbf{Eingangsbedingung}} & \multicolumn{2}{p{11.5cm}} {Der Nutzer hat die myMD \gls{App} installiert} \\
-{\textbf{Ausgangsbedingung}} & \multicolumn{2}{p{11.5cm}} {Der Nutzer hat alle gewünschten Daten eingegeben oder den Vorgang abgebrochen} \\
-{\textbf{Ereignisfluss}} & \multicolumn{2}{p{11.5cm}} {Ereignisfluss: Nutzer startet App $\Rightarrow$ Neues Profil erstellen $\Rightarrow$ Nutzer-Informationen eingeben $\Rightarrow$  Medikamente hinzufügen} \\
+{\textbf{Name}} & \multicolumn{2}{p{11.5cm}} {Neuer \gls{Nutzer}}\\
+{\textbf{Teilnehmende Akteure}} & \multicolumn{2}{p{11.5cm}} {\gls{Nutzer}} \\
+{\textbf{Eingangsbedingung}} & \multicolumn{2}{p{11.5cm}} {Der \gls{Nutzer} hat die myMD \gls{App} installiert} \\
+{\textbf{Ausgangsbedingung}} & \multicolumn{2}{p{11.5cm}} {Der \gls{Nutzer} hat alle gewünschten Daten eingegeben oder den Vorgang abgebrochen} \\
+{\textbf{Ereignisfluss}} & \multicolumn{2}{p{11.5cm}} {Ereignisfluss: \gls{Nutzer} startet App $\Rightarrow$ Neues Profil erstellen $\Rightarrow$ \gls{Nutzer}-Informationen eingeben $\Rightarrow$  \gls{Medikament}e hinzufügen} \\
 {\textbf{Spezielle Anforderungen}} & \multicolumn{2}{p{11.5cm}} {Keine} \\
 \end{tabular} 
 
@@ -415,29 +456,29 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 \captionof{figure}{\gls{Tab} \textit{Übersicht}}
 ~\\
 \includegraphics[width=0.9\textwidth]{mockups/ArztbriefDetailed}
-\captionof{figure}{Arztbrief in detaillierter Ansicht}
+\captionof{figure}{\gls{Arztbrief} in detaillierter Ansicht}
 \end{minipage}%
 \hfill
 \begin{minipage}[t][][b]{0.65\textwidth}
 
 \subsection*{Tab \textit{Übersicht}}
 \textbf{Beschreibung}\\
-{Darstellung der Übersicht über alle verfügbaren Arztbriefe}\\
+{Darstellung der Übersicht über alle verfügbaren \glspl{Arztbrief}}\\
 ~\\
 \textbf{Elemente}\\
-{Arztbriefe als Listenelemente}\\
+{\glspl{Arztbrief} als Listenelemente}\\
 {Button: Löschen von Einträgen}\\
 {Tab Bar: Navigieren durch die App}\\
 
 \textbf{Verwendung}\\
 {Tippen auf einen Listeneintrag öffnet eine detaillierte Vollbild-Ansicht zu diesem Eintrag.}\\
-{Durch vertikales Wischen kann durch die Auflistung aller Arztbriefe navigiert werde.n}\\
+{Durch vertikales Wischen kann durch die Auflistung aller \glspl{Arztbrief} navigiert werde.n}\\
 {Horizontales Wischen vom rechten Rand eines Listenelements nach links löscht den Eintrag.}\\
 \newline
 \newline
 \newline
 
-\subsection*{Detaillierter Arztbrief}
+\subsection*{Detaillierter \gls{Arztbrief}}
 \textbf{Beschreibung}\\
 {Vollständige Darstellung eines Arztbriefes}\\
 ~\\
@@ -462,41 +503,41 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 \captionof{figure}{\gls{Tab} \textit{Medikation}}
 ~\\
 \includegraphics[width=0.9\textwidth]{mockups/NewMed}
-\captionof{figure}{Ansicht beim Hinzufügen\\ eines Medikaments}
+\captionof{figure}{Ansicht beim Hinzufügen\\ eines \gls{Medikament}s}
 
 \end{minipage}%
 \hfill
 \begin{minipage}[t][][b]{0.65\textwidth}
 \subsection*{Tab \textit{Medikation}}
 \textbf{Beschreibung}\\
-{Auflistung aller eingepflegter Medikamenteneinnahmen}\\
+{Auflistung aller eingepflegter \gls{Medikament}eneinnahmen}\\
 ~\\
 \textbf{Elemente}\\
-{Eingenommene Medikamente als Listenelemente}\\
+{Eingenommene \gls{Medikament}e als Listenelemente}\\
 {Button: Bearbeiten von Einträgen}\\
-{Button: Hinzufügen eines Medikamentes}\\
-{Textfelder: Details einer Medikamenteneinnahme}\\
+{Button: Hinzufügen eines \gls{Medikament}es}\\
+{Textfelder: Details einer \gls{Medikament}eneinnahme}\\
 
 \textbf{Verwendung}\\
-{Durch vertikales Wischen kann durch die Auflistung aller eingenommener Medikamente navigiert werden.}\\
+{Durch vertikales Wischen kann durch die Auflistung aller eingenommener \gls{Medikament}e navigiert werden.}\\
 {Horizontales Wischen vom rechten Rand eines Listenelements nach links löscht den Eintrag.}\\
-{Tippen auf Hinzufügen öffnet ein Formular zum Einpflegen eines neuen Medikamentes.}
+{Tippen auf Hinzufügen öffnet ein Formular zum Einpflegen eines neuen \gls{Medikament}es.}
 
-\subsection*{Neue Medikamenteneinnahme hinzufügen}
+\subsection*{Neue \gls{Medikament}eneinnahme hinzufügen}
 \textbf{Beschreibung}\\
-{Formular zum Festlegen von Medikamentenparameter}\\
+{Formular zum Festlegen von \gls{Medikament}enparameter}\\
 ~\\
 \textbf{Elemente}\\
 {Button: Abbrechen des Vorgangs}\\
 {Button zum Abschließen des Vorgangs}\\
-{Textbox: Bezeichnung des Medikamentes}\\
+{Textbox: Bezeichnung des \gls{Medikament}es}\\
 {Textbox: Dosierung des Wirkstoffes}\\
-{Schalter: Einmalig einzunehmendes Medikament?}\\
+{Schalter: Einmalig einzunehmendes \gls{Medikament}?}\\
 {Button: Festlegen des Einnahmebeginns}\\
 {Button: Festlegen der Einnahmehäufigkeit}\\
 
 \textbf{Verwendung}\\
-{In dieser Ansicht können die Details zu einem neuen Medikament eingetragen werden oder Angaben zu einem bereits angelegten Medikament korrigiert werden.}
+{In dieser Ansicht können die Details zu einem neuen \gls{Medikament} eingetragen werden oder Angaben zu einem bereits angelegten \gls{Medikament} korrigiert werden.}
 \end{minipage}%
 
 
@@ -518,12 +559,12 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 {Meldung im Falle einer Übermittlungsanfrage des Arztes}\\
 ~\\
 \textbf{Elemente}\\
-{Pop-Up: Nachricht mit Name des anfragenden Arztes}\\
+{\gls{Pop-Up}: Nachricht mit Name des anfragenden Arztes}\\
 {Button: Ablehnen der Anfrage}\\
 {Button: Zustimmen der Anfrage}\\
 
 \textbf{Verwendung}\\
-{Hier kann der Nutzer entscheiden, ob er einer Übertragungsanfrage des Arztes zustimmen oder sie ablehnen möchte.}
+{Hier kann der \gls{Nutzer} entscheiden, ob er einer Übertragungsanfrage des Arztes zustimmen oder sie ablehnen möchte.}
 
 ~\\
 ~\\
@@ -540,7 +581,7 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 {Button: Starten des Auswahlvorgangs von Arztbriefen}\\
 ~\\
 \textbf{Verwendung}\\
-{Sollte sich der Nutzer entschließen, Arztbriefe an einen Arzt zu übermitteln, öffnet der große Knopf in der unteren Bildschirmhälfte in eine Liste aller Arztbriefe auf dem Gerät, aus denen der Nutzer dann diejenigen auswählen, die er gerne versenden würde.}
+{Sollte sich der \gls{Nutzer} entschließen, \glspl{Arztbrief} an einen Arzt zu übermitteln, öffnet der große Knopf in der unteren Bildschirmhälfte in eine Liste aller \glspl{Arztbrief} auf dem Gerät, aus denen der \gls{Nutzer} dann diejenigen auswählen, die er gerne versenden würde.}
 \end{minipage}%
 
 
@@ -571,9 +612,9 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 {Sollte das gesuchte Gerät erscheinen, lässt es sich per Doppelklick auswählen, um Dateien übertragen zu können.}\\
 
 
-\subsection*{Arztbriefe an Patienten übertragen}
+\subsection*{\glspl{Arztbrief} an Patienten übertragen}
 \textbf{Beschreibung}\\
-{Fenster zur Auswahl und Übertragung der gewünschten Arztbriefe}\\
+{Fenster zur Auswahl und Übertragung der gewünschten \glspl{Arztbrief}}\\
 ~\\
 \textbf{Elemente}\\
 {Button: Zurück zur Geräte-Übersicht}\\
@@ -591,7 +632,7 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 \subsection{Patientenseitige Datenübertragung}
 \begin{tabular}{lll}
 [BT1010] & \multicolumn{2}{p{12cm}}  {\gls{Desktop Anwendung} sendet eine Datei an die myMD \gls{App}.} \\
-{[BT1020]} & \multicolumn{2}{p{12cm}}  {Die Übertragung wird vom Nutzer unterbrochen.} \\
+{[BT1020]} & \multicolumn{2}{p{12cm}}  {Die Übertragung wird vom \gls{Nutzer} unterbrochen.} \\
 {[BT1030]} & \multicolumn{2}{p{12cm}}  {\gls{Desktop Anwendung} sendet eine unzulässige Datei (nicht unterstütztes Dateiformat).} \\
 {[BT1040]} & \multicolumn{2}{p{12cm}}  {Die Übertragung wird durch äußere Umstände abgebrochen.} \\
 
@@ -599,11 +640,11 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 
 \subsection{Darstellung}
 \begin{tabular}{lll}
-[BT2010] & \multicolumn{2}{p{12cm}}  {Ein neuer Arztbrief wird in eine leere Übersicht geladen.} \\
-{[BT2020]} & \multicolumn{2}{p{12cm}}  {Ein neuer Arztbrief wird in bereits gefüllte Übersicht geladen.} \\
-{[BT2030]} & \multicolumn{2}{p{12cm}}  {Ein digitaler Arztbrief wird angetippt/geöffnet.} \\
-{[BT2040]} & \multicolumn{2}{p{12cm}}  {Ein digitaler Arztbrief wird geschlossen.} \\
-{[BT2050]} & \multicolumn{2}{p{12cm}}  {Ein digitaler Arztbrief wird gelöscht.} \\
+[BT2010] & \multicolumn{2}{p{12cm}}  {Ein neuer \gls{Arztbrief} wird in eine leere Übersicht geladen.} \\
+{[BT2020]} & \multicolumn{2}{p{12cm}}  {Ein neuer \gls{Arztbrief} wird in bereits gefüllte Übersicht geladen.} \\
+{[BT2030]} & \multicolumn{2}{p{12cm}}  {Ein digitaler \gls{Arztbrief} wird angetippt/geöffnet.} \\
+{[BT2040]} & \multicolumn{2}{p{12cm}}  {Ein digitaler \gls{Arztbrief} wird geschlossen.} \\
+{[BT2050]} & \multicolumn{2}{p{12cm}}  {Ein digitaler \gls{Arztbrief} wird gelöscht.} \\
 
 \end{tabular}
 
@@ -618,7 +659,7 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 {[BT4020]} & \multicolumn{2}{p{12cm}}  {Kompatible Datei wird zum Senden ausgewählt.} \\
 {[BT4030]} & \multicolumn{2}{p{12cm}}  {Senden wird erfolgreich abgeschlossen.} \\
 {[BT4040]} & \multicolumn{2}{p{12cm}}  {Senden wird durch äußere Einflüsse unterbrochen.} \\
-{[BT4050]} & \multicolumn{2}{p{12cm}}  {Senden wird durch Nutzer unterbrochen.} \\
+{[BT4050]} & \multicolumn{2}{p{12cm}}  {Senden wird durch \gls{Nutzer} unterbrochen.} \\
 {[BT4060]} & \multicolumn{2}{p{12cm}}  {Geräte in der Nähe werden gesucht.} \\
 {[BT4070]} & \multicolumn{2}{p{12cm}}  {Nutzergerät wird als Empfänger gewählt.} \\
 
@@ -633,7 +674,7 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 {[ET1020]} & \multicolumn{2}{p{12cm}}  {myMD \gls{App} sendet mehrere Dateien an die \gls{Desktop Anwendung}.} \\
 {[ET1030]} & \multicolumn{2}{p{12cm}}  {\gls{Desktop Anwendung} sendet mehrere Datei an die myMD \gls{App}.} \\
 {[ET1040]} & \multicolumn{2}{p{12cm}}  {Die Übertragung mehrerer Daten wird durch äußere Umstände abgebrochen.} \\
-{[ET1050]} & \multicolumn{2}{p{12cm}}  {Die Übertragung mehrerer Daten wird durch den Nutzer abgebrochen.} \\
+{[ET1050]} & \multicolumn{2}{p{12cm}}  {Die Übertragung mehrerer Daten wird durch den \gls{Nutzer} abgebrochen.} \\
 {[ET1060]} & \multicolumn{2}{p{12cm}}  {Sensible Daten werden von der myMD App an die Desktop Anwendung gesendet.} \\
 {[ET1070]} & \multicolumn{2}{p{12cm}}  {Die Verbindung wird über NFC hergetellt.} \\
 {[ET1080]} & \multicolumn{2}{p{12cm}}  {Ein Profil wird auf ein anderes Gerät übertragen.} \\
@@ -642,16 +683,16 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 
 \subsection{Darstellung}
 \begin{tabular}{lll}
-[ET2010] & \multicolumn{2}{p{12cm}}  {Medikament wird hinzugefügt.} \\
-{[ET2020]} & \multicolumn{2}{p{12cm}}  {Medikament wird editiert.} \\
-{[ET2030]} & \multicolumn{2}{p{12cm}}  {Medikament wird gelöscht.} \\
+[ET2010] & \multicolumn{2}{p{12cm}}  {\gls{Medikament} wird hinzugefügt.} \\
+{[ET2020]} & \multicolumn{2}{p{12cm}}  {\gls{Medikament} wird editiert.} \\
+{[ET2030]} & \multicolumn{2}{p{12cm}}  {\gls{Medikament} wird gelöscht.} \\
 {[ET2040]} & \multicolumn{2}{p{12cm}}  {Laborwerte werden hinzugefügt.} \\
 {[ET2050]} & \multicolumn{2}{p{12cm}}  {Laborwerte werden gelöscht.} \\{[ET2060]} & \multicolumn{2}{p{12cm}}  {Bilddatei wird hinzugefügt und dargestellt.} \\
-{[ET2070]} & \multicolumn{2}{p{12cm}}  {Bilddatei wird mit einem Arztbrief verknüpft.} \\
-{[ET2080]} & \multicolumn{2}{p{12cm}}  {Verknüpfung zwischen Arztbrief und Bilddatei wird getrennt.} \\
+{[ET2070]} & \multicolumn{2}{p{12cm}}  {Bilddatei wird mit einem \gls{Arztbrief} verknüpft.} \\
+{[ET2080]} & \multicolumn{2}{p{12cm}}  {Verknüpfung zwischen \gls{Arztbrief} und Bilddatei wird getrennt.} \\
 {[ET2090]} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Bilddatei originalgetreu ist.} \\
-{[ET2100]} & \multicolumn{2}{p{12cm}}  {Mehrere Arztbriefe gruppieren.} \\
-{[ET2110]} & \multicolumn{2}{p{12cm}}  {Einzelne Arztbriefe aus bestehender Gruppe entfernen.} \\
+{[ET2100]} & \multicolumn{2}{p{12cm}}  {Mehrere \glspl{Arztbrief} gruppieren.} \\
+{[ET2110]} & \multicolumn{2}{p{12cm}}  {Einzelne \glspl{Arztbrief} aus bestehender Gruppe entfernen.} \\
 {[ET2120]} & \multicolumn{2}{p{12cm}}  {Nach eigenen Gruppen sortieren.} \\
 {[ET2130]} & \multicolumn{2}{p{12cm}}  {Überprüfen, ob Suchfunktion fehlerfrei funktioniert.} \\
 
@@ -664,7 +705,7 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 {[ET3020]} & \multicolumn{2}{p{12cm}}  {Ein weiteres Nutzerprofil wird angelegt.} \\
 {[ET3030]} & \multicolumn{2}{p{12cm}}  {Ein Nutzerprofil wird gelöscht.} \\
 {[ET3040]} & \multicolumn{2}{p{12cm}}  {Wechsel zwischen mehreren Nutzerprofilen.} \\
-{[ET3050]} & \multicolumn{2}{p{12cm}}  {Einzelnen Arztbrief als sensibel markieren.} \\
+{[ET3050]} & \multicolumn{2}{p{12cm}}  {Einzelnen \gls{Arztbrief} als sensibel markieren.} \\
 {[ET3060]} & \multicolumn{2}{p{12cm}}  {Sensibiltäts-Markierung eines einzelnen Arztbriefes aufheben.} \\
 {[ET3070]} & \multicolumn{2}{p{12cm}}  {Gruppe von Arztbriefen als sensibel markieren.} \\
 {[ET3080]} & \multicolumn{2}{p{12cm}}  {Sensibiltäts-Markierung einer Gruppe von Arztbriefen aufheben.} \\
@@ -682,37 +723,37 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 
 \section{Testszenarien (TS)}
 \subsection{Typischer Arztbesuch}
-Der Nutzer geht wegen einer Beschwerde zum Arzt und lässt sich untersuchen. Sobald die Untersuchung fertig ist, verlangt der Nutzer, dass der Arzt ihm die eben aufgenommenen Daten für die myMD \gls{App} zur Verfügung stellt. Der Arzt öffnet dann die \gls{Desktop Anwendung} und schickt dem Patienten den Arztbrief und Labordaten auf die myMD \gls{App}. Der Nutzer schaut sich dann kurz den neuen Eintrag in der Übersicht an, schließt die App und geht nach Hause. \newline
+Der \gls{Nutzer} geht wegen einer Beschwerde zum Arzt und lässt sich untersuchen. Sobald die Untersuchung fertig ist, verlangt der \gls{Nutzer}, dass der Arzt ihm die eben aufgenommenen Daten für die myMD \gls{App} zur Verfügung stellt. Der Arzt öffnet dann die \gls{Desktop Anwendung} und schickt dem Patienten den \gls{Arztbrief} und Labordaten auf die myMD \gls{App}. Der \gls{Nutzer} schaut sich dann kurz den neuen Eintrag in der Übersicht an, schließt die App und geht nach Hause. \newline
 
 \begin{tabular}{lll}
 [BT4060] & \multicolumn{2}{p{12cm}}  {Geräte in der Nähe werden gesucht.} \\
 {[BT4070]} & \multicolumn{2}{p{12cm}}  {Das Mobilgerät des Nutzers wird als Empfänger ausgewählt.} \\
 {[BT4030]} & \multicolumn{2}{p{12cm}}  {Senden wird erfolgreich abgeschlossen.} \\
-{[BT2020]} & \multicolumn{2}{p{12cm}}  {Der neue Arztbrief wird in bereits gefüllte Übersicht geladen.} \\
+{[BT2020]} & \multicolumn{2}{p{12cm}}  {Der neue \gls{Arztbrief} wird in bereits gefüllte Übersicht geladen.} \\
 {[ET2040]} & \multicolumn{2}{p{12cm}}  {Die Laborwerte werden hinzugefügt.} \\
-{[BT2030]} & \multicolumn{2}{p{12cm}}  {Der neue Arztbrief wird geöffnet.} \\
-{[BT2040]} & \multicolumn{2}{p{12cm}}  {Der neue Arztbrief wird geschlossen.} \\
+{[BT2030]} & \multicolumn{2}{p{12cm}}  {Der neue \gls{Arztbrief} wird geöffnet.} \\
+{[BT2040]} & \multicolumn{2}{p{12cm}}  {Der neue \gls{Arztbrief} wird geschlossen.} \\
 
 
 \end{tabular}
 
 \subsection{Krankenhistorie wird überprüft}
-Der Nutzer ist daheim und schaut sich in der myMD \gls{App} seine Übersicht an. Er klickt auf einige Arztbriefe und liest sich durch, was darin steht. Dann bemerkt er, dass er alle Arztbriefe zu seinem gebrochenen Fuß gruppieren sollte und auch die Schmerzmittel, die für seinen Fuß bekommen hat, in den \gls{Tab} \textit{Medikamente} hinzufügen sollte. Versehentlich gibt er zuerst eine falsche Menge an, korrigiert diese aber und schließt daraufhin die App.\newline
+Der \gls{Nutzer} ist daheim und schaut sich in der myMD \gls{App} seine Übersicht an. Er klickt auf einige \glspl{Arztbrief} und liest sich durch, was darin steht. Dann bemerkt er, dass er alle \glspl{Arztbrief} zu seinem gebrochenen Fuß gruppieren sollte und auch die Schmerzmittel, die für seinen Fuß bekommen hat, in den \gls{Tab} \textit{\gls{Medikament}e} hinzufügen sollte. Versehentlich gibt er zuerst eine falsche Menge an, korrigiert diese aber und schließt daraufhin die App.\newline
 
 \begin{tabular}{lll}
-[BT2030] & \multicolumn{2}{p{12cm}}  {Ein Arztbrief wird geöffnet.} \\
-{[BT2040]} & \multicolumn{2}{p{12cm}}  {Ein Arztbrief wird geschlossen.} \\
-{[ET2100]} & \multicolumn{2}{p{12cm}}  {Alle Arztbriefe zum gebrochenen Fuß werden gruppiert.} \\
-{[ET2010]} & \multicolumn{2}{p{12cm}}  {Medikament wird hinzugefügt.} \\
-{[ET2020]} & \multicolumn{2}{p{12cm}}  {Medikament wird editiert.} \\
+[BT2030] & \multicolumn{2}{p{12cm}}  {Ein \gls{Arztbrief} wird geöffnet.} \\
+{[BT2040]} & \multicolumn{2}{p{12cm}}  {Ein \gls{Arztbrief} wird geschlossen.} \\
+{[ET2100]} & \multicolumn{2}{p{12cm}}  {Alle \glspl{Arztbrief} zum gebrochenen Fuß werden gruppiert.} \\
+{[ET2010]} & \multicolumn{2}{p{12cm}}  {\gls{Medikament} wird hinzugefügt.} \\
+{[ET2020]} & \multicolumn{2}{p{12cm}}  {\gls{Medikament} wird editiert.} \\
 
 \end{tabular}
 
 \subsection{Patient holt sich bei einem anderen Arzt eine zweite Meinung ein}
-Der Nutzer hat eine sehr komplexe Beschwerde und will sich von einem anderen Arzt eine zweite Meinung einholen. Dazu geht er zu dem anderen Arzt und informiert ihn über die bisherige Diagnose, indem er ihm seine Arztbriefe von der myMD \gls{App} auf die \gls{Desktop Anwendung} schickt. Der Arzt schaut sich diese Arztbriefe in seiner Praxissoftware an, stellt seine eigene Diagnose, schreibt seinen Arztbrief und sendet ihn dem Patienten.\newline
+Der \gls{Nutzer} hat eine sehr komplexe Beschwerde und will sich von einem anderen Arzt eine zweite Meinung einholen. Dazu geht er zu dem anderen Arzt und informiert ihn über die bisherige Diagnose, indem er ihm seine \glspl{Arztbrief} von der myMD \gls{App} auf die \gls{Desktop Anwendung} schickt. Der Arzt schaut sich diese \glspl{Arztbrief} in seiner Praxissoftware an, stellt seine eigene Diagnose, schreibt seinen \gls{Arztbrief} und sendet ihn dem Patienten.\newline
 
 \begin{tabular}{lll}
-[ET1020] & \multicolumn{2}{p{12cm}}  {Die alten Arztbriefe werden dem Arzt gesendet.} \\
+[ET1020] & \multicolumn{2}{p{12cm}}  {Die alten \glspl{Arztbrief} werden dem Arzt gesendet.} \\
 {[BT4060]} & \multicolumn{2}{p{12cm}}  {Geräte in der Nähe werden gesucht.} \\
 {[BT4070]} & \multicolumn{2}{p{12cm}}  {Das Mobilgerät des Nutzers wird als Empfänger ausgewählt.} \\
 {[BT4030]} & \multicolumn{2}{p{12cm}}  {Senden wird erfolgreich abgeschlossen.} \\
@@ -720,7 +761,7 @@ Der Nutzer hat eine sehr komplexe Beschwerde und will sich von einem anderen Arz
 \end{tabular}
 
 \subsection{Eine Mutter führt mehrere Profile}
-Eine Mutter erstellt sich und ihrem Kind ein myMD Profil. Sie geht zum Arzt und lädt sich, zuerst für ihr eigenes Profil, alle Arztbriefe, die sie betreffen. Dann wechselt sie auf das Profil des Kindes und lädt sich wieder alle Arztbriefe in die App. Sobald das Kind seine eigene myMD App hat, überträgt die Mutter die alten Daten auf das Mobilgerät des Kindes. \newline
+Eine Mutter erstellt sich und ihrem Kind ein myMD Profil. Sie geht zum Arzt und lädt sich, zuerst für ihr eigenes Profil, alle \glspl{Arztbrief}, die sie betreffen. Dann wechselt sie auf das Profil des Kindes und lädt sich wieder alle \glspl{Arztbrief} in die App. Sobald das Kind seine eigene myMD App hat, überträgt die Mutter die alten Daten auf das Mobilgerät des Kindes. \newline
 
 \begin{tabular}{lll}
 [ET3010] & \multicolumn{2}{p{12cm}}  {Ein neues Nutzerprofil wird für die Mutter angelegt.} \\
