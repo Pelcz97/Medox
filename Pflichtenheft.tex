@@ -63,7 +63,7 @@
 \end{figure}
 	\vspace{1.5cm}
 	\centering
-	\includegraphics[width=0.5\textwidth]{myMD_Logo}\par\vspace{0.5cm}
+	\includegraphics[width=0.5\textwidth]{graphics/myMD_Logo}\par\vspace{0.5cm}
 	{\huge myMD \par}
 	\vspace{2cm}
 	{\scshape\Large Pflichtenheft\par}
@@ -146,7 +146,7 @@ TODO: eine coole 1 seitige Einleitung schreiben
 \begin{tabular}{lll}
 [WK2010] & \multicolumn{2}{p{12cm}}  {Eingenommene Medikamente werden in einem extra Tab chronologisch absteigend sortiert dargestellt.} \\
 {[WK2020]} & \multicolumn{2}{p{12cm}}  {Laborwerte des Patienten werden in einem extra Tab chronologisch absteigend sortiert dargestellt.} \\
-{[WK2030]} & \multicolumn{2}{p{12cm}}  {Ein Arztbrief kann Röntgenbilder enthalten und die myMD \gls{App} kann diese originalgetreu darstellen und einem Arztbrief zuordnen.} \\
+{[WK2030]} & \multicolumn{2}{p{12cm}}  {Ein Arztbrief kann Bilddateien enthalten und die myMD \gls{App} kann diese originalgetreu darstellen und einem Arztbrief zuordnen.} \\
 {[WK2040]} & \multicolumn{2}{p{12cm}}  {Es gibt die Möglichkeit, Arztbriefe nach eigenen Kriterien (Arzt, Krankheit o.ä.) zu gruppieren.} \\
 {[WK2050]} & \multicolumn{2}{p{12cm}}  {Es gibt eine Suchfunktion, die alle Arztbriefe nach Daten durchsucht.} \\
 \end{tabular}
@@ -298,7 +298,7 @@ Patienten &  \multicolumn{2}{p{12cm}}{Dies sind alle Menschen, die momentan oder
 
 
 \section{Produktleistungen (PL)}
-Da auf eine Bluetooth-Übertragung auch viele externe Faktoren, wie z.B. Signalstärke oder Interferenzen von anderen Geräten,einwirken, können wir durch unsere Software keinen/wenig Einfluss auf die Datenübertagung nehmen.
+Bei einer drahtlosen Datenübertragung haben viele externe Faktoren, beispielsweise die Signalstärke oder mögliche Interferenzen von anderen Geräten, große Auswirkungen auf Eigenschaften wie die Übertragungsgeschwindigkeit. Diese externen Einflüsse lassen sich auch mit Software nicht oder nur geringfügig korrigieren, weshalb an dieser Stelle keine Aussagen über die Dauer einer Übertragung oder ähnliches getroffen werden.
 
 \stepcounter{subsection}
 
@@ -348,7 +348,7 @@ Die \gls{Desktop Anwendung} speichert keine Daten.
 \section{Systemarchitektur}
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=1\textwidth]{Systemarchitektur}
+  \includegraphics[width=1\textwidth]{graphics/Systemarchitektur}
   \caption{Schema der Systemarchitektur}
 \end{figure}
 Die Softwarearchitektur lässt sich auf zwei Ebenen betrachten, das Gesamtsystem mit Desktopanwendung des Arztes und mobilen Anwendung des Patienten und die Teilsysteme auf den jeweiligen Geräten. \\\\
@@ -372,7 +372,7 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 \subsection{Datenübertragung}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{AF-ArztPatient}
+\includegraphics[width=0.8\textwidth]{graphics/AF-ArztPatient}
 \caption{Anwendungsfall Datenübertragung Arzt-Patient}
 \end{figure}
 
@@ -388,7 +388,7 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 \subsection{Nutzerprofil}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{AF-NeuerNutzer}
+\includegraphics[width=0.8\textwidth]{graphics/AF-NeuerNutzer}
 \caption{Anwendungsfall Neuer Nutzer}
 \end{figure}
 
@@ -402,7 +402,73 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 \end{tabular} 
 
 \section{Benutzungsoberfläche}
-TODO: GUI Entwürfe  einbinden
+
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=0.8\textwidth]{mockups/OverviewTab}
+\begin{flushleft}
+\captionof{figure}{Tab \textit{Übersicht}}
+\end{flushleft}
+
+
+\includegraphics[width=0.8\textwidth]{mockups/ArztbriefDetailed}
+\begin{flushleft}
+\captionof{figure}{Arztbrief in detaillierter Ansicht}
+\end{flushleft}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.45\textwidth}
+\subsection{Test}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\end{minipage}%
+
+
+\newpage
+
+
+
+\begin{minipage}{0.45\textwidth}
+
+\includegraphics[width=0.8\textwidth]{mockups/MedTab}
+\begin{flushleft}
+\captionof{figure}{Tab \textit{Medikation}}
+\end{flushleft}
+
+
+\includegraphics[width=0.8\textwidth]{mockups/NewMed}
+\begin{flushleft}
+\captionof{figure}{Ansicht beim Hinzufügen eines Medikaments}
+\end{flushleft}
+
+\end{minipage}%
+\hfill
+\begin{minipage}{0.45\textwidth}
+\subsection{Test}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\end{minipage}%
+
+
+\newpage
+
+
+\begin{minipage}{0.45\textwidth}
+
+\includegraphics[width=0.8\textwidth]{mockups/ReceiveData}
+\begin{flushleft}
+\captionof{figure}{Ansicht einer Übertragungsanfrage des Arztes}
+\end{flushleft}
+
+
+\includegraphics[width=0.8\textwidth]{mockups/SendTab}
+\begin{flushleft}
+\captionof{figure}{Tab \textit{Senden}}
+\end{flushleft}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.45\textwidth}
+\subsection{Test}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\end{minipage}%
+
 \begin{figure}[ht]
   \centering
   \rule{8cm}{6cm}
