@@ -160,9 +160,9 @@ TODO: eine coole 1 seitige Einleitung schreiben
 \subsection{Einstellungen}
 \begin{tabular}{lll}
 [WK3010] & \multicolumn{2}{p{12cm}}  {Auf einer myMD \gls{App} können mehrere Nutzer verwaltet werden.} \\
-{[WK3020]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird zusätzlich auch in Englisch angeboten.} \\
+{[WK3020]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird zusätzlich auch auf Englisch angeboten.} \\
 {[WK3030]} & \multicolumn{2}{p{12cm}}  {Der Nutzer kann einzelne Arztbriefe oder ganze Gruppen als sensibel markieren.} \\
-{[WK3040]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} ermöglicht, dass man sich zu regelmäßigen Arztterminen (z.B. Zahnarzt, Augenarzt) erinnern lässt.} \\
+{[WK3040]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} kann den Nutzer an regelmäßige Arzttermine (z.B. Zahnarzt, Augenarzt) erinnern.} \\
 
 \end{tabular}
 
@@ -237,7 +237,7 @@ Patienten &  \multicolumn{2}{p{12cm}}{Dies sind alle Menschen, die momentan oder
 {[GF2020]} &  \multicolumn{2}{p{12cm}}{Löschen einzelner Arztbriefe [PK2020].}  \\
 {[GF2030]} &  \multicolumn{2}{p{12cm}}{Der digitale Arztbrief zeigt die ausgestellte Diagnose an [PK2030].}  \\
 {[GF2040]} &  \multicolumn{2}{p{12cm}}{Der digitale Arztbrief zeigt die verschriebenen Medikamente an [PK2030].}  \\
-{[GF2050]} &  \multicolumn{2}{p{12cm}}{Der digitale Arztbrief zeigt das Erstellungsdatum des Artztbriefes an an [PK2030].}  \\
+{[GF2050]} &  \multicolumn{2}{p{12cm}}{Der digitale Arztbrief zeigt das Erstellungsdatum des Artztbriefes an [PK2030].}  \\
 {[GF2060]} &  \multicolumn{2}{p{12cm}}{Der digitale Arztbrief zeigt den Namen des Arztes an [PK2030].}  \\
 {[GF2070]} &  \multicolumn{2}{p{12cm}}{Der digitale Arztbrief wird im \gls{Tab} \textit{Übersicht} kompakt dargestellt.}  \\
 {[GF2080]} &  \multicolumn{2}{p{12cm}}{Tippen auf einen Listeneintrag im \gls{Tab} \textit{Übersicht} öffnet eine ausführliche Ansicht des Arztbriefes.}  \\
@@ -279,10 +279,10 @@ Patienten &  \multicolumn{2}{p{12cm}}{Dies sind alle Menschen, die momentan oder
 {[OF2030]}&  \multicolumn{2}{p{12cm}}{Laborwerte werden in einem eigenen \gls{Tab} dargestellt [WK2020].}\\
 {[OF2040]}&  \multicolumn{2}{p{12cm}}{Laborwerte werden chronologisch absteigend sortiert [WK2020].}\\
 {[OF2030]} &  \multicolumn{2}{p{12cm}}{Bilddateien werden beim Senden zugelassen [WK2030].}  \\
-{[OF2040]} &  \multicolumn{2}{p{12cm}}{Die Möglichkeit zur manuellen Zuordnung einer Bilddatei (z.B. Röntgenbild) zum passenden Arztbriefes [WK2030].}  \\
+{[OF2040]} &  \multicolumn{2}{p{12cm}}{Bilddateien (z.B. Röntgenbilder) können manuell zu einem passenden Arztbrief zugeordnet werden [WK2030].}  \\
 {[OF2050]} &  \multicolumn{2}{p{12cm}}{Eine Bilddatei wird originalgetreu dargestellt [WK2030].}  \\
 {[OF2060]} &  \multicolumn{2}{p{12cm}}{Arztbriefe können nach eigenen Kriterien gruppiert werden [WK2040].}  \\
-{[OF2070]} &  \multicolumn{2}{p{12cm}}{Man kann nach eigenen Gruppen sortieren [WK2040].}  \\
+{[OF2070]} &  \multicolumn{2}{p{12cm}}{Sortierung nach eigenen Gruppen [WK2040].}  \\
 {[OF2080]} &  \multicolumn{2}{p{12cm}}{Der Nutzer kann seine Daten nach Schlagworten durchsuchen [WK2050].}  \\
 
 \end{tabular}
@@ -301,8 +301,7 @@ Patienten &  \multicolumn{2}{p{12cm}}{Dies sind alle Menschen, die momentan oder
 \begin{tabular}{lll}
 {[GF4010]}&  \multicolumn{2}{p{12cm}}{Die Anwendung verhindert das Senden an eine myMD \gls{App}, falls die Versichertennummer im Arztbrief nicht mit der Versichertennummer im Profil der myMD App übereinstimmt [WK4010].}\\
 \end{tabular}
-
-
+\newpage
 \section{Produktleistungen (PL)}
 Bei einer drahtlosen Datenübertragung haben viele externe Faktoren, beispielsweise die Signalstärke oder mögliche Interferenzen von anderen Geräten, große Auswirkungen auf Eigenschaften wie die Übertragungsgeschwindigkeit. Diese externen Einflüsse lassen sich auch mit Software nicht oder nur geringfügig korrigieren, weshalb an dieser Stelle keine Aussagen über die Dauer einer Übertragung oder ähnliches getroffen werden.
 
@@ -357,18 +356,18 @@ Die \gls{Desktop Anwendung} speichert keine Daten.
   \includegraphics[width=1\textwidth]{graphics/Systemarchitektur}
   \caption{Schema der Systemarchitektur}
 \end{figure}
-Die Softwarearchitektur lässt sich auf zwei Ebenen betrachten, das Gesamtsystem mit Desktopanwendung des Arztes und mobilen Anwendung des Patienten und die Teilsysteme auf den jeweiligen Geräten. \\\\
+Die Softwarearchitektur lässt sich auf zwei Ebenen betrachten, das Gesamtsystem mit der Desktopanwendung des Arztes und der mobilen Anwendung des Patienten und die Teilsysteme auf den jeweiligen Geräten. \\\\
 Da die einzelnen Geräte im Gesamtsystem gleichberechtigt miteinander kommunizieren sollen, wird es als Partnernetz realisiert.\\\\
 Die Teilsysteme auf den Nutzergeräten enthalten lokale Daten, die in einer graphischen Benutzeroberfläche dargestellt werden sollen. Um die Datenverwaltung von der Darstellung zu trennen, wird die Model-View-Controller Architektur verwendet.
 
 \section{Szenarien}
 \subsection{Szenario: Patient lädt sich neue Daten auf myMD}
-Greg ist ein neuer Nutzer von myMD. Deshalb hat er auf seinem Konto auch noch keine Arztbriefe eingetragen. Also geht er zu seinem Hausarzt, um seine Krankenakte für die myMD \gls{App} zu erhalten. Der Arzt öffnet dafür seine Praxissoftware und exportiert alle Arztbriefe, die zu Greg gehören, und lädt diese in die \gls{Desktop Anwendung} von myMD. Sobald die Arztbriefe im Sendetool angezeigt werden, klickt der Arzt auf den Button "Daten senden". Nun erhält Greg in seiner myMD \gls{App} eine Meldung und klickt "Daten empfangen". Auf Gregs myMD \gls{App} erscheint jetzt die Nachricht, dass die Daten an ihn gesendet werden. Sobald der Sendeprozess beendet ist, kann der Arzt die \gls{Desktop Anwendung} von myMD schließen und sich dem nächsten Patienten widmen. Greg hat jetzt all seine Arztbriefe auf seinem Mobilgerät und kann sich diese jederzeit in der myMD \gls{App} anzeigen lassen. Sie werden im \gls{Tab} \textit{Übersicht} chronologisch sortiert dargestellt. Wenn er genauere Informationen zu einem bestimmten Arztbrief einsehen möchte, kann er auf den Arztbrief klicken und dieser wird nun auf dem ganzen Bildschirm, mit allen Informationen, dargestellt. So hat Greg jederzeit eine Übersicht
+Greg ist ein neuer Nutzer von myMD. Deshalb hat er auf seinem Konto auch noch keine Arztbriefe eingetragen. Also geht er zu seinem Hausarzt, um seine Krankenakte für die myMD \gls{App} zu erhalten. Der Arzt öffnet dafür seine Praxissoftware und exportiert alle Arztbriefe, die zu Greg gehören, und lädt diese in die \gls{Desktop Anwendung} von myMD. Sobald die Arztbriefe im Sendetool angezeigt werden, klickt der Arzt auf den Button "Daten senden". Nun erhält Greg in seiner myMD \gls{App} eine Meldung und klickt "Daten empfangen". Auf Gregs myMD \gls{App} erscheint jetzt die Nachricht, dass die Daten an ihn gesendet werden. Sobald der Sendeprozess beendet ist, kann der Arzt die \gls{Desktop Anwendung} von myMD schließen und sich dem nächsten Patienten widmen. Greg hat jetzt all seine Arztbriefe auf seinem Mobilgerät und kann sich diese jederzeit in der myMD \gls{App} anzeigen lassen. Sie werden im \gls{Tab} \textit{Übersicht} chronologisch sortiert dargestellt. Wenn er genauere Informationen zu einem bestimmten Arztbrief einsehen möchte, kann er auf den Arztbrief klicken und dieser wird nun auf dem ganzen Bildschirm, mit allen Informationen, dargestellt. So hat Greg jederzeit eine Übersicht.
 
 \subsection{Szenario: Eigene Daten ansehen und editieren}
 Greg leidet seit einigen Tagen unter starken Magenbeschwerden. Sein Hausarzt findet keine Ursache für die Beschwerden und überweist ihn deshalb an den Spezialisten Dr. Haus und verschreibt ihm etwas gegen die Schmerzen. Dr. Haus glaubt die Ursache gefunden zu haben, diese lässt sich aber nur durch eine Operation beseitigen, für die er Greg an einen Chirurgen überweist. \\
 Bevor er dem Eingriff zustimmt, will er sich noch eine zweite Meinung einholen. Dafür lässt er sich von seinem Hausarzt einen weiteren Spezialisten empfehlen, der jedoch keine medizinische Ursache für das Problem erkennen kann. Er empfiehlt Greg eine psychotherapeutische Behandlung und verschreibt ihm zur Überbrückung ein stärkeres Schmerzmittel. \\ 
-Bei so vielen verschiedenen Ärzten und Diagnosen hat Greg nun etwas den Überblick verloren. Glücklicherweise hat er bei seinen Arztbesuchen myMD verwendet und hat nun alle relevanten Daten auf seinem Mobilgerät gesammelt und kann sich in der App einen Überblick verschaffen. Letztendlich entscheidet sich Greg, es mit der Psychotherapie zu versuchen und entfernt die nun überflüssigen, schwächeren Schmerzmittel aus der Liste seiner Medikationen in myMD. seiner Krankengeschichte.
+Bei so vielen verschiedenen Ärzten und Diagnosen hat Greg nun etwas den Überblick verloren. Glücklicherweise hat er bei seinen Arztbesuchen myMD verwendet und hat nun alle relevanten Daten auf seinem Mobilgerät gesammelt und kann sich in der App einen Überblick verschaffen. Letztendlich entscheidet sich Greg, es mit der Psychotherapie zu versuchen und entfernt die nun überflüssigen, schwächeren Schmerzmittel aus der Liste seiner Medikationen in myMD. 
 
 \subsection{Szenario: Patient gibt behandelndem Arzt Daten zur Einsicht frei}
 Gregs Beschwerden wollen kein Ende nehmen. Um der Ursache auf die Schliche zu kommen, überweist ihn sein Hausarzt nun an einen Gastroenterologen. Wie üblich bei neuen Patienten, möchte sich dieser zunächst mittels einer Anamnese einen Überblick über den Stand der Dinge verschaffen. Dank der myMD \gls{App} hat Greg jederzeit all seine Arztbriefe bei sich und kann diese nun seinem behandelnden Arzt zur Einsicht freigeben. Hierfür navigiert Greg in der myMD App in den \gls{Tab} \textit{Senden}, wo er nun aus einer Liste all seiner Arztbriefe jene auswählen kann, die er mit seinem Arzt teilen möchte. Greg entschließt sich dazu, nur Arztbriefe der letzten 6 Monate zu übertragen. \\
@@ -408,7 +407,7 @@ Per Knopfdruck beginnt das verschlüsselte Senden der Daten per \gls{Bluetooth} 
 \end{tabular} 
 
 \section{Benutzungsoberfläche}
-
+\captionsetup{singlelinecheck=false, justification = justified}
 \begin{minipage}[t][][b]{0.45\textwidth}
 \includegraphics[width=0.8\textwidth]{mockups/OverviewTab}
 \captionof{figure}{\gls{Tab} \textit{Übersicht}}
@@ -542,7 +541,7 @@ TODO\\
 \begin{tabular}{lll}
 [BT1010] & \multicolumn{2}{p{12cm}}  {\gls{Desktop Anwendung} sendet eine Datei an die myMD \gls{App}.} \\
 {[BT1020]} & \multicolumn{2}{p{12cm}}  {Die Übertragung wird vom Nutzer unterbrochen.} \\
-{[BT1030]} & \multicolumn{2}{p{12cm}}  {\gls{Desktop Anwendung} sendet ein unzulässige Datei (nicht unterstütztes Dateiformat).} \\
+{[BT1030]} & \multicolumn{2}{p{12cm}}  {\gls{Desktop Anwendung} sendet eine unzulässige Datei (nicht unterstütztes Dateiformat).} \\
 {[BT1040]} & \multicolumn{2}{p{12cm}}  {Die Übertragung wird durch äußere Umstände abgebrochen.} \\
 
 \end{tabular}
@@ -602,7 +601,7 @@ TODO\\
 {[ET2090]} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Bilddatei originalgetreu ist.} \\
 {[ET2100]} & \multicolumn{2}{p{12cm}}  {Mehrere Arztbriefe gruppieren.} \\
 {[ET2110]} & \multicolumn{2}{p{12cm}}  {Einzelne Arztbriefe aus bestehender Gruppe entfernen.} \\
-{[ET2120]} & \multicolumn{2}{p{12cm}}  {Nach eigen Gruppen sortieren.} \\
+{[ET2120]} & \multicolumn{2}{p{12cm}}  {Nach eigenen Gruppen sortieren.} \\
 {[ET2130]} & \multicolumn{2}{p{12cm}}  {Überprüfen, ob Suchfunktion fehlerfrei funktioniert.} \\
 
 
@@ -615,9 +614,9 @@ TODO\\
 {[ET3030]} & \multicolumn{2}{p{12cm}}  {Ein Nutzerprofil wird gelöscht.} \\
 {[ET3040]} & \multicolumn{2}{p{12cm}}  {Wechsel zwischen mehreren Nutzerprofilen.} \\
 {[ET3050]} & \multicolumn{2}{p{12cm}}  {Einzelnen Arztbrief als sensibel markieren.} \\
-{[ET3060]} & \multicolumn{2}{p{12cm}}  {Sensibel Markierung eines einzelnen Arztbriefes aufheben.} \\
+{[ET3060]} & \multicolumn{2}{p{12cm}}  {Sensibiltäts-Markierung eines einzelnen Arztbriefes aufheben.} \\
 {[ET3070]} & \multicolumn{2}{p{12cm}}  {Gruppe von Arztbriefen als sensibel markieren.} \\
-{[ET3080]} & \multicolumn{2}{p{12cm}}  {Sensibel Markierung einer Gruppe von Arztbriefen aufheben.} \\
+{[ET3080]} & \multicolumn{2}{p{12cm}}  {Sensibiltäts-Markierung einer Gruppe von Arztbriefen aufheben.} \\
 {[ET3090]} & \multicolumn{2}{p{12cm}}  {Regelmäßiger Arzttermin wird hinzugefügt.} \\
 {[ET3100]} & \multicolumn{2}{p{12cm}}  {Regelmäßiger Arzttermin wird gelöscht.} \\
 
