@@ -201,9 +201,41 @@
 
 \chapter{Dynamik und Ablauf}
 \section{Aktionen}
+\newpage
+
 %TODO
+
+\begin{figure}
 \section{UI-Navigation}
-%TODO
+\centering
+\includegraphics[width=0.9\textheight, angle=90]{graphics/Zustandsdiagramm_View}
+\caption{Zustandsdiagramm der View}
+\end{figure}
+\begin{figure}
+Die hauptsächliche Navigation in der Anwendung erfolgt über eine Tab Bar, die es dem Nutzer erlaubt, von jedem der vier Tabs in einen beliebigen anderen wechseln zu können. 
+\\
+\\
+Startet der Nutzer die Anwendung zum ersten Mal, so gelangt er nach einer Begrüßung durch den Launch Screen zunächst in den Overview Tab.
+Hier bietet sich ihm nun die Möglichkeit, durch das Auswählen eines beliebigen Arztbriefes in eine detaillierte Ansicht des Briefes zu gelangen.
+Von hieraus gelangt der Nutzer nur durch einen Klick auf den Schließen Knopf zurück zur Overview Page.
+\\
+\\
+Wechselt der Nutzer nun in den Medication Tab, gelangt er zunächst in die Medication Page. Diese stellt eine Übersicht über alle eingetragenen Medikationen dar. Über einen Hinzufügen Knopf gelangt man von dort aus in die ChangeMedicine Page, die das Anlegen einer neuen Medikation ermöglicht. Mit einem Klicken auf Speichern oder Abbrechen gelangt man wieder zurück zur Medication Page. Eine zweite Möglichkeit, die ChangeMedicine Page zu erreichen, stellt das Tippen auf einen beliebigen Eintrag der MedicationPage dar: Dadurch bietet sich die Möglichkeit, die vorhandenen Werte der Medikation anzupassen.
+\\
+\\
+Der SendData Tab präsentiert dem Nutzer zunächst die SendData Page, von wo aus ein Tippen auf einen Knopf weiterleitet zur SelectDoctorsLetter Page, die es ermöglicht, die zu übertragenden Arztbriefe auszuwählen. Sind alle Dateien ausgewählt, gelangt der Nutzer über einen Knopf zur SelectDevice Page, wo er einen Empfänger auswählen kann. Hat er auch das erledigt, leitet ihn ein letzter Knopf zur TransmittingData Page weiter, die ihm einen Überblick über den Übertragungszustand bietet. Nach erfolgreicher Datenübertragung gelangt er über einen Knopf zurück zur SendData Page.
+Alle der drei genannten Pages verfügung zudem über einen Cancel Button, der den Nutzer direkt zurück zur SendData Page leitet, und beispielsweise den Datenübertragungsvorgang abbricht.
+\\
+\\
+Der letzte der vier Tabs, der Profile Tab, stellt dem Nutzer zunächst das aktuelle Profil in der Profil Page dar. Hier hat der Benutzer nun zwei Möglichkeiten: Entweder er entschließt sich zum Wechsel des aktiven Profils durch einen Knopfdruck Switch Profile, oder er möchte das aktuelle Profil editieren. 
+Ersteres leitet ihn weiter zur ChooseProfile Page, wo er aus den gespeicherten Profilen zu einem beliebigen wechseln kann. Ein Speichern Knopf sichert die Änderung und leitet zurück zur Profile Page.
+Möchte der Nutzer allerdings ein Profil editieren, erreicht er dies über einen Edit Knopf, der ihn zur EditProfile Page weiterleitet. Hier können entweder die eingetragenen Werte geändert und durch einen Speichern Knopf gesichert werden, oder durch man bricht den Vorgang durch einen Cancel Knopf ab. Beides leitet den Nutzer zurück zur ProfilePage.
+\\
+\\
+Die Anwendung lässt sich zu jedem Zeitpunkt beenden. Aktive Datenübertragungsvorgänge werden dadurch jedoch beendet. Zudem gehen nichtgespeicherte Änderungen jeglicher Art verloren.
+\end{figure}
+
+
 \section{UI-Seiten}
 %TODO
 
