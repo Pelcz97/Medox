@@ -27,7 +27,6 @@
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-\setlength{\parskip}{\baselineskip}%
 \setlength{\parindent}{0pt}%
 
 \setcounter{tocdepth}{1} 
@@ -140,7 +139,7 @@
 % Platzierung des Inhaltsverzeichnisses
 \tableofcontents
 \addtocontents{toc}{\protect\enlargethispage{10cm}}
-
+\setlength{\parskip}{2.5mm}%
 \chapter{Einleitung}
 %TODO
 
@@ -336,8 +335,8 @@ Fordert alle Gruppen von Arztbriefen des aktiven Profils an und gibt diese zurü
 \textbf{CreateEmptyGroup() : IDoctorsLetterGroup}\\
 Legt eine neue Gruppe von Arztbriefen an, die noch keine Arztbriefe enthält und gibt diese zurück.
 
-\textbf{DeleteGroup(Group : DoctorsLetter) : void}\\
-Löscht die Gruppe von Arztbiefen \textit{medication} und alle Assoziationen zu ihr. Die einzelnen Arztbriefe in der Gruppe selbst bleiben jedoch erhalten.
+\textbf{DeleteGroup(group : DoctorsLetter) : void}\\
+Löscht die Gruppe von Arztbiefen \textit{group} und alle Assoziationen zu ihr. Die einzelnen Arztbriefe in der Gruppe selbst bleiben jedoch erhalten.
 
 \chapter{Paketführer}
 
@@ -347,7 +346,89 @@ Löscht die Gruppe von Arztbiefen \textit{medication} und alle Assoziationen zu 
 \subsection{ViewModel}
 %TODO
 \subsection{Model}
+%TODO Bild einfügen
+\subsubsection{ModelFacade}
+\textbf{Funktion:} Dieses Paket implementiert die Hauptschnittstelle IModelFacade des Models und delegiert Aufgaben an die restlichen Pakete innerhalb des Subsystems.
+Die ModelFacade agiert unabhängig von den anderen Subsystemen und nimmt nur Anfragen entgegen.
+\vspace*{2.5mm}\\
+\textbf{Entwurfsentscheidung:} Organisation des Models
+\vspace*{2.5mm}\\
+\textbf{Subsystem:} Model
+\vspace*{2.5mm}\\
+\textbf{Klassendiagramm:} siehe S.
+\vspace*{2.5mm}\\
+\textbf{Enthaltene Klassen:} IModelFacade, ModelFacade
+
+\subsubsection{TransmissionModel}
 %TODO
+\textbf{Funktion:}
+\vspace*{2.5mm}\\
+\textbf{Entwurfsentscheidung:} Übertragung der Daten
+\vspace*{2.5mm}\\
+\textbf{Subsystem:} Model
+\vspace*{2.5mm}\\
+\textbf{Klassendiagramm:} siehe S.
+\vspace*{2.5mm}\\
+\textbf{Enthaltene Klassen:} 
+
+\subsubsection{DatabaseModel}
+\textbf{Funktion:} Dieses Paket bietet eine Schnittstelle zur Interaktion mit der Datenbank in der die Daten gespeichert werden. 
+Die Implementierung dieser Schnittstelle leitet größtenteils die Anfragen an die tatsächlich verwendete Datenbank (hier: lokale SQLite Datenbank) weiter.
+\vspace*{2.5mm}\\
+\textbf{Entwurfsentscheidung:} Art der Datenspeicherung und -abfrage 
+\vspace*{2.5mm}\\
+\textbf{Subsystem:} Model
+\vspace*{2.5mm}\\
+\textbf{Klassendiagramm:} siehe S.
+\vspace*{2.5mm}\\
+\textbf{Enthaltene Klassen:} IEntityDatabase, EntityDatabase
+
+\subsubsection{DataModel}
+%TODO
+\textbf{Funktion:} Dieses Paket enthält die Implementierung der verschiedenen Datentypen, die in DataModelInterface beschrieben werden
+\vspace*{2.5mm}\\
+\textbf{Entwurfsentscheidung:} Kapselung der verschiedenen Datentypen
+\vspace*{2.5mm}\\
+\textbf{Subsystem:} Model
+\vspace*{2.5mm}\\
+\textbf{Klassendiagramm:} siehe S.
+\vspace*{2.5mm}\\
+\textbf{Enthaltene Klassen:}
+
+\subsubsection{DataModel}
+%TODO
+\textbf{Funktion:} Dieses Paket enthält die Implementierung der verschiedenen Datentypen, die in DataModelInterface beschrieben werden
+\vspace*{2.5mm}\\
+\textbf{Entwurfsentscheidung:} Kapselung der verschiedenen Datentypen
+\vspace*{2.5mm}\\
+\textbf{Subsystem:} Model
+\vspace*{2.5mm}\\
+\textbf{Klassendiagramm:} siehe S.
+\vspace*{2.5mm}\\
+\textbf{Enthaltene Klassen:}
+
+\subsubsection{ParserModel}
+%TODO
+\textbf{Funktion:}
+\vspace*{2.5mm}\\
+\textbf{Entwurfsentscheidung:} Unabhängigkeit der lokaler Datenspeicherung und Datenübertragung
+\vspace*{2.5mm}\\
+\textbf{Subsystem:} Model
+\vspace*{2.5mm}\\
+\textbf{Klassendiagramm:} siehe S.
+\vspace*{2.5mm}\\
+\textbf{Enthaltene Klassen:} IParserFacade, ParserFacade, FileToDatabaseParser, Hl7ToDatabaseParser
+
+\subsubsection{FileHelper}
+\textbf{Funktion:} Dieses Paket implementiert plattformspezifisch die von Xamarin.Forms angebotene IFileHelper Schnittstelle um plattformübergreifend auf Dateien zugreifen zu können.
+\vspace*{2.5mm}\\
+\textbf{Entwurfsentscheidung:} Kapselung des plattformspezifischen Dateizugriffs
+\vspace*{2.5mm}\\
+\textbf{Subsystem:} Model
+\vspace*{2.5mm}\\
+\textbf{Klassendiagramm:} siehe S.
+\vspace*{2.5mm}\\
+\textbf{Enthaltene Klassen:} FileHelper
 
 \section{Benutzt-Relation}
 %TODO
