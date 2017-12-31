@@ -146,7 +146,15 @@
  
 \chapter{Systemaufbau}
 \section{Systemarchitektur}
-%TODO
+Die Logik des Systems verteilt sich auf beliebig viele Partner, die unter Umständen miteinander kommunizieren können. Der Aufbau eines solchen Partners wird nun im Folgenden beschrieben:
+
+Ein Partner ist fest an ein von \textit{Xamarin.Forms} unterstütztes Gerät gebunden. Die Architektur trennt sich dabei in drei so unabhängig wie möglich agierende Subsysteme nach dem MVVM-Prinzip, um die Anwendung möglichst plattformübergreifend zu gestalten:
+
+Das \textbf{Model} enthält die Anwendungslogik und ist komplett unabhängig von den restlichen Subsystemen. Hier findet auch die Kommunikation mit anderen Partnern statt.
+
+%TODO \textbg{View} View erklären und evtl ViewModel Erklärung korrigieren/erweitern, da habt ihr glaub ich n besseren Überblick drüber wie genau des funktioniert -Philipp K.
+
+Das \textbf{ViewModel} ist das Verbindungsstück zwischen Model und View. Es führt Zugriffe auf das Model über dessen Schnittstellen aus und reicht dem View anzuzeigende Informationen über das \textit{Xamarin.Forms} Data-Binding Framework.
 
 \section{Subsysteme}
 \subsection{View}
