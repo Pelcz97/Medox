@@ -27,7 +27,6 @@
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-\setlength{\parskip}{\baselineskip}%
 \setlength{\parindent}{0pt}%
 
 \setcounter{tocdepth}{1} 
@@ -230,12 +229,16 @@ Die Schnittstelle \textbf{IDoctorsLetter} erweitert \textbf{IData}.
 
 %TODO Bild einfügen
 \textbf{GetAll() : IList<IDoctorsLetter>}\\
+Gibt alle Arztbriefe in der Gruppe zurück.
 
 \textbf{Add(letter : IDoctorsLetter) : void}\\
+Fügt den Arztbrief \textit{letter} zu dieser Gruppe hinzu.
 
 \textbf{Remove(letter : IDoctorsLetter) : void}\\
+Entfernt den Arztbrief \textit{letter} aus dieser Gruppe.
 
 \textbf{GetLastDate() : DateTime}\\
+Gibt das aktuellste Datum aller Arztbriefe in dieser Gruppe zurück.
 
 
 \paragraph{IMedication}
@@ -344,8 +347,8 @@ Fordert alle Gruppen von Arztbriefen des aktiven Profils an und gibt diese zurü
 \textbf{CreateEmptyGroup() : IDoctorsLetterGroup}\\
 Legt eine neue Gruppe von Arztbriefen an, die noch keine Arztbriefe enthält und gibt diese zurück.
 
-\textbf{DeleteGroup(Group : DoctorsLetter) : void}\\
-Löscht die Gruppe von Arztbiefen \textit{medication} und alle Assoziationen zu ihr. Die einzelnen Arztbriefe in der Gruppe selbst bleiben jedoch erhalten.
+\textbf{DeleteGroup(group : DoctorsLetter) : void}\\
+Löscht die Gruppe von Arztbiefen \textit{group} und alle Assoziationen zu ihr. Die einzelnen Arztbriefe in der Gruppe selbst bleiben jedoch erhalten.
 
 \chapter{Paketführer}
 
@@ -355,7 +358,100 @@ Löscht die Gruppe von Arztbiefen \textit{medication} und alle Assoziationen zu 
 \subsection{ViewModel}
 %TODO
 \subsection{Model}
+%TODO Bild einfügen
+\subsubsection{ModelFacade}
+\textbf{Funktion:} Dieses Paket implementiert die Hauptschnittstelle IModelFacade des Models und delegiert Aufgaben an die restlichen Pakete innerhalb des Subsystems.
+Die ModelFacade agiert unabhängig von den anderen Subsystemen und nimmt nur Anfragen entgegen.
+
+\textbf{Entwurfsentscheidung:} Organisation des Models
+
+\textbf{Subsystem:} Model
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} ModelFacade
+
+\subsubsection{TransmissionModel}
 %TODO
+\textbf{Funktion:}
+
+\textbf{Entwurfsentscheidung:} Übertragung der Daten
+
+\textbf{Subsystem:} Model
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} 
+
+\subsubsection{DatabaseModel}
+\textbf{Funktion:} Dieses Paket bietet eine Schnittstelle zur Interaktion mit der Datenbank in der die Daten gespeichert werden. 
+Die Implementierung dieser Schnittstelle leitet größtenteils die Anfragen an die tatsächlich verwendete Datenbank (hier: lokale SQLite Datenbank) weiter.
+
+\textbf{Entwurfsentscheidung:} Art der Datenspeicherung und -abfrage 
+
+\textbf{Subsystem:} Model
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} IEntityDatabase, EntityDatabase
+
+\subsubsection{DataModel}
+\textbf{Funktion:} Dieses Paket enthält die Implementierung der verschiedenen Datentypen, die in \textbf{DataModelInterface} beschrieben werden. 
+Diese Klassen dienen jeweils als Vorlage für eine Tabelle der Datenbank und können über das \textbf{EntityObserver} Paket beobachtet werden.
+
+\textbf{Entwurfsentscheidung:} Kapselung der verschiedenen Datentypen
+
+\textbf{Subsystem:} Model
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} Entity, Profile, Doctor, Data, DoctorsLetter, DoctorsLetterGroup, Medication
+
+\subsubsection{EntityFactory}
+\textbf{Funktion:} Dieses Paket enthält eine Schnittstellen um Objekte aus \textbf{DataModelInterface} zu erzeugen.
+Die Implementierung der Schnittstelle erzeugt Objekte aus \textbf{DataModel} und fügt sie in die Datenbank ein.
+
+\textbf{Entwurfsentscheidung:} Kapselung der Implementierung und Erstellung der Datentypen
+
+\textbf{Subsystem:} Model
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} IEntityFactory, EntityFactory
+
+\subsubsection{EntityObserver}
+\textbf{Funktion:} Dieses Paket enthält die Schnittstellen die implementiert werden müssen um Entitäten zu beobachten.
+
+\textbf{Entwurfsentscheidung:} Benachrichtigung der Datenbank über Änderung der Daten
+
+\textbf{Subsystem:} Model
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} Observable, Observer, EntityObserver
+
+\subsubsection{ParserModel}
+\textbf{Funktion:} Dieses Paket enthält die Schnittstelle IParserFacade um zwischen Datenformaten zu konvertieren.
+Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und delegiert die Konvertierung an diesen.
+
+\textbf{Entwurfsentscheidung:} Unabhängigkeit der lokaler Datenspeicherung und Datenübertragung
+
+\textbf{Subsystem:} Model
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} IParserFacade, ParserFacade, FileToDatabaseParser, Hl7ToDatabaseParser
+
+\subsubsection{FileHelper}
+\textbf{Funktion:} Dieses Paket implementiert plattformspezifisch die von Xamarin.Forms angebotene IFileHelper Schnittstelle um plattformübergreifend auf Dateien zugreifen zu können.
+
+\textbf{Entwurfsentscheidung:} Kapselung des plattformspezifischen Dateizugriffs
+
+\textbf{Subsystem:} Model
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} FileHelper
 
 \section{Benutzt-Relation}
 %TODO
