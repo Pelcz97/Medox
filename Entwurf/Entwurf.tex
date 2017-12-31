@@ -221,12 +221,16 @@ Die Schnittstelle \textbf{IDoctorsLetter} erweitert \textbf{IData}.
 
 %TODO Bild einfügen
 \textbf{GetAll() : IList<IDoctorsLetter>}\\
+Gibt alle Arztbriefe in der Gruppe zurück.
 
 \textbf{Add(letter : IDoctorsLetter) : void}\\
+Fügt den Arztbrief \textit{letter} zu dieser Gruppe hinzu.
 
 \textbf{Remove(letter : IDoctorsLetter) : void}\\
+Entfernt den Arztbrief \textit{letter} aus dieser Gruppe.
 
 \textbf{GetLastDate() : DateTime}\\
+Gibt das aktuellste Datum aller Arztbriefe in dieser Gruppe zurück.
 
 
 \paragraph{IMedication}
@@ -295,7 +299,6 @@ Gibt das Fachgebiet dieses Doktors zurück.
 \textbf{SetField(field : string) : void}\\
 Setzt das Fachgebiet dieses Doktors auf \textit{field}.
 
-
 \paragraph{Enumerations}
 Die Enumerationen \textit{Sensitivity}, \textit{Interval} und \textit{BloodType} müssen Subsystemen die auf die hier aufgeführten Daten zugreifen ebenfalls bekannt sein, um diese anzeigen zu können.
 
@@ -350,84 +353,95 @@ Löscht die Gruppe von Arztbiefen \textit{group} und alle Assoziationen zu ihr. 
 \subsubsection{ModelFacade}
 \textbf{Funktion:} Dieses Paket implementiert die Hauptschnittstelle IModelFacade des Models und delegiert Aufgaben an die restlichen Pakete innerhalb des Subsystems.
 Die ModelFacade agiert unabhängig von den anderen Subsystemen und nimmt nur Anfragen entgegen.
-\vspace*{2.5mm}\\
+
 \textbf{Entwurfsentscheidung:} Organisation des Models
-\vspace*{2.5mm}\\
+
 \textbf{Subsystem:} Model
-\vspace*{2.5mm}\\
+
 \textbf{Klassendiagramm:} siehe S.
-\vspace*{2.5mm}\\
-\textbf{Enthaltene Klassen:} IModelFacade, ModelFacade
+
+\textbf{Enthaltene Klassen:} ModelFacade
 
 \subsubsection{TransmissionModel}
 %TODO
 \textbf{Funktion:}
-\vspace*{2.5mm}\\
+
 \textbf{Entwurfsentscheidung:} Übertragung der Daten
-\vspace*{2.5mm}\\
+
 \textbf{Subsystem:} Model
-\vspace*{2.5mm}\\
+
 \textbf{Klassendiagramm:} siehe S.
-\vspace*{2.5mm}\\
+
 \textbf{Enthaltene Klassen:} 
 
 \subsubsection{DatabaseModel}
 \textbf{Funktion:} Dieses Paket bietet eine Schnittstelle zur Interaktion mit der Datenbank in der die Daten gespeichert werden. 
 Die Implementierung dieser Schnittstelle leitet größtenteils die Anfragen an die tatsächlich verwendete Datenbank (hier: lokale SQLite Datenbank) weiter.
-\vspace*{2.5mm}\\
+
 \textbf{Entwurfsentscheidung:} Art der Datenspeicherung und -abfrage 
-\vspace*{2.5mm}\\
+
 \textbf{Subsystem:} Model
-\vspace*{2.5mm}\\
+
 \textbf{Klassendiagramm:} siehe S.
-\vspace*{2.5mm}\\
+
 \textbf{Enthaltene Klassen:} IEntityDatabase, EntityDatabase
 
 \subsubsection{DataModel}
-%TODO
-\textbf{Funktion:} Dieses Paket enthält die Implementierung der verschiedenen Datentypen, die in DataModelInterface beschrieben werden
-\vspace*{2.5mm}\\
-\textbf{Entwurfsentscheidung:} Kapselung der verschiedenen Datentypen
-\vspace*{2.5mm}\\
-\textbf{Subsystem:} Model
-\vspace*{2.5mm}\\
-\textbf{Klassendiagramm:} siehe S.
-\vspace*{2.5mm}\\
-\textbf{Enthaltene Klassen:}
+\textbf{Funktion:} Dieses Paket enthält die Implementierung der verschiedenen Datentypen, die in \textbf{DataModelInterface} beschrieben werden. 
+Diese Klassen dienen jeweils als Vorlage für eine Tabelle der Datenbank und können über das \textbf{EntityObserver} Paket beobachtet werden.
 
-\subsubsection{DataModel}
-%TODO
-\textbf{Funktion:} Dieses Paket enthält die Implementierung der verschiedenen Datentypen, die in DataModelInterface beschrieben werden
-\vspace*{2.5mm}\\
 \textbf{Entwurfsentscheidung:} Kapselung der verschiedenen Datentypen
-\vspace*{2.5mm}\\
+
 \textbf{Subsystem:} Model
-\vspace*{2.5mm}\\
+
 \textbf{Klassendiagramm:} siehe S.
-\vspace*{2.5mm}\\
-\textbf{Enthaltene Klassen:}
+
+\textbf{Enthaltene Klassen:} Entity, Profile, Doctor, Data, DoctorsLetter, DoctorsLetterGroup, Medication
+
+\subsubsection{EntityFactory}
+\textbf{Funktion:} Dieses Paket enthält eine Schnittstellen um Objekte aus \textbf{DataModelInterface} zu erzeugen.
+Die Implementierung der Schnittstelle erzeugt Objekte aus \textbf{DataModel} und fügt sie in die Datenbank ein.
+
+\textbf{Entwurfsentscheidung:} Kapselung der Implementierung und Erstellung der Datentypen
+
+\textbf{Subsystem:} Model
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} IEntityFactory, EntityFactory
+
+\subsubsection{EntityObserver}
+\textbf{Funktion:} Dieses Paket enthält die Schnittstellen die implementiert werden müssen um Entitäten zu beobachten.
+
+\textbf{Entwurfsentscheidung:} Benachrichtigung der Datenbank über Änderung der Daten
+
+\textbf{Subsystem:} Model
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} Observable, Observer, EntityObserver
 
 \subsubsection{ParserModel}
-%TODO
-\textbf{Funktion:}
-\vspace*{2.5mm}\\
+\textbf{Funktion:} Dieses Paket enthält die Schnittstelle IParserFacade um zwischen Datenformaten zu konvertieren.
+Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und delegiert die Konvertierung an diesen.
+
 \textbf{Entwurfsentscheidung:} Unabhängigkeit der lokaler Datenspeicherung und Datenübertragung
-\vspace*{2.5mm}\\
+
 \textbf{Subsystem:} Model
-\vspace*{2.5mm}\\
+
 \textbf{Klassendiagramm:} siehe S.
-\vspace*{2.5mm}\\
+
 \textbf{Enthaltene Klassen:} IParserFacade, ParserFacade, FileToDatabaseParser, Hl7ToDatabaseParser
 
 \subsubsection{FileHelper}
 \textbf{Funktion:} Dieses Paket implementiert plattformspezifisch die von Xamarin.Forms angebotene IFileHelper Schnittstelle um plattformübergreifend auf Dateien zugreifen zu können.
-\vspace*{2.5mm}\\
+
 \textbf{Entwurfsentscheidung:} Kapselung des plattformspezifischen Dateizugriffs
-\vspace*{2.5mm}\\
+
 \textbf{Subsystem:} Model
-\vspace*{2.5mm}\\
+
 \textbf{Klassendiagramm:} siehe S.
-\vspace*{2.5mm}\\
+
 \textbf{Enthaltene Klassen:} FileHelper
 
 \section{Benutzt-Relation}
