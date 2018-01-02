@@ -451,7 +451,18 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 
 \chapter{Daten}
-%TODO
+\section{Datenspeicherung}
+Die in der Applikation vorhandenen Daten (also die Objekte aus \textbf{DataModel}) werden in einer lokalen SQLite-Datenbank gespeichert. 
+
+Der Aufbau der Datenbank ergibt sich dabei direkt aus den Klassen in \textbf{DataModel}, d.h. \textbf{Profile}, \textbf{Doctor}, \textbf{DoctorsLetter}, \textbf{DoctorsLetterGroup} und \textbf{Medication} sind jeweils Vorlagen für eine Tabelle in der Datenbank.
+
+Der Zugriff auf die Datenbank erfolgt über eine Xamarin Cross-Platform Library, die über \textbf{DatabaseModel} aufgerufen wird. Weiterhin beobachtet die Datenbank, die in ihr enthaltenen Objekte um über Änderungen an diesen informiert zu werden und sich aktuell zu halten.
+
+Jeder in der Datenbank enthaltene Arztbrief wurde dabei aus einer über das \textbf{TransmissionModel}
+gesendeten Datei (zunächst nur im XML-basierten .hl7 Format) erstellt. Da solche Dateien in der Regel mehr Informationen enthalten als zum Anzeigen nötig sind und in der Datenbank gespeichert werden, wird die Originaldatei ebenfalls gespeichert um diese Informationen nicht zu verlieren.
+
+\section{Datenübertragung}
+%TODO Bluetooth, Dateiformate, etc.
 
 \chapter{Dynamik und Ablauf}
 \section{Aktionen}
@@ -501,6 +512,20 @@ Wird die Anwendung geöffnet, wird dem Nutzer zunächst eine Übersicht all sein
 \begin{figure}
 \includegraphics[width=1\textwidth]{graphics/UIDescriptions/DetailedDLDesc}
 \end{figure}
+
+\chapter{Anwendung für Ärzte}
+Die Version der Anwendung die nicht von Patienten, sondern von Ärzten verwendet werden soll um Patienten deren Arztbriefe zu senden, wird in diesem Dokument nicht genauer beschrieben, da sie nur eine reduzierte Version der hier beschriebenen mobilen Anwendung ist. 
+
+Die Anwendung für Ärzte soll nur Dateien mit mobilen Anwendungen von Patienten austauschen können, also
+sind dort die Pakete für die Modellierung (\textbf{DataModel}, \textbf{EntityFactory}), Speicherung (\textbf{DatabaseModel}, \textbf{EntityObserver}) der Daten überflüssig. 
+
+Somit wird auch die Logik zur Konvertierung zwischen den Speicherungsformaten (\textbf{ParserModel}) nicht mehr benötigt. 
+
+Weiterhin werden die gesendeten/empfangenen Dateien nicht im Dateisystem der Anwendung, (was die Funktion des \textbf{FileHelper} war), sondern an einem beliebigen Dateipfad gespeichert.
+
+Somit ist die einzige für diese Anwendung nötige Funktionalität im Model komplett in \textbf{TransmissionModel} enthalten.
+
+%TODO View, ViewModel je nachdem ob ihr was dazu entworfen habt oder nicht, kommt des halt hier rein oder an den entsprechenden anderen Stellen.
 
 \chapter{Klassendiagramm}
 %TODO
