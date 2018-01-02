@@ -466,10 +466,31 @@ gesendeten Datei (zunächst nur im XML-basierten .hl7 Format) erstellt. Da solch
 
 \chapter{Dynamik und Ablauf}
 \section{Aktionen}
-\newpage
-
+\subsection{Gesamte Anwendung}
 %TODO
 
+\subsection{Model}
+Um die Sequenzdiagramme der gesamten Anwendung übersichtlich zu halten, sind hier komplexere Operationen aus dem Model separat vom Rest der Anwendung aufgeführt. Werden solche oder ähnliche Operationen an anderer Stelle referenziert, so wird in diesen Sequenzdiagrammen nur der Aufruf an die Schnittstelle des Models und nicht erneut der genaue Ablauf aufgeführt.
+ 
+\subsubsection{Ändern einer Entität}
+%TODO Bild einfügen
+Über die Schnittstelle der Entität wird eine Methode(z.B. \textit{setName} aufgerufen die eines derer Attribute verändert.
+
+Die Entität benachrichtigt, nachdem sie die Änderung durchgeführt hat, die Datenbank \textit{db}, die sich zuvor (z.B. bei der Erstellung der Entität über \textbf{EntityFactory}) als Beobachter angemeldet hat.
+
+Dieser Aufruf an die Datenbank veranlasst dann die Speicherung der Änderung darin.
+
+\subsubsection{Löschen eines Arztbriefs}
+%TODO Bild einfügen
+%TODO
+\subsubsection{Parsen eines Arztbriefs}
+%TODO Bild einfügen
+%TODO
+\subsubsection{Erstellen einer Medikation}
+%TODO Bild einfügen
+%TODO
+
+\newpage
 \begin{figure}
 \section{UI-Navigation}
 \centering
