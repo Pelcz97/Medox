@@ -17,7 +17,6 @@
 \usepackage{float}
 \usepackage[font={footnotesize}]{caption}
 \usepackage{titlesec}
-\setcounter{secnumdepth}{4}
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}
@@ -199,6 +198,9 @@ Entfernt die Medikation \textit{med} aus der Liste der Medikationen die von dies
 
 \textbf{GetGroups() : IList<DoctorsLetterGroup>}\\
 Gibt alle Gruppen von Arztbriefen zurück, in denen dieser Arztbrief enthalten ist.
+
+\textbf{GetFilename() : string}\\
+Gibt den Namen der Originaldatei dieses Arztbriefs zurück.
 
 \paragraph{IDoctorsLetterGroup}
 Die Schnittstelle \textbf{IDoctorsLetter} erweitert \textbf{IData}.
@@ -400,7 +402,7 @@ Die Implementierung der Schnittstelle erzeugt Objekte aus \textbf{DataModel} und
 
 \textbf{Klassendiagramm:} siehe S.
 
-\textbf{Enthaltene Klassen:} Observable, Observer, EntityObserver
+\textbf{Enthaltene Klassen:} IEntityObservable, IEntityObserver
 
 \subsubsection{ParserModel}
 \textbf{Funktion:} Dieses Paket enthält die Schnittstelle IParserFacade um zwischen Datenformaten zu konvertieren.
@@ -412,10 +414,10 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \textbf{Klassendiagramm:} siehe S.
 
-\textbf{Enthaltene Klassen:} IParserFacade, ParserFacade, FileToDatabaseParser, Hl7ToDatabaseParser
+\textbf{Enthaltene Klassen:} IParserFacade, ParserFacade, FileToDatabaseParser, Hl7ToDatabaseParser, LetterToFileParser
 
 \subsubsection{FileHelper}
-\textbf{Funktion:} Dieses Paket implementiert plattformspezifisch die von Xamarin.Forms angebotene IFileHelper Schnittstelle um plattformübergreifend auf Dateien zugreifen zu können.
+\textbf{Funktion:} Dieses Paket bietet eine Schnittstelle um plattformübergreifend auf Dateien zugreifen zu können und implementiert diese plattformspezifisch.
 
 \textbf{Entwurfsentscheidung:} Kapselung des plattformspezifischen Dateizugriffs
 
@@ -423,7 +425,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \textbf{Klassendiagramm:} siehe S.
 
-\textbf{Enthaltene Klassen:} FileHelper
+\textbf{Enthaltene Klassen:} IFileHelper, FileHelper
 
 \section{Benutzt-Relation}
 %TODO
@@ -436,18 +438,190 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 %TODO
 
 \section{Model}
+Die Schnittstellen des Models (\textbf{ModelInterface}) wurden bereits im Abschnitt \textbf{Subsystem-Schnittstellen} beschrieben und werden hier nicht erneut aufgeführt.
+
 \subsection{ModelFacade}
-%TODO
+%TODO Bild einfügen
+
+\subsubsection{ModelFacade : IModelFacade}
+%TODO Bild einfügen
+\textbf{Beschreibung:} Die \textbf{ModelFacade} implementiert die Fassaden-Schnittstelle \textbf{IModelFacade}. Sie delegiert bei einem Aufruf an eine oder mehrere Schnittstellen der restlichen Pakete des Subsystems.
+
+\textbf{Attribute:}\\
++ \textit{database : IEntityDatabase} - Die Datenbank, in der Entitäten gespeichert werden\\
++ \textit{factory : IEntityFactory} - Enthält die Logik um Entitäten zu erstellen\\
++ \textit{parser : IParserFacade} - Enthält die Logik um zwischen Datenformaten zu konvertierten\\
++ \textit{fileHelper : IFileHelper} - Helferklasse zum Dateizugriff\\
+%TODO Schnittstelle zum TransmissionModel
+
+\textbf{Paket:} ModelFacade
+
 \subsection{TransmissionModel}
 %TODO
+
 \subsection{DatabaseModel}
-%TODO
+%TODO Bild einfügen
+
+\subsubsection{IEntityDatabase}
+%TODO Bild einfügen
+\textbf{Beschreibung:} 
+
+\textbf{Paket:} ModelFacade
+
+\subsubsection{EntityDatabase : IEntityDatabase, IEntityObserver}
+%TODO Bild einfügen
+\textbf{Beschreibung:} 
+
+\textbf{Attribute:} 
+
+\textbf{Paket:} ModelFacade
+
 \subsection{DataModel}
-%TODO
+%TODO Bild einfügen
+
+\subsubsection{Entity : IEntity, IEntityObservable}
+%TODO Bild einfügen
+\textbf{Beschreibung:} Implementierung der \textbf{IEntity} Schnittstelle, als Vorlage für eine SQLite-Datenbanktabelle.\\
+Weiterhin wird die \textbf{IEntityObservable} Schnittstelle implementiert, sodass die Datenbank über Änderungen informiert werden kann.
+
+\textbf{Attribute:}\\
++ \textit{id : int} - Die ID über die Entitäten in der Datenbank identifiziert werden können\\
++ \textit{name : string} - Der Name der Entität
+
+\textbf{Paket:} DataModel
+
+\subsubsection{Profile : Entity, IProfile}
+%TODO Bild einfügen
+\textbf{Beschreibung:} 
+
+\textbf{Attribute:} 
+
+\textbf{Paket:} DataModel
+
+\subsubsection{Doctor : Entity, IDoctor}
+%TODO Bild einfügen
+\textbf{Beschreibung:} 
+
+\textbf{Attribute:} 
+
+\textbf{Paket:} DataModel
+
+\subsubsection{Data : Entity, IData}
+%TODO Bild einfügen
+\textbf{Beschreibung:} 
+
+\textbf{Attribute:} 
+
+\textbf{Paket:} DataModel
+
+\subsubsection{DoctorsLetter : Data, IDoctorsLetter}
+%TODO Bild einfügen
+\textbf{Beschreibung:} 
+
+\textbf{Attribute:} 
+
+\textbf{Paket:} DataModel
+
+\subsubsection{DoctorsLetterGroup : Data, IDoctorsLetterGroup}
+%TODO Bild einfügen
+\textbf{Beschreibung:} 
+
+\textbf{Attribute:} 
+
+\textbf{Paket:} DataModel
+
+\subsubsection{Medication : Data, IMedication}
+%TODO Bild einfügen
+\textbf{Beschreibung:} 
+
+\textbf{Attribute:} 
+
+\textbf{Paket:} DataModel
+
+\subsection{EntityFactory}
+%TODO Bild einfügen
+
+\subsubsection{IEntityFactory}
+%TODO Bild einfügen
+\textbf{Beschreibung:} Schnittstelle zum Erstellen von Entitäten, also Arztbriefen (\textit{CreateEmptyDoctorsLetter}), Gruppen von Arztbriefen (\textit{CreateEmptyGroup}), Medikationen (\textit{CreateEmptyMedication}) und Profilen (\textit{CreateEmptyProfile}).
+
+\textbf{Paket:} EntityFactory
+
+\subsubsection{EntityFactory : IEntityFactory}
+%TODO Bild einfügen
+\textbf{Beschreibung:} Implementierung der \textbf{IEntityFactory} Schnittstelle. Fügt Entitäten bei deren Erstellung in die Datenbank \textit{database} ein und meldet sie als Beobachter an.
+
+\textbf{Attribute:}\\
++ \textit{database : IEntityDatabase} - Die Datenbank in der die Entitäten gespeichert werden
+
+\textbf{Paket:} EntityFactory
+
+
+\subsection{EntityObserver}
+%TODO Bild einfügen
+
+\subsubsection{IEntityObservable}
+%TODO Bild einfügen
+\textbf{Beschreibung:} Beobachter können sich über diese Schnittstelle bei Datenstrukturen an- (\textit{Subscribe}) und wieder abmelden (\textit{Unsubscribe}), um sich über Änderungen an diesen informieren zu lassen.
+
+\textbf{Paket:} EntityObserver
+
+\subsubsection{IEntityObserver}
+%TODO Bild einfügen
+\textbf{Beschreibung:} Schnittstelle um IEntityObservable-Objekte beobachten zu können. Diese können dann bei Änderungen an sich, die angemeldeten Beobachter über diese Schnittstelle benachrichtigen (\textit{Update}).
+
+\textbf{Paket:} EntityObserver
+
+
 \subsection{ParserModel}
-%TODO
+%TODO Bild einfügen
+
+\subsubsection{IParserFacade}
+%TODO Bild einfügen
+\textbf{Beschreibung:} Diese Schnittstelle ist die Einstiegsstelle in das \textbf{ParserModel} Paket. 
+%TODO Methodenbeschreibung
+
+\textbf{Paket:} ParserModel
+
+\subsubsection{ParserFacade : IParserFacade}
+%TODO Bild einfügen
+\textbf{Beschreibung:} Implementierung der \textbf{IParserFacade} Schnittstelle. Wählt bei Aufruf den passenden Parser aus diesem Paket aus und delegiert an diesen.
+
+\textbf{Paket:} ParserModel
+
+\subsubsection{FileToDatabaseParser}
+%TODO Bild einfügen
+\textbf{Beschreibung:} Abstrakte Klasse zum Konvertieren eines in einer Datei gespeicherten Arztbriefs in ein \textbf{DoctorsLetter} Objekt, dass in einer \textbf{IEntityDatabase} gespeichert wird (\textit{ParseFile}).\\
+Die Implementierung der Methoden um die nötigen Informationen, also die Attribute des \textbf{DoctorsLetter} Objektes aus der Datei zu extrahieren (\textit{ParseLetter}, \textit{ParseMedications}, \textit{ParseDoctor}, \textit{ParseProfile}), wird den dateiformatspezifischen Unterklassen nach dem Schablonenmuster überlassen.
+
+\textbf{Paket:} ParserModel
+
+\subsubsection{Hl7ToDatabaseParser : FileToDatabaseParser}
+%TODO Bild einfügen
+\textbf{Beschreibung:} Implementierung der abstrakten Klasse \textbf{FileToDatabaseParser} und ihrer abstrakten Einschubmethoden (\textit{ParseLetter}, \textit{ParseMedications}, \textit{ParseDoctor}, \textit{ParseProfile}) für das .hl7 Dateiformat.
+
+\textbf{Paket:} ParserModel
+
+\subsubsection{LetterToOriginalFileParser}
+%TODO Bild einfügen
+\textbf{Beschreibung:} Konvertiert einen Arztbrief zu dem Dateiformat in dem er vor seiner Erstellung gesendet wurde (\textit{ParseLetter}).\\
+Da die Originaldatei auch nach der Erstellung des Arztbriefs gespeichert bleibt, wird lediglich der Dateipfad mithilfe der \textbf{IFileHelper} Schnittstelle zurückgegeben.
+
+\textbf{Paket:} ParserModel
+
 \subsection{FileHelper}
-%TODO
+%TODO Bild einfügen
+\subsubsection{IFileHelper}
+%TODO Bild einfügen
+\textbf{Beschreibung:} Schnittstelle um den Namen einer Datei im Verzeichnis der Anwendung in einen vollständigen Dateipfad umzuwandeln (\textit{GetLocalFilepath}).
+
+\textbf{Paket:} FileHelper
+
+\subsubsection{FileHelper : IFileHelper}
+%TODO Bild einfügen
+\textbf{Beschreibung:} Direkte Implementierung der \textbf{IFileHelper} Schnittstelle. Muss plattformspezifisch implementiert werden.
+
+\textbf{Paket:} FileHelper
 
 
 \chapter{Daten}
