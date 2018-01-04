@@ -585,15 +585,15 @@ Die Schnittstellen des Models (\textbf{ModelInterface}) wurden bereits im Abschn
 
 \subsubsection{IEntityDatabase}
 %TODO Bild einfügen
-\textbf{Beschreibung:} 
+\textbf{Beschreibung:} Die Schnittstelle \textbf{IEntityDatabase} bietet eine Zugriffsmöglichkeit auf die verwendete Datenbank an.\\
+Hier kann das aktuelle Profil gewechselt werden \textbf{SetActiveProfile} und sonstige Datenabfragen darauf durchgeführt werden.
 
 \textbf{Paket:} ModelFacade
 
 \subsubsection{EntityDatabase : IEntityDatabase, IEntityObserver}
 %TODO Bild einfügen
-\textbf{Beschreibung:} 
-
-\textbf{Attribute:} 
+\textbf{Beschreibung:} Die Klasse \textbf{EntityDatabase} implementiert die \textbf{IEntityDatabase} Schnittstelle. Dabei werden Aufrufe von Methoden aus dieser Schnittstelle größtenteils an die hier verwendete SQLite-Library weitergeleitet.\\
+Weiterhin wird die \textbf{IEntityObserver} Schnittstelle implementiert, sodass sich die Datenbank über Änderungen an den in ihr gespeicherten Entitäten informieren lassen kann.
 
 \textbf{Paket:} ModelFacade
 
