@@ -484,76 +484,127 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \subsubsection{AbstractViewModel}
 %TODO
 \textbf{Beschreibung:}
-
+%TODO
 \textbf{Attribute:}\\
+
 
 \subsubsection{OverviewViewModel : AbstractViewModel}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} 
 
 \textbf{Attribute:}\\
++ \textit{DoctorsLettersList : IList<DoctorsLetterViewModel>} - Die Menge der anzuzeigenden Arztbriefe\\
+- \textit{EditButton : ToolbarItem} - Knopf in der Toolbar, um die Liste der Arztbriefe editieren zu können\\
+
+\textbf{Paket:} OverviewTabViewModel
 
 \subsubsection{DoctorsLetterViewModel : AbstractViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+- \textit{DoctorsLetter : DoctorsLetter} - Ein anzuzeigender Arztbrief\\
+- \textit{doctorsName : string} - Der Name des behandelnden Arztes\\
+- \textit{doctorsName : string} - Das Fachgebiet des behandelnden Arztes\\
+- \textit{creationDate : DateTime} - Das Erstellungsdatum des Arztbriefes\\
+
+\textbf{Paket:} OverviewTabViewModel
 
 \subsubsection{DetailedDoctorsLetterViewModel : DoctorsLetterViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+- \textit{diagnosis : string} - Die vom behandelnden Arzt ausgestellte Diagnose\\
+- \textit{medication : string} - Die vom behandelnden Arzt empfohlene Therapie\\
+
+\textbf{Paket:} OverviewTabViewModel
 
 \subsubsection{MedicationViewModel : AbstractViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
++ \textit{MedicationsList : IList<MedicineViewModel>} - Die Menge der anzuzeigenden Medikationen\\
+- \textit{AddEntryButton : ToolbarItem} - Knopf in der Toolbar, um neue Medikationen anlegen zu können\\
+
+\textbf{Paket:} MedicationTabViewModel
 
 \subsubsection{MedicineViewModel : AbstractViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
++ \textit{Medication : Medication} - Eine anzuzeigende Medikation\\
+- \textit{medicationName : string} - Die Bezeichnung des eingenommenen Medikaments oder Wirkstoffes\\
+- \textit{startingDate : DateTime} - Das Datum des Einnahmebeginns\\
+- \textit{endingDate : DateTime} - Das Datum des Einnahmeendes\\
+- \textit{frequency : int} - Die Anzahl der täglichen Einnahmen\\
+
+\textbf{Paket:} MedicationTabViewModel
 
 \subsubsection{DetailedMedicineViewModel : MedicineViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+- \textit{CancelButton : ToolbarItem} - Knopf in der Toolbar, um das Anlegen einer neuen Medikation abzubrechen\\
+- \textit{SaveButton : ToolbarItem} - Knopf in der Toolbar, um die neue/geänderte Medikation abzuspeichern\\
+
+\textbf{Paket:} MedicationTabViewModel
 
 \subsubsection{SendDataViewModel : AbstractViewModel}
 %TODO
 \textbf{Beschreibung:}
 
-\textbf{Attribute:}\\
+\textbf{Paket:} SendDataTabViewModel
 
 \subsubsection{SelectDoctorsLettersViewModel : AbstractViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+- \textit{CancelButton : ToolbarItem} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
+- \textit{ConfirmSelectionButton : ToolbarItem} - Knopf in der Toolbar, um mit der ausgewählten Menge an Arztbriefen fortzufahren\\
+- \textit{DoctorsLettersList : IList<DoctorsLetterViewModel>} - Die Menge der anzuzeigenden Arztbriefe\\
+- \textit{SelectedDoctorsLettersList : IList<DoctorsLetterViewModel>} - Die Menge der vom Nutzer ausgewählten Arztbriefe\\
+
+\textbf{Paket:} SendDataTabViewModel
 
 \subsubsection{SelectDeviceViewModel : AbstractViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+- \textit{CancelButton : ToolbarItem} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
+- \textit{ConfirmSelectionButton : ToolbarItem} - Knopf in der Toolbar, um mit dem ausgewählten Empfänger fortzufahren\\
+- \textit{DeviceList : IList<Device>} - Die Menge der Empfangsgeräte in Reichweite\\
+- \textit{SelectedDevice : IDevice} - Der vom Nutzer gewählte Empfänger\\
+- \textit{BluetoothState : bool} - Zustand des Bluetooth Moduls (Bluetooth an/aus)\\
+- \textit{BluetoothAdapter : Bluetooth} - Kommunikation mit der Bluetooth-Schnittstelle\\
+
+
+\textbf{Paket:} SendDataTabViewModel
 
 \subsubsection{TransmittingDataViewModel : AbstractViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+- \textit{CancelButton : ToolbarItem} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
+
+\textbf{Paket:} SendDataTabViewModel
 
 \subsubsection{ProfileViewModel : AbstractViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+- \textit{userName : string} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
+- \textit{insuranceNumber : string} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
+- \textit{bloodType : BloodType} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
 
-
+\textbf{Paket:} ProfileTabViewModel
 
 \section{Model}
 Die Schnittstellen des Models (\textbf{ModelInterface}) wurden bereits im Abschnitt \textbf{Subsystem-Schnittstellen} beschrieben und werden hier nicht erneut aufgeführt.
