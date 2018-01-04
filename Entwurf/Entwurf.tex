@@ -515,7 +515,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
-- \textit{diagnosis : string} - Die vom behandelnden Arzt ausgestellte Diagnose\
+- \textit{diagnosis : string} - Die vom behandelnden Arzt ausgestellte Diagnose\\
 - \textit{medication : string} - Die vom behandelnden Arzt empfohlene Therapie\\
 
 \textbf{Paket:} OverviewTabViewModel
@@ -525,14 +525,21 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
-- \textit{diagnosis : string} - Die vom behandelnden Arzt ausgestellte Diagnose\
-- \textit{medication : string} - Die vom behandelnden Arzt empfohlene Therapie\\
++ \textit{MedicationsList : IList<MedicineViewModel>} - Die Menge der anzuzeigenden Medikationen\\
+- \textit{AddEntryButton : ToolbarItem} - Knopf in der Toolbar, um neue Medikationen anlegen zu können\\
+
+\textbf{Paket:} MedicationTabViewModel
 
 \subsubsection{MedicineViewModel : AbstractViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
++ \textit{Medication : Medication} - Eine anzuzeigende Medikation\\
+- \textit{medicationName : string} - Die Bezeichnung des eingenommenen Medikaments oder Wirkstoffes\\
+- \textit{startingDate : DateTime} - Das Datum des Einnahmebeginns\\
+- \textit{endingDate : DateTime} - Das Datum des Einnahmeendes\\
+- \textit{frequency : int} - Die Anzahl der täglichen Einnahmen\\
 
 \textbf{Paket:} MedicationTabViewModel
 
@@ -541,6 +548,8 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+- \textit{CancelButton : ToolbarItem} - Knopf in der Toolbar, um das Anlegen einer neuen Medikation abzubrechen\\
+- \textit{SaveButton : ToolbarItem} - Knopf in der Toolbar, um die neue/geänderte Medikation abzuspeichern\\
 
 \textbf{Paket:} MedicationTabViewModel
 
