@@ -585,15 +585,15 @@ Die Schnittstellen des Models (\textbf{ModelInterface}) wurden bereits im Abschn
 
 \subsubsection{IEntityDatabase}
 %TODO Bild einfügen
-\textbf{Beschreibung:} 
+\textbf{Beschreibung:} Die Schnittstelle \textbf{IEntityDatabase} bietet eine Zugriffsmöglichkeit auf die verwendete Datenbank an.\\
+Hier kann das aktuelle Profil gewechselt werden \textbf{SetActiveProfile} und sonstige Datenabfragen darauf durchgeführt werden.
 
 \textbf{Paket:} ModelFacade
 
 \subsubsection{EntityDatabase : IEntityDatabase, IEntityObserver}
 %TODO Bild einfügen
-\textbf{Beschreibung:} 
-
-\textbf{Attribute:} 
+\textbf{Beschreibung:} Die Klasse \textbf{EntityDatabase} implementiert die \textbf{IEntityDatabase} Schnittstelle. Dabei werden Aufrufe von Methoden aus dieser Schnittstelle größtenteils an die hier verwendete SQLite-Library weitergeleitet.\\
+Weiterhin wird die \textbf{IEntityObserver} Schnittstelle implementiert, sodass sich die Datenbank über Änderungen an den in ihr gespeicherten Entitäten informieren lassen kann.
 
 \textbf{Paket:} ModelFacade
 
@@ -602,60 +602,87 @@ Die Schnittstellen des Models (\textbf{ModelInterface}) wurden bereits im Abschn
 
 \subsubsection{Entity : IEntity, IEntityObservable}
 %TODO Bild einfügen
-\textbf{Beschreibung:} Implementierung der \textbf{IEntity} Schnittstelle, als Vorlage für eine SQLite-Datenbanktabelle.\\
-Weiterhin wird die \textbf{IEntityObservable} Schnittstelle implementiert, sodass die Datenbank über Änderungen informiert werden kann.
+\textbf{Beschreibung:} Die abstrakte Klasse \textbf{Entity} implementiert die \textbf{IEntity} Schnittstelle als Vorlage für eine SQLite-Datenbanktabelle.\\
+Weiterhin wird die \textbf{IEntityObservable} Schnittstelle implementiert, sodass eine Datenbank über Änderungen informiert werden kann.\\
+Diese Klasse dient als Strukturelement in der Vererbungshierarchie im \textbf{DataModel} Paket, und kann deshalb nicht selbst instanziiert werden, dies ist nur für ihre Unterklassen möglich.\\
+Bevor eine Entität aus ihrer Datenbank gelöscht wird, sollten all ihre Assoziationen zu anderen Entitäten aufgelöst werden (\textit{Dispose}).
 
 \textbf{Attribute:}\\
-+ \textit{id : int} - Die ID über die Entitäten in der Datenbank identifiziert werden können\\
++ \textit{id : int} - Die ID über die Entitäten in einer Datenbank identifiziert werden können\\
 + \textit{name : string} - Der Name der Entität
 
 \textbf{Paket:} DataModel
 
 \subsubsection{Profile : Entity, IProfile}
 %TODO Bild einfügen
-\textbf{Beschreibung:} 
+\textbf{Beschreibung:} Die Klasse \textbf{Profile} implementiert die \textbf{IProfile} Schnittstelle und erweitert die \textbf{Entity} Klasse um in einer Datenbank gespeichert werden zu können.\\
+Ein Profil enthält dabei verschiedene Informationen über einen Nutzer, die in den Attributen aufgelistet werden.
 
-\textbf{Attribute:} 
+\textbf{Attribute:}\\
++ \textit{birthDate : DateTime} - Das Geburtsdatum des Nutzers\\
++ \textit{bloodGroup : BloodGroup} - Die Blutgruppe des Nutzers\\
++ \textit{insuranceNumber : string} - Die Versicherungsnummer des Nutzers\\
++ \textit{firstName : string} - Der Vorname des Nutzers
 
 \textbf{Paket:} DataModel
 
 \subsubsection{Doctor : Entity, IDoctor}
 %TODO Bild einfügen
-\textbf{Beschreibung:} 
+\textbf{Beschreibung:} Die Klasse \textbf{Doctor} implementiert die \textbf{IDoctor} Schnittstelle und erweitert die \textbf{Entity} Klasse um in einer Datenbank gespeichert werden zu können.\\
+Hier werden die Informationen über einen Arzt gekapselt.
 
-\textbf{Attribute:} 
+\textbf{Attribute:}\\ 
++ \textit{profile : Profile} - Das Profil, dem dieser Arzt zugeordnet ist\\
++ \textit{field : string} - Das Fachgebiet des Arztes
 
 \textbf{Paket:} DataModel
 
 \subsubsection{Data : Entity, IData}
 %TODO Bild einfügen
-\textbf{Beschreibung:} 
+\textbf{Beschreibung:} Die abstrakte Klasse \textbf{Data} implementiert die \textbf{IData} Schnittstelle und erweitert die \textbf{Entity} Klasse um in einer Datenbank gespeichert werden zu können.\\
+Diese Klasse dient als Strukturelement in der Vererbungshierarchie im \textbf{DataModel} Paket, und kann deshalb nicht selbst instanziiert werden, dies ist nur für ihre Unterklassen möglich.
 
-\textbf{Attribute:} 
+\textbf{Attribute:}\\
++ \textit{date : DateTime} - Das Datum von dem diese Daten stammen\\
++ \textit{profile : Profile} - Das Profil, dem diese Daten zugeordnet sind\\
++ \textit{sensitivity : Sensitivity} - Die Sensitivität der Daten
 
 \textbf{Paket:} DataModel
 
 \subsubsection{DoctorsLetter : Data, IDoctorsLetter}
 %TODO Bild einfügen
-\textbf{Beschreibung:} 
+\textbf{Beschreibung:} Die Klasse \textbf{DoctorsLetter} implementiert die \textbf{IDoctorsLetter} Schnittstelle und erweitert die \textbf{Data} Klasse.\\
+Hier werden die Informationen über einen  Arztbrief gekapselt.
 
-\textbf{Attribute:} 
+\textbf{Attribute:}\\ 
++ \textit{diagnosis : string} - Die Diagnose, die in diesem Arztbrief enthalten ist\\
++ \textit{filepath : string} - Der Dateipfad in der der originale Arztbrief gespeichert ist\\
++ \textit{groups : IList<DoctorsLetterGroup>} - Die Gruppen in denen dieser Arztbrief enthalten ist\\
++ \textit{meds : IList<Medication>} - Die Medikationen, die in diesem Arztbrief verschrieben wurden\\
++ \textit{doctor : Doctor} - Der Arzt der diesen Arztbrief erstellt hat
 
 \textbf{Paket:} DataModel
 
 \subsubsection{DoctorsLetterGroup : Data, IDoctorsLetterGroup}
 %TODO Bild einfügen
-\textbf{Beschreibung:} 
+\textbf{Beschreibung:} Die Klasse \textbf{DoctorsLetterGroup} implementiert die \textbf{IDoctorsLetterGroup} Schnittstelle und erweitert die \textbf{Data} Klasse.\\
+Hier wird eine Ansammlung von Arztbriefen gekapselt.
 
-\textbf{Attribute:} 
+\textbf{Attribute:}\\
++ \textit{groups : IList<DoctorsLetter>} - Die Arztbriefe die in dieser Gruppe enthalten sind
 
 \textbf{Paket:} DataModel
 
 \subsubsection{Medication : Data, IMedication}
 %TODO Bild einfügen
-\textbf{Beschreibung:} 
+\textbf{Beschreibung:} Die Klasse \textbf{Medication} implementiert die \textbf{IMedication} Schnittstelle und erweitert die \textbf{Data} Klasse.\\
+Hier werden alle Informationen über eine Medikation gekapselt.
 
-\textbf{Attribute:} 
+\textbf{Attribute:}\\
++ \textit{letter : DoctorsLetter} - Der Arztbrief in dem diese Medikation verschrieben wurde\\
++ \textit{frequency : int} - Gibt an wie oft die Medikation in ihrem \textit{interval} eingenommen werden soll\\
++ \textit{interval : Interval} - Gibt an in welchem Intervall die Medikation eingenommen werden soll\\
++ \textit{endDate : DateTime} - Das Datum an dem die Medikation abgesetzt werden soll/sollte
 
 \textbf{Paket:} DataModel
 
