@@ -716,7 +716,8 @@ Hier werden alle Informationen über eine Medikation gekapselt.
 
 \subsubsection{IEntityObserver}
 %TODO Bild einfügen
-\textbf{Beschreibung:} Schnittstelle um IEntityObservable-Objekte beobachten zu können. Diese können dann bei Änderungen an sich, die angemeldeten Beobachter über diese Schnittstelle benachrichtigen (\textit{Update}).
+\textbf{Beschreibung:} Schnittstelle um IEntityObservable-Objekte beobachten zu können. \\
+Diese können dann, wenn sie geändert (\textit{OnUpdate}) oder gelöscht (\textit{OnDeletion}) werden, die angemeldeten Beobachter über diese Schnittstelle benachrichtigen.
 
 \textbf{Paket:} EntityObserver
 
@@ -796,7 +797,7 @@ Um die Sequenzdiagramme der gesamten Anwendung übersichtlich zu halten, sind hi
  
 \subsubsection{Ändern einer Entität}
 %TODO Bild einfügen
-Über die Schnittstelle der Entität wird eine Methode(z.B. \textit{setName} aufgerufen die eines derer Attribute verändert.
+Über die Schnittstelle der Entität wird eine Methode(z.B. \textit{SetName} aufgerufen die eines derer Attribute verändert.
 
 Die Entität benachrichtigt, nachdem sie die Änderung durchgeführt hat, die Datenbank \textit{db}, die sich zuvor (z.B. bei der Erstellung der Entität über \textbf{EntityFactory}) als Beobachter angemeldet hat.
 
@@ -804,13 +805,41 @@ Dieser Aufruf an die Datenbank veranlasst dann die Speicherung der Änderung dar
 
 \subsubsection{Löschen eines Arztbriefs}
 %TODO Bild einfügen
-%TODO
+Über dessen Schnittstelle \textbf{IDoctorsLetter} wird das Löschen eines Arztbriefs \textit{letter} veranlasst (\textit{Delete}).
+
+Dann wird die \textbf{EntityDatabase} \textit{db} über ihre Schnittstelle \textbf{IEntityObserver} benachrichtigt, die wiederum \textit{letter} aus der Datenbank löscht und sich von ihm als Beobachter abmeldet.
+
+Nun müssen noch die Assoziationen von \textit{letter} aufgelöst werden (\textit{DisattachMedication}, \textit{RemoveFromGroup}), sodass keine Referenzen mehr zu einer gelöschten Entität übrig bleiben und \textit{letter} von der Garbage Collection eingesammelt werden kann.
+
+Dafür werden die mit \textit{letter} assozierten Medikationen (\textit{DisattachFromLetter}) und Gruppen (\textit{Remove}) aufgerufen, die daraufhin \textit{db} über diese Änderung an sich benachrichtigen.
+
+Da das Auflösen der Assoziationen rekursiv funktioniert, rufen diese Entitäten daraufhin erneut \textit{letter} auf, der dann die Rekursion abbricht.
+
+In diesem Beispiel wurde ein Arztbrief verwendet, das Löschen anderer Entitäten funktioniert jedoch nach dem selben Prinzip.
+
 \subsubsection{Parsen eines Arztbriefs}
 %TODO Bild einfügen
-%TODO
+Über die \textbf{IParserFacade} Schnittstelle wird das Parsen einer Datei \textit{filepath} in eine \textbf{EntityDatabase} \textit{db} veranlasst.
+
+Basierend auf dem in \textit{filepath} angegebenen Dateiformat wird dann der passende \textbf{FileToDatabaseParser} ausgewählt und an diesen delegiert (\textit{ParserFile}). Dieser ruft dann nacheinander seine Einschubmethoden auf:
+
+Es werden ein \textbf{Profile}(\textit{ParseProfile}) und \textbf{Doctor} (\textit{ParseDoctor}) erstellt und dazu passende Objekte in der Datenbank \textit{db} gesucht (\textit{GetEqual}). 
+
+Dann werden die verschriebenen Medikationen erstellt (\textit{ParseMedications}) und in \textit{db} eingefügt (\textit{Insert}). 
+
+Letztlich wird der Arztbrief selbst mit Assoziationen zu den restlichen geparsten Objekten erstellt (\textit{ParseLetter}) und in \textit{db} eingefügt (\textit{Insert}).
+
+
 \subsubsection{Erstellen einer Medikation}
 %TODO Bild einfügen
-%TODO
+Über die \textbf{IModelFacade} Schnittstelle wird die Erstellung einer Medikation veranlasst (\textit{CreateEmptyMedication}). 
+
+Die \textbf{ModelFacade} delegiert dann an die \textbf{EntityFactory} über ihre Schnittstelle (\textit{CreateEmptyMedication}).
+
+Dort wird dann tatsächlich die \textbf{Medication} \textit{med} erstellt. Außerdem wird 
+\textit{med} in die \textbf{EntityDatabase} \textit{db} über deren \textbf{IEntityDatabase} Schnittstelle eingefügt (\textit{Insert}). Hier meldet sich auch \textit{db} als Beobachter bei \textit{med} an.
+
+Letztlich wird dann \textit{med} an \textbf{ModelFacade} und von dort aus an den ursprünglichen Aufrufer zurückgegeben.
 
 \newpage
 \begin{figure}
