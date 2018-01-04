@@ -167,6 +167,9 @@ Gibt den Namen der Entität zurück.
 \textbf{SetName(name : string) : void}\\
 Setzt den Namen der Entität auf \textit{name}.
 
+\textbf{Delete() : void}\\
+Löscht die Entität und löst alle Assoziationen von ihr auf.
+
 \paragraph{IData}
 Die Schnittstelle \textbf{IData} erweitert \textbf{IEntity}.
 
@@ -198,6 +201,9 @@ Entfernt die Medikation \textit{med} aus der Liste der Medikationen die von dies
 
 \textbf{GetGroups() : IList<DoctorsLetterGroup>}\\
 Gibt alle Gruppen von Arztbriefen zurück, in denen dieser Arztbrief enthalten ist.
+
+\textbf{RemoveFromGroup(group : IDoctorsLetterGroup) : void}\\
+Entfernt diesen Arztbrief aus der Gruppe \textit{group}.
 
 \textbf{GetFilename() : string}\\
 Gibt den Namen der Originaldatei dieses Arztbriefs zurück.
@@ -274,6 +280,9 @@ Gibt das Geburtsdatum dieses Profils zurück.
 \textbf{SetBirthDate(date : DateTime) : void}\\
 Setzt das Geburtsdatum dieses Profils auf \textit{date}.
 
+\textbf{SetActive() : void}\\
+Setzt dieses Profil als das aktive Profil.
+
 \paragraph{IDoctor}
 Die Schnittstelle \textbf{IDoctor} erweitert \textbf{IEntity}.
 
@@ -298,14 +307,8 @@ Wechselt das aktive Profil zum Profil \textit{profile}.
 \textbf{CreateEmptyProfile() : IProfile}\\
 Legt ein neues Profil an, das noch keine Informationen und Daten enthält und gibt dieses zurück. Wechselt außerdem das aktive Profil zu diesem Profil.
 
-\textbf{DeleteProfile(profile : IProfile) : void}\\
-Löscht das Profil \textit{profile} und alle damit assoziierten Daten.
-
 \textbf{GetAllDoctorsLetters() : IList<IDoctorsLetter>}\\
 Fordert alle Arztbriefe des aktiven Profils an und gibt diese zurück.
-
-\textbf{DeleteDoctorsLetter(letter : IDoctorsLetter) : void}\\
-Löscht den Arztbrief \textit{letter} und alle Assoziationen zu ihm.
 
 \textbf{GetAllMedications() : IList<IMedication>}\\
 Fordert alle Medikationen des aktiven Profils an und gibt diese zurück.
@@ -313,17 +316,11 @@ Fordert alle Medikationen des aktiven Profils an und gibt diese zurück.
 \textbf{CreateEmptyMedication() : IMedication}\\
 Legt eine neue Medikation an, die noch keine Informationen enthält und gibt diese zurück.
 
-\textbf{DeleteMedication(medication : IMedication) : void}\\
-Löscht die Medikation \textit{medication} und alle Assoziationen zu ihr.
-
 \textbf{GetAllGroups() : IList<IDoctorsLetterGroup>}\\
 Fordert alle Gruppen von Arztbriefen des aktiven Profils an und gibt diese zurück.
 
 \textbf{CreateEmptyGroup() : IDoctorsLetterGroup}\\
 Legt eine neue Gruppe von Arztbriefen an, die noch keine Arztbriefe enthält und gibt diese zurück.
-
-\textbf{DeleteGroup(group : DoctorsLetter) : void}\\
-Löscht die Gruppe von Arztbiefen \textit{group} und alle Assoziationen zu ihr. Die einzelnen Arztbriefe in der Gruppe selbst bleiben jedoch erhalten.
 
 \chapter{Paketführer}
 \section{Paketbeschreibung}
@@ -632,7 +629,7 @@ Ein Profil enthält dabei verschiedene Informationen über einen Nutzer, die in 
 Hier werden die Informationen über einen Arzt gekapselt.
 
 \textbf{Attribute:}\\ 
-+ \textit{profile : Profile} - Das Profil, dem dieser Arzt zugeordnet ist\\
++ \textit{profile : IProfile} - Das Profil, dem dieser Arzt zugeordnet ist\\
 + \textit{field : string} - Das Fachgebiet des Arztes
 
 \textbf{Paket:} DataModel
@@ -644,7 +641,7 @@ Diese Klasse dient als Strukturelement in der Vererbungshierarchie im \textbf{Da
 
 \textbf{Attribute:}\\
 + \textit{date : DateTime} - Das Datum von dem diese Daten stammen\\
-+ \textit{profile : Profile} - Das Profil, dem diese Daten zugeordnet sind\\
++ \textit{profile : IProfile} - Das Profil, dem diese Daten zugeordnet sind\\
 + \textit{sensitivity : Sensitivity} - Die Sensitivität der Daten
 
 \textbf{Paket:} DataModel
@@ -657,9 +654,9 @@ Hier werden die Informationen über einen  Arztbrief gekapselt.
 \textbf{Attribute:}\\ 
 + \textit{diagnosis : string} - Die Diagnose, die in diesem Arztbrief enthalten ist\\
 + \textit{filepath : string} - Der Dateipfad in der der originale Arztbrief gespeichert ist\\
-+ \textit{groups : IList<DoctorsLetterGroup>} - Die Gruppen in denen dieser Arztbrief enthalten ist\\
-+ \textit{meds : IList<Medication>} - Die Medikationen, die in diesem Arztbrief verschrieben wurden\\
-+ \textit{doctor : Doctor} - Der Arzt der diesen Arztbrief erstellt hat
++ \textit{groups : IList<IDoctorsLetterGroup>} - Die Gruppen in denen dieser Arztbrief enthalten ist\\
++ \textit{meds : IList<IMedication>} - Die Medikationen, die in diesem Arztbrief verschrieben wurden\\
++ \textit{doctor : IDoctor} - Der Arzt der diesen Arztbrief erstellt hat
 
 \textbf{Paket:} DataModel
 
@@ -669,7 +666,7 @@ Hier werden die Informationen über einen  Arztbrief gekapselt.
 Hier wird eine Ansammlung von Arztbriefen gekapselt.
 
 \textbf{Attribute:}\\
-+ \textit{groups : IList<DoctorsLetter>} - Die Arztbriefe die in dieser Gruppe enthalten sind
++ \textit{groups : IList<IDoctorsLetter>} - Die Arztbriefe die in dieser Gruppe enthalten sind
 
 \textbf{Paket:} DataModel
 
@@ -679,7 +676,7 @@ Hier wird eine Ansammlung von Arztbriefen gekapselt.
 Hier werden alle Informationen über eine Medikation gekapselt.
 
 \textbf{Attribute:}\\
-+ \textit{letter : DoctorsLetter} - Der Arztbrief in dem diese Medikation verschrieben wurde\\
++ \textit{letter : IDoctorsLetter} - Der Arztbrief in dem diese Medikation verschrieben wurde\\
 + \textit{frequency : int} - Gibt an wie oft die Medikation in ihrem \textit{interval} eingenommen werden soll\\
 + \textit{interval : Interval} - Gibt an in welchem Intervall die Medikation eingenommen werden soll\\
 + \textit{endDate : DateTime} - Das Datum an dem die Medikation abgesetzt werden soll/sollte
