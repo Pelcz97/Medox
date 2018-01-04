@@ -484,32 +484,49 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \subsubsection{AbstractViewModel}
 %TODO
 \textbf{Beschreibung:}
-
+%TODO
 \textbf{Attribute:}\\
+
 
 \subsubsection{OverviewViewModel : AbstractViewModel}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} 
 
 \textbf{Attribute:}\\
++ \textit{DoctorsLettersList : IList<DoctorsLetterViewModel>} - Die Menge der anzuzeigenden Arztbriefe\\
+- \textit{EditButton : ToolbarItem} - Knopf in der Toolbar, um die Liste der Arztbriefe editieren zu können\\
+
+\textbf{Paket:} OverviewTabViewModel
 
 \subsubsection{DoctorsLetterViewModel : AbstractViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+- \textit{DoctorsLetter : DoctorsLetter} - Ein anzuzeigender Arztbrief\\
+- \textit{doctorsName : string} - Der Name des behandelnden Arztes\\
+- \textit{doctorsName : string} - Das Fachgebiet des behandelnden Arztes\\
+- \textit{creationDate : DateTime} - Das Erstellungsdatum des Arztbriefes\\
+
+\textbf{Paket:} OverviewTabViewModel
 
 \subsubsection{DetailedDoctorsLetterViewModel : DoctorsLetterViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+- \textit{diagnosis : string} - Die vom behandelnden Arzt ausgestellte Diagnose\
+- \textit{medication : string} - Die vom behandelnden Arzt empfohlene Therapie\\
+
+\textbf{Paket:} OverviewTabViewModel
 
 \subsubsection{MedicationViewModel : AbstractViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+- \textit{diagnosis : string} - Die vom behandelnden Arzt ausgestellte Diagnose\
+- \textit{medication : string} - Die vom behandelnden Arzt empfohlene Therapie\\
 
 \subsubsection{MedicineViewModel : AbstractViewModel}
 %TODO
@@ -517,11 +534,15 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \textbf{Attribute:}\\
 
+\textbf{Paket:} MedicationTabViewModel
+
 \subsubsection{DetailedMedicineViewModel : MedicineViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+
+\textbf{Paket:} MedicationTabViewModel
 
 \subsubsection{SendDataViewModel : AbstractViewModel}
 %TODO
@@ -529,11 +550,15 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \textbf{Attribute:}\\
 
+\textbf{Paket:} SendDataTabViewModel
+
 \subsubsection{SelectDoctorsLettersViewModel : AbstractViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+
+\textbf{Paket:} SendDataTabViewModel
 
 \subsubsection{SelectDeviceViewModel : AbstractViewModel}
 %TODO
@@ -541,11 +566,15 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \textbf{Attribute:}\\
 
+\textbf{Paket:} SendDataTabViewModel
+
 \subsubsection{TransmittingDataViewModel : AbstractViewModel}
 %TODO
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+
+\textbf{Paket:} SendDataTabViewModel
 
 \subsubsection{ProfileViewModel : AbstractViewModel}
 %TODO
@@ -553,7 +582,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \textbf{Attribute:}\\
 
-
+\textbf{Paket:} ProfileTabViewModel
 
 \section{Model}
 Die Schnittstellen des Models (\textbf{ModelInterface}) wurden bereits im Abschnitt \textbf{Subsystem-Schnittstellen} beschrieben und werden hier nicht erneut aufgeführt.
