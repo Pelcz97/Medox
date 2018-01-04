@@ -405,7 +405,7 @@ Die Implementierung der Schnittstelle erzeugt Objekte aus \textbf{DataModel} und
 
 \textbf{Klassendiagramm:} siehe S.
 
-\textbf{Enthaltene Klassen:} IEntityObservable, IEntityObserver
+\textbf{Enthaltene Klassen:} IEntityObservable, IEntityObserver, IProfileObserver
 
 \subsubsection{ParserModel}
 \textbf{Funktion:} Dieses Paket enthält die Schnittstelle IParserFacade um zwischen Datenformaten zu konvertieren.
@@ -587,7 +587,7 @@ Hier kann das aktuelle Profil gewechselt werden \textbf{SetActiveProfile} und so
 
 \textbf{Paket:} ModelFacade
 
-\subsubsection{EntityDatabase : IEntityDatabase, IEntityObserver}
+\subsubsection{EntityDatabase : IEntityDatabase, IProfileObserver}
 %TODO Bild einfügen
 \textbf{Beschreibung:} Die Klasse \textbf{EntityDatabase} implementiert die \textbf{IEntityDatabase} Schnittstelle. Dabei werden Aufrufe von Methoden aus dieser Schnittstelle größtenteils an die hier verwendete SQLite-Library weitergeleitet.\\
 Weiterhin wird die \textbf{IEntityObserver} Schnittstelle implementiert, sodass sich die Datenbank über Änderungen an den in ihr gespeicherten Entitäten informieren lassen kann.
@@ -606,7 +606,8 @@ Bevor eine Entität aus ihrer Datenbank gelöscht wird, sollten all ihre Assozia
 
 \textbf{Attribute:}\\
 + \textit{id : int} - Die ID über die Entitäten in einer Datenbank identifiziert werden können\\
-+ \textit{name : string} - Der Name der Entität
++ \textit{name : string} - Der Name der Entität\\
++ \textit{observer : IEntityObserver} - Der Beobachter der Entität
 
 \textbf{Paket:} DataModel
 
@@ -620,6 +621,7 @@ Ein Profil enthält dabei verschiedene Informationen über einen Nutzer, die in 
 + \textit{bloodGroup : BloodGroup} - Die Blutgruppe des Nutzers\\
 + \textit{insuranceNumber : string} - Die Versicherungsnummer des Nutzers\\
 + \textit{firstName : string} - Der Vorname des Nutzers
++ \textit{observer : IProfileObserver} - Der Beobachter des Profils
 
 \textbf{Paket:} DataModel
 
@@ -629,7 +631,7 @@ Ein Profil enthält dabei verschiedene Informationen über einen Nutzer, die in 
 Hier werden die Informationen über einen Arzt gekapselt.
 
 \textbf{Attribute:}\\ 
-+ \textit{profile : IProfile} - Das Profil, dem dieser Arzt zugeordnet ist\\
++ \textit{profile : Profile} - Das Profil, dem dieser Arzt zugeordnet ist\\
 + \textit{field : string} - Das Fachgebiet des Arztes
 
 \textbf{Paket:} DataModel
@@ -641,7 +643,7 @@ Diese Klasse dient als Strukturelement in der Vererbungshierarchie im \textbf{Da
 
 \textbf{Attribute:}\\
 + \textit{date : DateTime} - Das Datum von dem diese Daten stammen\\
-+ \textit{profile : IProfile} - Das Profil, dem diese Daten zugeordnet sind\\
++ \textit{profile : Profile} - Das Profil, dem diese Daten zugeordnet sind\\
 + \textit{sensitivity : Sensitivity} - Die Sensitivität der Daten
 
 \textbf{Paket:} DataModel
@@ -654,9 +656,9 @@ Hier werden die Informationen über einen  Arztbrief gekapselt.
 \textbf{Attribute:}\\ 
 + \textit{diagnosis : string} - Die Diagnose, die in diesem Arztbrief enthalten ist\\
 + \textit{filepath : string} - Der Dateipfad in der der originale Arztbrief gespeichert ist\\
-+ \textit{groups : IList<IDoctorsLetterGroup>} - Die Gruppen in denen dieser Arztbrief enthalten ist\\
-+ \textit{meds : IList<IMedication>} - Die Medikationen, die in diesem Arztbrief verschrieben wurden\\
-+ \textit{doctor : IDoctor} - Der Arzt der diesen Arztbrief erstellt hat
++ \textit{groups : IList<DoctorsLetterGroup>} - Die Gruppen in denen dieser Arztbrief enthalten ist\\
++ \textit{meds : IList<Medication>} - Die Medikationen, die in diesem Arztbrief verschrieben wurden\\
++ \textit{doctor : Doctor} - Der Arzt der diesen Arztbrief erstellt hat
 
 \textbf{Paket:} DataModel
 
@@ -666,7 +668,7 @@ Hier werden die Informationen über einen  Arztbrief gekapselt.
 Hier wird eine Ansammlung von Arztbriefen gekapselt.
 
 \textbf{Attribute:}\\
-+ \textit{groups : IList<IDoctorsLetter>} - Die Arztbriefe die in dieser Gruppe enthalten sind
++ \textit{groups : IList<DoctorsLetter>} - Die Arztbriefe die in dieser Gruppe enthalten sind
 
 \textbf{Paket:} DataModel
 
@@ -676,7 +678,7 @@ Hier wird eine Ansammlung von Arztbriefen gekapselt.
 Hier werden alle Informationen über eine Medikation gekapselt.
 
 \textbf{Attribute:}\\
-+ \textit{letter : IDoctorsLetter} - Der Arztbrief in dem diese Medikation verschrieben wurde\\
++ \textit{letter : DoctorsLetter} - Der Arztbrief in dem diese Medikation verschrieben wurde\\
 + \textit{frequency : int} - Gibt an wie oft die Medikation in ihrem \textit{interval} eingenommen werden soll\\
 + \textit{interval : Interval} - Gibt an in welchem Intervall die Medikation eingenommen werden soll\\
 + \textit{endDate : DateTime} - Das Datum an dem die Medikation abgesetzt werden soll/sollte
@@ -715,6 +717,13 @@ Hier werden alle Informationen über eine Medikation gekapselt.
 %TODO Bild einfügen
 \textbf{Beschreibung:} Schnittstelle um IEntityObservable-Objekte beobachten zu können. \\
 Diese können dann, wenn sie geändert (\textit{OnUpdate}) oder gelöscht (\textit{OnDeletion}) werden, die angemeldeten Beobachter über diese Schnittstelle benachrichtigen.
+
+\textbf{Paket:} EntityObserver
+
+\subsubsection{IProfileObserver : IEntityObserver}
+%TODO Bild einfügen
+\textbf{Beschreibung:} Die Schnittstelle \textbf{IProfileObserver} erweitert die\textbf{IIEntityObserver} Schnittstelle.\\
+Zusätzlich zu Änderungen und Löschung können über diese Schnittstelle angemeldete Beobachter über die Aktivierung eines Objekts benachrichtigt werden.
 
 \textbf{Paket:} EntityObserver
 
