@@ -557,8 +557,6 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 %TODO
 \textbf{Beschreibung:}
 
-\textbf{Attribute:}\\
-
 \textbf{Paket:} SendDataTabViewModel
 
 \subsubsection{SelectDoctorsLettersViewModel : AbstractViewModel}
@@ -566,6 +564,10 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+- \textit{CancelButton : ToolbarItem} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
+- \textit{ConfirmSelectionButton : ToolbarItem} - Knopf in der Toolbar, um mit der ausgewählten Menge an Arztbriefen fortzufahren\\
+- \textit{DoctorsLettersList : IList<DoctorsLetterViewModel>} - Die Menge der anzuzeigenden Arztbriefe\\
+- \textit{SelectedDoctorsLettersList : IList<DoctorsLetterViewModel>} - Die Menge der vom Nutzer ausgewählten Arztbriefe\\
 
 \textbf{Paket:} SendDataTabViewModel
 
@@ -574,6 +576,14 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Beschreibung:}
 
 \textbf{Attribute:}\\
+- \textit{CancelButton : ToolbarItem} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
+- \textit{ConfirmSelectionButton : ToolbarItem} - Knopf in der Toolbar, um mit dem ausgewählten Empfänger fortzufahren\\
+- \textit{DeviceList : IList<Device>} - Die Menge der Empfangsgeräte in Reichweite\\
+- \textit{SelectedDevice : IDevice} - Der vom Nutzer gewählte Empfänger\\
+- \textit{BluetoothState : bool} - Zustand des Bluetooth Moduls (Bluetooth an/aus)\\
+- \textit{BluetoothAdapter : Bluetooth} - Kommunikation mit der Bluetooth-Schnittstelle\\
+
+
 
 \textbf{Paket:} SendDataTabViewModel
 
