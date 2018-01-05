@@ -405,7 +405,51 @@ Legt eine neue Gruppe von Arztbriefen an, die noch keine Arztbriefe enthält und
 \textbf{Enthaltene Klassen:} CustomContentPage, App
 
 \subsection{ViewModel}
-%TODO
+\subsubsection{AbstractViewModel}
+\textbf{Funktion:} Dieses Paket dient als Überklasse aller anderen ViewModel Klassen, um redundanten Code zu vermeiden.
+
+\textbf{Entwurfsentscheidung:} Kapselung gemeinsamer Funktionalitäten des ViewModels
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} AbstractViewModel
+
+\subsubsection{OverviewTabViewModel}
+\textbf{Funktion:} Kommunikation zwischen Model und View ermöglichen
+
+\textbf{Entwurfsentscheidung:} Funktions- und Kommunikationsweise der Ansichten des Tabs \textit{Übersicht}
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} OverviewViewModel, DoctorsLetterViewModel, DetailedDoctorsLetterViewModel
+
+\subsubsection{MedicationTabViewModel}
+\textbf{Funktion:} Kommunikation zwischen Model und View ermöglichen
+
+\textbf{Entwurfsentscheidung:} Funktions- und Kommunikationsweise der Ansichten des Tabs \textit{Medikation}
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} MedicationViewModel, MedicineViewModel, DetailedMedicineViewModel
+
+\subsubsection{SendDataTabViewModel}
+\textbf{Funktion:} Kommunikation zwischen Model und View ermöglichen
+
+\textbf{Entwurfsentscheidung:} Funktions- und Kommunikationsweise der Ansichten des Tabs \textit{Senden}
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} SendDataViewModel, SelectDoctorsLettersViewModel, SelectDeviceViewModel, TransmittingDataViewModel
+
+\subsubsection{ProfileTabViewModel}
+\textbf{Funktion:} Kommunikation zwischen Model und View ermöglichen
+
+\textbf{Entwurfsentscheidung:} Funktions- und Kommunikationsweise der Ansichten des Tabs \textit{Profil}
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} ProfileViewModel
+
 \subsection{Model}
 %TODO Bild einfügen
 \subsubsection{ModelFacade}
