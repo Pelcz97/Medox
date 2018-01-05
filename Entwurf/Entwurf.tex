@@ -510,7 +510,7 @@ Die ModelFacade agiert unabhängig von den anderen Subsystemen und nimmt nur Anf
 
 \subsubsection{TransmissionModel}
 %TODO
-\textbf{Funktion:}
+\textbf{Funktion:} Dieses Paket implementiert die Schnittstelle der Datenübertragung. Hauptsächlich werden Daten entgegengenommen, sei es von einem anderen Gerät, welches Daten übermittelt, oder dem Nutzer, der Daten zur Übertragung freigeben möchte. 
 
 \textbf{Entwurfsentscheidung:} Übertragung der Daten
 
@@ -598,19 +598,30 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
  
 \section{View}
 %TODO
+\textit{Hinweis: Die im folgenden aufgelisteten Klassen bestehen, ganz im Sinne der Xamarin.Forms Cross-Plattform Idee, nicht nur aus C\#-Klassen, sondern besitzen stets auch eine assoziierte XAML-Datei, die im Normalfall den vollständigen Aufbau der Ansicht definiert.}
 
+\subsection{AbstractPages}
+%TODO diagramm
 \subsubsection{CustomContentPage}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{CustomContentPage} legt grundlegende Eigenschaften der gesamten Benutzeroberfläche fest. Dies betrifft beispielsweise Farbgestaltung verschiedener Elemente wie des Hintergrundes, Texte, Tab- und der Statusbar.
 
+\subsubsection{App}
+%TODO
+\textbf{Beschreibung:} Die Klasse \textbf{App} koordiniert den Aufbau der Tabbar und die zu den entsprechenden Tabs gehörenden Ansichten und Tab-Icons.
+
+\subsection{OverviewTabPages}
+%TODO diagramm
 \subsubsection{OverviewPage : CustomContentPage}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{OverviewPage} definiert die Eigenschaften der 
 
 \subsubsection{DetailedDoctorsLetterPage : CustomContentPage}
 %TODO
 \textbf{Beschreibung:}
 
+\subsection{MedicationTabPages}
+%TODO diagramm
 \subsubsection{MedicationPage : CustomContentPage}
 %TODO
 \textbf{Beschreibung:}
@@ -619,6 +630,8 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 %TODO
 \textbf{Beschreibung:}
 
+\subsection{SendDataTabPages}
+%TODO diagramm
 \subsubsection{SendDataPage : CustomContentPage}
 %TODO
 \textbf{Beschreibung:}
@@ -635,6 +648,8 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 %TODO
 \textbf{Beschreibung:}
 
+\subsection{ProfileTabPages}
+%TODO diagramm
 \subsubsection{ProfilePage : CustomContentPage}
 %TODO
 \textbf{Beschreibung:}
