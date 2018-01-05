@@ -133,9 +133,35 @@ Das \textbf{ViewModel} ist das Verbindungsstück zwischen Model und View. Es fü
 
 \section{Subsysteme}
 \subsection{View}
-%TODO
+%TODO Bild einfügen
+Der View besteht aus allen Klassen und Dateien, die benötigt werden, um die Benutzeroberfläche zu modellieren. Er dient als Eingabe- und Ausgabeschnittstelle der Anwendung.
+Hierbei erfolgt die Modellieren hauptsächlich (Xamarin.Forms konform) in XAML-Dateien, wodurch sich leicht eine einheitliche, plattformübergreifende Oberfläche erstellen lässt. Da es sich bei XAML jedoch um eine "\textit{Markup Language}" handelt, finden diese Dateien im obigen UML-Diagramm keine Darstellung, lediglich die einer XAML-Datei zugehörigen C\#-Dateien sind dort repräsentiert.
+Die einzelnen Ansichten der Anwendung, sprich die UI-Zustände, werden in separaten Klassen erstellt und, um für eine übersichtlichere Struktur zu sorgen, werden diese abhängig ihrer jeweiligen Tab-Zugehörigkeit, in Paketen einsortiert.
+
+\textbf{OverviewTabPages} enthält all jene Ansichten (Pages), die sich innerhalb des Tabs \textit{Übersicht} befinden. Dies umfasst beispielsweise die Übersicht aller gespeicherter Arztbriefe.
+
+Das Paket \textbf{MedicationTabPages} verfügt über alle Pages, die innerhalb des Tabs \textit{Medikation} vom Nutzer erreichbar sind. Dazu zählt unter anderem die Auflistung der gespeicherten Medikationen.
+
+Alle Ansichten innerhalb des Tabs \textit{Senden} werden in Klassen innerhalb des Pakets \textbf{SendDataTabPages} modelliert.
+
+Zu guter Letzt werden alle dem Tab \textit{Profil} zugehörigen Ansichten innerhalb des Pakets \textbf{ProfileTabPages} verwaltet. Dies betrifft Ansichten wie die Darstellung des eigenen Nutzerprofils.
+
+Um Gemeinsamkeiten aller Ansichten nicht redundant definieren zu müssen, existiert zusätzlich das Paket \textbf{AbstractPages}, in welchem beispielsweise grundlegende Attribute aller Pages definiert werden können. Text- oder Hintergrundfarben wären hierfür ebenso Beispiele wie auch die Organisation der Tabbar.
+
 \subsection{ViewModel}
-%TODO
+%TODO Bild einfügen
+Das ViewModel stellt den Vermittler zwischen View und Model dar. Es sorgt für die Aktualisierung sowohl der View als auch des Models. Der Datenaustausch zwischen View und ViewModel erfolgt über das sogenannte \textit{Data Binding}, die Kommunikation mit dem Model erfolgt über die Model-eigenen Schnittstellen.
+
+Ähnlich wie im Aufbau des Views, werden auch im ViewModel aus Gründen der Übersichtlichkeit die einzelnen Klassen je nach Tab-Zugehörigkeit gegliedert.
+
+\textbf{OverviewTabViewModel} kümmert sich hauptsächlich um alle Bestandteile eines Arztbriefes, fordert darzustellende Arztbriefe an und meldet Änderungen an bestehenden Daten.
+
+Für Ähnliches ist auch \textbf{MedicationTabViewModel} zuständig: Hier werden alle hinterlegte, neu erzeugte oder geänderte Medikationen übermittelt.
+
+Das Model über zu übertragende Dateien und den gewünschten Empfänger zu informieren, ist die Hauptaufgabe des Pakets \textbf{SendDataTabViewModel}.
+
+\textbf{ProfileTabViewModel} letztlich ist unter anderem dafür zuständig, dem Model Änderungen im Profil des Nutzers und dem View das darzustellende Profil zu übermitteln.
+
 \subsection{Model}
 \begin{figure}[H]
 \centering
@@ -151,7 +177,7 @@ können Daten über dieses Paket gesucht und abgefragt werden.
 Für das Senden und Empfangen von Dateien ist das \textbf{TransmissionModel} Paket zuständig.
 Da die Daten in einem anderen Format übertragen, als sie intern in der Applikation verwendet werden, muss das Paket \textbf{ParserModel} benutzt um zwischen den Formaten zu konvertieren.
 
-Letztlich wird noch um plattformübergreifend auf das lokale Dateisystem zugreifen zu können das Paket \textbf{FileHelper} benötigt.
+Letztlich wird noch, um plattformübergreifend auf das lokale Dateisystem zugreifen zu können, das Paket \textbf{FileHelper} benötigt.
 
 Um den Zugriff auf das Model zu vereinfachen wird das Fassaden Muster verwendet. Das Paket \textbf{ModelFacade} nimmt Anfragen an das Model entgegen und delegiert dann an die restlichen Pakete im Model.
 
@@ -372,13 +398,52 @@ Legt eine neue Gruppe von Arztbriefen an, die noch keine Arztbriefe enthält und
 \chapter{Paketführer}
 \section{Paketbeschreibung}
 \subsection{View}
-\textbf{Funktion:} %TODO
 
-\textbf{Entwurfsentscheidung:} %TODO
+\subsubsection{OverviewTabPages}
+\textbf{Funktion:} Dieses Paket enthält alle Pages des Overview Tabs.
+
+\textbf{Entwurfsentscheidung:} Gestaltung der Ansichten des Tabs \textit{Übersicht}
 
 \textbf{Klassendiagramm:} siehe S.
 
-\textbf{Enthaltene Klassen:} OverviewPage, DetailedDoctorsLetter, CustomContentPage, MedicationPage, DetailedMedicinePage, SendDataPage, SelectDoctorsLettersPage, SelectDevicePage, TransmittingDataPage, ProfilePage
+\textbf{Enthaltene Klassen:} OverviewPage, DetailedDoctorsLetter
+
+\subsubsection{MedicationTabPages}
+\textbf{Funktion:} Dieses Paket enthält alle Pages des Medication Tabs.
+
+\textbf{Entwurfsentscheidung:} Gestaltung der Ansichten des Tabs \textit{Medikation}
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} MedicationPage, DetailedMedicinePage
+
+\subsubsection{SendDataTabPages}
+\textbf{Funktion:} Dieses Paket enthält alle Pages des SendData Tabs.
+
+\textbf{Entwurfsentscheidung:} Gestaltung der Ansichten des Tabs \textit{Senden}
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} SendDataPage, SelectDoctorsLettersPage, SelectDevicePage, TransmittingDataPage
+
+\subsubsection{ProfileTabPages}
+\textbf{Funktion:} Dieses Paket enthält alle Pages des Profile Tabs.
+
+\textbf{Entwurfsentscheidung:} Gestaltung der Ansichten des Tabs \textit{Profil}
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} ProfilePage
+
+\subsubsection{AbstractTabPages}
+\textbf{Funktion:} Dieses Paket enthält alle Klassen zur Verwaltung genereller Eigenschaften der Benutzeroberfläche und der grundsätzlichen Verhaltensweise einiger UI-Elemente.
+
+\textbf{Entwurfsentscheidung:} Kapselung systemumfassender UI-Entscheidungen
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} CustomContentPage, App
+
 \subsection{ViewModel}
 %TODO
 \subsection{Model}
@@ -456,7 +521,7 @@ Die Implementierung der Schnittstelle erzeugt Objekte aus \textbf{DataModel} und
 
 \textbf{Klassendiagramm:} siehe S.
 
-\textbf{Enthaltene Klassen:} IEntityObservable, IEntityObserver, IProfileObservable, IProfileObserver
+\textbf{Enthaltene Klassen:} IEntityObservable, IEntityObserver
 
 \subsubsection{ParserModel}
 \textbf{Funktion:} Dieses Paket enthält die Schnittstelle IParserFacade um zwischen Datenformaten zu konvertieren.
@@ -708,10 +773,7 @@ Hier kann das aktuelle Profil gewechselt werden \textbf{SetActiveProfile} und so
 \caption{EntityDatabase Klasse}
 \end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{EntityDatabase} implementiert die \textbf{IEntityDatabase} Schnittstelle. Dabei werden Aufrufe von Methoden aus dieser Schnittstelle größtenteils an die hier verwendete SQLite-Library weitergeleitet.\\
-Weiterhin werden die \textbf{IEntityObserver} und \textbf{IProfileObserver} Schnittstellen implementiert, sodass sich die Datenbank über Änderungen an den in ihr gespeicherten Entitäten informieren lassen kann.
-
-\textbf{Attribute:}\\
-+ \textit{profile : Profile} - Das zurzeit aktive Profil
+Weiterhin wird die \textbf{IEntityObserver} Schnittstelle implementiert, sodass sich die Datenbank über Änderungen an den in ihr gespeicherten Entitäten informieren lassen kann.
 
 \textbf{Paket:} ModelFacade
 
@@ -734,8 +796,7 @@ Bevor eine Entität aus ihrer Datenbank gelöscht wird, sollten all ihre Assozia
 
 \textbf{Attribute:}\\
 + \textit{id : int} - Die ID über die Entitäten in einer Datenbank identifiziert werden können\\
-+ \textit{name : string} - Der Name der Entität\\
-+ \textit{observer : IEntityObserver} - Der Beobachter der Entität
++ \textit{name : string} - Der Name der Entität
 
 \textbf{Paket:} DataModel
 
@@ -753,7 +814,6 @@ Ein Profil enthält dabei verschiedene Informationen über einen Nutzer, die in 
 + \textit{bloodGroup : BloodGroup} - Die Blutgruppe des Nutzers\\
 + \textit{insuranceNumber : string} - Die Versicherungsnummer des Nutzers\\
 + \textit{firstName : string} - Der Vorname des Nutzers
-+ \textit{observer : IProfileObserver} - Der Beobachter des Profils
 
 \textbf{Paket:} DataModel
 
@@ -767,7 +827,7 @@ Ein Profil enthält dabei verschiedene Informationen über einen Nutzer, die in 
 Hier werden die Informationen über einen Arzt gekapselt.
 
 \textbf{Attribute:}\\ 
-+ \textit{profile : Profile} - Das Profil, dem dieser Arzt zugeordnet ist\\
++ \textit{profile : IProfile} - Das Profil, dem dieser Arzt zugeordnet ist\\
 + \textit{field : string} - Das Fachgebiet des Arztes
 
 \textbf{Paket:} DataModel
@@ -783,7 +843,7 @@ Diese Klasse dient als Strukturelement in der Vererbungshierarchie im \textbf{Da
 
 \textbf{Attribute:}\\
 + \textit{date : DateTime} - Das Datum von dem diese Daten stammen\\
-+ \textit{profile : Profile} - Das Profil, dem diese Daten zugeordnet sind\\
++ \textit{profile : IProfile} - Das Profil, dem diese Daten zugeordnet sind\\
 + \textit{sensitivity : Sensitivity} - Die Sensitivität der Daten
 
 \textbf{Paket:} DataModel
@@ -800,9 +860,9 @@ Hier werden die Informationen über einen  Arztbrief gekapselt.
 \textbf{Attribute:}\\ 
 + \textit{diagnosis : string} - Die Diagnose, die in diesem Arztbrief enthalten ist\\
 + \textit{filepath : string} - Der Dateipfad in der der originale Arztbrief gespeichert ist\\
-+ \textit{groups : IList<DoctorsLetterGroup>} - Die Gruppen in denen dieser Arztbrief enthalten ist\\
-+ \textit{meds : IList<Medication>} - Die Medikationen, die in diesem Arztbrief verschrieben wurden\\
-+ \textit{doctor : Doctor} - Der Arzt der diesen Arztbrief erstellt hat
++ \textit{groups : IList<IDoctorsLetterGroup>} - Die Gruppen in denen dieser Arztbrief enthalten ist\\
++ \textit{meds : IList<IMedication>} - Die Medikationen, die in diesem Arztbrief verschrieben wurden\\
++ \textit{doctor : IDoctor} - Der Arzt der diesen Arztbrief erstellt hat
 
 \textbf{Paket:} DataModel
 
@@ -816,7 +876,7 @@ Hier werden die Informationen über einen  Arztbrief gekapselt.
 Hier wird eine Ansammlung von Arztbriefen gekapselt.
 
 \textbf{Attribute:}\\
-+ \textit{groups : IList<DoctorsLetter>} - Die Arztbriefe die in dieser Gruppe enthalten sind
++ \textit{groups : IList<IDoctorsLetter>} - Die Arztbriefe die in dieser Gruppe enthalten sind
 
 \textbf{Paket:} DataModel
 
@@ -830,7 +890,7 @@ Hier wird eine Ansammlung von Arztbriefen gekapselt.
 Hier werden alle Informationen über eine Medikation gekapselt.
 
 \textbf{Attribute:}\\
-+ \textit{letter : DoctorsLetter} - Der Arztbrief in dem diese Medikation verschrieben wurde\\
++ \textit{letter : IDoctorsLetter} - Der Arztbrief in dem diese Medikation verschrieben wurde\\
 + \textit{frequency : int} - Gibt an wie oft die Medikation in ihrem \textit{interval} eingenommen werden soll\\
 + \textit{interval : Interval} - Gibt an in welchem Intervall die Medikation eingenommen werden soll\\
 + \textit{endDate : DateTime} - Das Datum an dem die Medikation abgesetzt werden soll/sollte
@@ -916,7 +976,6 @@ Diese können dann, wenn sie geändert (\textit{OnUpdate}) oder gelöscht (\text
 Über diese Schnittstelle können angemeldete Beobachter über die Aktivierung eines Objekts benachrichtigt werden.
 
 \textbf{Paket:} EntityObserver
-
 
 \subsection{ParserModel}
 \begin{figure}[H]
