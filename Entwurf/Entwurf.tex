@@ -455,7 +455,51 @@ Legt eine neue Gruppe von Arztbriefen an, die noch keine Arztbriefe enthält und
 \textbf{Enthaltene Klassen:} CustomContentPage, App
 
 \subsection{ViewModel}
-%TODO
+\subsubsection{AbstractViewModel}
+\textbf{Funktion:} Dieses Paket dient als Überklasse aller anderen ViewModel Klassen, um redundanten Code zu vermeiden.
+
+\textbf{Entwurfsentscheidung:} Kapselung gemeinsamer Funktionalitäten des ViewModels
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} AbstractViewModel
+
+\subsubsection{OverviewTabViewModel}
+\textbf{Funktion:} Kommunikation zwischen Model und View ermöglichen
+
+\textbf{Entwurfsentscheidung:} Funktions- und Kommunikationsweise der Ansichten des Tabs \textit{Übersicht}
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} OverviewViewModel, DoctorsLetterViewModel, DetailedDoctorsLetterViewModel
+
+\subsubsection{MedicationTabViewModel}
+\textbf{Funktion:} Kommunikation zwischen Model und View ermöglichen
+
+\textbf{Entwurfsentscheidung:} Funktions- und Kommunikationsweise der Ansichten des Tabs \textit{Medikation}
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} MedicationViewModel, MedicineViewModel, DetailedMedicineViewModel
+
+\subsubsection{SendDataTabViewModel}
+\textbf{Funktion:} Kommunikation zwischen Model und View ermöglichen
+
+\textbf{Entwurfsentscheidung:} Funktions- und Kommunikationsweise der Ansichten des Tabs \textit{Senden}
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} SendDataViewModel, SelectDoctorsLettersViewModel, SelectDeviceViewModel, TransmittingDataViewModel
+
+\subsubsection{ProfileTabViewModel}
+\textbf{Funktion:} Kommunikation zwischen Model und View ermöglichen
+
+\textbf{Entwurfsentscheidung:} Funktions- und Kommunikationsweise der Ansichten des Tabs \textit{Profil}
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} ProfileViewModel
+
 \subsection{Model}
 \begin{figure}[H]
 \centering
@@ -476,7 +520,7 @@ Die ModelFacade agiert unabhängig von den anderen Subsystemen und nimmt nur Anf
 
 \subsubsection{TransmissionModel}
 %TODO
-\textbf{Funktion:}
+\textbf{Funktion:} Dieses Paket implementiert die Schnittstelle der Datenübertragung. Hauptsächlich werden Daten entgegengenommen, sei es von einem anderen Gerät, welches Daten übermittelt, oder dem Nutzer, der Daten zur Übertragung freigeben möchte. 
 
 \textbf{Entwurfsentscheidung:} Übertragung der Daten
 
@@ -564,19 +608,30 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
  
 \section{View}
 %TODO
+\textit{Hinweis: Die im folgenden aufgelisteten Klassen bestehen, ganz im Sinne der Xamarin.Forms Cross-Plattform Idee, nicht nur aus C\#-Klassen, sondern besitzen stets auch eine assoziierte XAML-Datei, die im Normalfall den vollständigen Aufbau der Ansicht definiert.}
 
+\subsection{AbstractPages}
+%TODO diagramm
 \subsubsection{CustomContentPage}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{CustomContentPage} legt grundlegende Eigenschaften der gesamten Benutzeroberfläche fest. Dies betrifft beispielsweise Farbgestaltung verschiedener Elemente wie des Hintergrundes, Texte, Tab- und der Statusbar.
 
+\subsubsection{App}
+%TODO
+\textbf{Beschreibung:} Die Klasse \textbf{App} koordiniert den Aufbau der Tabbar und die zu den entsprechenden Tabs gehörenden Ansichten und Tab-Icons.
+
+\subsection{OverviewTabPages}
+%TODO diagramm
 \subsubsection{OverviewPage : CustomContentPage}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{OverviewPage} definiert die Eigenschaften der 
 
 \subsubsection{DetailedDoctorsLetterPage : CustomContentPage}
 %TODO
 \textbf{Beschreibung:}
 
+\subsection{MedicationTabPages}
+%TODO diagramm
 \subsubsection{MedicationPage : CustomContentPage}
 %TODO
 \textbf{Beschreibung:}
@@ -585,6 +640,8 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 %TODO
 \textbf{Beschreibung:}
 
+\subsection{SendDataTabPages}
+%TODO diagramm
 \subsubsection{SendDataPage : CustomContentPage}
 %TODO
 \textbf{Beschreibung:}
@@ -601,6 +658,8 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 %TODO
 \textbf{Beschreibung:}
 
+\subsection{ProfileTabPages}
+%TODO diagramm
 \subsubsection{ProfilePage : CustomContentPage}
 %TODO
 \textbf{Beschreibung:}
