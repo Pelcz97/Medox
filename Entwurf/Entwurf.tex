@@ -358,13 +358,52 @@ Legt eine neue Gruppe von Arztbriefen an, die noch keine Arztbriefe enthält und
 \chapter{Paketführer}
 \section{Paketbeschreibung}
 \subsection{View}
-\textbf{Funktion:} %TODO
 
-\textbf{Entwurfsentscheidung:} %TODO
+\subsubsection{OverviewTabPages}
+\textbf{Funktion:} Dieses Paket enthält alle Pages des Overview Tabs.
+
+\textbf{Entwurfsentscheidung:} Gestaltung der Ansichten des Tabs \textit{Übersicht}
 
 \textbf{Klassendiagramm:} siehe S.
 
-\textbf{Enthaltene Klassen:} OverviewPage, DetailedDoctorsLetter, CustomContentPage, MedicationPage, DetailedMedicinePage, SendDataPage, SelectDoctorsLettersPage, SelectDevicePage, TransmittingDataPage, ProfilePage
+\textbf{Enthaltene Klassen:} OverviewPage, DetailedDoctorsLetter
+
+\subsubsection{MedicationTabPages}
+\textbf{Funktion:} Dieses Paket enthält alle Pages des Medication Tabs.
+
+\textbf{Entwurfsentscheidung:} Gestaltung der Ansichten des Tabs \textit{Medikation}
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} MedicationPage, DetailedMedicinePage
+
+\subsubsection{SendDataTabPages}
+\textbf{Funktion:} Dieses Paket enthält alle Pages des SendData Tabs.
+
+\textbf{Entwurfsentscheidung:} Gestaltung der Ansichten des Tabs \textit{Senden}
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} SendDataPage, SelectDoctorsLettersPage, SelectDevicePage, TransmittingDataPage
+
+\subsubsection{ProfileTabPages}
+\textbf{Funktion:} Dieses Paket enthält alle Pages des Profile Tabs.
+
+\textbf{Entwurfsentscheidung:} Gestaltung der Ansichten des Tabs \textit{Profil}
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} ProfilePage
+
+\subsubsection{AbstractTabPages}
+\textbf{Funktion:} Dieses Paket enthält alle Klassen zur Verwaltung genereller Eigenschaften der Benutzeroberfläche und der grundsätzlichen Verhaltensweise einiger UI-Elemente.
+
+\textbf{Entwurfsentscheidung:} Kapselung systemumfassender UI-Entscheidungen
+
+\textbf{Klassendiagramm:} siehe S.
+
+\textbf{Enthaltene Klassen:} CustomContentPage, App
+
 \subsection{ViewModel}
 %TODO
 \subsection{Model}
