@@ -163,7 +163,11 @@ Das Model über zu übertragende Dateien und den gewünschten Empfänger zu info
 \textbf{ProfileTabViewModel} letztlich ist unter anderem dafür zuständig, dem Model Änderungen im Profil des Nutzers und dem View das darzustellende Profil zu übermitteln.
 
 \subsection{Model}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/ModelPackage.png}
+\caption{Pakete des Subsystems Model}
+\end{figure}
 Das Model enthält alle Klassen und Methoden zum Speichern, Laden, Ändern, Senden und Empfangen der medizinischen Daten des Benutzers. 
 
 Das Paket \textbf{DataModel} enthält dabei die Objekte zur Modellierung der in der Applikation enthaltenen Daten. Um über Änderungen an diesen Daten informiert zu werden, kann sich eine Klasse durch Implementierung der \textbf{EntityObserver} Schnittstelle anmelden.
@@ -184,9 +188,17 @@ Um den Zugriff auf das Model zu vereinfachen wird das Fassaden Muster verwendet.
 \subsubsection{DataModelInterface}
 Hier sind die Schnittstellen der medizinischen Daten enthalten, die angezeigt werden sollen. Die hier aufgeführten Methoden umfassen daher das Abfragen von Informationen über die Daten aber auch einfache Operationen die auf diesen Daten ausgeführt werden, wie zum Beispiel das Ändern dieser Informationen.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/DataModelInterfacePackage.png}
+\caption{DataModel Schnittstellen}
+\end{figure}
 \paragraph{IEntity}
-%TODO Bild einfügen
-
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IEntity.png}
+\caption{IEntity Schnittstelle}
+\end{figure}
 \textbf{GetName() : string}\\
 Gibt den Namen der Entität zurück.
 
@@ -199,7 +211,11 @@ Löscht die Entität und löst alle Assoziationen von ihr auf.
 \paragraph{IData}
 Die Schnittstelle \textbf{IData} erweitert \textbf{IEntity}.
 
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IData.png}
+\caption{IData Schnittstelle}
+\end{figure}
 \textbf{GetDate() : DateTime}\\
 Gibt das Datum zurück, von dem die Daten stammen.
 
@@ -212,7 +228,11 @@ Setzt die Sensitivitätsstufe der Daten auf \textit{sensitivity}.
 \paragraph{IDoctorsLetter}
 Die Schnittstelle \textbf{IDoctorsLetter} erweitert \textbf{IData}.
 
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IDoctorsLetter.png}
+\caption{IDoctorsLetter Schnittstelle}
+\end{figure}
 \textbf{GetDiagnosis() : string}\\
 Gibt die Diagnose im Arztbrief zurück.
 
@@ -240,7 +260,11 @@ Gibt den Namen der Originaldatei dieses Arztbriefs zurück.
 \paragraph{IDoctorsLetterGroup}
 Die Schnittstelle \textbf{IDoctorsLetter} erweitert \textbf{IData}.
 
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IDoctorsLetterGroup.png}
+\caption{IDoctorsLetterGroup Schnittstelle}
+\end{figure}
 \textbf{GetAll() : IList<IDoctorsLetter>}\\
 Gibt alle Arztbriefe in der Gruppe zurück.
 
@@ -256,7 +280,11 @@ Gibt das aktuellste Datum aller Arztbriefe in dieser Gruppe zurück.
 \paragraph{IMedication}
 Die Schnittstelle \textbf{IMedication} erweitert \textbf{IData}.
 
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IMedication.png}
+\caption{IMedication Schnittstelle}
+\end{figure}
 \textbf{SetDate(date : DateTime) : void}\\
 Setzt das Datum an dem diese Medikation angefangen wurde auf das Datum \textit{date}.
 
@@ -288,7 +316,11 @@ Verbindet diese Medikation mit dem Arztbrief \textit{letter}.
 \paragraph{IProfile}
 Die Schnittstelle \textbf{IProfile} erweitert \textbf{IEntity}.
 
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IProfile.png}
+\caption{IProfile Schnittstelle}
+\end{figure}
 \textbf{GetInsuranceNumber() : string}\\
 Gibt die Versicherungsnummer dieses Profils zurück.
 
@@ -319,7 +351,11 @@ Setzt dieses Profil als das aktive Profil.
 \paragraph{IDoctor}
 Die Schnittstelle \textbf{IDoctor} erweitert \textbf{IEntity}.
 
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IDoctor.png}
+\caption{IDoctor Schnittstelle}
+\end{figure}
 \textbf{GetField() : string}\\
 Gibt das Fachgebiet dieses Doktors zurück.
 
@@ -330,7 +366,11 @@ Setzt das Fachgebiet dieses Doktors auf \textit{field}.
 Die Enumerationen \textit{Sensitivity}, \textit{Interval} und \textit{BloodType} müssen Subsystemen die auf die hier aufgeführten Daten zugreifen ebenfalls bekannt sein, um diese anzeigen zu können.
 
 \subsubsection{ModelFacadeInterface}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/ModelFacadeInterface.png}
+\caption{ModelFacade Schnittstelle}
+\end{figure}
 Dies ist die Haupteinstiegsstelle für andere Subsysteme (hier nur das ViewModel) in das Model. Als Ein- und Ausgabeparameter werden die zuvor aufgeführten Schnittstellen verwendet. Alle komplexeren Operationen die nicht schon von diesen Schnittstellen übernommen werden, sind hier enthalten:
 
 %TODO Datenübertragungsmethoden
@@ -451,7 +491,11 @@ Legt eine neue Gruppe von Arztbriefen an, die noch keine Arztbriefe enthält und
 \textbf{Enthaltene Klassen:} ProfileViewModel
 
 \subsection{Model}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/ModelPackage.png}
+\caption{Pakete des Models}
+\end{figure}
 \subsubsection{ModelFacade}
 \textbf{Funktion:} Dieses Paket implementiert die Hauptschnittstelle IModelFacade des Models und delegiert Aufgaben an die restlichen Pakete innerhalb des Subsystems.
 Die ModelFacade agiert unabhängig von den anderen Subsystemen und nimmt nur Anfragen entgegen.
@@ -550,6 +594,8 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 %TODO
 
 \chapter{Klassenbeschreibung}
+\textit{Hinweis: Alle hier aufgelisteten Klassendiagramme sind Ausschnitte des Systemklassendiagramms. Viele Attribute und implementierte Methoden aus Interfaces sind deswegen nicht in dem jeweiligen Diagramm zu finden, sondern als Relationen zwischen den Klassen bzw. in dem implementierten Interface.}
+ 
 \section{View}
 %TODO
 
@@ -726,10 +772,12 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 Die Schnittstellen des Models (\textbf{ModelInterface}) wurden bereits im Abschnitt \textbf{Subsystem-Schnittstellen} beschrieben und werden hier nicht erneut aufgeführt.
 
 \subsection{ModelFacade}
-%TODO Bild einfügen
-
 \subsubsection{ModelFacade : IModelFacade}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/ModelFacade.png}
+\caption{ModelFacade Klasse}
+\end{figure}
 \textbf{Beschreibung:} Die \textbf{ModelFacade} implementiert die Fassaden-Schnittstelle \textbf{IModelFacade}. Sie delegiert bei einem Aufruf an eine oder mehrere Schnittstellen der restlichen Pakete des Subsystems.
 
 \textbf{Attribute:}\\
@@ -745,27 +793,46 @@ Die Schnittstellen des Models (\textbf{ModelInterface}) wurden bereits im Abschn
 %TODO
 
 \subsection{DatabaseModel}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/DatabaseModelPackage.png}
+\caption{Klassen des DatabaseModel Paket}
+\end{figure}
 
 \subsubsection{IEntityDatabase}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IEntityDatabase.png}
+\caption{IEntityDatabase Schnittstelle}
+\end{figure}
 \textbf{Beschreibung:} Die Schnittstelle \textbf{IEntityDatabase} bietet eine Zugriffsmöglichkeit auf die verwendete Datenbank an.\\
 Hier kann das aktuelle Profil gewechselt werden \textbf{SetActiveProfile} und sonstige Datenabfragen darauf durchgeführt werden.
 
 \textbf{Paket:} ModelFacade
 
-\subsubsection{EntityDatabase : IEntityDatabase, IEntityObserver}
-%TODO Bild einfügen
+\subsubsection{EntityDatabase : IEntityDatabase, IEntityObserver, IProfileObserver}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/EntityDatabase.png}
+\caption{EntityDatabase Klasse}
+\end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{EntityDatabase} implementiert die \textbf{IEntityDatabase} Schnittstelle. Dabei werden Aufrufe von Methoden aus dieser Schnittstelle größtenteils an die hier verwendete SQLite-Library weitergeleitet.\\
 Weiterhin wird die \textbf{IEntityObserver} Schnittstelle implementiert, sodass sich die Datenbank über Änderungen an den in ihr gespeicherten Entitäten informieren lassen kann.
 
 \textbf{Paket:} ModelFacade
 
 \subsection{DataModel}
-%TODO Bild einfügen
-
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/DataModelPackage.png}
+\caption{Klassen des DataModel Paket}
+\end{figure}
 \subsubsection{Entity : IEntity, IEntityObservable}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/Entity.png}
+\caption{Entity Klasse}
+\end{figure}
 \textbf{Beschreibung:} Die abstrakte Klasse \textbf{Entity} implementiert die \textbf{IEntity} Schnittstelle als Vorlage für eine SQLite-Datenbanktabelle.\\
 Weiterhin wird die \textbf{IEntityObservable} Schnittstelle implementiert, sodass eine Datenbank über Änderungen informiert werden kann.\\
 Diese Klasse dient als Strukturelement in der Vererbungshierarchie im \textbf{DataModel} Paket, und kann deshalb nicht selbst instanziiert werden, dies ist nur für ihre Unterklassen möglich.\\
@@ -778,7 +845,11 @@ Bevor eine Entität aus ihrer Datenbank gelöscht wird, sollten all ihre Assozia
 \textbf{Paket:} DataModel
 
 \subsubsection{Profile : Entity, IProfile}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/Profile.png}
+\caption{Profile Klasse}
+\end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{Profile} implementiert die \textbf{IProfile} Schnittstelle und erweitert die \textbf{Entity} Klasse um in einer Datenbank gespeichert werden zu können.\\
 Ein Profil enthält dabei verschiedene Informationen über einen Nutzer, die in den Attributen aufgelistet werden.
 
@@ -791,7 +862,11 @@ Ein Profil enthält dabei verschiedene Informationen über einen Nutzer, die in 
 \textbf{Paket:} DataModel
 
 \subsubsection{Doctor : Entity, IDoctor}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/Doctor.png}
+\caption{Doctor Klasse}
+\end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{Doctor} implementiert die \textbf{IDoctor} Schnittstelle und erweitert die \textbf{Entity} Klasse um in einer Datenbank gespeichert werden zu können.\\
 Hier werden die Informationen über einen Arzt gekapselt.
 
@@ -802,7 +877,11 @@ Hier werden die Informationen über einen Arzt gekapselt.
 \textbf{Paket:} DataModel
 
 \subsubsection{Data : Entity, IData}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/Data.png}
+\caption{Data Klasse}
+\end{figure}
 \textbf{Beschreibung:} Die abstrakte Klasse \textbf{Data} implementiert die \textbf{IData} Schnittstelle und erweitert die \textbf{Entity} Klasse um in einer Datenbank gespeichert werden zu können.\\
 Diese Klasse dient als Strukturelement in der Vererbungshierarchie im \textbf{DataModel} Paket, und kann deshalb nicht selbst instanziiert werden, dies ist nur für ihre Unterklassen möglich.
 
@@ -814,7 +893,11 @@ Diese Klasse dient als Strukturelement in der Vererbungshierarchie im \textbf{Da
 \textbf{Paket:} DataModel
 
 \subsubsection{DoctorsLetter : Data, IDoctorsLetter}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/DoctorsLetter.png}
+\caption{DoctorsLetter Klasse}
+\end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{DoctorsLetter} implementiert die \textbf{IDoctorsLetter} Schnittstelle und erweitert die \textbf{Data} Klasse.\\
 Hier werden die Informationen über einen  Arztbrief gekapselt.
 
@@ -828,7 +911,11 @@ Hier werden die Informationen über einen  Arztbrief gekapselt.
 \textbf{Paket:} DataModel
 
 \subsubsection{DoctorsLetterGroup : Data, IDoctorsLetterGroup}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/DoctorsLetterGroup.png}
+\caption{DoctorsLetterGroup Klasse}
+\end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{DoctorsLetterGroup} implementiert die \textbf{IDoctorsLetterGroup} Schnittstelle und erweitert die \textbf{Data} Klasse.\\
 Hier wird eine Ansammlung von Arztbriefen gekapselt.
 
@@ -838,7 +925,11 @@ Hier wird eine Ansammlung von Arztbriefen gekapselt.
 \textbf{Paket:} DataModel
 
 \subsubsection{Medication : Data, IMedication}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/Medication.png}
+\caption{Medication Klasse}
+\end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{Medication} implementiert die \textbf{IMedication} Schnittstelle und erweitert die \textbf{Data} Klasse.\\
 Hier werden alle Informationen über eine Medikation gekapselt.
 
@@ -851,16 +942,28 @@ Hier werden alle Informationen über eine Medikation gekapselt.
 \textbf{Paket:} DataModel
 
 \subsection{EntityFactory}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/EntityFactoryPackage.png}
+\caption{Klassen des EntityFactory Paket}
+\end{figure}
 
 \subsubsection{IEntityFactory}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IEntityFactory.png}
+\caption{IEntityFactory Schnittstelle}
+\end{figure}
 \textbf{Beschreibung:} Schnittstelle zum Erstellen von Entitäten, also Arztbriefen (\textit{CreateEmptyDoctorsLetter}), Gruppen von Arztbriefen (\textit{CreateEmptyGroup}), Medikationen (\textit{CreateEmptyMedication}) und Profilen (\textit{CreateEmptyProfile}).
 
 \textbf{Paket:} EntityFactory
 
 \subsubsection{EntityFactory : IEntityFactory}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/EntityFactory.png}
+\caption{EntityFactory Klasse}
+\end{figure}
 \textbf{Beschreibung:} Implementierung der \textbf{IEntityFactory} Schnittstelle. Fügt Entitäten bei deren Erstellung in die Datenbank \textit{database} ein und meldet sie als Beobachter an.
 
 \textbf{Attribute:}\\
@@ -870,68 +973,137 @@ Hier werden alle Informationen über eine Medikation gekapselt.
 
 
 \subsection{EntityObserver}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/EntityObserverPackage.png}
+\caption{Klassen des EntityObserver Paket}
+\end{figure}
 
 \subsubsection{IEntityObservable}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IEntityObservable.png}
+\caption{EntityObservable Schnittstelle}
+\end{figure}
 \textbf{Beschreibung:} Beobachter können sich über diese Schnittstelle bei Datenstrukturen an- (\textit{Subscribe}) und wieder abmelden (\textit{Unsubscribe}), um sich über Änderungen an diesen informieren zu lassen.
 
 \textbf{Paket:} EntityObserver
 
 \subsubsection{IEntityObserver}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IEntityObserver.png}
+\caption{IEntityObserver Schnittstelle}
+\end{figure}
 \textbf{Beschreibung:} Schnittstelle um IEntityObservable-Objekte beobachten zu können. \\
 Diese können dann, wenn sie geändert (\textit{OnUpdate}) oder gelöscht (\textit{OnDeletion}) werden, die angemeldeten Beobachter über diese Schnittstelle benachrichtigen.
 
 \textbf{Paket:} EntityObserver
 
+\subsubsection{IProfileObservable}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IProfileObservable.png}
+\caption{IProfileObservable Schnittstelle}
+\end{figure}
+\textbf{Beschreibung:} Beobachter können sich über diese Schnittstelle bei Datenstrukturen an- (\textit{Subscribe}) und wieder abmelden (\textit{Unsubscribe}), um sich über Änderungen an diesen informieren zu lassen.
+
+\textbf{Paket:} EntityObserver
+
+\subsubsection{IProfileObserver}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IProfileObserver.png}
+\caption{IProfileObserver Schnittstelle}
+\end{figure}
+\textbf{Beschreibung:} Die Schnittstelle \textbf{IProfileObserver} erweitert die\textbf{IIEntityObserver} Schnittstelle.\\
+Über diese Schnittstelle können angemeldete Beobachter über die Aktivierung eines Objekts benachrichtigt werden.
+
+\textbf{Paket:} EntityObserver
 
 \subsection{ParserModel}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/ParserModelPackage.png}
+\caption{Klassen des ParserModel Paket}
+\end{figure}
 
 \subsubsection{IParserFacade}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IParserFacade.png}
+\caption{IParserFacade Schnittstelle}
+\end{figure}
 \textbf{Beschreibung:} Diese Schnittstelle ist die Einstiegsstelle in das \textbf{ParserModel} Paket. 
-%TODO Methodenbeschreibung
+Hier können Arztbriefe aus einer Datei in eine Datenbank eingefügt werden (\textit{ParseFileToDatabase}) oder in eine Datei konvertiert werden (\textit{ParseLetterToOriginalFile}).
 
 \textbf{Paket:} ParserModel
 
 \subsubsection{ParserFacade : IParserFacade}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/ParserFacade.png}
+\caption{ParserFacade Klasse}
+\end{figure}
 \textbf{Beschreibung:} Implementierung der \textbf{IParserFacade} Schnittstelle. Wählt bei Aufruf den passenden Parser aus diesem Paket aus und delegiert an diesen.
 
 \textbf{Paket:} ParserModel
 
 \subsubsection{FileToDatabaseParser}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/FileToDatabaseParser.png}
+\caption{FileToDatabaseParser Klasse}
+\end{figure}
 \textbf{Beschreibung:} Abstrakte Klasse zum Konvertieren eines in einer Datei gespeicherten Arztbriefs in ein \textbf{DoctorsLetter} Objekt, dass in einer \textbf{IEntityDatabase} gespeichert wird (\textit{ParseFile}).\\
 Die Implementierung der Methoden um die nötigen Informationen, also die Attribute des \textbf{DoctorsLetter} Objektes aus der Datei zu extrahieren (\textit{ParseLetter}, \textit{ParseMedications}, \textit{ParseDoctor}, \textit{ParseProfile}), wird den dateiformatspezifischen Unterklassen nach dem Schablonenmuster überlassen.
 
 \textbf{Paket:} ParserModel
 
 \subsubsection{Hl7ToDatabaseParser : FileToDatabaseParser}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/Hl7ToDatabaseParser.png}
+\caption{Hl7ToDatabaseParser Klasse}
+\end{figure}
 \textbf{Beschreibung:} Implementierung der abstrakten Klasse \textbf{FileToDatabaseParser} und ihrer abstrakten Einschubmethoden (\textit{ParseLetter}, \textit{ParseMedications}, \textit{ParseDoctor}, \textit{ParseProfile}) für das .hl7 Dateiformat.
 
 \textbf{Paket:} ParserModel
 
 \subsubsection{LetterToOriginalFileParser}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/LetterToOriginalFileParser.png}
+\caption{LetterToOriginalFileParser Klasse}
+\end{figure}
 \textbf{Beschreibung:} Konvertiert einen Arztbrief zu dem Dateiformat in dem er vor seiner Erstellung gesendet wurde (\textit{ParseLetter}).\\
 Da die Originaldatei auch nach der Erstellung des Arztbriefs gespeichert bleibt, wird lediglich der Dateipfad mithilfe der \textbf{IFileHelper} Schnittstelle zurückgegeben.
 
 \textbf{Paket:} ParserModel
 
 \subsection{FileHelper}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/FileHelperPackage.png}
+\caption{Klassen des FileHelper Paket}
+\end{figure}
+
 \subsubsection{IFileHelper}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IFileHelper.png}
+\caption{IFileHelper Schnittstelle}
+\end{figure}
 \textbf{Beschreibung:} Schnittstelle um den Namen einer Datei im Verzeichnis der Anwendung in einen vollständigen Dateipfad umzuwandeln (\textit{GetLocalFilepath}).
 
 \textbf{Paket:} FileHelper
 
 \subsubsection{FileHelper : IFileHelper}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/FileHelper.png}
+\caption{FileHelper Klasse}
+\end{figure}
 \textbf{Beschreibung:} Direkte Implementierung der \textbf{IFileHelper} Schnittstelle. Muss plattformspezifisch implementiert werden.
 
 \textbf{Paket:} FileHelper
@@ -960,7 +1132,11 @@ gesendeten Datei (zunächst nur im XML-basierten .hl7 Format) erstellt. Da solch
 Um die Sequenzdiagramme der gesamten Anwendung übersichtlich zu halten, sind hier komplexere Operationen aus dem Model separat vom Rest der Anwendung aufgeführt. Werden solche oder ähnliche Operationen an anderer Stelle referenziert, so wird in diesen Sequenzdiagrammen nur der Aufruf an die Schnittstelle des Models und nicht erneut der genaue Ablauf aufgeführt.
  
 \subsubsection{Ändern einer Entität}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/ChangeEntity.png}
+\caption{Ändern einer Entität}
+\end{figure}
 Über die Schnittstelle der Entität wird eine Methode(z.B. \textit{SetName} aufgerufen die eines derer Attribute verändert.
 
 Die Entität benachrichtigt, nachdem sie die Änderung durchgeführt hat, die Datenbank \textit{db}, die sich zuvor (z.B. bei der Erstellung der Entität über \textbf{EntityFactory}) als Beobachter angemeldet hat.
@@ -968,7 +1144,11 @@ Die Entität benachrichtigt, nachdem sie die Änderung durchgeführt hat, die Da
 Dieser Aufruf an die Datenbank veranlasst dann die Speicherung der Änderung darin.
 
 \subsubsection{Löschen eines Arztbriefs}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/DeleteDoctorsLetter.png}
+\caption{Löschen eines Arztbriefs}
+\end{figure}
 Über dessen Schnittstelle \textbf{IDoctorsLetter} wird das Löschen eines Arztbriefs \textit{letter} veranlasst (\textit{Delete}).
 
 Dann wird die \textbf{EntityDatabase} \textit{db} über ihre Schnittstelle \textbf{IEntityObserver} benachrichtigt, die wiederum \textit{letter} aus der Datenbank löscht und sich von ihm als Beobachter abmeldet.
@@ -982,7 +1162,11 @@ Da das Auflösen der Assoziationen rekursiv funktioniert, rufen diese Entitäten
 In diesem Beispiel wurde ein Arztbrief verwendet, das Löschen anderer Entitäten funktioniert jedoch nach dem selben Prinzip.
 
 \subsubsection{Parsen eines Arztbriefs}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/ParseFile.png}
+\caption{Parsen eines Arztbriefs}
+\end{figure}
 Über die \textbf{IParserFacade} Schnittstelle wird das Parsen einer Datei \textit{filepath} in eine \textbf{EntityDatabase} \textit{db} veranlasst.
 
 Basierend auf dem in \textit{filepath} angegebenen Dateiformat wird dann der passende \textbf{FileToDatabaseParser} ausgewählt und an diesen delegiert (\textit{ParserFile}). Dieser ruft dann nacheinander seine Einschubmethoden auf:
@@ -995,7 +1179,11 @@ Letztlich wird der Arztbrief selbst mit Assoziationen zu den restlichen geparste
 
 
 \subsubsection{Erstellen einer Medikation}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/CreateEmptyMedication.png}
+\caption{Erstellen einer Medikation}
+\end{figure}
 Über die \textbf{IModelFacade} Schnittstelle wird die Erstellung einer Medikation veranlasst (\textit{CreateEmptyMedication}). 
 
 Die \textbf{ModelFacade} delegiert dann an die \textbf{EntityFactory} über ihre Schnittstelle (\textit{CreateEmptyMedication}).
