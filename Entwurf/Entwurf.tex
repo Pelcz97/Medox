@@ -199,6 +199,9 @@ Gibt alle Medikationen zurück, die von diesem Arztbrief stammen.
 \textbf{RemoveMedication(med : IMedication) : void}\\
 Entfernt die Medikation \textit{med} aus der Liste der Medikationen die von diesem Arztbrief stammen.
 
+\textbf{AttachMedication(med : IMedication) : void}\\
+Verbindet die Medikation \textit{med} mit diesem Arztbrief.
+
 \textbf{GetGroups() : IList<DoctorsLetterGroup>}\\
 Gibt alle Gruppen von Arztbriefen zurück, in denen dieser Arztbrief enthalten ist.
 
@@ -251,6 +254,10 @@ Setzt das Datum an dem die Medikation abgesetzt werden soll auf \textit{date}.
 
 \textbf{DisattachFromLetter() : void}\\
 Löst die Verbindung der Medikation zu ihrem Arztbrief auf.
+
+\textbf{AttachToLetter(letter : IDoctorsLetter) : void}\\
+Verbindet diese Medikation mit dem Arztbrief \textit{letter}.
+
 
 \paragraph{IProfile}
 Die Schnittstelle \textbf{IProfile} erweitert \textbf{IEntity}.
