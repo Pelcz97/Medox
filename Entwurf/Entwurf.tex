@@ -133,8 +133,9 @@ Das \textbf{ViewModel} ist das Verbindungsstück zwischen Model und View. Es fü
 
 \section{Subsysteme}
 \subsection{View}
+%TODO Bild einfügen
 Der View besteht aus allen Klassen und Dateien, die benötigt werden, um die Benutzeroberfläche zu modellieren. Er dient als Eingabe- und Ausgabeschnittstelle der Anwendung.
-Hierbei erfolgt die Modellieren hauptsächlich (Xamarin.Forms konform) in XAML-Dateien, wodurch sich leicht eine einheitliche, plattformübergreifende Oberfläche erstellen lässt. Da es sich bei XAML jedoch um eine "\textit{Markup Language}" handelt, finden diese Dateien im obigen UML-Diagramm keine Darstellung, lediglich die einer XAML-Datei zugehörigen C#-Dateien sind dort repräsentiert.
+Hierbei erfolgt die Modellieren hauptsächlich (Xamarin.Forms konform) in XAML-Dateien, wodurch sich leicht eine einheitliche, plattformübergreifende Oberfläche erstellen lässt. Da es sich bei XAML jedoch um eine "\textit{Markup Language}" handelt, finden diese Dateien im obigen UML-Diagramm keine Darstellung, lediglich die einer XAML-Datei zugehörigen C\#-Dateien sind dort repräsentiert.
 Die einzelnen Ansichten der Anwendung, sprich die UI-Zustände, werden in separaten Klassen erstellt und, um für eine übersichtlichere Struktur zu sorgen, werden diese abhängig ihrer jeweiligen Tab-Zugehörigkeit, in Paketen einsortiert.
 
 \textbf{OverviewTabPages} enthält all jene Ansichten (Pages), die sich innerhalb des Tabs \textit{Übersicht} befinden. Dies umfasst beispielsweise die Übersicht aller gespeicherter Arztbriefe.
@@ -148,7 +149,19 @@ Zu guter Letzt werden alle dem Tab \textit{Profil} zugehörigen Ansichten innerh
 Um Gemeinsamkeiten aller Ansichten nicht redundant definieren zu müssen, existiert zusätzlich das Paket \textbf{AbstractPages}, in welchem beispielsweise grundlegende Attribute aller Pages definiert werden können. Text- oder Hintergrundfarben wären hierfür ebenso Beispiele wie auch die Organisation der Tabbar.
 
 \subsection{ViewModel}
-%TODO
+%TODO Bild einfügen
+Das ViewModel stellt den Vermittler zwischen View und Model dar. Es sorgt für die Aktualisierung sowohl der View als auch des Models. Der Datenaustausch zwischen View und ViewModel erfolgt über das sogenannte \textit{Data Binding}, die Kommunikation mit dem Model erfolgt über die Model-eigenen Schnittstellen.
+
+Ähnlich wie im Aufbau des Views, werden auch im ViewModel aus Gründen der Übersichtlichkeit die einzelnen Klassen je nach Tab-Zugehörigkeit gegliedert.
+
+\textbf{OverviewTabViewModel} kümmert sich hauptsächlich um alle Bestandteile eines Arztbriefes, fordert darzustellende Arztbriefe an und meldet Änderungen an bestehenden Daten.
+
+Für Ähnliches ist auch \textbf{MedicationTabViewModel} zuständig: Hier werden alle hinterlegte, neu erzeugte oder geänderte Medikationen übermittelt.
+
+Das Model über zu übertragende Dateien und den gewünschten Empfänger zu informieren, ist die Hauptaufgabe des Pakets \textbf{SendDataTabViewModel}.
+
+\textbf{ProfileTabViewModel} letztlich ist unter anderem dafür zuständig, dem Model Änderungen im Profil des Nutzers und dem View das darzustellende Profil zu übermitteln.
+
 \subsection{Model}
 %TODO Bild einfügen
 Das Model enthält alle Klassen und Methoden zum Speichern, Laden, Ändern, Senden und Empfangen der medizinischen Daten des Benutzers. 
