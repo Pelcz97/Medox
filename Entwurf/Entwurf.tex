@@ -117,8 +117,18 @@
 \addtocontents{toc}{\protect\enlargethispage{10cm}}
 \setlength{\parskip}{2.5mm}%
 \chapter{Einleitung}
-%TODO
- 
+Dieses Dokument für den Entwurf der Applikation \textbf{myMD} ist im Rahmen des Softwarepraktikums PSE am Karlsruher Institut für Technologie entstanden.
+
+Der Entwurf wird dabei nach dem Top-Down Prinzip vorgestellt: zunächst die Systemarchitektur , die die Applikation in mehrere Subsysteme unterteilt (\textit{Abschnitt 2}). Diese Subsysteme bestehen wiederum aus Paketen(\textit{Abschnitt 3}), die dann die einzelnen Klassen und Schnittstellen enthalten(\textit{Abschnitt 4}). In den jeweiligen Abschnitten werden dann alle Teile des Systems genau beschrieben
+
+Daraufhin wird die Speicherung und Übertragung der in der Applikation verwendeten Daten beschrieben (\textit{Abschnitt 5}).
+
+Die Dynamik der Applikation, also das Zusammenspiel der verschiedenen Subsysteme, Pakete und Klassen, wird durch Sequenz- und Zustandsdiagramme dargestellt (\textit{Abschnitt 6}). Hier ist auch eine Beschreibung der Benutzeroberfläche und der Navigation dieser zu finden.
+
+Darauf folgt eine Beschreibung der Variante der Applikation für Ärzte statt Patienten (\textit{Abschnitt 7}).
+
+Abschließend wird noch eine Ansicht des gesamten Klassendiagramms der Applikation geboten (\textit{Abschnitt 8}).
+
 \chapter{Systemaufbau}
 \section{Systemarchitektur}
 Die Logik des Systems verteilt sich auf beliebig viele Partner, die unter Umständen miteinander kommunizieren können. Der Aufbau eines solchen Partners wird nun im Folgenden beschrieben:
@@ -784,7 +794,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Paket:} ProfileTabViewModel
 
 \section{Model}
-Die Schnittstellen des Models (\textbf{ModelInterface}) wurden bereits im Abschnitt \textbf{Subsystem-Schnittstellen} beschrieben und werden hier nicht erneut aufgeführt.
+\textit{Hinweis: Die Schnittstellen des Models (\textbf{ModelInterface}) wurden bereits im Abschnitt \textbf{Subsystem-Schnittstellen} beschrieben und werden hier nicht erneut aufgeführt.}
 
 \subsection{ModelFacade}
 \subsubsection{ModelFacade : IModelFacade}
@@ -1144,7 +1154,7 @@ gesendeten Datei (zunächst nur im XML-basierten .hl7 Format) erstellt. Da solch
 %TODO
 
 \subsection{Model}
-Um die Sequenzdiagramme der gesamten Anwendung übersichtlich zu halten, sind hier komplexere Operationen aus dem Model separat vom Rest der Anwendung aufgeführt. Werden solche oder ähnliche Operationen an anderer Stelle referenziert, so wird in diesen Sequenzdiagrammen nur der Aufruf an die Schnittstelle des Models und nicht erneut der genaue Ablauf aufgeführt.
+\textit{Hinweis: Um die Sequenzdiagramme der gesamten Anwendung übersichtlich zu halten, sind hier komplexere Operationen aus dem Model separat vom Rest der Anwendung aufgeführt. Werden solche oder ähnliche Operationen an anderer Stelle referenziert, so wird in diesen Sequenzdiagrammen nur der Aufruf an die Schnittstelle des Models und nicht erneut der genaue Ablauf aufgeführt.}
  
 \subsubsection{Ändern einer Entität}
 \begin{figure}[H]
