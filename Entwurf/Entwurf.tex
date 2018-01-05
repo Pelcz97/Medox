@@ -405,7 +405,7 @@ Die Implementierung der Schnittstelle erzeugt Objekte aus \textbf{DataModel} und
 
 \textbf{Klassendiagramm:} siehe S.
 
-\textbf{Enthaltene Klassen:} IEntityObservable, IEntityObserver, IProfileObserver
+\textbf{Enthaltene Klassen:} IEntityObservable, IEntityObserver, IProfileObservable, IProfileObserver
 
 \subsubsection{ParserModel}
 \textbf{Funktion:} Dieses Paket enthält die Schnittstelle IParserFacade um zwischen Datenformaten zu konvertieren.
@@ -638,10 +638,13 @@ Hier kann das aktuelle Profil gewechselt werden \textbf{SetActiveProfile} und so
 
 \textbf{Paket:} ModelFacade
 
-\subsubsection{EntityDatabase : IEntityDatabase, IProfileObserver}
+\subsubsection{EntityDatabase : IEntityDatabase, IEntityObserver, IProfileObserver}
 %TODO Bild einfügen
 \textbf{Beschreibung:} Die Klasse \textbf{EntityDatabase} implementiert die \textbf{IEntityDatabase} Schnittstelle. Dabei werden Aufrufe von Methoden aus dieser Schnittstelle größtenteils an die hier verwendete SQLite-Library weitergeleitet.\\
-Weiterhin wird die \textbf{IEntityObserver} Schnittstelle implementiert, sodass sich die Datenbank über Änderungen an den in ihr gespeicherten Entitäten informieren lassen kann.
+Weiterhin werden die \textbf{IEntityObserver} und \textbf{IProfileObserver} Schnittstellen implementiert, sodass sich die Datenbank über Änderungen an den in ihr gespeicherten Entitäten informieren lassen kann.
+
+\textbf{Attribute:}\\
++ \textit{profile : Profile} - Das zurzeit aktive Profil
 
 \textbf{Paket:} ModelFacade
 
@@ -771,10 +774,16 @@ Diese können dann, wenn sie geändert (\textit{OnUpdate}) oder gelöscht (\text
 
 \textbf{Paket:} EntityObserver
 
-\subsubsection{IProfileObserver : IEntityObserver}
+\subsubsection{IProfileObservable}
+%TODO Bild einfügen
+\textbf{Beschreibung:} Beobachter können sich über diese Schnittstelle bei Datenstrukturen an- (\textit{Subscribe}) und wieder abmelden (\textit{Unsubscribe}), um sich über Änderungen an diesen informieren zu lassen.
+
+\textbf{Paket:} EntityObserver
+
+\subsubsection{IProfileObserver}
 %TODO Bild einfügen
 \textbf{Beschreibung:} Die Schnittstelle \textbf{IProfileObserver} erweitert die\textbf{IIEntityObserver} Schnittstelle.\\
-Zusätzlich zu Änderungen und Löschung können über diese Schnittstelle angemeldete Beobachter über die Aktivierung eines Objekts benachrichtigt werden.
+Über diese Schnittstelle können angemeldete Beobachter über die Aktivierung eines Objekts benachrichtigt werden.
 
 \textbf{Paket:} EntityObserver
 
