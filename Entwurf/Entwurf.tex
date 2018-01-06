@@ -143,7 +143,11 @@ Das \textbf{ViewModel} ist das Verbindungsstück zwischen Model und View. Es fü
 
 \section{Subsysteme}
 \subsection{View}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/ViewLayout.png}
+\caption{Pakete des Subsystems View}
+\end{figure}
 Der View besteht aus allen Klassen und Dateien, die benötigt werden, um die Benutzeroberfläche zu modellieren. Er dient als Eingabe- und Ausgabeschnittstelle der Anwendung.
 Hierbei erfolgt die Modellieren hauptsächlich (Xamarin.Forms konform) in XAML-Dateien, wodurch sich leicht eine einheitliche, plattformübergreifende Oberfläche erstellen lässt. Da es sich bei XAML jedoch um eine "\textit{Markup Language}" handelt, finden diese Dateien im obigen UML-Diagramm keine Darstellung, lediglich die einer XAML-Datei zugehörigen C\#-Dateien sind dort repräsentiert.
 Die einzelnen Ansichten der Anwendung, sprich die UI-Zustände, werden in separaten Klassen erstellt und, um für eine übersichtlichere Struktur zu sorgen, werden diese abhängig ihrer jeweiligen Tab-Zugehörigkeit, in Paketen einsortiert.
@@ -159,7 +163,11 @@ Zu guter Letzt werden alle dem Tab \textit{Profil} zugehörigen Ansichten innerh
 Um Gemeinsamkeiten aller Ansichten nicht redundant definieren zu müssen, existiert zusätzlich das Paket \textbf{AbstractPages}, in welchem beispielsweise grundlegende Attribute aller Pages definiert werden können. Text- oder Hintergrundfarben wären hierfür ebenso Beispiele wie auch die Organisation der Tabbar.
 
 \subsection{ViewModel}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/ViewModel/ViewModelLayout.png}
+\caption{Pakete des Subsystems ViewModel}
+\end{figure}
 Das ViewModel stellt den Vermittler zwischen View und Model dar. Es sorgt für die Aktualisierung sowohl der View als auch des Models. Der Datenaustausch zwischen View und ViewModel erfolgt über das sogenannte \textit{Data Binding}, die Kommunikation mit dem Model erfolgt über die Model-eigenen Schnittstellen.
 
 Ähnlich wie im Aufbau des Views, werden auch im ViewModel aus Gründen der Übersichtlichkeit die einzelnen Klassen je nach Tab-Zugehörigkeit gegliedert.
@@ -408,7 +416,11 @@ Legt eine neue Gruppe von Arztbriefen an, die noch keine Arztbriefe enthält und
 \chapter{Paketführer}
 \section{Paketbeschreibung}
 \subsection{View}
-
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/ViewLayout.png}
+\caption{Pakete der View}
+\end{figure}
 \subsubsection{OverviewTabPages}
 \textbf{Funktion:} Dieses Paket enthält alle Pages des Overview Tabs.
 
@@ -455,6 +467,11 @@ Legt eine neue Gruppe von Arztbriefen an, die noch keine Arztbriefe enthält und
 \textbf{Enthaltene Klassen:} CustomContentPage, App
 
 \subsection{ViewModel}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/ViewModel/ViewModelLayout.png}
+\caption{Pakete des ViewModels}
+\end{figure}
 \subsubsection{AbstractViewModel}
 \textbf{Funktion:} Dieses Paket dient als Überklasse aller anderen ViewModel Klassen, um redundanten Code zu vermeiden.
 
@@ -575,7 +592,7 @@ Die Implementierung der Schnittstelle erzeugt Objekte aus \textbf{DataModel} und
 
 \textbf{Klassendiagramm:} siehe S.
 
-\textbf{Enthaltene Klassen:} IEntityObservable, IEntityObserver, IProfileObservable, IProfileObserver
+\textbf{Enthaltene Klassen:} IEntityObservable, IEntityObserver
 
 \subsubsection{ParserModel}
 \textbf{Funktion:} Dieses Paket enthält die Schnittstelle IParserFacade um zwischen Datenformaten zu konvertieren.
@@ -611,57 +628,129 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textit{Hinweis: Die im folgenden aufgelisteten Klassen bestehen, ganz im Sinne der Xamarin.Forms Cross-Plattform Idee, nicht nur aus C\#-Klassen, sondern besitzen stets auch eine assoziierte XAML-Datei, die im Normalfall den vollständigen Aufbau der Ansicht definiert.}
 
 \subsection{AbstractPages}
-%TODO diagramm
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/AbstractPages.png}
+\caption{Klassen des AbstractPages Paket}
+\end{figure}
+
 \subsubsection{CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/View/CustomContentPage.png}
+\caption{CustomContentPage Klasse}
+\end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{CustomContentPage} legt grundlegende Eigenschaften der gesamten Benutzeroberfläche fest. Dies betrifft beispielsweise Farbgestaltung verschiedener Elemente wie des Hintergrundes, Texte, Tab- und der Statusbar.
 
 \subsubsection{App}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/View/App.png}
+\caption{App Klasse}
+\end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{App} koordiniert den Aufbau der Tabbar und die zu den entsprechenden Tabs gehörenden Ansichten und Tab-Icons.
 
 \subsection{OverviewTabPages}
-%TODO diagramm
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.55\textheight]{graphics/Klassendiagramme/View/OverviewTabPages.png}
+\caption{Klassen des OverviewTabPages Paket}
+\end{figure}
+
 \subsubsection{OverviewPage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/View/OverviewPage.png}
+\caption{OverviewPage Klasse}
+\end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{OverviewPage} definiert die Eigenschaften und Darstellung der Startseite des Tabs \textit{Übersicht}.
 
 \subsubsection{DetailedDoctorsLetterPage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/View/DetailedDoctorsLetterPage.png}
+\caption{DetailedDoctorsLetterPage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{DetailedDoctorsLetterPage} definiert die Eigenschaften und Darstellung der Detailansicht eines Arztbriefes.
 
 \subsection{MedicationTabPages}
-%TODO diagramm
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.55\textheight]{graphics/Klassendiagramme/View/MedicationTabPages.png}
+\caption{Klassen des MedicationTabPages Paket}
+\end{figure}
+
 \subsubsection{MedicationPage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/View/MedicationPage.png}
+\caption{MedicationPage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{MedicationPage} definiert die Eigenschaften und Darstellung der Startseite des Tabs \textit{Medikation}.
 
 \subsubsection{DetailedMedicinePage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/View/DetailedMedicinePage.png}
+\caption{DetailedMedicinePage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{DetailedMedicinePage} definiert die Eigenschaften und Darstellung der Detailansicht einer Medikation.
 
 \subsection{SendDataTabPages}
-%TODO diagramm
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.55\textheight]{graphics/Klassendiagramme/View/SendDataTabPages.png}
+\caption{Klassen des SendDataTabPages Paket}
+\end{figure}
+
 \subsubsection{SendDataPage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/View/SendDataPage.png}
+\caption{SendDataPage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{SendDataPage} definiert die Eigenschaften und Darstellung der Startseite des Tabs \textit{Senden}.
 
 \subsubsection{SelectDoctorsLettersPage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/View/SelectDoctorsLettersPage.png}
+\caption{SelectDoctorsLettersPage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{SelectDoctorsLettersPage} definiert die Eigenschaften und Darstellung der Ansicht zur Auswahl der zu übertragenden Menge an Arztbriefen.
 
 \subsubsection{SelectDevicePage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/View/SelectDevicePage.png}
+\caption{SelectDevicePage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{SelectDevicePage} definiert die Eigenschaften und Darstellung der Ansicht zur Auswahl des Empfanggerätes der zuvor ausgewählten Menge an Arztbriefen.
 
 \subsubsection{TransmittingDataPage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/View/TransmittingDataPage.png}
+\caption{TransmittingDataPage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{TransmittingDataPage} definiert die Eigenschaften und Darstellung der Ansicht eines aktiven Sendevorganges. Sie beschreibt die dritte und letzte Ansicht eines selbstinitiierten Sendevorganges. 
 
 \subsection{ProfileTabPages}
-%TODO diagramm
+
 \subsubsection{ProfilePage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/View/ProfilePage.png}
+\caption{ProfilePage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{ProfilePage} definiert die Eigenschaften und Darstellung der Startseite des Tabs \textit{Profil}.
 
 
@@ -670,12 +759,28 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \subsection{AbstractViewModel}
 \subsubsection{AbstractViewModel}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/AbstractViewModel.png}
+\caption{AbstractViewModel Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{AbstractViewModel} kapselt Methoden und Funktionen, die in (beinahe) allen ViewModel-Klassen benötigt werden.
 
 \subsection{OverviewTabViewModel}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/ViewModel/OverviewTabViewModel.png}
+\caption{Klassen des OverviewTabViewModel Paket}
+\end{figure}
+
 \subsubsection{OverviewViewModel : AbstractViewModel}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/OverviewViewModel.png}
+\caption{OverviewViewModel Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{OverviewViewModel} verwaltet die Liste der anzuzeigenden Arztbriefe der View \textit{OverviewPage} und die Funktionsweise der dort angelegten UI-Elemente.
 
 \textbf{Attribute:}\\
@@ -685,7 +790,12 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Paket:} OverviewTabViewModel
 
 \subsubsection{DoctorsLetterViewModel : AbstractViewModel}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/DoctorsLetterViewModel.png}
+\caption{DoctorsLetterViewModel Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{DoctorsLetterViewModel} ist für die Zusammensetzung eines Arztbrieflisteneintrages zuständig.
 
 \textbf{Attribute:}\\
@@ -697,7 +807,12 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Paket:} OverviewTabViewModel
 
 \subsubsection{DetailedDoctorsLetterViewModel : DoctorsLetterViewModel}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/DetailedDoctorsLetterViewModel.png}
+\caption{DetailedDoctorsLetterViewModel Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{DetailedDoctorsLetterViewModel} kümmert sich um die Zusammensetzung eines ausführlichen Arztbriefes, dargestellt in der \textit{DetailedDoctorsLetterPage}. Um Redundanz zu vermeiden, erbt diese Klasse von \textit{DoctorsLetterViewModel}.
 
 \textbf{Attribute:}\\
@@ -707,8 +822,19 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Paket:} OverviewTabViewModel
 
 \subsection{MedicationTabViewModel}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/ViewModel/MedicationTabViewModel.png}
+\caption{Klassen des MedicationTabViewModel Paket}
+\end{figure}
+
 \subsubsection{MedicationViewModel : AbstractViewModel}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\textheight]{graphics/Klassendiagramme/ViewModel/MedicationViewModel.png}
+\caption{MedicationViewModel Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{MedicationViewModel} verwaltet die Liste der anzuzeigenden Medikationen der View \textit{MedicationPage} und die Funktionsweise der dort angelegten UI-Elemente.
 
 \textbf{Attribute:}\\
@@ -718,7 +844,12 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Paket:} MedicationTabViewModel
 
 \subsubsection{MedicineViewModel : AbstractViewModel}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/MedicineViewModel.png}
+\caption{MedicineViewModel Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{MedicineViewModel} ist für die Zusammensetzung eines Medikationlisteneintrages zuständig.
 
 \textbf{Attribute:}\\
@@ -731,7 +862,12 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Paket:} MedicationTabViewModel
 
 \subsubsection{DetailedMedicineViewModel : MedicineViewModel}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/ViewModel/DetailedMedicineViewModel.png}
+\caption{DetailedMedicineViewModel Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{DetailedMedicineViewModel} implementiert, wie bereits bestehende Medikationen in ihren Parametern angepasst oder neue Medikationen angelegt werden können. Um Redundanz zu vermeiden, erbt diese Klasse von \textit{MedicineViewModel}.
 
 \textbf{Attribute:}\\
@@ -741,14 +877,30 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Paket:} MedicationTabViewModel
 
 \subsection{SendDataTabViewModel}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/SendDataTabViewModel.png}
+\caption{Klassen des SendDataTabViewModel Paket}
+\end{figure}
+
 \subsubsection{SendDataViewModel : AbstractViewModel}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/SendDataViewModel.png}
+\caption{SendDataViewModel Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{SendDataViewModel} verwaltet die Funktionsweise der in \textit{SendDataPage} angelegten UI-Elemente.
 
 \textbf{Paket:} SendDataTabViewModel
 
 \subsubsection{SelectDoctorsLettersViewModel : AbstractViewModel}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/SelectDoctorsLettersViewModel.png}
+\caption{SelectDoctorsLettersViewModel Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{SelectDoctorsLettersViewModel} koordiniert die in \textit{SelectDoctorsLettersPage} darzustellenden Arztbriefe sowie die Menge der vom Nutzer ausgewählten Arztbriefe.
 
 \textbf{Attribute:}\\
@@ -760,7 +912,12 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Paket:} SendDataTabViewModel
 
 \subsubsection{SelectDeviceViewModel : AbstractViewModel}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/SelectDeviceViewModel.png}
+\caption{SelectDeviceViewModel Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{SelectDeviceViewModel} koordiniert die in \textit{SelectDevicePage} darzustellenden Geräte in Reichweite sowie die Auswahl des Empfängers durch den Nutzer
 
 \textbf{Attribute:}\\
@@ -775,7 +932,12 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Paket:} SendDataTabViewModel
 
 \subsubsection{TransmittingDataViewModel : AbstractViewModel}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/TransmittingDataViewModel.png}
+\caption{TransmittingDataViewModel Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{TransmittingDataViewModel} verteilt die vom Nutzer in den Schritten zuvor ausgewählten Daten an die verschiedenen zuständigen Modelklassen. Neben den zu übertragenden Arztbriefen umfasst dies auch den zu kontaktierenden Empfänger.
 
 \textbf{Attribute:}\\
@@ -784,8 +946,14 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Paket:} SendDataTabViewModel
 
 \subsection{ProfileTabViewModel}
+
 \subsubsection{ProfileViewModel : AbstractViewModel}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/ProfileViewModel.png}
+\caption{ProfileViewModel Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{ProfileViewModel} verwaltet das in \textit{ProfilePage}anzuzeigende Profil und die Funktionsweise der dort angelegten UI-Elemente.
 
 \textbf{Attribute:}\\
@@ -802,7 +970,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \subsubsection{ModelFacade : IModelFacade}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/ModelFacade.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/ModelFacade.png}
 \caption{ModelFacade Klasse}
 \end{figure}
 \textbf{Beschreibung:} Die \textbf{ModelFacade} implementiert die Fassaden-Schnittstelle \textbf{IModelFacade}. Sie delegiert bei einem Aufruf an eine oder mehrere Schnittstellen der restlichen Pakete des Subsystems.
@@ -822,14 +990,14 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \subsection{DatabaseModel}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/DatabaseModelPackage.png}
+\includegraphics[width=0.55\textheight]{graphics/Klassendiagramme/Model/DatabaseModelPackage.png}
 \caption{Klassen des DatabaseModel Paket}
 \end{figure}
 
 \subsubsection{IEntityDatabase}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IEntityDatabase.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IEntityDatabase.png}
 \caption{IEntityDatabase Schnittstelle}
 \end{figure}
 \textbf{Beschreibung:} Die Schnittstelle \textbf{IEntityDatabase} bietet eine Zugriffsmöglichkeit auf die verwendete Datenbank an.\\
@@ -840,7 +1008,7 @@ Hier kann das aktuelle Profil gewechselt werden \textbf{SetActiveProfile} und so
 \subsubsection{EntityDatabase : IEntityDatabase, IEntityObserver, IProfileObserver}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/EntityDatabase.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/EntityDatabase.png}
 \caption{EntityDatabase Klasse}
 \end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{EntityDatabase} implementiert die \textbf{IEntityDatabase} Schnittstelle. Dabei werden Aufrufe von Methoden aus dieser Schnittstelle größtenteils an die hier verwendete SQLite-Library weitergeleitet.\\
@@ -859,7 +1027,7 @@ Weiterhin wird die \textbf{IEntityObserver} Schnittstelle implementiert, sodass 
 \subsubsection{Entity : IEntity, IEntityObservable}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/Entity.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/Entity.png}
 \caption{Entity Klasse}
 \end{figure}
 \textbf{Beschreibung:} Die abstrakte Klasse \textbf{Entity} implementiert die \textbf{IEntity} Schnittstelle als Vorlage für eine SQLite-Datenbanktabelle.\\
@@ -876,7 +1044,7 @@ Bevor eine Entität aus ihrer Datenbank gelöscht wird, sollten all ihre Assozia
 \subsubsection{Profile : Entity, IProfile}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/Profile.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/Profile.png}
 \caption{Profile Klasse}
 \end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{Profile} implementiert die \textbf{IProfile} Schnittstelle und erweitert die \textbf{Entity} Klasse um in einer Datenbank gespeichert werden zu können.\\
@@ -893,7 +1061,7 @@ Ein Profil enthält dabei verschiedene Informationen über einen Nutzer, die in 
 \subsubsection{Doctor : Entity, IDoctor}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/Doctor.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/Doctor.png}
 \caption{Doctor Klasse}
 \end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{Doctor} implementiert die \textbf{IDoctor} Schnittstelle und erweitert die \textbf{Entity} Klasse um in einer Datenbank gespeichert werden zu können.\\
@@ -908,9 +1076,10 @@ Hier werden die Informationen über einen Arzt gekapselt.
 \subsubsection{Data : Entity, IData}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/Data.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/Data.png}
 \caption{Data Klasse}
 \end{figure}
+
 \textbf{Beschreibung:} Die abstrakte Klasse \textbf{Data} implementiert die \textbf{IData} Schnittstelle und erweitert die \textbf{Entity} Klasse um in einer Datenbank gespeichert werden zu können.\\
 Diese Klasse dient als Strukturelement in der Vererbungshierarchie im \textbf{DataModel} Paket, und kann deshalb nicht selbst instanziiert werden, dies ist nur für ihre Unterklassen möglich.
 
@@ -924,7 +1093,7 @@ Diese Klasse dient als Strukturelement in der Vererbungshierarchie im \textbf{Da
 \subsubsection{DoctorsLetter : Data, IDoctorsLetter}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/DoctorsLetter.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/DoctorsLetter.png}
 \caption{DoctorsLetter Klasse}
 \end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{DoctorsLetter} implementiert die \textbf{IDoctorsLetter} Schnittstelle und erweitert die \textbf{Data} Klasse.\\
@@ -942,7 +1111,7 @@ Hier werden die Informationen über einen  Arztbrief gekapselt.
 \subsubsection{DoctorsLetterGroup : Data, IDoctorsLetterGroup}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/DoctorsLetterGroup.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/DoctorsLetterGroup.png}
 \caption{DoctorsLetterGroup Klasse}
 \end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{DoctorsLetterGroup} implementiert die \textbf{IDoctorsLetterGroup} Schnittstelle und erweitert die \textbf{Data} Klasse.\\
@@ -956,7 +1125,7 @@ Hier wird eine Ansammlung von Arztbriefen gekapselt.
 \subsubsection{Medication : Data, IMedication}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/Medication.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/Medication.png}
 \caption{Medication Klasse}
 \end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{Medication} implementiert die \textbf{IMedication} Schnittstelle und erweitert die \textbf{Data} Klasse.\\
@@ -973,14 +1142,14 @@ Hier werden alle Informationen über eine Medikation gekapselt.
 \subsection{EntityFactory}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/EntityFactoryPackage.png}
+\includegraphics[width=0.55\textheight]{graphics/Klassendiagramme/Model/EntityFactoryPackage.png}
 \caption{Klassen des EntityFactory Paket}
 \end{figure}
 
 \subsubsection{IEntityFactory}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IEntityFactory.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IEntityFactory.png}
 \caption{IEntityFactory Schnittstelle}
 \end{figure}
 \textbf{Beschreibung:} Schnittstelle zum Erstellen von Entitäten, also Arztbriefen (\textit{CreateEmptyDoctorsLetter}), Gruppen von Arztbriefen (\textit{CreateEmptyGroup}), Medikationen (\textit{CreateEmptyMedication}) und Profilen (\textit{CreateEmptyProfile}).
@@ -990,7 +1159,7 @@ Hier werden alle Informationen über eine Medikation gekapselt.
 \subsubsection{EntityFactory : IEntityFactory}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/EntityFactory.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/EntityFactory.png}
 \caption{EntityFactory Klasse}
 \end{figure}
 \textbf{Beschreibung:} Implementierung der \textbf{IEntityFactory} Schnittstelle. Fügt Entitäten bei deren Erstellung in die Datenbank \textit{database} ein und meldet sie als Beobachter an.
@@ -1011,7 +1180,7 @@ Hier werden alle Informationen über eine Medikation gekapselt.
 \subsubsection{IEntityObservable}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IEntityObservable.png}
+\includegraphics[width=0.55\textheight]{graphics/Klassendiagramme/Model/IEntityObservable.png}
 \caption{EntityObservable Schnittstelle}
 \end{figure}
 \textbf{Beschreibung:} Beobachter können sich über diese Schnittstelle bei Datenstrukturen an- (\textit{Subscribe}) und wieder abmelden (\textit{Unsubscribe}), um sich über Änderungen an diesen informieren zu lassen.
@@ -1021,7 +1190,7 @@ Hier werden alle Informationen über eine Medikation gekapselt.
 \subsubsection{IEntityObserver}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IEntityObserver.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IEntityObserver.png}
 \caption{IEntityObserver Schnittstelle}
 \end{figure}
 \textbf{Beschreibung:} Schnittstelle um IEntityObservable-Objekte beobachten zu können. \\
@@ -1032,7 +1201,7 @@ Diese können dann, wenn sie geändert (\textit{OnUpdate}) oder gelöscht (\text
 \subsubsection{IProfileObservable}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IProfileObservable.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IProfileObservable.png}
 \caption{IProfileObservable Schnittstelle}
 \end{figure}
 \textbf{Beschreibung:} Beobachter können sich über diese Schnittstelle bei Datenstrukturen an- (\textit{Subscribe}) und wieder abmelden (\textit{Unsubscribe}), um sich über Änderungen an diesen informieren zu lassen.
@@ -1042,7 +1211,7 @@ Diese können dann, wenn sie geändert (\textit{OnUpdate}) oder gelöscht (\text
 \subsubsection{IProfileObserver}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IProfileObserver.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IProfileObserver.png}
 \caption{IProfileObserver Schnittstelle}
 \end{figure}
 \textbf{Beschreibung:} Die Schnittstelle \textbf{IProfileObserver} erweitert die\textbf{IIEntityObserver} Schnittstelle.\\
@@ -1071,7 +1240,7 @@ Hier können Arztbriefe aus einer Datei in eine Datenbank eingefügt werden (\te
 \subsubsection{ParserFacade : IParserFacade}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/ParserFacade.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/ParserFacade.png}
 \caption{ParserFacade Klasse}
 \end{figure}
 \textbf{Beschreibung:} Implementierung der \textbf{IParserFacade} Schnittstelle. Wählt bei Aufruf den passenden Parser aus diesem Paket aus und delegiert an diesen.
@@ -1081,7 +1250,7 @@ Hier können Arztbriefe aus einer Datei in eine Datenbank eingefügt werden (\te
 \subsubsection{FileToDatabaseParser}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/FileToDatabaseParser.png}
+\includegraphics[width=0.55\textheight]{graphics/Klassendiagramme/Model/FileToDatabaseParser.png}
 \caption{FileToDatabaseParser Klasse}
 \end{figure}
 \textbf{Beschreibung:} Abstrakte Klasse zum Konvertieren eines in einer Datei gespeicherten Arztbriefs in ein \textbf{DoctorsLetter} Objekt, dass in einer \textbf{IEntityDatabase} gespeichert wird (\textit{ParseFile}).\\
@@ -1092,7 +1261,7 @@ Die Implementierung der Methoden um die nötigen Informationen, also die Attribu
 \subsubsection{Hl7ToDatabaseParser : FileToDatabaseParser}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/Hl7ToDatabaseParser.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/Hl7ToDatabaseParser.png}
 \caption{Hl7ToDatabaseParser Klasse}
 \end{figure}
 \textbf{Beschreibung:} Implementierung der abstrakten Klasse \textbf{FileToDatabaseParser} und ihrer abstrakten Einschubmethoden (\textit{ParseLetter}, \textit{ParseMedications}, \textit{ParseDoctor}, \textit{ParseProfile}) für das .hl7 Dateiformat.
@@ -1102,7 +1271,7 @@ Die Implementierung der Methoden um die nötigen Informationen, also die Attribu
 \subsubsection{LetterToOriginalFileParser}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/LetterToOriginalFileParser.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/LetterToOriginalFileParser.png}
 \caption{LetterToOriginalFileParser Klasse}
 \end{figure}
 \textbf{Beschreibung:} Konvertiert einen Arztbrief zu dem Dateiformat in dem er vor seiner Erstellung gesendet wurde (\textit{ParseLetter}).\\
@@ -1113,14 +1282,14 @@ Da die Originaldatei auch nach der Erstellung des Arztbriefs gespeichert bleibt,
 \subsection{FileHelper}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/FileHelperPackage.png}
+\includegraphics[width=0.55\textheight]{graphics/Klassendiagramme/Model/FileHelperPackage.png}
 \caption{Klassen des FileHelper Paket}
 \end{figure}
 
 \subsubsection{IFileHelper}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IFileHelper.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IFileHelper.png}
 \caption{IFileHelper Schnittstelle}
 \end{figure}
 \textbf{Beschreibung:} Schnittstelle um den Namen einer Datei im Verzeichnis der Anwendung in einen vollständigen Dateipfad umzuwandeln (\textit{GetLocalFilepath}).
@@ -1130,7 +1299,7 @@ Da die Originaldatei auch nach der Erstellung des Arztbriefs gespeichert bleibt,
 \subsubsection{FileHelper : IFileHelper}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/FileHelper.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/FileHelper.png}
 \caption{FileHelper Klasse}
 \end{figure}
 \textbf{Beschreibung:} Direkte Implementierung der \textbf{IFileHelper} Schnittstelle. Muss plattformspezifisch implementiert werden.
