@@ -416,7 +416,11 @@ Legt eine neue Gruppe von Arztbriefen an, die noch keine Arztbriefe enthält und
 \chapter{Paketführer}
 \section{Paketbeschreibung}
 \subsection{View}
-
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/ViewLayout.png}
+\caption{Pakete der View}
+\end{figure}
 \subsubsection{OverviewTabPages}
 \textbf{Funktion:} Dieses Paket enthält alle Pages des Overview Tabs.
 
@@ -463,6 +467,11 @@ Legt eine neue Gruppe von Arztbriefen an, die noch keine Arztbriefe enthält und
 \textbf{Enthaltene Klassen:} CustomContentPage, App
 
 \subsection{ViewModel}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/ViewModel/ViewModelLayout.png}
+\caption{Pakete des ViewModels}
+\end{figure}
 \subsubsection{AbstractViewModel}
 \textbf{Funktion:} Dieses Paket dient als Überklasse aller anderen ViewModel Klassen, um redundanten Code zu vermeiden.
 
@@ -619,57 +628,134 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textit{Hinweis: Die im folgenden aufgelisteten Klassen bestehen, ganz im Sinne der Xamarin.Forms Cross-Plattform Idee, nicht nur aus C\#-Klassen, sondern besitzen stets auch eine assoziierte XAML-Datei, die im Normalfall den vollständigen Aufbau der Ansicht definiert.}
 
 \subsection{AbstractPages}
-%TODO diagramm
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/AbstractPages.png}
+\caption{Klassen des AbstractPages Paket}
+\end{figure}
 \subsubsection{CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/CustomContentPage.png}
+\caption{CustomContentPage Klasse}
+\end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{CustomContentPage} legt grundlegende Eigenschaften der gesamten Benutzeroberfläche fest. Dies betrifft beispielsweise Farbgestaltung verschiedener Elemente wie des Hintergrundes, Texte, Tab- und der Statusbar.
 
 \subsubsection{App}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/App.png}
+\caption{App Klasse}
+\end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{App} koordiniert den Aufbau der Tabbar und die zu den entsprechenden Tabs gehörenden Ansichten und Tab-Icons.
 
 \subsection{OverviewTabPages}
-%TODO diagramm
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/OverviewTabPages.png}
+\caption{Klassen des OverviewTabPages Paket}
+\end{figure}
+
 \subsubsection{OverviewPage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/OverviewTabPages.png}
+\caption{OverviewPage Klasse}
+\end{figure}
 \textbf{Beschreibung:} Die Klasse \textbf{OverviewPage} definiert die Eigenschaften und Darstellung der Startseite des Tabs \textit{Übersicht}.
 
 \subsubsection{DetailedDoctorsLetterPage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/OverviewTabPages.png}
+\caption{DetailedDoctorsLetterPage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{DetailedDoctorsLetterPage} definiert die Eigenschaften und Darstellung der Detailansicht eines Arztbriefes.
 
 \subsection{MedicationTabPages}
-%TODO diagramm
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/MedicationTabPages.png}
+\caption{Klassen des MedicationTabPages Paket}
+\end{figure}
+
 \subsubsection{MedicationPage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/MedicationPage.png}
+\caption{MedicationPage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{MedicationPage} definiert die Eigenschaften und Darstellung der Startseite des Tabs \textit{Medikation}.
 
 \subsubsection{DetailedMedicinePage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/DetailedMedicinePage.png}
+\caption{DetailedMedicinePage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{DetailedMedicinePage} definiert die Eigenschaften und Darstellung der Detailansicht einer Medikation.
 
 \subsection{SendDataTabPages}
-%TODO diagramm
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/SendDataTabPages.png}
+\caption{Klassen des SendDataTabPages Paket}
+\end{figure}
+
 \subsubsection{SendDataPage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/SendDataPage.png}
+\caption{SendDataPage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{SendDataPage} definiert die Eigenschaften und Darstellung der Startseite des Tabs \textit{Senden}.
 
 \subsubsection{SelectDoctorsLettersPage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/SelectDoctorsLettersPage.png}
+\caption{SelectDoctorsLettersPage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{SelectDoctorsLettersPage} definiert die Eigenschaften und Darstellung der Ansicht zur Auswahl der zu übertragenden Menge an Arztbriefen.
 
 \subsubsection{SelectDevicePage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/SelectDevicePage.png}
+\caption{SelectDevicePage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{SelectDevicePage} definiert die Eigenschaften und Darstellung der Ansicht zur Auswahl des Empfanggerätes der zuvor ausgewählten Menge an Arztbriefen.
 
 \subsubsection{TransmittingDataPage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/TransmittingDataPage.png}
+\caption{TransmittingDataPage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{TransmittingDataPage} definiert die Eigenschaften und Darstellung der Ansicht eines aktiven Sendevorganges. Sie beschreibt die dritte und letzte Ansicht eines selbstinitiierten Sendevorganges. 
 
 \subsection{ProfileTabPages}
-%TODO diagramm
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/ProfileTabPages.png}
+\caption{Klassen des ProfileTabPages Paket}
+\end{figure}
+
 \subsubsection{ProfilePage : CustomContentPage}
-%TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/ProfilePage.png}
+\caption{ProfilePage Klasse}
+\end{figure}
+
 \textbf{Beschreibung:} Die Klasse \textbf{ProfilePage} definiert die Eigenschaften und Darstellung der Startseite des Tabs \textit{Profil}.
 
 
