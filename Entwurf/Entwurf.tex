@@ -211,10 +211,11 @@ Hier sind die Schnittstellen der medizinischen Daten enthalten, die angezeigt we
 \includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/DataModelInterfacePackage.png}
 \caption{DataModel Schnittstellen}
 \end{figure}
+
 \paragraph{IEntity}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IEntity.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IEntity.png}
 \caption{IEntity Schnittstelle}
 \end{figure}
 \textbf{GetName() : string}\\
@@ -231,7 +232,7 @@ Die Schnittstelle \textbf{IData} erweitert \textbf{IEntity}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IData.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IData.png}
 \caption{IData Schnittstelle}
 \end{figure}
 \textbf{GetDate() : DateTime}\\
@@ -248,7 +249,7 @@ Die Schnittstelle \textbf{IDoctorsLetter} erweitert \textbf{IData}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IDoctorsLetter.png}
+\includegraphics[width=0.55\textheight]{graphics/Klassendiagramme/Model/IDoctorsLetter.png}
 \caption{IDoctorsLetter Schnittstelle}
 \end{figure}
 \textbf{GetDiagnosis() : string}\\
@@ -280,7 +281,7 @@ Die Schnittstelle \textbf{IDoctorsLetter} erweitert \textbf{IData}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IDoctorsLetterGroup.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IDoctorsLetterGroup.png}
 \caption{IDoctorsLetterGroup Schnittstelle}
 \end{figure}
 \textbf{GetAll() : IList<IDoctorsLetter>}\\
@@ -300,7 +301,7 @@ Die Schnittstelle \textbf{IMedication} erweitert \textbf{IData}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IMedication.png}
+\includegraphics[width=0.55\textheight]{graphics/Klassendiagramme/Model/IMedication.png}
 \caption{IMedication Schnittstelle}
 \end{figure}
 \textbf{SetDate(date : DateTime) : void}\\
@@ -336,7 +337,7 @@ Die Schnittstelle \textbf{IProfile} erweitert \textbf{IEntity}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IProfile.png}
+\includegraphics[width=0.55\textheight]{graphics/Klassendiagramme/Model/IProfile.png}
 \caption{IProfile Schnittstelle}
 \end{figure}
 \textbf{GetInsuranceNumber() : string}\\
@@ -371,7 +372,7 @@ Die Schnittstelle \textbf{IDoctor} erweitert \textbf{IEntity}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IDoctor.png}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IDoctor.png}
 \caption{IDoctor Schnittstelle}
 \end{figure}
 \textbf{GetField() : string}\\
@@ -386,7 +387,7 @@ Die Enumerationen \textit{Sensitivity}, \textit{Interval} und \textit{BloodType}
 \subsubsection{ModelFacadeInterface}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/ModelFacadeInterface.png}
+\includegraphics[width=0.55\textheight]{graphics/Klassendiagramme/Model/ModelFacadeInterface.png}
 \caption{ModelFacade Schnittstelle}
 \end{figure}
 Dies ist die Haupteinstiegsstelle für andere Subsysteme (hier nur das ViewModel) in das Model. Als Ein- und Ausgabeparameter werden die zuvor aufgeführten Schnittstellen verwendet. Alle komplexeren Operationen die nicht schon von diesen Schnittstellen übernommen werden, sind hier enthalten:
