@@ -137,9 +137,9 @@ Ein Partner ist fest an ein von \textit{Xamarin.Forms} unterstütztes Gerät geb
 
 Das \textbf{Model} enthält die Anwendungslogik und ist komplett unabhängig von den restlichen Subsystemen. Hier findet auch die Kommunikation mit anderen Partnern statt.
 
-%TODO \textbg{View} View erklären und evtl ViewModel Erklärung korrigieren/erweitern, da habt ihr glaub ich n besseren Überblick drüber wie genau des funktioniert -Philipp K.
+Die \textbf{View} beinhaltet die Gestaltung der Benutzeroberfläche. Dabei wird das Seitenlayout jeder UI-Seite in .XAML modeliert.
 
-Das \textbf{ViewModel} ist das Verbindungsstück zwischen Model und View. Es führt Zugriffe auf das Model über dessen Schnittstellen aus und reicht dem View anzuzeigende Informationen über das \textit{Xamarin.Forms} Data-Binding Framework.
+Das \textbf{ViewModel} ist das Verbindungsstück zwischen Model und View. Es führt Zugriffe auf das Model über dessen Schnittstellen aus,reicht dem View anzuzeigende Informationen über das \textit{Xamarin.Forms} Data-Binding Framework und implementiert die Benutzeroberflächenlogik.
 
 \section{Subsysteme}
 \subsection{View}
@@ -194,7 +194,7 @@ Um den Zugriff auf das Model zu vereinfachen wird das Fassaden Muster verwendet.
 \section{Subsystem-Schnittstellen}
 \subsection{ModelInterface}
 \subsubsection{TransmissionModelInterface}
-%TODO
+Das TransmissionModelInterface zeigt alle Methoden an, die zum Senden/Empfangen einer Bluetooth-Datenübertragung benötigt werden. %TODO Empfangen-Methode hinzufügen, evtl. bessere Beschreibung dieses Textes.
 \subsubsection{DataModelInterface}
 Hier sind die Schnittstellen der medizinischen Daten enthalten, die angezeigt werden sollen. Die hier aufgeführten Methoden umfassen daher das Abfragen von Informationen über die Daten aber auch einfache Operationen die auf diesen Daten ausgeführt werden, wie zum Beispiel das Ändern dieser Informationen.
 
