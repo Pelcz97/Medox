@@ -679,7 +679,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Beschreibung:} Die Klasse \textbf{OverviewViewModel} verwaltet die Liste der anzuzeigenden Arztbriefe der View \textit{OverviewPage} und die Funktionsweise der dort angelegten UI-Elemente.
 
 \textbf{Attribute:}\\
-+ \textit{DoctorsLettersList : IList<DoctorsLetterViewModel>} - Die Menge der anzuzeigenden Arztbriefe\\
+- \textit{DoctorsLettersList : IList<DoctorsLetterViewModel>} - Die Menge der anzuzeigenden Arztbriefe\\
 - \textit{EditButton : ToolbarItem} - Knopf in der Toolbar, um die Liste der Arztbriefe editieren zu können\\
 
 \textbf{Paket:} OverviewTabViewModel
@@ -712,7 +712,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Beschreibung:} Die Klasse \textbf{MedicationViewModel} verwaltet die Liste der anzuzeigenden Medikationen der View \textit{MedicationPage} und die Funktionsweise der dort angelegten UI-Elemente.
 
 \textbf{Attribute:}\\
-+ \textit{MedicationsList : IList<MedicineViewModel>} - Die Menge der anzuzeigenden Medikationen\\
+- \textit{MedicationsList : IList<MedicineViewModel>} - Die Menge der anzuzeigenden Medikationen\\
 - \textit{AddEntryButton : ToolbarItem} - Knopf in der Toolbar, um neue Medikationen anlegen zu können\\
 
 \textbf{Paket:} MedicationTabViewModel
@@ -722,7 +722,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Beschreibung:} Die Klasse \textbf{MedicineViewModel} ist für die Zusammensetzung eines Medikationlisteneintrages zuständig.
 
 \textbf{Attribute:}\\
-+ \textit{Medication : Medication} - Eine anzuzeigende Medikation\\
+- \textit{Medication : Medication} - Eine anzuzeigende Medikation\\
 - \textit{medicationName : string} - Die Bezeichnung des eingenommenen Medikaments oder Wirkstoffes\\
 - \textit{startingDate : DateTime} - Das Datum des Einnahmebeginns\\
 - \textit{endingDate : DateTime} - Das Datum des Einnahmeendes\\
@@ -808,10 +808,10 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Beschreibung:} Die \textbf{ModelFacade} implementiert die Fassaden-Schnittstelle \textbf{IModelFacade}. Sie delegiert bei einem Aufruf an eine oder mehrere Schnittstellen der restlichen Pakete des Subsystems.
 
 \textbf{Attribute:}\\
-+ \textit{database : IEntityDatabase} - Die Datenbank, in der Entitäten gespeichert werden\\
-+ \textit{factory : IEntityFactory} - Enthält die Logik um Entitäten zu erstellen\\
-+ \textit{parser : IParserFacade} - Enthält die Logik um zwischen Datenformaten zu konvertierten\\
-+ \textit{fileHelper : IFileHelper} - Helferklasse zum Dateizugriff\\
+- \textit{database : IEntityDatabase} - Die Datenbank, in der Entitäten gespeichert werden\\
+- \textit{factory : IEntityFactory} - Enthält die Logik um Entitäten zu erstellen\\
+- \textit{parser : IParserFacade} - Enthält die Logik um zwischen Datenformaten zu konvertierten\\
+- \textit{fileHelper : IFileHelper} - Helferklasse zum Dateizugriff\\
 %TODO Schnittstelle zum TransmissionModel
 
 \textbf{Paket:} ModelFacade
@@ -866,8 +866,8 @@ Diese Klasse dient als Strukturelement in der Vererbungshierarchie im \textbf{Da
 Bevor eine Entität aus ihrer Datenbank gelöscht wird, sollten all ihre Assoziationen zu anderen Entitäten aufgelöst werden (\textit{Dispose}).
 
 \textbf{Attribute:}\\
-+ \textit{id : int} - Die ID über die Entitäten in einer Datenbank identifiziert werden können\\
-+ \textit{name : string} - Der Name der Entität
+- \textit{id : int} - Die ID über die Entitäten in einer Datenbank identifiziert werden können\\
+- \textit{name : string} - Der Name der Entität
 
 \textbf{Paket:} DataModel
 
@@ -881,10 +881,10 @@ Bevor eine Entität aus ihrer Datenbank gelöscht wird, sollten all ihre Assozia
 Ein Profil enthält dabei verschiedene Informationen über einen Nutzer, die in den Attributen aufgelistet werden.
 
 \textbf{Attribute:}\\
-+ \textit{birthDate : DateTime} - Das Geburtsdatum des Nutzers\\
-+ \textit{bloodGroup : BloodGroup} - Die Blutgruppe des Nutzers\\
-+ \textit{insuranceNumber : string} - Die Versicherungsnummer des Nutzers\\
-+ \textit{firstName : string} - Der Vorname des Nutzers
+- \textit{birthDate : DateTime} - Das Geburtsdatum des Nutzers\\
+- \textit{bloodGroup : BloodGroup} - Die Blutgruppe des Nutzers\\
+- \textit{insuranceNumber : string} - Die Versicherungsnummer des Nutzers\\
+- \textit{firstName : string} - Der Vorname des Nutzers
 
 \textbf{Paket:} DataModel
 
@@ -898,8 +898,8 @@ Ein Profil enthält dabei verschiedene Informationen über einen Nutzer, die in 
 Hier werden die Informationen über einen Arzt gekapselt.
 
 \textbf{Attribute:}\\ 
-+ \textit{profile : IProfile} - Das Profil, dem dieser Arzt zugeordnet ist\\
-+ \textit{field : string} - Das Fachgebiet des Arztes
+- \textit{profile : IProfile} - Das Profil, dem dieser Arzt zugeordnet ist\\
+- \textit{field : string} - Das Fachgebiet des Arztes
 
 \textbf{Paket:} DataModel
 
@@ -913,9 +913,9 @@ Hier werden die Informationen über einen Arzt gekapselt.
 Diese Klasse dient als Strukturelement in der Vererbungshierarchie im \textbf{DataModel} Paket, und kann deshalb nicht selbst instanziiert werden, dies ist nur für ihre Unterklassen möglich.
 
 \textbf{Attribute:}\\
-+ \textit{date : DateTime} - Das Datum von dem diese Daten stammen\\
-+ \textit{profile : IProfile} - Das Profil, dem diese Daten zugeordnet sind\\
-+ \textit{sensitivity : Sensitivity} - Die Sensitivität der Daten
+- \textit{date : DateTime} - Das Datum von dem diese Daten stammen\\
+- \textit{profile : IProfile} - Das Profil, dem diese Daten zugeordnet sind\\
+- \textit{sensitivity : Sensitivity} - Die Sensitivität der Daten
 
 \textbf{Paket:} DataModel
 
@@ -929,11 +929,11 @@ Diese Klasse dient als Strukturelement in der Vererbungshierarchie im \textbf{Da
 Hier werden die Informationen über einen  Arztbrief gekapselt.
 
 \textbf{Attribute:}\\ 
-+ \textit{diagnosis : string} - Die Diagnose, die in diesem Arztbrief enthalten ist\\
-+ \textit{filepath : string} - Der Dateipfad in der der originale Arztbrief gespeichert ist\\
-+ \textit{groups : IList<IDoctorsLetterGroup>} - Die Gruppen in denen dieser Arztbrief enthalten ist\\
-+ \textit{meds : IList<IMedication>} - Die Medikationen, die in diesem Arztbrief verschrieben wurden\\
-+ \textit{doctor : IDoctor} - Der Arzt der diesen Arztbrief erstellt hat
+- \textit{diagnosis : string} - Die Diagnose, die in diesem Arztbrief enthalten ist\\
+- \textit{filepath : string} - Der Dateipfad in der der originale Arztbrief gespeichert ist\\
+- \textit{groups : IList<IDoctorsLetterGroup>} - Die Gruppen in denen dieser Arztbrief enthalten ist\\
+- \textit{meds : IList<IMedication>} - Die Medikationen, die in diesem Arztbrief verschrieben wurden\\
+- \textit{doctor : IDoctor} - Der Arzt der diesen Arztbrief erstellt hat
 
 \textbf{Paket:} DataModel
 
@@ -947,7 +947,7 @@ Hier werden die Informationen über einen  Arztbrief gekapselt.
 Hier wird eine Ansammlung von Arztbriefen gekapselt.
 
 \textbf{Attribute:}\\
-+ \textit{groups : IList<IDoctorsLetter>} - Die Arztbriefe die in dieser Gruppe enthalten sind
+- \textit{groups : IList<IDoctorsLetter>} - Die Arztbriefe die in dieser Gruppe enthalten sind
 
 \textbf{Paket:} DataModel
 
@@ -961,10 +961,10 @@ Hier wird eine Ansammlung von Arztbriefen gekapselt.
 Hier werden alle Informationen über eine Medikation gekapselt.
 
 \textbf{Attribute:}\\
-+ \textit{letter : IDoctorsLetter} - Der Arztbrief in dem diese Medikation verschrieben wurde\\
-+ \textit{frequency : int} - Gibt an wie oft die Medikation in ihrem \textit{interval} eingenommen werden soll\\
-+ \textit{interval : Interval} - Gibt an in welchem Intervall die Medikation eingenommen werden soll\\
-+ \textit{endDate : DateTime} - Das Datum an dem die Medikation abgesetzt werden soll/sollte
+- \textit{letter : IDoctorsLetter} - Der Arztbrief in dem diese Medikation verschrieben wurde\\
+- \textit{frequency : int} - Gibt an wie oft die Medikation in ihrem \textit{interval} eingenommen werden soll\\
+- \textit{interval : Interval} - Gibt an in welchem Intervall die Medikation eingenommen werden soll\\
+- \textit{endDate : DateTime} - Das Datum an dem die Medikation abgesetzt werden soll/sollte
 
 \textbf{Paket:} DataModel
 
@@ -994,7 +994,7 @@ Hier werden alle Informationen über eine Medikation gekapselt.
 \textbf{Beschreibung:} Implementierung der \textbf{IEntityFactory} Schnittstelle. Fügt Entitäten bei deren Erstellung in die Datenbank \textit{database} ein und meldet sie als Beobachter an.
 
 \textbf{Attribute:}\\
-+ \textit{database : IEntityDatabase} - Die Datenbank in der die Entitäten gespeichert werden
+- \textit{database : IEntityDatabase} - Die Datenbank in der die Entitäten gespeichert werden
 
 \textbf{Paket:} EntityFactory
 
