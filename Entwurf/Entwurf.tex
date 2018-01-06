@@ -624,60 +624,59 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 %TODO diagramm
 \subsubsection{OverviewPage : CustomContentPage}
 %TODO
-\textbf{Beschreibung:} Die Klasse \textbf{OverviewPage} definiert die Eigenschaften der 
+\textbf{Beschreibung:} Die Klasse \textbf{OverviewPage} definiert die Eigenschaften und Darstellung der Startseite des Tabs \textit{Übersicht}.
 
 \subsubsection{DetailedDoctorsLetterPage : CustomContentPage}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{DetailedDoctorsLetterPage} definiert die Eigenschaften und Darstellung der Detailansicht eines Arztbriefes.
 
 \subsection{MedicationTabPages}
 %TODO diagramm
 \subsubsection{MedicationPage : CustomContentPage}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{MedicationPage} definiert die Eigenschaften und Darstellung der Startseite des Tabs \textit{Medikation}.
 
 \subsubsection{DetailedMedicinePage : CustomContentPage}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{DetailedMedicinePage} definiert die Eigenschaften und Darstellung der Detailansicht einer Medikation.
 
 \subsection{SendDataTabPages}
 %TODO diagramm
 \subsubsection{SendDataPage : CustomContentPage}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{SendDataPage} definiert die Eigenschaften und Darstellung der Startseite des Tabs \textit{Senden}.
 
 \subsubsection{SelectDoctorsLettersPage : CustomContentPage}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{SelectDoctorsLettersPage} definiert die Eigenschaften und Darstellung der Ansicht zur Auswahl der zu übertragenden Menge an Arztbriefen.
 
 \subsubsection{SelectDevicePage : CustomContentPage}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{SelectDevicePage} definiert die Eigenschaften und Darstellung der Ansicht zur Auswahl des Empfanggerätes der zuvor ausgewählten Menge an Arztbriefen.
 
 \subsubsection{TransmittingDataPage : CustomContentPage}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{TransmittingDataPage} definiert die Eigenschaften und Darstellung der Ansicht eines aktiven Sendevorganges. Sie beschreibt die dritte und letzte Ansicht eines selbstinitiierten Sendevorganges. 
 
 \subsection{ProfileTabPages}
 %TODO diagramm
 \subsubsection{ProfilePage : CustomContentPage}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{ProfilePage} definiert die Eigenschaften und Darstellung der Startseite des Tabs \textit{Profil}.
 
 
 \section{ViewModel}
 %TODO
 
+\subsection{AbstractViewModel}
 \subsubsection{AbstractViewModel}
 %TODO
-\textbf{Beschreibung:}
-%TODO
-\textbf{Attribute:}\\
+\textbf{Beschreibung:} Die Klasse \textbf{AbstractViewModel} kapselt Methoden und Funktionen, die in (beinahe) allen ViewModel-Klassen benötigt werden.
 
-
+\subsection{OverviewTabViewModel}
 \subsubsection{OverviewViewModel : AbstractViewModel}
 %TODO
-\textbf{Beschreibung:} 
+\textbf{Beschreibung:} Die Klasse \textbf{OverviewViewModel} verwaltet die Liste der anzuzeigenden Arztbriefe der View \textit{OverviewPage} und die Funktionsweise der dort angelegten UI-Elemente.
 
 \textbf{Attribute:}\\
 + \textit{DoctorsLettersList : IList<DoctorsLetterViewModel>} - Die Menge der anzuzeigenden Arztbriefe\\
@@ -687,7 +686,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \subsubsection{DoctorsLetterViewModel : AbstractViewModel}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{DoctorsLetterViewModel} ist für die Zusammensetzung eines Arztbrieflisteneintrages zuständig.
 
 \textbf{Attribute:}\\
 - \textit{DoctorsLetter : DoctorsLetter} - Ein anzuzeigender Arztbrief\\
@@ -699,7 +698,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \subsubsection{DetailedDoctorsLetterViewModel : DoctorsLetterViewModel}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{DetailedDoctorsLetterViewModel} kümmert sich um die Zusammensetzung eines ausführlichen Arztbriefes, dargestellt in der \textit{DetailedDoctorsLetterPage}. Um Redundanz zu vermeiden, erbt diese Klasse von \textit{DoctorsLetterViewModel}.
 
 \textbf{Attribute:}\\
 - \textit{diagnosis : string} - Die vom behandelnden Arzt ausgestellte Diagnose\\
@@ -707,9 +706,10 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \textbf{Paket:} OverviewTabViewModel
 
+\subsection{MedicationTabViewModel}
 \subsubsection{MedicationViewModel : AbstractViewModel}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{MedicationViewModel} verwaltet die Liste der anzuzeigenden Medikationen der View \textit{MedicationPage} und die Funktionsweise der dort angelegten UI-Elemente.
 
 \textbf{Attribute:}\\
 + \textit{MedicationsList : IList<MedicineViewModel>} - Die Menge der anzuzeigenden Medikationen\\
@@ -719,7 +719,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \subsubsection{MedicineViewModel : AbstractViewModel}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{MedicineViewModel} ist für die Zusammensetzung eines Medikationlisteneintrages zuständig.
 
 \textbf{Attribute:}\\
 + \textit{Medication : Medication} - Eine anzuzeigende Medikation\\
@@ -732,7 +732,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \subsubsection{DetailedMedicineViewModel : MedicineViewModel}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{DetailedMedicineViewModel} implementiert, wie bereits bestehende Medikationen in ihren Parametern angepasst oder neue Medikationen angelegt werden können. Um Redundanz zu vermeiden, erbt diese Klasse von \textit{MedicineViewModel}.
 
 \textbf{Attribute:}\\
 - \textit{CancelButton : ToolbarItem} - Knopf in der Toolbar, um das Anlegen einer neuen Medikation abzubrechen\\
@@ -740,15 +740,16 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \textbf{Paket:} MedicationTabViewModel
 
+\subsection{SendDataTabViewModel}
 \subsubsection{SendDataViewModel : AbstractViewModel}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{SendDataViewModel} verwaltet die Funktionsweise der in \textit{SendDataPage} angelegten UI-Elemente.
 
 \textbf{Paket:} SendDataTabViewModel
 
 \subsubsection{SelectDoctorsLettersViewModel : AbstractViewModel}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{SelectDoctorsLettersViewModel} koordiniert die in \textit{SelectDoctorsLettersPage} darzustellenden Arztbriefe sowie die Menge der vom Nutzer ausgewählten Arztbriefe.
 
 \textbf{Attribute:}\\
 - \textit{CancelButton : ToolbarItem} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
@@ -760,7 +761,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \subsubsection{SelectDeviceViewModel : AbstractViewModel}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{SelectDeviceViewModel} koordiniert die in \textit{SelectDevicePage} darzustellenden Geräte in Reichweite sowie die Auswahl des Empfängers durch den Nutzer
 
 \textbf{Attribute:}\\
 - \textit{CancelButton : ToolbarItem} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
@@ -775,16 +776,17 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \subsubsection{TransmittingDataViewModel : AbstractViewModel}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{TransmittingDataViewModel} verteilt die vom Nutzer in den Schritten zuvor ausgewählten Daten an die verschiedenen zuständigen Modelklassen. Neben den zu übertragenden Arztbriefen umfasst dies auch den zu kontaktierenden Empfänger.
 
 \textbf{Attribute:}\\
 - \textit{CancelButton : ToolbarItem} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
 
 \textbf{Paket:} SendDataTabViewModel
 
+\subsection{ProfileTabViewModel}
 \subsubsection{ProfileViewModel : AbstractViewModel}
 %TODO
-\textbf{Beschreibung:}
+\textbf{Beschreibung:} Die Klasse \textbf{ProfileViewModel} verwaltet das in \textit{ProfilePage}anzuzeigende Profil und die Funktionsweise der dort angelegten UI-Elemente.
 
 \textbf{Attribute:}\\
 - \textit{userName : string} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
@@ -1147,6 +1149,12 @@ gesendeten Datei (zunächst nur im XML-basierten .hl7 Format) erstellt. Da solch
 
 \section{Datenübertragung}
 %TODO Bluetooth, Dateiformate, etc.
+Die drahtlose Datenübertragung stellt eine Kernfunktion der Anwendung dar. Um diese auf einer möglichst großen Anzahl an Mobilgeräten möglichst nutzerfreundlich umsetzen zu können, ist die Wahl auf den in zahlreichen Mobilgeräten verwendeten Bluetooth-Standard gefallen.
+
+Zu betonen ist, dass in diesem Anwendungsfall das Bluetooth-Profil \textit{GATT} zum Einsatz kommt, da die überwiegende Mehrheit der Mobilgeräte dieses Profil unterstützt.
+
+Die Kommunikation zweier Geräte lässt sich folgendermaßen skizzieren:
+Der Empfänger agiert als sogenannter GATT-Server, welcher über beschreibbare Charakteristiken verfügt. Das sendende Gerät verbindet sich mit diesem Server, und schreibt die zu übertragenden Daten in diese Charakteristiken ein, die anschließen vom Empfänger ausgelesen und ausgewertet werden können.
 
 \chapter{Dynamik und Ablauf}
 \section{Aktionen}
