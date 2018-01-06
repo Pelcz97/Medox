@@ -1477,13 +1477,17 @@ Die Sendeanfrage wird durch ein Pop-Up Fenster realisiert. Das Pop-Up kann in je
 Die Version der Anwendung die nicht von Patienten, sondern von Ärzten verwendet werden soll um Patienten deren Arztbriefe zu senden, wird in diesem Dokument nicht genauer beschrieben, da sie nur eine reduzierte Version der hier beschriebenen mobilen Anwendung ist. 
 
 Die Anwendung für Ärzte soll nur Dateien mit mobilen Anwendungen von Patienten austauschen können, also
-sind dort die Pakete für die Modellierung (\textbf{DataModel}, \textbf{EntityFactory}), Speicherung (\textbf{DatabaseModel}, \textbf{EntityObserver}) der Daten überflüssig. 
+sind dort die Pakete für die Modellierung (\textbf{DataModel}, \textbf{EntityFactory}) und Speicherung (\textbf{DatabaseModel}, \textbf{EntityObserver}) der Daten überflüssig. 
 
 Somit wird auch die Logik zur Konvertierung zwischen den Speicherungsformaten (\textbf{ParserModel}) nicht mehr benötigt. 
 
 Weiterhin werden die gesendeten/empfangenen Dateien nicht im Dateisystem der Anwendung, (was die Funktion des \textbf{FileHelper} war), sondern an einem beliebigen Dateipfad gespeichert.
 
-Somit ist die einzige für diese Anwendung nötige Funktionalität im Model komplett in \textbf{TransmissionModel} enthalten.
+Die einzige für diese Anwendung nötige Funktionalität des Models ist somit komplett in \textbf{TransmissionModel} enthalten.
+
+Was die View betrifft, so reicht für die Anwendung für Ärzte eine leicht modifizierte Variante des Pakets \textbf{SendDatatabPages} aus, um die notwendigen Funktionen darzustellen. Die Modifikationen betreffen lediglich die Darstellungsweise, die sich auf einem Windows-Computer von Mobilgeräten unterscheidet.
+
+Durch den Wegfall großer Teile der View reduziert sich auch der Umfang des ViewModels gewaltig. Übrig bleiben lediglich noch die Klassen des \textbf{SendDataViewModels}, die in leicht abgeänderter Version die Änderungen der View widerspiegeln.
 
 %TODO View, ViewModel je nachdem ob ihr was dazu entworfen habt oder nicht, kommt des halt hier rein oder an den entsprechenden anderen Stellen.
 
