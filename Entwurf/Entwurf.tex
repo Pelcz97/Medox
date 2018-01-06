@@ -849,6 +849,8 @@ Weiterhin wird die \textbf{IEntityObserver} Schnittstelle implementiert, sodass 
 \textbf{Paket:} ModelFacade
 
 \subsection{DataModel}
+\textit{Hinweis: Um Assoziationen zwischen Entitäten aus diesem Paket, also Entitäten, die in einer SQLite Datenbank gespeichert werden können, ordnungsgemäß in der Datenbank speichern zu können, reicht es nicht die Schnittstelle der Entitäten zu kennen. Stattdessen müssen diese konkreten Entitäten auch also solche angegeben werden. Dafür werden Methoden aus DataModelInterface die solche Assoziationen beeinflussen, zusätzlich zu ihrer Implementierung noch für die jeweiligen Parameter aus DataModel überladen.}
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/DataModelPackage.png}
