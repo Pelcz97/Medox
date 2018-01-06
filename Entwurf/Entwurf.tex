@@ -143,7 +143,11 @@ Das \textbf{ViewModel} ist das Verbindungsstück zwischen Model und View. Es fü
 
 \section{Subsysteme}
 \subsection{View}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/View/ViewLayout.png}
+\caption{Pakete des Subsystems View}
+\end{figure}
 Der View besteht aus allen Klassen und Dateien, die benötigt werden, um die Benutzeroberfläche zu modellieren. Er dient als Eingabe- und Ausgabeschnittstelle der Anwendung.
 Hierbei erfolgt die Modellieren hauptsächlich (Xamarin.Forms konform) in XAML-Dateien, wodurch sich leicht eine einheitliche, plattformübergreifende Oberfläche erstellen lässt. Da es sich bei XAML jedoch um eine "\textit{Markup Language}" handelt, finden diese Dateien im obigen UML-Diagramm keine Darstellung, lediglich die einer XAML-Datei zugehörigen C\#-Dateien sind dort repräsentiert.
 Die einzelnen Ansichten der Anwendung, sprich die UI-Zustände, werden in separaten Klassen erstellt und, um für eine übersichtlichere Struktur zu sorgen, werden diese abhängig ihrer jeweiligen Tab-Zugehörigkeit, in Paketen einsortiert.
@@ -159,7 +163,11 @@ Zu guter Letzt werden alle dem Tab \textit{Profil} zugehörigen Ansichten innerh
 Um Gemeinsamkeiten aller Ansichten nicht redundant definieren zu müssen, existiert zusätzlich das Paket \textbf{AbstractPages}, in welchem beispielsweise grundlegende Attribute aller Pages definiert werden können. Text- oder Hintergrundfarben wären hierfür ebenso Beispiele wie auch die Organisation der Tabbar.
 
 \subsection{ViewModel}
-%TODO Bild einfügen
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/ViewModel/ViewModelLayout.png}
+\caption{Pakete des Subsystems ViewModel}
+\end{figure}
 Das ViewModel stellt den Vermittler zwischen View und Model dar. Es sorgt für die Aktualisierung sowohl der View als auch des Models. Der Datenaustausch zwischen View und ViewModel erfolgt über das sogenannte \textit{Data Binding}, die Kommunikation mit dem Model erfolgt über die Model-eigenen Schnittstellen.
 
 Ähnlich wie im Aufbau des Views, werden auch im ViewModel aus Gründen der Übersichtlichkeit die einzelnen Klassen je nach Tab-Zugehörigkeit gegliedert.
@@ -575,7 +583,7 @@ Die Implementierung der Schnittstelle erzeugt Objekte aus \textbf{DataModel} und
 
 \textbf{Klassendiagramm:} siehe S.
 
-\textbf{Enthaltene Klassen:} IEntityObservable, IEntityObserver, IProfileObservable, IProfileObserver
+\textbf{Enthaltene Klassen:} IEntityObservable, IEntityObserver
 
 \subsubsection{ParserModel}
 \textbf{Funktion:} Dieses Paket enthält die Schnittstelle IParserFacade um zwischen Datenformaten zu konvertieren.
