@@ -473,14 +473,14 @@ Legt eine neue Gruppe von Arztbriefen an, die noch keine Arztbriefe enthält und
 \includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/ViewModel/ViewModelLayout.png}
 \caption{Pakete des ViewModels}
 \end{figure}
-\subsubsection{AbstractViewModel}
+\subsubsection{OverallViewModel}
 \textbf{Funktion:} Dieses Paket dient als Überklasse aller anderen ViewModel Klassen, um redundanten Code zu vermeiden.
 
 \textbf{Entwurfsentscheidung:} Kapselung gemeinsamer Funktionalitäten des ViewModels
 
 \textbf{Klassendiagramm:} siehe S.
 
-\textbf{Enthaltene Klassen:} AbstractViewModel
+\textbf{Enthaltene Klassen:} OverallViewModel
 
 \subsubsection{OverviewTabViewModel}
 \textbf{Funktion:} Kommunikation zwischen Model und View ermöglichen
@@ -758,15 +758,15 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \section{ViewModel}
 %TODO
 
-\subsection{AbstractViewModel}
-\subsubsection{AbstractViewModel}
+\subsection{OverallViewModel}
+\subsubsection{OverallViewModel}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/AbstractViewModel.png}
-\caption{AbstractViewModel Klasse}
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/OverallViewModel.png}
+\caption{OverallViewModel Klasse}
 \end{figure}
 
-\textbf{Beschreibung:} Die Klasse \textbf{AbstractViewModel} kapselt Methoden und Funktionen, die in (beinahe) allen ViewModel-Klassen benötigt werden.
+\textbf{Beschreibung:} Die Klasse \textbf{OverallViewModel} kapselt Methoden und Funktionen, die in (beinahe) allen ViewModel-Klassen benötigt werden.
 
 \subsection{OverviewTabViewModel}
 \begin{figure}[H]
@@ -775,7 +775,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \caption{Klassen des OverviewTabViewModel Paket}
 \end{figure}
 
-\subsubsection{OverviewViewModel : AbstractViewModel}
+\subsubsection{OverviewViewModel : OverallViewModel}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/OverviewViewModel.png}
@@ -790,7 +790,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \textbf{Paket:} OverviewTabViewModel
 
-\subsubsection{DoctorsLetterViewModel : AbstractViewModel}
+\subsubsection{DoctorsLetterViewModel : OverallViewModel}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/DoctorsLetterViewModel.png}
@@ -829,7 +829,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \caption{Klassen des MedicationTabViewModel Paket}
 \end{figure}
 
-\subsubsection{MedicationViewModel : AbstractViewModel}
+\subsubsection{MedicationViewModel : OverallViewModel}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.65\textheight]{graphics/Klassendiagramme/ViewModel/MedicationViewModel.png}
@@ -844,7 +844,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \textbf{Paket:} MedicationTabViewModel
 
-\subsubsection{MedicineViewModel : AbstractViewModel}
+\subsubsection{MedicineViewModel : OverallViewModel}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/MedicineViewModel.png}
@@ -884,7 +884,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \caption{Klassen des SendDataTabViewModel Paket}
 \end{figure}
 
-\subsubsection{SendDataViewModel : AbstractViewModel}
+\subsubsection{SendDataViewModel : OverallViewModel}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/SendDataViewModel.png}
@@ -895,7 +895,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \textbf{Paket:} SendDataTabViewModel
 
-\subsubsection{SelectDoctorsLettersViewModel : AbstractViewModel}
+\subsubsection{SelectDoctorsLettersViewModel : OverallViewModel}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/SelectDoctorsLettersViewModel.png}
@@ -912,7 +912,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \textbf{Paket:} SendDataTabViewModel
 
-\subsubsection{SelectDeviceViewModel : AbstractViewModel}
+\subsubsection{SelectDeviceViewModel : OverallViewModel}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/SelectDeviceViewModel.png}
@@ -932,7 +932,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \textbf{Paket:} SendDataTabViewModel
 
-\subsubsection{TransmittingDataViewModel : AbstractViewModel}
+\subsubsection{TransmittingDataViewModel : OverallViewModel}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/TransmittingDataViewModel.png}
@@ -948,7 +948,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \subsection{ProfileTabViewModel}
 
-\subsubsection{ProfileViewModel : AbstractViewModel}
+\subsubsection{ProfileViewModel : OverallViewModel}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/ProfileViewModel.png}
