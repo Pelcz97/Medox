@@ -202,7 +202,15 @@ Um den Zugriff auf das Model zu vereinfachen wird das Fassaden Muster verwendet.
 \section{Subsystem-Schnittstellen}
 \subsection{ModelInterface}
 \subsubsection{TransmissionModelInterface}
+
 Das TransmissionModelInterface zeigt alle Methoden an, die zum Senden/Empfangen einer Bluetooth-Datenübertragung benötigt werden. %TODO Empfangen-Methode hinzufügen, evtl. bessere Beschreibung dieses Textes.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/TransmissionModelInterfacePackage.png}
+\caption{TransmissionModel Schnittstellen}
+\end{figure}
+
 \subsubsection{DataModelInterface}
 Hier sind die Schnittstellen der medizinischen Daten enthalten, die angezeigt werden sollen. Die hier aufgeführten Methoden umfassen daher das Abfragen von Informationen über die Daten aber auch einfache Operationen die auf diesen Daten ausgeführt werden, wie zum Beispiel das Ändern dieser Informationen.
 
@@ -993,6 +1001,32 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \subsection{TransmissionModel}
 %TODO
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/TransmissionModelPackage.png}
+\caption{Klassen des TransmissionModel Paket}
+\end{figure}
+
+\subsubsection{IBluetooth}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.55\textheight]{graphics/Klassendiagramme/Model/IBluetooth.png}
+\caption{IBluetooth Schnittstelle}
+\end{figure}
+
+\subsubsection{Bluetooth : IBluetooth}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/Bluetooth.png}
+\caption{Bluetooth Klasse}
+\end{figure}
+
+\subsubsection{Device : IDevice}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/Device.png}
+\caption{Device Klasse}
+\end{figure}
 
 \subsection{DatabaseModel}
 \begin{figure}[H]
