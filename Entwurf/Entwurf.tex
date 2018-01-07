@@ -1014,6 +1014,9 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \caption{IBluetooth Schnittstelle}
 \end{figure}
 
+\textbf{Beschreibung:} 
+
+
 \subsubsection{Bluetooth : IBluetooth}
 \begin{figure}[H]
 \centering
@@ -1021,12 +1024,18 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \caption{Bluetooth Klasse}
 \end{figure}
 
+\textbf{Beschreibung:} 
+
+
 \subsubsection{Device : IDevice}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/Device.png}
 \caption{Device Klasse}
 \end{figure}
+
+\textbf{Beschreibung:} 
+
 
 \subsection{DatabaseModel}
 \begin{figure}[H]
@@ -1520,7 +1529,6 @@ Zunächst wird der Nutzer aufgefordert, aus seinem Bestand an gespeicherten Arzt
 Hat er dies getan, führt in ein Klick auf einen \textit{Weiter-Knopf} zu einer Ansicht, welche ihm alle in der Nähe erreichbaren Geräte, also potentielle Empfänger, auflistet. Aus dieser Liste kann er nun genau eines auswählen. Hat er den gewünschten Empfänger gefunden und ausgewählt, wird er zur dritten und letzten Ansicht weitergeleitet, die ihm den Fortschritt der nun laufenden Dateiübertragung anzeigt.
 Ist diese abgeschlossen, wird der Nutzer automatisch zurück zur obigen Startseite des Tabs \textit{Senden} zurück geleitet.
 
-
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{graphics/UIDescriptions/PopUpDesc}
@@ -1545,8 +1553,6 @@ Die einzige für diese Anwendung nötige Funktionalität des Models ist somit ko
 Was die View betrifft, so reicht für die Anwendung für Ärzte eine leicht modifizierte Variante des Pakets \textbf{SendDatatabPages} aus, um die notwendigen Funktionen darzustellen. Die Modifikationen betreffen lediglich die Darstellungsweise, die sich auf einem Windows-Computer von Mobilgeräten unterscheidet.
 
 Durch den Wegfall großer Teile der View reduziert sich auch der Umfang des ViewModels gewaltig. Übrig bleiben lediglich noch die Klassen des \textbf{SendDataViewModels}, die in leicht abgeänderter Version die Änderungen der View widerspiegeln.
-
-%TODO View, ViewModel je nachdem ob ihr was dazu entworfen habt oder nicht, kommt des halt hier rein oder an den entsprechenden anderen Stellen.
 
 \chapter{Klassendiagramm}
 %TODO
