@@ -803,9 +803,9 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 - \textit{EditButton : ToolbarItem} - Knopf in der Toolbar, um die Liste der Arztbriefe editieren zu können\\
 
 \textbf{Methoden:}\\
-- \textit{ShowDoctorsLetter() : ICommand} - Ein Button (ICommand), der unsichtbar auf jedem Listeneintrag liegt. Ein Click auf diesen Button öffnet die Detailansicht des angetippten Arztbriefes.
+- \textit{ShowDoctorsLetter() : ICommand} - Die Methode des EditButton (ICommand), der unsichtbar auf jedem Listeneintrag liegt. Ein Click auf diesen Button öffnet die Detailansicht des angetippten Arztbriefes.
 
-- \textit{EditList() : void} - Methode um die Editierung der Liste an Arztbriefen zu starten.
+- \textit{EditList(list : IList<IDoctorsLetter>) : void} - Methode, um eine Auswahl an Arztbriefen zu löschen.
 
 \textbf{Paket:} OverviewTabViewModel
 
@@ -939,6 +939,9 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \textbf{Beschreibung:} Die Klasse \textbf{SendDataViewModel} verwaltet die Funktionsweise der in \textit{SendDataPage} angelegten UI-Elemente.
 
+\textbf{Methoden:}\\
+- \textit{ChooseData() : ICommand} - Methode um die gerade geöffnete Medikation zu speichern.
+
 \textbf{Paket:} SendDataTabViewModel
 
 \subsubsection{SelectDoctorsLettersViewModel : OverallViewModel}
@@ -1045,7 +1048,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 - \textit{factory : IEntityFactory} - Enthält die Logik um Entitäten zu erstellen\\
 - \textit{parser : IParserFacade} - Enthält die Logik um zwischen Datenformaten zu konvertierten\\
 - \textit{fileHelper : IFileHelper} - Helferklasse zum Dateizugriff\\
-- \textit{transmission : IBluetooth} - Enthält die Logik um zwischen Datenformaten zu konvertierten\\
+- \textit{transmission : IBluetooth} - Enthält die Logik der Initialisierung einer Datenübertragung\\
 
 \textbf{Paket:} ModelFacade
 
@@ -1064,8 +1067,15 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \caption{IBluetooth Schnittstelle}
 \end{figure}
 
-\textbf{Beschreibung:} 
+\textbf{Beschreibung:} Die Klasse \textbf{IBluetooth} stellt einen Adapter zum verwendeten Bluetooth-Framework dar.
 
+\textbf{Methoden:}
++ \textit{scanForDevices() : IList<IDevice>} - Methode, um Geräte in der Umgebung zu finden\\
++ \textit{send(filePath : string) : void} - Methode, um eine spezifische Datei zu übertragen\\
++ \textit{cancelSend() : void} - Methode, um eine aktive Übertragung abzubrechen\\
++ \textit{pair(device : IDevice, pin : string) : boolean} - Methode, um mit einem spezifischen Gerät zu koppeln\\
++ \textit{connect(device : IDevice) : boolean} - Methode, um sich mit einem spezifischen Gerät zu verbinden\\
++ \textit{receive() : File} - Methode, um eine Datei zu empfangen\\
 
 \subsubsection{Bluetooth : IBluetooth}
 \begin{figure}[H]
