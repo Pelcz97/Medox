@@ -211,6 +211,18 @@ Das TransmissionModelInterface zeigt alle Methoden an, die zum Senden/Empfangen 
 \caption{TransmissionModel Schnittstellen}
 \end{figure}
 
+\textbf{getName() : string}\\
+Gibt den Namen der Entität zurück.
+
+\textbf{getUuid() : string}\\
+Gibt die UUID der Entität zurück.
+
+\textbf{connected() : boolean}\\
+Gibt den Verbindungsstatus der Entität zurück.
+
+\textbf{paired() : boolean}\\
+Gibt den Kopplungsstatus der Entität zurück.
+
 \subsubsection{DataModelInterface}
 Hier sind die Schnittstellen der medizinischen Daten enthalten, die angezeigt werden sollen. Die hier aufgeführten Methoden umfassen daher das Abfragen von Informationen über die Daten aber auch einfache Operationen die auf diesen Daten ausgeführt werden, wie zum Beispiel das Ändern dieser Informationen.
 
@@ -1084,7 +1096,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \caption{Bluetooth Klasse}
 \end{figure}
 
-\textbf{Beschreibung:} 
+\textbf{Beschreibung:} Implementierung der Schnittstelle \textit{IBluetooth}
 
 
 \subsubsection{Device : IDevice}
@@ -1094,7 +1106,7 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \caption{Device Klasse}
 \end{figure}
 
-\textbf{Beschreibung:} 
+\textbf{Beschreibung:} Implementierung der Schnittstelle \textit{IDevice}
 
 
 \subsection{DatabaseModel}
