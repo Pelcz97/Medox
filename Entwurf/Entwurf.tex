@@ -802,6 +802,11 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 - \textit{DoctorsLettersList : IList<DoctorsLetterViewModel>} - Die Menge der anzuzeigenden Arztbriefe\\
 - \textit{EditButton : ToolbarItem} - Knopf in der Toolbar, um die Liste der Arztbriefe editieren zu können\\
 
+\textbf{Methoden:}\\
+- \textit{ShowDoctorsLetter() : ICommand} - Ein Button (ICommand), der unsichtbar auf jedem Listeneintrag liegt. Ein Click auf diesen Button öffnet die Detailansicht des angetippten Arztbriefes.
+
+- \textit{EditList() : void} - Methode um die Editierung der Liste an Arztbriefen zu starten.
+
 \textbf{Paket:} OverviewTabViewModel
 
 \subsubsection{DoctorsLetterViewModel : OverallViewModel}
@@ -834,6 +839,14 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 - \textit{diagnosis : string} - Die vom behandelnden Arzt ausgestellte Diagnose\\
 - \textit{medication : string} - Die vom behandelnden Arzt empfohlene Therapie\\
 
+\textbf{Methoden:}\\
+- \textit{DoctorsName() : string} - Methode um den Namen des Arztes als String aus einem DoctorsLetter zu erhalten\\
+- \textit{DoctorsField() : string} - Methode um den Fachbereich des Arztes als String aus einem DoctorsLetter zu erhalten\\
+- \textit{Diagnosis() : string} - Methode um die Diagnose als String aus einem DoctorsLetter zu erhalten\\
+- \textit{Medication() : string} - Methode um die verordnete Medikation als String aus einem DoctorsLetter zu erhalten\\
+- \textit{CreationDate() : string} - Methode das Erstellungsdatum als String aus einem DoctorsLetter zu erhalten\\
+- \textit{CloseDoctorsLetter() : ICommand} - Button, um zurück in die OverviewTabPage zu wechseln\\
+
 \textbf{Paket:} OverviewTabViewModel
 
 \subsection{MedicationTabViewModel}
@@ -855,6 +868,11 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Attribute:}\\
 - \textit{MedicationsList : IList<MedicineViewModel>} - Die Menge der anzuzeigenden Medikationen\\
 - \textit{AddEntryButton : ToolbarItem} - Knopf in der Toolbar, um neue Medikationen anlegen zu können\\
+
+\textbf{Methoden:}\\
+- \textit{ShowMedicationDetail() : ICommand} - Methode, um die Detailansicht einer Medikation zu öffnen.
+
+- \textit{EditList() : void} - Methode um eine neue, mit default-Werten gefüllte, Medikation anzulegen.
 
 \textbf{Paket:} MedicationTabViewModel
 
@@ -888,6 +906,20 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 \textbf{Attribute:}\\
 - \textit{CancelButton : ToolbarItem} - Knopf in der Toolbar, um das Anlegen einer neuen Medikation abzubrechen\\
 - \textit{SaveButton : ToolbarItem} - Knopf in der Toolbar, um die neue/geänderte Medikation abzuspeichern\\
+\\
+
+\textbf{Methoden:}\\
+- \textit{SaveNewMedication() : void} - Methode um die gerade geöffnete Medikation zu speichern.
+
+- \textit{Cancel() : void} - Methode um ohne zu Speichern auf die MedikationTabPage zurück zu kehren.
+
+- \textit{Handle\_BeginDateSelected(sender : object, e : Xamarin.Forms.DateChangedEventArgs) : void} - Methode um ein ausgewähltes Startdatum zu verarbeiten.
+
+- \textit{Handle\_EndDateSelected(sender : object, e : Xamarin.Forms.DateChangedEventArgs) : void} - Methode um ein ausgewähltes Enddatum zu verarbeiten.
+
+- \textit{OnStepperValueChanged(sender : object, e : ValueChangedEventArgs) : void} - Methode um eine Änderung am Wert des Steppers zu verarbeiten.
+
+- \textit{Switcher\_Toggled(sender : object, e : ToggledEventArgs) : void} - Methode um eine Änderung am Wert des Switches zu verarbeiten.
 
 \textbf{Paket:} MedicationTabViewModel
 
@@ -924,6 +956,11 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 - \textit{DoctorsLettersList : IList<DoctorsLetterViewModel>} - Die Menge der anzuzeigenden Arztbriefe\\
 - \textit{SelectedDoctorsLettersList : IList<DoctorsLetterViewModel>} - Die Menge der vom Nutzer ausgewählten Arztbriefe\\
 
+\textbf{Methoden:}\\
+- \textit{cancel() : void} - Methode um die Auswahl der Arztbriefe abzubrechen.\\
+- \textit{confirmSelectedLetters() : void} - Methode um weiter zur Auswahl des Empfangsgerätes zu navigieren.\\
+- \textit{SelectDoctorsLetter() : ICommand} - Methode um einen Arztbrief auszuwählen\\
+
 \textbf{Paket:} SendDataTabViewModel
 
 \subsubsection{SelectDeviceViewModel : OverallViewModel}
@@ -943,6 +980,12 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 - \textit{BluetoothState : bool} - Zustand des Bluetooth Moduls (Bluetooth an/aus)\\
 - \textit{BluetoothAdapter : Bluetooth} - Kommunikation mit der Bluetooth-Schnittstelle\\
 
+\textbf{Methoden:}\\
+- \textit{cancel() : void} - Methode um die Auswahl des Empfangsgerätes abzubrechen.\\
+- \textit{confirmSelectedDevice() : void} - Methode um zum Senden weiter zu navigieren.\\
+- \textit{SelectDevice() : ICommand} - Methode um ein Empfangsgerät auszuwählen.\\
+- \textit{bluetoothState() : void} - Methode um den Status der eigenen Bluetoothverfügbarkeit zu erhalten.\\
+
 
 \textbf{Paket:} SendDataTabViewModel
 
@@ -957,6 +1000,10 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 
 \textbf{Attribute:}\\
 - \textit{CancelButton : ToolbarItem} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
+
+\textbf{Methoden:}\\
+- \textit{cancel() : void} - Methode um den Sendevorgang abzubrechen.\\
+- \textit{isTransmitting() : void} - Methode um den Status des Sendevorgangs zu erhalten.\\
 
 \textbf{Paket:} SendDataTabViewModel
 
@@ -975,6 +1022,9 @@ Die Implementierung der Schnittstelle wählt dann den richtigen Parser aus und d
 - \textit{userName : string} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
 - \textit{insuranceNumber : string} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
 - \textit{bloodType : BloodType} - Knopf in der Toolbar, um den Vorgang abzubrechen\\
+
+\textbf{Methoden:}\\
+- \textit{UserName() : string} - Methode um den Username des Nutzers als String zu erhalten.\\
 
 \textbf{Paket:} ProfileTabViewModel
 
