@@ -1,9 +1,9 @@
 using ViewModel.OverallViewModel;
-using zUtilities;
+using Xamarin.Forms;
 
 namespace ViewModel.SendDataTabViewModel
 {
-	public class TransmittingDataViewModel : OverallViewModel
+	public class TransmittingDataViewModel : OverallViewModel.OverallViewModel
 	{
 		private ToolbarItem CancelButton;
 

@@ -1,9 +1,8 @@
-using ViewModel.OverallViewModel;
 using Model.DataModelInterface;
 
 namespace ViewModel.MedicationTabViewModel
 {
-	public class MedicineViewModel : OverallViewModel
+    public class MedicineViewModel : OverallViewModel.OverallViewModel
 	{
 		private string medicationName;
 

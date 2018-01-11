@@ -1,10 +1,8 @@
-using View.AbstractPages;
-using ViewModel.OverallViewModel;
-using zUtilities;
+using System.Windows.Input;
 
 namespace ViewModel.SendDataTabViewModel
 {
-	public class SendDataViewModel : CustomContentPage, OverallViewModel
+	public class SendDataViewModel : OverallViewModel.OverallViewModel
 	{
 		public ICommand ChooseData()
 		{

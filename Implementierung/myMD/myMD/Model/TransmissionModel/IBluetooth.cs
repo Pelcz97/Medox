@@ -1,5 +1,5 @@
-using zUtilities;
 using Model.TransmissionModelInterface;
+using System.Collections.Generic;
 
 namespace Model.TransmissionModel
 {
@@ -11,11 +11,11 @@ namespace Model.TransmissionModel
 
 		void cancelSend();
 
-		boolean pair(IDevice device, String pin);
+		bool pair(IDevice device, string pin);
 
-		boolean connect(IDevice device);
+		bool connect(IDevice device);
 
-		File receive();
+		string receive();
 
 	}
 

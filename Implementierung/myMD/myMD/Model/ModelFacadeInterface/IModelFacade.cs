@@ -1,26 +1,56 @@
-using Model.EntityFactory;
 using Model.DataModelInterface;
-using zUtilities;
+using System.Collections.Generic;
 
 namespace Model.ModelFacadeInterface
 {
+    /// <summary>
+    /// Dies ist die Haupteinstiegsstelle für andere Subsysteme in das Model. 
+    /// Als Ein- und Ausgabeparameter werden die restlichen Schnittstellen aus ModelInterface verwendet.
+    /// Alle komplexeren Operationen, die nicht schon von diesen Schnittstellen übernommen werden, sind hier enthalten.
+    /// </summary>
 	public interface IModelFacade
 	{
-		private IEntityFactory iEntityFactory;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+		IProfile CreateEmptyProfile();
 
-		IProfile createEmptyProfile();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+		IList<IDoctorsLetter> GetAllDoctorsLetters();
 
-		IList<IDoctorsLetter> getAllDoctorsLetters();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+		IList<IMedication> GetAllMedications();
 
-		IList<IMedication> getAllMedications();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+		IMedication CreateEmptyMedication();
 
-		IMedication createEmptyMedication();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+		IList<IDoctorsLetterGroup> GetAllGroups();
 
-		IList<IDoctorsLetterGroup> getAllGroups();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+		IDoctorsLetterGroup CreateEmptyGroup();
 
-		IDoctorsLetterGroup createEmptyGroup();
-
-		void sendLetter(IDoctorsLetter letter);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="letter"></param>
+		void SendLetter(IDoctorsLetter letter);
 
 	}
 

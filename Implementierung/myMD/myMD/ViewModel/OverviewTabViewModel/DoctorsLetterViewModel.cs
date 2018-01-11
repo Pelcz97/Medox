@@ -3,7 +3,7 @@ using Model.DataModelInterface;
 
 namespace ViewModel.OverviewTabViewModel
 {
-	public class DoctorsLetterViewModel : OverallViewModel
+	public class DoctorsLetterViewModel : OverallViewModel.OverallViewModel
 	{
 		private string doctorsName;
 

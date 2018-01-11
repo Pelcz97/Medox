@@ -1,6 +1,6 @@
-using Model.DataModel;
 using Model.DataModelInterface;
-using zUtilities;
+using System;
+using System.Collections.Generic;
 
 namespace Model.DataModel
 {
@@ -43,7 +43,7 @@ namespace Model.DataModel
 		/// <see>Model.DataModelInterface.IDoctorsLetterGroup#GetLastDate()</see>
 		public DateTime GetLastDate()
 		{
-			return null;
+            return default(DateTime);
 		}
 
 	}

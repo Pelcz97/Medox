@@ -1,7 +1,6 @@
-using Model.ParserModel;
 using Model.FileHelper;
 using Model.DataModel;
-using zUtilities;
+using System.Collections.Generic;
 
 namespace Model.ParserModel
 {
@@ -9,22 +8,26 @@ namespace Model.ParserModel
 	{
 		private IFileHelper iFileHelper;
 
-		protected DoctorsLetter ParseLetter()
+        override
+        protected DoctorsLetter ParseLetter()
 		{
 			return null;
 		}
 
+        override
 		protected IList<Medication> ParseMedications()
 		{
 			return null;
 		}
 
-		protected Doctor ParseDoctor()
+        override
+        protected Doctor ParseDoctor()
 		{
 			return null;
 		}
 
-		protected Profile ParseProfile()
+        override
+        protected Profile ParseProfile()
 		{
 			return null;
 		}
