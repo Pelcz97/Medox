@@ -30,6 +30,46 @@
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
     <EmbeddedResource Include="myMDPage.xaml" />
+    <EmbeddedResource Include="View\AbstractPages\CustomContentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MedicationTabPages\MedicationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MedicationTabPages\DetailedMedicationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OverviewTabPages\OverviewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OverviewTabPages\DetailedDoctorsLetterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SendDataTabPages\SendDataPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SendDataTabPages\SelectDoctorsLettersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SendDataTabPages\SelectDevicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SendDataTabPages\TransmittingDataPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ProfileTabPages\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -39,17 +79,6 @@
       <DependentUpon>myMDPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\AbstractPages\App.cs" />
-    <Compile Include="View\AbstractPages\CustomContentPage.cs" />
-    <Compile Include="View\MedicationTabPages\DetailedMedicinePage.cs" />
-    <Compile Include="View\MedicationTabPages\MedicationPage.cs" />
-    <Compile Include="View\OverviewTabPages\DetailedDoctorsLetterPage.cs" />
-    <Compile Include="View\OverviewTabPages\OverviewPage.cs" />
-    <Compile Include="View\ProfileTabPages\ProfilePage.cs" />
-    <Compile Include="View\SendDataTabPages\SelectDevicePage.cs" />
-    <Compile Include="View\SendDataTabPages\SelectDoctorsLettersPage.cs" />
-    <Compile Include="View\SendDataTabPages\SendDataPage.cs" />
-    <Compile Include="View\SendDataTabPages\TransmittingDataPage.cs" />
     <Compile Include="ViewModel\MedicationTabViewModel\DetailedMedicineViewModel.cs" />
     <Compile Include="ViewModel\MedicationTabViewModel\MedicationViewModel.cs" />
     <Compile Include="ViewModel\MedicationTabViewModel\MedicineViewModel.cs" />
@@ -100,6 +129,36 @@
     <Compile Include="Model\TransmissionModel\Device.cs" />
     <Compile Include="Model\TransmissionModel\IBluetooth.cs" />
     <Compile Include="Model\TransmissionModelInterface\IDevice.cs" />
+    <Compile Include="View\AbstractPages\CustomContentPage.xaml.cs">
+      <DependentUpon>CustomContentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MedicationTabPages\MedicationPage.xaml.cs">
+      <DependentUpon>MedicationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MedicationTabPages\DetailedMedicationPage.xaml.cs">
+      <DependentUpon>DetailedMedicationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\OverviewTabPages\OverviewPage.xaml.cs">
+      <DependentUpon>OverviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\OverviewTabPages\DetailedDoctorsLetterPage.xaml.cs">
+      <DependentUpon>DetailedDoctorsLetterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SendDataTabPages\SendDataPage.xaml.cs">
+      <DependentUpon>SendDataPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SendDataTabPages\SelectDoctorsLettersPage.xaml.cs">
+      <DependentUpon>SelectDoctorsLettersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SendDataTabPages\SelectDevicePage.xaml.cs">
+      <DependentUpon>SelectDevicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SendDataTabPages\TransmittingDataPage.xaml.cs">
+      <DependentUpon>TransmittingDataPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProfileTabPages\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -114,6 +173,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\AbstractPages\" />
+    <Folder Include="View\MedicationTabPages\" />
+    <Folder Include="View\OverviewTabPages\" />
+    <Folder Include="View\ProfileTabPages\" />
+    <Folder Include="View\SendDataTabPages\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.v7.CardView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.CardView.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.CardView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.CardView.targets')" />
