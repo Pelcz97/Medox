@@ -2,15 +2,15 @@ using Model.DataModelInterface;
 
 namespace Model.EntityFactory
 {
-	public class IEntityFactory
+	public interface IEntityFactory
 	{
-		public abstract IMedication CreateEmptyMedication();
+		IMedication CreateEmptyMedication();
 
-		public abstract IDoctorsLetterGroup CreateEmptyGroup();
+		IDoctorsLetterGroup CreateEmptyGroup();
 
-		public abstract IProfile CreateEmptyProfile();
+		IProfile CreateEmptyProfile();
 
-		public abstract IDoctorsLetter CreateEmptyDoctorsLetter();
+		IDoctorsLetter CreateEmptyDoctorsLetter();
 
 	}
 

@@ -1,6 +1,6 @@
 using Model.DataModel;
 using Model.DataModelInterface;
-using zUtilities;
+using System;
 
 namespace Model.DataModel
 {
@@ -42,7 +42,7 @@ namespace Model.DataModel
 		/// <see>Model.DataModelInterface.IMedication#GetInterval()</see>
 		public Interval GetInterval()
 		{
-			return null;
+			return default(Interval);
 		}
 
 
@@ -56,7 +56,7 @@ namespace Model.DataModel
 		/// <see>Model.DataModelInterface.IMedication#GetEndDate()</see>
 		public DateTime GetEndDate()
 		{
-			return null;
+			return endDate;
 		}
 
 

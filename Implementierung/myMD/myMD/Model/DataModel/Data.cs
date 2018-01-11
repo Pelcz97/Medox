@@ -1,6 +1,5 @@
 using Model.DataModelInterface;
-using Model.DataModel;
-using zUtilities;
+using System;
 
 namespace Model.DataModel
 {
@@ -8,20 +7,18 @@ namespace Model.DataModel
 	{
 		private DateTime date;
 
-
 		/// <see>Model.DataModelInterface.IData#GetDate()</see>
 		public DateTime GetDate()
 		{
-			return null;
+			return date;
 		}
 
 
 		/// <see>Model.DataModelInterface.IData#GetSensitivity()</see>
 		public Sensitivity GetSensitivity()
 		{
-			return null;
+			return default(Sensitivity);
 		}
-
 
 		/// <see>Model.DataModelInterface.IData#SetSensitivity(Model.DataModelInterface.Sensitivity)</see>
 		public void SetSensitivity(Sensitivity sensitivity)

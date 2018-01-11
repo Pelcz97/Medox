@@ -1,6 +1,7 @@
 using Model.EntityObserver;
 using Model.DataModel;
-using zUtilities;
+using System.Collections.Generic;
+using Model.DataModelInterface;
 
 namespace Model.DatabaseModel
 {
@@ -13,7 +14,6 @@ namespace Model.DatabaseModel
 		IList<IProfile> GetAllProfiles();
 
 		T GetEqual<T>(T entity);
-
 	}
 
 }

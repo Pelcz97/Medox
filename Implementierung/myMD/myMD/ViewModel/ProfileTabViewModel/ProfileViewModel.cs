@@ -1,10 +1,8 @@
-using View.AbstractPages;
-using ViewModel.OverallViewModel;
-using zUtilities;
+using Model.DataModelInterface;
 
 namespace ViewModel.ProfileTabViewModel
 {
-	public class ProfileViewModel : CustomContentPage, OverallViewModel
+	public class ProfileViewModel : OverallViewModel.OverallViewModel
 	{
 		private string userName;
 

@@ -1,9 +1,10 @@
+using System.Windows.Input;
 using ViewModel.OverallViewModel;
-using zUtilities;
+using Xamarin.Forms;
 
 namespace ViewModel.SendDataTabViewModel
 {
-	public class SelectDoctorsLettersViewModel : OverallViewModel
+	public class SelectDoctorsLettersViewModel : OverallViewModel.OverallViewModel
 	{
 		private ToolbarItem CancelButton;
 

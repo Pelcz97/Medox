@@ -6,9 +6,9 @@ namespace Model.TransmissionModelInterface
 
 		string getUuid();
 
-		boolean connected();
+		bool connected();
 
-		boolean paired();
+		bool paired();
 
 	}
 

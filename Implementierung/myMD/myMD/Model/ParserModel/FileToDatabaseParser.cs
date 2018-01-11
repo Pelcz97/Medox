@@ -1,5 +1,6 @@
 using Model.DatabaseModel;
 using Model.DataModel;
+using System.Collections.Generic;
 
 namespace Model.ParserModel
 {
@@ -12,7 +13,7 @@ namespace Model.ParserModel
 
 		protected abstract DoctorsLetter ParseLetter();
 
-		protected abstract Medication ParseMedications();
+		protected abstract IList<Medication> ParseMedications();
 
 		protected abstract Doctor ParseDoctor();
 

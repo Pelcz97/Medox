@@ -1,10 +1,9 @@
-using View.AbstractPages;
-using ViewModel.OverallViewModel;
-using zUtilities;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace ViewModel.MedicationTabViewModel
 {
-	public class MedicationViewModel : CustomContentPage, OverallViewModel
+    public class MedicationViewModel : OverallViewModel.OverallViewModel
 	{
 		private ToolbarItem AddEntryButton;
 
@@ -13,7 +12,7 @@ namespace ViewModel.MedicationTabViewModel
 			return null;
 		}
 
-		public void addNewMedication()
+		public void AddNewMedication()
 		{
 
 		}

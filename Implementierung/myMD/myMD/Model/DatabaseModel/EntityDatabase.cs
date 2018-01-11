@@ -1,8 +1,8 @@
 using Model.EntityObserver;
-using Model.DatabaseModel;
 using Model.DataModel;
 using Model.FileHelper;
-using zUtilities;
+using System.Collections.Generic;
+using Model.DataModelInterface;
 
 namespace Model.DatabaseModel
 {
@@ -51,7 +51,7 @@ namespace Model.DatabaseModel
 		/// <see>Model.DatabaseModel.IEntityDatabase#GetEqual<T>(zUtilities.T)</see>
 		public T GetEqual<T>(T entity)
 		{
-			return null;
+			return default(T);
 		}
 
 

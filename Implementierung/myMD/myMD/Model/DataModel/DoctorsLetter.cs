@@ -1,6 +1,5 @@
-using Model.DataModel;
 using Model.DataModelInterface;
-using zUtilities;
+using System.Collections.Generic;
 
 namespace Model.DataModel
 {
@@ -74,7 +73,7 @@ namespace Model.DataModel
 
 
 		/// <see>Model.DataModelInterface.IDoctorsLetter#GetGroups()</see>
-		public IList<DoctorsLetterGroup> GetGroups()
+		public IList<IDoctorsLetterGroup> GetGroups()
 		{
 			return null;
 		}

@@ -5,7 +5,7 @@ using Model.ParserModel;
 using Model.FileHelper;
 using Model.TransmissionModel;
 using Model.DataModelInterface;
-using zUtilities;
+using System.Collections.Generic;
 
 namespace Model.ModelFacade
 {
@@ -23,49 +23,49 @@ namespace Model.ModelFacade
 
 
 		/// <see>Model.ModelFacadeInterface.IModelFacade#createEmptyProfile()</see>
-		public IProfile createEmptyProfile()
+		public IProfile CreateEmptyProfile()
 		{
 			return null;
 		}
 
 
 		/// <see>Model.ModelFacadeInterface.IModelFacade#getAllDoctorsLetters()</see>
-		public IList<IDoctorsLetter> getAllDoctorsLetters()
+		public IList<IDoctorsLetter> GetAllDoctorsLetters()
 		{
 			return null;
 		}
 
 
 		/// <see>Model.ModelFacadeInterface.IModelFacade#getAllMedications()</see>
-		public IList<IMedication> getAllMedications()
+		public IList<IMedication> GetAllMedications()
 		{
 			return null;
 		}
 
 
 		/// <see>Model.ModelFacadeInterface.IModelFacade#createEmptyMedication()</see>
-		public IMedication createEmptyMedication()
+		public IMedication CreateEmptyMedication()
 		{
 			return null;
 		}
 
 
 		/// <see>Model.ModelFacadeInterface.IModelFacade#getAllGroups()</see>
-		public IList<IDoctorsLetterGroup> getAllGroups()
+		public IList<IDoctorsLetterGroup> GetAllGroups()
 		{
 			return null;
 		}
 
 
 		/// <see>Model.ModelFacadeInterface.IModelFacade#createEmptyGroup()</see>
-		public IDoctorsLetterGroup createEmptyGroup()
+		public IDoctorsLetterGroup CreateEmptyGroup()
 		{
 			return null;
 		}
 
 
 		/// <see>Model.ModelFacadeInterface.IModelFacade#sendLetter(Model.DataModelInterface.IDoctorsLetter)</see>
-		public void sendLetter(IDoctorsLetter letter)
+		public void SendLetter(IDoctorsLetter letter)
 		{
 
 		}

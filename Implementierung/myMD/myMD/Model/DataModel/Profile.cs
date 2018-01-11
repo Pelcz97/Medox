@@ -1,7 +1,6 @@
-using Model.DataModel;
 using Model.DataModelInterface;
 using Model.EntityObserver;
-using zUtilities;
+using System;
 
 namespace Model.DataModel
 {
@@ -47,7 +46,7 @@ namespace Model.DataModel
 		/// <see>Model.DataModelInterface.IProfile#GetBloodType()</see>
 		public BloodType GetBloodType()
 		{
-			return null;
+			return bloodType;
 		}
 
 
@@ -61,7 +60,7 @@ namespace Model.DataModel
 		/// <see>Model.DataModelInterface.IProfile#GetBirthDate()</see>
 		public DateTime GetBirthDate()
 		{
-			return null;
+			return birthDate;
 		}
 
 

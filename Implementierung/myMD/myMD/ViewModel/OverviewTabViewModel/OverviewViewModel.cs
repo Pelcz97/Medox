@@ -1,10 +1,11 @@
-using View.AbstractPages;
-using ViewModel.OverallViewModel;
-using zUtilities;
+using Model.DataModelInterface;
+using System.Collections.Generic;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace ViewModel.OverviewTabViewModel
 {
-	public class OverviewViewModel : CustomContentPage, OverallViewModel
+	public class OverviewViewModel : OverallViewModel.OverallViewModel
 	{
 		private ToolbarItem EditButton;
 
@@ -13,7 +14,7 @@ namespace ViewModel.OverviewTabViewModel
 			return null;
 		}
 
-		public void EditList(IList<DoctorsLetter> list)
+		public void EditList(IList<IDoctorsLetter> list)
 		{
 
 		}
