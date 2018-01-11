@@ -1,5 +1,5 @@
 using Model.DatabaseModel;
-using Model.DataModelInterface;
+using ModelInterface.DataModelInterface;
 
 namespace Model.ParserModel
 {

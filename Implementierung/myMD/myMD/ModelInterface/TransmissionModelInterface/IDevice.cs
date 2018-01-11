@@ -1,4 +1,4 @@
-namespace Model.TransmissionModelInterface
+namespace ModelInterface.TransmissionModelInterface
 {
 	public interface IDevice
 	{

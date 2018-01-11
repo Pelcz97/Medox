@@ -1,7 +1,7 @@
-using Model.DataModelInterface;
+using ModelInterface.DataModelInterface;
 using System.Collections.Generic;
 
-namespace Model.ModelFacadeInterface
+namespace ModelInterface.ModelFacadeInterface
 {
     /// <summary>
     /// Dies ist die Haupteinstiegsstelle für andere Subsysteme in das Model. 

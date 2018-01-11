@@ -1,4 +1,4 @@
-using Model.TransmissionModelInterface;
+using ModelInterface.TransmissionModelInterface;
 using System.Collections.Generic;
 
 namespace Model.TransmissionModel

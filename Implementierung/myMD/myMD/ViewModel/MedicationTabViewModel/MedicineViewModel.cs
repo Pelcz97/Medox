@@ -1,4 +1,4 @@
-using Model.DataModelInterface;
+using ModelInterface.DataModelInterface;
 
 namespace ViewModel.MedicationTabViewModel
 {
