@@ -1,5 +1,4 @@
 using ViewModel.MedicationTabViewModel;
-using zUtilities;
 
 namespace ViewModel.MedicationTabViewModel
 {

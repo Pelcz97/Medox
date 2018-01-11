@@ -1,5 +1,45 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="myMD.View.MedicationTabPages.MedicationPage">
-	<ContentPage.Content>
-	</ContentPage.Content>
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="myMD.View.MedicationTabPages.MedicationPage"
+    Title="Medikation">
+
+    <ContentPage.Content>
+        <Frame x:Name="Label" CornerRadius="15" 
+        BackgroundColor="#FFFFFF"
+        Margin="10,0,10,0"
+        HorizontalOptions="CenterAndExpand" 
+        VerticalOptions="CenterAndExpand" 
+        HeightRequest="80" 
+        WidthRequest="400">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="17" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="17" />
+            </Grid.RowDefinitions>
+
+                <Label Text="Ab 07. September 2017" TextColor="#4A4A4A" 
+                FontSize="Small" FontAttributes="Bold" Grid.Row="0" 
+                HorizontalTextAlignment="Start" VerticalTextAlignment="Start" 
+                VerticalOptions="Start"/>
+                
+                <Label Text="3 Tage lang" TextColor="#191928" 
+                FontSize="Small" HorizontalTextAlignment="End" FontAttributes="Bold" 
+                        Grid.Row="0" HorizontalOptions="EndAndExpand"/>
+                
+                <Label Text="Paracetamol" TextColor="#D0001E" FontSize="35" 
+                FontAttributes="Bold" HorizontalTextAlignment="Start" 
+                        Grid.Row="1" />
+                
+                <Label Text="600mg" TextColor="#191928" FontSize="Small" 
+                FontAttributes="Bold" HorizontalTextAlignment="Start" 
+                        Grid.Row="2" />
+                
+                <Label Text="2 mal täglich" TextColor="#191928" 
+                FontSize="Small" HorizontalTextAlignment="End" FontAttributes="Bold" 
+                        Grid.Row="2" HorizontalOptions="EndAndExpand"/>
+        </Grid>
+    </Frame>
+    </ContentPage.Content>
 </ContentPage>

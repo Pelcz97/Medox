@@ -1,12 +1,16 @@
-using View.AbstractPages;
+using myMD.View.AbstractPages;
 using ViewModel.OverallViewModel;
-using zUtilities;
+using Xamarin.Forms;
 
 namespace ViewModel.MedicationTabViewModel
 {
-	public class MedicationViewModel : CustomContentPage, OverallViewModel
+	public class MedicationViewModel : OverallViewModel
 	{
 		private ToolbarItem AddEntryButton;
+
+        public MedicationViewModel(INavigation Navigation){
+            
+        }
 
 		public ICommand ShowMedicationDetails()
 		{
