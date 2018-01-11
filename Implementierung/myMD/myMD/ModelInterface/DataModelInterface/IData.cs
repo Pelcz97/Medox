@@ -1,6 +1,6 @@
 using System;
 
-namespace Model.DataModelInterface
+namespace ModelInterface.DataModelInterface
 {
     /// <summary>
     /// Schnittstelle für die Abstraktion von Daten, die die IEntity Schnittstelle erweitert.

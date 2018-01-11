@@ -1,4 +1,4 @@
-using Model.DataModelInterface;
+using ModelInterface.DataModelInterface;
 using System.Collections.Generic;
 
 namespace Model.DataModel

@@ -1,7 +1,7 @@
 using Model.EntityObserver;
 using Model.DataModel;
 using System.Collections.Generic;
-using Model.DataModelInterface;
+using ModelInterface.DataModelInterface;
 
 namespace Model.DatabaseModel
 {

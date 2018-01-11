@@ -1,10 +1,10 @@
-using Model.ModelFacadeInterface;
+using ModelInterface.ModelFacadeInterface;
 using Model.DatabaseModel;
 using Model.EntityFactory;
 using Model.ParserModel;
 using Model.FileHelper;
 using Model.TransmissionModel;
-using Model.DataModelInterface;
+using ModelInterface.DataModelInterface;
 using System.Collections.Generic;
 
 namespace Model.ModelFacade

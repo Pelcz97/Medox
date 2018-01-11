@@ -1,4 +1,4 @@
-namespace Model.DataModelInterface
+namespace ModelInterface.DataModelInterface
 {
     /// <summary>
     /// Schnittstelle für eine Entität. Entitäten sind Abstraktionen von medizinischen Daten oder Akteuren. 

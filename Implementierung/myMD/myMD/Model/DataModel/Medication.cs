@@ -1,5 +1,5 @@
 using Model.DataModel;
-using Model.DataModelInterface;
+using ModelInterface.DataModelInterface;
 using System;
 
 namespace Model.DataModel

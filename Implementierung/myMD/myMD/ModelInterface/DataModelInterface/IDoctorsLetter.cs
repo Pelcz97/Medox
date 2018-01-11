@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Model.DataModelInterface
+namespace ModelInterface.DataModelInterface
 {
     /// <summary>
     /// Schnittstelle für die Abstraktion eines Arztbriefes, die die IData Schnittstelle erweitert.

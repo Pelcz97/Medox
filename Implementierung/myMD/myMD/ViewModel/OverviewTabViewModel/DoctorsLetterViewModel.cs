@@ -1,5 +1,5 @@
 using ViewModel.OverallViewModel;
-using Model.DataModelInterface;
+using ModelInterface.DataModelInterface;
 
 namespace ViewModel.OverviewTabViewModel
 {

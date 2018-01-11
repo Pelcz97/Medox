@@ -1,4 +1,4 @@
-using Model.DataModelInterface;
+using ModelInterface.DataModelInterface;
 using Model.EntityObserver;
 using System;
 

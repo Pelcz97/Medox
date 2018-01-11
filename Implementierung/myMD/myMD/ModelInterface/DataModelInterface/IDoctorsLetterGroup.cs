@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace Model.DataModelInterface
+namespace ModelInterface.DataModelInterface
 {
     /// <summary>
     /// Schnittstelle für eine Arztbriefgruppe, die die IData Schnittstelle erweitert.

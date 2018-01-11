@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Model.TransmissionModelInterface;
+using ModelInterface.TransmissionModelInterface;
 
 namespace Model.TransmissionModel
 {

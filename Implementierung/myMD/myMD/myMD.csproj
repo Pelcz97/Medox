@@ -98,16 +98,16 @@
     <Compile Include="Model\DataModel\Entity.cs" />
     <Compile Include="Model\DataModel\Medication.cs" />
     <Compile Include="Model\DataModel\Profile.cs" />
-    <Compile Include="Model\DataModelInterface\BloodType.cs" />
-    <Compile Include="Model\DataModelInterface\IData.cs" />
-    <Compile Include="Model\DataModelInterface\IDoctor.cs" />
-    <Compile Include="Model\DataModelInterface\IDoctorsLetter.cs" />
-    <Compile Include="Model\DataModelInterface\IDoctorsLetterGroup.cs" />
-    <Compile Include="Model\DataModelInterface\IEntity.cs" />
-    <Compile Include="Model\DataModelInterface\IMedication.cs" />
-    <Compile Include="Model\DataModelInterface\IProfile.cs" />
-    <Compile Include="Model\DataModelInterface\Interval.cs" />
-    <Compile Include="Model\DataModelInterface\Sensitivity.cs" />
+    <Compile Include="ModelInterface\DataModelInterface\BloodType.cs" />
+    <Compile Include="ModelInterface\DataModelInterface\IData.cs" />
+    <Compile Include="ModelInterface\DataModelInterface\IDoctor.cs" />
+    <Compile Include="ModelInterface\DataModelInterface\IDoctorsLetter.cs" />
+    <Compile Include="ModelInterface\DataModelInterface\IDoctorsLetterGroup.cs" />
+    <Compile Include="ModelInterface\DataModelInterface\IEntity.cs" />
+    <Compile Include="ModelInterface\DataModelInterface\IMedication.cs" />
+    <Compile Include="ModelInterface\DataModelInterface\IProfile.cs" />
+    <Compile Include="ModelInterface\DataModelInterface\Interval.cs" />
+    <Compile Include="ModelInterface\DataModelInterface\Sensitivity.cs" />
     <Compile Include="Model\DatabaseModel\EntityDatabase.cs" />
     <Compile Include="Model\DatabaseModel\IEntityDatabase.cs" />
     <Compile Include="Model\EntityFactory\EntityFactory.cs" />
@@ -119,7 +119,7 @@
     <Compile Include="Model\FileHelper\FileHelper.cs" />
     <Compile Include="Model\FileHelper\IFileHelper.cs" />
     <Compile Include="Model\ModelFacade\ModelFacade.cs" />
-    <Compile Include="Model\ModelFacadeInterface\IModelFacade.cs" />
+    <Compile Include="ModelInterface\ModelFacadeInterface\IModelFacade.cs" />
     <Compile Include="Model\ParserModel\FileToDatabaseParser.cs" />
     <Compile Include="Model\ParserModel\Hl7ToDatabaseParser.cs" />
     <Compile Include="Model\ParserModel\IParserFacade.cs" />
@@ -128,7 +128,7 @@
     <Compile Include="Model\TransmissionModel\Bluetooth.cs" />
     <Compile Include="Model\TransmissionModel\Device.cs" />
     <Compile Include="Model\TransmissionModel\IBluetooth.cs" />
-    <Compile Include="Model\TransmissionModelInterface\IDevice.cs" />
+    <Compile Include="ModelInterface\TransmissionModelInterface\IDevice.cs" />
     <Compile Include="View\AbstractPages\CustomContentPage.xaml.cs">
       <DependentUpon>CustomContentPage.xaml</DependentUpon>
     </Compile>
