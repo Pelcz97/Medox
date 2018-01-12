@@ -13,6 +13,14 @@ namespace myMD.View.MedicationTabPages
             InitializeComponent();
         }
 
+        async void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            var view = new NavigationPage(new DetailedMedicationPage());
+            view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
+            view.BarTextColor = Color.White;
+
+            await Navigation.PushModalAsync(view);
+        }
 
     }
 }

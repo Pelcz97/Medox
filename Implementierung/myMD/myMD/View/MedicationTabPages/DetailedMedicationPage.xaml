@@ -4,5 +4,6 @@
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
     x:Class="myMD.View.MedicationTabPages.DetailedMedicationPage">
 	<ContentPage.Content>
-	</ContentPage.Content>
+        
+    </ContentPage.Content>
 </local:CustomContentPage>
