@@ -11,6 +11,7 @@ namespace myMD.View.AbstractPages
         {
             InitializeComponent();
             this.BackgroundColor = Color.FromRgb(25, 25, 40);
+            this.SetValue(Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty, Color.White);
         }
     }
 }

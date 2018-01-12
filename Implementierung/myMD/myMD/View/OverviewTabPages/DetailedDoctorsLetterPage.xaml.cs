@@ -5,12 +5,11 @@ using Xamarin.Forms;
 
 namespace myMD.View.OverviewTabPages
 {
-    public partial class DetailedDoctorsLetterPage : ContentPage
+    public partial class DetailedDoctorsLetterPage : CustomContentPage
     {
         public DetailedDoctorsLetterPage()
         {
             InitializeComponent();
-            this.BackgroundColor = Color.FromRgb(25, 25, 40);
         }
     }
 }

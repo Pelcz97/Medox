@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+<local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
     x:Class="myMD.View.MedicationTabPages.MedicationPage"
     Title="Medikation">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="AddMedicationButton" Text="Hinzufügen" 
+        Order="Primary" Clicked="Handle_Clicked" />
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
         <StackLayout>
             <ListView RowHeight="160" BackgroundColor="#191928">
@@ -54,4 +60,4 @@
             </ListView>
         </StackLayout>
     </ContentPage.Content>
-</ContentPage>
+</local:CustomContentPage>

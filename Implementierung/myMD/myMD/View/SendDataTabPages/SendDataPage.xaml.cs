@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace myMD.View.SendDataTabPages
 {
-    public partial class SendDataPage : ContentPage
+    public partial class SendDataPage : CustomContentPage
     {
         public SendDataPage()
         {
