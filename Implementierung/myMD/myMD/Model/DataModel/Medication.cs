@@ -22,6 +22,7 @@ namespace myMD.Model.DataModel
             {
                 this.letter = letter;
                 letter.AttachMedication(this);
+                Updated();
             }
 		}
 
@@ -31,38 +32,61 @@ namespace myMD.Model.DataModel
             {
                 this.letter = null;
                 letter.DisattachMedication(this);
+                Updated();
             }
+        }
+
+        public override void Delete()
+        {
+            base.Delete();
+            DisattachFromLetter(letter);
         }
 
         /// <see>Model.DataModelInterface.IMedication#Frequency</see>
         public int Frequency
         {
             get => frequency;
-            set => frequency = value;
+            set
+            {
+                frequency = value;
+                Updated();
+            }
         }
 
         /// <see>Model.DataModelInterface.IMedication#Interval</see>
         public Interval Interval
         {
             get => interval;
-            set => interval = value;
+            set
+            {
+                interval = value;
+                Updated();
+            }
         }
 
         /// <see>Model.DataModelInterface.IMedication#EndDate</see>
         public DateTime EndDate
         {
             get => endDate;
-            set => endDate = value;
+            set
+            {
+                endDate = value;
+                Updated();
+            }
         }
 
         public new DateTime Date
         {
             get => startDate;
-            set => startDate = value;
+            set
+            {
+                startDate = value;
+                Updated();
+            }
         }
 
         /// <see>Model.DataModelInterface.IMedication#DisattachFromLetter(Model.DataModelInterface.IDoctorsLetter)</see>
-        public void DisattachFromLetter(IDoctorsLetter letter) => letter = null;
+        public void DisattachFromLetter(IDoctorsLetter letter) => letter.RemoveMedication(this);
 
         /// <see>Model.DataModelInterface.IMedication#AttachToLetter(Model.DataModelInterface.IDoctorsLetter)</see>
         public void AttachToLetter(IDoctorsLetter letter) => letter.AttachMedication(this);

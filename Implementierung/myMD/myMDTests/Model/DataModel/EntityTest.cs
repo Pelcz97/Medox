@@ -11,7 +11,7 @@ namespace myMDTests.Model.DataModel
         private static string ALT_TEST_NAME = "Alternative Test-Entität";
         private static int TEST_ID = 1234;
         private Entity entity;
-        private MockObserver obs;
+        private MockEntityObserver obs;
 
         [SetUp]
         public void SetUp()
@@ -21,7 +21,7 @@ namespace myMDTests.Model.DataModel
                 ID = TEST_ID,
                 Name = TEST_NAME
             };
-            obs = new MockObserver();
+            obs = new MockEntityObserver();
             entity.Subscribe(obs);
         }
 
@@ -78,7 +78,7 @@ namespace myMDTests.Model.DataModel
         /// <summary>
         /// Mock Objekt zur Überprüfung, ob Beobachter korrekt benachrichtigt werden
         /// </summary>
-        private class MockObserver : IEntityObserver
+        private class MockEntityObserver : IEntityObserver
         {
             private bool deleted = false;
             private bool updated = false;

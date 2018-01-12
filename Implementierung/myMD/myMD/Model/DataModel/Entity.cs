@@ -6,7 +6,7 @@ using System.Collections;
 
 namespace myMD.Model.DataModel
 {
-	public abstract class Entity : IEntity, IEntityObservable
+	public abstract class Entity : IEntity, IObservable<IEntityObserver>
 	{
         public Entity()
         {
@@ -14,6 +14,8 @@ namespace myMD.Model.DataModel
         }
 
         private string name;
+
+        private int id;
 
         private IList<IEntityObserver> observers;
 
@@ -28,10 +30,17 @@ namespace myMD.Model.DataModel
         }
 
         [PrimaryKey, AutoIncrement]
-        public int ID { get; set; }
+        public int ID {
+            get => id;
+            set
+            {
+                id = value;
+                Updated();
+            }
+        }
 
         /// <see>ModelInterface.DataModelInterface.IEntity#Delete()</see>
-        public void Delete() => Deleted();
+        public virtual void Delete() => Deleted();
 
         /// <see>Model.EntityObserver.IEntityObservable#Subscribe(Model.EntityObserver.IEntityObserver)</see>
         public void Subscribe(IEntityObserver observer) => this.observers.Add(observer);
