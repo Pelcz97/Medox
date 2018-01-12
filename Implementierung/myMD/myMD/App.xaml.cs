@@ -22,28 +22,27 @@ namespace myMD
             OverviewPage.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersLargeTitles(true);
             OverviewPage.SetValue(Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty, Color.White);
             OverviewPage.BarBackgroundColor = Color.FromRgb(25, 25, 40);
-            OverviewPage.BackgroundColor = Color.FromRgb(25, 25, 40);
             OverviewPage.BarTextColor = Color.FromHex("FFFFFF");
 
             MedicationPage.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersLargeTitles(true);
             MedicationPage.SetValue(Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty, Color.White);
             MedicationPage.BarBackgroundColor = Color.FromRgb(25, 25, 40);
-            MedicationPage.BackgroundColor = Color.FromRgb(25, 25, 40);
             MedicationPage.BarTextColor = Color.FromHex("FFFFFF");
 
             SendDataPage.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersLargeTitles(true);
             SendDataPage.SetValue(Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty, Color.White);
             SendDataPage.BarBackgroundColor = Color.FromRgb(25, 25, 40);
-            SendDataPage.BackgroundColor = Color.FromRgb(25, 25, 40);
             SendDataPage.BarTextColor = Color.FromHex("FFFFFF");
 
             ProfilePage.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersLargeTitles(true);
             ProfilePage.SetValue(Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty, Color.White);
             ProfilePage.BarBackgroundColor = Color.FromRgb(25, 25, 40);
-            ProfilePage.BackgroundColor = Color.FromRgb(25, 25, 40);
             ProfilePage.BarTextColor = Color.FromHex("FFFFFF");
 
             var tabs = new TabbedPage();
+
+            tabs.BarBackgroundColor = Color.FromRgb(25, 25, 40);
+            tabs.BarTextColor = Color.FromHex("FFFFFF");
 
             tabs.Children.Add(OverviewPage);
             tabs.Children.Add(MedicationPage);

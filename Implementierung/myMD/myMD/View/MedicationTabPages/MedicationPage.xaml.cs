@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace myMD.View.MedicationTabPages
 {
-    public partial class MedicationPage : ContentPage
+    public partial class MedicationPage : CustomContentPage
     {
         public MedicationPage()
         {
