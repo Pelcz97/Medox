@@ -17,7 +17,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
             this.MedicationsList = new ObservableCollection<MedicineViewModel>();
             this.MedicationListIsVisible = new bool();
 
-            if (MedicationsList == null) {
+            if (MedicationsList.Count == 0) {
                 MedicationListIsVisible = false;
             }
         }
