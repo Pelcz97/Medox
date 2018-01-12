@@ -148,6 +148,7 @@
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\MedicationTabViewModel\MedicationViewModel.cs" />
+    <Compile Include="ViewModel\MedicationTabViewModel\MedicineViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
