@@ -8,30 +8,32 @@ namespace ModelInterface.DataModelInterface
     /// einen Rückblick über den Krankheitsverlauf, die veranlasste Therapie und eine Interpretation des Geschehens zum Krankheitsverlauf im speziellen Fall.
     /// </summary>
 	public interface IDoctorsLetter : IData
-	{
+    {
         /// <summary>
-        /// Gibt die Diagnose in diesem Arztbrief zurück.
+        /// Die Diagnose in diesem Arztbrief.
         /// </summary>
-        /// <returns>Diagnose in diesem Arztbrief</returns>
-		string GetDiagnosis();
+		string Diagnosis { get; }
 
         /// <summary>
-        /// Gibt den Arzt zurück, von dem dieser Arztbrief stammt.
+        /// Der Arzt, von dem dieser Arztbrief stammt.
         /// </summary>
-        /// <returns>Arzt, von dem dieser Arztbrief stammt</returns>
-		IDoctor GetDoctor();
+        IDoctor Doctor { get; }
 
         /// <summary>
-        /// Gibt alle Medikationen zurück, die in diesem Arztbrief verschrieben wurden.
+        /// Liste aller Medikationen, die in diesem Arztbrief verschrieben wurden.
         /// </summary>
-        /// <returns>Liste aller in diesem Arztbrief verschriebenen Medikationen</returns>
-		IList<IMedication> GetMedication();
+        IList<IMedication> Medication { get; }
+
+        /// <summary>
+        /// Liste aller Arztbriefgruppen, in denen dieser Arztbrief enthalten ist.
+        /// </summary>
+        IList<IDoctorsLetterGroup> Groups { get; }
 
         /// <summary>
         /// Löst die Verbindung zwischen einer Medikation und diesem Arztbrief auf.
         /// </summary>
         /// <param name="med">Zu entferndene Medikation</param>
-		void RemoveMedication(IMedication med);
+        void RemoveMedication(IMedication med);
 
         /// <summary>
         /// Verbindet eine Medikation mit diesem Arztbrief.
@@ -41,12 +43,18 @@ namespace ModelInterface.DataModelInterface
 		void AttachMedication(IMedication med);
 
         /// <summary>
-        /// Gibt alle Arztbriefgruppen zurück, in denen dieser Arztbrief enthalten ist, zurück.
+        /// Fügt diesen Arztbrief zu einer Arztbriefgruppe hinzu.
         /// </summary>
-        /// <returns>Liste aller Arztbriefgruppen, in denen dieser Arztbrief enthalten ist</returns>
-		IList<IDoctorsLetterGroup> GetGroups();
+        /// <param name="group">Die Gruppe zu der dieser Arztbrief hinzugefügt werden soll</param>
+        void AddToGroup(IDoctorsLetterGroup group);
 
-	}
+        /// <summary>
+        /// Entfernt diesen Arztbrief aus einer Arztbriefgruppe.
+        /// </summary>
+        /// <param name="group">Die Gruppe aus der dieser Arztbrief entfernt werden soll</param>
+        void RemoveFromGroup(IDoctorsLetterGroup group);
+
+    }
 
 }
 

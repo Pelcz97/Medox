@@ -1,6 +1,6 @@
 using ModelInterface.DataModelInterface;
 
-namespace Model.ParserModel
+namespace myMD.Model.ParserModel
 {
 	public class LetterToOriginalFileParser
 	{

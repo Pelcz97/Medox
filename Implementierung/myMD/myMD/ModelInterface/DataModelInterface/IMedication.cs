@@ -1,4 +1,5 @@
 using System;
+using myMD.Model.DataModel;
 
 namespace ModelInterface.DataModelInterface
 {
@@ -11,56 +12,33 @@ namespace ModelInterface.DataModelInterface
 	public interface IMedication : IData
 	{
         /// <summary>
-        /// Ändert das Datum an dem diese Medikation angefangen wurde
+        /// Das Datum an dem diese Medikation angefangen wurde
         /// </summary>
-        /// <param name="date">Das neue Startdatum dieser Medikation</param>
-		void SetDate(DateTime date);
+		new DateTime Date { get; set; }
 
         /// <summary>
-        /// Gibt zurück wie oft diese Medikation in ihrem Intervall genommen werden soll.
+        /// Häufigkeit in der diese Medikation in ihrem Intervall genommen werden soll.
         /// Das Intervall und die Häufigkeit zusammen ergeben dann eine tatsächliche Häufigkeit in der die Medikation eingenommen werden soll (z.B. 3 mal pro Tag).
         /// </summary>
-        /// <returns>Häufigkeit in der diese Medikation in ihrem Intervall genommen werden soll</returns>
-		int GetFrequency();
+        int Frequency { get; set; }
 
         /// <summary>
-        /// Ändert die Häufigkeit in der diese Medikation in ihrem Intervall genommen werden soll.
+        /// Das Zeitintervall in der diese Medikation eingenommen werden soll.
         /// Das Intervall und die Häufigkeit zusammen ergeben dann eine tatsächliche Häufigkeit in der die Medikation eingenommen werden soll (z.B. 3 mal pro Tag).
         /// </summary>
-        /// <param name="freq">Neue Häufigkeit in der diese Medikation in ihrem Intervall genommen werden soll</param>
-		void SetFrequency(int freq);
+        Interval Interval { get; set; }
 
         /// <summary>
-        /// Gibt zurück in welchem Zeitintervall die Medikation eingenommen werden soll. 
-        /// Das Intervall und die Häufigkeit zusammen ergeben dann eine tatsächliche Häufigkeit in der die Medikation eingenommen werden soll (z.B. 3 mal pro Tag).
+        /// Das Datum, an dem diese Medikation abgesetzt werden soll.
         /// </summary>
-        /// <returns>Das Zeitintervall in der diese Medikation eingenommen werden soll.</returns>
-		Interval GetInterval();
+        DateTime EndDate { get; set; }
 
         /// <summary>
-        /// Ändert das Zeitintervall in der diese Medikation eingenommen werden soll.
-        /// Das Intervall und die Häufigkeit zusammen ergeben dann eine tatsächliche Häufigkeit in der die Medikation eingenommen werden soll (z.B. 3 mal pro Tag).
+        /// Löst die Verbindung dieser Medikation zu einem Arztbrief auf.
+        /// Besteht keine Verbindung zu diesem Arztbrief, so passiert nichts.
         /// </summary>
-        /// <param name="interval">Neues Zeitintervall in der diese Medikation eingenommen werden soll</param>
-		void SetInterval(Interval interval);
-
-        /// <summary>
-        /// Gibt das Datum zurück, an dem diese Medikation abgesetzt werden soll.
-        /// </summary>
-        /// <returns>Enddatum dieser Medikation</returns>
-		DateTime GetEndDate();
-
-        /// <summary>
-        /// Ändert das Datum, an dem diese Medikation abgesetzt werden soll.
-        /// </summary>
-        /// <param name="date">Neues Enddatum dieser Medikation</param>
-		void SetEndDate(DateTime date);
-
-        /// <summary>
-        /// Löst die Verbindung dieser Medikation zu ihrem Arztbrief auf.
-        /// Besteht keine Verbindung zu einem Arztbrief, so passiert nichts.
-        /// </summary>
-		void DisattachFromLetter();
+        /// <param name="letter">Der zu entfernende Arztbrief</param>
+        void DisattachFromLetter(IDoctorsLetter letter);
 
         /// <summary>
         /// Verbindet diese Medikation mit einem Arztbrief.

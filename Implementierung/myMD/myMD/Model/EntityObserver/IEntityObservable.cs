@@ -1,6 +1,6 @@
-using Model.EntityObserver;
+using myMD.Model.EntityObserver;
 
-namespace Model.EntityObserver
+namespace myMD.Model.EntityObserver
 {
 	public interface IEntityObservable
 	{

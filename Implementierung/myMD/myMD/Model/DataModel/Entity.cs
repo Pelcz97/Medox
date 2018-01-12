@@ -1,62 +1,54 @@
 using ModelInterface.DataModelInterface;
-using Model.EntityObserver;
+using myMD.Model.EntityObserver;
+using SQLite;
+using System.Collections.Generic;
+using System.Collections;
 
-namespace Model.DataModel
+namespace myMD.Model.DataModel
 {
-	public class Entity : IEntity, IEntityObservable
+	public abstract class Entity : IEntity, IEntityObservable
 	{
-		private string name;
+        public Entity()
+        {
+            observers = new List<IEntityObserver>();
+        }
 
-		private int id;
+        private string name;
 
-		private IEntityObserver iEntityObserver;
+        private IList<IEntityObserver> observers;
 
-		public int GetID()
-		{
-			return 0;
-		}
+        /// <see>ModelInterface.DataModelInterface.IEntity#Name</see>
+        public string Name {
+            get => name;
+            set
+            {
+                name = value;
+                Updated();
+            }
+        }
 
-		public void SetID(int id)
-		{
+        [PrimaryKey, AutoIncrement]
+        public int ID { get; set; }
 
-		}
+        /// <see>ModelInterface.DataModelInterface.IEntity#Delete()</see>
+        public void Delete() => Deleted();
 
+        /// <see>Model.EntityObserver.IEntityObservable#Subscribe(Model.EntityObserver.IEntityObserver)</see>
+        public void Subscribe(IEntityObserver observer) => this.observers.Add(observer);
 
-		/// <see>Model.DataModelInterface.IEntity#GetName()</see>
-		public string GetName()
-		{
-			return null;
-		}
+        /// <see>Model.EntityObserver.IEntityObservable#Unsubscribe(Model.EntityObserver.IEntityObserver)</see>
+        public void Unsubscribe(IEntityObserver observer) => this.observers.Remove(observer);
 
+        protected void Updated()
+        {
+            foreach (IEntityObserver obs in observers) obs.OnUpdate(this);
+        }
 
-		/// <see>Model.DataModelInterface.IEntity#SetName(string)</see>
-		public void SetName(string name)
-		{
-
-		}
-
-
-		/// <see>Model.DataModelInterface.IEntity#Delete()</see>
-		public void Delete()
-		{
-
-		}
-
-
-		/// <see>Model.EntityObserver.IEntityObservable#Subscribe(Model.EntityObserver.IEntityObserver)</see>
-		public void Subscribe(IEntityObserver observer)
-		{
-
-		}
-
-
-		/// <see>Model.EntityObserver.IEntityObservable#Unsubscribe(Model.EntityObserver.IEntityObserver)</see>
-		public void Unsubscribe(IEntityObserver observer)
-		{
-
-		}
-
-	}
+        protected void Deleted()
+        {
+            foreach (IEntityObserver obs in observers) obs.OnDeletion(this);
+        }
+    }
 
 }
 

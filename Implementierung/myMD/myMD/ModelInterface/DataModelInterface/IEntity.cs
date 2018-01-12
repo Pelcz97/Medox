@@ -6,16 +6,10 @@ namespace ModelInterface.DataModelInterface
 	public interface IEntity
 	{
         /// <summary>
-        /// Gibt den Namen der Entität zurück.
+        /// Der Name der Entität.
         /// </summary>
         /// <returns>Name der Entität</returns>
-		string GetName();
-
-        /// <summary>
-        /// Ändert den Namen der Entität.
-        /// </summary>
-        /// <param name="name">Neuer Name der Entität</param>
-		void SetName(string name);
+		string Name { get; set; }
 
         /// <summary>
         /// Löscht die Entität und löst alle Assoziationen von ihr auf.

@@ -1,7 +1,7 @@
-using Model.DatabaseModel;
+using myMD.Model.DatabaseModel;
 using ModelInterface.DataModelInterface;
 
-namespace Model.EntityFactory
+namespace myMD.Model.EntityFactory
 {
 	public class EntityFactory : IEntityFactory
 	{

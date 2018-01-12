@@ -1,13 +1,13 @@
 using ModelInterface.ModelFacadeInterface;
-using Model.DatabaseModel;
-using Model.EntityFactory;
-using Model.ParserModel;
-using Model.FileHelper;
-using Model.TransmissionModel;
+using myMD.Model.DatabaseModel;
+using myMD.Model.EntityFactory;
+using myMD.Model.ParserModel;
+using myMD.Model.FileHelper;
+using myMD.Model.TransmissionModel;
 using ModelInterface.DataModelInterface;
 using System.Collections.Generic;
 
-namespace Model.ModelFacade
+namespace myMD.Model.ModelFacade
 {
 	public class ModelFacade : IModelFacade
 	{

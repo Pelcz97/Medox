@@ -1,6 +1,6 @@
-using Model.FileHelper;
+using myMD.Model.FileHelper;
 
-namespace Model.FileHelper
+namespace myMD.Model.FileHelper
 {
 	public class FileHelper : IFileHelper
 	{

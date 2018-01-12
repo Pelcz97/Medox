@@ -6,17 +6,9 @@ namespace ModelInterface.DataModelInterface
 	public interface IDoctor : IEntity
 	{
         /// <summary>
-        /// Gibt das Fachgebiet dieses Doktors zurück.
+        /// Das Fachgebiet dieses Doktors.
         /// </summary>
-        /// <returns>Das Fachgebiet dieses Doktors</returns>
-		string GetField();
-
-        /// <summary>
-        /// Ändert das Fachgebiet dieses Doktors.
-        /// </summary>
-        /// <param name="field">Neues Fachgebiet dieses Doktors</param>
-		void SetField(string field);
-
+		string Field { get; set; }
 	}
 
 }

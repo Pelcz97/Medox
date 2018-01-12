@@ -1,8 +1,8 @@
-using Model.FileHelper;
-using Model.DataModel;
+using myMD.Model.FileHelper;
+using myMD.Model.DataModel;
 using System.Collections.Generic;
 
-namespace Model.ParserModel
+namespace myMD.Model.ParserModel
 {
 	public class Hl7ToDatabaseParser : FileToDatabaseParser
 	{

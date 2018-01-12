@@ -1,9 +1,9 @@
-using Model.EntityObserver;
-using Model.DataModel;
+using myMD.Model.EntityObserver;
+using myMD.Model.DataModel;
 using System.Collections.Generic;
 using ModelInterface.DataModelInterface;
 
-namespace Model.DatabaseModel
+namespace myMD.Model.DatabaseModel
 {
 	public interface IEntityDatabase : IEntityObserver
 	{
