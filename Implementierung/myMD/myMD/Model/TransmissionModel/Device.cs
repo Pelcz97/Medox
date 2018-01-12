@@ -1,6 +1,6 @@
 using ModelInterface.TransmissionModelInterface;
 
-namespace Model.TransmissionModel
+namespace myMD.Model.TransmissionModel
 {
     public class Device : IDevice
     {

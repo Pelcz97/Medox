@@ -1,30 +1,20 @@
-using Model.DataModel;
+using myMD.Model.DataModel;
 using ModelInterface.DataModelInterface;
 using System.Collections.Generic;
 
-namespace Model.DataModel
+namespace myMD.Model.DataModel
 {
-	public class Doctor : Entity, IDoctor
-	{
-		private string field;
-
-		private ICollection<Profile> profile;
-
-
-		/// <see>Model.DataModelInterface.IDoctor#GetField()</see>
-		public string GetField()
-		{
-			return null;
-		}
-
-
-		/// <see>Model.DataModelInterface.IDoctor#SetField(string)</see>
-		public void SetField(string field)
-		{
-
-		}
-
-	}
+    public class Doctor : Entity, IDoctor
+    {
+        private string field;
+    
+        /// <see>Model.DataModelInterface.IDoctor#Field</see>
+        public string Field
+        {
+            get => field;
+            set => field = value;
+        }
+    }
 
 }
 

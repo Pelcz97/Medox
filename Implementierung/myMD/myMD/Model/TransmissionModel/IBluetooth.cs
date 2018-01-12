@@ -1,7 +1,7 @@
 using ModelInterface.TransmissionModelInterface;
 using System.Collections.Generic;
 
-namespace Model.TransmissionModel
+namespace myMD.Model.TransmissionModel
 {
 	public interface IBluetooth
 	{

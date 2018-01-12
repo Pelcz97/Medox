@@ -1,8 +1,8 @@
-using Model.DatabaseModel;
-using Model.DataModel;
+using myMD.Model.DatabaseModel;
+using myMD.Model.DataModel;
 using System.Collections.Generic;
 
-namespace Model.ParserModel
+namespace myMD.Model.ParserModel
 {
 	public abstract class FileToDatabaseParser
 	{

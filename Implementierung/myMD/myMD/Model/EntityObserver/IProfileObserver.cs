@@ -1,7 +1,7 @@
-using Model.EntityObserver;
-using Model.DataModel;
+using myMD.Model.EntityObserver;
+using myMD.Model.DataModel;
 
-namespace Model.EntityObserver
+namespace myMD.Model.EntityObserver
 {
 	public interface IProfileObserver : IEntityObserver
 	{

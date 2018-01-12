@@ -1,6 +1,6 @@
 using ModelInterface.DataModelInterface;
 
-namespace Model.EntityFactory
+namespace myMD.Model.EntityFactory
 {
 	public interface IEntityFactory
 	{

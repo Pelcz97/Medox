@@ -1,8 +1,8 @@
-using Model.ParserModel;
-using Model.DatabaseModel;
+using myMD.Model.ParserModel;
+using myMD.Model.DatabaseModel;
 using ModelInterface.DataModelInterface;
 
-namespace Model.ParserModel
+namespace myMD.Model.ParserModel
 {
 	public class ParserFacade : IParserFacade
 	{

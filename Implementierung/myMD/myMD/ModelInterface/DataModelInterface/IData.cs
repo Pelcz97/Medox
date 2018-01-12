@@ -9,23 +9,14 @@ namespace ModelInterface.DataModelInterface
 	public interface IData : IEntity
 	{
         /// <summary>
-        /// Gibt den Zeitpunkt zurück, von dem die Daten stammen.
+        /// Der Zeitpunkt, von dem die Daten stammen.
         /// </summary>
-        /// <returns>Zeitpunkt von dem die Daten stammen</returns>
-		DateTime GetDate();
+		DateTime Date { get; }
 
         /// <summary>
-        /// Gibt die Sensitivitätsstufe der Daten zurück.
+        /// Die Sensitivitätsstufe der Daten.
         /// </summary>
-        /// <returns>Sensitivitätsstufe der Daten</returns>
-		Sensitivity GetSensitivity();
-
-        /// <summary>
-        /// Ändert die Sensitivitätsstufe der Daten.
-        /// </summary>
-        /// <param name="sensitivity">Neue Sensitivitätsstufe der Daten</param>
-		void SetSensitivity(Sensitivity sensitivity);
-
+		Sensitivity Sensitivity { get; set; }
 	}
 
 }

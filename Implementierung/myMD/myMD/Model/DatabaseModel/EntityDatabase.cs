@@ -1,10 +1,10 @@
-using Model.EntityObserver;
-using Model.DataModel;
-using Model.FileHelper;
+using myMD.Model.EntityObserver;
+using myMD.Model.DataModel;
+using myMD.Model.FileHelper;
 using System.Collections.Generic;
 using ModelInterface.DataModelInterface;
 
-namespace Model.DatabaseModel
+namespace myMD.Model.DatabaseModel
 {
 	public class EntityDatabase : IEntityObserver, IEntityDatabase, IProfileObserver
 	{

@@ -1,4 +1,4 @@
-namespace Model.FileHelper
+namespace myMD.Model.FileHelper
 {
 	public interface IFileHelper
 	{

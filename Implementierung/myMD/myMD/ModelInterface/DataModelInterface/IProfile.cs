@@ -9,58 +9,30 @@ namespace ModelInterface.DataModelInterface
 	public interface IProfile : IEntity
 	{
         /// <summary>
-        /// Gibt die Versicherungsnummer dieses Profils zurück.
+        /// Die Versicherungsnummer dieses Profils.
         /// </summary>
-        /// <returns>Versicherungsnummer dieses Profils</returns>
-		string GetInsuranceNumber();
+        string InsuranceNumber { get; set; }
 
         /// <summary>
-        /// Ändert die Versicherungsnummer dieses Profils.
+        /// Der Nachname dieses Profils.
         /// </summary>
-        /// <param name="number">Neue Versicherungsnummer dieses Profils</param>
-		void SetInsuranceNumber(string number);
+        string LastName { get; set; }
 
         /// <summary>
-        /// Gibt den Nachnamen dieses Profils zurück.
+        /// Die Blutgruppe dieses Profils.
         /// </summary>
-        /// <returns>Nachname des Profils</returns>
-		string GetLastName();
+        BloodType BloodType { get; set; }
 
         /// <summary>
-        /// Ändert den Nachnamen dieses Profils.
+        /// Das Geburtsdatum dieses Profils.
         /// </summary>
-        /// <param name="name">Neuer Nachname dieses Profils</param>
-		void SetLastName(string name);
-
-        /// <summary>
-        /// Gibt die Blutgruppe dieses Profils zurück.
-        /// </summary>
-        /// <returns>Blutgruppe dieses Profils</returns>
-		BloodType GetBloodType();
-
-        /// <summary>
-        /// Ändert die Blutgruppe dieses Profils.
-        /// </summary>
-        /// <param name="bloodType">Neue Blutgruppe dieses Profils</param>
-		void SetBloodType(BloodType bloodType);
-
-        /// <summary>
-        /// Gibt das Geburtsdatum dieses Profils zurück
-        /// </summary>
-        /// <returns>Geburtsdatum dieses Profils</returns>
-		DateTime GetBirthDate();
-
-        /// <summary>
-        /// Ändert das Geburtsdatum dieses Profils.
-        /// </summary>
-        /// <param name="date">Neues Geburtsdatum dieses Profils</param>
-		void SetBirthDate(DateTime date);
+        DateTime BirthDate { get; set; }
 
         /// <summary>
         /// Da in einer Anwendung mehrere Profile existieren können, jedoch nicht mehrere Nutzer die Anwendung gleichzeitig verwenden können, muss es eine Möglichkeit geben zwischen den Profilen zu wechseln.
         /// Beim Aufruf dieser Methode wird dieses Profil als das momentan aktive Profil ausgewählt.
         /// </summary>
-		void SetActive();
+        void SetActive();
 
 	}
 
