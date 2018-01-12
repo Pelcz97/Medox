@@ -23,7 +23,7 @@
                     VerticalOptions="EndAndExpand"
                     HeightRequest="50"
                     WidthRequest="400"
-                    BorderRadius="30"/>
+                    BorderRadius="15"/>
         </Grid>
     </ContentPage.Content>
 </local:CustomContentPage>
