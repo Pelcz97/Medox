@@ -7,6 +7,7 @@
     <ContentPage.Content>
         <Grid x:Name="Grid" RowSpacing="1" ColumnSpacing="1">
             <Grid.RowDefinitions>
+                <!--Durch Benutzung des *'s wird der Button immer am unteren Ende der Seite dargestellt-->
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
@@ -23,6 +24,7 @@
                     VerticalOptions="EndAndExpand"
                     HeightRequest="50"
                     WidthRequest="400"
+                    <!--Doesn't affect Android devices-->
                     BorderRadius="15"/>
         </Grid>
     </ContentPage.Content>
