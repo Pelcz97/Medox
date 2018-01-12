@@ -10,6 +10,7 @@ namespace myMD.View.OverviewTabPages
         public DetailedDoctorsLetterPage()
         {
             InitializeComponent();
+            this.BackgroundColor = Color.FromRgb(25, 25, 40);
         }
     }
 }
