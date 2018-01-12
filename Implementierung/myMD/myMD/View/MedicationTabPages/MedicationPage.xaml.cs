@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using myMD.View.AbstractPages;
-
+using myMD.ViewModel.MedicationTabViewModel;
 using Xamarin.Forms;
 
 namespace myMD.View.MedicationTabPages
@@ -11,9 +11,10 @@ namespace myMD.View.MedicationTabPages
         public MedicationPage()
         {
             InitializeComponent();
+            this.BindingContext = new MedicationViewModel();
         }
 
-        async void Handle_Clicked(object sender, System.EventArgs e)
+        public async void Handle_Clicked(object sender, System.EventArgs e)
         {
             var view = new NavigationPage(new DetailedMedicationPage());
             view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
