@@ -10,6 +10,7 @@ namespace myMD.View.AbstractPages
         public CustomContentPage()
         {
             InitializeComponent();
+            this.BackgroundColor = Color.FromRgb(25, 25, 40);
         }
     }
 }

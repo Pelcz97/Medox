@@ -1,5 +1,45 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="myMD.View.OverviewTabPages.DetailedDoctorsLetterPage">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="myMD.View.OverviewTabPages.DetailedDoctorsLetterPage">
 	<ContentPage.Content>
-	</ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand">
+            
+        <Frame CornerRadius="0" 
+        BackgroundColor="#00B9B4"
+        Margin="0"
+        HorizontalOptions="Center" 
+        VerticalOptions="Start" 
+        HeightRequest="100" 
+        WidthRequest="400">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="85" />
+            </Grid.RowDefinitions>
+
+                <Label Text="Dr. Michael Schnabel" TextColor="#191928" 
+                        FontSize="Large" FontAttributes="Bold"
+                        VerticalTextAlignment="End" HorizontalTextAlignment="Start"
+                        Grid.Row="0"/>
+                    
+                <Label Text="20. September 2017" TextColor="#FFFFFF" 
+                        FontSize="Medium" FontAttributes="Bold" 
+                        VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                        Grid.Row="2"/>
+                    
+                <Label Text="Hausarzt" TextColor="#FFFFFF" 
+                        FontSize="45" FontAttributes="Bold"
+                        VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                        Grid.Row="1"/>
+                
+                <Button x:Name="QuitButton" HorizontalOptions="End" VerticalOptions="Start" 
+                    TextColor="White" Text="Quit" FontAttributes="Bold" FontSize="20"
+                    Grid.Row="0" />
+        </Grid>
+            
+    </Frame>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

@@ -79,18 +79,6 @@
       <DependentUpon>myMDPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\MedicationTabViewModel\DetailedMedicineViewModel.cs" />
-    <Compile Include="ViewModel\MedicationTabViewModel\MedicationViewModel.cs" />
-    <Compile Include="ViewModel\MedicationTabViewModel\MedicineViewModel.cs" />
-    <Compile Include="ViewModel\OverallViewModel\OverallViewModel.cs" />
-    <Compile Include="ViewModel\OverviewTabViewModel\DetailedDoctorsLetterViewModel.cs" />
-    <Compile Include="ViewModel\OverviewTabViewModel\DoctorsLetterViewModel.cs" />
-    <Compile Include="ViewModel\OverviewTabViewModel\OverviewViewModel.cs" />
-    <Compile Include="ViewModel\ProfileTabViewModel\ProfileViewModel.cs" />
-    <Compile Include="ViewModel\SendDataTabViewModel\SelectDeviceViewModel.cs" />
-    <Compile Include="ViewModel\SendDataTabViewModel\SelectDoctorsLettersViewModel.cs" />
-    <Compile Include="ViewModel\SendDataTabViewModel\SendDataViewModel.cs" />
-    <Compile Include="ViewModel\SendDataTabViewModel\TransmittingDataViewModel.cs" />
     <Compile Include="Model\DataModel\Data.cs" />
     <Compile Include="Model\DataModel\Doctor.cs" />
     <Compile Include="Model\DataModel\DoctorsLetter.cs" />
