@@ -4,33 +4,26 @@
     x:Class="myMD.View.SendDataTabPages.SendDataPage"
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
     Title="Senden">
-    <StackLayout VerticalOptions="Center" Spacing="200">
-
-
-        <Label TextColor="#FFFFFF" 
-                FontSize="Medium" FontAttributes="None"
-                HorizontalTextAlignment="Center" 
-                VerticalTextAlignment="Center" 
-            LineBreakMode="WordWrap" Margin="30,50,30,0">
-            <Label.Text>
-                Das Senden deiner Daten erfolgt drathlos über Bluetooth.
-                
-Achte deshalb darauf, Bluetooth im Control Center zu aktivieren und in Reichweite deines Arztes zu sein.
-            </Label.Text>
-        </Label>
-        <Frame x:Name="SendDataButton" CornerRadius="15" 
-        BackgroundColor="#00B9B4"
-        Margin="15,0,15,40"
-        HorizontalOptions="Center" 
-        VerticalOptions="EndAndExpand" 
-        HeightRequest="30" 
-        WidthRequest="400">
-
-            <Label Text="Zu sendende Daten wählen" TextColor="#FFFFFF" 
-                FontSize="Medium" FontAttributes="Bold"
-                HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-
-
-        </Frame>
-    </StackLayout>
+    <ContentPage.Content>
+        <Grid x:Name="Grid" RowSpacing="1" ColumnSpacing="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Text="Das Senden deiner Daten erfolgt drathlos über Bluetooth. &#10; Achte deshalb darauf, Bluetooth im Control Center zu aktivieren und in Reichweite deines Arztes zu sein."
+                   Grid.Row="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   TextColor="White"/>
+            <Button Text="Zu sendende Daten wählen"
+                    TextColor="White"
+                    Grid.Row="1"
+                    BackgroundColor="#00B9B4"
+                    HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand"
+                    HeightRequest="50"
+                    WidthRequest="400"
+                    BorderRadius="30"/>
+        </Grid>
+    </ContentPage.Content>
 </local:CustomContentPage>
