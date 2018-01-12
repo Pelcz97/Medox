@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace myMD.View.OverviewTabPages
 {
-    public partial class DetailedDoctorsLetterPage : CustomContentPage
+    public partial class DetailedDoctorsLetterPage : ContentPage
     {
         public DetailedDoctorsLetterPage()
         {

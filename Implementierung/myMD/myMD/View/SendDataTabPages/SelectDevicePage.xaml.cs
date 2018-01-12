@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace myMD.View.SendDataTabPages
 {
-    public partial class SelectDevicePage : CustomContentPage
+    public partial class SelectDevicePage : ContentPage
     {
         public SelectDevicePage()
         {

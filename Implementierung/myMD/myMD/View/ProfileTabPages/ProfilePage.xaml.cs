@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace myMD.View.ProfileTabPages
 {
-    public partial class ProfilePage : CustomContentPage
+    public partial class ProfilePage : ContentPage
     {
         public ProfilePage()
         {

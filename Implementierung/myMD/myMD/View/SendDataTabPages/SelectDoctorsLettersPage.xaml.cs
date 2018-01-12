@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace myMD.View.SendDataTabPages
 {
-    public partial class SelectDoctorsLettersPage : CustomContentPage
+    public partial class SelectDoctorsLettersPage : ContentPage
     {
         public SelectDoctorsLettersPage()
         {
