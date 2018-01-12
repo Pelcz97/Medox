@@ -12,7 +12,7 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <ListView RowHeight="160" BackgroundColor="#191928" ItemsSource="{Binding MedicationsList}" IsVisible="{Binding MedicationListIsVisible">
+            <ListView RowHeight="160" BackgroundColor="#191928">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
