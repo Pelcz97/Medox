@@ -1,11 +1,13 @@
 {
   "images": [
     {
+      "filename": "Icon-Spotlight-40.png",
       "size": "20x20",
       "scale": "2x",
       "idiom": "iphone"
     },
     {
+      "filename": "Icon-60.png",
       "size": "20x20",
       "scale": "3x",
       "idiom": "iphone"
@@ -35,6 +37,7 @@
       "idiom": "iphone"
     },
     {
+      "filename": "Icon-Spotlight-40@3x Kopie.png",
       "size": "60x60",
       "scale": "2x",
       "idiom": "iphone"
@@ -51,6 +54,7 @@
       "idiom": "ipad"
     },
     {
+      "filename": "Icon-Spotlight-40.png",
       "size": "20x20",
       "scale": "2x",
       "idiom": "ipad"

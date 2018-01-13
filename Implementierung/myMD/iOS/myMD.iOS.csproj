@@ -117,6 +117,9 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%402x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%403x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTunesArtwork%402x" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Spotlight-40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Spotlight-40%403x Kopie.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
