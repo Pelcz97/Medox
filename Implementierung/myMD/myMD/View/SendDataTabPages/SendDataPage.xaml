@@ -16,7 +16,7 @@
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
                    TextColor="White"/>
-            <Button> Text="Zu sendende Daten wählen"
+            <Button Text="Zu sendende Daten wählen"
                     TextColor="White"
                     Grid.Row="1"
                     BackgroundColor="#00B9B4"
@@ -24,8 +24,7 @@
                     VerticalOptions="EndAndExpand"
                     HeightRequest="50"
                     WidthRequest="400"
-                    <!--Doesn't affect Android devices-->
-                    BorderRadius="15"/></Button>
+                    BorderRadius="15" />
         </Grid>
     </ContentPage.Content>
 </local:CustomContentPage>
