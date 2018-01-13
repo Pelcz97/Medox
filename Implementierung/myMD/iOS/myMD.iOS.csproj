@@ -59,7 +59,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\Debug</OutputPath>
     <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -143,6 +143,12 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\myMDIcon.png" />
+    <BundleResource Include="Resources\medicationTab.png" />
+    <BundleResource Include="Resources\overviewTab.png" />
+    <BundleResource Include="Resources\medicationTab2.png" />
+    <BundleResource Include="Resources\U - 3 Lab.png" />
+    <BundleResource Include="Resources\senddataTab.png" />
+    <BundleResource Include="Resources\U - 5 profil.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.5.0.122203\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.122203\build\netstandard1.0\Xamarin.Forms.targets')" />

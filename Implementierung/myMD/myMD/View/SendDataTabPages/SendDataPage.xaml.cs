@@ -14,9 +14,9 @@ namespace myMD.View.SendDataTabPages
 
         void SendDataButton_Clicked(object sender, System.EventArgs e)
         {
-            var page = new SelectDoctorsLettersPage();
+            var page = new TransmittingDataPage();
 
-            NavigationPage.SetBackButtonTitle(page, "Hmm");
+            NavigationPage.SetBackButtonTitle(page, "Senden");
             Navigation.PushAsync(page);
         }
     }
