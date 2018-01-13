@@ -16,7 +16,8 @@
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
                    TextColor="White"/>
-            <Button Text="Zu sendende Daten wählen"
+            <Button Clicked="SendDataButton_Clicked"
+                    Text="Zu sendende Daten wählen"
                     TextColor="White"
                     Grid.Row="1"
                     BackgroundColor="#00B9B4"

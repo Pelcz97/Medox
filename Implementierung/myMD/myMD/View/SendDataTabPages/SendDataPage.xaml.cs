@@ -11,5 +11,13 @@ namespace myMD.View.SendDataTabPages
         {
             InitializeComponent();
         }
+
+        void SendDataButton_Clicked(object sender, System.EventArgs e)
+        {
+            var page = new SelectDoctorsLettersPage();
+
+            NavigationPage.SetBackButtonTitle(page, "Hmm");
+            Navigation.PushAsync(page);
+        }
     }
 }
