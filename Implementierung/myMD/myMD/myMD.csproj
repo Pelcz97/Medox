@@ -100,9 +100,8 @@
     <Compile Include="Model\DatabaseModel\IEntityDatabase.cs" />
     <Compile Include="Model\EntityFactory\EntityFactory.cs" />
     <Compile Include="Model\EntityFactory\IEntityFactory.cs" />
-    <Compile Include="Model\EntityObserver\IEntityObservable.cs" />
+    <Compile Include="Model\EntityObserver\IObservable.cs" />
     <Compile Include="Model\EntityObserver\IEntityObserver.cs" />
-    <Compile Include="Model\EntityObserver\IProfileObservable.cs" />
     <Compile Include="Model\EntityObserver\IProfileObserver.cs" />
     <Compile Include="Model\FileHelper\FileHelper.cs" />
     <Compile Include="Model\FileHelper\IFileHelper.cs" />

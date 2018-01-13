@@ -12,7 +12,11 @@ namespace myMD.Model.DataModel
         public string Field
         {
             get => field;
-            set => field = value;
+            set
+            {
+                field = value;
+                Updated();
+            }
         }
     }
 

@@ -5,14 +5,12 @@ using System.Collections.Generic;
 
 namespace myMD.Model.DataModel
 {
-	public class Profile : Entity, IProfile, IProfileObservable
-	{
+	public class Profile : Entity, IProfile, EntityObserver.IObservable<IProfileObserver>
+    {
         public Profile()
         {
             observers = new List<IProfileObserver>();
         }
-
-		private string firstName;
 
         private string lastName;
 
@@ -28,28 +26,44 @@ namespace myMD.Model.DataModel
         public string InsuranceNumber
         {
             get => insuranceNumber;
-            set => insuranceNumber = value;
+            set
+            {
+                insuranceNumber = value;
+                Updated();
+            }
         }
 
         /// <see>Model.DataModelInterface.IProfile#LastName(string)</see>
         public string LastName
         {
             get => lastName;
-            set => lastName = value;
+            set
+            {
+                lastName = value;
+                Updated();
+            }
         }
 
         /// <see>Model.DataModelInterface.IProfile#BloodType</see>
         public BloodType BloodType
         {
             get => bloodType;
-            set => bloodType = value;
+            set
+            {
+                bloodType = value;
+                Updated();
+            }
         }
 
         /// <see>Model.DataModelInterface.IProfile#BirthDate()</see>
         public DateTime BirthDate
         {
             get => birthDate;
-            set => birthDate = value;
+            set
+            {
+                birthDate = value;
+                Updated();
+            }
         }
 
         /// <see>Model.DataModelInterface.IProfile#SetActive()</see>

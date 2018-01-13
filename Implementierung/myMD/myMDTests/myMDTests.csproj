@@ -34,7 +34,9 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\DataModel\DoctorsLetterGroupTest.cs" />
     <Compile Include="Model\DataModel\EntityTest.cs" />
+    <Compile Include="Model\DataModel\ProfileTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

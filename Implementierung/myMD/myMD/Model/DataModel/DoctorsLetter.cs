@@ -26,7 +26,11 @@ namespace myMD.Model.DataModel
         public string Filepath
         {
             get => filepath;
-            set => filepath = value;
+            set
+            {
+                filepath = value;
+                Updated();
+            }
         }
 
         public void DisattachMedication(Medication med)
@@ -35,6 +39,7 @@ namespace myMD.Model.DataModel
             {
                 meds.Remove(med);
                 med.DisattachFromLetter(this);
+                Updated();
             }
         }
 
@@ -44,6 +49,7 @@ namespace myMD.Model.DataModel
             {
                 groups.Add(group);
                 group.Add(this);
+                Updated();
             }
 		}
 
@@ -53,6 +59,7 @@ namespace myMD.Model.DataModel
             {
                 groups.Remove(group);
                 group.Remove(this);
+                Updated();
             }
         }
 
@@ -63,6 +70,20 @@ namespace myMD.Model.DataModel
             {
                 meds.Add(med);
                 med.AttachToLetter(this);
+                Updated();
+            }
+        }
+
+        public override void Delete()
+        {
+            base.Delete();
+            while (meds.Any())
+            {
+                DisattachMedication(meds.First());
+            }
+            while (groups.Any())
+            {
+                RemoveFromGroup(groups.First());
             }
         }
 

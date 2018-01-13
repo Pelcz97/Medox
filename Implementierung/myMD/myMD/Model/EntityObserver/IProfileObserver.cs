@@ -3,10 +3,9 @@ using myMD.Model.DataModel;
 
 namespace myMD.Model.EntityObserver
 {
-	public interface IProfileObserver : IEntityObserver
+	public interface IProfileObserver
 	{
 		void OnActivation(Profile profile);
-
 	}
 
 }
