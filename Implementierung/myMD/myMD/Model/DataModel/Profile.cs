@@ -7,6 +7,11 @@ namespace myMD.Model.DataModel
 {
 	public class Profile : Entity, IProfile
     {
+        public Profile()
+        {
+            Profile = this;
+            ProfileID = ID;
+        }
 
         /// <see>Model.DataModelInterface.IProfile#InsuranceNumber</see>
         public string InsuranceNumber { get; set; }
