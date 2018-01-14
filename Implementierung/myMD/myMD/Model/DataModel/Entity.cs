@@ -3,19 +3,18 @@ using myMD.Model.EntityObserver;
 using SQLite;
 using System.Collections.Generic;
 using System.Collections;
+using SQLiteNetExtensions.Attributes;
 
 namespace myMD.Model.DataModel
 {
 	public abstract class Entity : IEntity, IObservable<IEntityObserver>
-	{
+    {
         public Entity()
         {
             observers = new List<IEntityObserver>();
         }
 
         private string name;
-
-        private int id;
 
         private IList<IEntityObserver> observers;
 
@@ -30,14 +29,13 @@ namespace myMD.Model.DataModel
         }
 
         [PrimaryKey, AutoIncrement]
-        public int ID {
-            get => id;
-            set
-            {
-                id = value;
-                Updated();
-            }
-        }
+        public int ID { get; set; }
+
+        [ManyToOne]
+        public Profile Profile { get; set; }
+
+        [ForeignKey(typeof(Profile))]
+        public int ProfileID { get; set; }
 
         /// <see>ModelInterface.DataModelInterface.IEntity#Delete()</see>
         public virtual void Delete() => Deleted();

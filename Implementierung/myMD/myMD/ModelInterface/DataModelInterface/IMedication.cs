@@ -47,7 +47,8 @@ namespace ModelInterface.DataModelInterface
         /// </summary>
         /// <param name="letter">Der zu verbindende Arztbrief</param>
 		void AttachToLetter(IDoctorsLetter letter);
-	}
 
+        Medication ToMedication();
+	}
 }
 

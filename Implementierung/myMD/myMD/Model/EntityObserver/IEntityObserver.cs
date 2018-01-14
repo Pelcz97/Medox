@@ -7,7 +7,6 @@ namespace myMD.Model.EntityObserver
 		void OnUpdate(Entity entity);
 
 		void OnDeletion(Entity entity);
-
 	}
 
 }

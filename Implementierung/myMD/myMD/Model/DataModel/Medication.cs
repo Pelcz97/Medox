@@ -1,11 +1,14 @@
 using myMD.Model.DataModel;
 using ModelInterface.DataModelInterface;
 using System;
+using SQLiteNetExtensions.Attributes;
+using SQLite;
 
 namespace myMD.Model.DataModel
 {
-	public class Medication : Data, IMedication
-	{
+	public class Medication : Data, IMedication, IEquatable<Medication>
+
+    {
         private DateTime startDate;
 
         private DateTime endDate;
@@ -75,6 +78,7 @@ namespace myMD.Model.DataModel
             }
         }
 
+        [Ignore]
         public new DateTime Date
         {
             get => startDate;
@@ -85,11 +89,34 @@ namespace myMD.Model.DataModel
             }
         }
 
+        [ForeignKey(typeof(DoctorsLetter))]
+        public int LetterId { get; set; }
+
+        [ManyToOne]
+        public DoctorsLetter DoctorsLetter
+        {
+            get => letter;
+            set => letter = value;
+        }
+
         /// <see>Model.DataModelInterface.IMedication#DisattachFromLetter(Model.DataModelInterface.IDoctorsLetter)</see>
-        public void DisattachFromLetter(IDoctorsLetter letter) => letter.RemoveMedication(this);
+        public void DisattachFromLetter(IDoctorsLetter letter) => DisattachFromLetter(letter.ToDoctorsLetter());
 
         /// <see>Model.DataModelInterface.IMedication#AttachToLetter(Model.DataModelInterface.IDoctorsLetter)</see>
-        public void AttachToLetter(IDoctorsLetter letter) => letter.AttachMedication(this);
+        public void AttachToLetter(IDoctorsLetter letter) => AttachToLetter(letter.ToDoctorsLetter());
+
+        public bool Equals(Medication other)
+        {
+            return ID.Equals(other.ID);
+        }
+
+        public override bool Equals(Object obj)
+        {
+            Medication med = obj as Medication;
+            return med != null && Equals(med);
+        }
+
+        public Medication ToMedication() => this;
     }
 
 }

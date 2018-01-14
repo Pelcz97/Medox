@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System;
+using myMD.Model.DataModel;
 
 namespace ModelInterface.DataModelInterface
 {
@@ -32,6 +33,8 @@ namespace ModelInterface.DataModelInterface
         /// <exception cref="System.InvalidOperationException">Werfe wenn der Arztbrief letter nicht in dieser Arztbriefgruppe enthalten ist</exception>
         /// <param name="letter">Der zu entfernende Arztbrief</param>
 		void Remove(IDoctorsLetter letter);
+
+        DoctorsLetterGroup ToDoctorsLetterGroup();
     }
 
 }
