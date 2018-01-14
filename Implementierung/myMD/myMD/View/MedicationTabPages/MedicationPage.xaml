@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
     x:Class="myMD.View.MedicationTabPages.MedicationPage"
-    Title="Medikation">
+    Title="Medikation" Icon="medsIcon.png">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="AddMedicationButton" Text="Hinzufügen" 
@@ -12,7 +12,7 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <ListView RowHeight="160" BackgroundColor="#191928">
+            <ListView x:Name="MedicationList" RowHeight="160" BackgroundColor="#191928" IsVisible="{Binding MedicationListIsVisible}" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

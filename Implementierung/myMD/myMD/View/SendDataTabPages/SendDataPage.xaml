@@ -5,27 +5,28 @@
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
     Title="Senden">
     <ContentPage.Content>
-        <Grid x:Name="Grid" RowSpacing="1" ColumnSpacing="1">
+        <Grid x:Name="Grid" RowSpacing="1" ColumnSpacing="1" Margin="15,0,15,15">
             <Grid.RowDefinitions>
                 <!--Durch Benutzung des *'s wird der Button immer am unteren Ende der Seite dargestellt-->
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Label Text="Das Senden deiner Daten erfolgt drathlos über Bluetooth. &#10; Achte deshalb darauf, Bluetooth im Control Center zu aktivieren und in Reichweite deines Arztes zu sein."
+            <Label Text="Das Senden deiner Daten erfolgt drathlos über Bluetooth. &#10;&#10; Achte deshalb darauf, Bluetooth im Control Center zu aktivieren und in Reichweite deines Arztes zu sein."
                    Grid.Row="0"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
                    TextColor="White"/>
-            <Button> Text="Zu sendende Daten wählen"
+            <Button Clicked="SendDataButton_Clicked"
+                    Text="Zu sendende Daten wählen"
                     TextColor="White"
+                    FontAttributes="Bold"
                     Grid.Row="1"
                     BackgroundColor="#00B9B4"
                     HorizontalOptions="Center"
                     VerticalOptions="EndAndExpand"
                     HeightRequest="50"
                     WidthRequest="400"
-                    <!--Doesn't affect Android devices-->
-                    BorderRadius="15"/></Button>
+                    BorderRadius="10" />
         </Grid>
     </ContentPage.Content>
 </local:CustomContentPage>

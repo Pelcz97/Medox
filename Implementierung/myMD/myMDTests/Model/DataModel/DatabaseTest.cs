@@ -79,7 +79,6 @@ namespace myMDTests.Model.DataModel
             IMedication med = meds[0];
             letters[0].AttachMedication(db.GetWithChildren<Medication>(med.ID, true));
             IDoctorsLetter letter = letters[0];
-            DoctorsLetter dletter = letter.ToImplementation<DoctorsLetter>();
         }
 
         [TearDown]
