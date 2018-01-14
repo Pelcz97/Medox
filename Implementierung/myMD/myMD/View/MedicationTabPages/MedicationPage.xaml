@@ -3,21 +3,28 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
     x:Class="myMD.View.MedicationTabPages.MedicationPage"
-    Title="Medikation" Icon="medsIcon.png">
+    Title="Medikation" 
+    Icon="medsIcon.png">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="AddMedicationButton" Text="Hinzufügen" 
-        Order="Primary" Clicked="Handle_Clicked" />
+        <ToolbarItem Name="AddMedicationButton" 
+            Text="Hinzufügen" 
+            Order="Primary" 
+            Clicked="Handle_Clicked" />
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="MedicationList" RowHeight="160" BackgroundColor="#191928" IsVisible="{Binding MedicationListIsVisible}" >
+            <ListView x:Name="MedicationList" 
+                RowHeight="160" 
+                BackgroundColor="#191928" 
+                IsVisible="{Binding MedicationListIsVisible}" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
-                                <Frame x:Name="Label" CornerRadius="15" 
+                                <Frame x:Name="Label" 
+                                    CornerRadius="15" 
                                     BackgroundColor="#FFFFFF"
                                     Margin="10,0,10,0"
                                     HorizontalOptions="CenterAndExpand" 
@@ -31,26 +38,44 @@
                                             <RowDefinition Height="17" />
                                         </Grid.RowDefinitions>
 
-                                            <Label Text="Ab 07. September 2017" TextColor="#4A4A4A" 
-                                            FontSize="Small" FontAttributes="Bold" Grid.Row="0" 
-                                            HorizontalTextAlignment="Start" VerticalTextAlignment="Start" 
+                                            <Label Text="Ab 07. September 2017" 
+                                            TextColor="#4A4A4A" 
+                                            FontSize="Small" 
+                                            FontAttributes="Bold" 
+                                            Grid.Row="0" 
+                                            HorizontalTextAlignment="Start" 
+                                            VerticalTextAlignment="Start" 
                                             VerticalOptions="Start"/>
                                             
-                                            <Label Text="3 Tage lang" TextColor="#191928" 
-                                            FontSize="Small" HorizontalTextAlignment="End" FontAttributes="Bold" 
-                                                    Grid.Row="0" HorizontalOptions="EndAndExpand"/>
+                                            <Label Text="3 Tage lang" 
+                                            TextColor="#191928" 
+                                            FontSize="Small" 
+                                            HorizontalTextAlignment="End" 
+                                            FontAttributes="Bold" 
+                                            Grid.Row="0" 
+                                            HorizontalOptions="EndAndExpand"/>
                                             
-                                            <Label Text="Paracetamol" TextColor="#D0001E" FontSize="35" 
-                                            FontAttributes="Bold" HorizontalTextAlignment="Start" 
-                                                    Grid.Row="1" />
+                                            <Label Text="Paracetamol" 
+                                            TextColor="#D0001E" 
+                                            FontSize="35" 
+                                            FontAttributes="Bold" 
+                                            HorizontalTextAlignment="Start" 
+                                            Grid.Row="1" />
                                             
-                                            <Label Text="600mg" TextColor="#191928" FontSize="Small" 
-                                            FontAttributes="Bold" HorizontalTextAlignment="Start" 
-                                                    Grid.Row="2" />
+                                            <Label Text="600mg" 
+                                            TextColor="#191928" 
+                                            FontSize="Small" 
+                                            FontAttributes="Bold" 
+                                            HorizontalTextAlignment="Start" 
+                                            Grid.Row="2" />
                                             
-                                            <Label Text="2 mal täglich" TextColor="#191928" 
-                                            FontSize="Small" HorizontalTextAlignment="End" FontAttributes="Bold" 
-                                                    Grid.Row="2" HorizontalOptions="EndAndExpand"/>
+                                            <Label Text="2 mal täglich" 
+                                            TextColor="#191928" 
+                                            FontSize="Small" 
+                                            HorizontalTextAlignment="End" 
+                                            FontAttributes="Bold" 
+                                            Grid.Row="2" 
+                                            HorizontalOptions="EndAndExpand"/>
                                     </Grid>
                                 </Frame>
                             </ViewCell.View>
