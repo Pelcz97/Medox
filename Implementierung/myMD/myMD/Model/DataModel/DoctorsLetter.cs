@@ -12,79 +12,58 @@ namespace myMD.Model.DataModel
     {
         public DoctorsLetter()
         {
-            meds = new List<Medication>();
-            groups = new List<DoctorsLetterGroup>();
+            DatabaseMedication = new List<Medication>();
+            DatabaseGroups = new List<DoctorsLetterGroup>();
         }
 
-        private string filepath;
-
-        private Doctor doctor;
-
-        private List<Medication> meds;
-
-        private List<DoctorsLetterGroup> groups;
-
-        public string Filepath
-        {
-            get => filepath;
-            set
-            {
-                filepath = value;
-                Updated();
-            }
-        }
+        public string Filepath { get; set; }
 
         public void DisattachMedication(Medication med)
         {
-            if (meds.Contains(med))
+            if (DatabaseMedication.Contains(med))
             {
-                meds.Remove(med);
+                DatabaseMedication.Remove(med);
                 med.DisattachFromLetter(this);
-                Updated();
             }
         }
 
         public void AddToGroup(DoctorsLetterGroup group)
         {
-            if (!groups.Contains(group))
+            if (!DatabaseGroups.Contains(group))
             {
-                groups.Add(group);
+                DatabaseGroups.Add(group);
                 group.Add(this);
-                Updated();
             }
         }
 
         public void RemoveFromGroup(DoctorsLetterGroup group)
         {
-            if (groups.Contains(group))
+            if (DatabaseGroups.Contains(group))
             {
-                groups.Remove(group);
+                DatabaseGroups.Remove(group);
                 group.Remove(this);
-                Updated();
             }
         }
 
 
         public void AttachMedication(Medication med)
         {
-            if (!meds.Contains(med))
+            if (!DatabaseMedication.Contains(med))
             {
-                meds.Add(med);
+                DatabaseMedication.Add(med);
                 med.AttachToLetter(this);
-                Updated();
             }
         }
 
-        public override void Delete()
+        public void Delete()
         {
-            base.Delete();
-            while (meds.Any())
+            while (DatabaseMedication.Any())
             {
-                DisattachMedication(meds.First());
+                DisattachMedication(DatabaseMedication.First());
             }
-            while (groups.Any())
+            while (DatabaseGroups.Any())
             {
-                RemoveFromGroup(groups.First());
+                RemoveFromGroup(DatabaseGroups.First());
             }
         }
 
@@ -120,11 +99,7 @@ namespace myMD.Model.DataModel
         public int DoctorID { get; set; }
 
         [ManyToMany(typeof(DoctorsLetterGroupDoctorsLetter), CascadeOperations = CascadeOperation.CascadeRead)]
-        public List<DoctorsLetterGroup> DatabaseGroups
-        {
-            get => groups;
-            set => groups = value;
-        }
+        public List<DoctorsLetterGroup> DatabaseGroups { get; set; }
 
         /// <see>Model.DataModelInterface.IDoctorsLetter#RemoveMedication(Model.DataModelInterface.IMedication)</see>
         public void RemoveMedication(IMedication med) => RemoveMedication(med.ToMedication());

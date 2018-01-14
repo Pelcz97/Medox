@@ -1,4 +1,5 @@
-using SQLite;
+using myMD.Model.DataModel;
+
 namespace ModelInterface.DataModelInterface
 {
     /// <summary>
@@ -6,20 +7,13 @@ namespace ModelInterface.DataModelInterface
     /// </summary>
 	public interface IEntity
 	{
-        
-        int ID { get;}
-
         /// <summary>
         /// Der Name der Entität.
         /// </summary>
         /// <returns>Name der Entität</returns>
 		string Name { get; set; }
 
-        /// <summary>
-        /// Löscht die Entität und löst alle Assoziationen von ihr auf.
-        /// </summary>
-		void Delete();
-
+        Entity ToEntity();
 	}
 
 }

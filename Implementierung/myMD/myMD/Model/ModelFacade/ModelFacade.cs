@@ -6,6 +6,7 @@ using myMD.Model.FileHelper;
 using myMD.Model.TransmissionModel;
 using ModelInterface.DataModelInterface;
 using System.Collections.Generic;
+using myMD.Model.DataModel;
 
 namespace myMD.Model.ModelFacade
 {
@@ -70,7 +71,26 @@ namespace myMD.Model.ModelFacade
 
 		}
 
-	}
+        public void Update(IEntity entity)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Delete(IEntity entity)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Activate(IProfile profile)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Entity ToEntity()
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 
 }
 

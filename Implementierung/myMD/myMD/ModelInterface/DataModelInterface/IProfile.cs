@@ -27,13 +27,6 @@ namespace ModelInterface.DataModelInterface
         /// Das Geburtsdatum dieses Profils.
         /// </summary>
         DateTime BirthDate { get; set; }
-
-        /// <summary>
-        /// Da in einer Anwendung mehrere Profile existieren können, jedoch nicht mehrere Nutzer die Anwendung gleichzeitig verwenden können, muss es eine Möglichkeit geben zwischen den Profilen zu wechseln.
-        /// Beim Aufruf dieser Methode wird dieses Profil als das momentan aktive Profil ausgewählt.
-        /// </summary>
-        void SetActive();
-
 	}
 
 }

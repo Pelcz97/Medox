@@ -11,62 +11,48 @@ namespace myMD.Model.DataModel
     {
         public DoctorsLetterGroup()
         {
-            letters = new List<DoctorsLetter>();
+            DatabaseLetters = new List<DoctorsLetter>();
         }
-
-        /// <summary>
-        /// Liste aller Arztbriefe in dieser Gruppe.
-        /// Diese Liste sollte immer sortiert sein (Sortierung folgt aus IComparable Implementierung von DoctorsLetter)
-        /// </summary>
-        private List<DoctorsLetter> letters;
 
         public void Add(DoctorsLetter letter)
         {
-            if (!letters.Contains(letter))
+            if (!DatabaseLetters.Contains(letter))
             {
-                if (letters.Any())
+                if (DatabaseLetters.Any())
                 {
                     int i = 0;
                     ///Suche nach passendem Index um die Liste sortiert zu halten
-                    for (IEnumerator<DoctorsLetter> enumerator = letters.GetEnumerator(); 
+                    for (IEnumerator<DoctorsLetter> enumerator = DatabaseLetters.GetEnumerator(); 
                         enumerator.MoveNext() && letter.CompareTo(enumerator.Current) > 0; ++i) ;
-                    letters.Insert(i, letter);
+                    DatabaseLetters.Insert(i, letter);
                 }
                 else
                 {
-                    letters.Add(letter);
+                    DatabaseLetters.Add(letter);
                 }
-                //letter.AddToGroup(this);
-                Updated();
             }
         }
 
         public void Remove(DoctorsLetter letter)
         {
-            if (letters.Contains(letter))
+            if (DatabaseLetters.Contains(letter))
             {
-                letters.Remove(letter);
+                DatabaseLetters.Remove(letter);
                 //letter.RemoveFromGroup(this);
-                Updated();
             }
         }
 
         /// <see>Model.DataModel.Entity#Delete()</see>
-        public override void Delete()
+        public void Delete()
         {
-            base.Delete();
-            while (letters.Any())
+            while (DatabaseLetters.Any())
             {
-                Remove(letters.First());
+                Remove(DatabaseLetters.First());
             }
         }
 
         [ManyToMany(typeof(DoctorsLetterGroupDoctorsLetter), CascadeOperations = CascadeOperation.CascadeRead)]
-        public List<DoctorsLetter> DatabaseLetters
-        {
-            get => letters;
-            set => letters = value;
-        }
+        public List<DoctorsLetter> DatabaseLetters { get; set; }
 
         /// <see>ModelInterface.DataModelInterface.IDoctorsLetterGroup#DoctorsLetters</see>
         public IList<IDoctorsLetter> DoctorsLetters
@@ -91,10 +77,10 @@ namespace myMD.Model.DataModel
         public void Remove(IDoctorsLetter letter) => Remove(letter.ToDoctorsLetter());
 
         /// <see>Model.DataModel.Data#Date</see>
-        public override DateTime Date => letters.Any() ? letters.First().Date : default(DateTime);
+        public override DateTime Date => DatabaseLetters.Any() ? DatabaseLetters.First().Date : default(DateTime);
 
         /// <see>ModelInterface.DataModelInterface.IDoctorsLetterGroup#GetLastDate()</see>
-        public DateTime LastDate => letters.Any() ? letters.Last().Date : default(DateTime);
+        public DateTime LastDate => DatabaseLetters.Any() ? DatabaseLetters.Last().Date : default(DateTime);
 
         public bool Equals(DoctorsLetterGroup other)
         {

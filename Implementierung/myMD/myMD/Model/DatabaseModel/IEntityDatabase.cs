@@ -5,13 +5,19 @@ using ModelInterface.DataModelInterface;
 
 namespace myMD.Model.DatabaseModel
 {
-	public interface IEntityDatabase : IEntityObserver
+	public interface IEntityDatabase
 	{
 		void Insert(Entity entity);
 
+        void Update(Entity entity);
+
+        void Delete(Entity entity);
+
+        void Activate(Profile profile);
+
         IList<E> GetAllDataFromProfile<E>() where E : Entity, new();
 
-        IList<IProfile> GetAllProfiles();
+        IList<Profile> GetAllProfiles();
 
 		E GetEqual<E>(E entity) where E : Entity, new();
 	}
