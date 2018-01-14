@@ -9,11 +9,11 @@ namespace myMD.Model.DatabaseModel
 	{
 		void Insert(Entity entity);
 
-		IList<T> GetAllDataFromProfile<T>();
+        IList<E> GetAllDataFromProfile<E>() where E : Entity, new();
 
-		IList<IProfile> GetAllProfiles();
+        IList<IProfile> GetAllProfiles();
 
-		T GetEqual<T>(T entity);
+		E GetEqual<E>(E entity) where E : Entity, new();
 	}
 
 }

@@ -1,3 +1,4 @@
+using SQLite;
 namespace ModelInterface.DataModelInterface
 {
     /// <summary>
@@ -5,6 +6,9 @@ namespace ModelInterface.DataModelInterface
     /// </summary>
 	public interface IEntity
 	{
+        
+        int ID { get;}
+
         /// <summary>
         /// Der Name der Entität.
         /// </summary>

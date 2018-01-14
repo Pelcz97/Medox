@@ -47,6 +47,7 @@ namespace myMDTests.Model.DataModel
             entity.Name = TEST_NAME;
             Assert.False(obs.Updated);
             Assert.AreNotEqual(TEST_NAME, obs.Name);
+
         }
 
         /// <summary>

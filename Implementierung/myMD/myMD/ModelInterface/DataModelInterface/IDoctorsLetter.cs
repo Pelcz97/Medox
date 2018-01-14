@@ -1,3 +1,4 @@
+using myMD.Model.DataModel;
 using System.Collections.Generic;
 
 namespace ModelInterface.DataModelInterface
@@ -54,6 +55,7 @@ namespace ModelInterface.DataModelInterface
         /// <param name="group">Die Gruppe aus der dieser Arztbrief entfernt werden soll</param>
         void RemoveFromGroup(IDoctorsLetterGroup group);
 
+        DoctorsLetter ToDoctorsLetter();
     }
 
 }

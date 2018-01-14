@@ -75,6 +75,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\DataModel\DoctorsLetterGroupDoctorsLetter.cs" />
     <Compile Include="myMDPage.xaml.cs">
       <DependentUpon>myMDPage.xaml</DependentUpon>
     </Compile>

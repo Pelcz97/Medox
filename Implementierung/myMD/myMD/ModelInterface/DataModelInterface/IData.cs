@@ -17,7 +17,7 @@ namespace ModelInterface.DataModelInterface
         /// Die Sensitivitätsstufe der Daten.
         /// </summary>
 		Sensitivity Sensitivity { get; set; }
-	}
+    }
 
 }
 

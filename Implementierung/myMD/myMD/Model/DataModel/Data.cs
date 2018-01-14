@@ -3,10 +3,10 @@ using System;
 
 namespace myMD.Model.DataModel
 {
-	public abstract class Data : Entity, IEntity, IData, IComparable<Data>
-	{
+    public abstract class Data : Entity, IEntity, IData, IComparable<Data>
+    {
 
-		private DateTime date;
+        private DateTime date;
 
         private Sensitivity sensitivity;
 
@@ -18,7 +18,8 @@ namespace myMD.Model.DataModel
         }
 
         /// <see>ModelInterface.DataModelInterface.IData#Sensitivity</see>
-        public Sensitivity Sensitivity {
+        public Sensitivity Sensitivity
+        {
             get => sensitivity;
             set
             {
@@ -32,6 +33,5 @@ namespace myMD.Model.DataModel
             return Date.CompareTo(other.Date);
         }
     }
-
 }
 
