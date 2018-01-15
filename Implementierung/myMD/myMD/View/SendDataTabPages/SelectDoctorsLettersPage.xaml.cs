@@ -11,5 +11,10 @@ namespace myMD.View.SendDataTabPages
         {
             InitializeComponent();
         }
+
+        async void CancelSelectDoctorsLetters_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
     }
 }

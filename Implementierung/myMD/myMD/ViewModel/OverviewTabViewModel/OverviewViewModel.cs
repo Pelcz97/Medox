@@ -30,7 +30,7 @@ namespace myMD.ViewModel.OverviewTabViewModel
                 DetailedDoctorsLetterViewModel test = new DetailedDoctorsLetterViewModel();
                 test.DoctorsField = "Hausarzt";
                 test.DoctorsLetterDate = "29. September 2017";
-                test.DoctorsName = "Dr. Wolfgang Platzhalter";
+                test.DoctorsName = "Dr. Peter Platzhalter";
                 DoctorsLettersList.Add(test);
             });
         }
