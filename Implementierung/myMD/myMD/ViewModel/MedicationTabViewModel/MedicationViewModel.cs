@@ -10,8 +10,9 @@ namespace myMD.ViewModel.MedicationTabViewModel
 {
     public class MedicationViewModel
     {
-        IList Medications = new List<MedicineViewModel>();
-        private bool isVisible;
+        public ObservableCollection<MedicineViewModel> MedicationsList { get; }
+        public ICommand AddDummyMed { get; private set; }
+        private bool isVisible = true;
 
         public bool MedicationListIsVisible
         {
@@ -23,15 +24,21 @@ namespace myMD.ViewModel.MedicationTabViewModel
 
         public MedicationViewModel()
         {
-            if (Medications.Count > 0)
+            this.MedicationsList = new ObservableCollection<MedicineViewModel>();
+
+            this.AddDummyMed = new Command((sender) =>
             {
-                this.isVisible = true;
-            }
-            else
-            {
-                this.isVisible = false;
-            }
+                MedicineViewModel test = new MedicineViewModel();
+                test.MedicationName = "Paracetamol";
+                test.MedicationDosis = "500mg";
+                test.MedicationDuration = "4 Tage lang";
+                test.MedicationFrequency = "3 mal täglich";
+                test.MedicationStartDate = "08. Januar 2018";
+                MedicationsList.Add(test);
+            });
         }
+
+
 
 
 

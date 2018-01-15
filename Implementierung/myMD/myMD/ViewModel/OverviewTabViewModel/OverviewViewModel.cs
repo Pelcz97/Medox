@@ -11,10 +11,20 @@ namespace myMD.ViewModel.OverviewTabViewModel
         public ObservableCollection<DetailedDoctorsLetterViewModel> DoctorsLettersList { get; }
         public ICommand EditDoctorsLettersList_Clicked { get; private set; }
 
+        private bool isVisible = true;
+
+        public bool DoctorsLettersListIsVisible
+        {
+            get
+            {
+                return isVisible;
+            }
+        }
 
         public OverviewViewModel()
         {
             this.DoctorsLettersList = new ObservableCollection<DetailedDoctorsLetterViewModel>();
+
             this.EditDoctorsLettersList_Clicked = new Command((sender) =>
             {
                 DetailedDoctorsLetterViewModel test = new DetailedDoctorsLetterViewModel();
@@ -24,5 +34,7 @@ namespace myMD.ViewModel.OverviewTabViewModel
                 DoctorsLettersList.Add(test);
             });
         }
+
+
     }
 }

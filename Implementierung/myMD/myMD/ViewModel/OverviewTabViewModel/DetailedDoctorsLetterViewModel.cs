@@ -9,9 +9,7 @@ namespace myMD.ViewModel.OverviewTabViewModel
         public IDoctorsLetter DoctorsLetter { get; private set;}
 
         public string DoctorsName { get; set; }
-
         public string DoctorsField { get; set; }
-
         public string DoctorsLetterDate { get; set; }
     }
 }

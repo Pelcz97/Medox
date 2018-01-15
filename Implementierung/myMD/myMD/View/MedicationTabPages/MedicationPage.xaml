@@ -11,22 +11,33 @@
             Text="Hinzufügen" 
             Order="Primary" 
             Clicked="Handle_Clicked" />
+        <ToolbarItem Name="AddDummyItem" 
+            Text="Add Dummy" 
+            Order="Primary" 
+            Command="{Binding AddDummyMed}"
+            Priority="-1"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="MedicationList" 
-                RowHeight="160" 
+                HasUnevenRows="true"
                 BackgroundColor="#191928" 
-                IsVisible="{Binding MedicationListIsVisible}" >
+                ItemsSource="{Binding MedicationsList}"
+                IsVisible="{Binding MedicationListIsVisible}" 
+                SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                            <ViewCell.ContextActions>
+                                 <MenuItem  Text="Löschen" 
+                                            IsDestructive="True"/>
+                            </ViewCell.ContextActions>
                             <ViewCell.View>
                                 <Frame x:Name="Label" 
                                     CornerRadius="15" 
                                     BackgroundColor="#FFFFFF"
-                                    Margin="10,0,10,0"
+                                    Margin="10,3,10,3"
                                     HorizontalOptions="CenterAndExpand" 
                                     VerticalOptions="CenterAndExpand" 
                                     HeightRequest="80" 
@@ -38,7 +49,7 @@
                                             <RowDefinition Height="17" />
                                         </Grid.RowDefinitions>
 
-                                            <Label Text="Ab 07. September 2017" 
+                                            <Label Text="{Binding MedicationStartDate}" 
                                             TextColor="#4A4A4A" 
                                             FontSize="Small" 
                                             FontAttributes="Bold" 
@@ -47,7 +58,7 @@
                                             VerticalTextAlignment="Start" 
                                             VerticalOptions="Start"/>
                                             
-                                            <Label Text="3 Tage lang" 
+                                            <Label Text="{Binding MedicationDuration}" 
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 
@@ -55,21 +66,21 @@
                                             Grid.Row="0" 
                                             HorizontalOptions="EndAndExpand"/>
                                             
-                                            <Label Text="Paracetamol" 
+                                            <Label Text="{Binding MedicationName}" 
                                             TextColor="#D0001E" 
                                             FontSize="35" 
                                             FontAttributes="Bold" 
                                             HorizontalTextAlignment="Start" 
                                             Grid.Row="1" />
                                             
-                                            <Label Text="600mg" 
+                                            <Label Text="{Binding MedicationDosis}" 
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             FontAttributes="Bold" 
                                             HorizontalTextAlignment="Start" 
                                             Grid.Row="2" />
                                             
-                                            <Label Text="2 mal täglich" 
+                                            <Label Text="{Binding MedicationFrequency}" 
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 

@@ -12,7 +12,11 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <ListView RowHeight="140" BackgroundColor="#191928" ItemsSource="{Binding DoctorsLettersList}" SeparatorVisibility="None">
+            <ListView HasUnevenRows="true" 
+                BackgroundColor="#191928" 
+                ItemsSource="{Binding DoctorsLettersList}" 
+                SeparatorVisibility="None" 
+                IsVisible="{Binding DoctorsLettersListIsVisible}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -23,10 +27,10 @@
                             <ViewCell.View>
                                 <Frame x:Name="Label" CornerRadius="15" 
                                         BackgroundColor="#FFFFFF" 
-                                        Margin="10,0,10,0"
+                                        Margin="10,3,10,3"
                                         HorizontalOptions="CenterAndExpand" 
                                         VerticalOptions="CenterAndExpand" 
-                                        HeightRequest="140" 
+                                        HeightRequest="100" 
                                         WidthRequest="400"
                                         HasShadow="true">
                                     <Grid>
@@ -34,10 +38,10 @@
                                             <RowDefinition Height="Auto" />
                                             <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
-                                                <Grid.ColumnDefinitions>
+                                        <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="Auto"/> 
-                                                </Grid.ColumnDefinitions>
+                                        </Grid.ColumnDefinitions>
 
                                             <Label Text="{Binding DoctorsName}" TextColor="#191928" 
                                             FontSize="Small" FontAttributes="Bold"
