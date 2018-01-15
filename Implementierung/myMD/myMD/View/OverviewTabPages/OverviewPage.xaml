@@ -22,10 +22,11 @@
                             </ViewCell.ContextActions>
                             <ViewCell.View>
                                 <Frame x:Name="Label" CornerRadius="15" 
-                                        BackgroundColor="#FFFFFF" Margin="10,0,10,0"
+                                        BackgroundColor="#FFFFFF" 
+                                        Margin="10,0,10,0"
                                         HorizontalOptions="CenterAndExpand" 
                                         VerticalOptions="CenterAndExpand" 
-                                        HeightRequest="65" 
+                                        HeightRequest="140" 
                                         WidthRequest="400"
                                         HasShadow="true">
                                     <Grid>
