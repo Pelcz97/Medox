@@ -18,9 +18,9 @@ namespace myMD.ViewModel.OverviewTabViewModel
             this.EditDoctorsLettersList_Clicked = new Command((sender) =>
             {
                 DetailedDoctorsLetterViewModel test = new DetailedDoctorsLetterViewModel();
-                test.DoctorsField = "Test";
-                test.DoctorsLetterDate = "29.05.1998";
-                test.DoctorsName = "Dr. Dellnitz";
+                test.DoctorsField = "Hausarzt";
+                test.DoctorsLetterDate = "29. September 2017";
+                test.DoctorsName = "Dr. Wolfgang Platzhalter";
                 DoctorsLettersList.Add(test);
             });
         }

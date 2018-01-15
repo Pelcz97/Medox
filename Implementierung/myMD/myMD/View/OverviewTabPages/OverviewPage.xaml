@@ -12,7 +12,7 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <ListView RowHeight="160" BackgroundColor="#191928" ItemsSource="{Binding DoctorsLettersList}">
+            <ListView RowHeight="140" BackgroundColor="#191928" ItemsSource="{Binding DoctorsLettersList}" SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -22,7 +22,7 @@
                             </ViewCell.ContextActions>
                             <ViewCell.View>
                                 <Frame x:Name="Label" CornerRadius="15" 
-                                        BackgroundColor="#FFFFFF" Margin="10"
+                                        BackgroundColor="#FFFFFF" Margin="10,0,10,0"
                                         HorizontalOptions="CenterAndExpand" 
                                         VerticalOptions="CenterAndExpand" 
                                         HeightRequest="65" 
