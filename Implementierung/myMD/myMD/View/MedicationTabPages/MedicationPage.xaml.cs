@@ -13,7 +13,6 @@ namespace myMD.View.MedicationTabPages
             InitializeComponent();
             this.BindingContext = new MedicationViewModel();
         }
-
         public async void Handle_Clicked(object sender, System.EventArgs e)
         {
             var view = new NavigationPage(new DetailedMedicationPage());
@@ -22,6 +21,5 @@ namespace myMD.View.MedicationTabPages
 
             await Navigation.PushModalAsync(view);
         }
-
     }
 }

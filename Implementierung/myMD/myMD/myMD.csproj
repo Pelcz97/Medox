@@ -149,6 +149,8 @@
     </Compile>
     <Compile Include="ViewModel\MedicationTabViewModel\MedicationViewModel.cs" />
     <Compile Include="ViewModel\MedicationTabViewModel\MedicineViewModel.cs" />
+    <Compile Include="ViewModel\OverviewTabViewModel\OverviewViewModel.cs" />
+    <Compile Include="ViewModel\OverviewTabViewModel\DetailedDoctorsLetterViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLite-net, Version=1.4.118.0, Culture=neutral, processorArchitecture=MSIL">
@@ -187,6 +189,7 @@
     <Folder Include="ViewModel\" />
     <Folder Include="ViewModel\MedicationTabViewModel\" />
     <Folder Include="Resources\" />
+    <Folder Include="ViewModel\OverviewTabViewModel\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.v7.CardView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.CardView.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.CardView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.CardView.targets')" />

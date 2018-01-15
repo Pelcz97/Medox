@@ -6,22 +6,28 @@
     Title="Übersicht">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="EditButton" Text="Bearbeiten" Order="Primary" />
+        <!--><!-->
+        <ToolbarItem Name="EditButton" Text="Bearbeiten" Order="Primary" Command="{Binding EditDoctorsLettersList_Clicked}"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
         <StackLayout>
-            <ListView RowHeight="160" BackgroundColor="#191928">
+            <ListView RowHeight="160" BackgroundColor="#191928" ItemsSource="{Binding DoctorsLettersList}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                            <ViewCell.ContextActions>
+                                 <MenuItem  Text="Löschen" 
+                                            IsDestructive="True" />
+                            </ViewCell.ContextActions>
                             <ViewCell.View>
                                 <Frame x:Name="Label" CornerRadius="15" 
                                         BackgroundColor="#FFFFFF" Margin="10"
                                         HorizontalOptions="CenterAndExpand" 
                                         VerticalOptions="CenterAndExpand" 
                                         HeightRequest="65" 
-                                        WidthRequest="400">
+                                        WidthRequest="400"
+                                        HasShadow="true">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto" />
@@ -32,15 +38,15 @@
                                                 <ColumnDefinition Width="Auto"/> 
                                                 </Grid.ColumnDefinitions>
 
-                                            <Label Text="Dr. Michael Schnabel" TextColor="#191928" 
+                                            <Label Text="{Binding DoctorsName}" TextColor="#191928" 
                                             FontSize="Small" FontAttributes="Bold"
                                                 Grid.Column="0" Grid.RowSpan="2"   Grid.Row="0" HorizontalTextAlignment="Start" />
                                         
-                                            <Label Text="20. September 2017" TextColor="#4A4A4A" 
+                                            <Label Text="{Binding DoctorsLetterDate}" TextColor="#4A4A4A" 
                                             FontSize="Small" HorizontalTextAlignment="End" FontAttributes="Bold" 
                                                   Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand"/>
                                         
-                                            <Label Text="Hausarzt" TextColor="#00B9B4" FontSize="35" 
+                                            <Label Text="{Binding DoctorsField}" TextColor="#00B9B4" FontSize="35" 
                                             FontAttributes="Bold" HorizontalTextAlignment="Start" 
                                                  Grid.ColumnSpan="2" Grid.Row="1" />
                                     </Grid>
