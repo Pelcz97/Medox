@@ -71,6 +71,7 @@ namespace myMDTests.Model.DataModel
             return new Doctor()
             {
                 Field = String(),
+                Name = String(),
             };
         }
 

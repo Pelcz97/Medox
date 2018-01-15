@@ -9,95 +9,45 @@ namespace myMD.Model.DataModel
 	public class Medication : Data, IMedication, IEquatable<Medication>
 
     {
-        private DateTime startDate;
-
-        private DateTime endDate;
-
-		private int frequency;
-
-		private Interval interval;
-
-        private DoctorsLetter letter;
-
 		public void AttachToLetter(DoctorsLetter letter)
 		{
-            if (this.letter != letter)
+            if (DatabaseDoctorsLetter != letter)
             {
-                this.letter = letter;
+                this.DatabaseDoctorsLetter = letter;
                 letter.AttachMedication(this);
-                Updated();
             }
 		}
 
         public void DisattachFromLetter(DoctorsLetter letter)
         {
-            if (this.letter == letter)
+            if (this.DatabaseDoctorsLetter == letter)
             {
-                this.letter = null;
+                this.DatabaseDoctorsLetter = null;
                 letter.DisattachMedication(this);
-                Updated();
             }
         }
 
-        public override void Delete()
+        public void Delete()
         {
-            base.Delete();
-            DisattachFromLetter(letter);
+            DisattachFromLetter(DatabaseDoctorsLetter);
         }
 
         /// <see>Model.DataModelInterface.IMedication#Frequency</see>
-        public int Frequency
-        {
-            get => frequency;
-            set
-            {
-                frequency = value;
-                Updated();
-            }
-        }
+        public int Frequency { get; set; }
 
         /// <see>Model.DataModelInterface.IMedication#Interval</see>
-        public Interval Interval
-        {
-            get => interval;
-            set
-            {
-                interval = value;
-                Updated();
-            }
-        }
+        public Interval Interval { get; set; }
 
         /// <see>Model.DataModelInterface.IMedication#EndDate</see>
-        public DateTime EndDate
-        {
-            get => endDate;
-            set
-            {
-                endDate = value;
-                Updated();
-            }
-        }
-
-        [Ignore]
-        public new DateTime Date
-        {
-            get => startDate;
-            set
-            {
-                startDate = value;
-                Updated();
-            }
-        }
+        public DateTime EndDate { get; set; }
 
         [ForeignKey(typeof(DoctorsLetter))]
         public int LetterId { get; set; }
 
         [ManyToOne]
-        public DoctorsLetter DoctorsLetter
-        {
-            get => letter;
-            set => letter = value;
-        }
+        public DoctorsLetter DatabaseDoctorsLetter { get; set; }
+
+        public IDoctorsLetter DoctorsLetter => DatabaseDoctorsLetter;
 
         /// <see>Model.DataModelInterface.IMedication#DisattachFromLetter(Model.DataModelInterface.IDoctorsLetter)</see>
         public void DisattachFromLetter(IDoctorsLetter letter) => DisattachFromLetter(letter.ToDoctorsLetter());

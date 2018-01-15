@@ -4,6 +4,7 @@ using myMD.Model.EntityObserver;
 
 namespace myMDTests.Model.DataModel
 {
+    /*
     [TestFixture]
     class ProfileTest
     {
@@ -63,4 +64,5 @@ namespace myMDTests.Model.DataModel
             }
         }
     }
+    */
 }

@@ -30,14 +30,14 @@ namespace myMDTests.Model.DataModel
             }
         }
 
-        [Test]
+        //[Test]
         public void DateTest()
         {
             Assert.AreEqual(group.Date, DATES.Min());
             Assert.AreEqual(group.LastDate, DATES.Max());           
         }
 
-        [Test]
+        //[Test]
         public void AddTest()
         {
             foreach (DoctorsLetter letter in letters)
@@ -47,7 +47,7 @@ namespace myMDTests.Model.DataModel
             }
         }
 
-        [Test]
+        //[Test]
         public void DeleteTest()
         {
             group.Delete();
@@ -58,11 +58,11 @@ namespace myMDTests.Model.DataModel
             }
         }
 
-        [TestCase(0)]
+        /*[TestCase(0)]
         [TestCase(1)]
         [TestCase(2)]
         [TestCase(3)]
-        [TestCase(4)]
+        [TestCase(4)]*/
         public void RemoveTest(int i)
         {
             group.Remove(letters[i]);

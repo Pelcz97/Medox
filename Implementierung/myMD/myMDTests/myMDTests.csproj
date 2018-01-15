@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="Model\DataModel\DatabaseTest.cs" />
     <Compile Include="Model\DataModel\DoctorsLetterGroupTest.cs" />
+    <Compile Include="Model\DataModel\EntityDatabaseTest.cs" />
     <Compile Include="Model\DataModel\EntityTest.cs" />
     <Compile Include="Model\DataModel\ProfileTest.cs" />
     <Compile Include="Model\DataModel\RandomEntityFactory.cs" />

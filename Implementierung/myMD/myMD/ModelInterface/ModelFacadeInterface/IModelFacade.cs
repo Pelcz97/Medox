@@ -1,5 +1,6 @@
 using ModelInterface.DataModelInterface;
 using System.Collections.Generic;
+using myMD.Model.DataModel;
 
 namespace ModelInterface.ModelFacadeInterface
 {
@@ -47,11 +48,19 @@ namespace ModelInterface.ModelFacadeInterface
         /// <returns>Die neu erstellte, leere Arztbriefgruppe</returns>
 		IDoctorsLetterGroup CreateEmptyGroup();
 
+        void Update(IEntity entity);
+
+        void Delete(IEntity entity);
+
+        void Activate(IProfile profile);
+
         /// <summary>
         /// Bereitet den gewünschten Arztbrief für die Datenübertragung vor und veranlasst diese anschließend.
         /// </summary>
         /// <param name="letter">Der zu sendende Arztbrief</param>
 		void SendLetter(IDoctorsLetter letter);
+
+        Entity ToEntity();
 
 	}
 

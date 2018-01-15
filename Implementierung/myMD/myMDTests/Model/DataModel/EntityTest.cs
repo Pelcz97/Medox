@@ -4,6 +4,7 @@ using myMD.Model.EntityObserver;
 
 namespace myMDTests.Model.DataModel
 {
+    /*
     [TestFixture]
     public class EntityTest
     {
@@ -104,5 +105,6 @@ namespace myMDTests.Model.DataModel
             }
         }
     }
+    */
 }
 

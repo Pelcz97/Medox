@@ -8,13 +8,20 @@ using SQLiteNetExtensions;
 using SQLiteNetExtensions.Extensions;
 using System.Linq;
 
+
 namespace myMD.Model.DatabaseModel
 {
-	public class EntityDatabase : IEntityObserver, IEntityDatabase, IProfileObserver
+	public class EntityDatabase : IEntityDatabase
 	{
-        EntityDatabase(string path)
+        public EntityDatabase(string path)
         {
             db = new SQLiteConnection(path);
+            db.DropTable<DoctorsLetter>();
+            db.DropTable<DoctorsLetterGroup>();
+            db.DropTable<Medication>();
+            db.DropTable<Profile>();
+            db.DropTable<Doctor>();
+            
             db.CreateTable<DoctorsLetter>();
             db.CreateTable<DoctorsLetterGroup>();
             db.CreateTable<Medication>();
@@ -30,16 +37,15 @@ namespace myMD.Model.DatabaseModel
 
 
 		/// <see>Model.EntityObserver.IEntityObserver#OnUpdate(Model.DataModel.Entity)</see>
-		public void OnUpdate(Entity entity)
+		public void Update(Entity entity)
 		{
             db.UpdateWithChildren(entity);
 		}
 
 
 		/// <see>Model.EntityObserver.IEntityObserver#OnDeletion(Model.DataModel.Entity)</see>
-		public void OnDeletion(Entity entity)
+		public void Delete(Entity entity)
 		{
-            entity.Unsubscribe(this);
             db.Delete(entity);
 		}
 
@@ -47,7 +53,6 @@ namespace myMD.Model.DatabaseModel
 		/// <see>Model.DatabaseModel.IEntityDatabase#Insert(Model.DataModel.Entity)</see>
 		public void Insert(Entity entity)
 		{
-            entity.Subscribe(this);
             db.Insert(entity);
 		}
 
@@ -55,28 +60,28 @@ namespace myMD.Model.DatabaseModel
 		/// <see>Model.DatabaseModel.IEntityDatabase#GetAllDataFromProfile<T>()</see>
 		public IList<E> GetAllDataFromProfile<E>() where E : Entity, new()
 		{
-            return db.GetAllWithChildren<E>(e => e.Profile.Equals(profile));
+            return db.GetAllWithChildren<E>(e => e.ProfileID == profile.ID);
         }
 
-        public IList<IDoctorsLetter> GetAllDoctorsLetters()
+        public IList<DoctorsLetter> GetAllDoctorsLetters()
         {
-            return db.GetAllWithChildren<DoctorsLetter>(letter => letter.Profile.Equals(profile)).Cast<IDoctorsLetter>().ToList();
+            return db.GetAllWithChildren<DoctorsLetter>(letter => letter.Profile.Equals(profile));
         }
 
-        public IList<IDoctorsLetterGroup> GetAllDoctorsLetterGroups()
+        public IList<DoctorsLetterGroup> GetAllDoctorsLetterGroups()
         {
-            return db.GetAllWithChildren<DoctorsLetterGroup>(group => group.Profile.Equals(profile)).Cast<IDoctorsLetterGroup>().ToList();
+            return db.GetAllWithChildren<DoctorsLetterGroup>(group => group.Profile.Equals(profile));
         }
 
-        public IList<IMedication> GetAllMedications()
+        public IList<Medication> GetAllMedications()
         {
-            return db.GetAllWithChildren<Medication>(med => med.Profile.Equals(profile)).Cast<IMedication>().ToList();
+            return db.GetAllWithChildren<Medication>(med => med.Profile.ID == profile.ID);
         }
 
         /// <see>Model.DatabaseModel.IEntityDatabase#GetAllProfiles()</see>
-        public IList<IProfile> GetAllProfiles()
+        public IList<Profile> GetAllProfiles()
 		{
-            return db.GetAllWithChildren<Profile>().Cast<IProfile>().ToList();
+            return db.GetAllWithChildren<Profile>();
 		}
 
 
@@ -88,10 +93,15 @@ namespace myMD.Model.DatabaseModel
 
 
 		/// <see>Model.EntityObserver.IProfileObserver#OnActivation(Model.DataModel.Profile)</see>
-		public void OnActivation(Profile profile)
+		public void Activate(Profile profile)
 		{
             this.profile = profile;
 		}
+
+        public void Destroy()
+        {
+            db.Dispose();
+        }
 
 	}
 
