@@ -52,7 +52,7 @@ namespace myMD
             tabs.Children[2].Title = "Senden";
             tabs.Children[3].Title = "Profil";
 
-            //tabs.Children[0].Icon = "medicationTab2.png";
+            tabs.Children[0].Icon = "medicationTab2.png";
             //tabs.Children[1].Icon = "medicationTab.png";
             //tabs.Children[3].Icon = "medicationTab.png";
              
