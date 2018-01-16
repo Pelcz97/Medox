@@ -1,0 +1,12 @@
+diff a/Entwurf/Entwurf.tex b/Entwurf/Entwurf.tex	(rejected hunks)
+@@ -336,8 +336,8 @@
+ \textbf{CreateEmptyGroup() : IDoctorsLetterGroup}\\
+ Legt eine neue Gruppe von Arztbriefen an, die noch keine Arztbriefe enthält und gibt diese zurück.
+ 
+-\textbf{DeleteGroup(group : DoctorsLetter) : void}\\
+-Löscht die Gruppe von Arztbiefen \textit{group} und alle Assoziationen zu ihr. Die einzelnen Arztbriefe in der Gruppe selbst bleiben jedoch erhalten.
++\textbf{DeleteGroup(Group : DoctorsLetter) : void}\\
++Löscht die Gruppe von Arztbiefen \textit{medication} und alle Assoziationen zu ihr. Die einzelnen Arztbriefe in der Gruppe selbst bleiben jedoch erhalten.
+ 
+ \chapter{Paketführer}
+ 

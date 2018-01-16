@@ -1,0 +1,11 @@
+**/.vs/
+*.aux
+*.lof
+*.log
+*.out
+*.pdf
+*.gz
+*.toc
+*.lock
+!Kit_Logo.pdf
+!MyMD_Anmerkungen_Viola_Pelcz.pdf

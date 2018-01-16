@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
+    x:Class="myMD.View.MedicationTabPages.DetailedMedicationPage"
+    Title="Neue Medikation">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="CancelButton" Text="Abbrechen" 
+        Order="Primary" Priority="-1" Clicked="CancelButton_Clicked"/>
+        <ToolbarItem Name="SaveMedicationButton" Text="Fertig" 
+        Order="Primary" Priority="1" Clicked="SaveMedication_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+     <ContentPage.Content>
+            <TableView BackgroundColor="#191928" Intent="Settings">
+                <TableRoot>
+                    <TableSection Title="Information">
+                        
+                    <ViewCell >
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Bezeichnung"
+                                        TextColor="White" 
+                                        HorizontalTextAlignment="Start" 
+                                        VerticalTextAlignment="Center"
+                                        Margin="15,0,0,0"/>
+                            
+                                <Entry HorizontalOptions="EndAndExpand" 
+                                        VerticalOptions="Center" 
+                                        Margin="0,0,15,0"
+                                        BackgroundColor="#191928"
+                                        Placeholder="Name des Medikaments"
+                                        PlaceholderColor="Gray"
+                                        TextColor="White"
+                                        FontSize="17" />
+                        </StackLayout>
+
+                    </ViewCell>
+                    <ViewCell >
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Dosis"
+                                        TextColor="White" 
+                                        HorizontalTextAlignment="Start" 
+                                        VerticalTextAlignment="Center"
+                                        Margin="15,0,0,0"/>
+
+                                <Entry HorizontalOptions="EndAndExpand" 
+                                        VerticalOptions="Center" 
+                                        Margin="0,0,15,0"
+                                        BackgroundColor="#191928"
+                                        Placeholder="Wirkstoffmenge"
+                                        PlaceholderColor="Gray"
+                                        TextColor="White"
+                                        FontSize="17"/>
+                        </StackLayout>
+
+                    </ViewCell>
+                    </TableSection>
+                    <TableSection Title="Zeitraum der Einnahme">
+                        
+                        <ViewCell >
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Einmalige Einnahme"
+                                        TextColor="White" 
+                                        HorizontalTextAlignment="Start" 
+                                        VerticalTextAlignment="Center"
+                                        Margin="15,0,0,0"/>
+
+                                <Switch HorizontalOptions="EndAndExpand" 
+                                        VerticalOptions="Center" 
+                                        Margin="0,0,15,0"/>
+                        </StackLayout>
+
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                                <Label Text="Beginn"
+                                        TextColor="White"
+                                        HorizontalTextAlignment="Start" 
+                                        VerticalTextAlignment="Center" Margin="15,0,0,0" />
+
+                                <DatePicker 
+                            HorizontalOptions="EndAndExpand" 
+                            VerticalOptions="Center" IsVisible="true" 
+                            BackgroundColor="#191928" TextColor="White" Margin="0,0,15,0"/>
+
+                        </StackLayout>
+                        </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                                <Label Text="Ende"
+                                        TextColor="White"
+                                        HorizontalTextAlignment="Start" 
+                                        VerticalTextAlignment="Center" Margin="15,0,0,0" />
+
+                                <DatePicker
+                            HorizontalOptions="EndAndExpand" 
+                            VerticalOptions="Center" IsVisible="true" 
+                            BackgroundColor="#191928" TextColor="White" Margin="0,0,15,0"/>
+
+                        </StackLayout>
+                        </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                                <Label Text="4 mal täglich"
+                                        TextColor="White" 
+                                        HorizontalTextAlignment="Start" 
+                                        VerticalTextAlignment="Center" Margin="15,0,0,0" />
+                            <Stepper  HorizontalOptions="EndAndExpand" 
+                            VerticalOptions="Center" Margin="0,0,15,0"/>
+                        </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+    </ContentPage.Content>
+</local:CustomContentPage>
