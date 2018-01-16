@@ -32,5 +32,11 @@
     </scenes>
     <resources>
         <image name="myMDIcon.png" width="2100" height="2100"/>
+        <image name="medicationTab.png" width="25" height="25"/>
+        <image name="overviewTab.png" width="50" height="50"/>
+        <image name="medicationTab2.png" width="50" height="50"/>
+        <image name="U - 3 Lab.png" width="50" height="50"/>
+        <image name="senddataTab.png" width="50" height="50"/>
+        <image name="U - 5 profil.png" width="50" height="50"/>
     </resources>
 </document>

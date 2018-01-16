@@ -23,7 +23,7 @@ namespace myMD
             OverviewPage.SetValue(Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty, Color.White);
             OverviewPage.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             OverviewPage.BarTextColor = Color.FromHex("FFFFFF");
-
+             
             MedicationPage.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersLargeTitles(true);
             MedicationPage.SetValue(Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty, Color.White);
             MedicationPage.BarBackgroundColor = Color.FromRgb(25, 25, 40);
