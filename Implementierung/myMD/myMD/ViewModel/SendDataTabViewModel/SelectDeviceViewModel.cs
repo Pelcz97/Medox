@@ -15,28 +15,31 @@ namespace myMD.ViewModel.SendDataTabViewModel
 
         public IDisposable scan;
         public ICommand ScanForDevices_Clicked { get; private set; }
-        public ObservableCollection<ScanResultViewModel> Devices { get; }
+        public ObservableCollection<ScanResultViewModel> DeviceList { get; }
 
         public SelectDeviceViewModel()
         {
-            this.Devices = new ObservableCollection<ScanResultViewModel>();
+            this.DeviceList = new ObservableCollection<ScanResultViewModel>();
 
             this.ScanForDevices_Clicked = new Command((sender) =>
             {
-                AdapterStatus status = CrossBleAdapter.Current.Status;
+            AdapterStatus status = CrossBleAdapter.Current.Status;
 
-                CrossBleAdapter.Current.WhenStatusChanged().Subscribe(status2 => { 
-                    Debug.WriteLine("Status changed");
-                });
+            CrossBleAdapter.Current.WhenStatusChanged().Subscribe(status2 =>
+            {
+                Debug.WriteLine(status);
+            });
 
-                if (status == AdapterStatus.PoweredOn)
-                {
-                    var scanner = CrossBleAdapter.Current.Scan().Subscribe(scanResult =>
+                TimeSpan t = new TimeSpan(hours:0, minutes:0, seconds:500);
+
+            if (status == AdapterStatus.PoweredOn)
+            {
+                var scanner = CrossBleAdapter.Current.ScanInterval(t).Subscribe(scanResult =>
                     {
                         ScanResultViewModel test = new ScanResultViewModel();
                         test.Device = scanResult.Device;
                         if (test != null) { 
-                            Devices.Add(test);
+                            DeviceList.Add(test);
                             Debug.WriteLine(test.Device.Name);
                         }
                     });
