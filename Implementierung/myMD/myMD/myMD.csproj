@@ -151,6 +151,8 @@
     <Compile Include="ViewModel\MedicationTabViewModel\MedicineViewModel.cs" />
     <Compile Include="ViewModel\OverviewTabViewModel\OverviewViewModel.cs" />
     <Compile Include="ViewModel\OverviewTabViewModel\DetailedDoctorsLetterViewModel.cs" />
+    <Compile Include="ViewModel\SendDataTabViewModel\SelectDeviceViewModel.cs" />
+    <Compile Include="ViewModel\SendDataTabViewModel\ScanResultViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLite-net, Version=1.4.118.0, Culture=neutral, processorArchitecture=MSIL">
@@ -180,6 +182,27 @@
     <Reference Include="SQLitePCLRaw.batteries_v2">
       <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.9\lib\portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\packages\System.Reactive.Interfaces.3.1.1\lib\netstandard1.0\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\packages\System.Reactive.Core.3.1.1\lib\netstandard1.1\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\packages\System.Reactive.Linq.3.1.1\lib\netstandard1.1\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>..\packages\System.Reactive.PlatformServices.3.1.1\lib\netstandard1.0\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.BluetoothLE.Abstractions">
+      <HintPath>..\packages\Plugin.BluetoothLE.5.0.0\lib\netstandard1.0\Plugin.BluetoothLE.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.BluetoothLE">
+      <HintPath>..\packages\Plugin.BluetoothLE.5.0.0\lib\netstandard1.0\Plugin.BluetoothLE.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -188,9 +211,11 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="ViewModel\OverviewTabViewModel\" />
+    <Folder Include="ViewModel\SendDataTabViewModel\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.v7.CardView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.CardView.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.CardView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.CardView.targets')" />
   <Import Project="..\packages\Xamarin.Forms.2.5.0.122203\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.122203\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
+  <Import Project="..\packages\NETStandard.Library.2.0.1\build\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\NETStandard.Library.targets')" />
 </Project>
