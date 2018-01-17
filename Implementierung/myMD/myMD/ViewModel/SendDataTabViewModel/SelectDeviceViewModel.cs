@@ -30,11 +30,11 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 Debug.WriteLine(status);
             });
 
-                TimeSpan t = new TimeSpan(hours:0, minutes:0, seconds:500);
+                //TimeSpan t = new TimeSpan(hours:0, minutes:0, seconds:500);
 
             if (status == AdapterStatus.PoweredOn)
             {
-                var scanner = CrossBleAdapter.Current.ScanInterval(t).Subscribe(scanResult =>
+                    this.scan = this.BleAdapter.Scan().Subscribe(scanResult =>
                     {
                         ScanResultViewModel test = new ScanResultViewModel();
                         test.Device = scanResult.Device;
@@ -44,7 +44,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
                         }
                     });
 
-                    scanner.Dispose();
+                    scan.Dispose();
                 }
             });
         }
