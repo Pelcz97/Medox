@@ -1,15 +1,13 @@
 ﻿using System;
-using ModelInterface.DataModelInterface;
-
-
 namespace myMD.ViewModel.OverviewTabViewModel
 {
-    public class DetailedDoctorsLetterViewModel
+    public class DetailedDoctorsLetterViewModel : DoctorsLetterViewModel
     {
-        public IDoctorsLetter DoctorsLetter { get; private set;}
+        public string Diagnosis { get => this.DoctorsLetter.Diagnosis; }
+        //public string Medication { get => this.DoctorsLetter; }
 
-        public string DoctorsName { get; set; }
-        public string DoctorsField { get; set; }
-        public string DoctorsLetterDate { get; set; }
+        public DetailedDoctorsLetterViewModel()
+        {
+        }
     }
 }

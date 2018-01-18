@@ -27,7 +27,10 @@ namespace myMD.iOS
             List<UIBarButtonItem> RightNavList = new List<UIBarButtonItem>();
             List<ToolbarItem> ToolbarList = new List<ToolbarItem>();
 
-            UINavigationItem navigationItem = this.NavigationController.TopViewController.NavigationItem;
+            UINavigationItem navigationItem = new UINavigationItem();
+            if (this.NavigationController != null){
+                navigationItem = this.NavigationController.TopViewController.NavigationItem;
+            }
 
             // Add to new list for sorting
             foreach (ToolbarItem itm in Element.ToolbarItems)

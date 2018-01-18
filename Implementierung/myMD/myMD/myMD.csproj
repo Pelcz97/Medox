@@ -150,9 +150,10 @@
     <Compile Include="ViewModel\MedicationTabViewModel\MedicationViewModel.cs" />
     <Compile Include="ViewModel\MedicationTabViewModel\MedicineViewModel.cs" />
     <Compile Include="ViewModel\OverviewTabViewModel\OverviewViewModel.cs" />
-    <Compile Include="ViewModel\OverviewTabViewModel\DetailedDoctorsLetterViewModel.cs" />
+    <Compile Include="ViewModel\OverviewTabViewModel\DoctorsLetterViewModel.cs" />
     <Compile Include="ViewModel\SendDataTabViewModel\SelectDeviceViewModel.cs" />
     <Compile Include="ViewModel\SendDataTabViewModel\ScanResultViewModel.cs" />
+    <Compile Include="ViewModel\OverviewTabViewModel\DetailedDoctorsLetterViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLite-net, Version=1.4.118.0, Culture=neutral, processorArchitecture=MSIL">

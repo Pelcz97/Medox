@@ -18,7 +18,8 @@
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding DoctorsLettersList}" 
                 SeparatorVisibility="None" 
-                IsVisible="{Binding DoctorsLettersListIsVisible}">
+                IsVisible="{Binding DoctorsLettersListIsVisible}"
+                ItemTapped="DoctorsLetterSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

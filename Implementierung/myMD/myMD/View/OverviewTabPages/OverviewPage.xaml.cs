@@ -14,6 +14,10 @@ namespace myMD.View.OverviewTabPages
             this.BindingContext = new OverviewViewModel();
         }
 
+        void DoctorsLetterSelected(object sender, Xamarin.Forms.ItemTappedEventArgs e)
+        {
+            Navigation.PushModalAsync(new DetailedDoctorsLetterPage());
+        }
 
     }
 }

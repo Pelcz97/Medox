@@ -9,7 +9,7 @@ namespace myMD.ViewModel.OverviewTabViewModel
     public class OverviewViewModel
     {
 
-        public ObservableCollection<DetailedDoctorsLetterViewModel> DoctorsLettersList { get; }
+        public ObservableCollection<DoctorsLetterViewModel> DoctorsLettersList { get; }
         public ICommand EditDoctorsLettersList_Clicked { get; private set; }
 
         private bool isVisible = true;
@@ -20,15 +20,17 @@ namespace myMD.ViewModel.OverviewTabViewModel
             {
                 return isVisible;
             }
+            
         }
+
 
         public OverviewViewModel()
         {
-            this.DoctorsLettersList = new ObservableCollection<DetailedDoctorsLetterViewModel>();
+            this.DoctorsLettersList = new ObservableCollection<DoctorsLetterViewModel>();
 
             this.EditDoctorsLettersList_Clicked = new Command((sender) =>
             {
-                DetailedDoctorsLetterViewModel test = new DetailedDoctorsLetterViewModel();
+                DoctorsLetterViewModel test = new DoctorsLetterViewModel();
                 test.DoctorsField = "Hausarzt";
                 test.DoctorsLetterDate = "29. September 2017";
                 test.DoctorsName = "Dr. Peter Platzhalter";
