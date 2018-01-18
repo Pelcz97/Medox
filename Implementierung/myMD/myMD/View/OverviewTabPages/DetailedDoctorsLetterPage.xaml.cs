@@ -14,5 +14,10 @@ namespace myMD.View.OverviewTabPages
             InitializeComponent();
             this.BindingContext = new DetailedDoctorsLetterViewModel(e);
         }
+
+        async void CancelDetailedPage_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
     }
 }
