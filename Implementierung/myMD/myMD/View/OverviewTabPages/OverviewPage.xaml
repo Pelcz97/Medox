@@ -14,7 +14,7 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <ListView HasUnevenRows="true" 
+            <ListView x:Name="DoctorsLettersList" HasUnevenRows="true" 
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding DoctorsLettersList}" 
                 SeparatorVisibility="None" 

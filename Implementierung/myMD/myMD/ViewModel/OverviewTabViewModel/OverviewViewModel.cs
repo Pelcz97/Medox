@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using myMD.View.OverviewTabPages;
 using Xamarin.Forms;
 
 
@@ -8,6 +9,8 @@ namespace myMD.ViewModel.OverviewTabViewModel
 {
     public class OverviewViewModel
     {
+        INavigation Navigation { get; set; }
+
 
         public ObservableCollection<DoctorsLetterViewModel> DoctorsLettersList { get; }
         public ICommand EditDoctorsLettersList_Clicked { get; private set; }
@@ -24,8 +27,10 @@ namespace myMD.ViewModel.OverviewTabViewModel
         }
 
 
-        public OverviewViewModel()
+        public OverviewViewModel(INavigation Navigation)
         {
+            this.Navigation = Navigation;
+
             this.DoctorsLettersList = new ObservableCollection<DoctorsLetterViewModel>();
 
             this.EditDoctorsLettersList_Clicked = new Command((sender) =>
@@ -37,7 +42,5 @@ namespace myMD.ViewModel.OverviewTabViewModel
                 DoctorsLettersList.Add(test);
             });
         }
-
-
     }
 }

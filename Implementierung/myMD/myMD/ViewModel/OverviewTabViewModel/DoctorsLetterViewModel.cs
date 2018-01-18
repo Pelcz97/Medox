@@ -6,7 +6,7 @@ namespace myMD.ViewModel.OverviewTabViewModel
 {
     public class DoctorsLetterViewModel
     {
-        public IDoctorsLetter DoctorsLetter { get; private set;}
+        public IDoctorsLetter DoctorsLetter { get; set;}
 
         public string DoctorsName { get; set; }
         public string DoctorsField { get; set; }
