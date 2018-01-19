@@ -35,12 +35,14 @@ namespace myMD.ViewModel.OverviewTabViewModel
 
             this.EditDoctorsLettersList_Clicked = new Command((sender) =>
             {
-
+                /*
                 DoctorsLetterViewModel test = new DoctorsLetterViewModel();
                 test.DoctorsField = "Hausarzt";
                 test.DoctorsLetterDate = "29. September 2017";
                 test.DoctorsName = "Dr. Peter Platzhalter";
                 DoctorsLettersList.Add(test);
+                */
+                
             });
         }
     }

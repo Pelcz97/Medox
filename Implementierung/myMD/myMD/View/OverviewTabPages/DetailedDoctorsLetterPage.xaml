@@ -1,46 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+<local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
     x:Class="myMD.View.OverviewTabPages.DetailedDoctorsLetterPage">
-	<ContentPage.Content>
-        <StackLayout VerticalOptions="StartAndExpand">
-            
-        <Frame CornerRadius="0" 
-        BackgroundColor="#00B9B4"
-        Margin="0"
-        HorizontalOptions="Center" 
-        VerticalOptions="Start" 
-        HeightRequest="100" 
-        WidthRequest="400">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="40" />
-                <RowDefinition Height="85" />
-            </Grid.RowDefinitions>
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="StartAndExpand">
 
-                <Label Text="{Binding DoctorsName}" TextColor="#191928" 
-                        FontSize="Large" FontAttributes="Bold"
-                        VerticalTextAlignment="End" HorizontalTextAlignment="Start"
-                        Grid.Row="0"/>
-                    
-                <Label Text="{Binding DoctorsLetterDate}" TextColor="#FFFFFF" 
-                        FontSize="Medium" FontAttributes="Bold" 
-                        VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-                        Grid.Row="2"/>
-                    
-                <Label Text="{Binding DoctorsField}" TextColor="#FFFFFF" 
-                        FontSize="45" FontAttributes="Bold"
-                        VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                        Grid.Row="1"/>
-                
-                <Button x:Name="QuitButton" HorizontalOptions="End" VerticalOptions="Start" 
-                    TextColor="White" Text="Quit" FontAttributes="Bold" FontSize="20"
-                    Grid.Row="0" Clicked="CancelDetailedPage_Clicked"/>
+      <Frame CornerRadius="0"
+      BackgroundColor="#00B9B4"
+      Margin="0"
+      HorizontalOptions="Center"
+      VerticalOptions="Start"
+      HeightRequest="100"
+      WidthRequest="400">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="85" />
+            <RowDefinition Height="*"/>
+          </Grid.RowDefinitions>
+
+          <Label Text="{Binding DoctorsName}" TextColor="#191928"
+                  FontSize="Large" FontAttributes="Bold"
+                  VerticalTextAlignment="End" HorizontalTextAlignment="Start"
+                  Grid.Row="0"/>
+
+          <Label Text="{Binding DoctorsLetterDate}" TextColor="#FFFFFF"
+                  FontSize="Medium" FontAttributes="Bold"
+                  VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                  Grid.Row="2"/>
+
+          <Label Text="{Binding DoctorsField}" TextColor="#FFFFFF"
+                  FontSize="45" FontAttributes="Bold"
+                  VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                  Grid.Row="1"/>
+          <Label Text="{Binding Diagnosis}" TextColor="#FFFFFF"
+                  FontSize="45" FontAttributes="Bold"
+                  VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                  Grid.Row="2"/>
+
+          <Button x:Name="QuitButton" HorizontalOptions="End" VerticalOptions="Start"
+              Image="cancel.png"
+              Grid.Row="0" Clicked="CancelDetailedPage_Clicked"/>
         </Grid>
-            
-    </Frame>
-        </StackLayout>
-    </ContentPage.Content>
+
+      </Frame>
+    </StackLayout>
+  </ContentPage.Content>
 </local:CustomContentPage>
