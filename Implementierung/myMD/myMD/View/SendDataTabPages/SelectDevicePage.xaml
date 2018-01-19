@@ -6,9 +6,81 @@
     <ContentPage.ToolbarItems>
             <ToolbarItem Name="CancelSelectDevice" Text="Abbrechen" 
                         Order="Primary" Priority="-1" Clicked="CancelSelectDevice_Clicked"/>
+            <ToolbarItem Name="ScanForDevices" Text="Scan" 
+                        Order="Primary" Priority="1" Command="{Binding ScanForDevices_Clicked}"/>
         </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        
+        <StackLayout>
+            <ListView x:Name="DeviceList" 
+                HasUnevenRows="true"
+                BackgroundColor="#191928" 
+                ItemsSource="{Binding DeviceList}"
+                SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Frame x:Name="Label" 
+                                    CornerRadius="15" 
+                                    BackgroundColor="#FFFFFF"
+                                    Margin="10,3,10,3"
+                                    HorizontalOptions="CenterAndExpand" 
+                                    VerticalOptions="CenterAndExpand" 
+                                    HeightRequest="80" 
+                                    WidthRequest="400">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="17" />
+                                            <RowDefinition Height="35" />
+                                            <RowDefinition Height="17" />
+                                        </Grid.RowDefinitions>
+
+                                            <Label Text="PH1" 
+                                            TextColor="#4A4A4A" 
+                                            FontSize="Small" 
+                                            FontAttributes="Bold" 
+                                            Grid.Row="0" 
+                                            HorizontalTextAlignment="Start" 
+                                            VerticalTextAlignment="Start" 
+                                            VerticalOptions="Start"/>
+                                            
+                                            <Label Text="PH2" 
+                                            TextColor="#191928" 
+                                            FontSize="Small" 
+                                            HorizontalTextAlignment="End" 
+                                            FontAttributes="Bold" 
+                                            Grid.Row="0" 
+                                            HorizontalOptions="EndAndExpand"/>
+                                            
+                                            <Label Text="{Binding DeviceName}" 
+                                            TextColor="#D0001E" 
+                                            FontSize="35" 
+                                            FontAttributes="Bold" 
+                                            HorizontalTextAlignment="Start" 
+                                            Grid.Row="1" />
+                                            
+                                            <Label Text="PH3" 
+                                            TextColor="#191928" 
+                                            FontSize="Small" 
+                                            FontAttributes="Bold" 
+                                            HorizontalTextAlignment="Start" 
+                                            Grid.Row="2" />
+                                            
+                                            <Label Text="PH4" 
+                                            TextColor="#191928" 
+                                            FontSize="Small" 
+                                            HorizontalTextAlignment="End" 
+                                            FontAttributes="Bold" 
+                                            Grid.Row="2" 
+                                            HorizontalOptions="EndAndExpand"/>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
 	</ContentPage.Content>
 </local:CustomContentPage>

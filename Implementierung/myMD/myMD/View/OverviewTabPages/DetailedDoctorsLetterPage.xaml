@@ -20,24 +20,24 @@
                 <RowDefinition Height="85" />
             </Grid.RowDefinitions>
 
-                <Label Text="Dr. Michael Schnabel" TextColor="#191928" 
+                <Label Text="{Binding DoctorsName}" TextColor="#191928" 
                         FontSize="Large" FontAttributes="Bold"
                         VerticalTextAlignment="End" HorizontalTextAlignment="Start"
                         Grid.Row="0"/>
                     
-                <Label Text="20. September 2017" TextColor="#FFFFFF" 
+                <Label Text="{Binding DoctorsLetterDate}" TextColor="#FFFFFF" 
                         FontSize="Medium" FontAttributes="Bold" 
                         VerticalTextAlignment="Center" HorizontalTextAlignment="End"
                         Grid.Row="2"/>
                     
-                <Label Text="Hausarzt" TextColor="#FFFFFF" 
+                <Label Text="{Binding DoctorsField}" TextColor="#FFFFFF" 
                         FontSize="45" FontAttributes="Bold"
                         VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
                         Grid.Row="1"/>
                 
                 <Button x:Name="QuitButton" HorizontalOptions="End" VerticalOptions="Start" 
                     TextColor="White" Text="Quit" FontAttributes="Bold" FontSize="20"
-                    Grid.Row="0" />
+                    Grid.Row="0" Clicked="CancelDetailedPage_Clicked"/>
         </Grid>
             
     </Frame>

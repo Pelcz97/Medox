@@ -1,15 +1,22 @@
 ﻿using System;
+using System.Diagnostics;
 using ModelInterface.DataModelInterface;
-
 
 namespace myMD.ViewModel.OverviewTabViewModel
 {
-    public class DetailedDoctorsLetterViewModel
+    public class DetailedDoctorsLetterViewModel : DoctorsLetterViewModel
     {
-        public IDoctorsLetter DoctorsLetter { get; private set;}
 
-        public string DoctorsName { get; set; }
-        public string DoctorsField { get; set; }
-        public string DoctorsLetterDate { get; set; }
+        public string Diagnosis { get => this.DoctorsLetter.Diagnosis; }
+
+        public DetailedDoctorsLetterViewModel(object e)
+        {
+            this.DoctorsLetter = e as IDoctorsLetter;
+
+            Debug.WriteLine(this.DoctorsName);
+            Debug.WriteLine(this.DoctorsField);
+            Debug.WriteLine(this.DoctorsLetterDate);
+            Debug.WriteLine("=======================");
+        }
     }
 }

@@ -1,8 +1,9 @@
 ﻿using System;
 using ModelInterface.DataModelInterface;
+
 namespace myMD.ViewModel.MedicationTabViewModel
 {
-    public class MedicineViewModel
+    public class MedicineViewModel : OverallViewModel.OverallViewModel
     {
 
         public IMedication Medication { get; private set; }
