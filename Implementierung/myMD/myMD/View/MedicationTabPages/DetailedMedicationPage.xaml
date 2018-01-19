@@ -32,7 +32,7 @@
                                         Placeholder="Name des Medikaments"
                                         PlaceholderColor="Gray"
                                         TextColor="White"
-                                        FontSize="17" />
+                                        FontSize="17" Text="{Binding MedicationName}" />
                         </StackLayout>
 
                     </ViewCell>
@@ -58,7 +58,7 @@
                     </TableSection>
                     <TableSection Title="Zeitraum der Einnahme">
                         
-                        <ViewCell >
+                        <ViewCell>
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="Einmalige Einnahme"
                                         TextColor="White" 
@@ -68,25 +68,27 @@
 
                                 <Switch HorizontalOptions="EndAndExpand" 
                                         VerticalOptions="Center" 
-                                        Margin="0,0,15,0"/>
+                                        Margin="0,0,15,0" IsToggled="{Binding OneTimeMedication_Switch}" 
+                                        BackgroundColor="#191928"/>
                         </StackLayout>
 
                     </ViewCell>
-                    <ViewCell>
+                    <ViewCell IsEnabled="{Binding SetDatesPossible}">
                         <StackLayout Orientation="Horizontal">
                                 <Label Text="Beginn"
                                         TextColor="White"
                                         HorizontalTextAlignment="Start" 
                                         VerticalTextAlignment="Center" Margin="15,0,0,0" />
 
-                                <DatePicker 
+                                <DatePicker  
                             HorizontalOptions="EndAndExpand" 
                             VerticalOptions="Center" IsVisible="true" 
-                            BackgroundColor="#191928" TextColor="White" Margin="0,0,15,0"/>
+                            BackgroundColor="#191928" TextColor="White" 
+                            Margin="0,0,15,0" Date="{Binding MedicationStartDate}"/>
 
                         </StackLayout>
                         </ViewCell>
-                    <ViewCell>
+                    <ViewCell IsEnabled="{Binding SetDatesPossible}">
                         <StackLayout Orientation="Horizontal">
                                 <Label Text="Ende"
                                         TextColor="White"
@@ -96,18 +98,23 @@
                                 <DatePicker
                             HorizontalOptions="EndAndExpand" 
                             VerticalOptions="Center" IsVisible="true" 
-                            BackgroundColor="#191928" TextColor="White" Margin="0,0,15,0"/>
+                            BackgroundColor="#191928" TextColor="White"
+                            Margin="0,0,15,0" Date="{Binding MedicationEndDate}"/>
 
                         </StackLayout>
                         </ViewCell>
-                    <ViewCell>
+                    <ViewCell IsEnabled="{Binding SetDatesPossible}">
                         <StackLayout Orientation="Horizontal">
-                                <Label Text="4 mal täglich"
-                                        TextColor="White" 
+                                <Label x:Name="StepperText"
+                                        TextColor="White"
                                         HorizontalTextAlignment="Start" 
-                                        VerticalTextAlignment="Center" Margin="15,0,0,0" />
-                            <Stepper  HorizontalOptions="EndAndExpand" 
-                            VerticalOptions="Center" Margin="0,0,15,0"/>
+                                        VerticalTextAlignment="Center" Margin="15,0,0,0" 
+                                        BindingContext="{x:Reference StepperStepper}"
+                                        Text="{Binding Value, StringFormat='{0:F0} mal täglich'}"/>
+                                    
+                            <Stepper x:Name="StepperStepper" HorizontalOptions="EndAndExpand" 
+                            VerticalOptions="Center" Margin="0,0,15,0" Minimum="1"
+                             Value="{Binding MedicationFrequency}"/>
                         </StackLayout>
                         </ViewCell>
                     </TableSection>

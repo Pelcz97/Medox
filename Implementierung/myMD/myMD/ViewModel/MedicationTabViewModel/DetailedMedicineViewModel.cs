@@ -1,10 +1,17 @@
 ﻿using System;
+using myMD.Model.DataModel;
+
 namespace myMD.ViewModel.MedicationTabViewModel
 {
-    public class DetailedMedicineViewModel
+    public class DetailedMedicineViewModel : MedicineViewModel
     {
-        public DetailedMedicineViewModel()
+        bool OneTimeMedication_Switch { get; set; }
+        bool SetDatesPossible { get => !this.OneTimeMedication_Switch; }
+        
+        public DetailedMedicineViewModel(Medication Medication) : base(Medication)
         {
+            this.Medication = Medication;
         }
+
     }
 }
