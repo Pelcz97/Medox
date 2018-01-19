@@ -26,7 +26,9 @@ namespace myMD.ViewModel.MedicationTabViewModel
         public DateTime MedicationEndDate { 
             get => this.Medication.EndDate; 
             set { Debug.WriteLine("EndDate:" + value);
-                this.Medication.EndDate = value; }
+                
+                    this.Medication.EndDate = value;
+                }
             }
 
         public Interval MedicationInterval { 

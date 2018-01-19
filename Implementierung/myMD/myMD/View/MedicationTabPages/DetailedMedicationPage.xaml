@@ -2,6 +2,7 @@
 <local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
     x:Class="myMD.View.MedicationTabPages.DetailedMedicationPage"
     Title="Neue Medikation">
 
@@ -80,7 +81,7 @@
                                         HorizontalTextAlignment="Start" 
                                         VerticalTextAlignment="Center" Margin="15,0,0,0" />
 
-                                <DatePicker  
+                                <DatePicker x:Name="StartDatePicker"  
                             HorizontalOptions="EndAndExpand" 
                             VerticalOptions="Center" IsVisible="true" 
                             BackgroundColor="#191928" TextColor="White" 
@@ -95,7 +96,7 @@
                                         HorizontalTextAlignment="Start" 
                                         VerticalTextAlignment="Center" Margin="15,0,0,0" />
 
-                                <DatePicker
+                                <DatePicker x:Name="EndDatePicker"
                             HorizontalOptions="EndAndExpand" 
                             VerticalOptions="Center" IsVisible="true" 
                             BackgroundColor="#191928" TextColor="White"
