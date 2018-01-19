@@ -154,6 +154,11 @@
     <Compile Include="ViewModel\SendDataTabViewModel\SelectDeviceViewModel.cs" />
     <Compile Include="ViewModel\SendDataTabViewModel\ScanResultViewModel.cs" />
     <Compile Include="ViewModel\OverviewTabViewModel\DetailedDoctorsLetterViewModel.cs" />
+    <Compile Include="ViewModel\MedicationTabViewModel\DetailedMedicineViewModel.cs" />
+    <Compile Include="ViewModel\SendDataTabViewModel\SendDataViewModel.cs" />
+    <Compile Include="ViewModel\SendDataTabViewModel\TransmittingDataViewModel.cs" />
+    <Compile Include="ViewModel\ProfileTabViewModel\ProfileViewModel.cs" />
+    <Compile Include="ViewModel\OverallViewModel\OverallViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLite-net, Version=1.4.118.0, Culture=neutral, processorArchitecture=MSIL">
@@ -213,6 +218,8 @@
     <Folder Include="Resources\" />
     <Folder Include="ViewModel\OverviewTabViewModel\" />
     <Folder Include="ViewModel\SendDataTabViewModel\" />
+    <Folder Include="ViewModel\ProfileTabViewModel\" />
+    <Folder Include="ViewModel\OverallViewModel\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

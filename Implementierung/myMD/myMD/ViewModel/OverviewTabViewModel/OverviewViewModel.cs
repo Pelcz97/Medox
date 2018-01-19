@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace myMD.ViewModel.OverviewTabViewModel
 {
-    public class OverviewViewModel
+    public class OverviewViewModel : OverallViewModel.OverallViewModel
     {
         INavigation Navigation { get; set; }
 
@@ -35,6 +35,7 @@ namespace myMD.ViewModel.OverviewTabViewModel
 
             this.EditDoctorsLettersList_Clicked = new Command((sender) =>
             {
+
                 DoctorsLetterViewModel test = new DoctorsLetterViewModel();
                 test.DoctorsField = "Hausarzt";
                 test.DoctorsLetterDate = "29. September 2017";
