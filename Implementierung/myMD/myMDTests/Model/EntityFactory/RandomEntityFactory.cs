@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using ModelInterface.DataModelInterface;
 using myMD.Model.DataModel;
 
-namespace myMDTests.Model.DataModel
+namespace myMDTests.Model.EntityFactory
 {
-    class RandomEntityFactory
+    public class RandomEntityFactory
     {
         Random r = new Random();
 

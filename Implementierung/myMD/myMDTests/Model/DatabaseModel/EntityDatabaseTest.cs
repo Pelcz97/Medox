@@ -8,15 +8,16 @@ using NUnit.Framework;
 using System.IO;
 using myMD.Model.DataModel;
 using ModelInterface.DataModelInterface;
+using myMDTests.Model.EntityFactory;
+using myMDTests.Model.FileHelper;
 
-namespace myMDTests.Model.DataModel
+namespace myMDTests.Model.DatabaseModel
 {
     [TestFixture]
     public class EntityDatabaseTest
     {
         private static EntityDatabase db;
-        private static readonly string PATH = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "database.db3");
-        private static readonly int ENTITY_COUNT = 10;
+        private static readonly int ENTITY_COUNT = 100;
         private static DoctorsLetter[] letters = new DoctorsLetter[ENTITY_COUNT];
         private static DoctorsLetterGroup[] groups = new DoctorsLetterGroup[ENTITY_COUNT];
         private static Medication[] meds = new Medication[ENTITY_COUNT];
@@ -27,8 +28,10 @@ namespace myMDTests.Model.DataModel
         [OneTimeSetUp]
         public void SetUpBefore()
         {
-            db = new EntityDatabase(PATH);
+            db = new EntityDatabase(new TestFileHelper());
             factory = new RandomEntityFactory();
+            db.Destroy();
+            db.Create();
             for (int i = 0; i < ENTITY_COUNT; ++i)
             {
                 letters[i] = factory.Letter();
@@ -43,6 +46,11 @@ namespace myMDTests.Model.DataModel
                 db.Insert(doctors[i]);
                 doctors[i].Profile = profiles[i];
                 db.Update(doctors[i]);
+                groups[i].Profile = profiles[i];
+                db.Update(groups[i]);
+                letters[i].Profile = profiles[i];
+                letters[i].DatabaseDoctor = doctors[i];
+                db.Update(letters[i]);
             }
         }
 
@@ -58,11 +66,25 @@ namespace myMDTests.Model.DataModel
             Assert.True(docs.First().ID == doctors[0].ID && docs.Last().ID == doctors[1].ID && docs.Count == 2);
         }
 
-        [OneTimeTearDown]
-        public static void TearDownAfter()
+        [Test]
+        public void DoctorsLetterGroupDoctorsLetterTest()
         {
-            db.Destroy();
+            groups[0].Add(letters[0]);
+            db.Activate(profiles[0]);
+            db.Update(groups[0]);
+            IList<DoctorsLetter> letter = db.GetAllDataFromProfile<DoctorsLetter>();
+            var g = letter.First().DatabaseGroups.First();
+            db.Update(letters[0]);
+            Assert.True(g.Equals(groups[0]));    
+            Assert.True(g.Equals(db.GetAllDataFromProfile<DoctorsLetterGroup>().First()));
+            Assert.True(g.Equals(db.GetAllDataFromProfile<DoctorsLetterGroup>().First()));
+            Assert.True(db.GetAllDataFromProfile<DoctorsLetter>().First().DatabaseGroups.First().Equals(db.GetAllDataFromProfile<DoctorsLetterGroup>().First()));
         }
 
+        [Test]
+        public void EqualTest()
+        {
+            Assert.True(groups[0].Equals(groups[0]));
+        }
     }
 }

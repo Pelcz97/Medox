@@ -6,7 +6,7 @@ using System.Linq;
 namespace myMDTests.Model.DataModel
 {
     [TestFixture]
-    class DoctorsLetterGroupTest
+    public class DoctorsLetterGroupTest
     {
         private static DateTime[] DATES = new DateTime[] {
             new DateTime(2017, 12, 24),
