@@ -3,12 +3,20 @@ using ModelInterface.DataModelInterface;
 using System;
 using SQLiteNetExtensions.Attributes;
 using SQLite;
+using System.Collections.Generic;
 
 namespace myMD.Model.DataModel
 {
+    /// <summary>
+    /// 
+    /// </summary>
 	public class Medication : Data, IMedication, IEquatable<Medication>
 
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="letter"></param>
 		public void AttachToLetter(DoctorsLetter letter)
 		{
             if (DatabaseDoctorsLetter != letter)
@@ -18,6 +26,10 @@ namespace myMD.Model.DataModel
             }
 		}
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="letter"></param>
         public void DisattachFromLetter(DoctorsLetter letter)
         {
             if (this.DatabaseDoctorsLetter == letter)
@@ -27,7 +39,10 @@ namespace myMD.Model.DataModel
             }
         }
 
-        public void Delete()
+        /// <summary>
+        /// 
+        /// </summary>
+        public override void Delete()
         {
             DisattachFromLetter(DatabaseDoctorsLetter);
         }
@@ -41,12 +56,21 @@ namespace myMD.Model.DataModel
         /// <see>Model.DataModelInterface.IMedication#EndDate</see>
         public DateTime EndDate { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [ForeignKey(typeof(DoctorsLetter))]
         public int LetterId { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [ManyToOne]
         public DoctorsLetter DatabaseDoctorsLetter { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public IDoctorsLetter DoctorsLetter => DatabaseDoctorsLetter;
 
         /// <see>Model.DataModelInterface.IMedication#DisattachFromLetter(Model.DataModelInterface.IDoctorsLetter)</see>
@@ -55,18 +79,44 @@ namespace myMD.Model.DataModel
         /// <see>Model.DataModelInterface.IMedication#AttachToLetter(Model.DataModelInterface.IDoctorsLetter)</see>
         public void AttachToLetter(IDoctorsLetter letter) => AttachToLetter(letter.ToDoctorsLetter());
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
         public bool Equals(Medication other)
         {
-            return ID.Equals(other.ID);
+            return base.Equals(other)
+                && Frequency.Equals(other.Frequency)
+                && Interval.Equals(other.Interval)
+                && EndDate.Equals(other.EndDate);
         }
 
-        public override bool Equals(Object obj)
-        {
-            Medication med = obj as Medication;
-            return med != null && Equals(med);
-        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(Object obj) => Equals(obj as Medication);
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public Medication ToMedication() => this;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            var hashCode = 362796327;
+            hashCode = hashCode * -1521134295 + Frequency.GetHashCode();
+            hashCode = hashCode * -1521134295 + Interval.GetHashCode();
+            hashCode = hashCode * -1521134295 + EndDate.GetHashCode();
+            return hashCode;
+        }
     }
 
 }

@@ -153,36 +153,47 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>false</Visible>
+      <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Contents.json">
       <Visible>false</Visible>
+      <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Spotlight-40%402x.png">
       <Visible>false</Visible>
+      <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Spotlight-40%403x.png">
       <Visible>false</Visible>
+      <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%403x.png">
       <Visible>false</Visible>
+      <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%402x.png">
       <Visible>false</Visible>
+      <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%403x.png">
       <Visible>false</Visible>
+      <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTunesArtwork%402x">
       <Visible>false</Visible>
+      <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Spotlight-40.png">
       <Visible>false</Visible>
+      <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60.png">
       <Visible>false</Visible>
+      <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Spotlight-40%403x Kopie.png">
       <Visible>false</Visible>
+      <InProject>false</InProject>
     </ImageAsset>
   </ItemGroup>
   <ItemGroup />

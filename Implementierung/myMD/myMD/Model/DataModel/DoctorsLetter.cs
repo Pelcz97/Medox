@@ -1,78 +1,83 @@
 using ModelInterface.DataModelInterface;
-using SQLite;
 using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using myMD.Model.EntityObserver;
 
 namespace myMD.Model.DataModel
 {
+    /// <summary>
+    /// Diese Klasse implementiert die IDoctorsLEtter Schnittstelle und erweitert die abstrakte Data Klasse,
+    /// um Arztbriefe in einer SQLite-Datenbank speichern zu können.
+    /// </summary>
+    /// <see>ModelInterface.DataModelInterface.IDoctorsLetter</see>
+    /// <see>ModelInterface.DataModelInterface.Data</see>
     public class DoctorsLetter : Data, IDoctorsLetter, IEquatable<DoctorsLetter>
     {
+        /// <summary>
+        /// Initialisiert nötige Listen.
+        /// </summary>
         public DoctorsLetter()
         {
             DatabaseMedication = new List<Medication>();
             DatabaseGroups = new List<DoctorsLetterGroup>();
         }
 
-        public string Filepath { get; set; }
+        /// <summary>
+        /// Der Doktor, der diesen Arztbrief erstellt hat und dem der Arztbrief eindeutig zugeordnet werden kann.
+        /// Ein Doktor kann dabei mehrere Arztbriefe erstellt haben.
+        /// Wird automatisch beim Lesen aus der Datenbank gesetzt.
+        /// </summary>
+        [ManyToOne(CascadeOperations = CascadeOperation.CascadeRead)]
+        public Doctor DatabaseDoctor { get; set; }
 
-        public void DisattachMedication(Medication med)
-        {
-            if (DatabaseMedication.Contains(med))
-            {
-                DatabaseMedication.Remove(med);
-                med.DisattachFromLetter(this);
-            }
-        }
+        /// <summary>
+        /// Die Arztgruppen in denen dieser Arztbrief enthalten ist.
+        /// Eine Arztbriefgruppe enthält dabei mehrere Arztbriefe.
+        /// Wird automatisch beim Lesen aus der Datenbank gesetzt.
+        /// </summary>
+        [ManyToMany(typeof(DoctorsLetterGroupDoctorsLetter), CascadeOperations = CascadeOperation.CascadeRead)]
+        public List<DoctorsLetterGroup> DatabaseGroups { get; set; }
 
-        public void AddToGroup(DoctorsLetterGroup group)
-        {
-            if (!DatabaseGroups.Contains(group))
-            {
-                DatabaseGroups.Add(group);
-                group.Add(this);
-            }
-        }
-
-        public void RemoveFromGroup(DoctorsLetterGroup group)
-        {
-            if (DatabaseGroups.Contains(group))
-            {
-                DatabaseGroups.Remove(group);
-                group.Remove(this);
-            }
-        }
-
-
-        public void AttachMedication(Medication med)
-        {
-            if (!DatabaseMedication.Contains(med))
-            {
-                DatabaseMedication.Add(med);
-                med.AttachToLetter(this);
-            }
-        }
-
-        public void Delete()
-        {
-            while (DatabaseMedication.Any())
-            {
-                DisattachMedication(DatabaseMedication.First());
-            }
-            while (DatabaseGroups.Any())
-            {
-                RemoveFromGroup(DatabaseGroups.First());
-            }
-        }
-
+        /// <summary>
+        /// Die Medikationen die in diesem Arztbrief verordnet wurde
+        /// Einer Medikation kann dabei eindeutig ein Arztbrief zugeordnet werden.
+        /// Wird automatisch beim Lesen aus der Datenbank gesetzt.
+        /// </summary>
+        [OneToMany(CascadeOperations = CascadeOperation.CascadeRead)]
+        public List<Medication> DatabaseMedication { get; set; }
 
         /// <see>Model.DataModelInterface.IDoctorsLetter#Diagnosis()</see>
         public string Diagnosis { get; set; }
 
         /// <see>Model.DataModelInterface.IDoctorsLetter#Doctor()</see>
         public IDoctor Doctor => DatabaseDoctor;
+
+        /// <summary>
+        /// Fremdschlüssel zum Doktor dieses Arztbriefs für die Datenbank.
+        /// </summary>
+        [ForeignKey(typeof(Doctor))]
+        public int DoctorID { get; set; }
+
+        /// <summary>
+        /// Jede Instanz dieser Klasse basiert auf einer Datei. Dies ist der Pfad zu dieser Datei.
+        /// Sollte bei der Erstellung aus der Datei gesetzt werden.
+        /// </summary>
+        public string Filepath { get; set; }
+
+        /// <see>Model.DataModelInterface.IDoctorsLetter#Groups()</see>
+        public IList<IDoctorsLetterGroup> Groups
+        {
+            get
+            {
+                List<IDoctorsLetterGroup> list = new List<IDoctorsLetterGroup>();
+                foreach (DoctorsLetterGroup group in DatabaseGroups)
+                {
+                    list.Add(group);
+                }
+                return list;
+            }
+        }
 
         /// <see>Model.DataModelInterface.IDoctorsLetter#Medication()</see>
         public IList<IMedication> Medication
@@ -88,57 +93,117 @@ namespace myMD.Model.DataModel
             }
         }
 
-        [OneToMany(CascadeOperations = CascadeOperation.CascadeRead)]
-        /// <see>Model.DataModelInterface.IDoctorsLetter#Medication()</see>
-        public List<Medication> DatabaseMedication { get; set; }
+        /// <summary>
+        /// Überladung für konkrete Arztbriefgruppen.
+        /// </summary>
+        /// <see>Model.DataModel.DoctorsLetter#AddToGroup(ModelInterface.DataModelInterface.IDoctorsLetterGroup)</see>
+        public void AddToGroup(DoctorsLetterGroup group)
+        {
+            if (!DatabaseGroups.Contains(group))
+            {
+                DatabaseGroups.Add(group);
+                group.Add(this);
+            }
+        }
 
-        [ManyToOne]
-        public Doctor DatabaseDoctor { get; set; }
+        /// <see>ModelInterface.DataModelInterface.IDoctorsLetter#AddToGroup(ModelInterface.DataModelInterface.IDoctorsLetterGroup)</see>
+        public void AddToGroup(IDoctorsLetterGroup group) => AddToGroup(group.ToDoctorsLetterGroup());
 
-        [ForeignKey(typeof(Doctor))]
-        public int DoctorID { get; set; }
+        /// <summary>
+        /// Überladung für konkrete Medikationen.
+        /// </summary>
+        /// <see>Model.DataModel.DoctorsLetter#AttachMedication(ModelInterface.DataModelInterface.IMedication)</see>
+        public void AttachMedication(Medication med)
+        {
+            if (!DatabaseMedication.Contains(med))
+            {
+                DatabaseMedication.Add(med);
+                med.AttachToLetter(this);
+            }
+        }
 
-        [ManyToMany(typeof(DoctorsLetterGroupDoctorsLetter), CascadeOperations = CascadeOperation.CascadeRead)]
-        public List<DoctorsLetterGroup> DatabaseGroups { get; set; }
-
-        /// <see>Model.DataModelInterface.IDoctorsLetter#RemoveMedication(Model.DataModelInterface.IMedication)</see>
-        public void RemoveMedication(IMedication med) => RemoveMedication(med.ToMedication());
-
-        /// <see>Model.DataModelInterface.IDoctorsLetter#AttachMedication(Model.DataModelInterface.IMedication)</see>
+        /// <see>ModelInterface.DataModelInterface.IDoctorsLetter#AttachMedication(ModelInterface.DataModelInterface.IMedication)</see>
         public void AttachMedication(IMedication med) => AttachMedication(med.ToMedication());
 
-        /// <see>Model.DataModelInterface.IDoctorsLetter#AddToGroup(Model.DataModelInterface.IDoctorsLetterGroup)</see>
-        public void AddToGroup(IDoctorsLetterGroup group) => AddToGroup(group.ToDoctorsLetterGroup());
+        /// <summary>
+        /// Löst alle der Klasse bekannten Assoziatonen auf.
+        /// </summary>
+        /// <see>Model.DataModel.Entity#Delete()</see>
+        public override void Delete()
+        {
+            while (DatabaseMedication.Any())
+            {
+                DisattachMedication(DatabaseMedication.First());
+            }
+            while (DatabaseGroups.Any())
+            {
+                RemoveFromGroup(DatabaseGroups.First());
+            }
+        }
+
+        /// <summary>
+        /// Überladung für konkrete Medikationen.
+        /// </summary>
+        /// <see>Model.DataModel.DoctorsLetter#DisattachMedication(ModelInterface.DataModelInterface.IMedication)</see>
+        public void DisattachMedication(Medication med)
+        {
+            if (DatabaseMedication.Contains(med))
+            {
+                DatabaseMedication.Remove(med);
+                med.DisattachFromLetter(this);
+            }
+        }
+
+        /// <summary>
+        /// Zwei Doktoren sind genau dann gleich sie als Entitäten gleich sind und ihr Spezialgebiet gleich ist.
+        /// </summary>
+        /// <see>System.IEquatable<T>#Equals(T)</see>
+        public bool Equals(DoctorsLetter other)
+        {
+            return base.Equals(other)
+                && ID.Equals(other.ID)
+                && Filepath.Equals(other.Filepath)
+                && Diagnosis.Equals(other.Diagnosis)
+                && DatabaseMedication.SequenceEqual(other.DatabaseMedication)
+                && DatabaseDoctor.Equals(other.DatabaseDoctor);
+        }
+
+        /// <see>System.Object#Equals(System.Object)</see>
+        public override bool Equals(Object obj) => Equals(obj as DoctorsLetter);
+
+        /// <see>System.Object#GetHashCode()</see>
+        public override int GetHashCode()
+        {
+            var hashCode = -551889408;
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Filepath);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Diagnosis);
+            hashCode = hashCode * -1521134295 + EqualityComparer<List<Medication>>.Default.GetHashCode(DatabaseMedication);
+            hashCode = hashCode * -1521134295 + EqualityComparer<Doctor>.Default.GetHashCode(DatabaseDoctor);
+            return hashCode;
+        }
+
+        /// <summary>
+        /// Überladung für konkrete Arztbriefgruppen.
+        /// </summary>
+        /// <see>Model.DataModel.DoctorsLetter#RemoveFromGroup(ModelInterface.DataModelInterface.IDoctorsLetterGroup)</see>
+        public void RemoveFromGroup(DoctorsLetterGroup group)
+        {
+            if (DatabaseGroups.Contains(group))
+            {
+                DatabaseGroups.Remove(group);
+                group.Remove(this);
+            }
+        }
 
         /// <see>Model.DataModelInterface.IDoctorsLetter#RemoveFromGroup(Model.DataModelInterface.IDoctorsLetterGroup)</see>
         public void RemoveFromGroup(IDoctorsLetterGroup group) => RemoveFromGroup(group.ToDoctorsLetterGroup());
 
-        /// <see>Model.DataModelInterface.IDoctorsLetter#Groups()</see>
-        public IList<IDoctorsLetterGroup> Groups
-        {
-            get
-            {
-                List<IDoctorsLetterGroup> list = new List<IDoctorsLetterGroup>();
-                foreach(DoctorsLetterGroup group in DatabaseGroups)
-                {
-                    list.Add(group);
-                }
-                return list;
-            }          
-        }
-
-        public bool Equals(DoctorsLetter other)
-        {
-            return ID.Equals(other.ID);
-        }
-
-        public override bool Equals(Object obj)
-        {
-            DoctorsLetter letter = obj as DoctorsLetter;
-            return letter != null && Equals(letter);
-        }
-
+        /// <see>Model.DataModelInterface.IDoctorsLetter#RemoveMedication(Model.DataModelInterface.IMedication)</see>
+        public void RemoveMedication(IMedication med) => RemoveMedication(med.ToMedication());
+        /// <summary>
+        /// Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig.
+        /// </summary>
+        /// <see>ModelInterface.DataModelInterface.IDoctorsLetter#ToDoctorsLetter()</see>
         public DoctorsLetter ToDoctorsLetter() => this;
     }
 }
-

@@ -6,12 +6,12 @@ namespace myMD.ViewModel.OverviewTabViewModel
 {
     public class DoctorsLetterViewModel : OverallViewModel.OverallViewModel
     {
-        public IDoctorsLetter DoctorsLetter { get; set;}
+        public IDoctorsLetter DoctorsLetter { get; protected set; }
 
-        //public IDoctor Doctor { get => this.DoctorsLetter.Doctor; set => this.DoctorsLetter.Doctor = value; }
-        public string DoctorsName { get; set; }
-        public string DoctorsField { get; set; }
-        public string DoctorsLetterDate { get; set; }
+        public IDoctor Doctor { get => this.DoctorsLetter.Doctor; }
+        public string DoctorsName { get => this.Doctor.Name; }
+        public string DoctorsField { get => this.Doctor.Field; }
+        public DateTime DoctorsLetterDate { get => this.DoctorsLetter.Date; }
 
 
     }
