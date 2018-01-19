@@ -1,8 +1,8 @@
-using ModelInterface.DataModelInterface;
+using myMD.ModelInterface.DataModelInterface;
 using System.Collections.Generic;
 using myMD.Model.DataModel;
 
-namespace ModelInterface.ModelFacadeInterface
+namespace myMD.ModelInterface.ModelFacadeInterface
 {
     /// <summary>
     /// Dies ist die Haupteinstiegsstelle für andere Subsysteme in das Model. 
@@ -59,9 +59,6 @@ namespace ModelInterface.ModelFacadeInterface
         /// </summary>
         /// <param name="letter">Der zu sendende Arztbrief</param>
 		void SendLetter(IDoctorsLetter letter);
-
-        Entity ToEntity();
-
 	}
 
 }

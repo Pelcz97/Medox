@@ -1,5 +1,5 @@
 ﻿using System;
-using ModelInterface.DataModelInterface;
+using myMD.ModelInterface.DataModelInterface;
 
 
 namespace myMD.ViewModel.OverviewTabViewModel

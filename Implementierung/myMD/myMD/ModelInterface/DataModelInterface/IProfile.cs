@@ -1,7 +1,7 @@
 using myMD.Model.DataModel;
 using System;
 
-namespace ModelInterface.DataModelInterface
+namespace myMD.ModelInterface.DataModelInterface
 {
     /// <summary>
     /// Schnittstelle für die Abstraktion eines Nutzerprofils, die die IEntity Schnittstelle erweitert.

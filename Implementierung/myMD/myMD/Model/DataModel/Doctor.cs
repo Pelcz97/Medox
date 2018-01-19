@@ -1,4 +1,4 @@
-using ModelInterface.DataModelInterface;
+using myMD.ModelInterface.DataModelInterface;
 using System;
 using System.Collections.Generic;
 
@@ -9,10 +9,10 @@ namespace myMD.Model.DataModel
     /// um Information über einen Arzt in einer SQLite-Datenbank speichern zu können
     /// </summary>
     /// <see>ModelInterface.DataModelInterface.IDoctor</see>
-    /// <see>ModelInterface.DataModelInterface.IEntity</see>
+    /// <see>Model.DataModel.Entity</see>
     public class Doctor : Entity, IDoctor, IEquatable<Doctor>
     {
-        /// <see>Model.DataModelInterface.IDoctor#Field</see>
+        /// <see>ModelInterface.DataModelInterface.IDoctor#Field</see>
         public string Field { get; set; }
 
         /// <summary>

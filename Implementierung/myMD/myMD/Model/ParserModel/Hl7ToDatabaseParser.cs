@@ -4,30 +4,48 @@ using System.Collections.Generic;
 
 namespace myMD.Model.ParserModel
 {
+    /// <summary>
+    /// 
+    /// </summary>
 	public class Hl7ToDatabaseParser : FileToDatabaseParser
 	{
+        /// <summary>
+        /// 
+        /// </summary>
 		private IFileHelper iFileHelper;
 
-        override
-        protected DoctorsLetter ParseLetter()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        protected override DoctorsLetter ParseLetter(string filename)
 		{
 			return null;
 		}
 
-        override
-		protected IList<Medication> ParseMedications()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        protected override IList<Medication> ParseMedications(string filename)
 		{
 			return null;
 		}
 
-        override
-        protected Doctor ParseDoctor()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        protected override Doctor ParseDoctor(string filename)
 		{
 			return null;
 		}
 
-        override
-        protected Profile ParseProfile()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        protected override Profile ParseProfile(string filename)
 		{
 			return null;
 		}

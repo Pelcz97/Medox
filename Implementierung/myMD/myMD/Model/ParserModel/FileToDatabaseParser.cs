@@ -11,13 +11,13 @@ namespace myMD.Model.ParserModel
 
 		}
 
-		protected abstract DoctorsLetter ParseLetter();
+		protected abstract DoctorsLetter ParseLetter(string filename);
 
-		protected abstract IList<Medication> ParseMedications();
+		protected abstract IList<Medication> ParseMedications(string filename);
 
-		protected abstract Doctor ParseDoctor();
+		protected abstract Doctor ParseDoctor(string filename);
 
-		protected abstract Profile ParseProfile();
+		protected abstract Profile ParseProfile(string filename);
 
 	}
 

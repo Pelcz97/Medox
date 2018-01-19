@@ -1,4 +1,4 @@
-namespace ModelInterface.DataModelInterface
+namespace myMD.ModelInterface.DataModelInterface
 {
     /// <summary>
     /// Enumeration aller möglichen Blutgruppen

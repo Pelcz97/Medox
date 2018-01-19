@@ -1,32 +1,60 @@
-using myMD.Model.EntityObserver;
 using myMD.Model.DataModel;
 using myMD.Model.FileHelper;
 using System.Collections.Generic;
-using ModelInterface.DataModelInterface;
+using myMD.ModelInterface.DataModelInterface;
 using SQLite;
-using SQLiteNetExtensions;
 using SQLiteNetExtensions.Extensions;
 using System.Linq;
-
+using Xamarin.Forms;
 
 namespace myMD.Model.DatabaseModel
 {
+    /// <summary>
+    /// 
+    /// </summary>
 	public class EntityDatabase : IEntityDatabase
 	{
-        public EntityDatabase(IFileHelper fileHelper)
+        /// <summary>
+        /// 
+        /// </summary>
+        public EntityDatabase()
         {
-            this.fileHelper = fileHelper;
+            this.fileHelper = DependencyService.Get<IFileHelper>();
             db = new SQLiteConnection(fileHelper.GetLocalFilePath(FILE));
             Create();
             profile = db.Find<Profile>(v => true);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="helper"></param>
+        public EntityDatabase(IFileHelper helper)
+        {
+            this.fileHelper = helper;
+            db = new SQLiteConnection(fileHelper.GetLocalFilePath(FILE));
+            Create();
+            profile = db.Find<Profile>(v => true);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         private static readonly string FILE = "database.db3";
 
+        /// <summary>
+        /// 
+        /// </summary>
         private SQLiteConnection db;
 
+        /// <summary>
+        /// 
+        /// </summary>
         private Profile profile;
 
+        /// <summary>
+        /// 
+        /// </summary>
 		private IFileHelper fileHelper;
 
 
@@ -35,11 +63,22 @@ namespace myMD.Model.DatabaseModel
 
 
         /// <see>Model.EntityObserver.IEntityObserver#OnDeletion(Model.DataModel.Entity)</see>
-        public void Delete(IEntity entity) => db.Delete(entity.ToEntity());
-
+        public void Delete(IEntity entity)
+        {
+            Entity e = entity.ToEntity();
+            e.Delete();
+            db.Delete(e);
+        }
+ 
 
         /// <see>Model.DatabaseModel.IEntityDatabase#Insert(Model.DataModel.Entity)</see>
-        public void Insert(IEntity entity) => db.Insert(entity.ToEntity());
+        public void Insert(IEntity entity)
+        {
+            Entity e = entity.ToEntity();
+            e.Profile = profile;
+            e.ProfileID = profile.ID;
+            db.Insert(e);
+        }
 
 
         /// <see>Model.DatabaseModel.IEntityDatabase#GetAllDataFromProfile<T>()</see>
@@ -48,16 +87,28 @@ namespace myMD.Model.DatabaseModel
             return db.GetAllWithChildren<E>(e => e.ProfileID == profile.ID, true);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public IList<IDoctorsLetter> GetAllDoctorsLetters()
         {
             return GetAllDataFromProfile<DoctorsLetter>().Cast<IDoctorsLetter>().ToList();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public IList<IDoctorsLetterGroup> GetAllDoctorsLetterGroups()
         {
             return GetAllDataFromProfile<DoctorsLetterGroup>().Cast<IDoctorsLetterGroup>().ToList();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public IList<IMedication> GetAllMedications()
         {
             return GetAllDataFromProfile<Medication>().Cast<IMedication>().ToList();
@@ -72,6 +123,9 @@ namespace myMD.Model.DatabaseModel
         /// <see>Model.EntityObserver.IProfileObserver#OnActivation(Model.DataModel.Profile)</see>
         public void Activate(IProfile profile) => this.profile = profile.ToProfile();
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Destroy()
         {
             db.DropTable<DoctorsLetter>();
@@ -82,6 +136,9 @@ namespace myMD.Model.DatabaseModel
             db.DropTable<Doctor>();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Create()
         {
             db.CreateTable<DoctorsLetter>();
@@ -92,8 +149,18 @@ namespace myMD.Model.DatabaseModel
             db.CreateTable<Doctor>();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         public IProfile GetProfileFromInsuranceNumber(string number) => db.Get<Profile>(v => v.InsuranceNumber.Equals(number));
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public IDoctor GetDoctorFromName(string name) => db.Get<Doctor>(v => v.Name.Equals(name));
     }
 
