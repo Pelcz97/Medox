@@ -8,9 +8,8 @@ using Xamarin.Forms;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
-    public class SelectDeviceViewModel
+    public class SelectDeviceViewModel : OverallViewModel.OverallViewModel
     {
-        
         public IAdapter BleAdapter;
 
         public IDisposable scan;
