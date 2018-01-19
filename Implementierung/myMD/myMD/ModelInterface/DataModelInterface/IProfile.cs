@@ -1,3 +1,4 @@
+using myMD.Model.DataModel;
 using System;
 
 namespace ModelInterface.DataModelInterface
@@ -27,6 +28,8 @@ namespace ModelInterface.DataModelInterface
         /// Das Geburtsdatum dieses Profils.
         /// </summary>
         DateTime BirthDate { get; set; }
+
+        Profile ToProfile();
 	}
 
 }

@@ -7,11 +7,12 @@ using NUnit.Framework;
 using System.IO;
 using System.Linq;
 using ModelInterface.DataModelInterface;
+using myMDTests.Model.EntityFactory;
 
-namespace myMDTests.Model.DataModel
+namespace myMDTests.Model.DatabaseModel
 {
-    [TestFixture]
-    class DatabaseTest
+    //[TestFixture]
+    public class DatabaseTest
     {
         private static readonly string PATH = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "database.db3");
         private static readonly int ENTITY_COUNT = 10;
@@ -57,7 +58,7 @@ namespace myMDTests.Model.DataModel
             
         }
 
-        [Test]
+        //[Test]
         public void MedLetterTest()
         {
             letters[0].AttachMedication(meds[0]);
@@ -66,7 +67,7 @@ namespace myMDTests.Model.DataModel
             Assert.AreEqual(med.DatabaseDoctorsLetter.ID, meds[0].DatabaseDoctorsLetter.ID);
         }
 
-        [Test]
+        //[Test]
         public void GroupTest()
         {
             groups[0].Add(letters[0]);

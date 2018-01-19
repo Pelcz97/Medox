@@ -7,20 +7,26 @@ namespace myMD.Model.DatabaseModel
 {
 	public interface IEntityDatabase
 	{
-		void Insert(Entity entity);
+		void Insert(IEntity entity);
 
-        void Update(Entity entity);
+        void Update(IEntity entity);
 
-        void Delete(Entity entity);
+        void Delete(IEntity entity);
 
-        void Activate(Profile profile);
+        void Activate(IProfile profile);
 
-        IList<E> GetAllDataFromProfile<E>() where E : Entity, new();
+        IList<IProfile> GetAllProfiles();
 
-        IList<Profile> GetAllProfiles();
+        IList<IDoctorsLetter> GetAllDoctorsLetters();
 
-		E GetEqual<E>(E entity) where E : Entity, new();
-	}
+        IList<IDoctorsLetterGroup> GetAllDoctorsLetterGroups();
+
+        IList<IMedication> GetAllMedications();
+
+        IProfile GetProfileFromInsuranceNumber(string number);
+
+        IDoctor GetDoctorFromName(string name);
+    }
 
 }
 
