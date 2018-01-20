@@ -14,7 +14,7 @@ namespace myMD.Model.EntityFactory
         /// 
         /// </summary>
         /// <param name="database"></param>
-        EntityFactory(IEntityDatabase database)
+        public EntityFactory(IEntityDatabase database)
         {
             db = database;
         }

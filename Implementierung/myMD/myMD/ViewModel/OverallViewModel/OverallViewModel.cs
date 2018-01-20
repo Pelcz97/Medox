@@ -10,7 +10,7 @@ namespace myMD.ViewModel.OverallViewModel
 
         public OverallViewModel()
         {
-            
+            ModelFacade = App.GetModel();
         }
     }
 }

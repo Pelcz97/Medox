@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using myMD.ModelInterface.DataModelInterface;
+using myMD.ModelInterface.ModelFacadeInterface;
 
 namespace myMD.ViewModel.OverviewTabViewModel
 {
@@ -9,9 +10,11 @@ namespace myMD.ViewModel.OverviewTabViewModel
 
         public string Diagnosis { get => this.DoctorsLetter.Diagnosis; }
 
-        public DetailedDoctorsLetterViewModel(object e)
+        public DetailedDoctorsLetterViewModel(object obj) : this(obj as IDoctorsLetter) { }
+
+        public DetailedDoctorsLetterViewModel(IDoctorsLetter letter) : base(letter)
         {
-            this.DoctorsLetter = e as IDoctorsLetter;
+            this.DoctorsLetter = letter;
 
             /*
             Debug.WriteLine(this.DoctorsName);

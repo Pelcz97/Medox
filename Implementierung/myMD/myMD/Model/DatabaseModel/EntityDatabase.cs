@@ -19,7 +19,7 @@ namespace myMD.Model.DatabaseModel
         /// </summary>
         public EntityDatabase()
         {
-            this.fileHelper = DependencyService.Get<IFileHelper>();
+            fileHelper = DependencyService.Get<IFileHelper>();
             db = new SQLiteConnection(fileHelper.GetLocalFilePath(FILE));
             Create();
             profile = db.Find<Profile>(v => true);
@@ -76,7 +76,6 @@ namespace myMD.Model.DatabaseModel
         {
             Entity e = entity.ToEntity();
             e.Profile = profile;
-            e.ProfileID = profile.ID;
             db.Insert(e);
         }
 

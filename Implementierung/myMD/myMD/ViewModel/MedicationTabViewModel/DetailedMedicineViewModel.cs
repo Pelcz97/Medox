@@ -1,5 +1,6 @@
 ﻿using System;
 using myMD.ModelInterface.DataModelInterface;
+using myMD.ModelInterface.ModelFacadeInterface;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
@@ -7,13 +8,12 @@ namespace myMD.ViewModel.MedicationTabViewModel
     {
         bool OneTimeMedication_Switch { get; set; }
         bool SetDatesPossible { get => !this.OneTimeMedication_Switch; }
-        //ModelFacade 
 
-        public DetailedMedicineViewModel(IMedication Medication) : base(Medication)
+        public DetailedMedicineViewModel(IMedication medication) : base(medication)
         {
             this.MedicationStartDate = System.DateTime.Today;
             this.MedicationEndDate = System.DateTime.Today;
-            this.Medication = Medication;
+            this.Medication = medication;
         }
 
         public void saveMedication(IMedication Medication){

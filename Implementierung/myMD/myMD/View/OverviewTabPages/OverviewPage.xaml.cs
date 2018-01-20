@@ -13,7 +13,7 @@ namespace myMD.View.OverviewTabPages
         public OverviewPage()
         {
             InitializeComponent();
-            this.BindingContext = new OverviewViewModel(this.Navigation);
+            this.BindingContext = new OverviewViewModel(Navigation);
         }
         
         void DoctorsLetterSelected(object sender, Xamarin.Forms.ItemTappedEventArgs e)

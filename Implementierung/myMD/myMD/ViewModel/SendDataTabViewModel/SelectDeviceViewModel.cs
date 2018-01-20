@@ -5,6 +5,7 @@ using System.Windows.Input;
 using myMD.ModelInterface.DataModelInterface;
 using Plugin.BluetoothLE;
 using Xamarin.Forms;
+using myMD.ModelInterface.ModelFacadeInterface;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
