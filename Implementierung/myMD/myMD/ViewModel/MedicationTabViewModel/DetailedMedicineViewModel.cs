@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using ModelInterface.DataModelInterface;
 using myMD.Model.DataModel;
 
 namespace myMD.ViewModel.MedicationTabViewModel

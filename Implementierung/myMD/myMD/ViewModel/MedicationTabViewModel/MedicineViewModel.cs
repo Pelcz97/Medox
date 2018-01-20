@@ -1,6 +1,7 @@
 ﻿using System;
 using myMD.ModelInterface.DataModelInterface;
 using System.Diagnostics;
+using myMD.Model.DataModel;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
@@ -46,7 +47,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
 
         public MedicineViewModel()
         {
-            this.Medication = new Medication();
+            //this.Medication = CreateEmptyMedication();
         }
 
 
