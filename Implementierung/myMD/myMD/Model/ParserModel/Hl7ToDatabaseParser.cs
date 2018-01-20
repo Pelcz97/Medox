@@ -12,11 +12,6 @@ namespace myMD.Model.ParserModel
         /// <summary>
         /// 
         /// </summary>
-		private IFileHelper iFileHelper;
-
-        /// <summary>
-        /// 
-        /// </summary>
         /// <returns></returns>
         protected override DoctorsLetter ParseLetter(string filename)
         {

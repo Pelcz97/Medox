@@ -5,6 +5,7 @@ using myMD.Model.DataModel;
 using myMD.View.AbstractPages;
 using myMD.ViewModel.MedicationTabViewModel;
 using Xamarin.Forms;
+using myMD.ModelInterface.DataModelInterface;
 
 namespace myMD.View.MedicationTabPages
 {

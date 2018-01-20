@@ -33,5 +33,7 @@ namespace myMD.Model.DataModel
         {
             return 1998067999 + EqualityComparer<string>.Default.GetHashCode(Field);
         }
+
+        public Doctor ToDoctor() => this;
     }
 }
