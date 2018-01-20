@@ -44,5 +44,12 @@ namespace myMD.ViewModel.MedicationTabViewModel
         public MedicineViewModel(Medication Medication){
             this.Medication = Medication;
         }
+
+        public MedicineViewModel()
+        {
+            this.Medication = new Medication();
+        }
+
+
     }
 }

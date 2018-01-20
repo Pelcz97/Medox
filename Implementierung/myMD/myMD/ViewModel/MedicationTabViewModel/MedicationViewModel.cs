@@ -30,7 +30,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
 
             this.AddDummyMed = new Command((sender) =>
             {
-                MedicineViewModel test = new MedicineViewModel(new Medication());
+                //MedicineViewModel test = new MedicineViewModel();
             });
         }
 

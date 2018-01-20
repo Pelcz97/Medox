@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace myMD.View.MedicationTabPages
 {
-    public partial class DetailedMedicationPage : CustomContentPage, INotifyPropertyChanged
+    public partial class DetailedMedicationPage : CustomContentPage
     {
         DetailedMedicineViewModel vm;
 
@@ -16,7 +16,7 @@ namespace myMD.View.MedicationTabPages
         {
             InitializeComponent();
 
-            vm = new DetailedMedicineViewModel(new Medication());
+            vm = new DetailedMedicineViewModel();
             this.BindingContext = vm;
         }
 
