@@ -154,14 +154,14 @@ namespace myMD.Model.DatabaseModel
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
-        public IProfile GetProfileFromInsuranceNumber(string number) => db.Get<Profile>(v => v.InsuranceNumber.Equals(number));
+        public IProfile GetProfile(IProfile profile) => db.Get<Profile>(v => v.InsuranceNumber.Equals(profile.InsuranceNumber));
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public IDoctor GetDoctorFromName(string name) => db.Get<Doctor>(v => v.Name.Equals(name));
+        public IDoctor GetDoctor(IDoctor doctor) => db.Get<Doctor>(v => v.Name.Equals(doctor.Name));
     }
 
 }

@@ -7,6 +7,7 @@ using myMD.Model.TransmissionModel;
 using myMD.ModelInterface.DataModelInterface;
 using System.Collections.Generic;
 using myMD.Model.DataModel;
+using Xamarin.Forms;
 
 namespace myMD.Model.ModelFacade
 {
@@ -16,6 +17,19 @@ namespace myMD.Model.ModelFacade
     /// <see>ModelInterface.ModelFacadeInterface.IModelFacade</see>
 	public class ModelFacade : IModelFacade
 	{
+        public ModelFacade(IEntityDatabase database, IEntityFactory factory, IParserFacade parser, IBluetooth bluetooth)
+        {
+            this.database = database;
+            this.factory = factory;
+            this.parser = parser;
+            this.bluetooth = bluetooth;
+            this.fileHelper = DependencyService.Get<IFileHelper>();
+            if(database.GetAllProfiles().Count == 0)
+            {
+                CreateEmptyProfile();
+            }
+        }
+
         /// <summary>
         /// 
         /// </summary>

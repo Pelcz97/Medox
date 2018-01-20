@@ -9,7 +9,7 @@ namespace myMD.Model.ParserModel
     /// 
     /// </summary>
 	public class ParserFacade : IParserFacade
-    { 
+    {
         /// <see>Model.ParserModel.IParserFacade#ParseFileToDatabase(string, Model.DatabaseModel.IEntityDatabase)</see>
         public void ParseFileToDatabase(string filename, IEntityDatabase db)
 		{

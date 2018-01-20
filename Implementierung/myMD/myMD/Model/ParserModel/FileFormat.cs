@@ -3,7 +3,7 @@
     /// <summary>
     /// 
     /// </summary>
-    enum FileFormat
+    public enum FileFormat
     {
         hl7
     }
