@@ -61,14 +61,14 @@ namespace myMD.Model.DatabaseModel
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
-        IProfile GetProfileFromInsuranceNumber(string number);
+        IProfile GetProfile(IProfile profile);
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        IDoctor GetDoctorFromName(string name);
+        IDoctor GetDoctor(IDoctor doctor);
     }
 
 }

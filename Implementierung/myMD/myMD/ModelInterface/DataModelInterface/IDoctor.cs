@@ -1,3 +1,5 @@
+using myMD.Model.DataModel;
+
 namespace myMD.ModelInterface.DataModelInterface
 {
     /// <summary>
@@ -9,6 +11,8 @@ namespace myMD.ModelInterface.DataModelInterface
         /// Das Fachgebiet dieses Doktors.
         /// </summary>
 		string Field { get; set; }
+
+        Doctor ToDoctor();
 	}
 
 }
