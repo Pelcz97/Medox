@@ -28,10 +28,11 @@ namespace myMD.ViewModel.MedicationTabViewModel
 
         public DetailedMedicineViewModel() : base()
         {
-            //this.Medication = new Medication();
-            //this.OneTimeMedication_Switch = false;
-            //this.MedicationStartDate = System.DateTime.Today;
-            //this.MedicationEndDate = System.DateTime.Today;
+            Medication = ModelFacade.CreateEmptyMedication();
+        }
+
+        public void cancelMedication(){
+            ModelFacade.Delete(this.Medication);
         }
     }
 }
