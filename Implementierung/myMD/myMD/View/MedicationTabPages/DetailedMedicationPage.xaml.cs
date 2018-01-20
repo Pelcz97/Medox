@@ -9,7 +9,7 @@ using myMD.ModelInterface.DataModelInterface;
 
 namespace myMD.View.MedicationTabPages
 {
-    public partial class DetailedMedicationPage : CustomContentPage, INotifyPropertyChanged
+    public partial class DetailedMedicationPage : CustomContentPage
     {
         DetailedMedicineViewModel vm;
 
@@ -17,12 +17,13 @@ namespace myMD.View.MedicationTabPages
         {
             InitializeComponent();
 
-            vm = new DetailedMedicineViewModel(new Medication());
+            vm = new DetailedMedicineViewModel();
             this.BindingContext = vm;
         }
 
         async void CancelButton_Clicked(object sender, System.EventArgs e)
         {
+            vm.cancelMedication();
             await Navigation.PopModalAsync();
         }
 

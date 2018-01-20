@@ -69,7 +69,7 @@
 
                                 <Switch HorizontalOptions="EndAndExpand" 
                                         VerticalOptions="Center" 
-                                        Margin="0,0,15,0" IsToggled="{Binding OneTimeMedication_Switch}" 
+                                        Margin="0,0,15,0" IsToggled="{Binding OneTimeMedication_Switch, Mode=TwoWay}" 
                                         BackgroundColor="#191928"/>
                         </StackLayout>
 

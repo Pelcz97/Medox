@@ -3,6 +3,7 @@ using myMD.ModelInterface.DataModelInterface;
 using System.Diagnostics;
 using myMD.ModelInterface.ModelFacadeInterface;
 
+
 namespace myMD.ViewModel.MedicationTabViewModel
 {
     public class MedicineViewModel : OverallViewModel.OverallViewModel
@@ -45,5 +46,12 @@ namespace myMD.ViewModel.MedicationTabViewModel
         {
             this.Medication = Medication;
         }
+
+        public MedicineViewModel()
+        {
+            
+        }
+
+
     }
 }

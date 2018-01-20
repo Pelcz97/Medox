@@ -10,6 +10,11 @@ namespace myMDTests.Model.FileHelper
 {
     public class TestFileHelper : IFileHelper
     {
+        public void DeleteFile(string filename)
+        {
+            File.Delete(GetLocalFilePath(filename));
+        }
+
         public string GetLocalFilePath(string filename)
         {
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), filename);

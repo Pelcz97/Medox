@@ -13,7 +13,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
 {
     public class MedicationViewModel : OverallViewModel.OverallViewModel
     {
-        public ObservableCollection<MedicineViewModel> MedicationsList { get; }
+        public IList<MedicineViewModel> MedicationsList { get; }
         public ICommand AddDummyMed { get; private set; }
         private bool isVisible = true;
 
@@ -27,11 +27,11 @@ namespace myMD.ViewModel.MedicationTabViewModel
 
         public MedicationViewModel()
         {
-            this.MedicationsList = new ObservableCollection<MedicineViewModel>();
+            this.MedicationsList = (IList<MedicineViewModel>)ModelFacade.GetAllMedications();
 
             this.AddDummyMed = new Command((sender) =>
             {
-                MedicineViewModel test = new MedicineViewModel(new Medication());
+                
             });
         }
 

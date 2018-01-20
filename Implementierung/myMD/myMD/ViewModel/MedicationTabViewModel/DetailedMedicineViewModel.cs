@@ -1,23 +1,38 @@
 ﻿using System;
+using System.Diagnostics;
 using myMD.ModelInterface.DataModelInterface;
-using myMD.ModelInterface.ModelFacadeInterface;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
     public class DetailedMedicineViewModel : MedicineViewModel
     {
-        bool OneTimeMedication_Switch { get; set; }
+        bool OneTimeMedication_Switch
+        {
+            get { return this.OneTimeMedication_Switch; }
+            set
+            {
+                Debug.WriteLine(OneTimeMedication_Switch);
+                this.OneTimeMedication_Switch = value;
+            }
+        }
+
         bool SetDatesPossible { get => !this.OneTimeMedication_Switch; }
 
         public DetailedMedicineViewModel(IMedication medication) : base(medication)
         {
+            this.Medication = medication;
+            this.OneTimeMedication_Switch = false;
             this.MedicationStartDate = System.DateTime.Today;
             this.MedicationEndDate = System.DateTime.Today;
-            this.Medication = medication;
         }
 
-        public void saveMedication(IMedication Medication){
-            
+        public DetailedMedicineViewModel() : base()
+        {
+            Medication = ModelFacade.CreateEmptyMedication();
+        }
+
+        public void cancelMedication(){
+            ModelFacade.Delete(this.Medication);
         }
     }
 }

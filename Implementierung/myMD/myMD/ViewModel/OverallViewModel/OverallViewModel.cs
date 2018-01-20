@@ -6,7 +6,7 @@ namespace myMD.ViewModel.OverallViewModel
 {
     public class OverallViewModel
     {
-        IModelFacade ModelFacade;
+        protected IModelFacade ModelFacade;
 
         public OverallViewModel()
         {
