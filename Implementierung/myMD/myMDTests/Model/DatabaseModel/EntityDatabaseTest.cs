@@ -7,7 +7,7 @@ using myMD.Model.DatabaseModel;
 using NUnit.Framework;
 using System.IO;
 using myMD.Model.DataModel;
-using ModelInterface.DataModelInterface;
+using myMD.ModelInterface.DataModelInterface;
 using myMDTests.Model.EntityFactory;
 using myMDTests.Model.FileHelper;
 

@@ -1,14 +1,13 @@
 ﻿using System;
+using myMD.ModelInterface.DataModelInterface;
 using System.Diagnostics;
-using ModelInterface.DataModelInterface;
-using myMD.Model.DataModel;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
     public class MedicineViewModel : OverallViewModel.OverallViewModel
     {
 
-        public Medication Medication { get; set; }
+        public IMedication Medication { get; set; }
 
         public string MedicationName { 
             get => this.Medication.Name; 
@@ -41,7 +40,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
                 this.Medication.Frequency = value; } }
         //public string MedicationDosis { get; set; }
 
-        public MedicineViewModel(Medication Medication){
+        public MedicineViewModel(IMedication Medication){
             this.Medication = Medication;
         }
 

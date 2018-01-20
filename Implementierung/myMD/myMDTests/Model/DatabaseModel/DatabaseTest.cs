@@ -6,7 +6,7 @@ using myMD.Model.DataModel;
 using NUnit.Framework;
 using System.IO;
 using System.Linq;
-using ModelInterface.DataModelInterface;
+using myMD.ModelInterface.DataModelInterface;
 using myMDTests.Model.EntityFactory;
 
 namespace myMDTests.Model.DatabaseModel

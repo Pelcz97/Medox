@@ -1,4 +1,4 @@
-using ModelInterface.DataModelInterface;
+using myMD.ModelInterface.DataModelInterface;
 using myMD.Model.EntityObserver;
 using System;
 using System.Collections.Generic;
@@ -6,12 +6,17 @@ using System.Collections.Generic;
 namespace myMD.Model.DataModel
 {
     /// <summary>
-    /// 
+    /// Diese Klasse implementiert die IProfile Schnittstelle und erweitert die abstrakte Enitity Klasse,
+    /// um Information über einen Nutzer in einer SQLite-Datenbank speichern zu können
     /// </summary>
+    /// <see>ModelInterface.DataModelInterface.IProfile</see>
+    /// <see>Model.DataModel.Entity</see>
 	public class Profile : Entity, IProfile, IEquatable<Profile>
     {
         /// <summary>
-        /// 
+        /// Jeder Entität soll eindeutig einem Nutzerprofile zugeordnet werden können.
+        /// Das Profil eines Profils, sollte dabei natürlich immer das Profil selbst sein.
+        /// Dies wird hier initialisiert.
         /// </summary>
         public Profile()
         {
@@ -19,23 +24,22 @@ namespace myMD.Model.DataModel
             ProfileID = ID;
         }
 
-        /// <see>Model.DataModelInterface.IProfile#InsuranceNumber</see>
+        /// <see>ModelInterface.DataModelInterface.IProfile#InsuranceNumber</see>
         public string InsuranceNumber { get; set; }
 
-        /// <see>Model.DataModelInterface.IProfile#LastName(string)</see>
+        /// <see>ModelInterface.DataModelInterface.IProfile#LastName(string)</see>
         public string LastName { get; set; }
 
-        /// <see>Model.DataModelInterface.IProfile#BloodType</see>
+        /// <see>ModelInterface.DataModelInterface.IProfile#BloodType</see>
         public BloodType BloodType { get; set; }
 
-        /// <see>Model.DataModelInterface.IProfile#BirthDate()</see>
+        /// <see>ModelInterface.DataModelInterface.IProfile#BirthDate()</see>
         public DateTime BirthDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Zwei Profile sind genau dann gleich, wenn ihr Name, Nachname, Geburtsdatum, ihre Blutgruppe, ID und Versicherungsnummer gleich sind.
         /// </summary>
-        /// <param name="other"></param>
-        /// <returns></returns>
+        /// <see>System.IEquatable<T>#Equals(T)</see>
         public bool Equals(Profile other)
         {
             return other != null
@@ -47,17 +51,10 @@ namespace myMD.Model.DataModel
                 && BirthDate.Equals(other.BirthDate);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
+        /// <see>System.Object#Equals(System.Object)</see>
         public override bool Equals(object obj) => Equals(obj as Profile);
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+        /// <see>System.Object#GetHashCode()</see>
         public override int GetHashCode()
         {
             var hashCode = -1813595351;
@@ -69,9 +66,9 @@ namespace myMD.Model.DataModel
         }
 
         /// <summary>
-        /// 
+        /// Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig.
         /// </summary>
-        /// <returns></returns>
+        /// <see>ModelInterface.DataModelInterface.IProfile#ToProfile()</see>
         public Profile ToProfile() => this;
     }
 

@@ -1,30 +1,73 @@
-using myMD.Model.EntityObserver;
-using myMD.Model.DataModel;
 using System.Collections.Generic;
-using ModelInterface.DataModelInterface;
+using myMD.ModelInterface.DataModelInterface;
 
 namespace myMD.Model.DatabaseModel
 {
+    /// <summary>
+    /// 
+    /// </summary>
 	public interface IEntityDatabase
 	{
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="entity"></param>
 		void Insert(IEntity entity);
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="entity"></param>
         void Update(IEntity entity);
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="entity"></param>
         void Delete(IEntity entity);
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="profile"></param>
         void Activate(IProfile profile);
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         IList<IProfile> GetAllProfiles();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         IList<IDoctorsLetter> GetAllDoctorsLetters();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         IList<IDoctorsLetterGroup> GetAllDoctorsLetterGroups();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         IList<IMedication> GetAllMedications();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         IProfile GetProfileFromInsuranceNumber(string number);
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         IDoctor GetDoctorFromName(string name);
     }
 

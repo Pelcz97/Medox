@@ -1,4 +1,4 @@
-namespace ModelInterface.DataModelInterface
+namespace myMD.ModelInterface.DataModelInterface
 {
     /// <summary>
     /// Schnittstelle für die Abstraktion eines Arztes, die die IEntity Schnittstelle erweitert.

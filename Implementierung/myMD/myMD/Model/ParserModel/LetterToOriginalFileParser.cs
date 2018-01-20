@@ -1,15 +1,19 @@
-using ModelInterface.DataModelInterface;
+using myMD.ModelInterface.DataModelInterface;
 
 namespace myMD.Model.ParserModel
 {
+    /// <summary>
+    /// 
+    /// </summary>
 	public class LetterToOriginalFileParser
 	{
-		public string ParseLetter(IDoctorsLetter letter)
-		{
-			return null;
-		}
-
-	}
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="letter"></param>
+        /// <returns></returns>
+		public string ParseLetter(IDoctorsLetter letter) => letter.ToDoctorsLetter().Filepath;
+    }
 
 }
 

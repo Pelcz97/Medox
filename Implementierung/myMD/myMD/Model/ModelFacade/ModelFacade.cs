@@ -1,95 +1,76 @@
-using ModelInterface.ModelFacadeInterface;
+using myMD.ModelInterface.ModelFacadeInterface;
 using myMD.Model.DatabaseModel;
 using myMD.Model.EntityFactory;
 using myMD.Model.ParserModel;
 using myMD.Model.FileHelper;
 using myMD.Model.TransmissionModel;
-using ModelInterface.DataModelInterface;
+using myMD.ModelInterface.DataModelInterface;
 using System.Collections.Generic;
 using myMD.Model.DataModel;
 
 namespace myMD.Model.ModelFacade
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <see>ModelInterface.ModelFacadeInterface.IModelFacade</see>
 	public class ModelFacade : IModelFacade
 	{
-		private IEntityDatabase iEntityDatabase;
+        /// <summary>
+        /// 
+        /// </summary>
+		private IEntityDatabase database;
 
-		private IEntityFactory iEntityFactory;
+        /// <summary>
+        /// 
+        /// </summary>
+		private IEntityFactory factory;
 
-		private IParserFacade iParserFacade;
+        /// <summary>
+        /// 
+        /// </summary>
+		private IParserFacade parser;
 
-		private IFileHelper iFileHelper;
+        /// <summary>
+        /// 
+        /// </summary>
+		private IFileHelper fileHelper;
 
-		private IBluetooth iBluetooth;
+        /// <summary>
+        /// 
+        /// </summary>
+		private IBluetooth bluetooth;
 
+        /// <see>ModelInterface.ModelFacadeInterface.IModelFacade#CreateEmptyProfile()</see>
+        public IProfile CreateEmptyProfile() => factory.CreateEmptyProfile();
 
-		/// <see>Model.ModelFacadeInterface.IModelFacade#createEmptyProfile()</see>
-		public IProfile CreateEmptyProfile()
-		{
-			return null;
-		}
+        /// <see>ModelInterface.ModelFacadeInterface.IModelFacade#GetAllDoctorsLetters()</see>
+        public IList<IDoctorsLetter> GetAllDoctorsLetters() => database.GetAllDoctorsLetters();
 
+        /// <see>ModelInterface.ModelFacadeInterface.IModelFacade#GetAllMedications()</see>
+        public IList<IMedication> GetAllMedications() => database.GetAllMedications();
 
-		/// <see>Model.ModelFacadeInterface.IModelFacade#getAllDoctorsLetters()</see>
-		public IList<IDoctorsLetter> GetAllDoctorsLetters()
-		{
-			return null;
-		}
+        /// <see>ModelInterface.ModelFacadeInterface.IModelFacade#CreateEmptyMedication()</see>
+        public IMedication CreateEmptyMedication() => factory.CreateEmptyMedication();
 
+        /// <see>ModelInterface.ModelFacadeInterface.IModelFacade#getAllGroups()</see>
+        public IList<IDoctorsLetterGroup> GetAllGroups() => database.GetAllDoctorsLetterGroups();
 
-		/// <see>Model.ModelFacadeInterface.IModelFacade#getAllMedications()</see>
-		public IList<IMedication> GetAllMedications()
-		{
-			return null;
-		}
+        /// <see>ModelInterface.ModelFacadeInterface.IModelFacade#CreateEmptyGroup()</see>
+        public IDoctorsLetterGroup CreateEmptyGroup() => factory.CreateEmptyGroup();
 
+        /// <see>ModelInterface.ModelFacadeInterface.IModelFacade#SendLetter(Model.DataModelInterface.IDoctorsLetter)</see>
+        public void SendLetter(IDoctorsLetter letter) => bluetooth.send(parser.ParseLetterToOriginalFile(letter));
 
-		/// <see>Model.ModelFacadeInterface.IModelFacade#createEmptyMedication()</see>
-		public IMedication CreateEmptyMedication()
-		{
-			return null;
-		}
+        /// <see>ModelInterface.ModelFacadeInterface.IModelFacade#Update(Model.DataModelInterface.IEntity)</see>
+        public void Update(IEntity entity) => database.Update(entity);
 
+        /// <see>ModelInterface.ModelFacadeInterface.IModelFacade#Delete(Model.DataModelInterface.IEntity)</see>
+        public void Delete(IEntity entity) => database.Delete(entity);
 
-		/// <see>Model.ModelFacadeInterface.IModelFacade#getAllGroups()</see>
-		public IList<IDoctorsLetterGroup> GetAllGroups()
-		{
-			return null;
-		}
+        /// <see>ModelInterface.ModelFacadeInterface.IModelFacade#Activate(Model.DataModelInterface.IProfile)</see>
+        public void Activate(IProfile profile) => database.Activate(profile);
 
-
-		/// <see>Model.ModelFacadeInterface.IModelFacade#createEmptyGroup()</see>
-		public IDoctorsLetterGroup CreateEmptyGroup()
-		{
-			return null;
-		}
-
-
-		/// <see>Model.ModelFacadeInterface.IModelFacade#sendLetter(Model.DataModelInterface.IDoctorsLetter)</see>
-		public void SendLetter(IDoctorsLetter letter)
-		{
-
-		}
-
-        public void Update(IEntity entity)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Delete(IEntity entity)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Activate(IProfile profile)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Entity ToEntity()
-        {
-            throw new System.NotImplementedException();
-        }
     }
 
 }

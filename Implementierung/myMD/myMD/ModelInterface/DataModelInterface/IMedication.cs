@@ -1,7 +1,7 @@
 using System;
 using myMD.Model.DataModel;
 
-namespace ModelInterface.DataModelInterface
+namespace myMD.ModelInterface.DataModelInterface
 {
     /// <summary>
     /// Schnittstelle für die Abstraktion einer Medikation, die die IData Schnittstelle erweitert.

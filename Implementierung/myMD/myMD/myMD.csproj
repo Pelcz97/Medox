@@ -76,6 +76,8 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\DataModel\DoctorsLetterGroupDoctorsLetter.cs" />
+    <Compile Include="Model\ParserModel\Format.cs" />
+    <Compile Include="Model\ParserModel\FormatMethods.cs" />
     <Compile Include="myMDPage.xaml.cs">
       <DependentUpon>myMDPage.xaml</DependentUpon>
     </Compile>
@@ -104,7 +106,6 @@
     <Compile Include="Model\EntityObserver\IObservable.cs" />
     <Compile Include="Model\EntityObserver\IEntityObserver.cs" />
     <Compile Include="Model\EntityObserver\IProfileObserver.cs" />
-    <Compile Include="Model\FileHelper\FileHelper.cs" />
     <Compile Include="Model\FileHelper\IFileHelper.cs" />
     <Compile Include="Model\ModelFacade\ModelFacade.cs" />
     <Compile Include="ModelInterface\ModelFacadeInterface\IModelFacade.cs" />

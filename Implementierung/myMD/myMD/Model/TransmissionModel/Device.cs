@@ -1,4 +1,4 @@
-using ModelInterface.TransmissionModelInterface;
+using myMD.ModelInterface.TransmissionModelInterface;
 
 namespace myMD.Model.TransmissionModel
 {

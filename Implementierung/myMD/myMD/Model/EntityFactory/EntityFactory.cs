@@ -1,30 +1,94 @@
 using myMD.Model.DatabaseModel;
-using ModelInterface.DataModelInterface;
+using myMD.ModelInterface.DataModelInterface;
+using myMD.Model.DataModel;
+using System;
 
 namespace myMD.Model.EntityFactory
 {
+    /// <summary>
+    /// 
+    /// </summary>
 	public class EntityFactory : IEntityFactory
 	{
-		private EntityDatabase entityDatabase;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="database"></param>
+        EntityFactory(IEntityDatabase database)
+        {
+            db = database;
+        }
 
+        /// <summary>
+        /// 
+        /// </summary>
+		private IEntityDatabase db;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public IDoctorsLetter CreateEmptyDoctorsLetter()
         {
-            throw new System.NotImplementedException();
+            DoctorsLetter letter = new DoctorsLetter
+            {
+                Name = "",
+                Sensitivity = Sensitivity.Normal,
+            };
+            db.Insert(letter);
+            return letter;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public IDoctorsLetterGroup CreateEmptyGroup()
         {
-            throw new System.NotImplementedException();
+            DoctorsLetterGroup group = new DoctorsLetterGroup
+            {
+                Name = "",
+                Sensitivity = Sensitivity.Normal
+            };
+            db.Insert(group);
+            return group;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public IMedication CreateEmptyMedication()
         {
-            throw new System.NotImplementedException();
+            Medication med = new Medication
+            {
+                Name = "",
+                Sensitivity = Sensitivity.Normal,
+                Date = DateTime.Today,
+                EndDate = DateTime.Today.AddMonths(1),
+                Frequency = 1,
+                Interval = Interval.Day
+            };
+            db.Insert(med);
+            return med;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public IProfile CreateEmptyProfile()
         {
-            throw new System.NotImplementedException();
+            Profile profile = new Profile
+            {
+                Name = "",
+                LastName = "",
+                BirthDate = DateTime.Today,
+                InsuranceNumber = "",
+                BloodType = BloodType.ABMinus
+            };
+            db.Insert(profile);
+            return profile;
         }
     }
 
