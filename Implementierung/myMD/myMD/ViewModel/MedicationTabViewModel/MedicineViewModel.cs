@@ -42,9 +42,9 @@ namespace myMD.ViewModel.MedicationTabViewModel
                 this.Medication.Frequency = value; } }
         //public string MedicationDosis { get; set; }
 
-        public MedicineViewModel(IMedication Medication)
+        public MedicineViewModel(IMedication medication)
         {
-            this.Medication = Medication;
+            Medication = medication;
         }
 
         public MedicineViewModel()
