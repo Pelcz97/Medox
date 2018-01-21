@@ -8,35 +8,109 @@ using myMD.Model.DataModel;
 using myMD.View.MedicationTabPages;
 using Xamarin.Forms;
 using myMD.ModelInterface.ModelFacadeInterface;
+using System.Diagnostics;
+using System.ComponentModel;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
-    public class MedicationViewModel : OverallViewModel.OverallViewModel
+    public class MedicationViewModel : OverallViewModel.OverallViewModel, INotifyPropertyChanged
     {
-        public IList<MedicineViewModel> MedicationsList { get; }
-        public ICommand AddDummyMed { get; private set; }
-        private bool isVisible = true;
+        public ObservableCollection<MedicineViewModel> MedicationsList { get; }
 
-        public bool MedicationListIsVisible
+        private MedicineViewModel _ItemSelected;
+        public MedicineViewModel SelectedMedication
         {
             get
             {
-                return isVisible;
+                return _ItemSelected;
+            }
+            set
+            {
+                if (_ItemSelected != value)
+                {
+                    _ItemSelected = value;
+                    OnPropertyChanged("ItemSelected");
+                }
             }
         }
 
+        public ICommand AddDummyMed
+        {
+            get
+            {
+                return new Command(() => {
+                    Debug.WriteLine("möp");
+                    Reload();
+                });
+            }
+        }
+                
+
+        public ICommand DeleteListItem { 
+            get {
+                
+                return new Command((sender) =>
+                {
+                    Debug.WriteLine("Pls");
+                    DeleteListItemMethod((MedicineViewModel)sender);
+                });
+            }
+        }
+
+        public ICommand RefreshMedicationList {
+            get {
+                return new Command(() => {
+                    MedicationListIsRefreshing = true;
+                    Reload();
+                    MedicationListIsRefreshing = false;
+                });
+            }}
+
+        private bool _isRefreshing = false;
+        public bool MedicationListIsRefreshing
+        {
+            get { return _isRefreshing; }
+            set
+            {
+                _isRefreshing = value;
+                OnPropertyChanged(nameof(MedicationListIsRefreshing));
+            }
+        }
+
+        private bool isVisible = true;
+        public bool MedicationListIsVisible
+        { get { return isVisible; } }
+
         public MedicationViewModel()
         {
-            this.MedicationsList = (IList<MedicineViewModel>)ModelFacade.GetAllMedications();
+            this.MedicationsList = new ObservableCollection<MedicineViewModel>();
 
-            this.AddDummyMed = new Command((sender) =>
+            foreach (IMedication med in ModelFacade.GetAllMedications())
             {
-                
+                MedicationsList.Add(new MedicineViewModel(med));
+            }
+
+            MessagingCenter.Subscribe<DetailedMedicineViewModel>(this, "SavedMedication", sender => {
+                Reload();
             });
         }
 
 
+        public void DeleteListItemMethod(object sender)
+        {
+            var MedicationItem = ((MedicineViewModel)sender);
+            MedicationsList.Remove(MedicationItem);
+            //ModelFacade.Delete(MedicationItem.Medication);
+        }
 
+        public void Reload()
+        {
+            MedicationsList.Clear();
+            foreach (IMedication med in ModelFacade.GetAllMedications())
+            {
+                MedicationsList.Add(new MedicineViewModel(med));
+            }
+        }
 
 
     }

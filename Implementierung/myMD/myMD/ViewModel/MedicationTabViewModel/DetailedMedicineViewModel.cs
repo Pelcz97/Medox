@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using myMD.ModelInterface.DataModelInterface;
+using Xamarin.Forms;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
@@ -29,10 +30,21 @@ namespace myMD.ViewModel.MedicationTabViewModel
         public DetailedMedicineViewModel() : base()
         {
             Medication = ModelFacade.CreateEmptyMedication();
+
+            MessagingCenter.Subscribe<myMD.View.MedicationTabPages.MedicationPage, object>(this, "SelectedMedication", (sender, arg) => {
+                this.Medication = arg as IMedication;
+            });
         }
 
         public void cancelMedication(){
             ModelFacade.Delete(this.Medication);
+        }
+
+        public void saveNewMedication()
+        {
+            ModelFacade.Update(Medication);
+            MessagingCenter.Send(this, "SavedMedication");
+            MessagingCenter.Unsubscribe<DetailedMedicineViewModel>(this, "SavedMedication");
         }
     }
 }

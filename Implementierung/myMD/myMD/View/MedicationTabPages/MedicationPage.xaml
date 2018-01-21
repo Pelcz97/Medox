@@ -4,7 +4,8 @@
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
     x:Class="myMD.View.MedicationTabPages.MedicationPage"
     Title="Medikation" 
-    Icon="medsIcon.png">
+    Icon="medsIcon.png"
+    x:Name="MedicationPage">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="AddMedicationButton" 
@@ -23,15 +24,21 @@
             <ListView x:Name="MedicationList" 
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
-                ItemsSource="{Binding MedicationsList}"
+                ItemsSource="{Binding MedicationsList, Mode=TwoWay}"
+                IsPullToRefreshEnabled="True"
+                RefreshCommand="{Binding RefreshMedicationList}"
+                IsRefreshing="{Binding MedicationListIsRefreshing, Mode=TwoWay}"
                 IsVisible="{Binding MedicationListIsVisible}" 
-                SeparatorVisibility="None">
+                SeparatorVisibility="None"
+                ItemSelected="Handle_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.ContextActions>
                                  <MenuItem  Text="Löschen" 
-                                            IsDestructive="True"/>
+                                            IsDestructive="true"
+                                            Command="{Binding Path=BindingContext.DeleteListItem, Source={x:Reference Name=MedicationPage}}"
+                                            CommandParameter="{Binding .}"/>
                             </ViewCell.ContextActions>
                             <ViewCell.View>
                                 <Frame x:Name="Label" 
@@ -49,7 +56,7 @@
                                             <RowDefinition Height="17" />
                                         </Grid.RowDefinitions>
 
-                                            <Label Text="{Binding MedicationStartDate}" 
+                                            <Label Text="{Binding MedicationStartDate, StringFormat='{0:MMMM dd, yyyy}'}" 
                                             TextColor="#4A4A4A" 
                                             FontSize="Small" 
                                             FontAttributes="Bold" 
@@ -80,7 +87,7 @@
                                             HorizontalTextAlignment="Start" 
                                             Grid.Row="2" />
                                             
-                                            <Label Text="{Binding MedicationFrequency}" 
+                                            <Label Text="{Binding MedicationFrequency, StringFormat='{0:D} mal täglich'}" 
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 
