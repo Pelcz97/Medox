@@ -25,16 +25,30 @@ namespace myMD.ViewModel.MedicationTabViewModel
         {
             get => this.Medication.Date.Date;
             set { Debug.WriteLine("StartDate:" + value.Date); 
-                this.Medication.Date = value.Date; }
+                this.Medication.Date = value.Date;
+                MinEndDate = Medication.Date;
+                OnPropertyChanged("MinEndDate");
+            }
         }
 
         public DateTime MedicationEndDate { 
             get => this.Medication.EndDate; 
-            set { Debug.WriteLine("EndDate:" + value);
-                
-                    this.Medication.EndDate = value;
+            set { 
+                Debug.WriteLine("EndDate:" + value);
+                this.Medication.EndDate = value;
+                MaxStartDate = Medication.EndDate;
+                OnPropertyChanged("MaxStartDate");
                 }
             }
+
+        public DateTime MaxStartDate { get; set; }
+        public DateTime MinEndDate { get; set; }
+
+        public TimeSpan MedicationDuration { get { return MedicationDuration; } set
+            {
+                MedicationDuration = value;
+                Debug.WriteLine(MedicationDuration.Days);
+            }}
 
         public Interval MedicationInterval { 
             get => this.Medication.Interval; 
@@ -44,6 +58,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
             get => this.Medication.Frequency; 
             set { Debug.WriteLine("Frequency:" + value);
                 this.Medication.Frequency = value; } }
+
         //public string MedicationDosis { get; set; }
 
         public MedicineViewModel(IMedication medication)

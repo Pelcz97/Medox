@@ -38,9 +38,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
         {
             get
             {
-                return new Command(() => {
-                    Reload();
-                });
+                return new Command(Reload);
             }
         }
                 
@@ -74,10 +72,6 @@ namespace myMD.ViewModel.MedicationTabViewModel
                 OnPropertyChanged(nameof(MedicationListIsRefreshing));
             }
         }
-
-        private bool isVisible = true;
-        public bool MedicationListIsVisible
-        { get { return isVisible; } }
 
         public MedicationViewModel()
         {

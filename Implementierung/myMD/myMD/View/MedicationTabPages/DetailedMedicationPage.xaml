@@ -97,7 +97,8 @@
                             HorizontalOptions="EndAndExpand" 
                             VerticalOptions="Center" IsVisible="true" 
                             BackgroundColor="#191928" TextColor="White" 
-                            Margin="0,0,15,0" Date="{Binding MedicationStartDate}"/>
+                            Margin="0,0,15,0" Date="{Binding MedicationStartDate}"
+                            MaximumDate="{Binding MaxStartDate}"/>
 
                         </StackLayout>
                         </ViewCell>
@@ -112,7 +113,8 @@
                             HorizontalOptions="EndAndExpand" 
                             VerticalOptions="Center" IsVisible="true" 
                             BackgroundColor="#191928" TextColor="White"
-                            Margin="0,0,15,0" Date="{Binding MedicationEndDate}"/>
+                            Margin="0,0,15,0" Date="{Binding MedicationEndDate}"
+                            MinimumDate="{Binding MinEndDate}"/>
 
                         </StackLayout>
                         </ViewCell>
