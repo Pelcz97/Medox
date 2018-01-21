@@ -1,16 +1,16 @@
-using System;
 using myMD.Model.DataModel;
+using System;
 
 namespace myMD.ModelInterface.DataModelInterface
 {
     /// <summary>
     /// Schnittstelle für die Abstraktion einer Medikation, die die IData Schnittstelle erweitert.
-    /// Eine Medikation ist ein Stoff oder eine Stoffzusammensetzungen, die zur Heilung oder zur Verhütung menschlicher oder tierischer Krankheiten bestimmt ist 
+    /// Eine Medikation ist ein Stoff oder eine Stoffzusammensetzungen, die zur Heilung oder zur Verhütung menschlicher oder tierischer Krankheiten bestimmt ist
     /// oder sich dazu eignet physiologische Funktionen zu beeinflussen oder eine medizinische Diagnose zu ermöglichen.
     /// Sie kann von einem Arzt in einem Arztbrief verschrieben werden, für manche Medikationen wird dies jedoch nicht benötigt.
     /// </summary>
 	public interface IMedication : IData
-	{
+    {
         /// <summary>
         /// Das Datum an dem diese Medikation angefangen wurde
         /// </summary>
@@ -48,7 +48,10 @@ namespace myMD.ModelInterface.DataModelInterface
         /// <param name="letter">Der zu verbindende Arztbrief</param>
 		void AttachToLetter(IDoctorsLetter letter);
 
+        /// <summary>
+        /// Konvertiert die Schnittstelle zu ihrer Implementierung
+        /// </summary>
+        /// <returns>Konkrete Medikation</returns>
         Medication ToMedication();
-	}
+    }
 }
-

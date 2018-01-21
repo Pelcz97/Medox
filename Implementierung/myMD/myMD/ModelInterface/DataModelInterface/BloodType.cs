@@ -4,7 +4,7 @@ namespace myMD.ModelInterface.DataModelInterface
     /// Enumeration aller möglichen Blutgruppen
     /// </summary>
 	public enum BloodType
-	{   
+    {
         OMinus,
         OPlus,
         AMinus,
@@ -14,6 +14,4 @@ namespace myMD.ModelInterface.DataModelInterface
         ABMinus,
         ABPlus
     }
-
 }
-

@@ -12,8 +12,8 @@ namespace myMD.Model.DataModel
     /// Diese Klasse implementiert die IDoctorsLetter Schnittstelle und erweitert die abstrakte Data Klasse,
     /// um Arztbriefe in einer SQLite-Datenbank speichern zu können.
     /// </summary>
-    /// <see>ModelInterface.DataModelInterface.IDoctorsLetter</see>
-    /// <see>ModelInterface.DataModelInterface.Data</see>
+    /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter</see>
+    /// <see>myMD.Model.DataModelInterface.Data</see>
     public class DoctorsLetter : Data, IDoctorsLetter, IEquatable<DoctorsLetter>
     {
         /// <summary>
@@ -49,10 +49,10 @@ namespace myMD.Model.DataModel
         [OneToMany(CascadeOperations = CascadeOperation.CascadeRead)]
         public List<Medication> DatabaseMedication { get; set; }
 
-        /// <see>ModelInterface.DataModelInterface.IDoctorsLetter#Diagnosis()</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter#Diagnosis()</see>
         public string Diagnosis { get; set; }
 
-        /// <see>ModelInterface.DataModelInterface.IDoctorsLetter#Doctor()</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter#Doctor()</see>
         public IDoctor Doctor => DatabaseDoctor;
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace myMD.Model.DataModel
         /// </summary>
         public string Filepath { get; set; }
 
-        /// <see>ModelInterface.DataModelInterface.IDoctorsLetter#Groups()</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter#Groups()</see>
         public IList<IDoctorsLetterGroup> Groups
         {
             get
@@ -81,7 +81,7 @@ namespace myMD.Model.DataModel
             }
         }
 
-        /// <see>ModelInterface.DataModelInterface.IDoctorsLetter#Medication()</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter#Medication()</see>
         public IList<IMedication> Medication
         {
             get
@@ -98,7 +98,7 @@ namespace myMD.Model.DataModel
         /// <summary>
         /// Überladung für konkrete Arztbriefgruppen.
         /// </summary>
-        /// <see>Model.DataModel.DoctorsLetter#AddToGroup(ModelInterface.DataModelInterface.IDoctorsLetterGroup)</see>
+        /// <see>myMD.Model.DataModel.DoctorsLetter#AddToGroup(ModelInterface.DataModelInterface.IDoctorsLetterGroup)</see>
         public void AddToGroup(DoctorsLetterGroup group)
         {
             if (!DatabaseGroups.Contains(group))
@@ -108,13 +108,13 @@ namespace myMD.Model.DataModel
             }
         }
 
-        /// <see>ModelInterface.DataModelInterface.IDoctorsLetter#AddToGroup(ModelInterface.DataModelInterface.IDoctorsLetterGroup)</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter#AddToGroup(ModelInterface.DataModelInterface.IDoctorsLetterGroup)</see>
         public void AddToGroup(IDoctorsLetterGroup group) => AddToGroup(group.ToDoctorsLetterGroup());
 
         /// <summary>
         /// Überladung für konkrete Medikationen.
         /// </summary>
-        /// <see>Model.DataModel.DoctorsLetter#AttachMedication(ModelInterface.DataModelInterface.IMedication)</see>
+        /// <see>myMD.Model.DataModel.DoctorsLetter#AttachMedication(ModelInterface.DataModelInterface.IMedication)</see>
         public void AttachMedication(Medication med)
         {
             if (!DatabaseMedication.Contains(med))
@@ -124,13 +124,13 @@ namespace myMD.Model.DataModel
             }
         }
 
-        /// <see>ModelInterface.DataModelInterface.IDoctorsLetter#AttachMedication(ModelInterface.DataModelInterface.IMedication)</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter#AttachMedication(ModelInterface.DataModelInterface.IMedication)</see>
         public void AttachMedication(IMedication med) => AttachMedication(med.ToMedication());
 
         /// <summary>
         /// Löst alle der Klasse bekannten Assoziatonen auf und löscht die Datei aus der dieser Arztbrief stammt.
         /// </summary>
-        /// <see>Model.DataModel.Entity#Delete()</see>
+        /// <see>myMD.Model.DataModel.Entity#Delete()</see>
         public override void Delete()
         {
             while (DatabaseMedication.Any())
@@ -147,7 +147,7 @@ namespace myMD.Model.DataModel
         /// <summary>
         /// Überladung für konkrete Medikationen.
         /// </summary>
-        /// <see>Model.DataModel.DoctorsLetter#DisattachMedication(ModelInterface.DataModelInterface.IMedication)</see>
+        /// <see>myMD.Model.DataModel.DoctorsLetter#DisattachMedication(ModelInterface.DataModelInterface.IMedication)</see>
         public void DisattachMedication(Medication med)
         {
             if (DatabaseMedication.Contains(med))
@@ -187,7 +187,7 @@ namespace myMD.Model.DataModel
         /// <summary>
         /// Überladung für konkrete Arztbriefgruppen.
         /// </summary>
-        /// <see>Model.DataModel.DoctorsLetter#RemoveFromGroup(ModelInterface.DataModelInterface.IDoctorsLetterGroup)</see>
+        /// <see>myMD.Model.DataModel.DoctorsLetter#RemoveFromGroup(ModelInterface.DataModelInterface.IDoctorsLetterGroup)</see>
         public void RemoveFromGroup(DoctorsLetterGroup group)
         {
             if (DatabaseGroups.Contains(group))
@@ -197,16 +197,16 @@ namespace myMD.Model.DataModel
             }
         }
 
-        /// <see>ModelInterface.DataModelInterface.IDoctorsLetter#RemoveFromGroup(Model.DataModelInterface.IDoctorsLetterGroup)</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter#RemoveFromGroup(Model.DataModelInterface.IDoctorsLetterGroup)</see>
         public void RemoveFromGroup(IDoctorsLetterGroup group) => RemoveFromGroup(group.ToDoctorsLetterGroup());
 
-        /// <see>ModelInterface.DataModelInterface.IDoctorsLetter#RemoveMedication(Model.DataModelInterface.IMedication)</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter#RemoveMedication(Model.DataModelInterface.IMedication)</see>
         public void RemoveMedication(IMedication med) => RemoveMedication(med.ToMedication());
         
         /// <summary>
         /// Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig.
         /// </summary>
-        /// <see>ModelInterface.DataModelInterface.IDoctorsLetter#ToDoctorsLetter()</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter#ToDoctorsLetter()</see>
         public DoctorsLetter ToDoctorsLetter() => this;
     }
 }

@@ -8,7 +8,7 @@ namespace myMD.ModelInterface.DataModelInterface
     /// Ein Nutzerprofils enthält diverse Informationen über einen Nutzer.
     /// </summary>
 	public interface IProfile : IEntity
-	{
+    {
         /// <summary>
         /// Die Versicherungsnummer dieses Profils.
         /// </summary>
@@ -29,8 +29,10 @@ namespace myMD.ModelInterface.DataModelInterface
         /// </summary>
         DateTime BirthDate { get; set; }
 
+        /// <summary>
+        /// Konvertiert die Schnittstelle zu ihrer Implementierung
+        /// </summary>
+        /// <returns>Konkretes Profil</returns>
         Profile ToProfile();
-	}
-
+    }
 }
-

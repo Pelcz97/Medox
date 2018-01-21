@@ -12,7 +12,7 @@ namespace myMD.Model.DataModel
     /// unter Verwendung der SQLite-Net-Extensions Library, sein sollen und ist daher abstrakt.
     /// Diese Klassen sollten Entity erweitern.
     /// </summary>
-    /// <see>ModelInterface.DataModelInterface.IEntity</see>
+    /// <see>myMD.ModelInterface.DataModelInterface.IEntity</see>
 	public abstract class Entity : IEntity, IEquatable<Entity>
     {
         /// <summary>
@@ -22,7 +22,7 @@ namespace myMD.Model.DataModel
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
 
-        /// <see>ModelInterface.DataModelInterface.IEntity#Name</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IEntity#Name</see>
         public string Name { get; set; }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace myMD.Model.DataModel
         /// <summary>
         /// Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig.
         /// </summary>
-        /// <see>ModelInterface.DataModelInterface.IEntity#ToEntity()</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IEntity#ToEntity()</see>
         public Entity ToEntity() => this;
     }
 }

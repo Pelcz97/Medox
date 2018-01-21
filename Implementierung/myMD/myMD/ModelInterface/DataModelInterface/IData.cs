@@ -7,7 +7,7 @@ namespace myMD.ModelInterface.DataModelInterface
     /// Daten sind hier eine Ansammlung von medizinischen Informationen.
     /// </summary>
 	public interface IData : IEntity
-	{
+    {
         /// <summary>
         /// Der Zeitpunkt, von dem die Daten stammen.
         /// </summary>
@@ -18,6 +18,4 @@ namespace myMD.ModelInterface.DataModelInterface
         /// </summary>
 		Sensitivity Sensitivity { get; set; }
     }
-
 }
-

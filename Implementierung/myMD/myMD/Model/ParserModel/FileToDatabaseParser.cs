@@ -1,27 +1,30 @@
 using myMD.Model.DatabaseModel;
 using myMD.Model.DataModel;
-using myMD.ModelInterface.DataModelInterface;
 using System;
 using System.Collections.Generic;
 
 namespace myMD.Model.ParserModel
 {
     /// <summary>
-    /// 
+    /// Abstrakte Klasse zum Parsen von Dateien in eine Datenbank.
+    /// Sollte dateiformatspezifisch erweitert werden.
     /// </summary>
 	public abstract class FileToDatabaseParser
-	{
+    {
         /// <summary>
-        /// 
+        /// Fügt Informationen aus der Datei in die Datenbank ein.
         /// </summary>
-        /// <param name="filename"></param>
-        /// <param name="db"></param>
+        /// <param name="filename">Die zu parsende Datei</param>
+        /// <param name="db">Die Datenbank in die die geparsten Informationen eingetragen werden</param>
+        /// <exception cref="InvalidOperationException">Werfe, wenn kein passendes Profil für die Datei gefunden wurde</exception>
 		public void ParseFile(string filename, IEntityDatabase db)
-		{
+        {
+            //Werfe Ausnahme falls kein passendes Profil existiert
             Profile profile = db.GetProfile(ParseProfile(filename)).ToProfile() ?? throw new InvalidOperationException("No matching Profile found");
             Doctor eqDoc = ParseDoctor(filename);
             Doctor doc = db.GetDoctor(eqDoc).ToDoctor();
-            if(doc == null)
+            //Füge neuen Arzt in die Datenbank ein, falls dieser dort noch nicht existiert
+            if (doc == null)
             {
                 doc = eqDoc;
                 db.Insert(doc);
@@ -29,10 +32,11 @@ namespace myMD.Model.ParserModel
             IList<Medication> meds = ParseMedications(filename);
             DoctorsLetter letter = ParseLetter(filename);
             db.Insert(letter);
+            //Erstelle Beziehungen zwischen den geparsten Entitäten
             letter.Profile = profile;
             letter.DatabaseDoctor = doc;
             foreach (Medication med in meds)
-            {              
+            {
                 db.Insert(med);
                 letter.AttachMedication(med);
             }
@@ -40,34 +44,31 @@ namespace myMD.Model.ParserModel
         }
 
         /// <summary>
-        /// 
+        /// Erstelle einen Arztbrief mit den Informationen aus der Datei.
         /// </summary>
-        /// <param name="filename"></param>
-        /// <returns></returns>
+        /// <param name="filename">Die zu parsende Datei</param>
+        /// <returns>Den erstellten Arztbrief</returns>
 		protected abstract DoctorsLetter ParseLetter(string filename);
 
         /// <summary>
-        /// 
+        /// Erstelle die in der Datei spezifizierten Medikationen.
         /// </summary>
-        /// <param name="filename"></param>
-        /// <returns></returns>
+        /// <param name="filename">Die zu parsende Datei</param>
+        /// <returns>Liste der erstellten Medikationen</returns>
 		protected abstract IList<Medication> ParseMedications(string filename);
 
         /// <summary>
-        /// 
+        /// Erstelle den in der Datei spezifizierten Arzt.
         /// </summary>
-        /// <param name="filename"></param>
-        /// <returns></returns>
+        /// <param name="filename">Die zu parsende Datei</param>
+        /// <returns>Den erstellten Arzt</returns>
 		protected abstract Doctor ParseDoctor(string filename);
 
         /// <summary>
-        /// 
+        /// Erstelle das in der Datei spezifizierten Profil.
         /// </summary>
-        /// <param name="filename"></param>
-        /// <returns></returns>
+        /// <param name="filename">Die zu parsende Datei</param>
+        /// <returns>Das erstellte Profil</returns>
 		protected abstract Profile ParseProfile(string filename);
-
-	}
-
+    }
 }
-

@@ -1,78 +1,66 @@
 using myMD.Model.DataModel;
 using myMD.Model.FileHelper;
-using System.Collections.Generic;
 using myMD.ModelInterface.DataModelInterface;
 using SQLite;
 using SQLiteNetExtensions.Extensions;
+using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
 
 namespace myMD.Model.DatabaseModel
 {
     /// <summary>
-    /// 
+    /// Implementierung der IEntityDatabase Schnittstelle als Adapter zu einer SQLite Datenbank.
     /// </summary>
+    /// <see>myMD.Model.DatabaseModel.IEntityDatabase</see>
 	public class EntityDatabase : IEntityDatabase
-	{
+    {
         /// <summary>
-        /// 
+        /// Konstruktor mit automatisch nach Plattform ausgewähltem Dateihelfer.
         /// </summary>
-        public EntityDatabase()
-        {
-            fileHelper = DependencyService.Get<IFileHelper>();
-            db = new SQLiteConnection(fileHelper.GetLocalFilePath(FILE));
-            Destroy();
-            Create();
-            profile = db.Find<Profile>(v => true);
-        }
+        /// <see>myMD.Model.DatabaseModel.EntityDatabase#EntityDatabase(myMD.Model.FileHelper.IFileHelper)</see>
+        public EntityDatabase() : this(DependencyService.Get<IFileHelper>()) { }
 
         /// <summary>
-        /// 
+        /// Erstellt die Datenbank, falls sie noch nicht existiert, verbinet sich mit ihr und setzt das aktive Profil auf das erste Profil in der Datenbank.
         /// </summary>
-        /// <param name="helper"></param>
+        /// <param name="helper">Der Dateihelfer der verwendet werden soll um auf die Datenbankdatei zuzugreifen</param>
         public EntityDatabase(IFileHelper helper)
         {
-            this.fileHelper = helper;
-            db = new SQLiteConnection(fileHelper.GetLocalFilePath(FILE));
+            db = new SQLiteConnection(helper.GetLocalFilePath(FILE));
             Create();
             profile = db.Find<Profile>(v => true);
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
+        /// <see>myMD.Model.DatabaseModel.IEntityDatabase</see>
         private static readonly string FILE = "database.db3";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
+        /// <see>myMD.Model.DatabaseModel.IEntityDatabase</see>
         private SQLiteConnection db;
 
         /// <summary>
-        /// 
+        /// Das zur Zeit aktive Profil.
         /// </summary>
         private Profile profile;
 
-        /// <summary>
-        /// 
-        /// </summary>
-		private IFileHelper fileHelper;
-
-
-        /// <see>Model.EntityObserver.IEntityObserver#OnUpdate(Model.DataModel.Entity)</see>
+        /// <see>myMD.Model.DatabaseModel.IEntityDatabase#Update(ModelInterface.DataModelInterface.IEntity)</see>
         public void Update(IEntity entity) => db.UpdateWithChildren(entity.ToEntity());
 
-
-        /// <see>Model.EntityObserver.IEntityObserver#OnDeletion(Model.DataModel.Entity)</see>
+        /// <see>myMD.Model.DatabaseModel.IEntityDatabase#Delete(ModelInterface.DataModelInterface.IEntity)</see>
         public void Delete(IEntity entity)
         {
             Entity e = entity.ToEntity();
             e.Delete();
             db.Delete(e);
         }
- 
 
-        /// <see>Model.DatabaseModel.IEntityDatabase#Insert(Model.DataModel.Entity)</see>
+        /// <see>myMD.Model.DatabaseModel.IEntityDatabase#Insert(ModelInterface.DataModelInterface.IEntity)</see>
         public void Insert(IEntity entity)
         {
             Entity e = entity.ToEntity();
@@ -80,51 +68,45 @@ namespace myMD.Model.DatabaseModel
             db.Insert(e);
         }
 
-
-        /// <see>Model.DatabaseModel.IEntityDatabase#GetAllDataFromProfile<T>()</see>
+        /// <summary>
+        /// Holt alle E des zur Zeit aktiven Profils aus der Datenbank.
+        /// </summary>
+        /// <typeparam name="E">Der Typ Entität der aus der Datenbank geholt werden soll</typeparam>
+        /// <returns>Liste aller E des aktiven Profils</returns>
         public IList<E> GetAllDataFromProfile<E>() where E : Entity, new()
-		{
+        {
             return db.GetAllWithChildren<E>(e => e.ProfileID == profile.ID, true);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+        /// <see>myMD.Model.DatabaseModel.IEntityDatabase#GetAllDoctorsLetters()</see>
         public IList<IDoctorsLetter> GetAllDoctorsLetters()
         {
             return GetAllDataFromProfile<DoctorsLetter>().Cast<IDoctorsLetter>().ToList();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+        /// <see>myMD.Model.DatabaseModel.IEntityDatabase#GetAllDoctorsLetterGroups()</see>
         public IList<IDoctorsLetterGroup> GetAllDoctorsLetterGroups()
         {
             return GetAllDataFromProfile<DoctorsLetterGroup>().Cast<IDoctorsLetterGroup>().ToList();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+        /// <see>myMD.Model.DatabaseModel.IEntityDatabase#GetAllMedications()</see>
         public IList<IMedication> GetAllMedications()
         {
             return GetAllDataFromProfile<Medication>().Cast<IMedication>().ToList();
         }
 
-        /// <see>Model.DatabaseModel.IEntityDatabase#GetAllProfiles()</see>
+        /// <see>myMD.Model.DatabaseModel.IEntityDatabase#GetAllProfiles()</see>
         public IList<IProfile> GetAllProfiles()
-		{
+        {
             return db.GetAllWithChildren<Profile>().Cast<IProfile>().ToList();
         }
 
-        /// <see>Model.EntityObserver.IProfileObserver#OnActivation(Model.DataModel.Profile)</see>
+        /// <see>myMD.Model.DatabaseModel.IEntityDatabase#Activate(myMD.ModelInterface.DataModelInterface.IProfile)</see>
         public void Activate(IProfile profile) => this.profile = profile.ToProfile();
 
         /// <summary>
-        /// 
+        /// Zerstört alle Datenbanktabellen.
         /// </summary>
         public void Destroy()
         {
@@ -137,7 +119,7 @@ namespace myMD.Model.DatabaseModel
         }
 
         /// <summary>
-        /// 
+        /// Erstellt die nötigen Datenbanktabellen.
         /// </summary>
         public void Create()
         {
@@ -150,19 +132,15 @@ namespace myMD.Model.DatabaseModel
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
-        /// <param name="number"></param>
-        /// <returns></returns>
+        /// <see>myMD.Model.DatabaseModel.IEntityDatabase#GetProfile(myMD.ModelInterface.DataModelInterface.IProfile)</see>
         public IProfile GetProfile(IProfile profile) => db.Get<Profile>(v => v.InsuranceNumber.Equals(profile.InsuranceNumber));
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
+        /// <see>myMD.Model.DatabaseModel.IEntityDatabase#GetDoctor(myMD.ModelInterface.DataModelInterface.IDoctor)</see>
         public IDoctor GetDoctor(IDoctor doctor) => db.Get<Doctor>(v => v.Name.Equals(doctor.Name));
     }
-
 }
-
