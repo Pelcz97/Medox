@@ -21,7 +21,6 @@ namespace myMD.Model.DataModel
         public Profile()
         {
             Profile = this;
-            ProfileID = ID;
         }
 
         /// <see>ModelInterface.DataModelInterface.IProfile#InsuranceNumber</see>

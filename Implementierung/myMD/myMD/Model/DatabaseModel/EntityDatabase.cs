@@ -21,6 +21,7 @@ namespace myMD.Model.DatabaseModel
         {
             fileHelper = DependencyService.Get<IFileHelper>();
             db = new SQLiteConnection(fileHelper.GetLocalFilePath(FILE));
+            Destroy();
             Create();
             profile = db.Find<Profile>(v => true);
         }

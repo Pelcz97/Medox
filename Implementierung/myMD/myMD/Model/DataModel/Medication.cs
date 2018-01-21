@@ -72,7 +72,7 @@ namespace myMD.Model.DataModel
         /// <see>Model.DataModel.DoctorsLetter#DisattachFromLetter(ModelInterface.DataModelInterface.IDoctorsLetter)</see>
         public void DisattachFromLetter(DoctorsLetter letter)
         {
-            if (this.DatabaseDoctorsLetter == letter)
+            if (this.DatabaseDoctorsLetter == letter && letter != null)
             {
                 this.DatabaseDoctorsLetter = null;
                 letter.DisattachMedication(this);

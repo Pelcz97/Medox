@@ -169,7 +169,7 @@
       <HintPath>..\packages\SQLiteNetExtensions.2.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\SQLiteNetExtensions.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.provider.e_sqlite3">
-      <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.net45.1.1.5\lib\net45\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.net45.1.1.9\lib\net45\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core">
       <HintPath>..\packages\Xamarin.Forms.2.5.0.122203\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Core.dll</HintPath>
@@ -218,7 +218,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

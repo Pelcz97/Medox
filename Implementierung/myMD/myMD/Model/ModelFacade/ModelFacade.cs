@@ -56,7 +56,12 @@ namespace myMD.Model.ModelFacade
 		private IBluetooth bluetooth;
 
         /// <see>ModelInterface.ModelFacadeInterface.IModelFacade#CreateEmptyProfile()</see>
-        public IProfile CreateEmptyProfile() => factory.CreateEmptyProfile();
+        public IProfile CreateEmptyProfile()
+        {
+            IProfile profile = factory.CreateEmptyProfile();
+            Activate(profile);
+            return profile;
+        }
 
         /// <see>ModelInterface.ModelFacadeInterface.IModelFacade#GetAllDoctorsLetters()</see>
         public IList<IDoctorsLetter> GetAllDoctorsLetters() => database.GetAllDoctorsLetters();
