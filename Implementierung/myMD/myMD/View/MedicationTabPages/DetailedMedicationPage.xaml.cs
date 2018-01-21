@@ -29,6 +29,7 @@ namespace myMD.View.MedicationTabPages
 
         async void SaveMedication_Clicked(object sender, System.EventArgs e)
         {
+            vm.saveNewMedication();
             await Navigation.PopModalAsync();
         }
 

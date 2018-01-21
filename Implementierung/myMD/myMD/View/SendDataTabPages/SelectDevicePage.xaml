@@ -16,7 +16,8 @@
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding DeviceList}"
-                SeparatorVisibility="Default">
+                SeparatorVisibility="Default"
+                IsPullToRefreshEnabled="true">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

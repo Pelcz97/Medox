@@ -8,11 +8,15 @@ namespace myMD.View.MedicationTabPages
 {
     public partial class MedicationPage : CustomContentPage
     {
+        MedicationViewModel vm;
+
         public MedicationPage()
         {
             InitializeComponent();
-            this.BindingContext = new MedicationViewModel();
+            vm = new MedicationViewModel();
+            this.BindingContext = vm;
         }
+
         public async void Handle_Clicked(object sender, System.EventArgs e)
         {
             var view = new NavigationPage(new DetailedMedicationPage());
@@ -20,6 +24,12 @@ namespace myMD.View.MedicationTabPages
             view.BarTextColor = Color.White;
 
             await Navigation.PushModalAsync(view);
+        }
+
+        void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        {
+            //MessagingCenter.Send<MedicationPage, object>(this, "SelectedMedication", e.SelectedItem);
+            //MessagingCenter.Unsubscribe<MedicationPage, object>(this, "SelectedMedication");
         }
     }
 }
