@@ -1,33 +1,23 @@
-﻿using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
-using myMD.View.OverviewTabPages;
-using myMD.View.MedicationTabPages;
-using myMD.View.SendDataTabPages;
-using myMD.View.ProfileTabPages;
-using Autofac;
-using Autofac.Core;
-using myMD.ViewModel.OverallViewModel;
-using myMD.Model.ModelFacade;
-using myMD.ModelInterface.ModelFacadeInterface;
-using myMD.Model.TransmissionModel;
-using myMD.Model.DatabaseModel;
-using myMD.Model.ParserModel;
+﻿using myMD.Model.DatabaseModel;
 using myMD.Model.EntityFactory;
+using myMD.Model.ModelFacade;
+using myMD.Model.ParserModel;
+using myMD.Model.TransmissionModel;
+using myMD.ModelInterface.ModelFacadeInterface;
+using myMD.View.MedicationTabPages;
+using myMD.View.OverviewTabPages;
+using myMD.View.ProfileTabPages;
+using myMD.View.SendDataTabPages;
+using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace myMD
 {
     public partial class App : Application
     {
-        /// <summary>
-        /// IoC Container für Dependency Injection im Model
-        /// </summary>
-        private static IContainer container;
-
         public App()
         {
-            PrepareContainer();
             InitializeComponent();
-
             var OverviewPage = new Xamarin.Forms.NavigationPage(new OverviewPage());
             var MedicationPage = new Xamarin.Forms.NavigationPage(new MedicationPage());
             var SendDataPage = new Xamarin.Forms.NavigationPage(new SendDataPage());
@@ -37,7 +27,7 @@ namespace myMD
             OverviewPage.SetValue(Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty, Color.White);
             OverviewPage.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             OverviewPage.BarTextColor = Color.FromHex("FFFFFF");
-             
+
             //MedicationPage.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersLargeTitles(true);
             MedicationPage.SetValue(Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty, Color.White);
             MedicationPage.BarBackgroundColor = Color.FromRgb(25, 25, 40);
@@ -67,13 +57,18 @@ namespace myMD
             tabs.Children[1].Title = "Medikation";
             tabs.Children[2].Title = "Senden";
             tabs.Children[3].Title = "Profil";
-             
+
             MainPage = tabs;
         }
 
-        protected override void OnStart()
+        /// <summary>
+        /// Model Einzelstück.
+        /// </summary>
+        public static IModelFacade Model { get; } = CreateModel();
+
+        protected override void OnResume()
         {
-            // Handle when your app starts
+            // Handle when your app resumes
         }
 
         protected override void OnSleep()
@@ -81,33 +76,18 @@ namespace myMD
             // Handle when your app sleeps
         }
 
-        protected override void OnResume()
+        protected override void OnStart()
         {
-            // Handle when your app resumes
+            // Handle when your app starts
         }
 
         /// <summary>
-        /// Registriere Abhängigkeiten des Models und baue den Container
+        /// Erstellt neues Model. Wird einmalig zum Initialisieren der Model Property aufgerufen.
         /// </summary>
-        private static void PrepareContainer()
+        /// <returns>Neue Instanz des Models</returns>
+        private static IModelFacade CreateModel()
         {
-            var containerBuilder = new ContainerBuilder();
-            containerBuilder.RegisterType<ModelFacade>().As<IModelFacade>().SingleInstance();
-            containerBuilder.RegisterType<Bluetooth>().As<IBluetooth>().SingleInstance();
-            containerBuilder.RegisterType<EntityDatabase>().As<IEntityDatabase>().SingleInstance();
-            containerBuilder.RegisterType<EntityFactory>().As<IEntityFactory>().SingleInstance();
-            containerBuilder.RegisterType<ParserFacade>().As<IParserFacade>().SingleInstance();
-            container = containerBuilder.Build();
+            return new ModelFacade(new EntityDatabase(), new EntityFactory(), new ParserFacade(), new Bluetooth());
         }
-
-        /// <summary>
-        /// Löse Abhängigkeiten im Model auf
-        /// </summary>
-        /// <returns>Instanz des Models</returns>
-        public static IModelFacade GetModel()
-        {
-            return container.Resolve<IModelFacade>();
-        }
-
     }
 }
