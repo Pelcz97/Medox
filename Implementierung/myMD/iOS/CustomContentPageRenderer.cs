@@ -57,7 +57,7 @@ namespace myMD.iOS
             }
             navigationItem.SetLeftBarButtonItems(LeftNavList.ToArray(), false);
             navigationItem.SetRightBarButtonItems(RightNavList.ToArray(), false);
+            
         }
-
     }
 }

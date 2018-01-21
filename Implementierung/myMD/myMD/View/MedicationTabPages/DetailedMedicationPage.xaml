@@ -10,7 +10,8 @@
         <ToolbarItem Name="CancelButton" Text="Abbrechen" 
         Order="Primary" Priority="-1" Clicked="CancelButton_Clicked"/>
         <ToolbarItem Name="SaveMedicationButton" Text="Fertig" 
-        Order="Primary" Priority="1" Clicked="SaveMedication_Clicked"/>
+                    Order="Primary" Priority="1" Clicked="SaveMedication_Clicked" 
+                    IsEnabled="{Binding SavingPossible}"/>
     </ContentPage.ToolbarItems>
     
      <ContentPage.Content>
@@ -18,13 +19,21 @@
                 <TableRoot>
                     <TableSection Title="Information">
                         
-                    <ViewCell >
-                            <StackLayout Orientation="Horizontal">
+                    <ViewCell>
+                            <Grid HorizontalOptions="StartAndExpand"
+                                VerticalOptions="Center">
+
+                                <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="Auto"/>
+                                     <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                            
                                 <Label Text="Bezeichnung"
                                         TextColor="White" 
                                         HorizontalTextAlignment="Start" 
                                         VerticalTextAlignment="Center"
-                                        Margin="15,0,0,0"/>
+                                        Margin="15,0,0,0" 
+                                        Grid.Column="0"/>
                             
                                 <Entry HorizontalOptions="EndAndExpand" 
                                         VerticalOptions="Center" 
@@ -32,9 +41,12 @@
                                         BackgroundColor="#191928"
                                         Placeholder="Name des Medikaments"
                                         PlaceholderColor="Gray"
+                                        WidthRequest="200"
                                         TextColor="White"
-                                        FontSize="17" Text="{Binding MedicationName}" />
-                        </StackLayout>
+                                        FontSize="17" 
+                                        Text="{Binding MedicationName}" 
+                                        Grid.Column="1"/>
+                            </Grid>
 
                     </ViewCell>
                     <ViewCell >
@@ -68,8 +80,8 @@
                                         Margin="15,0,0,0"/>
 
                                 <Switch HorizontalOptions="EndAndExpand" 
-                                        VerticalOptions="Center" 
-                                        Margin="0,0,15,0" IsToggled="{Binding OneTimeMedication_Switch, Mode=TwoWay}" 
+                                        VerticalOptions="Center"
+                                        Margin="0,0,15,0"
                                         BackgroundColor="#191928"/>
                         </StackLayout>
 

@@ -10,11 +10,15 @@ namespace myMD.ViewModel.MedicationTabViewModel
     {
 
         public IMedication Medication { get; set; }
+        public bool SavingPossible { get; set; }
 
         public string MedicationName { 
             get => this.Medication.Name; 
-            set { Debug.WriteLine("Name:" + value); 
-                this.Medication.Name = value; } 
+            set { Debug.WriteLine("Name:" + value);
+                
+                this.Medication.Name = value; 
+                SavingPossible = (this.Medication.Name.Length != 0);
+                OnPropertyChanged("SavingPossible");} 
         }
         
         public DateTime MedicationStartDate

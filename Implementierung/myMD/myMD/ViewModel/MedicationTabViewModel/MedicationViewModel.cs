@@ -39,7 +39,6 @@ namespace myMD.ViewModel.MedicationTabViewModel
             get
             {
                 return new Command(() => {
-                    Debug.WriteLine("möp");
                     Reload();
                 });
             }
@@ -51,7 +50,6 @@ namespace myMD.ViewModel.MedicationTabViewModel
                 
                 return new Command((sender) =>
                 {
-                    Debug.WriteLine("Pls");
                     DeleteListItemMethod((MedicineViewModel)sender);
                 });
             }

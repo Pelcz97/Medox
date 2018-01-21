@@ -12,11 +12,6 @@
             Text="Hinzufügen" 
             Order="Primary" 
             Clicked="Handle_Clicked" />
-        <ToolbarItem Name="AddDummyItem" 
-            Text="Add Dummy" 
-            Order="Primary" 
-            Command="{Binding AddDummyMed}"
-            Priority="-1"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
@@ -51,9 +46,9 @@
                                     WidthRequest="400">
                                     <Grid>
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="17" />
-                                            <RowDefinition Height="40" />
-                                            <RowDefinition Height="17" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
 
                                             <Label Text="{Binding MedicationStartDate, StringFormat='{0:MMMM dd, yyyy}'}" 
