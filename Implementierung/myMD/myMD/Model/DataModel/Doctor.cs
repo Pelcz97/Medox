@@ -8,11 +8,11 @@ namespace myMD.Model.DataModel
     /// Diese Klasse implementiert die IDoctor Schnittstelle und erweitert die abstrakte Enitity Klasse,
     /// um Information über einen Arzt in einer SQLite-Datenbank speichern zu können
     /// </summary>
-    /// <see>ModelInterface.DataModelInterface.IDoctor</see>
-    /// <see>Model.DataModel.Entity</see>
+    /// <see>myMD.ModelInterface.DataModelInterface.IDoctor</see>
+    /// <see>myMD.Model.DataModel.Entity</see>
     public class Doctor : Entity, IDoctor, IEquatable<Doctor>
     {
-        /// <see>ModelInterface.DataModelInterface.IDoctor#Field</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IDoctor#Field</see>
         public string Field { get; set; }
 
         /// <summary>

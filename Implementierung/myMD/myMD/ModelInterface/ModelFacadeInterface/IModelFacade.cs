@@ -1,18 +1,17 @@
 using myMD.ModelInterface.DataModelInterface;
 using System.Collections.Generic;
-using myMD.Model.DataModel;
 
 namespace myMD.ModelInterface.ModelFacadeInterface
 {
     /// <summary>
-    /// Dies ist die Haupteinstiegsstelle für andere Subsysteme in das Model. 
+    /// Dies ist die Haupteinstiegsstelle für andere Subsysteme in das Model.
     /// Als Ein- und Ausgabeparameter werden die restlichen Schnittstellen aus ModelInterface verwendet.
     /// Alle komplexeren Operationen, die nicht schon von diesen Schnittstellen übernommen werden, sind hier enthalten.
     /// </summary>
 	public interface IModelFacade
-	{
+    {
         /// <summary>
-        /// Legt ein neues Profil an, das noch keine Informationen und Daten enthält und gibt dieses zurück. 
+        /// Legt ein neues Profil an, das noch keine Informationen und Daten enthält und gibt dieses zurück.
         /// Wechselt außerdem das aktive Profil zu diesem Profil.
         /// </summary>
         /// <returns>Das neu erstellte Profil</returns>
@@ -48,10 +47,22 @@ namespace myMD.ModelInterface.ModelFacadeInterface
         /// <returns>Die neu erstellte, leere Arztbriefgruppe</returns>
 		IDoctorsLetterGroup CreateEmptyGroup();
 
+        /// <summary>
+        /// Aktualisiert die gegebene Entität.
+        /// </summary>
+        /// <param name="entity">Die zu aktualisierende Entität</param>
         void Update(IEntity entity);
 
+        /// <summary>
+        /// Löscht die gegebene Entität.
+        /// </summary>
+        /// <param name="entity">Die zu löschende Entität</param>
         void Delete(IEntity entity);
 
+        /// <summary>
+        /// Aktiviert das gegebene Profil.
+        /// </summary>
+        /// <param name="entity">Das zu aktivierende Profil</param>
         void Activate(IProfile profile);
 
         /// <summary>
@@ -59,7 +70,5 @@ namespace myMD.ModelInterface.ModelFacadeInterface
         /// </summary>
         /// <param name="letter">Der zu sendende Arztbrief</param>
 		void SendLetter(IDoctorsLetter letter);
-	}
-
+    }
 }
-

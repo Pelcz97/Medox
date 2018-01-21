@@ -55,8 +55,10 @@ namespace myMD.ModelInterface.DataModelInterface
         /// <param name="group">Die Gruppe aus der dieser Arztbrief entfernt werden soll</param>
         void RemoveFromGroup(IDoctorsLetterGroup group);
 
+        /// <summary>
+        /// Konvertiert die Schnittstelle zu ihrer Implementierung
+        /// </summary>
+        /// <returns>Konkreter Arztbrief</returns>
         DoctorsLetter ToDoctorsLetter();
     }
-
 }
-

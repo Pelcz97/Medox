@@ -12,8 +12,8 @@ namespace myMD.Model.DataModel
     /// Diese Klasse implementiert die IDoctorsLetterGroup Schnittstelle und erweitert die abstrakte Data Klasse,
     /// um Arztbriefgruppen in einer SQLite-Datenbank speichern zu können.
     /// </summary>
-    /// <see>ModelInterface.DataModelInterface.IDoctorsLetter</see>
-    /// <see>ModelInterface.DataModelInterface.Data</see>
+    /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter</see>
+    /// <see>myMD.Model.DataModelInterface.Data</see>
     public class DoctorsLetterGroup : Data, IDoctorsLetterGroup, IEquatable<DoctorsLetterGroup>
     {
         /// <summary>
@@ -31,7 +31,7 @@ namespace myMD.Model.DataModel
         /// Wird automatisch beim Lesen aus der Datenbank gesetzt.
         /// Sollte immer sortiert sein.
         /// </summary>
-        /// <see>Model.DataModel.DoctorsLetterGroupDoctorsLetter</see>
+        /// <see>myMD.Model.DataModel.DoctorsLetterGroupDoctorsLetter</see>
         [ManyToMany(typeof(DoctorsLetterGroupDoctorsLetter), CascadeOperations = CascadeOperation.CascadeRead)]
         public List<DoctorsLetter> DatabaseLetters { get; set; }
 
@@ -39,11 +39,11 @@ namespace myMD.Model.DataModel
         /// Das Datum einer Arztbriefgruppe ist das Datum des ältesten in ihr enthaltenen Arztbriefs.
         /// Da die Arztbriefe in DatabaseLetters nach ihrem Datum sortiert sind, muss diese Information nicht explizit gespeichert werden.
         /// </summary>
-        /// <see>Model.DataModel.Data#Date</see>
-        /// <see>Model.DataModel.DoctorsLetterGroup#DatabaseLetters</see>
+        /// <see>myMD.Model.DataModel.Data#Date</see>
+        /// <see>myMD.Model.DataModel.DoctorsLetterGroup#DatabaseLetters</see>
         public override DateTime Date => DatabaseLetters.Any() ? DatabaseLetters.First().Date : default(DateTime);
 
-        /// <see>ModelInterface.DataModelInterface.IDoctorsLetterGroup#DoctorsLetters</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetterGroup#DoctorsLetters</see>
         public IList<IDoctorsLetter> DoctorsLetters
         {
             get
@@ -61,14 +61,14 @@ namespace myMD.Model.DataModel
         /// Das letzte Datum einer Arztbriefgruppe ist das Datum des neuesten in ihr enthaltenen Arztbriefs.
         /// Da die Arztbriefe in DatabaseLetters nach ihrem Datum sortiert sind, muss diese Information nicht explizit gespeichert werden.
         /// </summary>
-        /// <see>ModelInterface.DataModelInterface.IDoctorsLetterGroup#GetLastDate()</see>
-        /// <see>Model.DataModel.DoctorsLetterGroup#DatabaseLetters</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetterGroup#GetLastDate()</see>
+        /// <see>myMD.Model.DataModel.DoctorsLetterGroup#DatabaseLetters</see>
         public DateTime LastDate => DatabaseLetters.Any() ? DatabaseLetters.Last().Date : default(DateTime);
 
         /// <summary>
         /// Überladung für konkrete Arztbriefe.
         /// </summary>
-        /// <see>Model.DataModel.DoctorsLetterGroup#Add(ModelInterface.DataModelInterface.IDoctorsLetter)</see>
+        /// <see>myMD.Model.DataModel.DoctorsLetterGroup#Add(ModelInterface.DataModelInterface.IDoctorsLetter)</see>
         public void Add(DoctorsLetter letter)
         {
             if (!DatabaseLetters.Contains(letter))
@@ -89,10 +89,10 @@ namespace myMD.Model.DataModel
             }
         }
 
-        /// <see>Modelnterface.DataModelInterface.IDoctorsLetterGroup#Add(Model.DataModelInterface.IDoctorsLetter)</see>
+        /// <see>myMD.Modelnterface.DataModelInterface.IDoctorsLetterGroup#Add(Model.DataModelInterface.IDoctorsLetter)</see>
         public void Add(IDoctorsLetter letter) => Add(letter.ToDoctorsLetter());
 
-        /// <see>Model.DataModel.Entity#Delete()</see>
+        /// <see>myMD.Model.DataModel.Entity#Delete()</see>
         public override void Delete()
         {
             while (DatabaseLetters.Any())
@@ -131,7 +131,7 @@ namespace myMD.Model.DataModel
         /// <summary>
         /// Überladung für konkrete Arztbriefe.
         /// </summary>
-        /// <see>Model.DataModel.DoctorsLetterGroup#Remove(ModelInterface.DataModelInterface.IDoctorsLetter)</see>
+        /// <see>myMD.Model.DataModel.DoctorsLetterGroup#Remove(ModelInterface.DataModelInterface.IDoctorsLetter)</see>
         public void Remove(DoctorsLetter letter)
         {
             if (DatabaseLetters.Contains(letter))
@@ -141,13 +141,13 @@ namespace myMD.Model.DataModel
             }
         }
 
-        /// <see>ModelInterface.DataModelInterface.IDoctorsLetterGroup#Remove(Model.DataModelInterface.IDoctorsLetter)</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetterGroup#Remove(Model.DataModelInterface.IDoctorsLetter)</see>
         public void Remove(IDoctorsLetter letter) => Remove(letter.ToDoctorsLetter());
 
         /// <summary>
         /// Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig.
         /// </summary>
-        /// <see>ModelInterface.DataModelInterface.IDoctorsLetterGroup#ToDoctorsLetterGroup()</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetterGroup#ToDoctorsLetterGroup()</see>
         public DoctorsLetterGroup ToDoctorsLetterGroup() => this;
     }
 

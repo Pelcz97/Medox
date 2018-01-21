@@ -10,14 +10,14 @@ namespace myMD.Model.DataModel
     /// Dabei ist diese Klasse nur ein Strukturelement, dass von anderen Klassen erweitert werden sollte, 
     /// um medizinische Daten in einer SQLite-Datenbank speichern zu können und daher abstrakt.
     /// </summary>
-    /// <see>ModelInterface.DataModelInterface.IData</see>
-    /// <see>ModelInterface.DataModelInterface.Entity</see>
+    /// <see>myMD.ModelInterface.DataModelInterface.IData</see>
+    /// <see>myMD.Model.DataModelInterface.Entity</see>
     public abstract class Data : Entity, IEntity, IData, IComparable<Data>, IEquatable<Data>
     {
-        /// <see>ModelInterface.DataModelInterface.IData#Date</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IData#Date</see>
         public virtual DateTime Date { get; set; }
 
-        /// <see>ModelInterface.DataModelInterface.IData#Sensitivity</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IData#Sensitivity</see>
         public Sensitivity Sensitivity { get; set; }
 
         /// <summary>

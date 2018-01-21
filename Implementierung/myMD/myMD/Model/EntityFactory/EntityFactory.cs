@@ -1,66 +1,41 @@
 using myMD.Model.DatabaseModel;
-using myMD.ModelInterface.DataModelInterface;
 using myMD.Model.DataModel;
+using myMD.ModelInterface.DataModelInterface;
 using System;
 
 namespace myMD.Model.EntityFactory
 {
     /// <summary>
-    /// 
+    /// Implementierung der IEntityFactory für die Klassen aus dem DataModel Paket.
     /// </summary>
+    /// <see>myMD.Model.EntityFactory.IEntityFactory</see>
+    /// <seealso>myMD.Model.DataModel</seealso>
 	public class EntityFactory : IEntityFactory
-	{
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="database"></param>
-        public EntityFactory(IEntityDatabase database)
-        {
-            db = database;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-		private IEntityDatabase db;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+    {
+        /// <see>myMD.Model.EntityFactory.IEntityFactory#CreateEmptyDoctorsLetter()</see>
         public IDoctorsLetter CreateEmptyDoctorsLetter()
         {
-            DoctorsLetter letter = new DoctorsLetter
+            return new DoctorsLetter
             {
                 Name = "",
                 Sensitivity = Sensitivity.Normal,
             };
-            db.Insert(letter);
-            return letter;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+        /// <see>myMD.Model.EntityFactory.IEntityFactory#CreateEmptyGroup()</see>
         public IDoctorsLetterGroup CreateEmptyGroup()
         {
-            DoctorsLetterGroup group = new DoctorsLetterGroup
+            return new DoctorsLetterGroup
             {
                 Name = "",
                 Sensitivity = Sensitivity.Normal
             };
-            db.Insert(group);
-            return group;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+        /// <see>myMD.Model.EntityFactory.IEntityFactory#CreateEmptyMedication()</see>
         public IMedication CreateEmptyMedication()
         {
-            Medication med = new Medication
+            return new Medication
             {
                 Name = "",
                 Sensitivity = Sensitivity.Normal,
@@ -69,17 +44,12 @@ namespace myMD.Model.EntityFactory
                 Frequency = 1,
                 Interval = Interval.Day
             };
-            db.Insert(med);
-            return med;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+        /// <see>myMD.Model.EntityFactory.IEntityFactory#CreateEmptyProfile()</see>
         public IProfile CreateEmptyProfile()
         {
-            Profile profile = new Profile
+            return new Profile
             {
                 Name = "",
                 LastName = "",
@@ -87,10 +57,6 @@ namespace myMD.Model.EntityFactory
                 InsuranceNumber = "",
                 BloodType = BloodType.ABMinus
             };
-            db.Insert(profile);
-            return profile;
         }
     }
-
 }
-

@@ -1,5 +1,4 @@
 using myMD.ModelInterface.DataModelInterface;
-using myMD.Model.EntityObserver;
 using System;
 using System.Collections.Generic;
 
@@ -9,8 +8,8 @@ namespace myMD.Model.DataModel
     /// Diese Klasse implementiert die IProfile Schnittstelle und erweitert die abstrakte Enitity Klasse,
     /// um Information über einen Nutzer in einer SQLite-Datenbank speichern zu können
     /// </summary>
-    /// <see>ModelInterface.DataModelInterface.IProfile</see>
-    /// <see>Model.DataModel.Entity</see>
+    /// <see>myMD.ModelInterface.DataModelInterface.IProfile</see>
+    /// <see>myMD.Model.DataModel.Entity</see>
 	public class Profile : Entity, IProfile, IEquatable<Profile>
     {
         /// <summary>
@@ -23,16 +22,16 @@ namespace myMD.Model.DataModel
             Profile = this;
         }
 
-        /// <see>ModelInterface.DataModelInterface.IProfile#InsuranceNumber</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IProfile#InsuranceNumber</see>
         public string InsuranceNumber { get; set; }
 
-        /// <see>ModelInterface.DataModelInterface.IProfile#LastName(string)</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IProfile#LastName(string)</see>
         public string LastName { get; set; }
 
-        /// <see>ModelInterface.DataModelInterface.IProfile#BloodType</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IProfile#BloodType</see>
         public BloodType BloodType { get; set; }
 
-        /// <see>ModelInterface.DataModelInterface.IProfile#BirthDate()</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IProfile#BirthDate()</see>
         public DateTime BirthDate { get; set; }
 
         /// <summary>
@@ -67,7 +66,7 @@ namespace myMD.Model.DataModel
         /// <summary>
         /// Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig.
         /// </summary>
-        /// <see>ModelInterface.DataModelInterface.IProfile#ToProfile()</see>
+        /// <see>myMD.ModelInterface.DataModelInterface.IProfile#ToProfile()</see>
         public Profile ToProfile() => this;
     }
 
