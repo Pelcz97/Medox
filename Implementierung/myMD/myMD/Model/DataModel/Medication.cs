@@ -1,9 +1,6 @@
-using myMD.Model.DataModel;
 using myMD.ModelInterface.DataModelInterface;
-using System;
 using SQLiteNetExtensions.Attributes;
-using SQLite;
-using System.Collections.Generic;
+using System;
 
 namespace myMD.Model.DataModel
 {
@@ -26,6 +23,9 @@ namespace myMD.Model.DataModel
         /// <see>myMD.ModelInterface.DataModelInterface.IMedication#DoctorsLetter()</see>
         public IDoctorsLetter DoctorsLetter => DatabaseDoctorsLetter;
 
+        /// <see>myMD.ModelInterface.DataModelInterface.IMedication#Dosis</see>
+        public string Dosis { get; set; }
+
         /// <see>myMD.ModelInterface.DataModelInterface.IMedication#EndDate</see>
         public DateTime EndDate { get; set; }
 
@@ -45,14 +45,14 @@ namespace myMD.Model.DataModel
         /// Überladung für konkrete Arztbriefe.
         /// </summary>
         /// <see>myMD.Model.DataModel.DoctorsLetter#AttachToLetter(ModelInterface.DataModelInterface.IDoctorsLetter)</see>
-		public void AttachToLetter(DoctorsLetter letter)
-		{
+        public void AttachToLetter(DoctorsLetter letter)
+        {
             if (DatabaseDoctorsLetter != letter)
             {
                 DatabaseDoctorsLetter = letter;
                 letter.AttachMedication(this);
             }
-		}
+        }
 
         /// <see>myMD.ModelInterface.DataModelInterface.IMedication#AttachToLetter(Model.DataModelInterface.IDoctorsLetter)</see>
         public void AttachToLetter(IDoctorsLetter letter) => AttachToLetter(letter.ToDoctorsLetter());
@@ -113,6 +113,4 @@ namespace myMD.Model.DataModel
         /// <see>myMD.ModelInterface.DataModelInterface.IMedication#ToMedication()</see>
         public Medication ToMedication() => this;
     }
-
 }
-
