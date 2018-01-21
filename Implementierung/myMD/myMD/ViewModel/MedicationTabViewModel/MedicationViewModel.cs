@@ -38,10 +38,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
         {
             get
             {
-                return new Command(() => {
-                    Debug.WriteLine("möp");
-                    Reload();
-                });
+                return new Command(Reload);
             }
         }
                 
@@ -51,7 +48,6 @@ namespace myMD.ViewModel.MedicationTabViewModel
                 
                 return new Command((sender) =>
                 {
-                    Debug.WriteLine("Pls");
                     DeleteListItemMethod((MedicineViewModel)sender);
                 });
             }
@@ -76,10 +72,6 @@ namespace myMD.ViewModel.MedicationTabViewModel
                 OnPropertyChanged(nameof(MedicationListIsRefreshing));
             }
         }
-
-        private bool isVisible = true;
-        public bool MedicationListIsVisible
-        { get { return isVisible; } }
 
         public MedicationViewModel()
         {

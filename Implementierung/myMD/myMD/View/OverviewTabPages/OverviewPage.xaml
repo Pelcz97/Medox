@@ -13,13 +13,22 @@
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
-        <StackLayout>
+        <Grid HorizontalOptions="Center"
+                VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
             <ListView x:Name="DoctorsLettersList" HasUnevenRows="true" 
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding DoctorsLettersList}" 
                 SeparatorVisibility="None" 
-                IsVisible="{Binding DoctorsLettersListIsVisible}"
-                ItemTapped="DoctorsLetterSelected">
+                ItemTapped="DoctorsLetterSelected"
+                Grid.Row="0" Grid.Column="0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -78,6 +87,12 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackLayout>
+            <Label HorizontalOptions="Center" VerticalOptions="Center"
+                    Text="There's nothing yet" VerticalTextAlignment="Center" 
+                    FontAttributes="Bold" FontSize="Medium"
+                    TextColor="White"
+                    Grid.Row="0"
+                    Grid.Column="0" />
+        </Grid>
     </ContentPage.Content>
 </local:CustomContentPage>

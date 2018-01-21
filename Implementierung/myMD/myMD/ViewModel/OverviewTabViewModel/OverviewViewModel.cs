@@ -15,18 +15,6 @@ namespace myMD.ViewModel.OverviewTabViewModel
         public ObservableCollection<DoctorsLetterViewModel> DoctorsLettersList { get; }
         public ICommand EditDoctorsLettersList_Clicked { get; private set; }
 
-        private bool isVisible = true;
-
-        public bool DoctorsLettersListIsVisible
-        {
-            get
-            {
-                return isVisible;
-            }
-            
-        }
-
-
         public OverviewViewModel(INavigation Navigation)
         {
             this.Navigation = Navigation;

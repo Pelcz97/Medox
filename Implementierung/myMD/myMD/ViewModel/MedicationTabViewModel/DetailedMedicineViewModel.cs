@@ -5,43 +5,42 @@ using Xamarin.Forms;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
+
     public class DetailedMedicineViewModel : MedicineViewModel
     {
-        bool OneTimeMedication_Switch
-        {
-            get { return this.OneTimeMedication_Switch; }
-            set
-            {
-                Debug.WriteLine(OneTimeMedication_Switch);
-                this.OneTimeMedication_Switch = value;
-            }
-        }
 
-        bool SetDatesPossible { get => !this.OneTimeMedication_Switch; }
 
+        
         public DetailedMedicineViewModel(IMedication medication) : base(medication)
         {
             this.Medication = medication;
-            this.OneTimeMedication_Switch = false;
             this.MedicationStartDate = System.DateTime.Today;
             this.MedicationEndDate = System.DateTime.Today;
+            MaxStartDate = Medication.EndDate;
+            MinEndDate = Medication.Date;
         }
 
         public DetailedMedicineViewModel() : base()
         {
             Medication = ModelFacade.CreateEmptyMedication();
-
-            MessagingCenter.Subscribe<myMD.View.MedicationTabPages.MedicationPage, object>(this, "SelectedMedication", (sender, arg) => {
+            MaxStartDate = Medication.EndDate;
+            MinEndDate = Medication.Date;
+            MessagingCenter.Subscribe<myMD.View.MedicationTabPages.MedicationPage, object>(this, "SelectedMedication", (sender, arg) =>
+            {
                 this.Medication = arg as IMedication;
             });
         }
 
-        public DetailedMedicineViewModel(object item){
+        public DetailedMedicineViewModel(object item)
+        {
             MedicineViewModel listItem = (MedicineViewModel)item;
             Medication = listItem.Medication;
+            MaxStartDate = Medication.EndDate;
+            MinEndDate = Medication.Date;
         }
 
-        public void cancelMedication(){
+        public void cancelMedication()
+        {
             ModelFacade.Delete(this.Medication);
         }
 
