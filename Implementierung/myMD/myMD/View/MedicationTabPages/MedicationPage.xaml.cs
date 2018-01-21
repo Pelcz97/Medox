@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using myMD.View.AbstractPages;
 using myMD.ViewModel.MedicationTabViewModel;
 using Xamarin.Forms;
@@ -17,6 +18,8 @@ namespace myMD.View.MedicationTabPages
             this.BindingContext = vm;
         }
 
+
+
         public async void Handle_Clicked(object sender, System.EventArgs e)
         {
             var view = new NavigationPage(new DetailedMedicationPage());
@@ -28,8 +31,10 @@ namespace myMD.View.MedicationTabPages
 
         void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
-            //MessagingCenter.Send<MedicationPage, object>(this, "SelectedMedication", e.SelectedItem);
-            //MessagingCenter.Unsubscribe<MedicationPage, object>(this, "SelectedMedication");
+            var view = new NavigationPage(new DetailedMedicationPage(e.SelectedItem));
+            view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
+            view.BarTextColor = Color.White;
+            Navigation.PushModalAsync(view);
         }
     }
 }

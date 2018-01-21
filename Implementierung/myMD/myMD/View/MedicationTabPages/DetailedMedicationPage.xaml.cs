@@ -21,6 +21,14 @@ namespace myMD.View.MedicationTabPages
             this.BindingContext = vm;
         }
 
+        public DetailedMedicationPage(object item)
+        {
+            InitializeComponent();
+
+            vm = new DetailedMedicineViewModel(item);
+            this.BindingContext = vm;
+        }
+
         async void CancelButton_Clicked(object sender, System.EventArgs e)
         {
             vm.cancelMedication();

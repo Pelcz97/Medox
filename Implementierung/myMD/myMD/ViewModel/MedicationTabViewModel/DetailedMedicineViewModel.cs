@@ -36,6 +36,11 @@ namespace myMD.ViewModel.MedicationTabViewModel
             });
         }
 
+        public DetailedMedicineViewModel(object item){
+            MedicineViewModel listItem = (MedicineViewModel)item;
+            Medication = listItem.Medication;
+        }
+
         public void cancelMedication(){
             ModelFacade.Delete(this.Medication);
         }

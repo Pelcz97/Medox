@@ -95,12 +95,11 @@ namespace myMD.ViewModel.MedicationTabViewModel
             });
         }
 
-
         public void DeleteListItemMethod(object sender)
         {
             var MedicationItem = ((MedicineViewModel)sender);
             MedicationsList.Remove(MedicationItem);
-            //ModelFacade.Delete(MedicationItem.Medication);
+            ModelFacade.Delete(MedicationItem.Medication);
         }
 
         public void Reload()
