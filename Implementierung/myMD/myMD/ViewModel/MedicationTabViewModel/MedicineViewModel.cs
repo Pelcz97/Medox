@@ -28,9 +28,8 @@ namespace myMD.ViewModel.MedicationTabViewModel
             set { Debug.WriteLine("StartDate:" + value.Date); 
                 this.Medication.Date = value.Date;
                 MinEndDate = Medication.Date;
-                MedicationDuration = MedicationEndDate.Subtract(MedicationStartDate).Days;
+                calcDuration();
                 Debug.WriteLine("Duration:" + MedicationDuration);
-                OnPropertyChanged("MedicationDuration");
                 OnPropertyChanged("MinEndDate");
             }
         }
@@ -41,9 +40,8 @@ namespace myMD.ViewModel.MedicationTabViewModel
                 Debug.WriteLine("EndDate:" + value);
                 this.Medication.EndDate = value;
                 MaxStartDate = Medication.EndDate;
-                MedicationDuration = MedicationEndDate.Subtract(MedicationStartDate).Days;
+                calcDuration();
                 Debug.WriteLine("Duration:" + MedicationDuration);
-                OnPropertyChanged("MedicationDuration");
                 OnPropertyChanged("MaxStartDate");
                 }
             }
@@ -51,7 +49,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
         public DateTime MaxStartDate { get; set; }
         public DateTime MinEndDate { get; set; }
 
-        public int MedicationDuration { get; set; }
+        public int MedicationDuration { set; get; }
 
         public Interval MedicationInterval { 
             get => this.Medication.Interval; 
@@ -70,6 +68,9 @@ namespace myMD.ViewModel.MedicationTabViewModel
         public MedicineViewModel(IMedication medication)
         {
             Medication = medication;
+            //MedicationStartDate = Medication.Date;
+            //MedicationEndDate = Medication.EndDate;
+            calcDuration();
         }
 
         public MedicineViewModel()
@@ -86,6 +87,11 @@ namespace myMD.ViewModel.MedicationTabViewModel
                 else
                     return Medication.Date.ToString("Y");
             }
+        }
+
+        private void calcDuration(){
+            MedicationDuration = MedicationEndDate.Subtract(MedicationStartDate).Days;
+            OnPropertyChanged("MedicationDuration");
         }
 
     }

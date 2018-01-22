@@ -69,7 +69,7 @@
                                             VerticalTextAlignment="Start" 
                                             VerticalOptions="Start"/>
                                             
-                                            <Label Text="{Binding MedicationDuration, StringFormat'{0} Tage lang'}"
+                                            <Label Text="{Binding MedicationDuration, StringFormat='{0:F0} Tage lang', Mode=OneWay}"
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 
@@ -82,7 +82,7 @@
                                             FontSize="35" 
                                             FontAttributes="Bold" 
                                             HorizontalTextAlignment="Start" 
-                                            Grid.Row="1" Grid.RowSpan="1" />
+                                            Grid.Row="1" Grid.RowSpan="1"  />
                                             
                                             <Label Text="{Binding MedicationDosis}" 
                                             TextColor="#191928" 
@@ -91,7 +91,7 @@
                                             HorizontalTextAlignment="Start" 
                                             Grid.Row="2" />
                                             
-                                            <Label Text="{Binding MedicationFrequency, StringFormat='{0:D} mal täglich'}" 
+                                            <Label Text="{Binding MedicationFrequency, StringFormat='{0:F0} mal täglich'}" 
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 
