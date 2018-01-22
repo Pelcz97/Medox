@@ -90,7 +90,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
         }
 
         private void calcDuration(){
-            MedicationDuration = MedicationEndDate.Subtract(MedicationStartDate).Days;
+            MedicationDuration = MedicationEndDate.Subtract(MedicationStartDate).Days + 1;
             OnPropertyChanged("MedicationDuration");
         }
 
