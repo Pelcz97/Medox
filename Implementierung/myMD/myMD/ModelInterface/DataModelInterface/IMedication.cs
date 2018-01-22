@@ -17,6 +17,16 @@ namespace myMD.ModelInterface.DataModelInterface
 		new DateTime Date { get; set; }
 
         /// <summary>
+        /// Die Dosis, in der diese Medikation eingenommen wird.
+        /// </summary>
+        string Dosis { get; set; }
+
+        /// <summary>
+        /// Das Datum, an dem diese Medikation abgesetzt werden soll.
+        /// </summary>
+        DateTime EndDate { get; set; }
+
+        /// <summary>
         /// Häufigkeit in der diese Medikation in ihrem Intervall genommen werden soll.
         /// Das Intervall und die Häufigkeit zusammen ergeben dann eine tatsächliche Häufigkeit in der die Medikation eingenommen werden soll (z.B. 3 mal pro Tag).
         /// </summary>
@@ -29,9 +39,12 @@ namespace myMD.ModelInterface.DataModelInterface
         Interval Interval { get; set; }
 
         /// <summary>
-        /// Das Datum, an dem diese Medikation abgesetzt werden soll.
+        /// Verbindet diese Medikation mit einem Arztbrief.
+        /// Ist der Arztbrief bereits verbunden, so passiert nichts.
+        /// Existiert bereits eine Verbindung zu einem anderen Arztbrief, so wird diese zuvor aufgelöst.
         /// </summary>
-        DateTime EndDate { get; set; }
+        /// <param name="letter">Der zu verbindende Arztbrief</param>
+		void AttachToLetter(IDoctorsLetter letter);
 
         /// <summary>
         /// Löst die Verbindung dieser Medikation zu einem Arztbrief auf.
@@ -39,14 +52,6 @@ namespace myMD.ModelInterface.DataModelInterface
         /// </summary>
         /// <param name="letter">Der zu entfernende Arztbrief</param>
         void DisattachFromLetter(IDoctorsLetter letter);
-
-        /// <summary>
-        /// Verbindet diese Medikation mit einem Arztbrief.
-        /// Ist der Arztbrief bereits verbunden, so passiert nichts.
-        /// Existiert bereits eine Verbindung zu einem anderen Arztbrief, so wird diese zuvor aufgelöst.
-        /// </summary>
-        /// <param name="letter">Der zu verbindende Arztbrief</param>
-		void AttachToLetter(IDoctorsLetter letter);
 
         /// <summary>
         /// Konvertiert die Schnittstelle zu ihrer Implementierung

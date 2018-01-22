@@ -38,6 +38,7 @@ namespace myMD.Model.EntityFactory
             return new Medication
             {
                 Name = "",
+                Dosis = "",
                 Sensitivity = Sensitivity.Normal,
                 Date = DateTime.Today,
                 EndDate = DateTime.Today.AddMonths(1),
