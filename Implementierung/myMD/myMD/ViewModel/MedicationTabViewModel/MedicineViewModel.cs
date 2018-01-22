@@ -71,6 +71,16 @@ namespace myMD.ViewModel.MedicationTabViewModel
             
         }
 
+        public string NameSort
+        {
+            get
+            {
+                if (Medication.Date == DateTime.Now.Date)
+                    return "Today";
+                else
+                    return Medication.Date.ToString("Y");
+            }
+        }
 
     }
 }

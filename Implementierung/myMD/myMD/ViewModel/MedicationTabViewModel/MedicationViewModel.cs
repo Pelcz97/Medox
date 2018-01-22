@@ -1,21 +1,21 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Windows.Input;
 using myMD.ModelInterface.DataModelInterface;
-using myMD.Model.DataModel;
-using myMD.View.MedicationTabPages;
 using Xamarin.Forms;
-using myMD.ModelInterface.ModelFacadeInterface;
-using System.Diagnostics;
-using System.ComponentModel;
+using MvvmHelpers;
+using System;
+using System.Linq;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
     public class MedicationViewModel : OverallViewModel.OverallViewModel, INotifyPropertyChanged
     {
         public ObservableCollection<MedicineViewModel> MedicationsList { get; }
+        //public static ObservableCollection<Grouping<string, MedicineViewModel>> MyItems { get; set; }
+        
+
+
 
         private MedicineViewModel _ItemSelected;
         public MedicineViewModel SelectedMedication
@@ -53,6 +53,8 @@ namespace myMD.ViewModel.MedicationTabViewModel
             }
         }
 
+
+
         public ICommand RefreshMedicationList {
             get {
                 return new Command(() => {
@@ -75,12 +77,22 @@ namespace myMD.ViewModel.MedicationTabViewModel
 
         public MedicationViewModel()
         {
+
             this.MedicationsList = new ObservableCollection<MedicineViewModel>();
 
             foreach (IMedication med in ModelFacade.GetAllMedications())
             {
                 MedicationsList.Add(new MedicineViewModel(med));
             }
+
+            /* sorted = from item in MedicationsList
+                orderby item.Medication.Date
+                            group item by item.NameSort into itemGroup
+                            select new Grouping<string, MedicineViewModel>(itemGroup.Key, itemGroup);
+
+            //create a new collection of groups
+            MyItems = new ObservableCollection<Grouping<string, MedicineViewModel>>(sorted);*/
+
 
             MessagingCenter.Subscribe<DetailedMedicineViewModel>(this, "SavedMedication", sender => {
                 Reload();
