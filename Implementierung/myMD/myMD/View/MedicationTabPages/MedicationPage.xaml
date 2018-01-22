@@ -18,11 +18,11 @@
         <Grid HorizontalOptions="Center"
                 VerticalOptions="Center">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
         
             <ListView x:Name="MedicationList" 
@@ -51,7 +51,7 @@
                                     Margin="10,3,10,3"
                                     HorizontalOptions="CenterAndExpand" 
                                     VerticalOptions="CenterAndExpand" 
-                                    HeightRequest="80" 
+                                    HeightRequest="100" 
                                     WidthRequest="400">
                                     <Grid>
                                         <Grid.RowDefinitions>
