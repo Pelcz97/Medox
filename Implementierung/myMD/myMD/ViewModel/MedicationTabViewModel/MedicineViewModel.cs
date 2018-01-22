@@ -27,6 +27,9 @@ namespace myMD.ViewModel.MedicationTabViewModel
             set { Debug.WriteLine("StartDate:" + value.Date); 
                 this.Medication.Date = value.Date;
                 MinEndDate = Medication.Date;
+                MedicationDuration = MedicationEndDate.Subtract(MedicationStartDate).Days;
+                Debug.WriteLine("Duration:" + MedicationDuration);
+                OnPropertyChanged("MedicationDuration");
                 OnPropertyChanged("MinEndDate");
             }
         }
@@ -37,6 +40,9 @@ namespace myMD.ViewModel.MedicationTabViewModel
                 Debug.WriteLine("EndDate:" + value);
                 this.Medication.EndDate = value;
                 MaxStartDate = Medication.EndDate;
+                MedicationDuration = MedicationEndDate.Subtract(MedicationStartDate).Days;
+                Debug.WriteLine("Duration:" + MedicationDuration);
+                OnPropertyChanged("MedicationDuration");
                 OnPropertyChanged("MaxStartDate");
                 }
             }
@@ -44,11 +50,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
         public DateTime MaxStartDate { get; set; }
         public DateTime MinEndDate { get; set; }
 
-        public TimeSpan MedicationDuration { get { return MedicationDuration; } set
-            {
-                MedicationDuration = value;
-                Debug.WriteLine(MedicationDuration.Days);
-            }}
+        public int MedicationDuration { get; set; }
 
         public Interval MedicationInterval { 
             get => this.Medication.Interval; 
@@ -59,7 +61,10 @@ namespace myMD.ViewModel.MedicationTabViewModel
             set { Debug.WriteLine("Frequency:" + value);
                 this.Medication.Frequency = value; } }
 
-        //public string MedicationDosis { get; set; }
+        public string MedicationDosis { 
+            get { return this.Medication.Dosis; } 
+            set { this.Medication.Dosis = value; } 
+        }
 
         public MedicineViewModel(IMedication medication)
         {

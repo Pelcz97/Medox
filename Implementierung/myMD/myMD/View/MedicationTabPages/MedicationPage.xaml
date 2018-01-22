@@ -69,7 +69,7 @@
                                             VerticalTextAlignment="Start" 
                                             VerticalOptions="Start"/>
                                             
-                                            <Label Text="Platzhalter" 
+                                            <Label Text="{Binding MedicationDuration, StringFormat'{0} Tage lang'}"
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 

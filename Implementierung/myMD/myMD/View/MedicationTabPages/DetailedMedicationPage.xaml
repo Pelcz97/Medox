@@ -64,7 +64,8 @@
                                         Placeholder="Wirkstoffmenge"
                                         PlaceholderColor="Gray"
                                         TextColor="White"
-                                        FontSize="17"/>
+                                        FontSize="17"
+                                        Text="{Binding MedicationDosis}" />
                         </StackLayout>
 
                     </ViewCell>

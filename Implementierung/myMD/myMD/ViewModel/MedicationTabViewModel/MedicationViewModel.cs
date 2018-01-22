@@ -86,7 +86,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
             }
 
             var sorted = from item in MedicationsList
-                orderby item.Medication.Date
+                            orderby item.Medication.Date
                             group item by item.NameSort into itemGroup
                             select new Grouping<string, MedicineViewModel>(itemGroup.Key, itemGroup);
 

@@ -16,6 +16,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
             this.Medication = medication;
             this.MedicationStartDate = System.DateTime.Today;
             this.MedicationEndDate = System.DateTime.Today;
+            this.MedicationDuration = MedicationEndDate.Subtract(MedicationStartDate).Days;
             MaxStartDate = Medication.EndDate;
             MinEndDate = Medication.Date;
         }
@@ -25,6 +26,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
             Medication = ModelFacade.CreateEmptyMedication();
             MaxStartDate = Medication.EndDate;
             MinEndDate = Medication.Date;
+            this.MedicationDuration = MedicationEndDate.Subtract(MedicationStartDate).Days;
             MessagingCenter.Subscribe<myMD.View.MedicationTabPages.MedicationPage, object>(this, "SelectedMedication", (sender, arg) =>
             {
                 this.Medication = arg as IMedication;
@@ -37,6 +39,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
             Medication = listItem.Medication;
             MaxStartDate = Medication.EndDate;
             MinEndDate = Medication.Date;
+            this.MedicationDuration = MedicationEndDate.Subtract(MedicationStartDate).Days;
         }
 
         public void cancelMedication()
