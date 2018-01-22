@@ -13,19 +13,11 @@
             Order="Primary" 
             Clicked="Handle_Clicked" />
     </ContentPage.ToolbarItems>
-    
-    <ContentPage.Content>
-        <Grid HorizontalOptions="Center"
-                VerticalOptions="Center">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-        
-            <ListView x:Name="MedicationList" 
+    <ContentPage.Content>
+        <StackLayout>
+            
+        <ListView x:Name="MedicationList" 
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding MedicationsList, Mode=TwoWay}"
@@ -35,17 +27,17 @@
                 IsVisible="true" 
                 SeparatorVisibility="None"
                 ItemSelected="Handle_ItemSelected">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <ViewCell.ContextActions>
-                                 <MenuItem  Text="Löschen" 
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem  Text="Löschen" 
                                             IsDestructive="true"
                                             Command="{Binding Path=BindingContext.DeleteListItem, Source={x:Reference Name=MedicationPage}}"
                                             CommandParameter="{Binding .}"/>
-                            </ViewCell.ContextActions>
-                            <ViewCell.View>
-                                <Frame x:Name="Label" 
+                        </ViewCell.ContextActions>
+                        <ViewCell.View>
+                            <Frame x:Name="Label" 
                                     CornerRadius="15" 
                                     BackgroundColor="#FFFFFF"
                                     Margin="10,3,10,3"
@@ -53,14 +45,14 @@
                                     VerticalOptions="CenterAndExpand" 
                                     HeightRequest="80" 
                                     WidthRequest="400">
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
 
-                                            <Label Text="{Binding MedicationStartDate, StringFormat='{0:MMMM dd, yyyy}'}" 
+                                    <Label Text="{Binding MedicationStartDate, StringFormat='{0:MMMM dd, yyyy}'}" 
                                             TextColor="#4A4A4A" 
                                             FontSize="Small" 
                                             FontAttributes="Bold" 
@@ -68,49 +60,49 @@
                                             HorizontalTextAlignment="Start" 
                                             VerticalTextAlignment="Start" 
                                             VerticalOptions="Start"/>
-                                            
-                                            <Label Text="Platzhalter" 
+
+                                    <Label Text="Platzhalter" 
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 
                                             FontAttributes="Bold" 
                                             Grid.Row="0" 
                                             HorizontalOptions="EndAndExpand"/>
-                                            
-                                            <Label Text="{Binding MedicationName}" 
+
+                                    <Label Text="{Binding MedicationName}" 
                                             TextColor="#D0001E" 
                                             FontSize="35" 
                                             FontAttributes="Bold" 
                                             HorizontalTextAlignment="Start" 
                                             Grid.Row="1" Grid.RowSpan="1" />
-                                            
-                                            <Label Text="{Binding MedicationDosis}" 
+
+                                    <Label Text="{Binding MedicationDosis}" 
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             FontAttributes="Bold" 
                                             HorizontalTextAlignment="Start" 
                                             Grid.Row="2" />
-                                            
-                                            <Label Text="{Binding MedicationFrequency, StringFormat='{0:D} mal täglich'}" 
+
+                                    <Label Text="{Binding MedicationFrequency, StringFormat='{0:D} mal täglich'}" 
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 
                                             FontAttributes="Bold" 
                                             Grid.Row="2" 
                                             HorizontalOptions="EndAndExpand"/>
-                                    </Grid>
-                                </Frame>
-                            </ViewCell.View>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <Label HorizontalOptions="Center" VerticalOptions="Center"
+                                </Grid>
+                            </Frame>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Label HorizontalOptions="Center" VerticalOptions="Center"
                     Text="There's nothing yet" VerticalTextAlignment="Center" 
                     FontAttributes="Bold" FontSize="Medium"
                     TextColor="White"
-                    Grid.Row="0"
-                    Grid.Column="0" IsVisible="false" />
-        </Grid>
+                    IsVisible="false" />
+        </StackLayout>
+
     </ContentPage.Content>
 </local:CustomContentPage>
