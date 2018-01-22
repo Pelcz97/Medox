@@ -8,11 +8,11 @@ namespace myMD.ViewModel.MedicationTabViewModel
 
     public class DetailedMedicineViewModel : MedicineViewModel
     {
-
-
         
         public DetailedMedicineViewModel(IMedication medication) : base(medication)
         {
+            this.CancelPossible = true;
+            OnPropertyChanged("CancelPossible");
             this.Medication = medication;
             this.MedicationStartDate = System.DateTime.Today;
             this.MedicationEndDate = System.DateTime.Today;
@@ -23,6 +23,8 @@ namespace myMD.ViewModel.MedicationTabViewModel
 
         public DetailedMedicineViewModel() : base()
         {
+            CancelPossible = true;
+            OnPropertyChanged("CancelPossible");
             Medication = ModelFacade.CreateEmptyMedication();
             MaxStartDate = Medication.EndDate;
             MinEndDate = Medication.Date;
@@ -35,6 +37,8 @@ namespace myMD.ViewModel.MedicationTabViewModel
 
         public DetailedMedicineViewModel(object item)
         {
+            CancelPossible = false;
+            OnPropertyChanged("CancelPossible");
             MedicineViewModel listItem = (MedicineViewModel)item;
             Medication = listItem.Medication;
             MaxStartDate = Medication.EndDate;

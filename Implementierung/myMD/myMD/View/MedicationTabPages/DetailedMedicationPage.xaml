@@ -8,7 +8,7 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="CancelButton" Text="Abbrechen" 
-        Order="Primary" Priority="-1" Clicked="CancelButton_Clicked"/>
+        Order="Primary" Priority="-1" Clicked="CancelButton_Clicked" IsEnabled="{Binding CancelPossible}"/>
         <ToolbarItem Name="SaveMedicationButton" Text="Fertig" 
                     Order="Primary" Priority="1" Clicked="SaveMedication_Clicked" 
                     IsEnabled="{Binding SavingPossible}"/>

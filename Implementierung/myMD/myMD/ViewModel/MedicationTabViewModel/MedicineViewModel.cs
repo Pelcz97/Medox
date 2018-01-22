@@ -11,6 +11,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
 
         public IMedication Medication { get; set; }
         public bool SavingPossible { get; set; }
+        public bool CancelPossible { get; set; }
 
         public string MedicationName { 
             get => this.Medication.Name; 
