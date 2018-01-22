@@ -1,4 +1,5 @@
-﻿using myMD.Model.DatabaseModel;
+﻿using System.Threading.Tasks;
+using myMD.Model.DatabaseModel;
 using myMD.Model.EntityFactory;
 using myMD.Model.ModelFacade;
 using myMD.Model.ParserModel;
@@ -68,12 +69,12 @@ namespace myMD
 
         protected override void OnResume()
         {
-            // Handle when your app resumes
+            
         }
 
         protected override void OnSleep()
         {
-            // Handle when your app sleeps
+            
         }
 
         protected override void OnStart()
