@@ -13,10 +13,8 @@ namespace myMD.ViewModel.MedicationTabViewModel
     public class MedicationViewModel : OverallViewModel.OverallViewModel, INotifyPropertyChanged
     {
         public ObservableCollection<MedicineViewModel> MedicationsList { get; }
-        //public static ObservableCollection<Grouping<string, MedicineViewModel>> MyItems { get; set; }
+        public static ObservableCollection<Grouping<string, MedicineViewModel>> MyItems { get; set; }
         
-
-
 
         private MedicineViewModel _ItemSelected;
         public MedicineViewModel SelectedMedication
@@ -74,31 +72,31 @@ namespace myMD.ViewModel.MedicationTabViewModel
             {
                 MedicationsList.Add(new MedicineViewModel(med));
             }
+            group();
 
-            //group();
-            //Debug.WriteLine("konstruktor MyItems Size: " + MyItems.Count);
-
+            Debug.WriteLine("konstruktor MyItems Size: " + MyItems.Count);
+            
             MessagingCenter.Subscribe<DetailedMedicineViewModel>(this, "SavedMedication", sender => {
                 Reload();
             });
         }
 
-        /*public void group(){
+        public void group(){
             var sorted = from item in MedicationsList
                          orderby item.Medication.Date
                          group item by item.NameSort into itemGroup
                          select new Grouping<string, MedicineViewModel>(itemGroup.Key, itemGroup);
 
             //create a new collection of groups
-            //MyItems = new ObservableCollection<Grouping<string, MedicineViewModel>>(sorted);
-        }*/
+            MyItems = new ObservableCollection<Grouping<string, MedicineViewModel>>(sorted);
+        }
 
         public void DeleteListItemMethod(object sender)
         {
             var MedicationItem = ((MedicineViewModel)sender);
             MedicationsList.Remove(MedicationItem);
             //MyItems.Remove(new Grouping<string, MedicineViewModel>(MedicationItem.Key, (System.Collections.Generic.IEnumerable<MedicineViewModel>)MedicationItem));
-            //Debug.WriteLine("MyItems Size: " + MyItems.Count);
+            Debug.WriteLine("MyItems Size: " + MyItems.Count);
             ModelFacade.Delete(MedicationItem.Medication);
         }
 
@@ -109,8 +107,8 @@ namespace myMD.ViewModel.MedicationTabViewModel
             {
                 MedicationsList.Add(new MedicineViewModel(med));
             }
-            //group();
-            //Debug.WriteLine("MyItems Size: " + MyItems.Count);
+            group();
+            Debug.WriteLine("MyItems Size: " + MyItems.Count);
         }
 
 
