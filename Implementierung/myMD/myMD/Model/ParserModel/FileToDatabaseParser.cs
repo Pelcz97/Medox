@@ -19,9 +19,10 @@ namespace myMD.Model.ParserModel
         /// <exception cref="InvalidOperationException">Werfe, wenn kein passendes Profil für die Datei gefunden wurde</exception>
 		public void ParseFile(string filename, IEntityDatabase db)
         {
+            Init(filename);
             //Werfe Ausnahme falls kein passendes Profil existiert
-            Profile profile = db.GetProfile(ParseProfile(filename)).ToProfile() ?? throw new InvalidOperationException("No matching Profile found");
-            Doctor eqDoc = ParseDoctor(filename);
+            Profile profile = db.GetProfile(ParseProfile()).ToProfile() ?? throw new InvalidOperationException("No matching Profile found");
+            Doctor eqDoc = ParseDoctor();
             Doctor doc = db.GetDoctor(eqDoc).ToDoctor();
             //Füge neuen Arzt in die Datenbank ein, falls dieser dort noch nicht existiert
             if (doc == null)
@@ -29,8 +30,8 @@ namespace myMD.Model.ParserModel
                 doc = eqDoc;
                 db.Insert(doc);
             }
-            IList<Medication> meds = ParseMedications(filename);
-            DoctorsLetter letter = ParseLetter(filename);
+            IList<Medication> meds = ParseMedications();
+            DoctorsLetter letter = ParseLetter();
             db.Insert(letter);
             //Erstelle Beziehungen zwischen den geparsten Entitäten
             letter.Profile = profile;
@@ -44,31 +45,33 @@ namespace myMD.Model.ParserModel
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="file"></param>
+        protected abstract void Init(string file);
+
+        /// <summary>
         /// Erstelle einen Arztbrief mit den Informationen aus der Datei.
         /// </summary>
-        /// <param name="filename">Die zu parsende Datei</param>
         /// <returns>Den erstellten Arztbrief</returns>
-		protected abstract DoctorsLetter ParseLetter(string filename);
+		protected abstract DoctorsLetter ParseLetter();
 
         /// <summary>
         /// Erstelle die in der Datei spezifizierten Medikationen.
         /// </summary>
-        /// <param name="filename">Die zu parsende Datei</param>
         /// <returns>Liste der erstellten Medikationen</returns>
-		protected abstract IList<Medication> ParseMedications(string filename);
+		protected abstract IList<Medication> ParseMedications();
 
         /// <summary>
         /// Erstelle den in der Datei spezifizierten Arzt.
         /// </summary>
-        /// <param name="filename">Die zu parsende Datei</param>
         /// <returns>Den erstellten Arzt</returns>
-		protected abstract Doctor ParseDoctor(string filename);
+		protected abstract Doctor ParseDoctor();
 
         /// <summary>
         /// Erstelle das in der Datei spezifizierten Profil.
         /// </summary>
-        /// <param name="filename">Die zu parsende Datei</param>
         /// <returns>Das erstellte Profil</returns>
-		protected abstract Profile ParseProfile(string filename);
+		protected abstract Profile ParseProfile();
     }
 }
