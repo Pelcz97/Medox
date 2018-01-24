@@ -1,5 +1,11 @@
+using MARC.Everest.Connectors;
+using MARC.Everest.Formatters.XML.ITS1;
+using MARC.Everest.RMIM.UV.CDAr2.POCD_MT000040UV;
+using MARC.Everest.Xml;
 using myMD.Model.DataModel;
 using System.Collections.Generic;
+using System.Xml;
+using Xamarin.Forms;
 
 namespace myMD.Model.ParserModel
 {
@@ -9,28 +15,49 @@ namespace myMD.Model.ParserModel
     /// <see>myMD.Model.ParserModel.FileToDatabaseParser</see>
 	public class Hl7ToDatabaseParser : FileToDatabaseParser
     {
-        /// <see>myMD.Model.ParserModel.FileToDatabaseParser#ParseProfile(string)</see>
-        protected override DoctorsLetter ParseLetter(string filename)
+        /// <summary>
+        /// 
+        /// </summary>
+        private ClinicalDocument cd;
+
+        /// <see>myMD.Model.ParserModel.FileToDatabaseParser#ParseProfile()</see>
+        protected override DoctorsLetter ParseLetter()
         {
             return null;
         }
 
-        /// <see>myMD.Model.ParserModel.FileToDatabaseParser#ParseProfile(string)</see>
-        protected override IList<Medication> ParseMedications(string filename)
+        /// <see>myMD.Model.ParserModel.FileToDatabaseParser#ParseProfile()</see>
+        protected override IList<Medication> ParseMedications()
         {
             return null;
         }
 
-        /// <see>myMD.Model.ParserModel.FileToDatabaseParser#ParseProfile(string)</see>
-        protected override Doctor ParseDoctor(string filename)
+        /// <see>myMD.Model.ParserModel.FileToDatabaseParser#ParseProfile()</see>
+        protected override Doctor ParseDoctor()
         {
             return null;
         }
 
-        /// <see>myMD.Model.ParserModel.FileToDatabaseParser#ParseProfile(string)</see>
-        protected override Profile ParseProfile(string filename)
+        /// <see>myMD.Model.ParserModel.FileToDatabaseParser#ParseProfile()</see>
+        protected override Profile ParseProfile()
         {
             return null;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <see>myMD.Model.ParserModel.FileToDatabaseParser#Init(string)</see>
+        protected override void Init(string file)
+        {
+            XmlStateReader xr = new XmlStateReader(XmlReader.Create(@"C:\path-to-file.xml"));
+            XmlIts1Formatter fmtr = new XmlIts1Formatter()
+            {
+                ValidateConformance = false
+            };
+            DependencyService.Get<IHl7ParserHelper>().PrepareFormatter(fmtr);
+            IFormatterParseResult parseResult = fmtr.Parse(xr, typeof(ClinicalDocument));
+            cd = parseResult.Structure as ClinicalDocument;
         }
     }
 }
