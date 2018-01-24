@@ -1,6 +1,7 @@
 using myMD.ModelInterface.DataModelInterface;
 using System;
 using System.Collections.Generic;
+using Xamarin.Forms.Internals;
 
 namespace myMD.Model.DataModel
 {
@@ -10,6 +11,7 @@ namespace myMD.Model.DataModel
     /// </summary>
     /// <see>myMD.ModelInterface.DataModelInterface.IDoctor</see>
     /// <see>myMD.Model.DataModel.Entity</see>
+    [Preserve(AllMembers = true)]
     public class Doctor : Entity, IDoctor, IEquatable<Doctor>
     {
         /// <see>myMD.ModelInterface.DataModelInterface.IDoctor#Field</see>

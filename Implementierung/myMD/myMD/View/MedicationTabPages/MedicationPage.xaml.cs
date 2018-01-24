@@ -4,9 +4,11 @@ using System.Diagnostics;
 using myMD.View.AbstractPages;
 using myMD.ViewModel.MedicationTabViewModel;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace myMD.View.MedicationTabPages
 {
+    [Preserve(AllMembers = true)]
     public partial class MedicationPage : CustomContentPage
     {
         MedicationViewModel vm;

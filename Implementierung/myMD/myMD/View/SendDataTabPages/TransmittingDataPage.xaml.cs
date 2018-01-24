@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using myMD.View.AbstractPages;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace myMD.View.SendDataTabPages
 {
+    [Preserve(AllMembers = true)]
     public partial class TransmittingDataPage : CustomContentPage
     {
         public TransmittingDataPage()
