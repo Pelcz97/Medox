@@ -4,7 +4,8 @@
 # build
 [Oo]bj/
 [Bb]in/
-packages/
+packages/*
+!packages/everest/
 TestResults/
 
 # globs
