@@ -1,6 +1,7 @@
 using myMD.ModelInterface.DataModelInterface;
 using SQLite;
 using System;
+using Xamarin.Forms.Internals;
 
 namespace myMD.Model.DataModel
 {
@@ -12,6 +13,7 @@ namespace myMD.Model.DataModel
     /// </summary>
     /// <see>myMD.ModelInterface.DataModelInterface.IData</see>
     /// <see>myMD.Model.DataModelInterface.Entity</see>
+    [Preserve(AllMembers = true)]
     public abstract class Data : Entity, IEntity, IData, IComparable<Data>, IEquatable<Data>
     {
         /// <see>myMD.ModelInterface.DataModelInterface.IData#Date</see>

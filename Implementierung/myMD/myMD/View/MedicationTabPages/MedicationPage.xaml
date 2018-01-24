@@ -28,13 +28,14 @@
             <ListView x:Name="MedicationList" 
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
-                ItemsSource="{Binding MedicationsList, Mode=TwoWay}"
+                ItemsSource="{Binding MyItems, Mode=TwoWay}"
                 IsPullToRefreshEnabled="True"
                 RefreshCommand="{Binding RefreshMedicationList}"
                 IsRefreshing="{Binding MedicationListIsRefreshing, Mode=TwoWay}"
                 IsVisible="true" 
                 SeparatorVisibility="None"
-                ItemSelected="Handle_ItemSelected">
+                ItemSelected="Handle_ItemSelected"
+                IsGroupingEnabled="true" GroupDisplayBinding="{Binding Key}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -45,6 +46,7 @@
                                             CommandParameter="{Binding .}"/>
                             </ViewCell.ContextActions>
                             <ViewCell.View>
+
                                 <Frame x:Name="Label" 
                                     CornerRadius="15" 
                                     BackgroundColor="#FFFFFF"
@@ -104,6 +106,20 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
+                <!-- Group Header Customization-->
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell Height="50" >
+                        <ViewCell.View>
+                            <StackLayout >
+                                <Label Text ="{Binding Title}" Margin="15,30,5,15" 
+                                    FontSize="Medium" TextColor="White" BackgroundColor="#191928"/>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+            <!-- End Group Header Customization-->
             </ListView>
             <Label HorizontalOptions="Center" VerticalOptions="Center"
                     Text="There's nothing yet" VerticalTextAlignment="Center" 

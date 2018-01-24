@@ -1,6 +1,7 @@
 using myMD.ModelInterface.DataModelInterface;
 using SQLiteNetExtensions.Attributes;
 using System;
+using Xamarin.Forms.Internals;
 
 namespace myMD.Model.DataModel
 {
@@ -10,6 +11,7 @@ namespace myMD.Model.DataModel
     /// </summary>
     /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter</see>
     /// <see>myMD.Model.DataModelInterface.Data</see>
+    [Preserve(AllMembers = true)]
 	public class Medication : Data, IMedication, IEquatable<Medication>
     {
         /// <summary>

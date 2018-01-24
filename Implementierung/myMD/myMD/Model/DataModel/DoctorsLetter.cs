@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace myMD.Model.DataModel
 {
@@ -14,6 +15,7 @@ namespace myMD.Model.DataModel
     /// </summary>
     /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter</see>
     /// <see>myMD.Model.DataModelInterface.Data</see>
+    [Preserve(AllMembers = true)]
     public class DoctorsLetter : Data, IDoctorsLetter, IEquatable<DoctorsLetter>
     {
         /// <summary>
