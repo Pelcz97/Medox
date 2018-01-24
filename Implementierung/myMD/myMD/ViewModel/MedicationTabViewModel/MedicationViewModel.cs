@@ -33,16 +33,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
                     OnPropertyChanged("ItemSelected");
                 }
             }
-        }
-
-        public ICommand AddDummyMed
-        {
-            get
-            {
-                return new Command(Reload);
-            }
-        }
-                
+        }        
 
         public ICommand DeleteListItem { 
             get {
@@ -53,8 +44,6 @@ namespace myMD.ViewModel.MedicationTabViewModel
                 });
             }
         }
-
-
 
         public ICommand RefreshMedicationList {
             get {
