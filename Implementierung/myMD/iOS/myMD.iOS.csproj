@@ -104,9 +104,7 @@
     <Reference Include="MARC.Everest.RMIM.UV.CDAr2">
       <HintPath>..\packages\Everest\MARC.Everest.RMIM.UV.CDAr2.dll</HintPath>
     </Reference>
-    <Reference Include="System">
-      <HintPath>..\packages\Everest\System.dll</HintPath>
-    </Reference>
+    <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
