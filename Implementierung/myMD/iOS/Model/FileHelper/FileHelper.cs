@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 [assembly: Dependency(typeof(myMD.Model.FileHelper.iOS.FileHelper))]
 namespace myMD.Model.FileHelper.iOS
@@ -9,6 +10,7 @@ namespace myMD.Model.FileHelper.iOS
     /// Implementierung der IFileHelper Schnittstelle für iOS-Anwendungen
     /// </summary>
     /// <see>myMD.Model.FileHelper.IFileHelper</see>
+    [Preserve(AllMembers = true)]
     public class FileHelper : IFileHelper
     {
         /// <see>myMD.Model.FileHelper.IFileHelper#DeleteFile(string)</see>
