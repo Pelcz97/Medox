@@ -10,6 +10,16 @@ namespace myMD.ModelInterface.DataModelInterface
 	public interface IProfile : IEntity
     {
         /// <summary>
+        /// Das Geburtsdatum dieses Profils.
+        /// </summary>
+        DateTime BirthDate { get; set; }
+
+        /// <summary>
+        /// Die Blutgruppe dieses Profils.
+        /// </summary>
+        BloodType BloodType { get; set; }
+
+        /// <summary>
         /// Die Versicherungsnummer dieses Profils.
         /// </summary>
         string InsuranceNumber { get; set; }
@@ -18,16 +28,6 @@ namespace myMD.ModelInterface.DataModelInterface
         /// Der Nachname dieses Profils.
         /// </summary>
         string LastName { get; set; }
-
-        /// <summary>
-        /// Die Blutgruppe dieses Profils.
-        /// </summary>
-        BloodType BloodType { get; set; }
-
-        /// <summary>
-        /// Das Geburtsdatum dieses Profils.
-        /// </summary>
-        DateTime BirthDate { get; set; }
 
         /// <summary>
         /// Konvertiert die Schnittstelle zu ihrer Implementierung

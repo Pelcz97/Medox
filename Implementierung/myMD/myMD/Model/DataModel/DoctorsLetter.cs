@@ -1,10 +1,11 @@
-using myMD.ModelInterface.DataModelInterface;
 using myMD.Model.FileHelper;
+using myMD.ModelInterface.DataModelInterface;
 using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace myMD.Model.DataModel
 {
@@ -14,6 +15,7 @@ namespace myMD.Model.DataModel
     /// </summary>
     /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter</see>
     /// <see>myMD.Model.DataModelInterface.Data</see>
+    [Preserve(AllMembers = true)]
     public class DoctorsLetter : Data, IDoctorsLetter, IEquatable<DoctorsLetter>
     {
         /// <summary>
@@ -202,7 +204,7 @@ namespace myMD.Model.DataModel
 
         /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter#RemoveMedication(Model.DataModelInterface.IMedication)</see>
         public void RemoveMedication(IMedication med) => RemoveMedication(med.ToMedication());
-        
+
         /// <summary>
         /// Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig.
         /// </summary>

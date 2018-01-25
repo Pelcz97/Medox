@@ -3,9 +3,11 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using myMD.ModelInterface.ModelFacadeInterface;
+using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.OverallViewModel
 {
+    [Preserve(AllMembers = true)]
     public class OverallViewModel : INotifyPropertyChanged
     {
         protected IModelFacade ModelFacade;

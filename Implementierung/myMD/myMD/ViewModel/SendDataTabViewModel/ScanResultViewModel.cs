@@ -1,8 +1,10 @@
 ﻿using System;
 using Plugin.BluetoothLE;
+using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
+    [Preserve(AllMembers = true)]
     public class ScanResultViewModel
     {
         public IDevice Device { get; set; }

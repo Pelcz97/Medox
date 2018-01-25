@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using myMD.View.AbstractPages;
-using myMD.ViewModel.ProfileTabViewModel;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace myMD.View.ProfileTabPages
 {
-    public partial class ProfilePage : CustomContentPage { 
-
-        ProfileViewModel vm;
-
+    [Preserve(AllMembers = true)]
+    public partial class ProfilePage : CustomContentPage
+    {
         public ProfilePage()
         {
             InitializeComponent();
-            ProfileViewModel vm = new ProfileViewModel();
-            BindingContext = this.vm;
         }
     }
 }

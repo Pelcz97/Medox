@@ -2,10 +2,11 @@
 using myMD.ModelInterface.DataModelInterface;
 using System.Diagnostics;
 using myMD.ModelInterface.ModelFacadeInterface;
-
+using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
+    [Preserve(AllMembers = true)]
     public class MedicineViewModel : OverallViewModel.OverallViewModel
     {
 

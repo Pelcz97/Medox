@@ -11,14 +11,14 @@ namespace myMD.ModelInterface.DataModelInterface
 	public interface IDoctorsLetterGroup : IData
     {
         /// <summary>
-        /// Aktuellstes Datum aller Arztbriefe in dieser Gruppe.
-        /// </summary>
-        DateTime LastDate { get; }
-
-        /// <summary>
         /// Liste aller Arztbriefe in dieser Gruppe.
         /// </summary>
 		IList<IDoctorsLetter> DoctorsLetters { get; }
+
+        /// <summary>
+        /// Aktuellstes Datum aller Arztbriefe in dieser Gruppe.
+        /// </summary>
+        DateTime LastDate { get; }
 
         /// <summary>
         /// Fügt einen Arztbrief zu dieser Gruppe hinzu.

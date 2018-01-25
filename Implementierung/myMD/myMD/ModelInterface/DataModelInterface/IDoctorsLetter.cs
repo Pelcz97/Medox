@@ -21,20 +21,20 @@ namespace myMD.ModelInterface.DataModelInterface
         IDoctor Doctor { get; }
 
         /// <summary>
-        /// Liste aller Medikationen, die in diesem Arztbrief verschrieben wurden.
-        /// </summary>
-        IList<IMedication> Medication { get; }
-
-        /// <summary>
         /// Liste aller Arztbriefgruppen, in denen dieser Arztbrief enthalten ist.
         /// </summary>
         IList<IDoctorsLetterGroup> Groups { get; }
 
         /// <summary>
-        /// Löst die Verbindung zwischen einer Medikation und diesem Arztbrief auf.
+        /// Liste aller Medikationen, die in diesem Arztbrief verschrieben wurden.
         /// </summary>
-        /// <param name="med">Zu entferndene Medikation</param>
-        void RemoveMedication(IMedication med);
+        IList<IMedication> Medication { get; }
+
+        /// <summary>
+        /// Fügt diesen Arztbrief zu einer Arztbriefgruppe hinzu.
+        /// </summary>
+        /// <param name="group">Die Gruppe zu der dieser Arztbrief hinzugefügt werden soll</param>
+        void AddToGroup(IDoctorsLetterGroup group);
 
         /// <summary>
         /// Verbindet eine Medikation mit diesem Arztbrief.
@@ -44,16 +44,16 @@ namespace myMD.ModelInterface.DataModelInterface
 		void AttachMedication(IMedication med);
 
         /// <summary>
-        /// Fügt diesen Arztbrief zu einer Arztbriefgruppe hinzu.
-        /// </summary>
-        /// <param name="group">Die Gruppe zu der dieser Arztbrief hinzugefügt werden soll</param>
-        void AddToGroup(IDoctorsLetterGroup group);
-
-        /// <summary>
         /// Entfernt diesen Arztbrief aus einer Arztbriefgruppe.
         /// </summary>
         /// <param name="group">Die Gruppe aus der dieser Arztbrief entfernt werden soll</param>
         void RemoveFromGroup(IDoctorsLetterGroup group);
+
+        /// <summary>
+        /// Löst die Verbindung zwischen einer Medikation und diesem Arztbrief auf.
+        /// </summary>
+        /// <param name="med">Zu entferndene Medikation</param>
+        void RemoveMedication(IMedication med);
 
         /// <summary>
         /// Konvertiert die Schnittstelle zu ihrer Implementierung

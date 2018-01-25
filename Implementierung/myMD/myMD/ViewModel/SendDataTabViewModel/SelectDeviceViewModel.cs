@@ -6,9 +6,11 @@ using myMD.ModelInterface.DataModelInterface;
 using Plugin.BluetoothLE;
 using Xamarin.Forms;
 using myMD.ModelInterface.ModelFacadeInterface;
+using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
+    [Preserve(AllMembers = true)]
     public class SelectDeviceViewModel : OverallViewModel.OverallViewModel
     {
         public IAdapter BleAdapter;

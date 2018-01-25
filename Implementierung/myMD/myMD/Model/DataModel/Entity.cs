@@ -3,6 +3,7 @@ using SQLite;
 using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
+using Xamarin.Forms.Internals;
 
 namespace myMD.Model.DataModel
 {
@@ -13,7 +14,8 @@ namespace myMD.Model.DataModel
     /// Diese Klassen sollten Entity erweitern.
     /// </summary>
     /// <see>myMD.ModelInterface.DataModelInterface.IEntity</see>
-	public abstract class Entity : IEntity, IEquatable<Entity>
+    [Preserve(AllMembers = true)]
+    public abstract class Entity : IEntity, IEquatable<Entity>
     {
         /// <summary>
         /// Primärer Schlüssel um Zeilen in der korrespondierenden Tabelle zu identifizieren.

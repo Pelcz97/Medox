@@ -4,9 +4,11 @@ using System.Windows.Input;
 using myMD.View.OverviewTabPages;
 using Xamarin.Forms;
 using myMD.ModelInterface.ModelFacadeInterface;
+using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.OverviewTabViewModel
 {
+    [Preserve(AllMembers = true)]
     public class OverviewViewModel : OverallViewModel.OverallViewModel
     {
         INavigation Navigation { get; set; }
