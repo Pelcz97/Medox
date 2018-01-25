@@ -13,6 +13,12 @@ namespace myMD.ViewModel.OverviewTabViewModel
             this.DoctorsLetter = letter;
         }
 
+        public DoctorsLetterViewModel(object item)
+        {
+            var letter = (DoctorsLetterViewModel)item;
+            this.DoctorsLetter = letter.DoctorsLetter;
+        }
+
         public IDoctorsLetter DoctorsLetter { get; protected set; }
 
         public IDoctor Doctor { get => this.DoctorsLetter.Doctor; }
