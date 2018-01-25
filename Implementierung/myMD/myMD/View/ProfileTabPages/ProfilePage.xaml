@@ -17,44 +17,46 @@
             RowHeight="80">
             <TableRoot>
                 <TableSection Title="Information">
-                    <ViewCell>
+                    <ViewCell >
                         <StackLayout Orientation="Vertical" 
                             VerticalOptions="FillAndExpand"
                             HorizontalOptions="FillAndExpand">
                             <Label Text="Name" 
+                                Visible="{Binding LastNameVisible}"   
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
                                 TextColor="White" 
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
-                            <Entry HorizontalOptions="StartAndExpand" 
+                            <Label Text="{Binding LastName}"
+                                   Visible="{Binding LastNameVisible}"
+                                HorizontalOptions="EndAndExpand" 
                                 VerticalOptions="CenterAndExpand" 
                                 BackgroundColor="#191928" 
-                                Placeholder="Name" 
-                                PlaceholderColor="Gray" 
                                 TextColor="White" 
                                 Margin="15,0,15,10" 
-                                FontSize="Medium" />
+                                FontSize="Small" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
                         <StackLayout Orientation="Vertical" 
                             VerticalOptions="FillAndExpand"
                             HorizontalOptions="FillAndExpand">
-                            <Label Text="Vorname" 
+                            <Label Text="Vorname"
+                                Visible="{Binding NameVisible}"
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
                                 TextColor="White" 
                                 Margin="15,0,0,0" 
                                 FontSize="Medium" />
-                            <Entry HorizontalOptions="End" 
-                                VerticalOptions="Center" 
-                                BackgroundColor="#191928" 
-                                Placeholder="Vorname" 
-                                PlaceholderColor="Gray" 
-                                TextColor="White" 
-                                Margin="0,0,15,0" 
-                                FontSize="Medium" />
+                          <Label Text="{Binding Name}"
+                                 Visible="{Binding NameVisible}"
+                              HorizontalOptions="EndAndExpand"
+                              VerticalOptions="CenterAndExpand"
+                              BackgroundColor="#191928"
+                              TextColor="White"
+                              Margin="15,0,15,10"
+                              FontSize="Small" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -62,17 +64,20 @@
                             VerticalOptions="FillAndExpand"
                             HorizontalOptions="FillAndExpand">
                             <Label Text="Geburtstag" 
+                                 Visible="{Binding BirthdateVisible}"                                   
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
                                 TextColor="White" 
                                 Margin="15,0,0,0" 
                                 FontSize="Medium" />
-                            <DatePicker HorizontalOptions="End" 
-                                VerticalOptions="Center" 
-                                IsVisible="true" 
-                                BackgroundColor="#191928" 
-                                TextColor="White" 
-                                Margin="0,0,15,0" />
+                          <Label Text="{Binding Birthdate}"
+                                 Visible="{Binding BirthdateVisible}"
+                                 HorizontalOptions="EndAndExpand"
+                                 VerticalOptions="CenterAndExpand"
+                                 BackgroundColor="#191928"
+                                 TextColor="White"
+                                 Margin="15,0,15,10"
+                                 FontSize="Small" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -80,20 +85,20 @@
                             VerticalOptions="FillAndExpand"
                             HorizontalOptions="FillAndExpand">
                             <Label Text="Versicherungsnummer" 
+                                 Visible="{Binding InsuranceNumberVisible}"                                   
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
                                 TextColor="White" 
                                 Margin="15,0,0,0" 
                                 FontSize="Medium" />
-                            <Entry HorizontalOptions="End" 
-                                VerticalOptions="Center" 
-                                BackgroundColor="#191928" 
-                                Placeholder="Versicherungsnummer" 
-                                PlaceholderColor="Gray" 
-                                Keyboard="Numeric" 
-                                Margin="0,0,15,0" 
-                                TextColor="White" 
-                                FontSize="Medium" />
+                          <Label Text="{Binding InsuranceNumber}"
+                                 Visible="{Binding InsuranceNumberVisible}"
+                                 HorizontalOptions="EndAndExpand"
+                                 VerticalOptions="CenterAndExpand"
+                                 BackgroundColor="#191928"
+                                 TextColor="White"
+                                 Margin="15,0,15,10"
+                                 FontSize="Small" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -101,31 +106,20 @@
                             VerticalOptions="FillAndExpand"
                             HorizontalOptions="FillAndExpand">
                             <Label Text="Blutgruppe" 
+                                 Visible="{Binding BloodtypeVisible}"                                   
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
                                 TextColor="White" 
                                 Margin="15,0,0,0" 
                                 FontSize="Medium" />
-                            <Picker x:Name="BlutgruppenPicker" 
-                                Title="Blutgruppe" 
-                                HorizontalOptions="End" 
-                                Margin="0,0,15,0" 
-                                VerticalOptions="Center" 
-                                IsVisible="true" 
-                                BackgroundColor="#191928" 
-                                TextColor="White">
-                                <Picker.Items>
-                                    <x:String>0 +</x:String>
-                                    <x:String>0 -</x:String>
-                                    <x:String>A +</x:String>
-                                    <x:String>A -</x:String>
-                                    <x:String>B +</x:String>
-                                    <x:String>B -</x:String>
-                                    <x:String>AB +</x:String>
-                                    <x:String>AB -</x:String>
-                                </Picker.Items>
-                                <Picker.SelectedIndex>7</Picker.SelectedIndex>
-                            </Picker>
+                          <Label Text="{Binding Bloodtype}"
+                                 Visible="{Binding BloodtypeVisible}"
+                                 HorizontalOptions="EndAndExpand"
+                                 VerticalOptions="CenterAndExpand"
+                                 BackgroundColor="#191928"
+                                 TextColor="White"
+                                 Margin="15,0,15,10"
+                                 FontSize="Small" />
                         </StackLayout>
                     </ViewCell>
                 </TableSection>
