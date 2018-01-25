@@ -12,7 +12,7 @@ namespace myMD.Model.DataModel
     /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter</see>
     /// <see>myMD.Model.DataModelInterface.Data</see>
     [Preserve(AllMembers = true)]
-	public class Medication : Data, IMedication, IEquatable<Medication>
+    public class Medication : Data, IMedication, IEquatable<Medication>
     {
         /// <summary>
         /// Der Arztbrief, in dem diese Medikation verschrieben wurde und dem sie eindeutig zugeordnet werden kann.

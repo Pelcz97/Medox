@@ -17,6 +17,31 @@ namespace myMD.Model.ModelFacade
 	public class ModelFacade : IModelFacade
     {
         /// <summary>
+        /// Die verwendete Datenübertragungsmöglichkeit
+        /// </summary>
+		private IBluetooth bluetooth;
+
+        /// <summary>
+        /// Die verwendete Datenbank
+        /// </summary>
+		private IEntityDatabase database;
+
+        /// <summary>
+        /// Die verwendete Fabrik
+        /// </summary>
+		private IEntityFactory factory;
+
+        /// <summary>
+        /// Der verwendete Dateihelfer
+        /// </summary>
+		private IFileHelper fileHelper;
+
+        /// <summary>
+        /// Der verwendete Parser
+        /// </summary>
+		private IParserFacade parser;
+
+        /// <summary>
         /// Konstruktor in dem die Schnittstellen, von dem die Klasse abhänig ist injiziert werden können.
         /// </summary>
         /// <param name="database">Die zu verwendende Datenbank</param>
@@ -37,30 +62,24 @@ namespace myMD.Model.ModelFacade
             }
         }
 
-        /// <summary>
-        /// Die verwendete Datenbank
-        /// </summary>
-		private IEntityDatabase database;
+        /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#Activate(Model.DataModelInterface.IProfile)</see>
+        public void Activate(IProfile profile) => database.Activate(profile);
 
-        /// <summary>
-        /// Die verwendete Fabrik
-        /// </summary>
-		private IEntityFactory factory;
+        /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#CreateEmptyGroup()</see>
+        public IDoctorsLetterGroup CreateEmptyGroup()
+        {
+            IDoctorsLetterGroup group = factory.CreateEmptyGroup();
+            database.Insert(group);
+            return group;
+        }
 
-        /// <summary>
-        /// Der verwendete Parser
-        /// </summary>
-		private IParserFacade parser;
-
-        /// <summary>
-        /// Der verwendete Dateihelfer
-        /// </summary>
-		private IFileHelper fileHelper;
-
-        /// <summary>
-        /// Die verwendete Datenübertragungsmöglichkeit
-        /// </summary>
-		private IBluetooth bluetooth;
+        /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#CreateEmptyMedication()</see>
+        public IMedication CreateEmptyMedication()
+        {
+            IMedication med = factory.CreateEmptyMedication();
+            database.Insert(med);
+            return med;
+        }
 
         /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#CreateEmptyProfile()</see>
         public IProfile CreateEmptyProfile()
@@ -71,41 +90,25 @@ namespace myMD.Model.ModelFacade
             return profile;
         }
 
+        /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#Delete(Model.DataModelInterface.IEntity)</see>
+        public void Delete(IEntity entity) => database.Delete(entity);
+
+        /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#GetActiveProfile()</see>
+        public IProfile GetActiveProfile() => database.GetActiveProfile();
+
         /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#GetAllDoctorsLetters()</see>
         public IList<IDoctorsLetter> GetAllDoctorsLetters() => database.GetAllDoctorsLetters();
-
-        /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#GetAllMedications()</see>
-        public IList<IMedication> GetAllMedications() => database.GetAllMedications();
-
-        /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#CreateEmptyMedication()</see>
-        public IMedication CreateEmptyMedication()
-        {
-            IMedication med = factory.CreateEmptyMedication();
-            database.Insert(med);
-            return med;
-        }
 
         /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#getAllGroups()</see>
         public IList<IDoctorsLetterGroup> GetAllGroups() => database.GetAllDoctorsLetterGroups();
 
-        /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#CreateEmptyGroup()</see>
-        public IDoctorsLetterGroup CreateEmptyGroup()
-        {
-            IDoctorsLetterGroup group = factory.CreateEmptyGroup();
-            database.Insert(group);
-            return group;
-        }
+        /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#GetAllMedications()</see>
+        public IList<IMedication> GetAllMedications() => database.GetAllMedications();
 
         /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#SendLetter(Model.DataModelInterface.IDoctorsLetter)</see>
         public void SendLetter(IDoctorsLetter letter) => bluetooth.send(parser.ParseLetterToOriginalFile(letter));
 
         /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#Update(Model.DataModelInterface.IEntity)</see>
         public void Update(IEntity entity) => database.Update(entity);
-
-        /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#Delete(Model.DataModelInterface.IEntity)</see>
-        public void Delete(IEntity entity) => database.Delete(entity);
-
-        /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#Activate(Model.DataModelInterface.IProfile)</see>
-        public void Activate(IProfile profile) => database.Activate(profile);
     }
 }

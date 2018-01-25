@@ -22,7 +22,8 @@ namespace myMD.Model.ParserModel
             if (Enum.TryParse(extension, out FileFormat format))
             {
                 format.GetFileToDatabaseParser().ParseFile(filename, db);
-            } else
+            }
+            else
             {
                 throw new NotSupportedException($"Parsing '.{extension}' files is not supported");
             }

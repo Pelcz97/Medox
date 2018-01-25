@@ -16,9 +16,32 @@ namespace myMD.Model.ParserModel
 	public class Hl7ToDatabaseParser : FileToDatabaseParser
     {
         /// <summary>
-        /// 
+        /// Das Dokument aus dem beim Aufrufen der Parse-Methoden gelesen wird.
+        /// Muss zuvor durch Aufruf der Init() Methode initialisiert werden.
         /// </summary>
-        private ClinicalDocument cd;
+        private ClinicalDocument document;
+
+        /// <summary>
+        /// Initialisiert document, in dem es aus dem gegebenen Dateipfad liest.
+        /// </summary>
+        /// <see>myMD.Model.ParserModel.FileToDatabaseParser#Init(string)</see>
+        protected override void Init(string file)
+        {
+            XmlStateReader xr = new XmlStateReader(XmlReader.Create(@"C:\path-to-file.xml"));
+            XmlIts1Formatter fmtr = new XmlIts1Formatter()
+            {
+                ValidateConformance = false
+            };
+            DependencyService.Get<IHl7ParserHelper>().PrepareFormatter(fmtr);
+            IFormatterParseResult parseResult = fmtr.Parse(xr, typeof(ClinicalDocument));
+            document = parseResult.Structure as ClinicalDocument;
+        }
+
+        /// <see>myMD.Model.ParserModel.FileToDatabaseParser#ParseProfile()</see>
+        protected override Doctor ParseDoctor()
+        {
+            return null;
+        }
 
         /// <see>myMD.Model.ParserModel.FileToDatabaseParser#ParseProfile()</see>
         protected override DoctorsLetter ParseLetter()
@@ -33,31 +56,9 @@ namespace myMD.Model.ParserModel
         }
 
         /// <see>myMD.Model.ParserModel.FileToDatabaseParser#ParseProfile()</see>
-        protected override Doctor ParseDoctor()
-        {
-            return null;
-        }
-
-        /// <see>myMD.Model.ParserModel.FileToDatabaseParser#ParseProfile()</see>
         protected override Profile ParseProfile()
         {
             return null;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <see>myMD.Model.ParserModel.FileToDatabaseParser#Init(string)</see>
-        protected override void Init(string file)
-        {
-            XmlStateReader xr = new XmlStateReader(XmlReader.Create(@"C:\path-to-file.xml"));
-            XmlIts1Formatter fmtr = new XmlIts1Formatter()
-            {
-                ValidateConformance = false
-            };
-            DependencyService.Get<IHl7ParserHelper>().PrepareFormatter(fmtr);
-            IFormatterParseResult parseResult = fmtr.Parse(xr, typeof(ClinicalDocument));
-            cd = parseResult.Structure as ClinicalDocument;
         }
     }
 }

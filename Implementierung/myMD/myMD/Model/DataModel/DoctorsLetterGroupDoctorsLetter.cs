@@ -11,15 +11,15 @@ namespace myMD.Model.DataModel
     public class DoctorsLetterGroupDoctorsLetter
     {
         /// <summary>
-        /// Fremdschlüssel zum Arztbrief in dieser Relation.
-        /// </summary>
-        [ForeignKey(typeof(DoctorsLetter))]
-        public int DoctorsLetterID { get; set; }
-
-        /// <summary>
         /// Fremdschlüssel zur Arztbriefgruppe in dieser Relation.
         /// </summary>
         [ForeignKey(typeof(DoctorsLetterGroup))]
         public int DoctorsLetterGroupID { get; set; }
+
+        /// <summary>
+        /// Fremdschlüssel zum Arztbrief in dieser Relation.
+        /// </summary>
+        [ForeignKey(typeof(DoctorsLetter))]
+        public int DoctorsLetterID { get; set; }
     }
 }

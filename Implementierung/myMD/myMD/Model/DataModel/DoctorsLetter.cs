@@ -1,5 +1,5 @@
-using myMD.ModelInterface.DataModelInterface;
 using myMD.Model.FileHelper;
+using myMD.ModelInterface.DataModelInterface;
 using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
@@ -204,7 +204,7 @@ namespace myMD.Model.DataModel
 
         /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter#RemoveMedication(Model.DataModelInterface.IMedication)</see>
         public void RemoveMedication(IMedication med) => RemoveMedication(med.ToMedication());
-        
+
         /// <summary>
         /// Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig.
         /// </summary>
