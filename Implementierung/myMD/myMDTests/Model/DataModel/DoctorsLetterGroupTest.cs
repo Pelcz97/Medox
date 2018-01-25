@@ -10,9 +10,23 @@ namespace myMDTests.Model.DataModel
     public class DoctorsLetterGroupTest
     {
         private static readonly int COUNT = 10;
+        private static readonly int[] INDICES = Numbers;
         private DateTime[] dates;
         private DoctorsLetter[] letters;
         private DoctorsLetterGroup group;
+
+        public static int[] Numbers
+        {
+            get
+            {
+                int[] numbers = new int[COUNT];
+                for (int i = 0; i < COUNT; ++i)
+                {
+                    numbers[i] = i;
+                }
+                return numbers;
+            }
+        }
 
         [SetUp]
         public void SetUp()
@@ -40,9 +54,33 @@ namespace myMDTests.Model.DataModel
         {
             foreach (DoctorsLetter letter in letters)
             {
-                Assert.IsTrue(letter.Groups.Contains(group));
-                Assert.IsTrue(group.DoctorsLetters.Contains(letter));
+                Assert.IsTrue(letter.DatabaseGroups.Contains(group));
+                Assert.IsTrue(group.DatabaseLetters.Contains(letter));
             }
+        }
+
+        [Test]
+        public void CompareLetterTest()
+        {
+            Array.Sort(dates);
+            Array.Sort(letters);
+            DateTime[] letterDates = new DateTime[COUNT];
+            for (int i = 0; i < COUNT; ++i) {
+                letterDates[i] = letters[i].Date;
+            }
+            Assert.True(letterDates.SequenceEqual(dates));
+        }
+
+        [Test]
+        public void LetterSortedInGroupTest()
+        {
+            Array.Sort(dates);
+            DateTime[] letterDates = new DateTime[COUNT];
+            for (int i = 0; i < COUNT; ++i)
+            {
+                letterDates[i] = group.DatabaseLetters.ElementAt(i).Date;
+            }
+            Assert.True(letterDates.SequenceEqual(dates));
         }
 
         [Test]
@@ -56,11 +94,7 @@ namespace myMDTests.Model.DataModel
             }
         }
 
-        [TestCase(0)]
-        [TestCase(1)]
-        [TestCase(2)]
-        [TestCase(3)]
-        [TestCase(4)]
+        [Test, TestCaseSource("INDICES")]
         public void RemoveTest(int i)
         {
             group.Remove(letters[i]);

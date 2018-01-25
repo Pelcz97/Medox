@@ -84,8 +84,8 @@ namespace myMD.Model.DataModel
                 else
                 {
                     DatabaseLetters.Add(letter);
-                    letter.AddToGroup(this);
                 }
+                letter.AddToGroup(this);
             }
         }
 

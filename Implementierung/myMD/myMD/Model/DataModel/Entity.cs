@@ -55,9 +55,9 @@ namespace myMD.Model.DataModel
         public bool Equals(Entity other)
         {
             return other != null
-                && (ID == other.ID || ID.Equals(other.ID))
-                && (Name == other.Name || Name.Equals(other.Name))
-                && (Profile == other.Profile || Profile.Equals(other.Profile));
+                && ID.Equals(other.ID)
+                && (Name == other.Name || (Name != null && Name.Equals(other.Name)))
+                && (Profile == other.Profile || (Profile != null && Profile.Equals(other.Profile)));
         }
 
         /// <see>System.Object#Equals(System.Object)</see>

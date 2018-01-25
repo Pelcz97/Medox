@@ -166,10 +166,10 @@ namespace myMD.Model.DataModel
         public bool Equals(DoctorsLetter other)
         {
             return base.Equals(other)
-                && Filepath.Equals(other.Filepath)
-                && Diagnosis.Equals(other.Diagnosis)
-                && DatabaseMedication.SequenceEqual(other.DatabaseMedication)
-                && DatabaseDoctor.Equals(other.DatabaseDoctor);
+                && (Filepath == other.Filepath || (Filepath != null && Filepath.Equals(other.Filepath)))
+                && (Diagnosis == other.Diagnosis || (Diagnosis != null && Diagnosis.Equals(other.Diagnosis)))
+                && (DatabaseMedication == other.DatabaseMedication || (DatabaseMedication != null && DatabaseMedication.SequenceEqual(other.DatabaseMedication)))
+                && (DatabaseDoctor == other.DatabaseDoctor || (DatabaseDoctor != null && DatabaseDoctor.Equals(other.DatabaseDoctor)));
         }
 
         /// <see>System.Object#Equals(System.Object)</see>

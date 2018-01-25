@@ -19,9 +19,9 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-<AndroidLinkMode>Full</AndroidLinkMode>
+    <AndroidLinkMode>Full</AndroidLinkMode>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-<AndroidLinkSkip>
+    <AndroidLinkSkip>
 SQLiteNetExtensions;SQLite-net;SQLitePCLRaw.batteries_green;SQLitePCLRaw.batteries_v2;SQLitePCLRaw.provider.e_sqlite3;SQLitePCLRaw.lib.e_sqlite3;SQLitePCLRaw.core
 </AndroidLinkSkip>
   </PropertyGroup>
@@ -49,7 +49,7 @@ SQLiteNetExtensions;SQLite-net;SQLitePCLRaw.batteries_green;SQLitePCLRaw.batteri
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
-<AndroidLinkMode>Full</AndroidLinkMode>
+    <AndroidLinkMode>Full</AndroidLinkMode>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <AndroidLinkSkip>
 SQLiteNetExtensions;SQLite-net;SQLitePCLRaw.batteries_green;SQLitePCLRaw.batteries_v2;SQLitePCLRaw.provider.e_sqlite3;SQLitePCLRaw.lib.e_sqlite3;SQLitePCLRaw.core
@@ -77,10 +77,6 @@ SQLiteNetExtensions;SQLite-net;SQLitePCLRaw.batteries_green;SQLitePCLRaw.batteri
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Everest\System.Drawing.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.Annotations">
       <HintPath>..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\lib\MonoAndroid80\Xamarin.Android.Support.Annotations.dll</HintPath>
     </Reference>
