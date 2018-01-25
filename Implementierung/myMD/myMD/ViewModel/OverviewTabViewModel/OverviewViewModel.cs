@@ -26,7 +26,7 @@ namespace myMD.ViewModel.OverviewTabViewModel
                     dummyDoc.Field = "Podologe";
                     dummyLetter.Date = DateTime.Now.Date;
                     dummyLetter.DatabaseDoctor = dummyDoc;
-                    dummyLetter.Diagnosis = "Diarrhö";
+                    dummyLetter.Diagnosis = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
                     var dummyItem = new DoctorsLetterViewModel(dummyLetter);
                     DoctorsLettersList.Add(dummyItem); 
                 }); } }
