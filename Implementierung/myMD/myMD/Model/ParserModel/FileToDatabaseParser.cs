@@ -45,10 +45,16 @@ namespace myMD.Model.ParserModel
         }
 
         /// <summary>
-        /// 
+        /// Rufe diese Methode auf um den Parser zu initialisieren um danach über die Parse-Methoden die relevanten Informationen zu erhalten.
         /// </summary>
-        /// <param name="file"></param>
+        /// <param name="file">Der Pfad zu der Datei die geparst werden soll</param>
         protected abstract void Init(string file);
+
+        /// <summary>
+        /// Erstelle den in der Datei spezifizierten Arzt.
+        /// </summary>
+        /// <returns>Den erstellten Arzt</returns>
+		protected abstract Doctor ParseDoctor();
 
         /// <summary>
         /// Erstelle einen Arztbrief mit den Informationen aus der Datei.
@@ -61,12 +67,6 @@ namespace myMD.Model.ParserModel
         /// </summary>
         /// <returns>Liste der erstellten Medikationen</returns>
 		protected abstract IList<Medication> ParseMedications();
-
-        /// <summary>
-        /// Erstelle den in der Datei spezifizierten Arzt.
-        /// </summary>
-        /// <returns>Den erstellten Arzt</returns>
-		protected abstract Doctor ParseDoctor();
 
         /// <summary>
         /// Erstelle das in der Datei spezifizierten Profil.

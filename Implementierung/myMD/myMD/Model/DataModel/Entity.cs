@@ -15,7 +15,7 @@ namespace myMD.Model.DataModel
     /// </summary>
     /// <see>myMD.ModelInterface.DataModelInterface.IEntity</see>
     [Preserve(AllMembers = true)]
-	public abstract class Entity : IEntity, IEquatable<Entity>
+    public abstract class Entity : IEntity, IEquatable<Entity>
     {
         /// <summary>
         /// Primärer Schlüssel um Zeilen in der korrespondierenden Tabelle zu identifizieren.

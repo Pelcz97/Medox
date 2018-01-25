@@ -1,10 +1,8 @@
 using myMD.ModelInterface.DataModelInterface;
 using SQLiteNetExtensions.Attributes;
 using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Linq;
-using SQLite;
 using Xamarin.Forms.Internals;
 
 namespace myMD.Model.DataModel
@@ -79,7 +77,7 @@ namespace myMD.Model.DataModel
                 {
                     int i = 0;
                     ///Suche nach passendem Index um die Liste sortiert zu halten
-                    for (IEnumerator<DoctorsLetter> enumerator = DatabaseLetters.GetEnumerator(); 
+                    for (IEnumerator<DoctorsLetter> enumerator = DatabaseLetters.GetEnumerator();
                         enumerator.MoveNext() && letter.CompareTo(enumerator.Current) > 0; ++i) ;
                     DatabaseLetters.Insert(i, letter);
                 }
@@ -152,6 +150,4 @@ namespace myMD.Model.DataModel
         /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetterGroup#ToDoctorsLetterGroup()</see>
         public DoctorsLetterGroup ToDoctorsLetterGroup() => this;
     }
-
 }
-

@@ -11,35 +11,10 @@ namespace myMD.ModelInterface.ModelFacadeInterface
 	public interface IModelFacade
     {
         /// <summary>
-        /// Legt ein neues Profil an, das noch keine Informationen und Daten enthält und gibt dieses zurück.
-        /// Wechselt außerdem das aktive Profil zu diesem Profil.
+        /// Aktiviert das gegebene Profil.
         /// </summary>
-        /// <returns>Das neu erstellte Profil</returns>
-		IProfile CreateEmptyProfile();
-
-        /// <summary>
-        /// Fordert alle Arztbriefe des aktiven Profils an und gibt diese zurück.
-        /// </summary>
-        /// <returns>Liste aller Arztbriefe des aktiven Profils</returns>
-		IList<IDoctorsLetter> GetAllDoctorsLetters();
-
-        /// <summary>
-        /// Fordert alle Medikationen des aktiven Profils an und gibt diese zurück.
-        /// </summary>
-        /// <returns>Liste aller Medikationen des aktiven Profils</returns>
-		IList<IMedication> GetAllMedications();
-
-        /// <summary>
-        /// Legt eine neue Medikation an, die noch keine Informationen enthält und gibt diese zurück.
-        /// </summary>
-        /// <returns>Die neu erstellte, leere Medikation</returns>
-		IMedication CreateEmptyMedication();
-
-        /// <summary>
-        /// Fordert alle Arztbriefgruppen des aktiven Profils an und gibt diese zurück.
-        /// </summary>
-        /// <returns>Liste aller Arztbriefgruppen des aktiven Profils</returns>
-		IList<IDoctorsLetterGroup> GetAllGroups();
+        /// <param name="entity">Das zu aktivierende Profil</param>
+        void Activate(IProfile profile);
 
         /// <summary>
         /// Legt eine neue Arztbriefgruppe an, die noch keine Arztbriefe enthält und gibt diese zurück.
@@ -48,10 +23,17 @@ namespace myMD.ModelInterface.ModelFacadeInterface
 		IDoctorsLetterGroup CreateEmptyGroup();
 
         /// <summary>
-        /// Aktualisiert die gegebene Entität.
+        /// Legt eine neue Medikation an, die noch keine Informationen enthält und gibt diese zurück.
         /// </summary>
-        /// <param name="entity">Die zu aktualisierende Entität</param>
-        void Update(IEntity entity);
+        /// <returns>Die neu erstellte, leere Medikation</returns>
+		IMedication CreateEmptyMedication();
+
+        /// <summary>
+        /// Legt ein neues Profil an, das noch keine Informationen und Daten enthält und gibt dieses zurück.
+        /// Wechselt außerdem das aktive Profil zu diesem Profil.
+        /// </summary>
+        /// <returns>Das neu erstellte Profil</returns>
+		IProfile CreateEmptyProfile();
 
         /// <summary>
         /// Löscht die gegebene Entität.
@@ -60,15 +42,39 @@ namespace myMD.ModelInterface.ModelFacadeInterface
         void Delete(IEntity entity);
 
         /// <summary>
-        /// Aktiviert das gegebene Profil.
+        /// Gibt das aktive Profile zurück.
         /// </summary>
-        /// <param name="entity">Das zu aktivierende Profil</param>
-        void Activate(IProfile profile);
+        /// <returns>Das zurzeit aktive Profil</returns>
+        IProfile GetActiveProfile();
+
+        /// <summary>
+        /// Fordert alle Arztbriefe des aktiven Profils an und gibt diese zurück.
+        /// </summary>
+        /// <returns>Liste aller Arztbriefe des aktiven Profils</returns>
+		IList<IDoctorsLetter> GetAllDoctorsLetters();
+
+        /// <summary>
+        /// Fordert alle Arztbriefgruppen des aktiven Profils an und gibt diese zurück.
+        /// </summary>
+        /// <returns>Liste aller Arztbriefgruppen des aktiven Profils</returns>
+		IList<IDoctorsLetterGroup> GetAllGroups();
+
+        /// <summary>
+        /// Fordert alle Medikationen des aktiven Profils an und gibt diese zurück.
+        /// </summary>
+        /// <returns>Liste aller Medikationen des aktiven Profils</returns>
+		IList<IMedication> GetAllMedications();
 
         /// <summary>
         /// Bereitet den gewünschten Arztbrief für die Datenübertragung vor und veranlasst diese anschließend.
         /// </summary>
         /// <param name="letter">Der zu sendende Arztbrief</param>
 		void SendLetter(IDoctorsLetter letter);
+
+        /// <summary>
+        /// Aktualisiert die gegebene Entität.
+        /// </summary>
+        /// <param name="entity">Die zu aktualisierende Entität</param>
+        void Update(IEntity entity);
     }
 }

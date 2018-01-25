@@ -12,7 +12,7 @@ namespace myMD.Model.DataModel
     /// <see>myMD.ModelInterface.DataModelInterface.IProfile</see>
     /// <see>myMD.Model.DataModel.Entity</see>
     [Preserve(AllMembers = true)]
-	public class Profile : Entity, IProfile, IEquatable<Profile>
+    public class Profile : Entity, IProfile, IEquatable<Profile>
     {
         /// <summary>
         /// Jeder Entität soll eindeutig einem Nutzerprofile zugeordnet werden können.
@@ -24,17 +24,17 @@ namespace myMD.Model.DataModel
             Profile = this;
         }
 
+        /// <see>myMD.ModelInterface.DataModelInterface.IProfile#BirthDate()</see>
+        public DateTime BirthDate { get; set; }
+
+        /// <see>myMD.ModelInterface.DataModelInterface.IProfile#BloodType</see>
+        public BloodType BloodType { get; set; }
+
         /// <see>myMD.ModelInterface.DataModelInterface.IProfile#InsuranceNumber</see>
         public string InsuranceNumber { get; set; }
 
         /// <see>myMD.ModelInterface.DataModelInterface.IProfile#LastName(string)</see>
         public string LastName { get; set; }
-
-        /// <see>myMD.ModelInterface.DataModelInterface.IProfile#BloodType</see>
-        public BloodType BloodType { get; set; }
-
-        /// <see>myMD.ModelInterface.DataModelInterface.IProfile#BirthDate()</see>
-        public DateTime BirthDate { get; set; }
 
         /// <summary>
         /// Zwei Profile sind genau dann gleich, wenn ihr Name, Nachname, Geburtsdatum, ihre Blutgruppe, ID und Versicherungsnummer gleich sind.
@@ -71,6 +71,4 @@ namespace myMD.Model.DataModel
         /// <see>myMD.ModelInterface.DataModelInterface.IProfile#ToProfile()</see>
         public Profile ToProfile() => this;
     }
-
 }
-

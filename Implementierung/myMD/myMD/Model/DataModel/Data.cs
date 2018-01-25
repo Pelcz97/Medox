@@ -1,5 +1,4 @@
 using myMD.ModelInterface.DataModelInterface;
-using SQLite;
 using System;
 using Xamarin.Forms.Internals;
 
@@ -8,7 +7,7 @@ namespace myMD.Model.DataModel
     /// <summary>
     /// Diese Klasse implementiert die IData Schnittstelle und erweitert die abstrakte Enitity Klasse,
     /// um Information über medizinische Daten in einer SQLite-Datenbank speichern zu können.
-    /// Dabei ist diese Klasse nur ein Strukturelement, dass von anderen Klassen erweitert werden sollte, 
+    /// Dabei ist diese Klasse nur ein Strukturelement, dass von anderen Klassen erweitert werden sollte,
     /// um medizinische Daten in einer SQLite-Datenbank speichern zu können und daher abstrakt.
     /// </summary>
     /// <see>myMD.ModelInterface.DataModelInterface.IData</see>
@@ -57,4 +56,3 @@ namespace myMD.Model.DataModel
         }
     }
 }
-
