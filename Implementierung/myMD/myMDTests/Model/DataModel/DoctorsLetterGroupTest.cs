@@ -2,42 +2,40 @@
 using myMD.Model.DataModel;
 using System;
 using System.Linq;
+using myMDTests.Model.EntityFactory;
 
 namespace myMDTests.Model.DataModel
 {
     [TestFixture]
     public class DoctorsLetterGroupTest
     {
-        private static DateTime[] DATES = new DateTime[] {
-            new DateTime(2017, 12, 24),
-            new DateTime(2015, 1, 1),
-            new DateTime(2018, 1, 1),
-            new DateTime(1998, 8, 6),
-            new DateTime(2003, 3, 15)
-        };
+        private static readonly int COUNT = 10;
+        private DateTime[] dates;
         private DoctorsLetter[] letters;
         private DoctorsLetterGroup group;
 
         [SetUp]
         public void SetUp()
         {
-            letters = new DoctorsLetter[DATES.Length];
-            group = new DoctorsLetterGroup();
-            for (int i = 0; i < DATES.Length; ++i)
-            {
-                letters[i] = new DoctorsLetter { Date = DATES[i] };
+            var fac = new RandomEntityFactory();
+            dates = new DateTime[COUNT];
+            letters = new DoctorsLetter[dates.Length];
+            group = fac.Group();
+            for (int i = 0; i < COUNT; ++i) {
+                letters[i] = fac.Letter();
+                dates[i] = letters[i].Date;
                 group.Add(letters[i]);
-            }
+            }       
         }
 
-        //[Test]
+        [Test]
         public void DateTest()
         {
-            Assert.AreEqual(group.Date, DATES.Min());
-            Assert.AreEqual(group.LastDate, DATES.Max());           
+            Assert.AreEqual(group.Date, dates.Min());
+            Assert.AreEqual(group.LastDate, dates.Max());           
         }
 
-        //[Test]
+        [Test]
         public void AddTest()
         {
             foreach (DoctorsLetter letter in letters)
@@ -47,7 +45,7 @@ namespace myMDTests.Model.DataModel
             }
         }
 
-        //[Test]
+        [Test]
         public void DeleteTest()
         {
             group.Delete();
@@ -58,11 +56,11 @@ namespace myMDTests.Model.DataModel
             }
         }
 
-        /*[TestCase(0)]
+        [TestCase(0)]
         [TestCase(1)]
         [TestCase(2)]
         [TestCase(3)]
-        [TestCase(4)]*/
+        [TestCase(4)]
         public void RemoveTest(int i)
         {
             group.Remove(letters[i]);
@@ -75,6 +73,7 @@ namespace myMDTests.Model.DataModel
         {
             letters = null;
             group = null;
+            dates = null;
         }
     }
 }
