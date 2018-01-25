@@ -19,7 +19,11 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+<AndroidLinkMode>Full</AndroidLinkMode>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+<AndroidLinkSkip>
+SQLiteNetExtensions;SQLite-net;SQLitePCLRaw.batteries_green;SQLitePCLRaw.batteries_v2;SQLitePCLRaw.provider.e_sqlite3;SQLitePCLRaw.lib.e_sqlite3;SQLitePCLRaw.core
+</AndroidLinkSkip>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,10 +33,13 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidLinkMode>Full</AndroidLinkMode>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidSupportedAbis>armeabi-v7a;x86;x86_64</AndroidSupportedAbis>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AndroidLinkSkip>
+SQLiteNetExtensions;SQLite-net;SQLitePCLRaw.batteries_green;SQLitePCLRaw.batteries_v2;SQLitePCLRaw.provider.e_sqlite3;SQLitePCLRaw.lib.e_sqlite3;SQLitePCLRaw.core
+</AndroidLinkSkip>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,7 +49,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
+<AndroidLinkMode>Full</AndroidLinkMode>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AndroidLinkSkip>
+SQLiteNetExtensions;SQLite-net;SQLitePCLRaw.batteries_green;SQLitePCLRaw.batteries_v2;SQLitePCLRaw.provider.e_sqlite3;SQLitePCLRaw.lib.e_sqlite3;SQLitePCLRaw.core
+</AndroidLinkSkip>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">

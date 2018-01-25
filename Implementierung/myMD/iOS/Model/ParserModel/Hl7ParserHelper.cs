@@ -1,6 +1,7 @@
 ﻿using MARC.Everest.Formatters.XML.Datatypes.R1;
 using MARC.Everest.Formatters.XML.ITS1;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 [assembly: Dependency(typeof(myMD.Model.ParserModel.iOS.Hl7ParserHelper))]
 namespace myMD.Model.ParserModel.iOS
@@ -8,6 +9,7 @@ namespace myMD.Model.ParserModel.iOS
     /// <summary>
     /// 
     /// </summary>
+    [Preserve(AllMembers = true)]
     public class Hl7ParserHelper : IHl7ParserHelper
     {
         /// <summary>

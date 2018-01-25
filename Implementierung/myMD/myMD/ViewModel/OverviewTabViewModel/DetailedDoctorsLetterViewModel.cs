@@ -2,9 +2,11 @@
 using System.Diagnostics;
 using myMD.ModelInterface.DataModelInterface;
 using myMD.ModelInterface.ModelFacadeInterface;
+using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.OverviewTabViewModel
 {
+    [Preserve(AllMembers = true)]
     public class DetailedDoctorsLetterViewModel : DoctorsLetterViewModel
     {
 

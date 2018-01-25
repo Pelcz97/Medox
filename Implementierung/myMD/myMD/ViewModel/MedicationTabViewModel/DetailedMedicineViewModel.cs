@@ -2,13 +2,13 @@
 using System.Diagnostics;
 using myMD.ModelInterface.DataModelInterface;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
-
+    [Preserve(AllMembers = true)]
     public class DetailedMedicineViewModel : MedicineViewModel
-    {
-        
+    { 
         public DetailedMedicineViewModel(IMedication medication) : base(medication)
         {
             this.CancelPossible = true;

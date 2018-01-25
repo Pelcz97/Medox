@@ -7,9 +7,11 @@ using MvvmHelpers;
 using System;
 using System.Linq;
 using System.Diagnostics;
+using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
+    [Preserve(AllMembers = true)]
     public class MedicationViewModel : OverallViewModel.OverallViewModel, INotifyPropertyChanged
     {
         public ObservableCollection<MedicineViewModel> MedicationsList { get; }
