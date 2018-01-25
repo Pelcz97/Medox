@@ -11,10 +11,10 @@ namespace myMD.View.OverviewTabPages
     [Preserve(AllMembers = true)]
     public partial class DetailedDoctorsLetterPage : CustomContentPage
     {
-        public DetailedDoctorsLetterPage(object obj)
+        public DetailedDoctorsLetterPage(object item)
         {
             InitializeComponent();
-            this.BindingContext = new DetailedDoctorsLetterViewModel(obj);
+            this.BindingContext = new DetailedDoctorsLetterViewModel(item);
         }
 
         async void CancelDetailedPage_Clicked(object sender, System.EventArgs e)

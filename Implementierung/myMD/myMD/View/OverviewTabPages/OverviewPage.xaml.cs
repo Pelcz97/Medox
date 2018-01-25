@@ -12,16 +12,17 @@ namespace myMD.View.OverviewTabPages
     [Preserve(AllMembers = true)]
     public partial class OverviewPage : CustomContentPage
     {
+        OverviewViewModel vm;
         public OverviewPage()
         {
             InitializeComponent();
-            this.BindingContext = new OverviewViewModel(Navigation);
+            vm = new OverviewViewModel();
+            this.BindingContext = vm;
         }
         
         void DoctorsLetterSelected(object sender, Xamarin.Forms.ItemTappedEventArgs e)
         {
-            Navigation.PushModalAsync(new DetailedDoctorsLetterPage(DoctorsLettersList.SelectedItem));
+            Navigation.PushModalAsync(new DetailedDoctorsLetterPage(e.Item));
         }
-
     }
 }

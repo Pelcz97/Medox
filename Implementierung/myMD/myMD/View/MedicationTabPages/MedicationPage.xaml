@@ -28,14 +28,13 @@
             <ListView x:Name="MedicationList" 
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
-                ItemsSource="{Binding MyItems, Mode=TwoWay}"
+                ItemsSource="{Binding MedicationsList, Mode=TwoWay}"
                 IsPullToRefreshEnabled="True"
                 RefreshCommand="{Binding RefreshMedicationList}"
                 IsRefreshing="{Binding MedicationListIsRefreshing, Mode=TwoWay}"
                 IsVisible="true" 
                 SeparatorVisibility="None"
-                ItemSelected="Handle_ItemSelected"
-                IsGroupingEnabled="true" GroupDisplayBinding="{Binding Key}">
+                ItemSelected="Handle_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
