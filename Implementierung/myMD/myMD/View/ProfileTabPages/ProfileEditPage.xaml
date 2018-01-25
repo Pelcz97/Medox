@@ -2,7 +2,7 @@
 <local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD" 
-    x:Class="myMD.View.ProfileTabPages.ProfilePage" 
+    x:Class="myMD.View.ProfileTabPages.ProfileEditPage" 
     Title="Profil">
     <ContentPage.ToolbarItems>
         <!--TODO: clicked event hinzufügen, um Bearbeitung zu toggeln
@@ -27,14 +27,14 @@
                                 TextColor="White" 
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
-                            <Label Text="{Binding Name}"
-                                   Visible="{Binding NameVisible}"
-                                HorizontalOptions="EndAndExpand" 
+                            <Entry HorizontalOptions="StartAndExpand" 
                                 VerticalOptions="CenterAndExpand" 
                                 BackgroundColor="#191928" 
+                                Placeholder="Name" 
+                                PlaceholderColor="Gray" 
                                 TextColor="White" 
                                 Margin="15,0,15,10" 
-                                FontSize="Small" />
+                                FontSize="Medium" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -47,14 +47,14 @@
                                 TextColor="White" 
                                 Margin="15,0,0,0" 
                                 FontSize="Medium" />
-                          <Label Text="{Binding VorName}"
-                                 Visible="{Binding VorNameVisible}"
-                              HorizontalOptions="EndAndExpand"
-                              VerticalOptions="CenterAndExpand"
-                              BackgroundColor="#191928"
-                              TextColor="White"
-                              Margin="15,0,15,10"
-                              FontSize="Small" />
+                            <Entry HorizontalOptions="End" 
+                                VerticalOptions="Center" 
+                                BackgroundColor="#191928" 
+                                Placeholder="Vorname" 
+                                PlaceholderColor="Gray" 
+                                TextColor="White" 
+                                Margin="0,0,15,0" 
+                                FontSize="Medium" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -67,14 +67,12 @@
                                 TextColor="White" 
                                 Margin="15,0,0,0" 
                                 FontSize="Medium" />
-                          <Label Text="{Binding Geburtstag}"
-                                 Visible="{Binding GeburtstagVisible}"
-                                 HorizontalOptions="EndAndExpand"
-                                 VerticalOptions="CenterAndExpand"
-                                 BackgroundColor="#191928"
-                                 TextColor="White"
-                                 Margin="15,0,15,10"
-                                 FontSize="Small" />
+                            <DatePicker HorizontalOptions="End" 
+                                VerticalOptions="Center" 
+                                IsVisible="true" 
+                                BackgroundColor="#191928" 
+                                TextColor="White" 
+                                Margin="0,0,15,0" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -87,14 +85,15 @@
                                 TextColor="White" 
                                 Margin="15,0,0,0" 
                                 FontSize="Medium" />
-                          <Label Text="{Binding Versicherungsnummer}"
-                                 Visible="{Binding VersicherungsnummerVisible}"
-                                 HorizontalOptions="EndAndExpand"
-                                 VerticalOptions="CenterAndExpand"
-                                 BackgroundColor="#191928"
-                                 TextColor="White"
-                                 Margin="15,0,15,10"
-                                 FontSize="Small" />
+                            <Entry HorizontalOptions="End" 
+                                VerticalOptions="Center" 
+                                BackgroundColor="#191928" 
+                                Placeholder="Versicherungsnummer" 
+                                PlaceholderColor="Gray" 
+                                Keyboard="Numeric" 
+                                Margin="0,0,15,0" 
+                                TextColor="White" 
+                                FontSize="Medium" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -107,14 +106,26 @@
                                 TextColor="White" 
                                 Margin="15,0,0,0" 
                                 FontSize="Medium" />
-                          <Label Text="{Binding Blutgruppe}"
-                                 Visible="{Binding BlutgruppeVisible}"
-                                 HorizontalOptions="EndAndExpand"
-                                 VerticalOptions="CenterAndExpand"
-                                 BackgroundColor="#191928"
-                                 TextColor="White"
-                                 Margin="15,0,15,10"
-                                 FontSize="Small" />
+                            <Picker x:Name="BlutgruppenPicker" 
+                                Title="Blutgruppe" 
+                                HorizontalOptions="End" 
+                                Margin="0,0,15,0" 
+                                VerticalOptions="Center" 
+                                IsVisible="true" 
+                                BackgroundColor="#191928" 
+                                TextColor="White">
+                                <Picker.Items>
+                                    <x:String>0 +</x:String>
+                                    <x:String>0 -</x:String>
+                                    <x:String>A +</x:String>
+                                    <x:String>A -</x:String>
+                                    <x:String>B +</x:String>
+                                    <x:String>B -</x:String>
+                                    <x:String>AB +</x:String>
+                                    <x:String>AB -</x:String>
+                                </Picker.Items>
+                                <Picker.SelectedIndex>7</Picker.SelectedIndex>
+                            </Picker>
                         </StackLayout>
                     </ViewCell>
                 </TableSection>

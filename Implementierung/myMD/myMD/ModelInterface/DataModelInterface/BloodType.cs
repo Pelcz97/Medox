@@ -12,6 +12,7 @@ namespace myMD.ModelInterface.DataModelInterface
         BMinus,
         BPlus,
         ABMinus,
-        ABPlus
+        ABPlus,
+        Empty
     }
 }

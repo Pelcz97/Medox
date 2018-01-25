@@ -23,7 +23,7 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects> 
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
@@ -136,6 +136,9 @@
     <Compile Include="View\OverviewTabPages\DetailedDoctorsLetterPage.xaml.cs">
       <DependentUpon>DetailedDoctorsLetterPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ProfileTabPages\ProfileEditPage.xaml.cs">
+      <DependentUpon>ProfileEditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SendDataTabPages\SendDataPage.xaml.cs">
       <DependentUpon>SendDataPage.xaml</DependentUpon>
     </Compile>
@@ -238,7 +241,12 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="View\ProfileTabPages\ProfileEditPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\cancel.png" />
   </ItemGroup>
