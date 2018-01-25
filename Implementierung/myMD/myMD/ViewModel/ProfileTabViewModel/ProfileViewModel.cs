@@ -14,11 +14,11 @@ namespace myMD.ViewModel.ProfileTabViewModel
         public string InsuranceNumber { get => Profile.InsuranceNumber; }
         public BloodType BloodType { get => Profile.BloodType; }
 
-        public bool LastNameVisible { get => Profile.LastName != null; }
-        public bool NameVisible { get => Profile.Name != null; }
-        public bool BirthdateVisible { get => Profile.BirthDate != null; }
-        public bool InsuranceNumberVisible { get => Profile.InsuranceNumber != null; }
-        public bool BloodTypeVisible { get => Profile.BloodType != BloodType.Empty; }
+        public bool LastNameVisible { get; set; }
+        public bool NameVisible { get; set; }
+        public bool BirthdateVisible { get; set; }
+        public bool InsuranceNumberVisible { get; set; }
+        public bool BloodTypeVisible { get; set; }
 
 
 
