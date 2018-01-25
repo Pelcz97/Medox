@@ -10,19 +10,12 @@
         <ToolbarItem Name="EditButton" 
         Text="Bearbeiten" Order="Primary" 
         Command="{Binding EditDoctorsLettersList_Clicked}"/>
+        <ToolbarItem Name="EditButton" 
+        Text="Add Dummy" Order="Primary" 
+        Command="{Binding AddDummyLetter}" Priority="-1"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
-        <Grid HorizontalOptions="Center"
-                VerticalOptions="Center">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            
             <ListView x:Name="DoctorsLettersList" HasUnevenRows="true" 
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding DoctorsLettersList}" 
@@ -64,7 +57,7 @@
                                             Grid.Row="0" 
                                             HorizontalTextAlignment="Start" />
                                         
-                                            <Label Text="{Binding DoctorsLetterDate}" 
+                                            <Label Text="{Binding DoctorsLetterDate, StringFormat='{0:MMMM dd, yyyy}'}" 
                                             TextColor="#4A4A4A" 
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 
@@ -87,12 +80,5 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Label HorizontalOptions="Center" VerticalOptions="Center"
-                    Text="There's nothing yet" VerticalTextAlignment="Center" 
-                    FontAttributes="Bold" FontSize="Medium"
-                    TextColor="White"
-                    Grid.Row="0"
-                    Grid.Column="0" />
-        </Grid>
     </ContentPage.Content>
 </local:CustomContentPage>

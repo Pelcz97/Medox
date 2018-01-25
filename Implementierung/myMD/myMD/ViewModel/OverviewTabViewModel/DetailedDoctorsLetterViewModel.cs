@@ -12,18 +12,16 @@ namespace myMD.ViewModel.OverviewTabViewModel
 
         public string Diagnosis { get => this.DoctorsLetter.Diagnosis; }
 
-        public DetailedDoctorsLetterViewModel(object obj) : this(obj as IDoctorsLetter) { }
+        public DetailedDoctorsLetterViewModel(object obj) : base(obj)
+        {
+            var letter = (DoctorsLetterViewModel)obj;
+            this.DoctorsLetter = letter.DoctorsLetter;
+        }
 
         public DetailedDoctorsLetterViewModel(IDoctorsLetter letter) : base(letter)
         {
             this.DoctorsLetter = letter;
 
-            /*
-            Debug.WriteLine(this.DoctorsName);
-            Debug.WriteLine(this.DoctorsField);
-            Debug.WriteLine(this.DoctorsLetterDate);
-            Debug.WriteLine("=======================");
-            */
         }
     }
 }

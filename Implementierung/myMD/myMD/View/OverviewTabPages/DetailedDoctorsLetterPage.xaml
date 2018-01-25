@@ -16,9 +16,8 @@
         <Grid>
           <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="40" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="85" />
-            <RowDefinition Height="*"/>
           </Grid.RowDefinitions>
 
           <Label Text="{Binding DoctorsName}" TextColor="#191928"
@@ -26,7 +25,7 @@
                   VerticalTextAlignment="End" HorizontalTextAlignment="Start"
                   Grid.Row="0"/>
 
-          <Label Text="{Binding DoctorsLetterDate}" TextColor="#FFFFFF"
+          <Label Text="{Binding DoctorsLetterDate, StringFormat='{0:MMMM dd, yyyy}'}" TextColor="#FFFFFF"
                   FontSize="Medium" FontAttributes="Bold"
                   VerticalTextAlignment="Center" HorizontalTextAlignment="End"
                   Grid.Row="2"/>
@@ -35,10 +34,6 @@
                   FontSize="45" FontAttributes="Bold"
                   VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
                   Grid.Row="1"/>
-          <Label Text="{Binding Diagnosis}" TextColor="#FFFFFF"
-                  FontSize="45" FontAttributes="Bold"
-                  VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                  Grid.Row="2"/>
 
           <Button x:Name="QuitButton" HorizontalOptions="End" VerticalOptions="Start"
               Image="cancel.png"
@@ -46,6 +41,9 @@
         </Grid>
 
       </Frame>
+            <Label Text="{Binding Diagnosis}" TextColor="#FFFFFF"
+                  FontSize="Small" FontAttributes="None"
+                  VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
     </StackLayout>
   </ContentPage.Content>
 </local:CustomContentPage>

@@ -2,7 +2,7 @@
 <local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD" 
-    x:Class="myMD.View.ProfileTabPages.ProfilePage" 
+    x:Class="myMD.View.ProfileTabPages.ProfileEditPage" 
     Title="Profil">
     <ContentPage.ToolbarItems>
         <!--TODO: clicked event hinzufügen, um Bearbeitung zu toggeln
@@ -17,7 +17,7 @@
             RowHeight="80">
             <TableRoot>
                 <TableSection Title="Information">
-                    <ViewCell>
+                    <ViewCell >
                         <StackLayout Orientation="Vertical" 
                             VerticalOptions="FillAndExpand"
                             HorizontalOptions="FillAndExpand">
