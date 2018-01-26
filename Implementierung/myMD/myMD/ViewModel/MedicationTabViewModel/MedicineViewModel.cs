@@ -69,8 +69,6 @@ namespace myMD.ViewModel.MedicationTabViewModel
         public MedicineViewModel(IMedication medication)
         {
             Medication = medication;
-            //MedicationStartDate = Medication.Date;
-            //MedicationEndDate = Medication.EndDate;
             calcDuration();
         }
 

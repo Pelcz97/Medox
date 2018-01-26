@@ -18,7 +18,7 @@
             <TableView BackgroundColor="#191928" Intent="Settings">
                 <TableRoot>
                     <TableSection Title="Information">
-                        
+
                     <ViewCell>
                             <Grid HorizontalOptions="StartAndExpand"
                                 VerticalOptions="Center">
@@ -71,7 +71,6 @@
                     </ViewCell>
                     </TableSection>
                     <TableSection Title="Zeitraum der Einnahme">
-                        
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="Einmalige Einnahme"

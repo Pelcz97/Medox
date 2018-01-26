@@ -17,7 +17,6 @@ namespace myMD.ViewModel.MedicationTabViewModel
         public ObservableCollection<MedicineViewModel> MedicationsList { get; }
         public static ObservableCollection<Grouping<string, MedicineViewModel>> MyItems { get; set; }
         
-
         private MedicineViewModel _ItemSelected;
         public MedicineViewModel SelectedMedication
         {

@@ -7,7 +7,7 @@
     <ContentPage.ToolbarItems>
         <!--TODO: clicked event hinzufügen, um Bearbeitung zu toggeln
     EntryElemente DataBinden-->
-        <ToolbarItem Name="EditButton" Text="Bearbeiten" Order="Primary" />
+        <ToolbarItem Name="EditButton" Text="Bearbeiten" Order="Primary" Clicked="EditProfileButton" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <TableView BackgroundColor="#191928" Intent="Form" 
@@ -16,24 +16,24 @@
             HeightRequest="50"
             RowHeight="80">
             <TableRoot>
-                <TableSection Title="Information">
-                    <ViewCell >
+                <TableSection>
+                    <ViewCell>
                         <StackLayout Orientation="Vertical" 
                             VerticalOptions="FillAndExpand"
                             HorizontalOptions="FillAndExpand">
                             <Label Text="Name" 
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
-                                TextColor="White" 
+                                TextColor="#50647D" 
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
-                            <Label Text="{Binding LastName}"
-                                HorizontalOptions="EndAndExpand" 
+                            <Label Text="{Binding LastName, Mode=TwoWay}"
+                                HorizontalOptions="StartAndExpand" 
                                 VerticalOptions="CenterAndExpand" 
                                 BackgroundColor="#191928" 
                                 TextColor="White" 
                                 Margin="15,0,15,10" 
-                                FontSize="Small" />
+                                FontSize="Medium" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -43,16 +43,16 @@
                             <Label Text="Vorname"
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
-                                TextColor="White" 
-                                Margin="15,0,0,0" 
-                                FontSize="Medium" />
+                                TextColor="#53585E" 
+                                Margin="15,5,0,0" 
+                                FontSize="Small" />
                           <Label Text="{Binding Name}"
-                              HorizontalOptions="EndAndExpand"
+                              HorizontalOptions="StartAndExpand"
                               VerticalOptions="CenterAndExpand"
                               BackgroundColor="#191928"
                               TextColor="White"
                               Margin="15,0,15,10"
-                              FontSize="Small" />
+                              FontSize="Medium" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -62,16 +62,16 @@
                             <Label Text="Geburtstag"                                    
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
-                                TextColor="White" 
-                                Margin="15,0,0,0" 
-                                FontSize="Medium" />
-                          <Label Text="{Binding Birthdate}"
-                                 HorizontalOptions="EndAndExpand"
+                                TextColor="#00B9B4" 
+                                Margin="15,5,0,0" 
+                                FontSize="Small" />
+                          <Label Text="{Binding Birthdate, StringFormat='{0:MMMM dd, yyyy}'}"
+                                 HorizontalOptions="StartAndExpand"
                                  VerticalOptions="CenterAndExpand"
                                  BackgroundColor="#191928"
                                  TextColor="White"
                                  Margin="15,0,15,10"
-                                 FontSize="Small" />
+                                 FontSize="Medium" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -81,16 +81,16 @@
                             <Label Text="Versicherungsnummer"                                    
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
-                                TextColor="White" 
-                                Margin="15,0,0,0" 
-                                FontSize="Medium" />
+                                TextColor="#DCDEE0" 
+                                Margin="15,5,0,0" 
+                                FontSize="Small" />
                           <Label Text="{Binding InsuranceNumber}"
-                                 HorizontalOptions="EndAndExpand"
+                                 HorizontalOptions="StartAndExpand"
                                  VerticalOptions="CenterAndExpand"
                                  BackgroundColor="#191928"
                                  TextColor="White"
                                  Margin="15,0,15,10"
-                                 FontSize="Small" />
+                                 FontSize="Medium" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -100,16 +100,16 @@
                             <Label Text="Blutgruppe"                                    
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
-                                TextColor="White" 
-                                Margin="15,0,0,0" 
-                                FontSize="Medium" />
+                                TextColor="#DCDEE0" 
+                                Margin="15,5,0,0" 
+                                FontSize="Small" />
                           <Label Text="{Binding Bloodtype}"
-                                 HorizontalOptions="EndAndExpand"
+                                 HorizontalOptions="StartAndExpand"
                                  VerticalOptions="CenterAndExpand"
                                  BackgroundColor="#191928"
                                  TextColor="White"
                                  Margin="15,0,15,10"
-                                 FontSize="Small" />
+                                 FontSize="Medium" />
                         </StackLayout>
                     </ViewCell>
                 </TableSection>
