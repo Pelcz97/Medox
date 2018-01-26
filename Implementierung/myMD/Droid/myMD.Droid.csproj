@@ -54,6 +54,7 @@ SQLiteNetExtensions;SQLite-net;SQLitePCLRaw.batteries_green;SQLitePCLRaw.batteri
     <AndroidLinkSkip>
 SQLiteNetExtensions;SQLite-net;SQLitePCLRaw.batteries_green;SQLitePCLRaw.batteries_v2;SQLitePCLRaw.provider.e_sqlite3;SQLitePCLRaw.lib.e_sqlite3;SQLitePCLRaw.core
 </AndroidLinkSkip>
+    <AndroidSupportedAbis>armeabi-v7a;x86_64</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -71,10 +72,10 @@ SQLiteNetExtensions;SQLite-net;SQLitePCLRaw.batteries_green;SQLitePCLRaw.batteri
     <Reference Include="MARC.Everest.RMIM.UV.CDAr2">
       <HintPath>..\packages\Everest\MARC.Everest.RMIM.UV.CDAr2.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Configuration">
-      <HintPath>..\packages\Everest\System.Configuration.dll</HintPath>
+    <Reference Include="MARC.Everest.RMIM.UV.NE2010">
+      <HintPath>..\packages\Everest\MARC.Everest.RMIM.UV.NE2010.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="Xamarin.Android.Support.Annotations">

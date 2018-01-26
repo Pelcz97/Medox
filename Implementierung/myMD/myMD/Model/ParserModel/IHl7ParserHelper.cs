@@ -1,4 +1,6 @@
 ﻿using MARC.Everest.Formatters.XML.ITS1;
+using MARC.Everest.RMIM.UV.CDAr2.POCD_MT000040UV;
+using myMD.Model.DataModel;
 
 namespace myMD.Model.ParserModel
 {
@@ -12,5 +14,7 @@ namespace myMD.Model.ParserModel
         /// </summary>
         /// <param name="fmtr">Der vorzubereitende Xml-Formatierer</param>
         void PrepareFormatter(XmlIts1Formatter fmtr);
+
+        void FinalizeMedication(SubstanceAdministration source, Medication target);
     }
 }

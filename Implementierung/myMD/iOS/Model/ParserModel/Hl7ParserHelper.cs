@@ -1,5 +1,10 @@
-﻿using MARC.Everest.Formatters.XML.Datatypes.R1;
+﻿using MARC.Everest.DataTypes;
+using MARC.Everest.Formatters.XML.Datatypes.R1;
 using MARC.Everest.Formatters.XML.ITS1;
+using MARC.Everest.RMIM.UV.CDAr2.POCD_MT000040UV;
+using myMD.Model.DataModel;
+using myMD.ModelInterface.DataModelInterface;
+using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
@@ -21,6 +26,15 @@ namespace myMD.Model.ParserModel.iOS
         public void PrepareFormatter(XmlIts1Formatter fmtr)
         {
             fmtr.GraphAides.Add(new ClinicalDocumentDatatypeFormatter());
+        }
+
+        public void FinalizeMedication(SubstanceAdministration source, Medication target)
+        {
+            PIVL<TS> pivl = source.EffectiveTime.First().Hull as PIVL<TS>;
+            target.Date = pivl.Phase.Low.DateValue;
+            target.EndDate = pivl.Phase.High.DateValue;
+            target.Frequency = pivl.Frequency.Numerator.ToInt();
+            target.Interval = (Interval)pivl.Frequency.Denominator.Unit.First();
         }
     }
 }

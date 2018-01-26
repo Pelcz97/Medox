@@ -5,10 +5,10 @@ namespace myMD.ModelInterface.DataModelInterface
     /// </summary>
 	public enum Interval
     {
-        Hour,
-        Day,
-        Week,
-        Month,
-        Year
+        Hour = 'h',
+        Day = 'd',
+        Week = 'w',
+        Month = 'm',
+        Year = 'y',
     }
 }
