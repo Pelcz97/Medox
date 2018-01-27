@@ -1,7 +1,6 @@
 ﻿using System;
 using myMD.ModelInterface.DataModelInterface;
 using System.Diagnostics;
-using myMD.ModelInterface.ModelFacadeInterface;
 using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.MedicationTabViewModel

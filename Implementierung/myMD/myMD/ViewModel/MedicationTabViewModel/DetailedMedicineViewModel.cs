@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using myMD.ModelInterface.DataModelInterface;
 using myMD.View.MedicationTabPages;
 using Xamarin.Forms;

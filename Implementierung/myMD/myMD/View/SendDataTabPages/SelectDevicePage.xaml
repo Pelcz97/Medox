@@ -17,7 +17,6 @@
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding DeviceList}"
                 SeparatorVisibility="Default"
-                IsPullToRefreshEnabled="true"
                 ItemSelected="Handle_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>

@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
-using myMD.View.OverviewTabPages;
 using Xamarin.Forms;
-using myMD.ModelInterface.ModelFacadeInterface;
 using Xamarin.Forms.Internals;
 using myMD.Model.DataModel;
 

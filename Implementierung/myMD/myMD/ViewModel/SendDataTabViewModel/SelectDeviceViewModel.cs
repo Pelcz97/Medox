@@ -2,10 +2,8 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Windows.Input;
-using myMD.ModelInterface.DataModelInterface;
 using Plugin.BluetoothLE;
 using Xamarin.Forms;
-using myMD.ModelInterface.ModelFacadeInterface;
 using Xamarin.Forms.Internals;
 using System.Linq;
 

@@ -4,7 +4,6 @@ using System.Windows.Input;
 using myMD.ModelInterface.DataModelInterface;
 using Xamarin.Forms;
 using MvvmHelpers;
-using System;
 using System.Linq;
 using System.Diagnostics;
 using Xamarin.Forms.Internals;

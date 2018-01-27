@@ -1,7 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using myMD.ModelInterface.DataModelInterface;
-using myMD.ModelInterface.ModelFacadeInterface;
+﻿using myMD.ModelInterface.DataModelInterface;
 using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.OverviewTabViewModel
