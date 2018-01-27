@@ -35,7 +35,9 @@ namespace myMD.Model.ParserModel
 
         private IHl7ParserHelper helper;
 
-        public Hl7ToDatabaseParser() => helper = DependencyService.Get<IHl7ParserHelper>();
+        public Hl7ToDatabaseParser() : this(DependencyService.Get<IHl7ParserHelper>()) { }
+
+        public Hl7ToDatabaseParser(IHl7ParserHelper helper) => this.helper = helper;
 
         /// <summary>
         /// Initialisiert document, in dem es aus dem gegebenen Dateipfad liest.
@@ -75,7 +77,7 @@ namespace myMD.Model.ParserModel
             {
                 Filepath = file,
                 Name = letter.Title,
-                Diagnosis = letter.Text.Language,
+                Diagnosis = System.Text.Encoding.UTF8.GetString(letter.Text.Data, 0, letter.Text.Data.Length),
                 Date = document.EffectiveTime.DateValue,
                 Sensitivity = (Sensitivity)sensitivity,
             };
@@ -99,9 +101,8 @@ namespace myMD.Model.ParserModel
         {
             Medication target = new Medication()
             {
-                Dosis = med.DoseQuantity.Value.ToInt().ToString() + med.DoseQuantity.Center.Unit,
+                Dosis = String.Concat(med.DoseQuantity.Value.ToInt().ToString(), med.DoseQuantity.Value.Unit),
                 Name = med.Consumable.ManufacturedProduct.GetManufacturedDrugOrOtherMaterialIfManufacturedLabeledDrug().Name.Part.First(),
-                Frequency = med.RepeatNumber.Value.ToInt(),
                 Sensitivity = sensitivity,
             };
             helper.FinalizeMedication(med, target);

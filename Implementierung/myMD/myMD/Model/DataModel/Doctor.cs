@@ -24,7 +24,7 @@ namespace myMD.Model.DataModel
         public bool Equals(Doctor other)
         {
             return base.Equals(other)
-                && Field.Equals(other.Field);
+                && (Field == other.Field || (Field != null && Field.Equals(other.Field)));
         }
 
         /// <see>System.Object#Equals(System.Object)</see>

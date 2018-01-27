@@ -3,21 +3,17 @@ using MARC.Everest.Formatters.XML.Datatypes.R1;
 using MARC.Everest.Formatters.XML.ITS1;
 using MARC.Everest.RMIM.UV.CDAr2.POCD_MT000040UV;
 using myMD.Model.DataModel;
+using myMD.Model.ParserModel;
 using myMD.ModelInterface.DataModelInterface;
-using System;
 using System.Linq;
-using Xamarin.Forms;
-using Xamarin.Forms.Internals;
 
-[assembly: Dependency(typeof(myMD.Model.ParserModel.Droid.Hl7ParserHelper))]
-namespace myMD.Model.ParserModel.Droid
+namespace myMDTests.Model.ParserModel
 {
     /// <summary>
     /// Implementierung der IHl7ParserHelper Schnittstelle für Android-Anwendungen
     /// </summary>
     /// <see>myMD.Model.ParserModel.IParserHelper</see>
-    [Preserve(AllMembers = true)]
-    public class Hl7ParserHelper : IHl7ParserHelper
+    public class TestHl7ParserHelper : IHl7ParserHelper
     {
         /// <summary>
         /// Das Hinzufügen der ClinicalDocumentDatatypeFormatter Instanz zu dem Formatierer erfordert die ICloneable Schnittstelle, die ClinicalDocumentDatatypeFormatter implementiert.
@@ -38,9 +34,10 @@ namespace myMD.Model.ParserModel.Droid
             {
                 target.Frequency = pivl.Frequency.Numerator.ToInt();
                 target.Interval = (Interval)pivl.Frequency.Denominator.Unit.First();
-            } else
+            }
+            else
             {
-                target.Frequency = (int) (1.0 / pivl.Period.ToDouble());
+                target.Frequency = (int)(1.0 / pivl.Period.ToDouble());
                 target.Interval = (Interval)pivl.Period.Unit.First();
             }
         }
