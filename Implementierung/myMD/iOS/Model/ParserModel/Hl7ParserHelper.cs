@@ -35,6 +35,16 @@ namespace myMD.Model.ParserModel.iOS
             target.EndDate = pivl.Phase.High.DateValue;
             target.Frequency = pivl.Frequency.Numerator.ToInt();
             target.Interval = (Interval)pivl.Frequency.Denominator.Unit.First();
+            if (pivl.Frequency != null)
+            {
+                target.Frequency = pivl.Frequency.Numerator.ToInt();
+                target.Interval = (Interval)pivl.Frequency.Denominator.Unit.First();
+            }
+            else
+            {
+                target.Frequency = (int)(1.0 / pivl.Period.ToDouble());
+                target.Interval = (Interval)pivl.Period.Unit.First();
+            }
         }
     }
 }

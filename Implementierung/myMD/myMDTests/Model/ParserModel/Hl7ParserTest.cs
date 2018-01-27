@@ -28,7 +28,8 @@ namespace myMDTests.Model.ParserModel
         private static readonly RandomEntityFactory fac = new RandomEntityFactory();
         private static readonly Doctor doctor = new Doctor
         {
-            Name = "Dr. Jan Itor"
+            Name = "Dr. Jan Itor", 
+            Field = "Experte auf diesem Gebiet"
         };
         private static readonly Profile profile = new Profile
         {
@@ -189,7 +190,7 @@ namespace myMDTests.Model.ParserModel
                 {
                     Id = SET<II>.CreateSET(new II("1.2.3.4.5.6.1", "")), // Physician's identifiers (or how we know the physician)
                     AssignedAuthorChoice = AuthorChoice.CreatePerson(
-                    SET<PN>.CreateSET(PN.FromFamilyGiven(EntityNameUse.Legal, doctor.Name)) // The author's name
+                    SET<PN>.CreateSET(PN.FromFamilyGiven(EntityNameUse.Legal, doctor.Name), PN.FromFamilyGiven(EntityNameUse.Assigned, doctor.Field)) // The author's name
                     ),
                 },
             };

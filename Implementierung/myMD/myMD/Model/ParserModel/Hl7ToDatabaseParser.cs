@@ -65,6 +65,7 @@ namespace myMD.Model.ParserModel
             {
                 //Suche den legalen Namen des Arztes
                 Name = author.Name.Find(v => v.Use.Items.Any(w => w.Code.Equals(EntityNameUse.Legal))).ToString(),
+                Field = author.Name.Find(v => v.Use.Items.Any(w => w.Code.Equals(EntityNameUse.Assigned))).ToString(),
             };
         }
 
