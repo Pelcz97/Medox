@@ -43,5 +43,7 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIRequiresPersistentWiFi</key>
+	<false/>
 </dict>
 </plist>
