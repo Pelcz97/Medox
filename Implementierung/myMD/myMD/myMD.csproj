@@ -166,6 +166,8 @@
     <Compile Include="ViewModel\SendDataTabViewModel\TransmittingDataViewModel.cs" />
     <Compile Include="ViewModel\ProfileTabViewModel\ProfileViewModel.cs" />
     <Compile Include="ViewModel\OverallViewModel\OverallViewModel.cs" />
+    <Compile Include="ViewModel\ProfileTabViewModel\ProfileEditViewModel.cs" />
+    <Compile Include="ViewModel\ProfileTabViewModel\ProfileItemViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MARC.Everest">

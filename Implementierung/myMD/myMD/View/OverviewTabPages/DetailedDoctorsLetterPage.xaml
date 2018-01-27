@@ -4,15 +4,15 @@
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
     x:Class="myMD.View.OverviewTabPages.DetailedDoctorsLetterPage">
   <ContentPage.Content>
+        
     <StackLayout VerticalOptions="StartAndExpand">
 
       <Frame CornerRadius="0"
       BackgroundColor="#00B9B4"
       Margin="0"
-      HorizontalOptions="Center"
+      HorizontalOptions="FillAndExpand"
       VerticalOptions="Start"
-      HeightRequest="100"
-      WidthRequest="400">
+      HeightRequest="100">
         <Grid>
           <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -39,11 +39,27 @@
               Image="cancel.png"
               Grid.Row="0" Clicked="CancelDetailedPage_Clicked"/>
         </Grid>
-
       </Frame>
-            <Label Text="{Binding Diagnosis}" TextColor="#FFFFFF"
-                  FontSize="Small" FontAttributes="None"
-                  VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+
+            <TableView BackgroundColor="#191928" Intent="Form" 
+            VerticalOptions="EndAndExpand" 
+            HorizontalOptions="FillAndExpand"
+            HasUnevenRows="true">
+            <TableRoot>
+                <TableSection Title="Diagnose">
+                    <ViewCell>
+                            <Label Text="{Binding Diagnosis}"
+                            TextColor="#FFFFFF"
+                                FontSize="Small" 
+                                FontAttributes="None"
+                            VerticalTextAlignment="Center" 
+                            HorizontalTextAlignment="Start" 
+                            Margin="15,3,15,3"/>
+                            </ViewCell>
+                        </TableSection>
+                </TableRoot>
+            </TableView>
     </StackLayout>
+            
   </ContentPage.Content>
 </local:CustomContentPage>

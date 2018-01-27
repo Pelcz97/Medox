@@ -77,10 +77,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchFastDev>false</MtouchFastDev>
+    <MtouchFastDev>true</MtouchFastDev>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <IOSDebuggerPort>10766</IOSDebuggerPort>
@@ -90,7 +90,7 @@
     <PlatformTarget>x86</PlatformTarget>
     <CodesignProvision>iOS Team Provisioning Profile: com.team3.myMD</CodesignProvision>
     <IOSDebugOverWiFi>false</IOSDebugOverWiFi>
-    <MtouchEnableSGenConc>false</MtouchEnableSGenConc>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <MtouchExtraArgs>-nolinkaway --linkskip=SQLiteNetExtensions --linkskip=SQLite-net --linkskip=SQLitePCLRaw.batteries_green --linkskip=SQLitePCLRaw.batteries_v2 --linkskip=SQLitePCLRaw.core --linkskip=SQLitePCLRaw.provider.sqlite3</MtouchExtraArgs>
   </PropertyGroup>

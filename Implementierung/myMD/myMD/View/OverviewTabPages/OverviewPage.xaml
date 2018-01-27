@@ -21,7 +21,7 @@
                 ItemsSource="{Binding DoctorsLettersList}" 
                 SeparatorVisibility="None" 
                 ItemTapped="DoctorsLetterSelected"
-                Grid.Row="0" Grid.Column="0">
+                CachingStrategy="RecycleElement">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -30,13 +30,12 @@
                                             IsDestructive="True" />
                             </ViewCell.ContextActions>
                             <ViewCell.View>
-                                <Frame x:Name="Label" CornerRadius="15" 
+                                <Frame x:Name="WhiteFrame" CornerRadius="15" 
                                         BackgroundColor="#FFFFFF" 
                                         Margin="10,3,10,3"
-                                        HorizontalOptions="CenterAndExpand" 
-                                        VerticalOptions="CenterAndExpand" 
-                                        HeightRequest="70" 
-                                        WidthRequest="400"
+                                        HorizontalOptions="FillAndExpand" 
+                                        VerticalOptions="FillAndExpand" 
+
                                         HasShadow="true">
                                     <Grid>
                                         <Grid.RowDefinitions>

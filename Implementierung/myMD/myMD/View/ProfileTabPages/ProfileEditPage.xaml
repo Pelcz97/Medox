@@ -3,11 +3,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD" 
     x:Class="myMD.View.ProfileTabPages.ProfileEditPage" 
-    Title="Profil">
+    Title="Profil bearbeiten">
     <ContentPage.ToolbarItems>
-        <!--TODO: clicked event hinzufügen, um Bearbeitung zu toggeln
-    EntryElemente DataBinden-->
-        <ToolbarItem Name="EditButton" Text="Bearbeiten" Order="Primary" />
+        <ToolbarItem Name="SaveChangedProfileButton" Text="Fertig" 
+        Order="Primary" Clicked="SaveChangedProfileButton_Clicked" />
+        <ToolbarItem Name="CancelButton" Text="Abbrechen" 
+        Order="Primary" Priority="-1" Clicked="CancelButton_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <TableView BackgroundColor="#191928" Intent="Form" 
@@ -34,7 +35,7 @@
                                 PlaceholderColor="Gray" 
                                 TextColor="White" 
                                 Margin="15,0,15,10" 
-                                FontSize="Medium" />
+                                FontSize="Medium" Text="{Binding LastName}" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -54,7 +55,7 @@
                                 PlaceholderColor="Gray" 
                                 TextColor="White" 
                                 Margin="0,0,15,0" 
-                                FontSize="Medium" />
+                                FontSize="Medium" Text="{Binding Name}"/>
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -72,7 +73,7 @@
                                 IsVisible="true" 
                                 BackgroundColor="#191928" 
                                 TextColor="White" 
-                                Margin="0,0,15,0" />
+                                Margin="0,0,15,0" Date="{Binding Birthdate}"/>
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -90,10 +91,10 @@
                                 BackgroundColor="#191928" 
                                 Placeholder="Versicherungsnummer" 
                                 PlaceholderColor="Gray" 
-                                Keyboard="Numeric" 
+                                Keyboard="Default" 
                                 Margin="0,0,15,0" 
                                 TextColor="White" 
-                                FontSize="Medium" />
+                                FontSize="Medium" Text="{Binding InsuranceNumber}"/>
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>

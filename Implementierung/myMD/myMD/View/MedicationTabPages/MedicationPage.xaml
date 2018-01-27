@@ -15,15 +15,6 @@
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
-        <Grid HorizontalOptions="Center"
-                VerticalOptions="Center">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
         
             <ListView x:Name="MedicationList" 
                 HasUnevenRows="true"
@@ -34,7 +25,8 @@
                 IsRefreshing="{Binding MedicationListIsRefreshing, Mode=TwoWay}"
                 IsVisible="true" 
                 SeparatorVisibility="None"
-                ItemSelected="Handle_ItemSelected">
+                ItemSelected="Handle_ItemSelected"
+                CachingStrategy="RecycleElement">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -50,10 +42,9 @@
                                     CornerRadius="15" 
                                     BackgroundColor="#FFFFFF"
                                     Margin="10,3,10,3"
-                                    HorizontalOptions="CenterAndExpand" 
-                                    VerticalOptions="CenterAndExpand" 
-                                    HeightRequest="100" 
-                                    WidthRequest="400">
+                                    HorizontalOptions="FillAndExpand" 
+                                    VerticalOptions="FillAndExpand"
+                                    HasShadow="true">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto" />
@@ -83,7 +74,7 @@
                                             FontSize="35" 
                                             FontAttributes="Bold" 
                                             HorizontalTextAlignment="Start" 
-                                            Grid.Row="1" Grid.RowSpan="1"  />
+                                            Grid.Row="1"  />
                                             
                                             <Label Text="{Binding MedicationDosis}" 
                                             TextColor="#191928" 
@@ -120,12 +111,6 @@
             </ListView.GroupHeaderTemplate>
             <!-- End Group Header Customization-->
             </ListView>
-            <Label HorizontalOptions="Center" VerticalOptions="Center"
-                    Text="There's nothing yet" VerticalTextAlignment="Center" 
-                    FontAttributes="Bold" FontSize="Medium"
-                    TextColor="White"
-                    Grid.Row="0"
-                    Grid.Column="0" IsVisible="false" />
-        </Grid>
+
     </ContentPage.Content>
 </local:CustomContentPage>
