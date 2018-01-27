@@ -11,7 +11,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
 
         public string DeviceName {get => this.Device.Name;}
 
-        /*
         bool connected;
         public bool IsConnected { get; private set; }
 
@@ -19,6 +18,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
         public Guid Uuid{ get; private set; }
 
         string localName;
-        public string LocalName { get; private set; }*/
+        public string LocalName { get; private set; }
     }
 }

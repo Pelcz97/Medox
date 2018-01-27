@@ -7,67 +7,70 @@ using Plugin.BluetoothLE;
 using Xamarin.Forms;
 using myMD.ModelInterface.ModelFacadeInterface;
 using Xamarin.Forms.Internals;
+using System.Linq;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
     [Preserve(AllMembers = true)]
     public class SelectDeviceViewModel : OverallViewModel.OverallViewModel
     {
-        public IAdapter BleAdapter;
-
-        public IDisposable scan;
-        public ICommand ScanForDevices_Clicked { get; private set; }
+        public IAdapter BleAdapter { get; set; }
         public ObservableCollection<ScanResultViewModel> DeviceList { get; }
+        private bool isScanning { get; set; }
+        public IDisposable scan { get; set; }
+        public ICommand ScanForDevices_Clicked { get => new Command(StartScan); }
 
         public SelectDeviceViewModel()
         {
             this.DeviceList = new ObservableCollection<ScanResultViewModel>();
-            this.ScanForDevices_Clicked = new Command((sender) =>
+            
+        }
+
+        public void StartScan(){
+            if (isScanning == true)
             {
-                AdapterStatus status = CrossBleAdapter.Current.Status;
+                scan.Dispose();
+                DeviceList.Clear();
+            }
 
-                CrossBleAdapter.Current.WhenStatusChanged().Subscribe(status2 =>
-                {
-                    Debug.WriteLine(status);
-                });
+            AdapterStatus status = CrossBleAdapter.Current.Status;
 
-                TimeSpan t = new TimeSpan(hours: 0, minutes: 0, seconds: 1);
-
-                if (status == AdapterStatus.PoweredOn)
-                {
-                    this.scan = CrossBleAdapter.Current.ScanInterval(t).Subscribe(scanResult =>
-                    {
-                        ScanResultViewModel test = new ScanResultViewModel();
-                        test.Device = scanResult.Device;
-                        if (test != null)
-                        {
-                            DeviceList.Add(test);
-                            Debug.WriteLine(test.Device.Name);
-
-                        }
-                    });
-                    //scan.Dispose();
-                    //scanner.Dispose();
-                }
+            CrossBleAdapter.Current.WhenStatusChanged().Subscribe(x =>
+            {
+                Debug.WriteLine(status);
             });
 
-                //
 
-                /*if (status == AdapterStatus.PoweredOn)
+            if (status == AdapterStatus.PoweredOn)
+            {
+                isScanning = true;
+                this.scan = CrossBleAdapter.Current.Scan().Subscribe(scanResult =>
                 {
-                        var scanner = this.BleAdapter.Scan().Subscribe(scanResult =>
-                        {
-                            ScanResultViewModel test = new ScanResultViewModel();
-                            test.Device = scanResult.Device;
-                            if (test != null) { 
-                                DeviceList.Add(test);
-                                Debug.WriteLine(test.Device.Name);
-                            }
-                        });
-
-                        scanner.Dispose();
+                    ScanResultViewModel test = new ScanResultViewModel();
+                    test.Device = scanResult.Device;
+                    if (test != null && DeviceList.All(x => x.Device != test.Device))
+                    {
+                        DeviceList.Add(test);
+                        DeviceList.FirstOrDefault();
+                        Debug.WriteLine(test.Device.Name);
                     }
-                });*/
+                });
+            }
+        }
+
+        public void StopScan()
+        {
+            this.scan.Dispose();
+            isScanning = false;
+        }
+
+        public void ConnectToDevice(object item){
+            var ScanResultItem = (ScanResultViewModel)item;
+            IDevice device = ScanResultItem.Device;
+            Debug.WriteLine("Gerät=" + device.Name);
+            Debug.WriteLine("PairingStatus=" + device.PairingStatus);
+            Debug.WriteLine("PairingPossible=" + device.IsPairingAvailable());
+            ScanResultItem.Device.Connect();
         }
     }
 }
