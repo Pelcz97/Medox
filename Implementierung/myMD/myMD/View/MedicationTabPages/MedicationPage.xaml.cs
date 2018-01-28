@@ -8,11 +8,20 @@ using Xamarin.Forms.Internals;
 
 namespace myMD.View.MedicationTabPages
 {
+    /// <summary>
+    /// Medication page.
+    /// </summary>
     [Preserve(AllMembers = true)]
     public partial class MedicationPage : CustomContentPage
     {
+        /// <summary>
+        /// Das ViewModel, zu welchem gebinded werden soll.
+        /// </summary>
         MedicationViewModel vm;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:myMD.View.MedicationTabPages.MedicationPage"/> class.
+        /// </summary>
         public MedicationPage()
         {
             InitializeComponent();
@@ -20,9 +29,12 @@ namespace myMD.View.MedicationTabPages
             this.BindingContext = vm;
         }
 
-
-
-        public async void Handle_Clicked(object sender, System.EventArgs e)
+        /// <summary>
+        /// Methode, wenn der Hinzufügen-Button geklickt wird.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">E.</param>
+        public async void AddMed_Clicked(object sender, System.EventArgs e)
         {
             var view = new NavigationPage(new DetailedMedicationPage());
             view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
@@ -31,7 +43,12 @@ namespace myMD.View.MedicationTabPages
             await Navigation.PushModalAsync(view);
         }
 
-        void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        /// <summary>
+        /// Methode, wenn ein Element der Medikationenliste geklickt wird.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">E.</param>
+        void MedicationItem_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
             var view = new NavigationPage(new DetailedMedicationPage(e.SelectedItem));
             view.BarBackgroundColor = Color.FromRgb(25, 25, 40);

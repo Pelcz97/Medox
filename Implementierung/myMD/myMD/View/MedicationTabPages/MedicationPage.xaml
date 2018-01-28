@@ -11,7 +11,7 @@
         <ToolbarItem Name="AddMedicationButton" 
             Text="Hinzufügen" 
             Order="Primary" 
-            Clicked="Handle_Clicked" />
+            Clicked="AddMed_Clicked" />
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
@@ -26,7 +26,7 @@
                 IsVisible="true" 
                 SeparatorVisibility="None"
                 SeparatorColor="Transparent"
-                ItemSelected="Handle_ItemSelected"
+                ItemSelected="MedicationItem_ItemSelected"
                 CachingStrategy="RecycleElement"
                 IsGroupingEnabled = "true"
                 GroupDisplayBinding = "{Binding Key}">

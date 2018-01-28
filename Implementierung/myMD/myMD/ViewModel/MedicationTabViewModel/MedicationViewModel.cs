@@ -37,27 +37,6 @@ namespace myMD.ViewModel.MedicationTabViewModel
         /// <value>The key.</value>
         public string Key { get => MedicationsItemsList.FirstOrDefault().Key; }
 
-
-        /// <summary>
-        /// The item selected.
-        /// </summary>
-        /*private MedicineViewModel _ItemSelected;
-        public MedicineViewModel SelectedMedication
-        {
-            get
-            {
-                return _ItemSelected;
-            }
-            set
-            {
-                if (_ItemSelected != value)
-                {
-                    _ItemSelected = value;
-                    OnPropertyChanged("ItemSelected");
-                }
-            }
-        }*/
-
         /// <summary>
         /// Command, welches das Löschen eines gewählten Listeneintrags initiiert.
         /// </summary>

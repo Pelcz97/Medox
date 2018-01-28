@@ -108,13 +108,20 @@ namespace myMD.ViewModel.MedicationTabViewModel
         /// Die Häufigkeit einer Einnahme (täglich).
         /// </summary>
         /// <value>The medication frequency.</value>
-        public int MedicationFrequency { get; set; }
+        public int MedicationFrequency {             
+            get { return this.Medication.Frequency; } 
+            set { this.Medication.Frequency = value; } 
+        }
 
         /// <summary>
         /// Die Dosis einer Medikation (Dosierung/Einnahmemenge).
         /// </summary>
         /// <value>The medication dosis.</value>
-        public string MedicationDosis { get; set; }
+        public string MedicationDosis {         
+            get { return this.Medication.Dosis; } 
+            set { this.Medication.Dosis = value; } 
+        }
+
 
         /// <summary>
         /// Erzeugt ein MedicineViewModel anhand einer übergebenen Medikation.
@@ -126,6 +133,12 @@ namespace myMD.ViewModel.MedicationTabViewModel
             Medication = medication;
             calcDuration();
         }
+
+        public MedicineViewModel()
+        {
+
+        }
+
 
         /// <summary>
         /// Methode zum Gruppieren der Listeneinträge in MedicationViewModel.

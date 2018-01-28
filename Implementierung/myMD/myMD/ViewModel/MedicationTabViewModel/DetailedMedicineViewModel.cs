@@ -1,6 +1,4 @@
-﻿using System;
-using myMD.ModelInterface.DataModelInterface;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.MedicationTabViewModel
@@ -24,7 +22,6 @@ namespace myMD.ViewModel.MedicationTabViewModel
             Medication = ModelFacade.CreateEmptyMedication();
             MaxStartDate = Medication.EndDate;
             MinEndDate = Medication.Date;
-
         }
 
         /// <summary>
@@ -51,7 +48,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
         /// </summary>
         public void CancelMedication()
         {
-            ModelFacade.Delete(this.Medication);
+            ModelFacade.Delete(Medication);
         }
 
         /// <summary>
