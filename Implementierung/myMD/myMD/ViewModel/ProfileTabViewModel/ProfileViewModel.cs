@@ -6,9 +6,14 @@ namespace myMD.ViewModel.ProfileTabViewModel
     [Preserve(AllMembers = true)]
     public class ProfileViewModel : ProfileItemViewModel
     {
+        /// <summary>
+        /// Das Profil des ProfileViewModels.
+        /// </summary>
+        ProfileItemViewModel ProfileItem;
 
-        private ProfileItemViewModel ProfileItem;
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:myMD.ViewModel.ProfileTabViewModel.ProfileViewModel"/> class.
+        /// </summary>
         public ProfileViewModel()
         {
             ProfileItem = new ProfileItemViewModel();
@@ -19,7 +24,11 @@ namespace myMD.ViewModel.ProfileTabViewModel
             });
         }
 
-        private void ReloadProfile()
+        /// <summary>
+        /// Methode, um die Änderungen am Profil sichtbar zu machen. Zunächst wird das Profil neu aus der Datenbank geladen, 
+        /// anschließend werden alle relevanten Properties über etwaige Änderungen benachrichtigt.
+        /// </summary>
+        void ReloadProfile()
         {
             ProfileItem.Profile = ModelFacade.GetActiveProfile();
             OnPropertyChanged("LastName");
