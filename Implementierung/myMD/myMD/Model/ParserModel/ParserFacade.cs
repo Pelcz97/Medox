@@ -18,7 +18,7 @@ namespace myMD.Model.ParserModel
         /// <see>myMD.Model.ParserModel.IParserFacade#ParseFileToDatabase(string, Model.DatabaseModel.IEntityDatabase)</see>
         public void ParseFileToDatabase(string filename, IEntityDatabase db)
         {
-            string extension = Path.GetExtension(filename);
+            string extension = Path.GetExtension(filename).TrimStart('.');
             if (Enum.TryParse(extension, out FileFormat format))
             {
                 format.GetFileToDatabaseParser().ParseFile(filename, db);

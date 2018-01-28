@@ -11,7 +11,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
-using Xamarin.Forms;
 
 namespace myMD.Model.ParserModel
 {
@@ -33,10 +32,20 @@ namespace myMD.Model.ParserModel
         /// </summary>
         private string file;
 
+        /// <summary>
+        /// Helfer zum ausführen plattformsepzifischer Operationen
+        /// </summary>
         private IHl7ParserHelper helper;
 
-        public Hl7ToDatabaseParser() : this(DependencyService.Get<IHl7ParserHelper>()) { }
+        /// <summary>
+        /// Konstruktor mit automatisch nach Plattform ausgewähltem Helfer.
+        /// </summary>
+        public Hl7ToDatabaseParser() : this(Xamarin.Forms.DependencyService.Get<IHl7ParserHelper>()) { }
 
+        /// <summary>
+        /// Konstrukter mit Helfer als Parameter.
+        /// </summary>
+        /// <param name="helper">Der Helfer der zum Ausführen plattformspezifischer Operationen verwendet werden soll</param>
         public Hl7ToDatabaseParser(IHl7ParserHelper helper) => this.helper = helper;
 
         /// <summary>
@@ -52,7 +61,7 @@ namespace myMD.Model.ParserModel
                 ValidateConformance = false
             };
             helper.PrepareFormatter(fmtr);
-            IFormatterParseResult parseResult = fmtr.Parse(xr, typeof(ClinicalDocument));
+            IFormatterParseResult parseResult = fmtr.Parse(new XmlStateReader(XmlReader.Create(file)), typeof(ClinicalDocument));
             document = parseResult.Structure as ClinicalDocument;
         }
 
@@ -65,6 +74,7 @@ namespace myMD.Model.ParserModel
             {
                 //Suche den legalen Namen des Arztes
                 Name = author.Name.Find(v => v.Use.Items.Any(w => w.Code.Equals(EntityNameUse.Legal))).ToString(),
+                //Suche zugeordneten Namen des Arztes
                 Field = author.Name.Find(v => v.Use.Items.Any(w => w.Code.Equals(EntityNameUse.Assigned))).ToString(),
             };
         }
@@ -72,7 +82,8 @@ namespace myMD.Model.ParserModel
         /// <see>myMD.Model.ParserModel.FileToDatabaseParser#ParseProfile()</see>
         protected override DoctorsLetter ParseLetter()
         {
-            var letter = document.Component.GetBodyChoiceIfStructuredBody().Component.First().Section;
+            //Suche Hauptsektion des Dokuments
+            Section letter = document.Component.GetBodyChoiceIfStructuredBody().Component.First().Section;
             x_BasicConfidentialityKind sensitivity = letter.ConfidentialityCode.Code;
             return new DoctorsLetter
             {
@@ -88,16 +99,23 @@ namespace myMD.Model.ParserModel
         protected override IList<Medication> ParseMedications()
         {
             IList<Medication> meds = new List<Medication>();
-            var entries = document.Component.GetBodyChoiceIfStructuredBody().Component.First().Section.Entry.FindAll(v => v.ClinicalStatement.IsPOCD_MT000040UVSubstanceAdministration());
+            //Suche nach Einträgen über Medikationen
+            List<Entry> entries = document.Component.GetBodyChoiceIfStructuredBody().Component.First().Section.Entry.FindAll(v => v.ClinicalStatement.IsPOCD_MT000040UVSubstanceAdministration());
             x_BasicConfidentialityKind sensitivity = document.Component.GetBodyChoiceIfStructuredBody().Component.First().Section.ConfidentialityCode.Code;
-            foreach (var entry in entries)
+            foreach (Entry entry in entries)
             {
+                //Parse jeden dieser Einträge in eine Medikation
                 meds.Add(ParseMedication(entry.GetClinicalStatementIfSubstanceAdministration(), (Sensitivity) sensitivity));
             }
             return meds;
         }
 
-
+        /// <summary>
+        /// Parst die gegebenen Informationen in eine Medikation
+        /// </summary>
+        /// <param name="med">Die zu parsenden Informationen über die Medikation</param>
+        /// <param name="sensitivity">Die Sensitivitätsstufe der Medikation</param>
+        /// <returns>Medikation mit den Informationen aus med</returns>
         private Medication ParseMedication(SubstanceAdministration med, Sensitivity sensitivity)
         {
             Medication target = new Medication()
@@ -106,6 +124,7 @@ namespace myMD.Model.ParserModel
                 Name = med.Consumable.ManufacturedProduct.GetManufacturedDrugOrOtherMaterialIfManufacturedLabeledDrug().Name.Part.First(),
                 Sensitivity = sensitivity,
             };
+            //Führe plattformspezifische Operationen aus
             helper.FinalizeMedication(med, target);
             return target;
         }
@@ -116,7 +135,7 @@ namespace myMD.Model.ParserModel
             //Die Informationen der Profile Klasse sind Informationen über einen Patient.
             Patient patient = document.RecordTarget.First().PatientRole.Patient;
             //Suche nach dem zusammengesetzten legalen Namen
-            var part = patient.Name.Find(v => v.Use.Items.Any(w => w.Code.Equals(EntityNameUse.Legal))).Part;
+            List<ENXP> part = patient.Name.Find(v => v.Use.Items.Any(w => w.Code.Equals(EntityNameUse.Legal))).Part;
             return new Profile
             {
                 BirthDate = patient.BirthTime.DateValue.Date,

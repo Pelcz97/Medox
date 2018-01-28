@@ -16,13 +16,13 @@ namespace myMD.Model.DatabaseModel
 	public class EntityDatabase : IEntityDatabase
     {
         /// <summary>
-        ///
+        /// Name der Datenbank-Datei.
         /// </summary>
         /// <see>myMD.Model.DatabaseModel.IEntityDatabase</see>
         private static readonly string FILE = "database.db3";
 
         /// <summary>
-        ///
+        /// Verbindung zur SQLite-Datenbank.
         /// </summary>
         /// <see>myMD.Model.DatabaseModel.IEntityDatabase</see>
         private SQLiteConnection db;
@@ -123,15 +123,9 @@ namespace myMD.Model.DatabaseModel
             return db.GetAllWithChildren<Profile>().Cast<IProfile>().ToList();
         }
 
-        /// <summary>
-        ///
-        /// </summary>
         /// <see>myMD.Model.DatabaseModel.IEntityDatabase#GetDoctor(myMD.ModelInterface.DataModelInterface.IDoctor)</see>
         public IDoctor GetDoctor(IDoctor doctor) => db.Get<Doctor>(v => v.Name.Equals(doctor.Name));
 
-        /// <summary>
-        ///
-        /// </summary>
         /// <see>myMD.Model.DatabaseModel.IEntityDatabase#GetProfile(myMD.ModelInterface.DataModelInterface.IProfile)</see>
         public IProfile GetProfile(IProfile profile) => db.Get<Profile>(v => v.InsuranceNumber.Equals(profile.InsuranceNumber));
 
