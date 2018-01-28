@@ -1,8 +1,8 @@
 ﻿using System;
 using myMD.ModelInterface.DataModelInterface;
 using System.Diagnostics;
-using myMD.ModelInterface.ModelFacadeInterface;
 using Xamarin.Forms.Internals;
+using System.Collections;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
@@ -81,10 +81,13 @@ namespace myMD.ViewModel.MedicationTabViewModel
         {
             get
             {
-                if (Medication.Date == DateTime.Now.Date)
-                    return "Today";
-                else
-                    return Medication.Date.ToString("Y");
+                /*
+                if (string.IsNullOrWhiteSpace(Medication.Name) || Medication.Name.Length == 0)
+                    return "?";
+
+                return Medication.Name[0].ToString().ToUpper();
+                */
+                return Medication.Date.ToString("Y");
             }
         }
 

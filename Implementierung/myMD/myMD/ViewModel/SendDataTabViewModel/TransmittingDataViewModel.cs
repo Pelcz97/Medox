@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms.Internals;
+﻿using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {

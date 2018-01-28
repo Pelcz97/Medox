@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using myMD.ModelInterface.DataModelInterface;
 using myMD.View.MedicationTabPages;
 using Xamarin.Forms;
@@ -74,7 +73,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
         /// <summary>
         /// Saves the new medication.
         /// </summary>
-        public void saveNewMedication()
+        public void SaveNewMedication()
         {
             ModelFacade.Update(Medication);
             MessagingCenter.Send(this, "SavedMedication");

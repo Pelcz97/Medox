@@ -10,15 +10,23 @@ namespace myMD.View.SendDataTabPages
     [Preserve(AllMembers = true)]
     public partial class SelectDevicePage : CustomContentPage
     {
+        SelectDeviceViewModel vm;
         public SelectDevicePage()
         {
             InitializeComponent();
-            this.BindingContext = new SelectDeviceViewModel();
+            vm = new SelectDeviceViewModel();
+            this.BindingContext = vm;
         }
 
         async void CancelSelectDevice_Clicked(object sender, System.EventArgs e)
         {
+            vm.StopScan();
             await Navigation.PopModalAsync();
+        }
+
+        void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        {
+            vm.ConnectToDevice(e.SelectedItem);
         }
     }
 }

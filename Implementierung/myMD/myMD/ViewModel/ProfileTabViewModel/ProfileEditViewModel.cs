@@ -1,7 +1,4 @@
-﻿using System;
-using myMD.Model.ModelFacade;
-using myMD.ModelInterface.DataModelInterface;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.ProfileTabViewModel
