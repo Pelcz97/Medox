@@ -39,7 +39,7 @@ namespace myMD.Model.DatabaseModel
         public EntityDatabase() : this(DependencyService.Get<IFileHelper>()) { }
 
         /// <summary>
-        /// Erstellt die Datenbank, falls sie noch nicht existiert, verbinet sich mit ihr und setzt das aktive Profil auf das erste Profil in der Datenbank.
+        /// Erstellt die Datenbank, falls sie noch nicht existiert, verbindet sich mit ihr und setzt das aktive Profil auf das erste Profil in der Datenbank.
         /// </summary>
         /// <param name="helper">Der Dateihelfer der verwendet werden soll um auf die Datenbankdatei zuzugreifen</param>
         public EntityDatabase(IFileHelper helper)

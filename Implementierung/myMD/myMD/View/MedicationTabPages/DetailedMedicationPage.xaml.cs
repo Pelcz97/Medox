@@ -33,7 +33,7 @@ namespace myMD.View.MedicationTabPages
 
         async void CancelButton_Clicked(object sender, System.EventArgs e)
         {
-            vm.cancelMedication();
+            vm.CancelMedication();
             await Navigation.PopModalAsync();
         }
 

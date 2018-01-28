@@ -1,36 +1,20 @@
 ﻿using System;
 using myMD.ModelInterface.DataModelInterface;
-using myMD.View.MedicationTabPages;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
     /// <summary>
-    /// Detailed medicine view model.
+    /// ViewModel einer DetailedMedicine
     /// </summary>
     [Preserve(AllMembers = true)]
     public class DetailedMedicineViewModel : MedicineViewModel
     { 
         /// <summary>
-        /// Initializes a new instance of the
-        /// <see cref="T:myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel"/> class.
-        /// </summary>
-        /// <param name="medication">Medication.</param>
-        public DetailedMedicineViewModel(IMedication medication) : base(medication)
-        {
-            this.CancelPossible = true;
-            OnPropertyChanged("CancelPossible");
-            this.Medication = medication;
-            this.MedicationStartDate = DateTime.Today;
-            this.MedicationEndDate = DateTime.Today;
-            this.MedicationDuration = MedicationEndDate.Subtract(MedicationStartDate).Days;
-            MaxStartDate = Medication.EndDate;
-            MinEndDate = Medication.Date;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the
+        /// Erstellt ein DetailedMedicineViewModel, setzt die Sichtbarkeit 
+        /// des Abbrechen-Buttons auf true, legt eine neue, leere Medikation 
+        /// in der Datenbank an.  
         /// <see cref="T:myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel"/> class.
         /// </summary>
         public DetailedMedicineViewModel() : base()
@@ -40,15 +24,13 @@ namespace myMD.ViewModel.MedicationTabViewModel
             Medication = ModelFacade.CreateEmptyMedication();
             MaxStartDate = Medication.EndDate;
             MinEndDate = Medication.Date;
-            
-            MessagingCenter.Subscribe<MedicationPage, object>(this, "SelectedMedication", (sender, arg) =>
-            {
-                this.Medication = arg as IMedication;
-            });
+
         }
 
         /// <summary>
-        /// Initializes a new instance of the
+        /// Erstellt ein DetailedMedicineViewModel, setzt die Sichtbarkeit 
+        /// des Abbrechen-Buttons auf false, initialisiert die Medikation 
+        /// anhand der übergebenen IMedication und berechnet die Einnahmedauer.
         /// <see cref="T:myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel"/> class.
         /// </summary>
         /// <param name="item">Item.</param>
@@ -63,15 +45,17 @@ namespace myMD.ViewModel.MedicationTabViewModel
         }
 
         /// <summary>
-        /// Cancels the medication.
+        /// Bricht den Vorgang ab, indem die neu angelegte Medikation gelöscht 
+        /// statt gespeichert wird. Deshalb darf der Abbrechen-Button nicht 
+        /// in jedem Kontext sichtbar sein
         /// </summary>
-        public void cancelMedication()
+        public void CancelMedication()
         {
             ModelFacade.Delete(this.Medication);
         }
 
         /// <summary>
-        /// Saves the new medication.
+        /// Methode zum Speichern einer Medikation 
         /// </summary>
         public void SaveNewMedication()
         {
