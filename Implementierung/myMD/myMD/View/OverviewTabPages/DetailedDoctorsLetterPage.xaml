@@ -33,7 +33,6 @@
                   Grid.Row="1"/>
 
           <Button x:Name="QuitButton" HorizontalOptions="End" VerticalOptions="Start"
-              Image="cancel.png"
               Grid.Row="0" Clicked="CancelDetailedPage_Clicked"/>
         </Grid>
       </Frame>

@@ -47,6 +47,14 @@ namespace myMD.ViewModel.ProfileTabViewModel
             set => Profile.BloodType = value; 
         }
 
+        public string DisplayString {
+            get => DisplayString;
+            set {
+                DisplayString = value;
+                Debug.WriteLine("Pickerset: " + DisplayString);
+            }
+        }
+
         public bool LastNameVisible { get; set; }
         public bool NameVisible { get; set; }
         public bool BirthdateVisible { get; set; }

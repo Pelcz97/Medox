@@ -47,7 +47,7 @@
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
                                 TextColor="White" 
-                                Margin="15,0,0,0" 
+                                Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Entry HorizontalOptions="FillAndExpand" 
                                 VerticalOptions="CenterAndExpand" 
@@ -63,18 +63,18 @@
                         <StackLayout Orientation="Vertical" 
                             VerticalOptions="FillAndExpand"
                             HorizontalOptions="FillAndExpand">
-                            <Label Text="Geburtstag" 
+                            <Label Text="Geburtsdatum" 
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
                                 TextColor="White" 
-                                Margin="15,0,0,0" 
+                                Margin="15,5,0,0" 
                                 FontSize="Small" />
-                            <DatePicker HorizontalOptions="End" 
+                            <DatePicker HorizontalOptions="StartAndExpand" 
                                 VerticalOptions="Center" 
                                 IsVisible="true" 
                                 BackgroundColor="#191928" 
                                 TextColor="White" 
-                                Margin="0,0,15,0" Date="{Binding Birthdate}"/>
+                                Margin="15,0,15,0" Date="{Binding Birthdate}"/>
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -85,7 +85,7 @@
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
                                 TextColor="White" 
-                                Margin="15,0,0,0" 
+                                Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Entry HorizontalOptions="FillAndExpand" 
                                 VerticalOptions="CenterAndExpand" 
@@ -106,16 +106,16 @@
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
                                 TextColor="White" 
-                                Margin="15,0,0,0" 
+                                Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Picker x:Name="BlutgruppenPicker" 
                                 Title="Blutgruppe" 
-                                HorizontalOptions="End" 
-                                Margin="0,0,15,0" 
+                                HorizontalOptions="StartAndExpand" 
+                                Margin="15,0,15,0" 
                                 VerticalOptions="Center" 
                                 IsVisible="true" 
                                 BackgroundColor="#191928" 
-                                TextColor="White">
+                                TextColor="White" ItemDisplayBinding="{Binding DisplayString}">
                                 <Picker.Items>
                                     <x:String>0 +</x:String>
                                     <x:String>0 -</x:String>

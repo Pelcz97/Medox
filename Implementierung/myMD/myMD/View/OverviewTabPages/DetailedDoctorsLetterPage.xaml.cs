@@ -15,6 +15,8 @@ namespace myMD.View.OverviewTabPages
         {
             InitializeComponent();
             this.BindingContext = new DetailedDoctorsLetterViewModel(item);
+            var Image = ImageSource.FromFile("cancel.png");
+            QuitButton.Image = (FileImageSource)Image;
         }
 
         async void CancelDetailedPage_Clicked(object sender, System.EventArgs e)
