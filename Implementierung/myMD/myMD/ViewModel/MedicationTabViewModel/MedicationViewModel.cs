@@ -7,6 +7,7 @@ using MvvmHelpers;
 using System.Linq;
 using System.Diagnostics;
 using Xamarin.Forms.Internals;
+using System;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
@@ -14,8 +15,8 @@ namespace myMD.ViewModel.MedicationTabViewModel
     public class MedicationViewModel : OverallViewModel.OverallViewModel, INotifyPropertyChanged
     {
         public ObservableCollection<MedicineViewModel> MedicationsList { get; }
-        public static ObservableCollection<Grouping<string, MedicineViewModel>> MyItems { get; set; }
-        
+        public ObservableCollection<Grouping<string, MedicineViewModel>> MedicationsItemsList { get; set; }
+
         private MedicineViewModel _ItemSelected;
         public MedicineViewModel SelectedMedication
         {
@@ -65,39 +66,40 @@ namespace myMD.ViewModel.MedicationTabViewModel
 
         public MedicationViewModel()
         {
-
-            this.MedicationsList = new ObservableCollection<MedicineViewModel>();
-
-            foreach (IMedication med in ModelFacade.GetAllMedications())
-            {
-                MedicationsList.Add(new MedicineViewModel(med));
-            }
+            MedicationsList = new ObservableCollection<MedicineViewModel>();
+            MedicationsItemsList = new ObservableCollection<Grouping<string, MedicineViewModel>>();
             group();
 
-            Debug.WriteLine("konstruktor MyItems Size: " + MyItems.Count);
-            
             MessagingCenter.Subscribe<DetailedMedicineViewModel>(this, "SavedMedication", sender => {
                 Reload();
             });
         }
 
         public void group(){
-            var sorted = from item in MedicationsList
-                         orderby item.Medication.Date
-                         group item by item.NameSort into itemGroup
-                         select new Grouping<string, MedicineViewModel>(itemGroup.Key, itemGroup);
+            MedicationsItemsList.Clear();
+            MedicationsList.Clear();
+            foreach (IMedication med in ModelFacade.GetAllMedications())
+            {
+                MedicationsList.Add(new MedicineViewModel(med));
+            }
+            //Use linq to sorty our monkeys by name and then group them by the new name sort property
+            var sorted = from medicationItem in MedicationsList
+                orderby medicationItem.Medication.Date.Year, medicationItem.Medication.Date.Month, medicationItem.Medication.Date.Day descending
+                group medicationItem by medicationItem.Medication.Date.ToString("Y") into medicationItemGroup
+                select new Grouping<string, MedicineViewModel>(medicationItemGroup.Key, medicationItemGroup);
 
             //create a new collection of groups
-            MyItems = new ObservableCollection<Grouping<string, MedicineViewModel>>(sorted);
+            MedicationsItemsList = new ObservableCollection<Grouping<string, MedicineViewModel>>(sorted);
+            OnPropertyChanged("MedicationList");
         }
 
         public void DeleteListItemMethod(object sender)
         {
-            var MedicationItem = ((MedicineViewModel)sender);
-            MedicationsList.Remove(MedicationItem);
-            //MyItems.Remove(new Grouping<string, MedicineViewModel>(MedicationItem.Key, (System.Collections.Generic.IEnumerable<MedicineViewModel>)MedicationItem));
-            Debug.WriteLine("MyItems Size: " + MyItems.Count);
+            var MedicationItem = (MedicineViewModel)sender;
+            //var test = new Grouping<string, MedicineViewModel>(MedicationItem.Medication.Date.ToString("Y"), (System.Collections.Generic.IEnumerable<MedicineViewModel>)MedicationItem);
+            //MedicationsItemsList.Remove(test);
             ModelFacade.Delete(MedicationItem.Medication);
+            group();
         }
 
         public void Reload()
@@ -108,7 +110,6 @@ namespace myMD.ViewModel.MedicationTabViewModel
                 MedicationsList.Add(new MedicineViewModel(med));
             }
             group();
-            Debug.WriteLine("MyItems Size: " + MyItems.Count);
         }
 
 

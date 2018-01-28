@@ -19,14 +19,34 @@
             <ListView x:Name="MedicationList" 
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
-                ItemsSource="{Binding MedicationsList, Mode=TwoWay}"
+                ItemsSource="{Binding MedicationsItemsList, Mode=TwoWay}"
                 IsPullToRefreshEnabled="True"
                 RefreshCommand="{Binding RefreshMedicationList}"
                 IsRefreshing="{Binding MedicationListIsRefreshing, Mode=TwoWay}"
                 IsVisible="true" 
                 SeparatorVisibility="None"
                 ItemSelected="Handle_ItemSelected"
-                CachingStrategy="RecycleElement">
+                CachingStrategy="RecycleElement"
+                IsGroupingEnabled = "true"
+                GroupDisplayBinding = "{Binding Key}">
+
+                <ListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                     <ViewCell>
+                        <StackLayout VerticalOptions="FillAndExpand" 
+                            HorizontalOptions="FillAndExpand"
+                            BackgroundColor="#191928">
+                          
+                            <Label Text="{Binding Key, StringFormat='{0:MMMM yyyy}'}" 
+                                FontSize="Medium" 
+                                TextColor="White" 
+                                VerticalOptions="CenterAndExpand" 
+                                HorizontalOptions="CenterAndExpand"/>
+                          
+                        </StackLayout>
+                      </ViewCell>
+                    </DataTemplate>
+                  </ListView.GroupHeaderTemplate>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -96,20 +116,6 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-                <!-- Group Header Customization-->
-            <ListView.GroupHeaderTemplate>
-                <DataTemplate>
-                    <ViewCell Height="50" >
-                        <ViewCell.View>
-                            <StackLayout >
-                                <Label Text ="{Binding Title}" Margin="15,30,5,15" 
-                                    FontSize="Medium" TextColor="White" BackgroundColor="#191928"/>
-                            </StackLayout>
-                        </ViewCell.View>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.GroupHeaderTemplate>
-            <!-- End Group Header Customization-->
             </ListView>
 
     </ContentPage.Content>
