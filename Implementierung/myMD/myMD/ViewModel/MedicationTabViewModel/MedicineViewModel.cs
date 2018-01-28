@@ -2,6 +2,7 @@
 using myMD.ModelInterface.DataModelInterface;
 using System.Diagnostics;
 using Xamarin.Forms.Internals;
+using System.Collections;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {

@@ -35,13 +35,15 @@
                      <ViewCell>
                         <StackLayout VerticalOptions="FillAndExpand" 
                             HorizontalOptions="FillAndExpand"
-                            BackgroundColor="#191928">
+                            BackgroundColor="#191928" MinimumHeightRequest="100" >
                           
-                            <Label Text="{Binding Key, StringFormat='{0:MMMM yyyy}'}" 
-                                FontSize="Medium" 
+                            <Label Text="{Binding Key}" 
+                                FontSize="Medium"
+                                FontAttributes="Bold"
                                 TextColor="White" 
                                 VerticalOptions="CenterAndExpand" 
-                                HorizontalOptions="CenterAndExpand"/>
+                                HorizontalOptions="StartAndExpand" 
+                                Margin="15,0,0,0"/>
                           
                         </StackLayout>
                       </ViewCell>
