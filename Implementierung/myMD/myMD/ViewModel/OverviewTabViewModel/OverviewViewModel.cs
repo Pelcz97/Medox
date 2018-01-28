@@ -20,7 +20,7 @@ namespace myMD.ViewModel.OverviewTabViewModel
                 return new Command(() => {
                     var dummyLetter = new DoctorsLetter();
                     var dummyDoc = new Doctor();
-                    dummyDoc.Name = "Harald Helfgott";
+                    dummyDoc.Name = "Dr. Harald Helfgott";
                     dummyDoc.Field = "Podologe";
                     dummyLetter.Date = DateTime.Now.Date;
                     dummyLetter.DatabaseDoctor = dummyDoc;

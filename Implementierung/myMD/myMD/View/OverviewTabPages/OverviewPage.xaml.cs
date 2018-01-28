@@ -23,6 +23,7 @@ namespace myMD.View.OverviewTabPages
         void DoctorsLetterSelected(object sender, Xamarin.Forms.ItemTappedEventArgs e)
         {
             Navigation.PushModalAsync(new DetailedDoctorsLetterPage(e.Item));
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }
