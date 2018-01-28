@@ -29,7 +29,7 @@ namespace myMD.View.MedicationTabPages
             InitializeComponent();
 
             vm = new DetailedMedicineViewModel();
-            this.BindingContext = vm;
+            BindingContext = vm;
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace myMD.View.MedicationTabPages
             InitializeComponent();
 
             vm = new DetailedMedicineViewModel(item);
-            this.BindingContext = vm;
+            BindingContext = vm;
         }
 
         /// <summary>

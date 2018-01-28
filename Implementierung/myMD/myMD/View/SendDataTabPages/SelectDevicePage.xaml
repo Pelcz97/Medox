@@ -17,7 +17,7 @@
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding DeviceList}"
                 SeparatorVisibility="Default"
-                ItemSelected="Handle_ItemSelected">
+                ItemSelected="DeviceItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

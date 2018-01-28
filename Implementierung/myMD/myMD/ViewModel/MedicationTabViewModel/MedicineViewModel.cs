@@ -134,6 +134,9 @@ namespace myMD.ViewModel.MedicationTabViewModel
             calcDuration();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:myMD.ViewModel.MedicationTabViewModel.MedicineViewModel"/> class.
+        /// </summary>
         public MedicineViewModel()
         {
 
