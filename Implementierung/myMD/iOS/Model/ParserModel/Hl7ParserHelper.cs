@@ -28,20 +28,25 @@ namespace myMD.Model.ParserModel.iOS
             fmtr.GraphAides.Add(new ClinicalDocumentDatatypeFormatter());
         }
 
+        /// <summary>
+        /// Das Lesen der Zeitangaben über die Medikation erfordert die ICloneable Schnittstelle, die TS implementiert.
+        /// Diese ist jedoch nicht plattformübergreifend verfügbar, weswegen diese Operation plattformspezifisch durchgeührt werden muss.
+        /// </summary>
+        /// <see>myMD.Model.ParserModel.IParserHelper#PrepareFormatter(MARC.Everest.RMIM.UV.CDAr2.POCD_MT000040UV.SubstanceAdministration, myMD.Model.DataModel.Medication)</see>
         public void FinalizeMedication(SubstanceAdministration source, Medication target)
         {
             PIVL<TS> pivl = source.EffectiveTime.First().Hull as PIVL<TS>;
             target.Date = pivl.Phase.Low.DateValue;
             target.EndDate = pivl.Phase.High.DateValue;
-            target.Frequency = pivl.Frequency.Numerator.ToInt();
-            target.Interval = (Interval)pivl.Frequency.Denominator.Unit.First();
             if (pivl.Frequency != null)
             {
+                //lese aus Frequency falls vorhanden
                 target.Frequency = pivl.Frequency.Numerator.ToInt();
                 target.Interval = (Interval)pivl.Frequency.Denominator.Unit.First();
             }
             else
             {
+                //falls nicht stehen diese Informationen in Period
                 target.Frequency = (int)(1.0 / pivl.Period.ToDouble());
                 target.Interval = (Interval)pivl.Period.Unit.First();
             }

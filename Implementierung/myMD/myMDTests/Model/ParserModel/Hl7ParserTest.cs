@@ -7,16 +7,15 @@ using MARC.Everest.RMIM.UV.CDAr2.Vocabulary;
 using MARC.Everest.Xml;
 using myMD.Model.DataModel;
 using myMD.Model.FileHelper;
+using myMD.Model.ParserModel;
 using myMDTests.Model.EntityFactory;
 using myMDTests.Model.FileHelper;
 using NUnit.Framework;
-using System.Linq;
+using System;
 using System.Collections.Generic;
-using System.IO;
+using System.Linq;
 using System.Text;
 using System.Xml;
-using System;
-using myMD.Model.ParserModel;
 
 namespace myMDTests.Model.ParserModel
 {
@@ -24,69 +23,88 @@ namespace myMDTests.Model.ParserModel
     public class Hl7ParserTest
     {
         private static readonly string SAMPLE = "test.hl7";
+
         private static readonly string CUSTOM = "custom.hl7";
+
+        private static readonly string FAIL = "fail.fail";
+
         private static readonly RandomEntityFactory fac = new RandomEntityFactory();
-        private static readonly Doctor doctor = new Doctor
-        {
-            Name = "Dr. Jan Itor", 
-            Field = "Experte auf diesem Gebiet"
-        };
-        private static readonly Profile profile = new Profile
-        {
-            Name = "Philipp",
-            LastName = "Karcher",
-            BirthDate = new DateTime(1998, 8, 6),
-            InsuranceNumber = "123456",
-        };
-        private static readonly DoctorsLetter letter = new DoctorsLetter
-        {
-            Name = "Arztbesuch",
-            Date = DateTime.Today,
-            Diagnosis = "Diagnose",
-            Sensitivity = myMD.ModelInterface.DataModelInterface.Sensitivity.High,
-        };
-        private static readonly Medication[] meds =
-        {
-            new Medication
-            {
-                Name = "Heroin",
-                Date = DateTime.Today,
-                EndDate = DateTime.Today.AddDays(14),
-                Dosis = "500mg",
-                Frequency = 5,
-                Interval = myMD.ModelInterface.DataModelInterface.Interval.Week,
-                Sensitivity = letter.Sensitivity,
-            },
-            new Medication
-            {
-                Name = "Aspirin",
-                Date = DateTime.Today,
-                EndDate = DateTime.Today.AddDays(7),
-                Dosis = "4 Schachteln",
-                Frequency = 1,
-                Interval = myMD.ModelInterface.DataModelInterface.Interval.Hour,
-                Sensitivity = letter.Sensitivity,
-            },
-            new Medication
-            {
-                Name = "Ibuprofen",
-                Date = DateTime.Today,
-                EndDate = DateTime.Today.AddDays(100),
-                Dosis = "3mg",
-                Frequency = 8,
-                Interval = myMD.ModelInterface.DataModelInterface.Interval.Day,
-                Sensitivity = letter.Sensitivity,
-            },
-        };
-        private static readonly IFileHelper helper = new TestFileHelper();
+
+        private static Doctor doctor;
+
+        private static Profile profile;
+
+        private static DoctorsLetter letter;
+
+        private static Medication[] meds;
+
+        private static IFileHelper helper = new TestFileHelper();
+
+        private static IParserFacade parser = new ParserFacade();
 
         private static string Custom => helper.GetLocalFilePath(CUSTOM);
 
         private static string Sample => helper.GetLocalFilePath(SAMPLE);
 
+        private static string Fail => FAIL;
+
+        private static EntityDatabaseStub db = new EntityDatabaseStub();
+
         [OneTimeSetUp]
         public static void SetUp()
         {
+            doctor = new Doctor
+            {
+                Name = "Dr. Jan Itor",
+                Field = "Experte auf diesem Gebiet"
+            };
+            profile = new Profile
+            {
+                Name = "Philipp",
+                LastName = "Karcher",
+                BirthDate = new DateTime(1998, 8, 6),
+                InsuranceNumber = "123456",
+            };
+            letter = new DoctorsLetter
+            {
+                Name = "Arztbesuch",
+                Date = DateTime.Today,
+                Diagnosis = "Diagnose",
+                Sensitivity = myMD.ModelInterface.DataModelInterface.Sensitivity.High,
+                Filepath = Custom,
+        };
+            meds = new Medication[]{
+                new Medication
+                {
+                    Name = "Heroin",
+                    Date = DateTime.Today,
+                    EndDate = DateTime.Today.AddDays(14),
+                    Dosis = "500mg",
+                    Frequency = 5,
+                    Interval = myMD.ModelInterface.DataModelInterface.Interval.Week,
+                    Sensitivity = letter.Sensitivity,
+                },
+                new Medication
+                {
+                    Name = "Aspirin",
+                    Date = DateTime.Today,
+                    EndDate = DateTime.Today.AddDays(7),
+                    Dosis = "4 Schachteln",
+                    Frequency = 1,
+                    Interval = myMD.ModelInterface.DataModelInterface.Interval.Hour,
+                    Sensitivity = letter.Sensitivity,
+                },
+                new Medication
+                {
+                    Name = "Ibuprofen",
+                    Date = DateTime.Today,
+                    EndDate = DateTime.Today.AddDays(100),
+                    Dosis = "3mg",
+                    Frequency = 8,
+                    Interval = myMD.ModelInterface.DataModelInterface.Interval.Day,
+                    Sensitivity = letter.Sensitivity,
+                },
+            };
             foreach (Medication med in meds)
             {
                 letter.AttachMedication(med);
@@ -128,11 +146,33 @@ namespace myMDTests.Model.ParserModel
             }
             parsedLetter.DatabaseDoctor = parsedDoctor;
             parsedLetter.Profile = parsedProfile;
-            letter.Filepath = Custom;
             Assert.AreEqual(parsedDoctor, doctor);
             Assert.AreEqual(parsedLetter, letter);
             Assert.AreEqual(parsedProfile, profile);
             Assert.IsTrue(parsedMeds.SequenceEqual(meds));
+        }
+
+        [Test]
+        public void ParseHl7FileToDatabaseTest()
+        {
+            FileToDatabaseParser parser = new Hl7ToDatabaseParser(new TestHl7ParserHelper());
+            parser.ParseFile(Custom, db);
+            Assert.AreEqual(db.Doctor, doctor);
+            Assert.AreEqual(db.Letter, letter);
+            Assert.AreEqual(db.Profile, profile);
+            Assert.IsTrue(db.Meds.SequenceEqual(meds));
+        }
+
+        [Test]
+        public void ParseLetterToFileTest()
+        {      
+            Assert.AreEqual(parser.ParseLetterToOriginalFile(letter), Custom);
+        }
+
+        [Test]
+        public void UnsupportedFileFormatTest()
+        {
+            Assert.Throws<NotSupportedException>(() => parser.ParseFileToDatabase(Fail, db));
         }
 
         private void CreateDocument()

@@ -1,5 +1,6 @@
 using myMD.Model.DatabaseModel;
 using myMD.Model.DataModel;
+using myMD.ModelInterface.DataModelInterface;
 using System;
 using System.Collections.Generic;
 
@@ -23,19 +24,23 @@ namespace myMD.Model.ParserModel
             //Werfe Ausnahme falls kein passendes Profil existiert
             Profile profile = db.GetProfile(ParseProfile()).ToProfile() ?? throw new InvalidOperationException("No matching Profile found");
             Doctor eqDoc = ParseDoctor();
-            Doctor doc = db.GetDoctor(eqDoc).ToDoctor();
+            IDoctor doc = db.GetDoctor(eqDoc);
+            Doctor doctor;
             //Füge neuen Arzt in die Datenbank ein, falls dieser dort noch nicht existiert
             if (doc == null)
             {
-                doc = eqDoc;
-                db.Insert(doc);
+                doctor = eqDoc;
+                db.Insert(doctor);
+            } else
+            {
+                doctor = doc.ToDoctor();
             }
             IList<Medication> meds = ParseMedications();
             DoctorsLetter letter = ParseLetter();
             db.Insert(letter);
             //Erstelle Beziehungen zwischen den geparsten Entitäten
             letter.Profile = profile;
-            letter.DatabaseDoctor = doc;
+            letter.DatabaseDoctor = doctor;
             foreach (Medication med in meds)
             {
                 db.Insert(med);

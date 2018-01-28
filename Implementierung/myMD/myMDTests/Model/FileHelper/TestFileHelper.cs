@@ -1,15 +1,13 @@
 ﻿using myMD.Model.FileHelper;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace myMDTests.Model.FileHelper
 {
     public class TestFileHelper : IFileHelper
     {
+        private static readonly string FOLDER = "Tests";
+
         public void DeleteFile(string filename)
         {
             File.Delete(GetLocalFilePath(filename));
@@ -17,7 +15,7 @@ namespace myMDTests.Model.FileHelper
 
         public string GetLocalFilePath(string filename)
         {
-            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), filename);
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), FOLDER, filename);
             if(!File.Exists(path))
             {
                 File.Create(path);
