@@ -58,16 +58,19 @@ namespace myMD.ViewModel.SendDataTabViewModel
 
         public void StopScan()
         {
-            this.scan.Dispose();
+            if (isScanning)
+            {
+                this.scan.Dispose();
+            }
             isScanning = false;
         }
 
         public void ConnectToDevice(object item){
             var ScanResultItem = (ScanResultViewModel)item;
             IDevice device = ScanResultItem.Device;
-            Debug.WriteLine("Gerät=" + device.Name);
-            Debug.WriteLine("PairingStatus=" + device.PairingStatus);
-            Debug.WriteLine("PairingPossible=" + device.IsPairingAvailable());
+            Debug.WriteLine("Gerät = " + device.Name);
+            Debug.WriteLine("PairingStatus = " + device.PairingStatus);
+            Debug.WriteLine("PairingPossible = " + device.IsPairingAvailable());
             ScanResultItem.Device.Connect();
         }
     }

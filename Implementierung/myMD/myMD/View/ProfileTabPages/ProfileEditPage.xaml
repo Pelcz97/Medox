@@ -12,12 +12,12 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <TableView BackgroundColor="#191928" Intent="Form" 
-            VerticalOptions="CenterAndExpand" 
+            VerticalOptions="FillAndExpand" 
             HorizontalOptions="FillAndExpand"
             RowHeight="80"
             HasUnevenRows="true">
             <TableRoot>
-                <TableSection Title="Information">
+                <TableSection>
                     <ViewCell >
                         <StackLayout Orientation="Vertical" 
                             VerticalOptions="FillAndExpand"
@@ -25,7 +25,7 @@
                             <Label Text="Nachname" 
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
-                                TextColor="White" 
+                                TextColor="#929292" 
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Entry HorizontalOptions="FillAndExpand" 
@@ -46,11 +46,11 @@
                             <Label Text="Vorname" 
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
-                                TextColor="White" 
-                                Margin="15,0,0,0" 
+                                TextColor="#929292" 
+                                Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Entry HorizontalOptions="FillAndExpand" 
-                                VerticalOptions="CenterAndExpand" 
+                                VerticalOptions="Center" 
                                 BackgroundColor="#191928" 
                                 Placeholder="Vorname" 
                                 PlaceholderColor="Gray" 
@@ -63,18 +63,18 @@
                         <StackLayout Orientation="Vertical" 
                             VerticalOptions="FillAndExpand"
                             HorizontalOptions="FillAndExpand">
-                            <Label Text="Geburtstag" 
+                            <Label Text="Geburtsdatum" 
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
-                                TextColor="White" 
-                                Margin="15,0,0,0" 
+                                TextColor="#929292" 
+                                Margin="15,5,0,0" 
                                 FontSize="Small" />
-                            <DatePicker HorizontalOptions="End" 
+                            <DatePicker HorizontalOptions="StartAndExpand" 
                                 VerticalOptions="Center" 
                                 IsVisible="true" 
                                 BackgroundColor="#191928" 
                                 TextColor="White" 
-                                Margin="0,0,15,0" Date="{Binding Birthdate}"/>
+                                Margin="15,0,15,0" Date="{Binding Birthdate}"/>
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -84,11 +84,11 @@
                             <Label Text="Versicherungsnummer" 
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
-                                TextColor="White" 
-                                Margin="15,0,0,0" 
+                                TextColor="#929292" 
+                                Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Entry HorizontalOptions="FillAndExpand" 
-                                VerticalOptions="CenterAndExpand" 
+                                VerticalOptions="Center" 
                                 BackgroundColor="#191928" 
                                 Placeholder="Versicherungsnummer" 
                                 PlaceholderColor="Gray" 
@@ -105,17 +105,17 @@
                             <Label Text="Blutgruppe" 
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
-                                TextColor="White" 
-                                Margin="15,0,0,0" 
+                                TextColor="#929292" 
+                                Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Picker x:Name="BlutgruppenPicker" 
                                 Title="Blutgruppe" 
-                                HorizontalOptions="End" 
-                                Margin="0,0,15,0" 
+                                HorizontalOptions="StartAndExpand" 
+                                Margin="15,0,15,0" 
                                 VerticalOptions="Center" 
                                 IsVisible="true" 
                                 BackgroundColor="#191928" 
-                                TextColor="White">
+                                TextColor="White" ItemDisplayBinding="{Binding DisplayString}">
                                 <Picker.Items>
                                     <x:String>0 +</x:String>
                                     <x:String>0 -</x:String>

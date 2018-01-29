@@ -9,40 +9,52 @@
 
       <Frame CornerRadius="0"
       BackgroundColor="#00B9B4"
-      Margin="0"
+      Margin="0,0,0,0"
       HorizontalOptions="FillAndExpand"
-      VerticalOptions="Start"
-      HeightRequest="100">
+      VerticalOptions="Start">
         <Grid>
           <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="85" />
+            <RowDefinition Height="Auto" />
           </Grid.RowDefinitions>
 
-          <Label Text="{Binding DoctorsName}" TextColor="#191928"
-                  FontSize="Large" FontAttributes="Bold"
-                  VerticalTextAlignment="End" HorizontalTextAlignment="Start"
-                  Grid.Row="0"/>
+          <Label Text="{Binding DoctorsName}" 
+                    TextColor="#191928"
+                    FontSize="Large" 
+                    FontAttributes="Bold"
+                    VerticalTextAlignment="End" 
+                    HorizontalTextAlignment="Start"
+                    Grid.Row="0"/>
 
-          <Label Text="{Binding DoctorsLetterDate, StringFormat='{0:MMMM dd, yyyy}'}" TextColor="#FFFFFF"
-                  FontSize="Medium" FontAttributes="Bold"
-                  VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-                  Grid.Row="2"/>
+          <Label Text="{Binding DoctorsField}" 
+                        TextColor="#FFFFFF"
+                        FontSize="45" 
+                        FontAttributes="Bold"
+                        VerticalTextAlignment="Center" 
+                        HorizontalTextAlignment="Start"
+                        Grid.Row="1"/>
 
-          <Label Text="{Binding DoctorsField}" TextColor="#FFFFFF"
-                  FontSize="45" FontAttributes="Bold"
-                  VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                  Grid.Row="1"/>
-
-          <Button x:Name="QuitButton" HorizontalOptions="End" VerticalOptions="Start"
-              Image="cancel.png"
-              Grid.Row="0" Clicked="CancelDetailedPage_Clicked"/>
+          <Button x:Name="QuitButton" 
+                        Text="✖️"
+                        FontSize="Large"
+                        HorizontalOptions="End" 
+                        VerticalOptions="Start"
+                        Grid.Row="0" 
+                        Clicked="CancelDetailedPage_Clicked"/>
         </Grid>
       </Frame>
-
+            
+      <Label Text="{Binding DoctorsLetterDate, StringFormat='{0:MMMM dd, yyyy}'}" 
+                TextColor="#FFFFFF"
+                FontSize="Medium" 
+                FontAttributes="Bold"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="End" 
+                Margin="15,0,15,5"/>
+            
             <TableView BackgroundColor="#191928" Intent="Form" 
-            VerticalOptions="EndAndExpand" 
+            VerticalOptions="FillAndExpand" 
             HorizontalOptions="FillAndExpand"
             HasUnevenRows="true">
             <TableRoot>

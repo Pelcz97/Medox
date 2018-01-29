@@ -11,7 +11,7 @@
         <ToolbarItem Name="AddMedicationButton" 
             Text="Hinzufügen" 
             Order="Primary" 
-            Clicked="Handle_Clicked" />
+            Clicked="AddMed_Clicked" />
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
@@ -20,12 +20,10 @@
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding MedicationsItemsList, Mode=TwoWay}"
-                IsPullToRefreshEnabled="True"
-                RefreshCommand="{Binding RefreshMedicationList}"
-                IsRefreshing="{Binding MedicationListIsRefreshing, Mode=TwoWay}"
                 IsVisible="true" 
                 SeparatorVisibility="None"
-                ItemSelected="Handle_ItemSelected"
+                SeparatorColor="Transparent"
+                ItemSelected="MedicationItem_ItemSelected"
                 CachingStrategy="RecycleElement"
                 IsGroupingEnabled = "true"
                 GroupDisplayBinding = "{Binding Key}">
@@ -35,15 +33,15 @@
                      <ViewCell>
                         <StackLayout VerticalOptions="FillAndExpand" 
                             HorizontalOptions="FillAndExpand"
-                            BackgroundColor="#191928" MinimumHeightRequest="100" >
+                            BackgroundColor="#191928">
                           
                             <Label Text="{Binding Key}" 
                                 FontSize="Medium"
                                 FontAttributes="Bold"
                                 TextColor="White" 
-                                VerticalOptions="CenterAndExpand" 
+                                VerticalOptions="EndAndExpand" 
                                 HorizontalOptions="StartAndExpand" 
-                                Margin="15,0,0,0"/>
+                                Margin="15,20,15,10"/>
                           
                         </StackLayout>
                       </ViewCell>

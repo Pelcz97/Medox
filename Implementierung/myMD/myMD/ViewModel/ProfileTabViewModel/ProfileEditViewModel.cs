@@ -3,12 +3,18 @@ using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.ProfileTabViewModel
 {
+    /// <summary>
+    /// Profile edit view model.
+    /// </summary>
     [Preserve(AllMembers = true)]
     public class ProfileEditViewModel : ProfileItemViewModel
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:myMD.ViewModel.ProfileTabViewModel.ProfileEditViewModel"/> class.
+        /// </summary>
         public ProfileEditViewModel()
         {
-            this.Profile = ModelFacade.GetActiveProfile();
+            Profile = ModelFacade.GetActiveProfile();
         }
 
         /// <summary>

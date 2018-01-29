@@ -6,22 +6,20 @@
     Title="Übersicht">
 
     <ContentPage.ToolbarItems>
-        <!--><!-->
-        <ToolbarItem Name="EditButton" 
-        Text="Bearbeiten" Order="Primary" 
-        Command="{Binding EditDoctorsLettersList_Clicked}"/>
         <ToolbarItem Name="EditButton" 
         Text="Add Dummy" Order="Primary" 
         Command="{Binding AddDummyLetter}" Priority="-1"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
-            <ListView x:Name="DoctorsLettersList" HasUnevenRows="true" 
+            <ListView x:Name="DoctorsLettersList" 
+                HasUnevenRows="true" 
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding DoctorsLettersList}" 
                 SeparatorVisibility="None" 
-                ItemTapped="DoctorsLetterSelected"
+                ItemSelected="DoctorsLetter_Clicked"
                 CachingStrategy="RecycleElement">
+            
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

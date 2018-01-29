@@ -2,13 +2,11 @@
 <local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
-    x:Class="myMD.View.SendDataTabPages.SelectDoctorsLettersPage">
+    x:Class="myMD.View.SendDataTabPages.SelectDoctorsLettersPage"
+    Title="Arztbriefe wählen">
     <ContentPage.ToolbarItems>
             <ToolbarItem Name="CancelSelectDoctorsLetters" Text="Abbrechen" 
                         Order="Primary" Priority="-1" Clicked="CancelSelectDoctorsLetters_Clicked"/>
     </ContentPage.ToolbarItems>
 
-    <ContentPage.Content>
-        
-	</ContentPage.Content>
 </local:CustomContentPage>
