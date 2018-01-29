@@ -26,7 +26,7 @@ namespace myMD.View.MedicationTabPages
         {
             InitializeComponent();
             vm = new MedicationViewModel();
-            this.BindingContext = vm;
+            BindingContext = vm;
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace myMD.View.MedicationTabPages
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="e">E.</param>
-        public async void AddMed_Clicked(object sender, System.EventArgs e)
+        public async void AddMed_Clicked(object sender, EventArgs e)
         {
             var view = new NavigationPage(new DetailedMedicationPage());
             view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
@@ -48,7 +48,7 @@ namespace myMD.View.MedicationTabPages
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="e">E.</param>
-        void MedicationItem_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        void MedicationItem_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var view = new NavigationPage(new DetailedMedicationPage(e.SelectedItem));
             view.BarBackgroundColor = Color.FromRgb(25, 25, 40);

@@ -24,6 +24,7 @@ namespace myMD.View.SendDataTabPages
         public TransmittingDataPage()
         {
             InitializeComponent();
+            BindingContext = vm;
         }
 
         /// <summary>
@@ -35,7 +36,7 @@ namespace myMD.View.SendDataTabPages
         {
             var view = new NavigationPage(new SelectDoctorsLettersPage());
             view.BarTextColor = Color.White;
-            view.BarBackgroundColor = Color.FromRgb(15, 15, 40);
+            view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             await Navigation.PushModalAsync(view);
         }
 
@@ -48,7 +49,7 @@ namespace myMD.View.SendDataTabPages
         {
             var view = new NavigationPage(new SelectDevicePage()); 
             view.BarTextColor = Color.White;
-            view.BarBackgroundColor = Color.FromRgb(15, 15, 40);
+            view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             await Navigation.PushModalAsync(view);
         }
     }

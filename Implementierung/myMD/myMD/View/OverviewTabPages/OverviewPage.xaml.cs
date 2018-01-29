@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using myMD.ModelInterface.DataModelInterface;
-using myMD.View.AbstractPages;
+﻿using myMD.View.AbstractPages;
 using myMD.ViewModel.OverviewTabViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -36,10 +32,16 @@ namespace myMD.View.OverviewTabPages
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="e">E.</param>
-        void DoctorsLetterSelected(object sender, ItemTappedEventArgs e)
+        void DoctorsLetter_Clicked(object sender, SelectedItemChangedEventArgs e)
         {
-            Navigation.PushModalAsync(new DetailedDoctorsLetterPage(e.Item));
+            var selectedItem = ((ListView)sender).SelectedItem;
+            if (selectedItem == null)
+                return;
+            
+            var view = new DetailedDoctorsLetterPage(e.SelectedItem);
+            Navigation.PushModalAsync(view);
             ((ListView)sender).SelectedItem = null;
         }
+
     }
 }

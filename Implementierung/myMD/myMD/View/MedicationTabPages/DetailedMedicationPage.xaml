@@ -7,11 +7,18 @@
     Title="Neue Medikation">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="CancelButton" Text="Abbrechen" 
-        Order="Primary" Priority="-1" Clicked="CancelButton_Clicked" IsEnabled="{Binding CancelPossible}"/>
-        <ToolbarItem Name="SaveMedicationButton" Text="Fertig" 
-                    Order="Primary" Priority="1" Clicked="SaveMedication_Clicked" 
-                    IsEnabled="{Binding SavingPossible}"/>
+        <ToolbarItem Name="CancelButton" 
+            Text="Abbrechen" 
+            Order="Primary" 
+            Priority="-1" 
+            Clicked="CancelButton_Clicked" 
+            IsEnabled="{Binding CancelPossible}"/>
+        <ToolbarItem Name="SaveMedicationButton" 
+            Text="Fertig" 
+            Order="Primary" 
+            Priority="1" 
+            Clicked="SaveMedication_Clicked" 
+            IsEnabled="{Binding SavingPossible}"/>
     </ContentPage.ToolbarItems>
     
      <ContentPage.Content>
@@ -20,62 +27,50 @@
                     <TableSection Title="Information">
                     <ViewCell>
                             
-                                <Entry HorizontalOptions="FillAndExpand" 
-                                        VerticalOptions="Center" 
-                                        Margin="15,0,15,0"
-                                        BackgroundColor="#191928"
-                                        Placeholder="Name des Medikaments"
-                                        PlaceholderColor="Gray"
-                                        TextColor="White"
-                                        FontSize="17" 
-                                        Text="{Binding MedicationName}" 
-                                        HorizontalTextAlignment="Start"/>
+                        <Entry HorizontalOptions="FillAndExpand" 
+                                VerticalOptions="Center" 
+                                Margin="15,0,15,0"
+                                BackgroundColor="#191928"
+                                Placeholder="Name des Medikaments"
+                                PlaceholderColor="Gray"
+                                TextColor="White"
+                                FontSize="17" 
+                                Text="{Binding MedicationName}" 
+                                HorizontalTextAlignment="Start"/>
                         
                     </ViewCell>
                     <ViewCell >
-                                <Entry HorizontalOptions="FillAndExpand" 
-                                        VerticalOptions="Center" 
-                                        Margin="15,0,15,0"
-                                        BackgroundColor="#191928"
-                                        Placeholder="Wirkstoffmenge"
-                                        PlaceholderColor="Gray"
-                                        TextColor="White"
-                                        FontSize="17"
-                                        Text="{Binding MedicationDosis}"
-                                        HorizontalTextAlignment="Start"/>
+                        <Entry HorizontalOptions="FillAndExpand" 
+                                VerticalOptions="Center" 
+                                Margin="15,0,15,0"
+                                BackgroundColor="#191928"
+                                Placeholder="Wirkstoffmenge"
+                                PlaceholderColor="Gray"
+                                TextColor="White"
+                                FontSize="17"
+                                Text="{Binding MedicationDosis}"
+                                HorizontalTextAlignment="Start"/>
                        
-
                     </ViewCell>
                     </TableSection>
                     <TableSection Title="Zeitraum der Einnahme">
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="Einmalige Einnahme"
-                                        TextColor="White" 
-                                        HorizontalTextAlignment="Start" 
-                                        VerticalTextAlignment="Center"
-                                        Margin="15,0,0,0"/>
-
-                                <Switch HorizontalOptions="EndAndExpand" 
-                                        VerticalOptions="Center"
-                                        Margin="0,0,15,0"
-                                        BackgroundColor="#191928"/>
-                        </StackLayout>
-
-                    </ViewCell>
                     <ViewCell IsEnabled="{Binding SetDatesPossible}">
                         <StackLayout Orientation="Horizontal">
                                 <Label Text="Beginn"
                                         TextColor="White"
                                         HorizontalTextAlignment="Start" 
-                                        VerticalTextAlignment="Center" Margin="15,0,0,0" />
+                                        VerticalTextAlignment="Center" 
+                                        Margin="15,0,0,0" />
 
                                 <DatePicker x:Name="StartDatePicker"  
-                            HorizontalOptions="EndAndExpand" 
-                            VerticalOptions="Center" IsVisible="true" 
-                            BackgroundColor="#191928" TextColor="White" 
-                            Margin="0,0,15,0" Date="{Binding MedicationStartDate}"
-                            MaximumDate="{Binding MaxStartDate}"/>
+                                    HorizontalOptions="EndAndExpand" 
+                                    VerticalOptions="Center" 
+                                    IsVisible="true" 
+                                    BackgroundColor="#191928" 
+                                    TextColor="White" 
+                                    Margin="0,0,15,0" 
+                                    Date="{Binding MedicationStartDate}"
+                                    MaximumDate="{Binding MaxStartDate}"/>
 
                         </StackLayout>
                         </ViewCell>
@@ -84,7 +79,8 @@
                                 <Label Text="Ende"
                                         TextColor="White"
                                         HorizontalTextAlignment="Start" 
-                                        VerticalTextAlignment="Center" Margin="15,0,0,0" />
+                                        VerticalTextAlignment="Center" 
+                                        Margin="15,0,0,0" />
 
                                 <DatePicker x:Name="EndDatePicker"
                             HorizontalOptions="EndAndExpand" 
@@ -100,13 +96,17 @@
                                 <Label x:Name="StepperText"
                                         TextColor="White"
                                         HorizontalTextAlignment="Start" 
-                                        VerticalTextAlignment="Center" Margin="15,0,0,0" 
+                                        VerticalTextAlignment="Center" 
+                                        Margin="15,0,0,0" 
                                         BindingContext="{x:Reference StepperStepper}"
                                         Text="{Binding Value, StringFormat='{0:F0} mal täglich'}"/>
                                     
-                            <Stepper x:Name="StepperStepper" HorizontalOptions="EndAndExpand" 
-                            VerticalOptions="Center" Margin="0,0,15,0" Minimum="1"
-                             Value="{Binding MedicationFrequency}"/>
+                            <Stepper x:Name="StepperStepper" 
+                                    HorizontalOptions="EndAndExpand" 
+                                    VerticalOptions="Center" 
+                                    Margin="0,0,15,0" 
+                                    Minimum="1"
+                                    Value="{Binding MedicationFrequency}"/>
                         </StackLayout>
                         </ViewCell>
                     </TableSection>

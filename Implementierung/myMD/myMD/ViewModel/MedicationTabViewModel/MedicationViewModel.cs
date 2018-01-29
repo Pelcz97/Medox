@@ -52,36 +52,6 @@ namespace myMD.ViewModel.MedicationTabViewModel
         }
 
         /// <summary>
-        /// Command, welches das Neuladen der Liste initiiert.
-        /// Voraussichtlich nur zu Testzwecken relevant.
-        /// </summary>
-        /// <value>The refresh medication list.</value>
-        public ICommand RefreshMedicationList {
-            get {
-                return new Command(() => {
-                    MedicationListIsRefreshing = true;
-                    Reload();
-                    MedicationListIsRefreshing = false;
-                });
-            }}
-
-        /// <summary>
-        /// Boolean, der festlegt, ob die Liste momentan neuläd oder nicht.
-        /// Voraussichtlich nur zu Testzwecken relevant.
-        /// </summary>
-        private bool _isRefreshing = false;
-        public bool MedicationListIsRefreshing
-        {
-            get { return _isRefreshing; }
-            set
-            {
-                _isRefreshing = value;
-                OnPropertyChanged("MedicationListIsRefreshing");
-            }
-        }
-
-
-        /// <summary>
         /// Erstellt ein MedicationViewModel, initialisiert die MedicationsList und -ItemsList, 
         /// füllt beide über GroupList() mit den Einträgen der Datenbank auf. 
         /// Abonniert zudem eine Benachrichtigung, falls der Nutzer eine Medikation speichert, um die Liste zu aktualisieren.
@@ -113,7 +83,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
             }
 
             var sorted = from medicationItem in MedicationsList
-                orderby medicationItem.Medication.Date.Year, medicationItem.Medication.Date.Month, medicationItem.Medication.Date.Day descending
+                orderby medicationItem.Medication.Date.Year descending, medicationItem.Medication.Date.Month descending, medicationItem.Medication.Date.Day descending
                 group medicationItem by medicationItem.Medication.Date.ToString("Y") into medicationItemGroup
                 select new Grouping<string, MedicineViewModel>(medicationItemGroup.Key, medicationItemGroup);
 
