@@ -22,7 +22,7 @@ namespace myMD.Model.FileHelper.iOS
         /// <see>myMD.Model.FileHelper.IFileHelper#GetLocalFilePath(string)</see>
         public string GetLocalFilePath(string filename)
 		{
-            string directory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Library", filename);
+            string directory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Library");
             if (!Directory.Exists(directory))
             {
                 Directory.CreateDirectory(directory);

@@ -111,6 +111,7 @@ namespace myMDTests.Model.ParserModel
             }
             letter.Profile = profile;
             letter.DatabaseDoctor = doctor;
+            CreateDocument();
         }
 
         [Test]
@@ -134,7 +135,6 @@ namespace myMDTests.Model.ParserModel
         public void ParseFromDocumentTest()
         {
             var parser = new TestHl7ToDatabaseParser();
-            CreateDocument();
             parser.Init(Custom);
             DoctorsLetter parsedLetter = parser.ParseLetter();
             Doctor parsedDoctor = parser.ParseDoctor();
@@ -175,7 +175,7 @@ namespace myMDTests.Model.ParserModel
             Assert.Throws<NotSupportedException>(() => parser.ParseFileToDatabase(Fail, db));
         }
 
-        private void CreateDocument()
+        private static void CreateDocument()
         {
             using (XmlIts1Formatter fmtr = new XmlIts1Formatter())
             {
