@@ -4,7 +4,7 @@ using Xamarin.Forms.Internals;
 namespace myMD.ViewModel.ProfileTabViewModel
 {
     /// <summary>
-    /// Profile edit view model.
+    /// ViewModel zur Editierung eines einzelnen Profils
     /// </summary>
     [Preserve(AllMembers = true)]
     public class ProfileEditViewModel : ProfileItemViewModel

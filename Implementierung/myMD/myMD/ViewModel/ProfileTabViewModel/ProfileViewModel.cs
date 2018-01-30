@@ -3,6 +3,9 @@ using Xamarin.Forms;
 
 namespace myMD.ViewModel.ProfileTabViewModel
 {
+    /// <summary>
+    /// ViewModel zur Handhabung mehrerer Profile
+    /// </summary>
     [Preserve(AllMembers = true)]
     public class ProfileViewModel : ProfileItemViewModel
     {

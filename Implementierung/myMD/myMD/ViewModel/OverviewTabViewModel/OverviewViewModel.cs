@@ -8,6 +8,9 @@ using myMD.ModelInterface.DataModelInterface;
 
 namespace myMD.ViewModel.OverviewTabViewModel
 {
+    /// <summary>
+    /// ViewModel zur Hauptseite des OverviewTabs. Hier wird hauptsächlich die Liste an Arztbriefen modeliert.
+    /// </summary>
     [Preserve(AllMembers = true)]
     public class OverviewViewModel : OverallViewModel.OverallViewModel
     {

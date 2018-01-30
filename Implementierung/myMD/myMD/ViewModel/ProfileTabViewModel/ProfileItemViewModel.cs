@@ -6,7 +6,7 @@ using Xamarin.Forms.Internals;
 namespace myMD.ViewModel.ProfileTabViewModel
 {
     /// <summary>
-    /// Profile item view model.
+    /// ViewModel zur Darstellung eines einzelnen Profils
     /// </summary>
     [Preserve(AllMembers = true)]
     public class ProfileItemViewModel : OverallViewModel.OverallViewModel
