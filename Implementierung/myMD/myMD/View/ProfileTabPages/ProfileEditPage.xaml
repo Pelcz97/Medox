@@ -4,6 +4,11 @@
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD" 
     x:Class="myMD.View.ProfileTabPages.ProfileEditPage" 
     Title="Profil bearbeiten">
+    <ContentPage.Resources>
+      <ResourceDictionary>
+        <converter:IntEnumConverter xmlns:converter="clr-namespace:myMD.ViewModel.ProfileTabViewModel" x:Key="IntEnumConverter"/>
+      </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="SaveChangedProfileButton" Text="Fertig" 
         Order="Primary" Clicked="SaveChangedProfileButton_Clicked" />
@@ -115,18 +120,9 @@
                                 VerticalOptions="Center" 
                                 IsVisible="true" 
                                 BackgroundColor="#191928" 
-                                TextColor="White" ItemDisplayBinding="{Binding DisplayString}">
-                                <Picker.Items>
-                                    <x:String>0 +</x:String>
-                                    <x:String>0 -</x:String>
-                                    <x:String>A +</x:String>
-                                    <x:String>A -</x:String>
-                                    <x:String>B +</x:String>
-                                    <x:String>B -</x:String>
-                                    <x:String>AB +</x:String>
-                                    <x:String>AB -</x:String>
-                                </Picker.Items>
-                                <Picker.SelectedIndex>7</Picker.SelectedIndex>
+                                TextColor="White" 
+                                ItemsSource="{Binding BloodTypeNames}" 
+                                SelectedIndex="{Binding BloodType, Converter={StaticResource IntEnumConverter}}">
                             </Picker>
                         </StackLayout>
                     </ViewCell>

@@ -103,7 +103,7 @@
                                 TextColor="#929292" 
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
-                          <Label Text="{Binding Bloodtype}"
+                          <Label Text="{Binding BloodTypeName}"
                                  HorizontalOptions="StartAndExpand"
                                  VerticalOptions="Center"
                                  BackgroundColor="#191928"

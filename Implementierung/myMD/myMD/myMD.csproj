@@ -121,6 +121,8 @@
     <Compile Include="Model\TransmissionModel\Device.cs" />
     <Compile Include="Model\TransmissionModel\IBluetooth.cs" />
     <Compile Include="ModelInterface\TransmissionModelInterface\IDevice.cs" />
+    <Compile Include="ViewModel\ProfileTabViewModel\IntEnumConverter.cs" />
+    <Compile Include="ViewModel\ProfileTabViewModel\StringExtensions.cs" />
     <Compile Include="View\AbstractPages\CustomContentPage.xaml.cs">
       <DependentUpon>CustomContentPage.xaml</DependentUpon>
     </Compile>

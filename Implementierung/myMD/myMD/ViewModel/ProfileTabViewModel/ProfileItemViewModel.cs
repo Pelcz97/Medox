@@ -2,6 +2,8 @@
 using System.Diagnostics;
 using myMD.ModelInterface.DataModelInterface;
 using Xamarin.Forms.Internals;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace myMD.ViewModel.ProfileTabViewModel
 {
@@ -61,6 +63,16 @@ namespace myMD.ViewModel.ProfileTabViewModel
             get => Profile.BloodType; 
             set => Profile.BloodType = value; 
         }
+
+        /// <summary>
+        /// Zum Anzeigen formatierter Name der Blutgruppe dieses Profils
+        /// </summary>
+        public string BloodTypeName => BloodType.ToString().FormatPlusAndMinus();
+
+        /// <summary>
+        /// Liste zum Anzeigen formatierter Namen aller Blutgruppen.
+        /// </summary>
+        public List<string> BloodTypeNames => Enum.GetNames(typeof(BloodType)).Select(b => b.FormatPlusAndMinus()).ToList();
 
         /// <summary>
         /// Erzeugt ein ProfilItemViewModel und setzt das Profil auf das momentan aktive Profil.
