@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Globalization;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.ProfileTabViewModel
 {
     /// <summary>
     /// Konverter zwischen Enum und Integer, zur Verwendung in XAML-Seiten.
     /// </summary>
+    [Preserve(AllMembers = true)]
     public class IntEnumConverter : IValueConverter
     {
         /// <summary>

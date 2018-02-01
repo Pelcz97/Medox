@@ -3,12 +3,14 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.ProfileTabViewModel
 {
     /// <summary>
     /// Erweiterungsmehtoden der String-Klasse zum formatieren von strings zum Anzeigen
     /// </summary>
+    [Preserve(AllMembers = true)]
     public static class StringExtensions
     {
         /// <summary>

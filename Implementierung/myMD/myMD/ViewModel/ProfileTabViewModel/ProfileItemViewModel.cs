@@ -61,7 +61,9 @@ namespace myMD.ViewModel.ProfileTabViewModel
         /// <value>The type of the blood.</value>
         public BloodType BloodType { 
             get => Profile.BloodType; 
-            set => Profile.BloodType = value; 
+            set { 
+                Profile.BloodType = value;
+            } 
         }
 
         /// <summary>
