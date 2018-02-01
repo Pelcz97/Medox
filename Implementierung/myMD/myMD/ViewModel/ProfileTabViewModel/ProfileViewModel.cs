@@ -38,7 +38,7 @@ namespace myMD.ViewModel.ProfileTabViewModel
             OnPropertyChanged("Name");
             OnPropertyChanged("Birthdate");
             OnPropertyChanged("InsuranceNumber");
-            OnPropertyChanged("BloodType");
+            OnPropertyChanged("BloodTypeName");
         }
     }
 }

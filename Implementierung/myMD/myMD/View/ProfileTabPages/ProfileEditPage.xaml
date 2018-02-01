@@ -2,11 +2,12 @@
 <local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD" 
+    xmlns:y="clr-namespace:myMD.ViewModel.ProfileTabViewModel;assembly=myMD" 
     x:Class="myMD.View.ProfileTabPages.ProfileEditPage" 
     Title="Profil bearbeiten">
     <ContentPage.Resources>
       <ResourceDictionary>
-        <converter:IntEnumConverter xmlns:converter="clr-namespace:myMD.ViewModel.ProfileTabViewModel" x:Key="IntEnumConverter"/>
+        <y:IntEnumConverter x:Key="IntEnumConverter"/>
       </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
