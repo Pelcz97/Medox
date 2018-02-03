@@ -14,8 +14,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
     {
         public IAdapter BleAdapter { get; set; }
         public ObservableCollection<ScanResultViewModel> DeviceList { get; }
-        private bool isScanning { get; set; }
-        public IDisposable scan { get; set; }
+        private bool IsScanning { get; set; }
+        public IDisposable Scan { get; set; }
         public ICommand ScanForDevices_Clicked { get => new Command(StartScan); }
 
         public SelectDeviceViewModel()
