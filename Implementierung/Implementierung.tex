@@ -137,6 +137,42 @@
 
 \chapter{Geänderte Daten}
 \section{Geänderte Entwürfe}
+\subsection{Model}
+\subsubsection{Beobachter-Entwurfsmuster}
+In der Entwurfsphase entschieden wir uns für das Beobachter-Entwurfsmuster, um die Datenbank über Änderungen an den Instanzen der Klassen aus dem \textbf{DataModel} Paket zu benachrichtigen.
+
+Das \textbf{EntitiyObserver} Paket, das die dafür vorgesehenen Schnittstellen enthält, wurde mitsamt diesen komplett enfernt. Stattdessen muss das Aktualisieren einer Entität nun per explizitem Aufruf an die \textbf{ModelFacade} durchgeführt werden.
+
+Die Gründe dafür sind zweigeteilt:
+
+Erstens werden durch die Benutzung der \textit{SQLite-Net-Extensions} Library beim rekursiven Auflösen von Relationen Objekte aus der Datenbank geladen, ohne dass bei ihnen von uns die Datenbank als Beobachter angemeldet werden kann. Um das Laden von in Relation stehender Entitäten aus der Datenbank zu vereinfachen, ist es sinnvoll das Beobachterprinzip nicht weiter zu verwenden.
+
+Zweitens ist es von der GUI-Seite auch intuitiver, Änderungen dann erst zu übernehmen, wenn dies explizit vom Benutzer so veranlasst wird. Damit bietet sich die \textit{Update} Methode in der \textbf{ModelFacade} als Alternative an.
+
+\subsubsection{Plattformspezifisches Parsen}
+Bestimmte Klassen des \textit{Everest} Frameworks, das zum Parsen von .hl7 Dateien benutzt wird, implementieren die \textbf{ICloneable} Schnittstelle, die in einem \textit{Xamarin-Cross-Platform} Projekt nicht verfügbar ist. 
+
+Manche dieser Klassen werden jedoch benötigt um die Dateien vollständig zu parsen, daher kann der \textbf{Hl7ToDatabaseParser} nicht mehr wie geplant komplett plattformunabhängig implementiert werden.
+
+Operationen mit diesen Klassen werden nun über die \textbf{IHl7ParserHelper} Schnittstelle aufgerufen und im \textbf{Hl7ParserHelper} plattformspezifisch implementiert.
+
+\subsubsection{Dateiformatunabhänigiges Parsen}
+Um in Zukunft die Implementierung der Unterstützung mehrere Dateiformate zu vereinfachen, wurden mehrere Änderungen am \textbf{FileToDabaseParser} vorgenommen:
+
+Das Auswählen des richtigen Parsers erfolgt nun über die Enumeration \textbf{FileFormat} der unterstützen Dateiformate und eine Erweiterungsmethode in \textbf{FileFormatExtensions} die einem Dateiformat aus \textbf{FileFormat} den passenden \textbf{FileToDabaseParser} zuordnet.
+
+Weiterhin wurden auch die dateiformatspezifischen Einschubmethoden des \textbf{FileToDabaseParser} modifiziert: 
+
+Die zu parsende Datei wird nun über die neu hinzugefügte \textit{Init} Methode übergeben, die weiteren \textit{Parse} Methoden sind dafür nun parameterlos. Dies erlaubt es flexibler aus einer Datei lesen zu können. 
+
+Beim vorherigen Ansatz musste für jeden Aufruf einer \textit{Parse} Methoden neu aus der Datei gelesen werden. Jetzt können stattdessen gemeinsame Vorbereitungen getroffen werden, wie z.B. beim \textbf{Hl7ToDatabaseParser}. Hier wird mit \textit{Init} die gesamte Datei mit \textit{Everest} in den frameworkeigenen Datentyp \textit{ClinicalDocument} geparst, der dann wiederum mit den restlichen \textit{Parse} Methoden in die Datentypen aus dem \textbf{DataModel} Paket geparst wird.
+
+\subsection{ViewModel}
+\subsubsection{Enum-Picker}
+Um Elemente aus einem Enum in einem Picker von \textit{Xamarin} darstellen zu können, wird ein Konvertierer (\textbf{IntEnumConverter}) benötigt, da die dafür von \textit{Xamarin} angebotene Funktionalität eine Liste von Elementen erwartet. Mit dem Konvertierer kann dann jedem Listeneintrag über \textit{DataBinding} ein Enum-Wert zugewiesen werden.
+
+Um die Namen von Enumwerten zum Anzeigen formatieren zu können wurden für diesen Zweck auch noch in \textbf{StringExtensions} Erweiterungsmethoden für strings hinzugefügt.
+
 \section{Geänderte Klassen}
 \section{Nicht umgesetzte Kriterien}
 \section{Klassendiagramm (Implementierungsphase)}
