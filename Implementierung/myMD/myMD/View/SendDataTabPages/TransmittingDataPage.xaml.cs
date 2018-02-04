@@ -53,10 +53,5 @@ namespace myMD.View.SendDataTabPages
             view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             await Navigation.PushModalAsync(view);
         }
-
-        void Handle_Clicked(object sender, System.EventArgs e)
-        {
-            vm.StartServer();
-        }
     }
 }
