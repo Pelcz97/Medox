@@ -180,8 +180,8 @@
 
 \end{tabular}
 
-\begin{figure}
 \section{Klassendiagramm (Entwurfsphase)}
+\begin{figure}[H]
 \hspace{-1.8cm}
 \begin{minipage}[c]{\textwidth}
 \includegraphics[width=1.6\textwidth, angle=90]{graphics/Klassendiagramme/myMD}
@@ -212,6 +212,11 @@ Erstens werden durch die Benutzung der \textit{SQLite-Net-Extensions} Library be
 
 Zweitens ist es von der GUI-Seite auch intuitiver, Änderungen dann erst zu übernehmen, wenn dies explizit vom Benutzer so veranlasst wird. Damit bietet sich die \textit{Update} Methode in der \textbf{ModelFacade} als Alternative an.
 
+\subsubsection{Datenbanktabellen}
+Alle Klassen aus dem \textbf{DataModel} Paket stellen Vorlagen für eine Datenbanktabelle dar. Im ursprünglichen Entwurf waren nur die Getter und Setter für den Zugriff vom ViewModel aus vorgesehen (mit den Schnittstellen aus \textbf{DataModelInterface} als Parameter). Um Objekte vollständig in die Datenbank schreiben und wieder daraus laden zu können,  werden Getter und Setter für alle konkreten Attribute benötigt.
+
+Um unnötiges Casten zu vermeiden, erhalten die Schnittstellen aus \textbf{DataModelInterface} noch eine Konvertierungsmethode zu der in \textbf{DataModel} definierten konkreten Implementierung (für die Klassen aus \textbf{DataModel} gibt diese Methode lediglich die Instanz der Klasse selbst zurück.)
+
 \subsubsection{Plattformspezifisches Parsen}
 Bestimmte Klassen des \textit{Everest} Frameworks, das zum Parsen von .hl7 Dateien benutzt wird, implementieren die \textbf{ICloneable} Schnittstelle, die in einem \textit{Xamarin-Cross-Platform} Projekt nicht verfügbar ist. 
 
@@ -234,7 +239,7 @@ Beim vorherigen Ansatz musste für jeden Aufruf einer \textit{Parse} Methoden ne
 \subsubsection{Enum-Picker}
 Um Elemente aus einem Enum in einem Picker von \textit{Xamarin} darstellen zu können, wird ein Konvertierer (\textbf{IntEnumConverter}) benötigt, da die dafür von \textit{Xamarin} angebotene Funktionalität eine Liste von Elementen erwartet. Mit dem Konvertierer kann dann jedem Listeneintrag über \textit{DataBinding} ein Enum-Wert zugewiesen werden.
 
-Um die Namen von Enumwerten zum Anzeigen formatieren zu können wurden für diesen Zweck auch noch in \textbf{StringExtensions} Erweiterungsmethoden für strings hinzugefügt.
+Um die Namen von Enumwerten zum Anzeigen formatieren zu können wurden für diesen Zweck auch noch die Klasse \textbf{StringExtensions} mit Erweiterungsmethoden für strings hinzugefügt.
 
 \subsection{View}
 \subsubsection{Benutzeroberflächenlogik}
@@ -244,6 +249,85 @@ Während dem Entwurf stellten wir uns vor, dass es auf einer \textbf{ProfilePage
 } der \textbf{ProfilePage} antippt. Die \textbf{ProfileEditPage} gleicht der \textbf{ProfilePage} im Design. Die Unterschiede begrenzen sich auf die zwei \textit{StatusBar-Elemente} \dq{}Abrechen\dq{}, \dq{}Fertig\dq{} und die Ersetzung der Labels (in der \textbf{ProfilPage}) durch Entrys.
 
 \section{Geänderte Klassen}
+\textit{Hinweis: Nur leicht (z.B. in der Namensgebung) geänderte Klassen oder solche, die bereits in den Geänderten Entwürfen erwähnt sind hier nicht aufgelistet. Weiterhin wurden die meisten Getter- und Setter-Methoden durch die in C\# üblichen Properties ersetzt. Da dies mehr eine optische als tatsächlich inhaltliche Änderung darstellt, wird auch dies hier übergangen.}
+
+\subsection{ModelInterface}
+\subsubsection{IModelFacade}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/ModelFacadeInterface.png}
+\caption{IModelFacade Schnittstelle}
+\end{figure}
+\textbf{Art der Änderung:} Neue Methoden
+
+\textbf{Beschreibung:} Methode zum Abfragen des aktuell aktiven Profils hinzugefügt.
+
+\textbf{Paket:} ModelInterface.ModelFacadeInterface
+
+\subsubsection{IMedication}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IMedication.png}
+\caption{IMedication Schnittstelle}
+\end{figure}
+\textbf{Art der Änderung:} Neues Attribut
+
+\textbf{Beschreibung:} Medikation haben jetzt auch eine Dosis (Getter und Setter als string)
+
+\textbf{Paket:} ModelInterface.DataModelInterface
+
+\subsection{Model}
+\textit{Hinweis: Klassen aus dem \textbf{DataModel} Paket wurden Vergleichsmethoden wie Compare und Equals hinzugefügt, die hier nicht für jede Klasse einzeln aufgezählt werden.}
+
+\subsubsection{IEntityDatabase}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IEntityDatabase.png}
+\caption{IEntityDatabase Schnittstelle}
+\end{figure}
+\textbf{Art der Änderung:} Neue/geänderte Methoden
+
+\textbf{Beschreibung:} Die Methoden der Observer-Schnittstellen aus dem \textbf{EntityObserver} Paket befinden sich nun in dieser Schnittstelle. \\
+Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, eine Methode zum Abfragen des aktuell aktiven Profils hinzugefügt und die Methodenparameter sind nun konsistent aus dem \textbf{DataModelInterface} Paket.
+
+\textbf{Paket:} Model.EntityDatabase
+
+\subsubsection{EntityFactory}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/EntityFactory.png}
+\caption{EntityFactory Klasse}
+\end{figure}
+\textbf{Art der Änderung:} Entferntes Attribut
+
+\textbf{Beschreibung:} Im ursprünglichen Entwurf hatte \textbf{EntityFactory} noch eine \textbf{IEntityDatabase} als Attribut um erstellte Entitäten direkt in die Datenbank einzufügen. Um Abhängigkeiten zwischen Klassen zu verringern wurde das Attribut entfernt und das Einfügen in die Datenbank wird von der \textbf{ModelFacade} übernommen, die sowieso bereits die Datenbank als Attribut enthält.
+
+\textbf{Paket:} Model.EntityFactory
+
+\subsubsection{DoctorsLetterGroupDoctorsLetter}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/EntityFactory.png}
+\caption{EntityFactory Klasse}
+\end{figure}
+\textbf{Art der Änderung:} Neue Klasse
+
+\textbf{Beschreibung:} Um Many-To-Many Relationen darstellen zu können, benötigt das SQLite-net-extensions Framework eine separate Klasse für die Relation. Da Arztbriefe und Gruppen in einer solchen Relation stehen wird diese Klasse benötigt.
+
+\textbf{Paket:} Model.DataModel
+
+\subsubsection{IFileHelper}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IFileHelper.png}
+\caption{IFileHelper Schnittstelle}
+\end{figure}
+\textbf{Art der Änderung:} Neue Methode
+
+\textbf{Beschreibung:} Methode zum Löschen von Dateien hinzugefügt.
+
+\textbf{Paket:} Model.FileHelper
+
 \section{Nicht umgesetzte Kriterien}
 \textit{Hinweis: Manche dieser Kriterien (z.B. [PK2030]) wurden nur teilweise umgesetzt. D.h. nur manche Teile unseres Projektes unterstützen diese Kriterien, aber aus Zeitgründen wurde die vollständige Implementierung verschoben. Die halbfertigen Kriterien werden durch ein \dq{}!\dq{} gekennzeichnet.}
 \subsubsection{Patientenseitige Datenübertragung}
@@ -287,7 +371,14 @@ Während dem Entwurf stellten wir uns vor, dass es auf einer \textbf{ProfilePage
 \section{Klassendiagramm (Implementierungsphase)}
 
 \chapter{Ergebnisse der Phase}
+\begin{figure}
 \section{Ablauf}
+\begin{minipage}[c]{\textwidth}
+\centering
+\includegraphics[width=0.95\textheight, angle=90]{Gantt/GanttDiagrammImplementierung}
+\caption{Gantt Diagramm der Implementierungsphase}
+\end{minipage}
+\end{figure}
 \section{Zukunftspläne}
 
 
