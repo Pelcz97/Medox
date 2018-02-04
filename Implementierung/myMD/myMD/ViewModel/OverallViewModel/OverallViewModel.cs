@@ -38,9 +38,10 @@ namespace myMD.ViewModel.OverallViewModel
         public OverallViewModel()
         {
             ModelFacade = App.Model;
+            
         }
 
-        public IAdapter BleAdapter => this.BleAdapter;
+        protected IAdapter BleAdapter => CrossBleAdapter.Current;
 
 
     }
