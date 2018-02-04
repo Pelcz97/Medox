@@ -12,16 +12,15 @@ namespace myMD.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class SelectDeviceViewModel : OverallViewModel.OverallViewModel
     {
-        public IAdapter BleAdapter { get; set; }
+        //public IAdapter BleAdapter { get; set; }
         public ObservableCollection<ScanResultViewModel> DeviceList { get; }
-        private bool IsScanning { get; set; }
-        public IDisposable Scan { get; set; }
+        private bool isScanning { get; set; }
+        public IDisposable scan { get; set; }
         public ICommand ScanForDevices_Clicked { get => new Command(StartScan); }
 
         public SelectDeviceViewModel()
         {
-            this.DeviceList = new ObservableCollection<ScanResultViewModel>();
-            
+            this.DeviceList = new ObservableCollection<ScanResultViewModel>();   
         }
 
         public void StartScan(){
@@ -38,7 +37,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 Debug.WriteLine(status);
             });
 
-
             if (status == AdapterStatus.PoweredOn)
             {
                 isScanning = true;
@@ -50,7 +48,9 @@ namespace myMD.ViewModel.SendDataTabViewModel
                     {
                         DeviceList.Add(test);
                         DeviceList.FirstOrDefault();
-                        Debug.WriteLine(test.Device.Name);
+                        Debug.WriteLine("Device: " + test.Device);
+                        Debug.WriteLine("Device.Name: " + test.Device.Name);
+                        Debug.WriteLine("Device.UUID: " + test.Device.Uuid);
                     }
                 });
             }
@@ -72,6 +72,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
             Debug.WriteLine("PairingStatus = " + device.PairingStatus);
             Debug.WriteLine("PairingPossible = " + device.IsPairingAvailable());
             ScanResultItem.Device.Connect();
+
         }
     }
 }

@@ -180,8 +180,8 @@
 
 \end{tabular}
 
+\begin{figure}
 \section{Klassendiagramm (Entwurfsphase)}
-\begin{figure}[H]
 \hspace{-1.8cm}
 \begin{minipage}[c]{\textwidth}
 \includegraphics[width=1.6\textwidth, angle=90]{graphics/Klassendiagramme/myMD}
@@ -234,7 +234,7 @@ Beim vorherigen Ansatz musste für jeden Aufruf einer \textit{Parse} Methoden ne
 \subsubsection{Enum-Picker}
 Um Elemente aus einem Enum in einem Picker von \textit{Xamarin} darstellen zu können, wird ein Konvertierer (\textbf{IntEnumConverter}) benötigt, da die dafür von \textit{Xamarin} angebotene Funktionalität eine Liste von Elementen erwartet. Mit dem Konvertierer kann dann jedem Listeneintrag über \textit{DataBinding} ein Enum-Wert zugewiesen werden.
 
-Um die Namen von Enumwerten zum Anzeigen formatieren zu können wurden für diesen Zweck auch noch die Klasse \textbf{StringExtensions} mit Erweiterungsmethoden für strings hinzugefügt.
+Um die Namen von Enumwerten zum Anzeigen formatieren zu können wurden für diesen Zweck auch noch in \textbf{StringExtensions} Erweiterungsmethoden für strings hinzugefügt.
 
 \subsection{View}
 \subsubsection{Benutzeroberflächenlogik}
@@ -244,44 +244,6 @@ Während dem Entwurf stellten wir uns vor, dass es auf einer \textbf{ProfilePage
 } der \textbf{ProfilePage} antippt. Die \textbf{ProfileEditPage} gleicht der \textbf{ProfilePage} im Design. Die Unterschiede begrenzen sich auf die zwei \textit{StatusBar-Elemente} \dq{}Abrechen\dq{}, \dq{}Fertig\dq{} und die Ersetzung der Labels (in der \textbf{ProfilPage}) durch Entrys.
 
 \section{Geänderte Klassen}
-\subsection{IModelFacade}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/ModelFacadeInterface.png}
-\caption{IEntityDatabase Schnittstelle}
-\end{figure}
-\textbf{Art der Änderung:} Neue Methoden
-
-\textbf{Beschreibung:} Methode zum Abfragen des aktuell aktiven Profils hinzugefügt.
-
-\textbf{Paket:} ModelInterface.IModelFacade
-
-\subsection{IEntityDatabase}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IEntityDatabase.png}
-\caption{IEntityDatabase Schnittstelle}
-\end{figure}
-\textbf{Art der Änderung:} Neue/geänderte Methoden
-
-\textbf{Beschreibung:} Die Methoden der Observer-Schnittstellen aus dem \textbf{EntityObserver} Paket befinden sich nun in dieser Schnittstelle. \\
-Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, eine Methode zum Abfragen des aktuell aktiven Profils hinzugefügt und die Methodenparameter sind nun konsistent aus dem \textbf{DataModelInterface} Paket.
-
-\textbf{Paket:} Model.EntityDatabase
-
-
-\subsection{IFileHelper}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IFileHelper.png}
-\caption{IFileHelper Schnittstelle}
-\end{figure}
-\textbf{Art der Änderung:} Neue Methode
-
-\textbf{Beschreibung:} Methode zum Löschen von Dateien hinzugefügt.
-
-\textbf{Paket:} Model.FileHelper
-
 \section{Nicht umgesetzte Kriterien}
 \textit{Hinweis: Manche dieser Kriterien (z.B. [PK2030]) wurden nur teilweise umgesetzt. D.h. nur manche Teile unseres Projektes unterstützen diese Kriterien, aber aus Zeitgründen wurde die vollständige Implementierung verschoben. Die halbfertigen Kriterien werden durch ein \dq{}!\dq{} gekennzeichnet.}
 \subsubsection{Patientenseitige Datenübertragung}

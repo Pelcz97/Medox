@@ -24,6 +24,7 @@ namespace myMD.View.SendDataTabPages
         public TransmittingDataPage()
         {
             InitializeComponent();
+            vm = new TransmittingDataViewModel();
             BindingContext = vm;
         }
 
