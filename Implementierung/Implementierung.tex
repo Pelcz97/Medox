@@ -122,7 +122,7 @@
 \chapter{Vorangegangene Planung}
 \section{Kriterien (Planungsphase)}
 \textit{Hinweis: Der Übersicht wegen sind hier Pflicht- und Wunschkriterien zusammen aufgeführt. Sie sind weiterhin anhand der Kürzel voneinander unterscheidbar (PK = Pflichtkriterium WK = Wunschkriterium).}
-\subsection{Patientenseitige Datenübertragung}
+\subsubsection{Patientenseitige Datenübertragung}
 \begin{tabular}{lll}
 
 [PK1010] & \multicolumn{2}{p{12cm}}  {\glspl{Arztbrief} können von der \gls{Desktop Anwendung} auf die myMD \gls{App} des Patienten übertragen werden.} \\
@@ -136,7 +136,7 @@
 
 \end{tabular}
 
-\subsection{Darstellung}
+\subsubsection{Darstellung}
 \begin{tabular}{lll}
 [PK2010] & \multicolumn{2}{p{12cm}}  {\glspl{Arztbrief} werden chronologisch absteigend im \gls{Tab} \textit{Übersicht} dargestellt.} \\
 {[PK2020]} & \multicolumn{2}{p{12cm}}  {Der \gls{Nutzer} kann überflüssige/unerwünschte \glspl{Arztbrief} löschen.} \\
@@ -148,7 +148,7 @@
 {[WK2050]} & \multicolumn{2}{p{12cm}}  {Es gibt eine Suchfunktion, die alle \glspl{Arztbrief} nach Daten durchsucht.} \\
 \end{tabular}
 
-\subsection{Einstellungen}
+\subsubsection{Einstellungen}
 \begin{tabular}{lll}
 [PK3010] & \multicolumn{2}{p{12cm}}  {Der \gls{Nutzer} kann ein eigenes Profil anlegen, welches Daten wie den Namen, Versicherungsnummer, Blutgruppe und Allergien enthält.} \\
 {[PK3020]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird in Deutsch angeboten.} \\
@@ -159,7 +159,7 @@
 
 \end{tabular}
 
-\subsection{\gls{Desktop Anwendung}}
+\subsubsection{\gls{Desktop Anwendung}}
 \begin{tabular}{lll}
 {[PK4010]} & \multicolumn{2}{p{12cm}}  {Die \gls{Desktop Anwendung} kann die Geräte in der Nähe anzeigen.} \\
 {[PK4020]} & \multicolumn{2}{p{12cm}}  {Der Arzt kann unter den Geräten in der Nähe das Mobilgerät des Patienten als Empfänger auswählen.} \\
@@ -168,7 +168,7 @@
 {[WK4010]} & \multicolumn{2}{p{12cm}}  {Die \gls{Versichertennummer}, die in einem \gls{Arztbrief} auf dem Computer des Arztes eingetragen ist, wird vor dem Senden mit der in der myMD App des Patienten hinterlegten \gls{Versichertennummer} abgeglichen und nur bei Übereinstimmung wird der \gls{Arztbrief} gesendet.} \\
 \end{tabular}
 
-\subsection{Kompatibilität}
+\subsubsection{Kompatibilität}
 \begin{tabular}{lll}
 [PK5010] & \multicolumn{2}{p{12cm}}  {Die \gls{Desktop Anwendung} wird von Microsoft Windows 10 unterstützt.} \\
 {[PK5020]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} wird von Android 6.0 (und höher) unterstützt.} \\
@@ -185,7 +185,7 @@
 \hspace{-1.8cm}
 \begin{minipage}[c]{\textwidth}
 \includegraphics[width=1.6\textwidth, angle=90]{graphics/Klassendiagramme/myMD}
-\caption{myMD Klassendiagramm}
+\caption{myMD Klassendiagramm der Entwurfsphase}
 \end{minipage}
 \end{figure}
 
@@ -194,7 +194,7 @@
 \begin{minipage}[c]{\textwidth}
 \centering
 \includegraphics[width=0.95\textheight, angle=90]{Gantt/GanttChart}
-\caption{myMD Klassendiagramm}
+\caption{Gantt Diagramm der Entwurfsphase}
 \end{minipage}
 \end{figure}
 
@@ -245,6 +245,45 @@ Während dem Entwurf stellten wir uns vor, dass es auf einer \textbf{ProfilePage
 
 \section{Geänderte Klassen}
 \section{Nicht umgesetzte Kriterien}
+\textit{Hinweis: Manche dieser Kriterien (z.B. [PK2030]) wurden nur teilweise umgesetzt. D.h. nur manche Teile unseres Projektes unterstützen diese Kriterien, aber aus Zeitgründen wurde die vollständige Implementierung verschoben. Die halbfertigen Kriterien werden durch ein \dq{}!\dq{} gekennzeichnet.}
+\subsubsection{Patientenseitige Datenübertragung}
+\begin{tabular}{lll}
+{[WK1010]} & \multicolumn{2}{p{12cm}}  {Ein \gls{Arztbrief} kann von der myMD \gls{App} des Patienten auf die \gls{Desktop Anwendung} übertragen werden.} \\
+{[WK1020]} & \multicolumn{2}{p{12cm}}  {Der Patient kann mehrere \glspl{Arztbrief} gleichzeitig senden.} \\
+{[WK1030]} & \multicolumn{2}{p{12cm}}  {\gls{NFC} steht als weitere Übertragungsmöglichkeit zur Verfügung.} \\
+{[WK1040]} & \multicolumn{2}{p{12cm}}  {Der Patient wird vor dem Senden von sensiblen Daten darauf hingewiesen, dass er sensible Daten versendet.} \\
+{[WK1050]} & \multicolumn{2}{p{12cm}}  {Ein Profil auf einem Mobilgerät kann auf ein anderes übertragen werden.} \\
+
+\end{tabular}
+
+\subsubsection{Darstellung}
+\begin{tabular}{lll}
+{![PK2030]} & \multicolumn{2}{p{12cm}}  {Die Darstellung eines Arztbriefes umfasst verordnete \gls{Medikament}e.} \\
+{[WK2020]} & \multicolumn{2}{p{12cm}}  {Laborwerte des Patienten werden in einem extra \gls{Tab} chronologisch absteigend sortiert dargestellt.} \\
+{[WK2030]} & \multicolumn{2}{p{12cm}}  {Ein \gls{Arztbrief} kann Bilddateien enthalten und die myMD \gls{App} kann diese originalgetreu darstellen und einem \gls{Arztbrief} zuordnen.} \\
+{[WK2040]} & \multicolumn{2}{p{12cm}}  {Es gibt die Möglichkeit, \glspl{Arztbrief} nach eigenen Kriterien (Arzt, Krankheit o.ä.) zu gruppieren.} \\
+\end{tabular}
+
+\subsubsection{Einstellungen}
+\begin{tabular}{lll}
+{![WK3010]} & \multicolumn{2}{p{12cm}}  {Auf einer myMD \gls{App} können mehrere \gls{Nutzer} verwaltet werden.} \\
+{![WK3030]} & \multicolumn{2}{p{12cm}}  {Der \gls{Nutzer} kann einzelne \glspl{Arztbrief} oder ganze Gruppen als sensibel markieren.} \\
+{[WK3040]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} kann den \gls{Nutzer} an regelmäßige Arzttermine (z.B. Zahnarzt, Augenarzt) erinnern.} \\
+
+\end{tabular}
+
+\subsubsection{\gls{Desktop Anwendung}}
+\begin{tabular}{lll}
+{![WK4010]} & \multicolumn{2}{p{12cm}}  {Die \gls{Versichertennummer}, die in einem \gls{Arztbrief} auf dem Computer des Arztes eingetragen ist, wird vor dem Senden mit der in der myMD App des Patienten hinterlegten \gls{Versichertennummer} abgeglichen und nur bei Übereinstimmung wird der \gls{Arztbrief} gesendet.} \\
+\end{tabular}
+
+\subsubsection{Kompatibilität}
+\begin{tabular}{lll}
+{[WK5020]} & \multicolumn{2}{p{12cm}}  {Die \gls{Desktop Anwendung} wird zusätzlich von macOS 10.12 (und höher) unterstützt.} \\
+{[WK5030]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} kann \gls{Arztbrief}e im .pdf Dateiformat anzeigen.} \\
+{[WK5040]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} kann \gls{Arztbrief}e im .csv Dateiformat anzeigen.} \\
+
+\end{tabular}
 \section{Klassendiagramm (Implementierungsphase)}
 
 \chapter{Ergebnisse der Phase}
