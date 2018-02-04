@@ -180,8 +180,8 @@
 
 \end{tabular}
 
-\begin{figure}
 \section{Klassendiagramm (Entwurfsphase)}
+\begin{figure}
 \hspace{-1.8cm}
 \begin{minipage}[c]{\textwidth}
 \includegraphics[width=1.6\textwidth, angle=90]{graphics/Klassendiagramme/myMD}
@@ -189,11 +189,10 @@
 \end{minipage}
 \end{figure}
 
-\begin{figure}
 \section{Gantt-Diagramm (Entwurfsphase)}
+\begin{figure}
 \begin{minipage}[c]{\textwidth}
-\centering
-\includegraphics[width=0.95\textheight, angle=90]{Gantt/GanttChart}
+\includegraphics[width=1.6\textwidth, angle=90]{Gantt/GanttChart}
 \caption{myMD Klassendiagramm}
 \end{minipage}
 \end{figure}
