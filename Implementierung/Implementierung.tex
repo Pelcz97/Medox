@@ -173,6 +173,13 @@ Um Elemente aus einem Enum in einem Picker von \textit{Xamarin} darstellen zu k�
 
 Um die Namen von Enumwerten zum Anzeigen formatieren zu können wurden für diesen Zweck auch noch in \textbf{StringExtensions} Erweiterungsmethoden für strings hinzugefügt.
 
+\subsection{View}
+\subsubsection{Benutzeroberflächenlogik}
+In der Entwurfsphase orientierten wir uns daran, dass die Benutzeroberflächenlogik nach dem \textit{MVVM-Prinzip} in den jeweiligen \textit{ViewModeln} implementiert wird. Jedoch fiel uns auf, dass dies sehr umständlich ist. Deshalb haben wir die Benutzeroberflächenlogik im Code-Behind zu jeder entsprechenden Seite in der \textit{View} implementiert.
+\subsubsection{ProfileEditPage}
+Während dem Entwurf stellten wir uns vor, dass es auf einer \textbf{ProfilePage} einen Toggle zum Bearbeiten der Daten im Profil gibt, der die Labels, in denen die Daten stehen, durch Entrys ersetzt. Da sich diese Funktion, aber durch die Gestaltung der Seite in .xaml nur suboptimal implementieren lässt, haben wir uns dazu entschieden, die neue Seite \textbf{ProfileEditPage} einzuführen. Diese wird geöffnet, wenn man den \textit{Bearbeiten-Button
+} der \textbf{ProfilePage} antippt. Die \textbf{ProfileEditPage} gleicht der \textbf{ProfilePage} im Design. Die Unterschiede begrenzen sich auf die zwei \textit{StatusBar-Elemente} \dq{}Abrechen\dq{}, \dq{}Fertig\dq{} und die Ersetzung der Labels (in der \textbf{ProfilPage}) durch Entrys.
+
 \section{Geänderte Klassen}
 \section{Nicht umgesetzte Kriterien}
 \section{Klassendiagramm (Implementierungsphase)}
