@@ -185,7 +185,7 @@
 \hspace{-1.8cm}
 \begin{minipage}[c]{\textwidth}
 \includegraphics[width=1.6\textwidth, angle=90]{graphics/Klassendiagramme/myMD}
-\caption{myMD Klassendiagramm}
+\caption{myMD Klassendiagramm der Entwurfsphase}
 \end{minipage}
 \end{figure}
 
@@ -194,7 +194,7 @@
 \begin{minipage}[c]{\textwidth}
 \centering
 \includegraphics[width=0.95\textheight, angle=90]{Gantt/GanttChart}
-\caption{myMD Klassendiagramm}
+\caption{Gantt Diagramm der Entwurfsphase}
 \end{minipage}
 \end{figure}
 
@@ -287,7 +287,14 @@ Während dem Entwurf stellten wir uns vor, dass es auf einer \textbf{ProfilePage
 \section{Klassendiagramm (Implementierungsphase)}
 
 \chapter{Ergebnisse der Phase}
+\begin{figure}
 \section{Ablauf}
+\begin{minipage}[c]{\textwidth}
+\centering
+\includegraphics[width=0.95\textheight, angle=90]{Gantt/GanttDiagrammImplementierung}
+\caption{Gantt Diagramm der Implementierungsphase}
+\end{minipage}
+\end{figure}
 \section{Zukunftspläne}
 
 
