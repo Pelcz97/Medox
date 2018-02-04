@@ -101,10 +101,19 @@ namespace myMD.ViewModel.MedicationTabViewModel
         public void DeleteListItemMethod(MedicineViewModel item)
         {
             ModelFacade.Delete(item.Medication);
-            foreach (Grouping<string,MedicineViewModel> groups in MedicationsItemsList) {
+            foreach (Grouping<string,MedicineViewModel> groups in MedicationsItemsList.ToList()) {
                 foreach (var obj in groups.ToList()) {
                     if (obj == item){
+                        /*if(groups.Count == 1){
+                            groups.Remove(obj);
+                            MedicationsItemsList.Remove(groups);
+                        } else {
+                            groups.Remove(obj);
+                        }*/
                         groups.Remove(obj);
+                        if (groups.Count == 0){
+                            MedicationsItemsList.Remove(groups);
+                        }
                     }
                 }
             }

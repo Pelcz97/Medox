@@ -24,6 +24,7 @@ namespace myMD.View.SendDataTabPages
         public TransmittingDataPage()
         {
             InitializeComponent();
+            vm = new TransmittingDataViewModel();
             BindingContext = vm;
         }
 
@@ -51,6 +52,11 @@ namespace myMD.View.SendDataTabPages
             view.BarTextColor = Color.White;
             view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             await Navigation.PushModalAsync(view);
+        }
+
+        void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            vm.StartServer();
         }
     }
 }

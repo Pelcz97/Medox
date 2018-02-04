@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using myMD.ModelInterface.ModelFacadeInterface;
+using Plugin.BluetoothLE;
 using Xamarin.Forms.Internals;
 
 
@@ -38,6 +39,8 @@ namespace myMD.ViewModel.OverallViewModel
         {
             ModelFacade = App.Model;
         }
+
+        public IAdapter BleAdapter => this.BleAdapter;
 
 
     }

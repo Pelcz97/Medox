@@ -20,8 +20,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
 
         public SelectDeviceViewModel()
         {
-            this.DeviceList = new ObservableCollection<ScanResultViewModel>();
-            
+            this.DeviceList = new ObservableCollection<ScanResultViewModel>();   
         }
 
         public void StartScan(){
@@ -50,7 +49,9 @@ namespace myMD.ViewModel.SendDataTabViewModel
                     {
                         DeviceList.Add(test);
                         DeviceList.FirstOrDefault();
-                        Debug.WriteLine(test.Device.Name);
+                        Debug.WriteLine("Device: " + test.Device);
+                        Debug.WriteLine("Device.Name: " + test.Device.Name);
+                        Debug.WriteLine("Device.UUID: " + test.Device.Uuid);
                     }
                 });
             }
@@ -72,6 +73,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
             Debug.WriteLine("PairingStatus = " + device.PairingStatus);
             Debug.WriteLine("PairingPossible = " + device.IsPairingAvailable());
             ScanResultItem.Device.Connect();
+
         }
     }
 }
