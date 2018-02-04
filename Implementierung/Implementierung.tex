@@ -1,0 +1,199 @@
+
+\documentclass[a4paper]{scrreprt}
+ 
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae}
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[onehalfspacing]{setspace}
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage{glossaries}
+\usepackage{graphicx}
+\usepackage[bookmarks,bookmarksnumbered]{hyperref}
+\usepackage{float}
+\usepackage[font={footnotesize}]{caption}
+\usepackage{titlesec}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\setlength{\parindent}{0pt}%
+\setcounter{tocdepth}{1} 
+\setcounter{secnumdepth}{2} 
+\makenoidxglossaries
+\newglossaryentry{Server}
+{	name=Server,
+	description={Ein Server (englisch server, wörtlich Diener oder Bediensteter, im weiteren Sinn auch Dienst) ist ein Computerprogramm oder ein Computer, der Computerfunktionalitäten wie Dienstprogramme, Daten oder andere Ressourcen bereitstellt, damit andere Computer oder Programme („Clients“) darauf zugreifen können}
+}
+\newglossaryentry{App}
+{ 	name=App,
+	plural=Apps,
+	description={Als Mobile App (auf Deutsch meist in der Kurzform die App, eine Abkürzung für den Fachbegriff Applikation) wird eine Anwendungssoftware für Mobilgeräte beziehungsweise mobile Betriebssysteme bezeichnet}
+}
+\newglossaryentry{Nutzer}
+{	name=Nutzer,
+	description={Ein Benutzer (auch Endbenutzer, Bediener oder kurz Nutzer genannt sowie englisch User) ist eine Person, die ein Hilfs- oder Arbeitsmittel zur Erzielung eines Nutzens verwendet, beispielsweise für eine Zeitersparnis oder Kostensenkung}
+}
+\newglossaryentry{Desktop Anwendung}
+{	name=Desktop Anwendung,
+	plural=Desktop Anwendungen,
+	description={Als Desktop Anwendungen (auch Anwendungsprogramm, kurz Anwendung oder Applikation; englisch application software, kurz App) werden Computerprogramme bezeichnet, die genutzt werden, um eine nützliche oder gewünschte nicht systemtechnische Funktionalität zu bearbeiten oder zu unterstützen. Sie dienen der „Lösung von Benutzerproblemen“}
+}
+\newglossaryentry{Drag and Drop}
+{	name=Drag and Drop,
+	description={Drag and Drop, oft auch Drag’n’Drop, deutsch „Ziehen und Ablegen“, ist eine Methode zur Bedienung grafischer Benutzeroberflächen von Rechnern durch das Bewegen grafischer Elemente mittels eines Zeigegerätes. Ein Element wie z. B. ein Piktogramm kann damit gezogen und über einem möglichen Ziel losgelassen werden. Dieses kann zum Beispiel markierter Text oder das Symbol einer Datei sein }
+}
+\newglossaryentry{Medikament}
+{	name=Medikament,
+	description={Arzneimittel oder gleichbedeutend Medikamente (lateinisch medicamentum „Heilmittel“) sind Stoffe oder Stoffzusammensetzungen, die „zur Heilung oder zur Verhütung menschlicher oder tierischer Krankheiten bestimmt sind“ oder sich dazu eignen, physiologische Funktionen zu beeinflussen oder eine medizinische Diagnose zu ermöglichen}
+}
+\newglossaryentry{NFC}
+{ 	name=NFC,
+	description={Die Nahfeldkommunikation (Near Field Communication, abgekürzt NFC) ist ein auf der RFID-Technik basierender internationaler Übertragungsstandard zum kontaktlosen Austausch von Daten per elektromagnetischer Induktion mittels loser gekoppelter Spulen über kurze Strecken von wenigen Zentimetern}
+}
+\newglossaryentry{Versichertennummer}
+{ 	name=Versichertennummer,
+	description={Die Krankenversichertennummer dient der Identifikation des Versicherten bei einer Krankenversicherung. Die Krankenversichertennummer wird benötigt, damit Leistungserbringer, z. B. Ärzte oder Zahnärzte ihre Leistungen mittels der Krankenversicherungskarte, über die Kassenärztlichen Vereinigungen, mit der zuständigen Krankenkasse abrechnen können}
+}
+\newglossaryentry{Bluetooth}
+{	name=Bluetooth,
+	description={Bluetooth ist ein in den 1990er Jahren durch die Bluetooth Special Interest Group (SIG) entwickelter Industriestandard gemäß IEEE 802.15.1 für die Datenübertragung zwischen Geräten über kurze Distanz per Funktechnik (WPAN). Dabei sind verbindungslose sowie verbindungsbehaftete Übertragungen von Punkt zu Punkt und Ad-hoc- oder Piconetze möglich}
+}
+\newglossaryentry{Pop-Up}
+{	name=Pop-Up,
+	description={Ein Pop-up (von englisch to pop up, „plötzlich auftauchen“) ist ein Element einer grafischen Benutzeroberfläche. In der Regel werden Pop-ups eingesetzt, um zusätzliche Inhalte anzuzeigen oder eine bestimmte Interaktion abzufragen. Typischerweise „springen“ Pop-ups auf und überdecken dabei andere Teile der Benutzeroberfläche}
+}
+\newglossaryentry{Cloud}
+{	name=Cloud,
+	description={Die Cloud ist keine physische Größe, sondern ein riesiges Netzwerk aus Remoteservern, die über die ganzen Welt verteilt aber miteinander verbunden sind, damit sie als ein einziges großes Ökosystem funktionieren können}
+}
+\newglossaryentry{Tab}
+{	name=Tab,
+	description={Eine Registerkarte, auch Reiter oder Tab genannt, ist ein Steuerelement einer grafischen Benutzeroberfläche, das einem Registerblatt aus Aktenschränken nachempfunden wurde }
+}
+ 
+\newglossaryentry{Arztbrief}
+{	name=Arztbrief,
+	plural=Arztbriefe,
+	description={Der Arztbrief, oft synonym als Epikrise, Entlassungsbrief, Patientenbrief oder Befundbericht bezeichnet, ist ein Transferdokument für die Kommunikation zwischen Ärzten. Der Arztbrief gibt einen zusammenfassenden Überblick über den Status des Patienten bei der Entlassung, einen Rückblick über den Krankheitsverlauf, die veranlasste Therapie, eine Interpretation des Geschehens zum Krankheitsverlauf im speziellen Fall}
+}
+\newglossaryentry{Anamnese}
+{	name=Anamnese,
+	description={Die Anamnese (von altgriechisch anámnēsis, deutsch ‚Erinnerung‘) ist die professionelle Erfragung von potenziell medizinisch relevanten Informationen durch Fachpersonal (z. B. einen Arzt)}
+}
+ 
+\begin{document}
+\begin{titlepage}
+\begin{figure}[h]
+	\vspace{-4cm}
+	\hspace{-2cm}
+	\includegraphics[ width=0.3\textwidth]{graphics/Kit_Logo}
+	\label{fig:Aufg03_1}
+\end{figure}
+	\vspace{1.5cm}
+	\centering
+	\includegraphics[width=0.5\textwidth]{graphics/myMD_Logo}\par\vspace{0.5cm}
+	{\Huge myMD \par}
+	\vspace{2cm}
+	{\scshape\Large Implementierung\par}
+	\vspace{1cm}
+	Praxis der Softwareentwicklung WS2017/2018 \par
+	\vspace{2cm}
+	{\Large\itshape Philipp Pelcz, Philipp Karcher, Jan-Luca Vettel\par}
+	\vfill
+	supervised by \par
+	Marc Aurel Kiefer
+	\vfill
+% Bottom of the page
+	{\large \today \par}
+\end{titlepage}
+ 
+% Platzierung des Inhaltsverzeichnisses
+\tableofcontents
+\addtocontents{toc}{\protect\enlargethispage{10cm}}
+\setlength{\parskip}{2.5mm}%
+\chapter{Einleitung}
+%TODO
+
+\chapter{Vorangegangene Planung}
+\section{Kriterien (Planungsphase)}
+%TODO Aus Pflichtenheft einfügen
+
+\section{Klassendiagramm (Entwurfsphase)}
+\begin{figure}
+\hspace{-1.8cm}
+\begin{minipage}[c]{\textwidth}
+\includegraphics[width=1.6\textwidth, angle=90]{graphics/Klassendiagramme/myMD}
+\caption{myMD Klassendiagramm}
+\end{minipage}
+\end{figure}
+
+\section{Gantt-Diagramm (Entwurfsphase)}
+%TODO Aus Entwurf einfügen
+
+\chapter{Geänderte Daten}
+\section{Geänderte Entwürfe}
+\subsection{Model}
+\subsubsection{Beobachter-Entwurfsmuster}
+In der Entwurfsphase entschieden wir uns für das Beobachter-Entwurfsmuster, um die Datenbank über Änderungen an den Instanzen der Klassen aus dem \textbf{DataModel} Paket zu benachrichtigen.
+
+Das \textbf{EntitiyObserver} Paket, das die dafür vorgesehenen Schnittstellen enthält, wurde mitsamt diesen komplett enfernt. Stattdessen muss das Aktualisieren einer Entität nun per explizitem Aufruf an die \textbf{ModelFacade} durchgeführt werden.
+
+Die Gründe dafür sind zweigeteilt:
+
+Erstens werden durch die Benutzung der \textit{SQLite-Net-Extensions} Library beim rekursiven Auflösen von Relationen Objekte aus der Datenbank geladen, ohne dass bei ihnen von uns die Datenbank als Beobachter angemeldet werden kann. Um das Laden von in Relation stehender Entitäten aus der Datenbank zu vereinfachen, ist es sinnvoll das Beobachterprinzip nicht weiter zu verwenden.
+
+Zweitens ist es von der GUI-Seite auch intuitiver, Änderungen dann erst zu übernehmen, wenn dies explizit vom Benutzer so veranlasst wird. Damit bietet sich die \textit{Update} Methode in der \textbf{ModelFacade} als Alternative an.
+
+\subsubsection{Plattformspezifisches Parsen}
+Bestimmte Klassen des \textit{Everest} Frameworks, das zum Parsen von .hl7 Dateien benutzt wird, implementieren die \textbf{ICloneable} Schnittstelle, die in einem \textit{Xamarin-Cross-Platform} Projekt nicht verfügbar ist. 
+
+Manche dieser Klassen werden jedoch benötigt um die Dateien vollständig zu parsen, daher kann der \textbf{Hl7ToDatabaseParser} nicht mehr wie geplant komplett plattformunabhängig implementiert werden.
+
+Operationen mit diesen Klassen werden nun über die \textbf{IHl7ParserHelper} Schnittstelle aufgerufen und im \textbf{Hl7ParserHelper} plattformspezifisch implementiert.
+
+\subsubsection{Dateiformatunabhänigiges Parsen}
+Um in Zukunft die Implementierung der Unterstützung mehrere Dateiformate zu vereinfachen, wurden mehrere Änderungen am \textbf{FileToDabaseParser} vorgenommen:
+
+Das Auswählen des richtigen Parsers erfolgt nun über die Enumeration \textbf{FileFormat} der unterstützen Dateiformate und eine Erweiterungsmethode in \textbf{FileFormatExtensions} die einem Dateiformat aus \textbf{FileFormat} den passenden \textbf{FileToDabaseParser} zuordnet.
+
+Weiterhin wurden auch die dateiformatspezifischen Einschubmethoden des \textbf{FileToDabaseParser} modifiziert: 
+
+Die zu parsende Datei wird nun über die neu hinzugefügte \textit{Init} Methode übergeben, die weiteren \textit{Parse} Methoden sind dafür nun parameterlos. Dies erlaubt es flexibler aus einer Datei lesen zu können. 
+
+Beim vorherigen Ansatz musste für jeden Aufruf einer \textit{Parse} Methoden neu aus der Datei gelesen werden. Jetzt können stattdessen gemeinsame Vorbereitungen getroffen werden, wie z.B. beim \textbf{Hl7ToDatabaseParser}. Hier wird mit \textit{Init} die gesamte Datei mit \textit{Everest} in den frameworkeigenen Datentyp \textit{ClinicalDocument} geparst, der dann wiederum mit den restlichen \textit{Parse} Methoden in die Datentypen aus dem \textbf{DataModel} Paket geparst wird.
+
+\subsection{ViewModel}
+\subsubsection{Enum-Picker}
+Um Elemente aus einem Enum in einem Picker von \textit{Xamarin} darstellen zu können, wird ein Konvertierer (\textbf{IntEnumConverter}) benötigt, da die dafür von \textit{Xamarin} angebotene Funktionalität eine Liste von Elementen erwartet. Mit dem Konvertierer kann dann jedem Listeneintrag über \textit{DataBinding} ein Enum-Wert zugewiesen werden.
+
+Um die Namen von Enumwerten zum Anzeigen formatieren zu können wurden für diesen Zweck auch noch in \textbf{StringExtensions} Erweiterungsmethoden für strings hinzugefügt.
+
+\subsection{View}
+\subsubsection{Benutzeroberflächenlogik}
+In der Entwurfsphase orientierten wir uns daran, dass die Benutzeroberflächenlogik nach dem \textit{MVVM-Prinzip} in den jeweiligen \textit{ViewModeln} implementiert wird. Jedoch fiel uns auf, dass dies sehr umständlich ist. Deshalb haben wir die Benutzeroberflächenlogik im Code-Behind zu jeder entsprechenden Seite in der \textit{View} implementiert.
+\subsubsection{ProfileEditPage}
+Während dem Entwurf stellten wir uns vor, dass es auf einer \textbf{ProfilePage} einen Toggle zum Bearbeiten der Daten im Profil gibt, der die Labels, in denen die Daten stehen, durch Entrys ersetzt. Da sich diese Funktion, aber durch die Gestaltung der Seite in .xaml nur suboptimal implementieren lässt, haben wir uns dazu entschieden, die neue Seite \textbf{ProfileEditPage} einzuführen. Diese wird geöffnet, wenn man den \textit{Bearbeiten-Button
+} der \textbf{ProfilePage} antippt. Die \textbf{ProfileEditPage} gleicht der \textbf{ProfilePage} im Design. Die Unterschiede begrenzen sich auf die zwei \textit{StatusBar-Elemente} \dq{}Abrechen\dq{}, \dq{}Fertig\dq{} und die Ersetzung der Labels (in der \textbf{ProfilPage}) durch Entrys.
+
+\section{Geänderte Klassen}
+\section{Nicht umgesetzte Kriterien}
+\section{Klassendiagramm (Implementierungsphase)}
+
+\chapter{Ergebnisse der Phase}
+\section{Ablauf}
+\section{Zukunftspläne}
+
+
+
+\glsaddall
+\printnoidxglossaries
+
+% Abbildungsverzeichnis
+\listoffigures
+ 
+\end{document}
