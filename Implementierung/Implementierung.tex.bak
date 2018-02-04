@@ -185,7 +185,7 @@
 \hspace{-1.8cm}
 \begin{minipage}[c]{\textwidth}
 \includegraphics[width=1.6\textwidth, angle=90]{graphics/Klassendiagramme/myMD}
-\caption{myMD Klassendiagramm der Entwurfsphase}
+\caption{myMD Klassendiagramm}
 \end{minipage}
 \end{figure}
 
@@ -194,7 +194,7 @@
 \begin{minipage}[c]{\textwidth}
 \centering
 \includegraphics[width=0.95\textheight, angle=90]{Gantt/GanttChart}
-\caption{Gantt Diagramm der Entwurfsphase}
+\caption{myMD Klassendiagramm}
 \end{minipage}
 \end{figure}
 
