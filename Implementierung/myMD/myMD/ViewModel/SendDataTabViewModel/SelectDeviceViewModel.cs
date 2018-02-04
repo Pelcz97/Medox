@@ -12,7 +12,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class SelectDeviceViewModel : OverallViewModel.OverallViewModel
     {
-        public IAdapter BleAdapter { get; set; }
+        //public IAdapter BleAdapter { get; set; }
         public ObservableCollection<ScanResultViewModel> DeviceList { get; }
         private bool isScanning { get; set; }
         public IDisposable scan { get; set; }
@@ -36,7 +36,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
             {
                 Debug.WriteLine(status);
             });
-
 
             if (status == AdapterStatus.PoweredOn)
             {

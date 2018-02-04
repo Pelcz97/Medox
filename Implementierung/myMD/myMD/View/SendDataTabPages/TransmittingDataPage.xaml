@@ -32,17 +32,6 @@
                     HeightRequest="50"
                     WidthRequest="400"
                     BorderRadius="10" />
-            <Button x:Name="StartServed_Clicked"
-                    Text="Server"
-                    TextColor="White"
-                    FontAttributes="Bold"
-                    Grid.Row="1"
-                    BackgroundColor="#FFFFFF"
-                    HorizontalOptions="Start"
-                    VerticalOptions="CenterAndExpand"
-                    HeightRequest="50"
-                    WidthRequest="100"
-                    BorderRadius="10" Clicked="Handle_Clicked" />
             </Grid>
 	</ContentPage.Content>
 </local:CustomContentPage>
