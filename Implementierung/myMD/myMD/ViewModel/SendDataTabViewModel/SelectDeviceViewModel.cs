@@ -22,6 +22,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// Liste an Geräten die in der Umgebung gefunden wurden
         /// </summary>
         public ObservableCollection<ScanResultViewModel> DeviceList { get; }
+
         /// <summary>
         /// Boolean, ob das Gerät des Nutzers gerade die Umbegung nach Geräten durchsucht
         /// </summary>
