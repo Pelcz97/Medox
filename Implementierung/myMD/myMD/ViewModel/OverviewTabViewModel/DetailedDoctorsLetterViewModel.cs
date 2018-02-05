@@ -4,7 +4,7 @@ using Xamarin.Forms.Internals;
 namespace myMD.ViewModel.OverviewTabViewModel
 {
     /// <summary>
-    /// Detailed doctors letter view model.
+    /// ViewModel zur Modelierung eines DetailedDoctorsLetter
     /// </summary>
     [Preserve(AllMembers = true)]
     public class DetailedDoctorsLetterViewModel : DoctorsLetterViewModel
