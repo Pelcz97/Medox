@@ -1,0 +1,4 @@
+<map id="myMD.ViewModel.MedicationTabViewModel.MedicineViewModel" name="myMD.ViewModel.MedicationTabViewModel.MedicineViewModel">
+<area shape="rect" id="node4" href="$classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model.html" title="ViewModel einer DetailedMedicine " alt="" coords="5,259,277,300"/>
+<area shape="rect" id="node2" href="$classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model.html" title="ViewModel Elternklasse erbt an alle anderen ViewModel, um Redundanz der ModelFacade zu vermeiden ..." alt="" coords="56,80,227,121"/>
+</map>

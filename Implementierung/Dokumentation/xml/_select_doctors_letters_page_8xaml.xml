@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_select_doctors_letters_page_8xaml" kind="file" language="C++">
+    <compoundname>SelectDoctorsLettersPage.xaml</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;?xml<sp/>version=&quot;1.0&quot;<sp/>encoding=&quot;UTF-8&quot;?&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;local:CustomContentPage<sp/>xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xmlns:local=&quot;clr-namespace:myMD.View.AbstractPages;assembly=myMD&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>x:Class=&quot;myMD.View.SendDataTabPages.SelectDoctorsLettersPage&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Title=&quot;Arztbriefe<sp/>wählen&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;ContentPage.ToolbarItems&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;ToolbarItem<sp/>Name=&quot;CancelSelectDoctorsLetters&quot;<sp/>Text=&quot;Abbrechen&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Order=&quot;Primary&quot;<sp/>Priority=&quot;-1&quot;<sp/>Clicked=&quot;CancelSelectDoctorsLetters_Clicked&quot;/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/ContentPage.ToolbarItems&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;/local:CustomContentPage&gt;</highlight></codeline>
+    </programlisting>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDoctorsLettersPage.xaml"/>
+  </compounddef>
+</doxygen>

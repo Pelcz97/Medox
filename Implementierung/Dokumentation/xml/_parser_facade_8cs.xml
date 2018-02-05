@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_parser_facade_8cs" kind="file" language="C#">
+    <compoundname>ParserFacade.cs</compoundname>
+    <innerclass refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade" prot="public">myMD::Model::ParserModel::ParserFacade</innerclass>
+    <innernamespace refid="namespacemy_m_d_1_1_model_1_1_parser_model">myMD::Model::ParserModel</innernamespace>
+    <innernamespace refid="namespace_system_1_1_i_o">System::IO</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacemy_m_d" kindref="compound">myMD</ref>.<ref refid="namespacemy_m_d_1_1_model" kindref="compound">Model</ref>.<ref refid="namespacemy_m_d_1_1_model_1_1_database_model" kindref="compound">DatabaseModel</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacemy_m_d" kindref="compound">myMD</ref>.<ref refid="namespacemy_m_d_1_1_model_interface" kindref="compound">ModelInterface</ref>.<ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface" kindref="compound">DataModelInterface</ref>;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>.IO;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemy_m_d" kindref="compound">myMD</ref>.Model.ParserModel</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13" refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade" kindref="compound">ParserFacade</ref><sp/>:<sp/><ref refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade" kindref="compound">IParserFacade</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19" refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_1a52bf8be888d38b6433f60edc1e4b1fff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_1a52bf8be888d38b6433f60edc1e4b1fff" kindref="member">ParseFileToDatabase</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>filename,<sp/><ref refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database" kindref="compound">IEntityDatabase</ref><sp/>db)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>extension<sp/>=<sp/>Path.GetExtension(filename).TrimStart(</highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Enum.TryParse(extension,<sp/>out<sp/><ref refid="namespacemy_m_d_1_1_model_1_1_parser_model_1acd0bce598035ba27bbeaa1725eb5c7d9" kindref="member">FileFormat</ref><sp/>format))</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>format.GetFileToDatabaseParser().ParseFile(filename,<sp/>db);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>NotSupportedException($</highlight><highlight class="stringliteral">&quot;Parsing<sp/>&apos;.{extension}&apos;<sp/>files<sp/>is<sp/>not<sp/>supported&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_1a21538d294bf09fe09e84faa7363d280c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_1a21538d294bf09fe09e84faa7363d280c" kindref="member">ParseLetterToOriginalFile</ref>(<ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref><sp/>letter)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser" kindref="compound">LetterToOriginalFileParser</ref>().<ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser_1a3ec485556f6b68c51c447e82d14c6793" kindref="member">ParseLetter</ref>(letter);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/ParserFacade.cs"/>
+  </compounddef>
+</doxygen>

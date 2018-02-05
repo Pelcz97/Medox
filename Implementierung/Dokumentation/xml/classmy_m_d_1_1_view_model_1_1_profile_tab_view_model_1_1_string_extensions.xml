@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_string_extensions" kind="class" language="C#" prot="public">
+    <compoundname>myMD::ViewModel::ProfileTabViewModel::StringExtensions</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_string_extensions_1af1a9d8e7951b1b8fee360195e5c81fa1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string myMD.ViewModel.ProfileTabViewModel.StringExtensions.FormatPlusAndMinus</definition>
+        <argsstring>(this string str)</argsstring>
+        <name>FormatPlusAndMinus</name>
+        <param>
+          <type>this string</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Ersetzt die Wörter &quot;Minus&quot; und &quot;Plus&quot; durch das entsprechende Zeichen mit vorangestelltem Leerzeichen </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Der zu formatierende string</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Das formatierte Ergebnis</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/StringExtensions.cs" line="21" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/StringExtensions.cs" bodystart="21" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Erweiterungsmehtoden der String-Klasse zum formatieren von strings zum Anzeigen </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/StringExtensions.cs" line="15" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/StringExtensions.cs" bodystart="14" bodyend="25"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_string_extensions_1af1a9d8e7951b1b8fee360195e5c81fa1" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::StringExtensions</scope><name>FormatPlusAndMinus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

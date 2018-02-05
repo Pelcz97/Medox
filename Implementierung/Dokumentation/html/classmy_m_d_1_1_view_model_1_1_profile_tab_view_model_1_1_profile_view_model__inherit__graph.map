@@ -1,0 +1,4 @@
+<map id="myMD.ViewModel.ProfileTabViewModel.ProfileViewModel" name="myMD.ViewModel.ProfileTabViewModel.ProfileViewModel">
+<area shape="rect" id="node2" href="$classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model.html" title="ViewModel zur Darstellung eines einzelnen Profils " alt="" coords="26,169,173,196"/>
+<area shape="rect" id="node3" href="$classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model.html" title="ViewModel Elternklasse erbt an alle anderen ViewModel, um Redundanz der ModelFacade zu vermeiden ..." alt="" coords="14,80,185,121"/>
+</map>

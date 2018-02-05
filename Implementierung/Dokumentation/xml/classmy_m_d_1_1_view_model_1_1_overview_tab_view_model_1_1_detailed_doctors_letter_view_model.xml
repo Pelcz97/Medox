@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model" kind="class" language="C#" prot="public">
+    <compoundname>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model" prot="public" virt="non-virtual">myMD.ViewModel.OverviewTabViewModel.DoctorsLetterViewModel</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model_1a8a19eda5700386266c53ed6fb1f22a9c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.ViewModel.OverviewTabViewModel.DetailedDoctorsLetterViewModel.Diagnosis</definition>
+        <argsstring></argsstring>
+        <name>Diagnosis</name>
+        <briefdescription>
+<para>Die im Arztbrief gespeicherte Diagnose. </para>        </briefdescription>
+        <detaileddescription>
+<para>The diagnosis.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/DetailedDoctorsLetterViewModel.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/DetailedDoctorsLetterViewModel.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model_1a344adddfaaa08415feb4e37a8d2428f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.ViewModel.OverviewTabViewModel.DetailedDoctorsLetterViewModel.DetailedDoctorsLetterViewModel</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>DetailedDoctorsLetterViewModel</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the T:myMD.ViewModel.OverviewTabViewModel.DetailedDoctorsLetterViewModel class. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/DetailedDoctorsLetterViewModel.cs" line="23" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/DetailedDoctorsLetterViewModel.cs" bodystart="23" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model_1aa879528b83398ced704ca2be3b63bb3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.ViewModel.OverviewTabViewModel.DetailedDoctorsLetterViewModel.DetailedDoctorsLetterViewModel</definition>
+        <argsstring>(IDoctorsLetter letter)</argsstring>
+        <name>DetailedDoctorsLetterViewModel</name>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref></type>
+          <declname>letter</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the T:myMD.ViewModel.OverviewTabViewModel.DetailedDoctorsLetterViewModel class. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>letter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Letter.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/DetailedDoctorsLetterViewModel.cs" line="34" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/DetailedDoctorsLetterViewModel.cs" bodystart="34" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Detailed doctors letter view model. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="48">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="45">
+        <label>myMD.ViewModel.OverviewTabViewModel.DetailedDoctorsLetterViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model"/>
+        <childnode refid="46" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="48" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>DoctorsLetterViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model"/>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="52">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="49">
+        <label>myMD.ViewModel.OverviewTabViewModel.DetailedDoctorsLetterViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model"/>
+        <childnode refid="50" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="52" relation="public-inheritance">
+        </childnode>
+        <childnode refid="53" relation="usage">
+          <edgelabel>ModelFacade</edgelabel>
+        </childnode>
+      </node>
+      <node id="50">
+        <label>DoctorsLetterViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>myMD.ModelInterface.ModelFacadeInterface.IModelFacade</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/DetailedDoctorsLetterViewModel.cs" line="11" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/DetailedDoctorsLetterViewModel.cs" bodystart="10" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1acff4179c3cbf2cd35046729e99cd6921" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</scope><name>BleAdapter</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model_1a344adddfaaa08415feb4e37a8d2428f5" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</scope><name>DetailedDoctorsLetterViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model_1aa879528b83398ced704ca2be3b63bb3d" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</scope><name>DetailedDoctorsLetterViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model_1a8a19eda5700386266c53ed6fb1f22a9c" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</scope><name>Diagnosis</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model_1a7198d58577b1ff6afb311d7f6d2ec135" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</scope><name>Doctor</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model_1aa4fc2a27c4bf91ec2024f5d27e70e662" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</scope><name>DoctorsField</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model_1a7fc91581b93d169c2a2891431b18c00a" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</scope><name>DoctorsLetter</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model_1ae83d2cfdf45b0fabb044b90d9388064d" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</scope><name>DoctorsLetterDate</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model_1a587e53a436f0a4472d49493bcdc97f9d" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</scope><name>DoctorsLetterViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model_1ac1266020659a2746aa6f94d2bc4efa3e" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</scope><name>DoctorsLetterViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model_1aba4a1943b0af5de34cd998194f88d746" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</scope><name>DoctorsName</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1ab1b0e7b2ed9ae07614caa1e45b942e3f" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</scope><name>ModelFacade</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a0333c153387ba2d38fb31eeb0419bfcf" prot="public" virt="virtual"><scope>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</scope><name>OnPropertyChanged</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</scope><name>OverallViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1918d3d8d384486e278426327b16256f" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::DetailedDoctorsLetterViewModel</scope><name>PropertyChanged</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

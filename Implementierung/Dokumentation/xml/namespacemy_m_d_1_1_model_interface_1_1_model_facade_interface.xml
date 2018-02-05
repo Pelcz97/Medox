@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacemy_m_d_1_1_model_interface_1_1_model_facade_interface" kind="namespace" language="C#">
+    <compoundname>myMD::ModelInterface::ModelFacadeInterface</compoundname>
+    <innerclass refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade" prot="public">myMD::ModelInterface::ModelFacadeInterface::IModelFacade</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

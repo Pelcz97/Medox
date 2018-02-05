@@ -1,0 +1,5 @@
+<map id="myMD.Model.DataModel.Profile" name="myMD.Model.DataModel.Profile">
+<area shape="rect" id="node2" href="$classmy_m_d_1_1_model_1_1_data_model_1_1_entity.html" title="Die Entity Klasse implementiert die IEntity&#45;Schnittstelle. Dabei dient die Klasse nur als Strukturele..." alt="" coords="89,80,145,107"/>
+<area shape="rect" id="node3" href="$interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity.html" title="Schnittstelle für eine Entität. Entitäten sind Abstraktionen von medizinischen Daten oder Akteuren..." alt="" coords="171,5,229,32"/>
+<area shape="rect" id="node5" href="$interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile.html" title="Schnittstelle für die Abstraktion eines Nutzerprofils, die die IEntity Schnittstelle erweitert..." alt="" coords="169,80,231,107"/>
+</map>

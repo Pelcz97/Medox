@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_model_1_1_data_model_1_1_profile" kind="class" language="C#" prot="public">
+    <compoundname>myMD::Model::DataModel::Profile</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity" prot="public" virt="non-virtual">myMD.Model.DataModel.Entity</basecompoundref>
+    <basecompoundref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" prot="public" virt="non-virtual">myMD.ModelInterface.DataModelInterface.IProfile</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IEquatable&lt; Profile &gt;</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a7e9b00c470f863fcb3ca45cdf8c77cf1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime myMD.Model.DataModel.Profile.BirthDate</definition>
+        <argsstring></argsstring>
+        <name>BirthDate</name>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a79b0d5f4850c5fa0aabca016ffccf34c" kindref="member">myMD.ModelInterface.DataModelInterface.IProfile::BirthDate()</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" line="28" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" bodystart="28" bodyend="28"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1af26a4f9cf5ac6b8ee14e629e0a36a004" compoundref="_profile_8cs" startline="43" endline="52">myMD.Model.DataModel.Profile.Equals</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a81a7f07ba0a9fe43d5579c8c5a0783c7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17c" kindref="member">BloodType</ref></type>
+        <definition>BloodType myMD.Model.DataModel.Profile.BloodType</definition>
+        <argsstring></argsstring>
+        <name>BloodType</name>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a9438f9d491f0caa5dabc7fec4abdeeb5" kindref="member">myMD.ModelInterface.DataModelInterface.IProfile::BloodType</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" line="31" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" bodystart="31" bodyend="31"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1af26a4f9cf5ac6b8ee14e629e0a36a004" compoundref="_profile_8cs" startline="43" endline="52">myMD.Model.DataModel.Profile.Equals</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a07ff7aced06e3f7f5f930e93908cd2e9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.Model.DataModel.Profile.InsuranceNumber</definition>
+        <argsstring></argsstring>
+        <name>InsuranceNumber</name>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a2561117d433086f373455cedc9ede7f5" kindref="member">myMD.ModelInterface.DataModelInterface.IProfile::InsuranceNumber</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" line="34" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" bodystart="34" bodyend="34"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1af26a4f9cf5ac6b8ee14e629e0a36a004" compoundref="_profile_8cs" startline="43" endline="52">myMD.Model.DataModel.Profile.Equals</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a7871b0de751bccf0e6cd9a89c4d9605c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.Model.DataModel.Profile.LastName</definition>
+        <argsstring></argsstring>
+        <name>LastName</name>
+        <briefdescription>
+<para>myMD.ModelInterface.DataModelInterface.IProfile::LastName(string)</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" line="37" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" bodystart="37" bodyend="37"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1af26a4f9cf5ac6b8ee14e629e0a36a004" compoundref="_profile_8cs" startline="43" endline="52">myMD.Model.DataModel.Profile.Equals</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a313775fe1812c9b721b67e335901e25b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.Model.DataModel.Profile.Profile</definition>
+        <argsstring>()</argsstring>
+        <name>Profile</name>
+        <briefdescription>
+<para>Jeder Entität soll eindeutig einem Nutzerprofile zugeordnet werden können. Das Profil eines Profils, sollte dabei natürlich immer das Profil selbst sein. Dies wird hier initialisiert. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" line="22" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1af26a4f9cf5ac6b8ee14e629e0a36a004" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool myMD.Model.DataModel.Profile.Equals</definition>
+        <argsstring>(Profile other)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile" kindref="compound">Profile</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Zwei <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile" kindref="compound">Profile</ref> sind genau dann gleich, wenn ihr Name, Nachname, Geburtsdatum, ihre Blutgruppe, ID und Versicherungsnummer gleich sind. </para>        </briefdescription>
+        <detaileddescription>
+<para>System.IEquatable&lt;T&gt;::Equals(T)</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" line="43" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" bodystart="43" bodyend="52"/>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1af26a4f9cf5ac6b8ee14e629e0a36a004" compoundref="_profile_8cs" startline="43" endline="52">myMD.Model.DataModel.Profile.Equals</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1ac2f81922151a57358d5d8f12dbab6d89" compoundref="_entity_8cs" startline="25" endline="25">myMD.Model.DataModel.Entity.ID</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a752f68aa01561c06c77bc2d3324a46e7" compoundref="_entity_8cs" startline="28" endline="28">myMD.Model.DataModel.Entity.Name</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a07ff7aced06e3f7f5f930e93908cd2e9" compoundref="_profile_8cs" startline="34" endline="34">myMD.Model.DataModel.Profile.InsuranceNumber</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a7871b0de751bccf0e6cd9a89c4d9605c" compoundref="_profile_8cs" startline="37" endline="37">myMD.Model.DataModel.Profile.LastName</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a81a7f07ba0a9fe43d5579c8c5a0783c7" compoundref="_profile_8cs" startline="31" endline="31">myMD.Model.DataModel.Profile.BloodType</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a7e9b00c470f863fcb3ca45cdf8c77cf1" compoundref="_profile_8cs" startline="28" endline="28">myMD.Model.DataModel.Profile.BirthDate</references>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1abe00d7d8a12deadbb57953f0cc57346c" compoundref="_entity_8cs" startline="55" endline="61">myMD.Model.DataModel.Entity.Equals</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1af26a4f9cf5ac6b8ee14e629e0a36a004" compoundref="_profile_8cs" startline="43" endline="52">myMD.Model.DataModel.Profile.Equals</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a413a90b8eb1b39e13bdc8dcd83872164" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool myMD.Model.DataModel.Profile.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>System.Object::Equals(System.Object)</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a7b0e1fab2251f4ce82c1a489a6d8e0b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int myMD.Model.DataModel.Profile.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+<para>System.Object::GetHashCode()</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" line="58" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" bodystart="58" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1adb822d7b8eea929c85a90414a92951af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile" kindref="compound">Profile</ref></type>
+        <definition>Profile myMD.Model.DataModel.Profile.ToProfile</definition>
+        <argsstring>()</argsstring>
+        <name>ToProfile</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1aa525d1f3b15f7a82011022dbc8edbdd1">ToProfile</reimplements>
+        <briefdescription>
+<para>Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1aa525d1f3b15f7a82011022dbc8edbdd1" kindref="member">myMD.ModelInterface.DataModelInterface.IProfile::ToProfile()</ref></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" line="72" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Diese Klasse implementiert die IProfile Schnittstelle und erweitert die abstrakte Enitity Klasse, um Information über einen Nutzer in einer SQLite-Datenbank speichern zu können </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">myMD.ModelInterface.DataModelInterface.IProfile</ref></para><para><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity" kindref="compound">myMD.Model.DataModel.Entity</ref></para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="337">
+        <label>IEquatable&lt; Entity &gt;</label>
+      </node>
+      <node id="335">
+        <label>Entity</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
+        <childnode refid="336" relation="public-inheritance">
+        </childnode>
+        <childnode refid="337" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="339">
+        <label>IEquatable&lt; Profile &gt;</label>
+      </node>
+      <node id="334">
+        <label>myMD.Model.DataModel.Profile</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile"/>
+        <childnode refid="335" relation="public-inheritance">
+        </childnode>
+        <childnode refid="338" relation="public-inheritance">
+        </childnode>
+        <childnode refid="339" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="338">
+        <label>IProfile</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile"/>
+        <childnode refid="336" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="336">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="343">
+        <label>IEquatable&lt; Entity &gt;</label>
+      </node>
+      <node id="341">
+        <label>Entity</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
+        <childnode refid="342" relation="public-inheritance">
+        </childnode>
+        <childnode refid="343" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="345">
+        <label>IEquatable&lt; Profile &gt;</label>
+      </node>
+      <node id="340">
+        <label>myMD.Model.DataModel.Profile</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile"/>
+        <childnode refid="341" relation="public-inheritance">
+        </childnode>
+        <childnode refid="344" relation="public-inheritance">
+        </childnode>
+        <childnode refid="345" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="344">
+        <label>IProfile</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile"/>
+        <childnode refid="342" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="342">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Profile.cs" bodystart="15" bodyend="73"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a7e9b00c470f863fcb3ca45cdf8c77cf1" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Profile</scope><name>BirthDate</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a81a7f07ba0a9fe43d5579c8c5a0783c7" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Profile</scope><name>BloodType</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1afe40113ddeb60fd81f4bbcc6d0e696b6" prot="public" virt="virtual"><scope>myMD::Model::DataModel::Profile</scope><name>Delete</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1af26a4f9cf5ac6b8ee14e629e0a36a004" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Profile</scope><name>Equals</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a413a90b8eb1b39e13bdc8dcd83872164" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Profile</scope><name>Equals</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1abe00d7d8a12deadbb57953f0cc57346c" prot="public" virt="non-virtual" ambiguityscope="myMD::Model::DataModel::Entity."><scope>myMD::Model::DataModel::Profile</scope><name>Equals</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a7b0e1fab2251f4ce82c1a489a6d8e0b6" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Profile</scope><name>GetHashCode</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1ac2f81922151a57358d5d8f12dbab6d89" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Profile</scope><name>ID</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a07ff7aced06e3f7f5f930e93908cd2e9" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Profile</scope><name>InsuranceNumber</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a7871b0de751bccf0e6cd9a89c4d9605c" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Profile</scope><name>LastName</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a752f68aa01561c06c77bc2d3324a46e7" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Profile</scope><name>Name</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1a313775fe1812c9b721b67e335901e25b" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Profile</scope><name>Profile</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a3df9a6eed5a26b09bbf075615db46b9c" prot="public" virt="non-virtual" ambiguityscope="myMD::Model::DataModel::Entity."><scope>myMD::Model::DataModel::Profile</scope><name>Profile</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a54eef4f2993b1ed6467ee8a7d4b1a4b7" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Profile</scope><name>ProfileID</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1ab69c6b862e29567f6c103ac5520c863a" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Profile</scope><name>ToEntity</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1adb822d7b8eea929c85a90414a92951af" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Profile</scope><name>ToProfile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

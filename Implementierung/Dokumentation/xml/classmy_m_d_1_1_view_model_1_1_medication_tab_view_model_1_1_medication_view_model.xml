@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model" kind="class" language="C#" prot="public">
+    <compoundname>myMD::ViewModel::MedicationTabViewModel::MedicationViewModel</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model" prot="public" virt="non-virtual">myMD.ViewModel.OverallViewModel.OverallViewModel</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">INotifyPropertyChanged</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a54c6261db8bdb2a1b7bd30893223b859" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>ObservableCollection&lt; <ref refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model" kindref="compound">MedicineViewModel</ref> &gt;</type>
+        <definition>ObservableCollection&lt;MedicineViewModel&gt; myMD.ViewModel.MedicationTabViewModel.MedicationViewModel.MedicationsList</definition>
+        <argsstring></argsstring>
+        <name>MedicationsList</name>
+        <briefdescription>
+<para>Eine ObservableCollection an MedicineViewModels. Dient als Zwischenspeicher der MedicationsItemsList, um Einträge der Datenbank hier zunächst abzulegen, bevor sie sortiert und gruppiert werden. </para>        </briefdescription>
+        <detaileddescription>
+<para>The medications list.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" line="23" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a16fb4b8fd866f347b828791564a56ead" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ObservableCollection&lt; Grouping&lt; string, <ref refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model" kindref="compound">MedicineViewModel</ref> &gt; &gt;</type>
+        <definition>ObservableCollection&lt;Grouping&lt;string, MedicineViewModel&gt; &gt; myMD.ViewModel.MedicationTabViewModel.MedicationViewModel.MedicationsItemsList</definition>
+        <argsstring></argsstring>
+        <name>MedicationsItemsList</name>
+        <briefdescription>
+<para>Eine ObservableCollection an Groupings, die wiederum die einzelnen MedicineViewModels und somit die Medications beinhalten. Wird zur Gruppierung der Liste benötigt. </para>        </briefdescription>
+        <detaileddescription>
+<para>The medications items list.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" line="31" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a2f46dfaf9adbc2b5d299d8b6b17c2b6b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.ViewModel.MedicationTabViewModel.MedicationViewModel.Key</definition>
+        <argsstring></argsstring>
+        <name>Key</name>
+        <briefdescription>
+<para>Der Schlüssel der MedicationsItemsList, anhand dessen der GroupHeader festgelegt wird </para>        </briefdescription>
+        <detaileddescription>
+<para>The key.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" line="38" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a9a31082ba1957dba80eaeca424c94d40" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>ICommand</type>
+        <definition>ICommand myMD.ViewModel.MedicationTabViewModel.MedicationViewModel.DeleteListItem</definition>
+        <argsstring></argsstring>
+        <name>DeleteListItem</name>
+        <briefdescription>
+<para>Command, welches das Löschen eines gewählten Listeneintrags initiiert. </para>        </briefdescription>
+        <detaileddescription>
+<para>The delete list item.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" line="44" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" bodystart="44" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1adea7437f11fade137b07865f0143d663" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.ViewModel.MedicationTabViewModel.MedicationViewModel.MedicationViewModel</definition>
+        <argsstring>()</argsstring>
+        <name>MedicationViewModel</name>
+        <briefdescription>
+<para>Erstellt ein <ref refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model" kindref="compound">MedicationViewModel</ref>, initialisiert die MedicationsList und -ItemsList, füllt beide über <ref refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a51934d08200971cc38dfaeb26d790620" kindref="member">GroupList()</ref> mit den Einträgen der Datenbank auf. Abonniert zudem eine Benachrichtigung, falls der Nutzer eine Medikation speichert, um die Liste zu aktualisieren. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" line="59" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" bodystart="59" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a51934d08200971cc38dfaeb26d790620" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ViewModel.MedicationTabViewModel.MedicationViewModel.GroupList</definition>
+        <argsstring>()</argsstring>
+        <name>GroupList</name>
+        <briefdescription>
+<para>Methode zum Gruppieren der vorhandenen Medikationen. Zunächst wird MedicationsList mit MedicineViewModels befüllt, anschließend wird die Sortierung (orderby: Jahr, Monat, Tag; absteigend) festgelegt, danach das Gruppierungskriterium (group: .Medication.Date.toString(&quot;Y&quot;), zb. &quot;September 2017&quot;) festegelegt. Anhand dessen wird die MedicationsItemsList befüllt. Zudem wird die MedicationsItemsList Property benachrichtigt, falls es Änderungen gab. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" line="78" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" bodystart="78" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a420091b8fd48e45dddd1d25ca9cc7672" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ViewModel.MedicationTabViewModel.MedicationViewModel.DeleteListItemMethod</definition>
+        <argsstring>(MedicineViewModel item)</argsstring>
+        <name>DeleteListItemMethod</name>
+        <param>
+          <type><ref refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model" kindref="compound">MedicineViewModel</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Methode zum Entfernen einer Medikation aus der Liste: Der Eintrag wird zuerst aus Datenbank entfernt, anschließend auch aus der MedicationsItemsList, indem über die Gruppen und Einträge iteriert wird. Denkbar wäre auch ein Reload der Liste, sieht aber seltsam aus. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" line="101" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" bodystart="101" bodyend="120"/>
+        <references refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a5705289ccdd374aceb0c0b88bbdcdaef" compoundref="_medicine_view_model_8cs" startline="20" endline="20">myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.Medication</references>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1ae864883a931be2827039bc0d3dcf88f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ViewModel.MedicationTabViewModel.MedicationViewModel.Reload</definition>
+        <argsstring>()</argsstring>
+        <name>Reload</name>
+        <briefdescription>
+<para>Methode zum Neuladen der Liste </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" line="125" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" bodystart="125" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="279">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="277">
+        <label>myMD.ViewModel.MedicationTabViewModel.MedicationViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model"/>
+        <childnode refid="278" relation="public-inheritance">
+        </childnode>
+        <childnode refid="279" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="278">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="279" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="282">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="280">
+        <label>myMD.ViewModel.MedicationTabViewModel.MedicationViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model"/>
+        <childnode refid="281" relation="public-inheritance">
+        </childnode>
+        <childnode refid="282" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="281">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="282" relation="public-inheritance">
+        </childnode>
+        <childnode refid="283" relation="usage">
+          <edgelabel>ModelFacade</edgelabel>
+        </childnode>
+      </node>
+      <node id="283">
+        <label>myMD.ModelInterface.ModelFacadeInterface.IModelFacade</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicationViewModel.cs" bodystart="15" bodyend="132"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1acff4179c3cbf2cd35046729e99cd6921" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicationViewModel</scope><name>BleAdapter</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a9a31082ba1957dba80eaeca424c94d40" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicationViewModel</scope><name>DeleteListItem</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a420091b8fd48e45dddd1d25ca9cc7672" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicationViewModel</scope><name>DeleteListItemMethod</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a51934d08200971cc38dfaeb26d790620" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicationViewModel</scope><name>GroupList</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a2f46dfaf9adbc2b5d299d8b6b17c2b6b" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicationViewModel</scope><name>Key</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a16fb4b8fd866f347b828791564a56ead" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicationViewModel</scope><name>MedicationsItemsList</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a54c6261db8bdb2a1b7bd30893223b859" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicationViewModel</scope><name>MedicationsList</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1adea7437f11fade137b07865f0143d663" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicationViewModel</scope><name>MedicationViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1ab1b0e7b2ed9ae07614caa1e45b942e3f" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicationViewModel</scope><name>ModelFacade</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a0333c153387ba2d38fb31eeb0419bfcf" prot="public" virt="virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicationViewModel</scope><name>OnPropertyChanged</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicationViewModel</scope><name>OverallViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1918d3d8d384486e278426327b16256f" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicationViewModel</scope><name>PropertyChanged</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1ae864883a931be2827039bc0d3dcf88f0" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicationViewModel</scope><name>Reload</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

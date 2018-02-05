@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_app" kind="class" language="C#" prot="public">
+    <compoundname>myMD::App</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Application</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_app_1ab2df3a78e1379092a4298dc2c50e95bc" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade" kindref="compound">IModelFacade</ref></type>
+        <definition>IModelFacade myMD.App.Model</definition>
+        <argsstring></argsstring>
+        <name>Model</name>
+        <initializer>= CreateModel()</initializer>
+        <briefdescription>
+<para><ref refid="namespacemy_m_d_1_1_model" kindref="compound">Model</ref> Einzelstück. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/App.xaml.cs" line="68" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/App.xaml.cs" bodystart="68" bodyend="68"/>
+        <referencedby refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" compoundref="_overall_view_model_8cs" startline="38" endline="42">myMD.ViewModel.OverallViewModel.OverallViewModel.OverallViewModel</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_app_1aade00a34203636478b102999b7bb5c51" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.App.App</definition>
+        <argsstring>()</argsstring>
+        <name>App</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/App.xaml.cs" line="19" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/App.xaml.cs" bodystart="19" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_app_1a91bca8ea68e636005ac155569744ba2d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void myMD.App.OnResume</definition>
+        <argsstring>()</argsstring>
+        <name>OnResume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/App.xaml.cs" line="70" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/App.xaml.cs" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_app_1a064df001dcc1f30d31c9608d4f14d393" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void myMD.App.OnSleep</definition>
+        <argsstring>()</argsstring>
+        <name>OnSleep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/App.xaml.cs" line="75" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/App.xaml.cs" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_app_1a0c1dfd4bcf4e5071d38479c6df881bc0" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void myMD.App.OnStart</definition>
+        <argsstring>()</argsstring>
+        <name>OnStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/App.xaml.cs" line="80" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/App.xaml.cs" bodystart="80" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_app_1a5c59e1bc50df85676c836d47df7708bd" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade" kindref="compound">IModelFacade</ref></type>
+        <definition>static IModelFacade myMD.App.CreateModel</definition>
+        <argsstring>()</argsstring>
+        <name>CreateModel</name>
+        <briefdescription>
+<para>Erstellt neues <ref refid="namespacemy_m_d_1_1_model" kindref="compound">Model</ref>. Wird einmalig zum Initialisieren der <ref refid="namespacemy_m_d_1_1_model" kindref="compound">Model</ref> Property aufgerufen. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Neue Instanz des Models</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/App.xaml.cs" line="89" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/App.xaml.cs" bodystart="89" bodyend="92"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Application</label>
+      </node>
+      <node id="0">
+        <label>myMD.App</label>
+        <link refid="classmy_m_d_1_1_app"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Application</label>
+      </node>
+      <node id="2">
+        <label>myMD.App</label>
+        <link refid="classmy_m_d_1_1_app"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/App.xaml.cs" line="18" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/App.xaml.cs" bodystart="17" bodyend="93"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_app_1aade00a34203636478b102999b7bb5c51" prot="public" virt="non-virtual"><scope>myMD::App</scope><name>App</name></member>
+      <member refid="classmy_m_d_1_1_app_1a5c59e1bc50df85676c836d47df7708bd" prot="private" virt="non-virtual"><scope>myMD::App</scope><name>CreateModel</name></member>
+      <member refid="classmy_m_d_1_1_app_1ab2df3a78e1379092a4298dc2c50e95bc" prot="public" virt="non-virtual"><scope>myMD::App</scope><name>Model</name></member>
+      <member refid="classmy_m_d_1_1_app_1a91bca8ea68e636005ac155569744ba2d" prot="protected" virt="non-virtual"><scope>myMD::App</scope><name>OnResume</name></member>
+      <member refid="classmy_m_d_1_1_app_1a064df001dcc1f30d31c9608d4f14d393" prot="protected" virt="non-virtual"><scope>myMD::App</scope><name>OnSleep</name></member>
+      <member refid="classmy_m_d_1_1_app_1a0c1dfd4bcf4e5071d38479c6df881bc0" prot="protected" virt="non-virtual"><scope>myMD::App</scope><name>OnStart</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

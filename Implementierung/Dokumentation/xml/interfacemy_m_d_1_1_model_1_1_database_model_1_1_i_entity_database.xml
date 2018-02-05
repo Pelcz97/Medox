@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database" kind="interface" language="C#" prot="public">
+    <compoundname>myMD::Model::DatabaseModel::IEntityDatabase</compoundname>
+    <derivedcompoundref refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database" prot="public" virt="non-virtual">myMD.Model.DatabaseModel.EntityDatabase</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a1f41694f8d5c28720ebaf2e8fc841f36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.DatabaseModel.IEntityDatabase.Activate</definition>
+        <argsstring>(IProfile profile)</argsstring>
+        <name>Activate</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1aeca102593fba9b3985762b2140237b9a">Activate</reimplementedby>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref></type>
+          <declname>profile</declname>
+        </param>
+        <briefdescription>
+<para>Aktiviert ein Profil. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>profile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Das zu aktivierende Profil</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a1f6de467a7561470984cd761da35d004" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.DatabaseModel.IEntityDatabase.Delete</definition>
+        <argsstring>(IEntity entity)</argsstring>
+        <name>Delete</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a00616354127860a0d20d1a353a931cf4">Delete</reimplementedby>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+<para>Löscht eine Entität aus der Datenbank. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die zu löschende Entität</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a252e240e409cd86695ef17f3381ab7b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref></type>
+        <definition>IProfile myMD.Model.DatabaseModel.IEntityDatabase.GetActiveProfile</definition>
+        <argsstring>()</argsstring>
+        <name>GetActiveProfile</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1afc59027838e67173bbd42744c85b19eb">GetActiveProfile</reimplementedby>
+        <briefdescription>
+<para>Gibt das aktive Profile zurück. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Das zurzeit aktive Profil</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a0ffa07a2c944e1f1b209f211a96f2343" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group" kindref="compound">IDoctorsLetterGroup</ref> &gt;</type>
+        <definition>IList&lt;IDoctorsLetterGroup&gt; myMD.Model.DatabaseModel.IEntityDatabase.GetAllDoctorsLetterGroups</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllDoctorsLetterGroups</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1ad47a77a171fddb2c0286be95166dca21">GetAllDoctorsLetterGroups</reimplementedby>
+        <briefdescription>
+<para>Holt alle Arztbriefgruppen des zur Zeit aktiven Profils aus der Datenbank. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Liste aller Arztbriefgruppen des aktiven Profils</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a31905fab07a84c0c21cd4a107b83e062" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref> &gt;</type>
+        <definition>IList&lt;IDoctorsLetter&gt; myMD.Model.DatabaseModel.IEntityDatabase.GetAllDoctorsLetters</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllDoctorsLetters</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1af56d0d06d5339c63b856e1f8d9705935">GetAllDoctorsLetters</reimplementedby>
+        <briefdescription>
+<para>Holt alle Arztbriefe des zur Zeit aktiven Profils aus der Datenbank. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Liste aller Arztbriefe des aktiven Profils</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a4106a8b12b9aadc1768da8f86eb51d60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kindref="compound">IMedication</ref> &gt;</type>
+        <definition>IList&lt;IMedication&gt; myMD.Model.DatabaseModel.IEntityDatabase.GetAllMedications</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllMedications</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a2517548d0dbacc9f776f2b8400f11754">GetAllMedications</reimplementedby>
+        <briefdescription>
+<para>Holt alle Medikationen des zur Zeit aktiven Profils aus der Datenbank. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Liste aller Medikationen des aktiven Profils</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a2f27475135240f49000022de346dfbdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref> &gt;</type>
+        <definition>IList&lt;IProfile&gt; myMD.Model.DatabaseModel.IEntityDatabase.GetAllProfiles</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllProfiles</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1acd77d4cb145a47a7d5d04f4ecfc2079d">GetAllProfiles</reimplementedby>
+        <briefdescription>
+<para>Holt alle Profile aus der Datenbank. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Liste aller in der Datenbank gespeicherten Profile</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="52" column="1"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1af4409668a62959fbf5ae1f89d065a4bb" compoundref="_model_facade_8cs" startline="51" endline="63">myMD.Model.ModelFacade.ModelFacade.ModelFacade</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1ab7da53690d9a658c2e30326524b42fef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor" kindref="compound">IDoctor</ref></type>
+        <definition>IDoctor myMD.Model.DatabaseModel.IEntityDatabase.GetDoctor</definition>
+        <argsstring>(IDoctor doctor)</argsstring>
+        <name>GetDoctor</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a300d53e2e23b82c4bbf56813d2ff5285">GetDoctor</reimplementedby>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor" kindref="compound">IDoctor</ref></type>
+          <declname>doctor</declname>
+        </param>
+        <briefdescription>
+<para>Suche nach ähnlichem Arzt in der Datenbank. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>doctor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Suche nach Arzt der ähnlich zu diesem Arzt ist</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ähnlicher Arzt aus der Datenbank oder null falls kein solcher Arzt existiert</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="59" column="1"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" compoundref="_file_to_database_parser_8cs" startline="21" endline="50">myMD.Model.ParserModel.FileToDatabaseParser.ParseFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a3b62f2bec78aba18c58ce62580898f3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref></type>
+        <definition>IProfile myMD.Model.DatabaseModel.IEntityDatabase.GetProfile</definition>
+        <argsstring>(IProfile profile)</argsstring>
+        <name>GetProfile</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a0bd750b2731c7f4c1a7890c1c58141e4">GetProfile</reimplementedby>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref></type>
+          <declname>profile</declname>
+        </param>
+        <briefdescription>
+<para>Suche nach ähnlichem Profil in der Datenbank. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>profile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Suche nach Profil das ähnlich zu diesem Profil ist</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ähnliches Profil aus der Datenbank oder null falls kein solches Profil existiert</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="66" column="1"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" compoundref="_file_to_database_parser_8cs" startline="21" endline="50">myMD.Model.ParserModel.FileToDatabaseParser.ParseFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1aa9b390a965a4ebc813c0beefbbd87d26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.DatabaseModel.IEntityDatabase.Insert</definition>
+        <argsstring>(IEntity entity)</argsstring>
+        <name>Insert</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a498caa3b7e7a7745f7066620ac9a14ae">Insert</reimplementedby>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+<para>Fügt eine Entität in die Datenbank zu dem zur Zeit aktiven Profil ein. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die einzufügende Entität</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="72" column="1"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ad7c7e2889846cf195ccdd4e61a804116" compoundref="_model_facade_8cs" startline="69" endline="74">myMD.Model.ModelFacade.ModelFacade.CreateEmptyGroup</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a5394beb3ee9308666dd7e16c00c943d7" compoundref="_model_facade_8cs" startline="77" endline="82">myMD.Model.ModelFacade.ModelFacade.CreateEmptyMedication</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ac41f7ff0d2279e786a2477f91df72e4a" compoundref="_model_facade_8cs" startline="85" endline="91">myMD.Model.ModelFacade.ModelFacade.CreateEmptyProfile</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" compoundref="_file_to_database_parser_8cs" startline="21" endline="50">myMD.Model.ParserModel.FileToDatabaseParser.ParseFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a61821f96fe74626966cdb12ca9691de1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.DatabaseModel.IEntityDatabase.Update</definition>
+        <argsstring>(IEntity entity)</argsstring>
+        <name>Update</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a193a4912949f792f9907fad34802ff19">Update</reimplementedby>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+<para>Aktualisiert eine Entität in der Datenbank. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die zu aktualisierende Entität</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="78" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Schnittstelle zur Interaktion mit einer Datenbank, in der alle Entitäten aus dem DataModelInterface Paket gespeichert werden können. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface" kindref="compound">myMD.ModelInterface.DataModelInterface</ref></para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="216">
+        <label>myMD.Model.DatabaseModel.IEntityDatabase</label>
+        <link refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database"/>
+      </node>
+      <node id="217">
+        <label>myMD.Model.DatabaseModel.EntityDatabase</label>
+        <link refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database"/>
+        <childnode refid="216" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="11" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" bodystart="10" bodyend="79"/>
+    <listofallmembers>
+      <member refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a1f41694f8d5c28720ebaf2e8fc841f36" prot="public" virt="non-virtual"><scope>myMD::Model::DatabaseModel::IEntityDatabase</scope><name>Activate</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a1f6de467a7561470984cd761da35d004" prot="public" virt="non-virtual"><scope>myMD::Model::DatabaseModel::IEntityDatabase</scope><name>Delete</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a252e240e409cd86695ef17f3381ab7b1" prot="public" virt="non-virtual"><scope>myMD::Model::DatabaseModel::IEntityDatabase</scope><name>GetActiveProfile</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a0ffa07a2c944e1f1b209f211a96f2343" prot="public" virt="non-virtual"><scope>myMD::Model::DatabaseModel::IEntityDatabase</scope><name>GetAllDoctorsLetterGroups</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a31905fab07a84c0c21cd4a107b83e062" prot="public" virt="non-virtual"><scope>myMD::Model::DatabaseModel::IEntityDatabase</scope><name>GetAllDoctorsLetters</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a4106a8b12b9aadc1768da8f86eb51d60" prot="public" virt="non-virtual"><scope>myMD::Model::DatabaseModel::IEntityDatabase</scope><name>GetAllMedications</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a2f27475135240f49000022de346dfbdd" prot="public" virt="non-virtual"><scope>myMD::Model::DatabaseModel::IEntityDatabase</scope><name>GetAllProfiles</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1ab7da53690d9a658c2e30326524b42fef" prot="public" virt="non-virtual"><scope>myMD::Model::DatabaseModel::IEntityDatabase</scope><name>GetDoctor</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a3b62f2bec78aba18c58ce62580898f3a" prot="public" virt="non-virtual"><scope>myMD::Model::DatabaseModel::IEntityDatabase</scope><name>GetProfile</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1aa9b390a965a4ebc813c0beefbbd87d26" prot="public" virt="non-virtual"><scope>myMD::Model::DatabaseModel::IEntityDatabase</scope><name>Insert</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a61821f96fe74626966cdb12ca9691de1" prot="public" virt="non-virtual"><scope>myMD::Model::DatabaseModel::IEntityDatabase</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

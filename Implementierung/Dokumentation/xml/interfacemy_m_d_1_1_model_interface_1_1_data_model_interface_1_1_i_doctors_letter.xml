@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kind="interface" language="C#" prot="public">
+    <compoundname>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</compoundname>
+    <basecompoundref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data" prot="public" virt="non-virtual">myMD.ModelInterface.DataModelInterface.IData</basecompoundref>
+    <derivedcompoundref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter" prot="public" virt="non-virtual">myMD.Model.DataModel.DoctorsLetter</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a91b4ca8424fc3876b9fce440fa62b9c5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.ModelInterface.DataModelInterface.IDoctorsLetter.Diagnosis</definition>
+        <argsstring></argsstring>
+        <name>Diagnosis</name>
+        <briefdescription>
+<para>Die Diagnose in diesem Arztbrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a88aa05eef80dff9858cd227e7c94092a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor" kindref="compound">IDoctor</ref></type>
+        <definition>IDoctor myMD.ModelInterface.DataModelInterface.IDoctorsLetter.Doctor</definition>
+        <argsstring></argsstring>
+        <name>Doctor</name>
+        <briefdescription>
+<para>Der Arzt, von dem dieser Arztbrief stammt. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" line="21" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a1b061be65bc92eb5941fca68f0ad3e7e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group" kindref="compound">IDoctorsLetterGroup</ref> &gt;</type>
+        <definition>IList&lt;IDoctorsLetterGroup&gt; myMD.ModelInterface.DataModelInterface.IDoctorsLetter.Groups</definition>
+        <argsstring></argsstring>
+        <name>Groups</name>
+        <briefdescription>
+<para>Liste aller Arztbriefgruppen, in denen dieser Arztbrief enthalten ist. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" line="26" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a2366808fa2ae97044f3e4856f43d253b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kindref="compound">IMedication</ref> &gt;</type>
+        <definition>IList&lt;IMedication&gt; myMD.ModelInterface.DataModelInterface.IDoctorsLetter.Medication</definition>
+        <argsstring></argsstring>
+        <name>Medication</name>
+        <briefdescription>
+<para>Liste aller Medikationen, die in diesem Arztbrief verschrieben wurden. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" line="31" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a0b54c2a3e8d4c927078896b3a4b38834" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ModelInterface.DataModelInterface.IDoctorsLetter.AddToGroup</definition>
+        <argsstring>(IDoctorsLetterGroup group)</argsstring>
+        <name>AddToGroup</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1ab0cb5977d575a6205a4e45a5ab051626">AddToGroup</reimplementedby>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group" kindref="compound">IDoctorsLetterGroup</ref></type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+<para>Fügt diesen Arztbrief zu einer Arztbriefgruppe hinzu. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die Gruppe zu der dieser Arztbrief hinzugefügt werden soll</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1aa7cee10d449b38af82d941a777d14968" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ModelInterface.DataModelInterface.IDoctorsLetter.AttachMedication</definition>
+        <argsstring>(IMedication med)</argsstring>
+        <name>AttachMedication</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1a5e19e600b296475000f4ba1e5e49c026">AttachMedication</reimplementedby>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kindref="compound">IMedication</ref></type>
+          <declname>med</declname>
+        </param>
+        <briefdescription>
+<para>Verbindet eine Medikation mit diesem Arztbrief. Ist die Medikation bereits mit dem Arztbrief verbunden, so passiert nichts. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>med</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die zu verbindendene Medikation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a2aed655d5306cd3d1970627843203adc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ModelInterface.DataModelInterface.IDoctorsLetter.RemoveFromGroup</definition>
+        <argsstring>(IDoctorsLetterGroup group)</argsstring>
+        <name>RemoveFromGroup</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1ab6811f3ef403a2d0210a37d0a55cd30a">RemoveFromGroup</reimplementedby>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group" kindref="compound">IDoctorsLetterGroup</ref></type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+<para>Entfernt diesen Arztbrief aus einer Arztbriefgruppe. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die Gruppe aus der dieser Arztbrief entfernt werden soll</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1afe6898d6da722e0f947685fd58ddefc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ModelInterface.DataModelInterface.IDoctorsLetter.RemoveMedication</definition>
+        <argsstring>(IMedication med)</argsstring>
+        <name>RemoveMedication</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1a8c3cf949ff6547d0a97746c013b25dfa">RemoveMedication</reimplementedby>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kindref="compound">IMedication</ref></type>
+          <declname>med</declname>
+        </param>
+        <briefdescription>
+<para>Löst die Verbindung zwischen einer Medikation und diesem Arztbrief auf. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>med</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zu entferndene Medikation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a1dd9226ef2d2b35616beea4ca52aa5e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter" kindref="compound">DoctorsLetter</ref></type>
+        <definition>DoctorsLetter myMD.ModelInterface.DataModelInterface.IDoctorsLetter.ToDoctorsLetter</definition>
+        <argsstring>()</argsstring>
+        <name>ToDoctorsLetter</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1ace614eda4288a8c1e281f6c9b798e9db">ToDoctorsLetter</reimplementedby>
+        <briefdescription>
+<para>Konvertiert die Schnittstelle zu ihrer Implementierung </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Konkreter Arztbrief</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" line="62" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Schnittstelle für die Abstraktion eines Arztbriefes, die die <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data" kindref="compound">IData</ref> Schnittstelle erweitert. Ein Arztbrief ist ein Transferdokument für die Kommunikation zwischen Ärzten. Er gibt einen zusammenfassenden Überblick über den Status des Patienten bei der Entlassung, einen Rückblick über den Krankheitsverlauf, die veranlasste Therapie und eine Interpretation des Geschehens zum Krankheitsverlauf im speziellen Fall. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="188">
+        <label>IData</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
+        <childnode refid="189" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="190">
+        <label>myMD.Model.DataModel.DoctorsLetter</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter"/>
+        <childnode refid="187" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="187">
+        <label>myMD.ModelInterface.DataModelInterface.IDoctorsLetter</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter"/>
+        <childnode refid="188" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="192">
+        <label>IData</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
+        <childnode refid="193" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="191">
+        <label>myMD.ModelInterface.DataModelInterface.IDoctorsLetter</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter"/>
+        <childnode refid="192" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="193">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" line="12" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" bodystart="11" bodyend="63"/>
+    <listofallmembers>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a0b54c2a3e8d4c927078896b3a4b38834" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>AddToGroup</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1aa7cee10d449b38af82d941a777d14968" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>AttachMedication</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_1a9d008b7dcd815aa50c08de56f5cbb902" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>Date</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a91b4ca8424fc3876b9fce440fa62b9c5" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>Diagnosis</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a88aa05eef80dff9858cd227e7c94092a" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>Doctor</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a1b061be65bc92eb5941fca68f0ad3e7e" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>Groups</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a2366808fa2ae97044f3e4856f43d253b" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>Medication</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_1a8160d8399f68f5db325a517c3114f7ae" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>Name</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a2aed655d5306cd3d1970627843203adc" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>RemoveFromGroup</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1afe6898d6da722e0f947685fd58ddefc0" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>RemoveMedication</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_1a8ff35b1b7aeffdb14c900e6c807b1e4e" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>Sensitivity</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a1dd9226ef2d2b35616beea4ca52aa5e1" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>ToDoctorsLetter</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_1acc62ca98aadef285f342145264d23570" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>ToEntity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

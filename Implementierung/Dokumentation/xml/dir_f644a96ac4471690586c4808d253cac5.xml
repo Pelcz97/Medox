@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_f644a96ac4471690586c4808d253cac5" kind="dir">
+    <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/obj/Debug</compoundname>
+    <innerfile refid="_debug_2my_m_d_8_app_8xaml_8g_8cs">myMD.App.xaml.g.cs</innerfile>
+    <innerfile refid="_debug_2my_m_d_8my_m_d_page_8xaml_8g_8cs">myMD.myMDPage.xaml.g.cs</innerfile>
+    <innerfile refid="_debug_2my_m_d_8_view_8_abstract_pages_8_custom_content_page_8xaml_8g_8cs">myMD.View.AbstractPages.CustomContentPage.xaml.g.cs</innerfile>
+    <innerfile refid="_debug_2my_m_d_8_view_8_medication_tab_pages_8_detailed_medication_page_8xaml_8g_8cs">myMD.View.MedicationTabPages.DetailedMedicationPage.xaml.g.cs</innerfile>
+    <innerfile refid="_debug_2my_m_d_8_view_8_medication_tab_pages_8_medication_page_8xaml_8g_8cs">myMD.View.MedicationTabPages.MedicationPage.xaml.g.cs</innerfile>
+    <innerfile refid="my_m_d_8_view_8_medication_tab_pages_8_overview_tab_pages_8_detailed_doctors_letter_page_8xaml_8g_8cs">myMD.View.MedicationTabPages.OverviewTabPages.DetailedDoctorsLetterPage.xaml.g.cs</innerfile>
+    <innerfile refid="my_m_d_8_view_8_medication_tab_pages_8_overview_tab_pages_8_overview_page_8xaml_8g_8cs">myMD.View.MedicationTabPages.OverviewTabPages.OverviewPage.xaml.g.cs</innerfile>
+    <innerfile refid="_debug_2my_m_d_8_view_8_overview_tab_pages_8_detailed_doctors_letter_page_8xaml_8g_8cs">myMD.View.OverviewTabPages.DetailedDoctorsLetterPage.xaml.g.cs</innerfile>
+    <innerfile refid="_debug_2my_m_d_8_view_8_overview_tab_pages_8_overview_page_8xaml_8g_8cs">myMD.View.OverviewTabPages.OverviewPage.xaml.g.cs</innerfile>
+    <innerfile refid="my_m_d_8_view_8_profile_tab_pages_8_profile_edit_page_8xaml_8g_8cs">myMD.View.ProfileTabPages.ProfileEditPage.xaml.g.cs</innerfile>
+    <innerfile refid="my_m_d_8_view_8_profile_tab_pages_8_profile_page_01-_01_kopieren_8xaml_8g_8cs">myMD.View.ProfileTabPages.ProfilePage - Kopieren.xaml.g.cs</innerfile>
+    <innerfile refid="_debug_2my_m_d_8_view_8_profile_tab_pages_8_profile_page_8xaml_8g_8cs">myMD.View.ProfileTabPages.ProfilePage.xaml.g.cs</innerfile>
+    <innerfile refid="_debug_2my_m_d_8_view_8_send_data_tab_pages_8_select_device_page_8xaml_8g_8cs">myMD.View.SendDataTabPages.SelectDevicePage.xaml.g.cs</innerfile>
+    <innerfile refid="_debug_2my_m_d_8_view_8_send_data_tab_pages_8_select_doctors_letters_page_8xaml_8g_8cs">myMD.View.SendDataTabPages.SelectDoctorsLettersPage.xaml.g.cs</innerfile>
+    <innerfile refid="_debug_2my_m_d_8_view_8_send_data_tab_pages_8_send_data_page_8xaml_8g_8cs">myMD.View.SendDataTabPages.SendDataPage.xaml.g.cs</innerfile>
+    <innerfile refid="_debug_2my_m_d_8_view_8_send_data_tab_pages_8_transmitting_data_page_8xaml_8g_8cs">myMD.View.SendDataTabPages.TransmittingDataPage.xaml.g.cs</innerfile>
+    <innerfile refid="_debug_2_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs">TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs</innerfile>
+    <innerfile refid="_debug_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs">TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs</innerfile>
+    <innerfile refid="_debug_2_temporary_generated_file___e7_a71_f73-0_f8_d-4_b9_b-_b56_e-8_e70_b10_b_c5_d3_8cs">TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/obj/Debug/"/>
+  </compounddef>
+</doxygen>

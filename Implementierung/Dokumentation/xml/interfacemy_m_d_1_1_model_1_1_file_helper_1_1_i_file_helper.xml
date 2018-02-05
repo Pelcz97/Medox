@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper" kind="interface" language="C#" prot="public">
+    <compoundname>myMD::Model::FileHelper::IFileHelper</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_1a8420370ca7817b74f4c0fd1ec300c0a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string myMD.Model.FileHelper.IFileHelper.GetLocalFilePath</definition>
+        <argsstring>(string filename)</argsstring>
+        <name>GetLocalFilePath</name>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Erstellt die gegebene Datei im lokalen Dateisystem, falls sie noch nicht existiert </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dateipfad im lokalen Dateisystem</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Der vollständige Dateipfad</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper/IFileHelper.cs" line="14" column="1"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a7a6a4c8cedc57ea3dc0a714ddd55deb6" compoundref="_entity_database_8cs" startline="45" endline="50">myMD.Model.DatabaseModel.EntityDatabase.EntityDatabase</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_1a2f9976f7f5304c4d8fcd13de9ae84215" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.FileHelper.IFileHelper.DeleteFile</definition>
+        <argsstring>(string filename)</argsstring>
+        <name>DeleteFile</name>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Löscht die gegebene Datei im lokalen Dateisystem </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die zu löschende Datei</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper/IFileHelper.cs" line="20" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Schnittstelle zum Zugriff auf das lokale Dateisystem. Sollte plattformspezifisch implementiert werden. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper/IFileHelper.cs" line="8" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper/IFileHelper.cs" bodystart="7" bodyend="21"/>
+    <listofallmembers>
+      <member refid="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_1a2f9976f7f5304c4d8fcd13de9ae84215" prot="public" virt="non-virtual"><scope>myMD::Model::FileHelper::IFileHelper</scope><name>DeleteFile</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_1a8420370ca7817b74f4c0fd1ec300c0a2" prot="public" virt="non-virtual"><scope>myMD::Model::FileHelper::IFileHelper</scope><name>GetLocalFilePath</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

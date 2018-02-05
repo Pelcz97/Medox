@@ -1,0 +1,80 @@
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_data}{
+\section{my\-MD::Model::Data\-Model::Data Class Reference}
+\label{db/dac/classmy_m_d_1_1_model_1_1_data_model_1_1_data}\index{myMD::Model::DataModel::Data@{myMD::Model::DataModel::Data}}
+}
+Diese Klasse implementiert die IData Schnittstelle und erweitert die abstrakte Enitity Klasse, um Information \"{u}ber medizinische Daten in einer SQLite-Datenbank speichern zu k\"{o}nnen. Dabei ist diese Klasse nur ein Strukturelement, dass von anderen Klassen erweitert werden sollte, um medizinische Daten in einer SQLite-Datenbank speichern zu k\"{o}nnen und daher abstrakt.  
+
+
+Inheritance diagram for my\-MD::Model::Data\-Model::Data:Collaboration diagram for my\-MD::Model::Data\-Model::Data:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+int \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data_4f2ddc0c8daaf94fefc04ccaff963d0f}{Compare\-To} (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data}{Data} other)
+\begin{CompactList}\small\item\em Daten werden basierend auf ihrem Datum verglichen. \item\end{CompactList}\item 
+bool \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data_84b8ad0a281b10efd1ac00b24c3f4f2a}{Equals} (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data}{Data} other)
+\begin{CompactList}\small\item\em Zwei Daten sind genau dann gleich, wenn sie als Entit\"{a}ten gleich sind, ihre Sensitivit\"{a}tsstufe \"{u}bereinstimmt und ihr Datum gleich ist. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_data_b93f11cf5ba054f230a537cff58bd1c9}{
+override bool \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data_b93f11cf5ba054f230a537cff58bd1c9}{Equals} (object obj)}
+\label{db/dac/classmy_m_d_1_1_model_1_1_data_model_1_1_data_b93f11cf5ba054f230a537cff58bd1c9}
+
+\begin{CompactList}\small\item\em System.Object::Equals(System.Object) \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_data_871aff832c00675bb79db4294f382e58}{
+override int \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data_871aff832c00675bb79db4294f382e58}{Get\-Hash\-Code} ()}
+\label{db/dac/classmy_m_d_1_1_model_1_1_data_model_1_1_data_871aff832c00675bb79db4294f382e58}
+
+\begin{CompactList}\small\item\em System.Object::Get\-Hash\-Code() \item\end{CompactList}\end{CompactItemize}
+\subsection*{Properties}
+\begin{CompactItemize}
+\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_data_44749712dbec183e983dcd78a7736c41}{
+virtual Date\-Time \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data_44749712dbec183e983dcd78a7736c41}{Date}}
+\label{db/dac/classmy_m_d_1_1_model_1_1_data_model_1_1_data_44749712dbec183e983dcd78a7736c41}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_44749712dbec183e983dcd78a7736c41}{my\-MD.Model\-Interface.Data\-Model\-Interface.IData::Date} \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_data_456ce8fc5315d26a3f7145a5228d8fd3}{
+\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_456ce8fc5315d26a3f7145a5228d8fd3}{Sensitivity} \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data_456ce8fc5315d26a3f7145a5228d8fd3}{Sensitivity}}
+\label{db/dac/classmy_m_d_1_1_model_1_1_data_model_1_1_data_456ce8fc5315d26a3f7145a5228d8fd3}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_456ce8fc5315d26a3f7145a5228d8fd3}{my\-MD.Model\-Interface.Data\-Model\-Interface.IData::Sensitivity} \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Diese Klasse implementiert die IData Schnittstelle und erweitert die abstrakte Enitity Klasse, um Information \"{u}ber medizinische Daten in einer SQLite-Datenbank speichern zu k\"{o}nnen. Dabei ist diese Klasse nur ein Strukturelement, dass von anderen Klassen erweitert werden sollte, um medizinische Daten in einer SQLite-Datenbank speichern zu k\"{o}nnen und daher abstrakt. 
+
+\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{my\-MD.Model\-Interface.Data\-Model\-Interface.IData} my\-MD.Model.Data\-Model\-Interface.Entity 
+
+
+
+Definition at line 15 of file Data.cs.
+
+\subsection{Member Function Documentation}
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_data_4f2ddc0c8daaf94fefc04ccaff963d0f}{
+\index{myMD::Model::DataModel::Data@{my\-MD::Model::Data\-Model::Data}!CompareTo@{CompareTo}}
+\index{CompareTo@{CompareTo}!myMD::Model::DataModel::Data@{my\-MD::Model::Data\-Model::Data}}
+\subsubsection[CompareTo]{\setlength{\rightskip}{0pt plus 5cm}int my\-MD::Model::Data\-Model::Data::Compare\-To (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data}{Data} {\em other})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{db/dac/classmy_m_d_1_1_model_1_1_data_model_1_1_data_4f2ddc0c8daaf94fefc04ccaff963d0f}
+
+
+Daten werden basierend auf ihrem Datum verglichen. 
+
+System.IComparable::Compare\-To() 
+
+Definition at line 27 of file Data.cs.
+
+References Date.\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_data_84b8ad0a281b10efd1ac00b24c3f4f2a}{
+\index{myMD::Model::DataModel::Data@{my\-MD::Model::Data\-Model::Data}!Equals@{Equals}}
+\index{Equals@{Equals}!myMD::Model::DataModel::Data@{my\-MD::Model::Data\-Model::Data}}
+\subsubsection[Equals]{\setlength{\rightskip}{0pt plus 5cm}bool my\-MD::Model::Data\-Model::Data::Equals (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data}{Data} {\em other})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{db/dac/classmy_m_d_1_1_model_1_1_data_model_1_1_data_84b8ad0a281b10efd1ac00b24c3f4f2a}
+
+
+Zwei Daten sind genau dann gleich, wenn sie als Entit\"{a}ten gleich sind, ihre Sensitivit\"{a}tsstufe \"{u}bereinstimmt und ihr Datum gleich ist. 
+
+System.IEquatable$<$T$>$::Equals(T) 
+
+Definition at line 37 of file Data.cs.
+
+References Date, and Sensitivity.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+D:/Studium/WS17-18/PSE/Implementierung/my\-MD/my\-MD/Model/Data\-Model/Data.cs\end{CompactItemize}

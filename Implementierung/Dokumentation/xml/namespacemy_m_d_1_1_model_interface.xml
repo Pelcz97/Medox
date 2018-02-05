@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacemy_m_d_1_1_model_interface" kind="namespace" language="C#">
+    <compoundname>myMD::ModelInterface</compoundname>
+    <innernamespace refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface">myMD::ModelInterface::DataModelInterface</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_model_interface_1_1_model_facade_interface">myMD::ModelInterface::ModelFacadeInterface</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_model_interface_1_1_transmission_model_interface">myMD::ModelInterface::TransmissionModelInterface</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="[generated]" line="1" column="1"/>
+  </compounddef>
+</doxygen>

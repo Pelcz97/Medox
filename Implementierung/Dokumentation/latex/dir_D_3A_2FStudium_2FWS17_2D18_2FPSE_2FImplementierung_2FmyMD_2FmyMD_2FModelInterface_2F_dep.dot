@@ -1,0 +1,15 @@
+digraph G {
+  compound=true
+  node [ fontsize=10, fontname="Helvetica"];
+  edge [ labelfontsize=9, labelfontname="Helvetica"];
+  subgraph clusterdir_D_3A_2FStudium_2FWS17_2D18_2FPSE_2FImplementierung_2FmyMD_2FmyMD_2F {
+    graph [ bgcolor="#ddddee", pencolor="black", label="myMD" fontname="Helvetica", fontsize=10, URL="dir_D_3A_2FStudium_2FWS17_2D18_2FPSE_2FImplementierung_2FmyMD_2FmyMD_2F.html"]
+  subgraph clusterdir_D_3A_2FStudium_2FWS17_2D18_2FPSE_2FImplementierung_2FmyMD_2FmyMD_2FModelInterface_2F {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_D_3A_2FStudium_2FWS17_2D18_2FPSE_2FImplementierung_2FmyMD_2FmyMD_2FModelInterface_2F.html"];
+    dir_D_3A_2FStudium_2FWS17_2D18_2FPSE_2FImplementierung_2FmyMD_2FmyMD_2FModelInterface_2F [shape=plaintext label="ModelInterface"];
+    dir_D_3A_2FStudium_2FWS17_2D18_2FPSE_2FImplementierung_2FmyMD_2FmyMD_2FModelInterface_2FDataModelInterface_2F [shape=box label="DataModelInterface" color="black" fillcolor="white" style="filled" URL="dir_D_3A_2FStudium_2FWS17_2D18_2FPSE_2FImplementierung_2FmyMD_2FmyMD_2FModelInterface_2FDataModelInterface_2F.html"];
+    dir_D_3A_2FStudium_2FWS17_2D18_2FPSE_2FImplementierung_2FmyMD_2FmyMD_2FModelInterface_2FModelFacadeInterface_2F [shape=box label="ModelFacadeInterface" color="black" fillcolor="white" style="filled" URL="dir_D_3A_2FStudium_2FWS17_2D18_2FPSE_2FImplementierung_2FmyMD_2FmyMD_2FModelInterface_2FModelFacadeInterface_2F.html"];
+    dir_D_3A_2FStudium_2FWS17_2D18_2FPSE_2FImplementierung_2FmyMD_2FmyMD_2FModelInterface_2FTransmissionModelInterface_2F [shape=box label="TransmissionModelInterface" color="black" fillcolor="white" style="filled" URL="dir_D_3A_2FStudium_2FWS17_2D18_2FPSE_2FImplementierung_2FmyMD_2FmyMD_2FModelInterface_2FTransmissionModelInterface_2F.html"];
+  }
+  }
+}

@@ -1,0 +1,291 @@
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{}\section{my\+M\+D.\+Model.\+Data\+Model.\+Medication Klassenreferenz}
+\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}\index{my\+M\+D.\+Model.\+Data\+Model.\+Medication@{my\+M\+D.\+Model.\+Data\+Model.\+Medication}}
+
+
+Diese Klasse implementiert die I\+Medication Schnittstelle und erweitert die abstrakte \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data}{Data}} Klasse, um Medikationen in einer S\+Q\+Lite-\/\+Datenbank speichern zu können.  
+
+
+
+
+Klassendiagramm fÃ¼r my\+M\+D.\+Model.\+Data\+Model.\+Medication\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_medication__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ZusammengehÃ¶rigkeiten von my\+M\+D.\+Model.\+Data\+Model.\+Medication\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_medication__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Ã–ffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a73a40a343461ada165cb7901789cd101}{Attach\+To\+Letter}} (\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\+Letter}} letter)
+\begin{DoxyCompactList}\small\item\em Überladung für konkrete Arztbriefe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a8b2802c0448d4791f9aa748b0ddedcca}{Attach\+To\+Letter}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}} letter)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a865fa8881e6857b4229afe7e74098d6f}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+::\+Attach\+To\+Letter}}(Model.\+Data\+Model\+Interface.\+I\+Doctors\+Letter)\end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_ae4d571a758daafad57458858d461e6c9}{Delete}} ()
+\begin{DoxyCompactList}\small\item\em Löst alle der Klasse bekannten Assoziatonen auf. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a1dc10571e4ab064b616e069feab798e1}{Disattach\+From\+Letter}} (\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\+Letter}} letter)
+\begin{DoxyCompactList}\small\item\em Überladung für konkrete Arztbriefe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_abc72524ce8f43e2c1e79ac82ed4efc2d}{Disattach\+From\+Letter}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}} letter)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a0d31b79a6477198e771452b555f9713d}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+::\+Disattach\+From\+Letter}}(Model.\+Data\+Model\+Interface.\+I\+Doctors\+Letter)\end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_ae4a8da4ac46dc47f3f8536258e4b4050}{Equals}} (\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication}} other)
+\begin{DoxyCompactList}\small\item\em Zwei Medikation sind genau dann gleich, wenn sie als Daten gleich sind und ihr Enddatum, Interval und ihre Frequenz gleich sind. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a4592050911006d5aa0de7c6a23a2252a}{Equals}} (Object obj)
+\begin{DoxyCompactList}\small\item\em System.\+Object\+::\+Equals(System.\+Object)\end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a31090149820e095275296b3fd5aa023c}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em System.\+Object\+::\+Get\+Hash\+Code()\end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication}} \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a63558cd2285f8716335212a3abcac800}{To\+Medication}} ()
+\begin{DoxyCompactList}\small\item\em Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Ã–ffentliche Attribute}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}} \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a99c8d7c6ba4bfb117a93f769c7365fe5}{Doctors\+Letter}} =$>$ \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a736cee7fdcbd4875eba554c5ab4a55ab}{Database\+Doctors\+Letter}}
+\begin{DoxyCompactList}\small\item\em my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+::\+Doctors\+Letter()\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Propertys}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\+Letter}} \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a736cee7fdcbd4875eba554c5ab4a55ab}{Database\+Doctors\+Letter}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Der Arztbrief, in dem diese Medikation verschrieben wurde und dem sie eindeutig zugeordnet werden kann. In einem Arztbrief können dabei mehrere Medikationen verschrieben werden. Wird automatisch beim Lesen aus der Datenbank gesetzt. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_ab30c68d629f7b1a3b4932dd24cc9c48d}{Dosis}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_ac13cded8aa32f248fe33096a9616c55a}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+::\+Dosis}}\end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a9a2460bb39f05b9639c985f1c739afb2}{End\+Date}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a73507174d400e964152fe103dae819f1}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+::\+End\+Date}}\end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_afbb5e9dab6c6378917610e956481487a}{Frequency}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a4d622115240e1d401656c00fbe28519f}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+::\+Frequency}}\end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782}{Interval}} \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a1617cc5ad35dd8fdd0049ae2bad2cf62}{Interval}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_ad4dddb593f60e85655f9bc97f7432611}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+::\+Interval}}\end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_ad912f439eb0ba72cff231ecfc0adbcba}{Letter\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Fremdschlüssel zum Arztbrief dieser Medikation für die Datenbank. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{AusfÃ¼hrliche Beschreibung}
+Diese Klasse implementiert die I\+Medication Schnittstelle und erweitert die abstrakte \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data}{Data}} Klasse, um Medikationen in einer S\+Q\+Lite-\/\+Datenbank speichern zu können. 
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter}}
+
+my\+M\+D.\+Model.\+Data\+Model\+Interface.\+Data
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a73a40a343461ada165cb7901789cd101}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a73a40a343461ada165cb7901789cd101}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!Attach\+To\+Letter@{Attach\+To\+Letter}}
+\index{Attach\+To\+Letter@{Attach\+To\+Letter}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{Attach\+To\+Letter()}{AttachToLetter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+Attach\+To\+Letter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\+Letter}}}]{letter }\end{DoxyParamCaption})}
+
+
+
+Überladung für konkrete Arztbriefe. 
+
+my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+::\+Attach\+To\+Letter(\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter}})Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a73a40a343461ada165cb7901789cd101_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a73a40a343461ada165cb7901789cd101_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a8b2802c0448d4791f9aa748b0ddedcca}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a8b2802c0448d4791f9aa748b0ddedcca}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!Attach\+To\+Letter@{Attach\+To\+Letter}}
+\index{Attach\+To\+Letter@{Attach\+To\+Letter}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{Attach\+To\+Letter()}{AttachToLetter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+Attach\+To\+Letter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}}}]{letter }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a865fa8881e6857b4229afe7e74098d6f}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+::\+Attach\+To\+Letter}}(Model.\+Data\+Model\+Interface.\+I\+Doctors\+Letter)
+
+
+
+Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a865fa8881e6857b4229afe7e74098d6f}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication}}.
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_ae4d571a758daafad57458858d461e6c9}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_ae4d571a758daafad57458858d461e6c9}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!Delete@{Delete}}
+\index{Delete@{Delete}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily override void my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+Delete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Löst alle der Klasse bekannten Assoziatonen auf. 
+
+\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_afe40113ddeb60fd81f4bbcc6d0e696b6}{my\+M\+D.\+Model.\+Data\+Model.\+Entity\+::\+Delete()}}
+
+Erneute Implementation von \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_afe40113ddeb60fd81f4bbcc6d0e696b6}{my\+M\+D.\+Model.\+Data\+Model.\+Entity}}.
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a1dc10571e4ab064b616e069feab798e1}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a1dc10571e4ab064b616e069feab798e1}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!Disattach\+From\+Letter@{Disattach\+From\+Letter}}
+\index{Disattach\+From\+Letter@{Disattach\+From\+Letter}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{Disattach\+From\+Letter()}{DisattachFromLetter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+Disattach\+From\+Letter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\+Letter}}}]{letter }\end{DoxyParamCaption})}
+
+
+
+Überladung für konkrete Arztbriefe. 
+
+my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+::\+Disattach\+From\+Letter(\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter}})Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a1dc10571e4ab064b616e069feab798e1_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a1dc10571e4ab064b616e069feab798e1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_abc72524ce8f43e2c1e79ac82ed4efc2d}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_abc72524ce8f43e2c1e79ac82ed4efc2d}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!Disattach\+From\+Letter@{Disattach\+From\+Letter}}
+\index{Disattach\+From\+Letter@{Disattach\+From\+Letter}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{Disattach\+From\+Letter()}{DisattachFromLetter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+Disattach\+From\+Letter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}}}]{letter }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a0d31b79a6477198e771452b555f9713d}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+::\+Disattach\+From\+Letter}}(Model.\+Data\+Model\+Interface.\+I\+Doctors\+Letter)
+
+
+
+Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a0d31b79a6477198e771452b555f9713d}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication}}.
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_ae4a8da4ac46dc47f3f8536258e4b4050}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_ae4a8da4ac46dc47f3f8536258e4b4050}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!Equals@{Equals}}
+\index{Equals@{Equals}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication}}}]{other }\end{DoxyParamCaption})}
+
+
+
+Zwei Medikation sind genau dann gleich, wenn sie als Daten gleich sind und ihr Enddatum, Interval und ihre Frequenz gleich sind. 
+
+System.\+I\+Equatable$<$\+T$>$\+::\+Equals(\+T)\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a4592050911006d5aa0de7c6a23a2252a}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a4592050911006d5aa0de7c6a23a2252a}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!Equals@{Equals}}
+\index{Equals@{Equals}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily override bool my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+Equals (\begin{DoxyParamCaption}\item[{Object}]{obj }\end{DoxyParamCaption})}
+
+
+
+System.\+Object\+::\+Equals(System.\+Object)
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a31090149820e095275296b3fd5aa023c}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a31090149820e095275296b3fd5aa023c}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!Get\+Hash\+Code@{Get\+Hash\+Code}}
+\index{Get\+Hash\+Code@{Get\+Hash\+Code}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{Get\+Hash\+Code()}{GetHashCode()}}
+{\footnotesize\ttfamily override int my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+Get\+Hash\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+System.\+Object\+::\+Get\+Hash\+Code()
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a63558cd2285f8716335212a3abcac800}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a63558cd2285f8716335212a3abcac800}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!To\+Medication@{To\+Medication}}
+\index{To\+Medication@{To\+Medication}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{To\+Medication()}{ToMedication()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication}} my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+To\+Medication (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig. 
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_af7b54c8ad197d61f4c19c505983df6ac}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+::\+To\+Medication()}}
+
+Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_af7b54c8ad197d61f4c19c505983df6ac}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication}}.
+
+
+
+\subsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a99c8d7c6ba4bfb117a93f769c7365fe5}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a99c8d7c6ba4bfb117a93f769c7365fe5}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!Doctors\+Letter@{Doctors\+Letter}}
+\index{Doctors\+Letter@{Doctors\+Letter}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{Doctors\+Letter}{DoctorsLetter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}} my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+Doctors\+Letter =$>$ \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a736cee7fdcbd4875eba554c5ab4a55ab}{Database\+Doctors\+Letter}}}
+
+
+
+my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+::\+Doctors\+Letter()
+
+
+
+\subsection{Dokumentation der Propertys}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a736cee7fdcbd4875eba554c5ab4a55ab}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a736cee7fdcbd4875eba554c5ab4a55ab}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!Database\+Doctors\+Letter@{Database\+Doctors\+Letter}}
+\index{Database\+Doctors\+Letter@{Database\+Doctors\+Letter}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{Database\+Doctors\+Letter}{DatabaseDoctorsLetter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\+Letter}} my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+Database\+Doctors\+Letter\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Der Arztbrief, in dem diese Medikation verschrieben wurde und dem sie eindeutig zugeordnet werden kann. In einem Arztbrief können dabei mehrere Medikationen verschrieben werden. Wird automatisch beim Lesen aus der Datenbank gesetzt. 
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_ab30c68d629f7b1a3b4932dd24cc9c48d}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_ab30c68d629f7b1a3b4932dd24cc9c48d}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!Dosis@{Dosis}}
+\index{Dosis@{Dosis}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{Dosis}{Dosis}}
+{\footnotesize\ttfamily string my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+Dosis\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_ac13cded8aa32f248fe33096a9616c55a}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+::\+Dosis}}
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a9a2460bb39f05b9639c985f1c739afb2}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a9a2460bb39f05b9639c985f1c739afb2}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!End\+Date@{End\+Date}}
+\index{End\+Date@{End\+Date}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{End\+Date}{EndDate}}
+{\footnotesize\ttfamily Date\+Time my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+End\+Date\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a73507174d400e964152fe103dae819f1}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+::\+End\+Date}}
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_afbb5e9dab6c6378917610e956481487a}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_afbb5e9dab6c6378917610e956481487a}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!Frequency@{Frequency}}
+\index{Frequency@{Frequency}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{Frequency}{Frequency}}
+{\footnotesize\ttfamily int my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+Frequency\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a4d622115240e1d401656c00fbe28519f}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+::\+Frequency}}
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a1617cc5ad35dd8fdd0049ae2bad2cf62}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a1617cc5ad35dd8fdd0049ae2bad2cf62}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!Interval@{Interval}}
+\index{Interval@{Interval}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{Interval}{Interval}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782}{Interval}} my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+Interval\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_ad4dddb593f60e85655f9bc97f7432611}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+::\+Interval}}
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_ad912f439eb0ba72cff231ecfc0adbcba}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_ad912f439eb0ba72cff231ecfc0adbcba}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}!Letter\+Id@{Letter\+Id}}
+\index{Letter\+Id@{Letter\+Id}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}}
+\subsubsection{\texorpdfstring{Letter\+Id}{LetterId}}
+{\footnotesize\ttfamily int my\+M\+D.\+Model.\+Data\+Model.\+Medication.\+Letter\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Fremdschlüssel zum Arztbrief dieser Medikation für die Datenbank. 
+
+
+
+Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Data\+Model/\mbox{\hyperlink{_medication_8cs}{Medication.\+cs}}\end{DoxyCompactItemize}

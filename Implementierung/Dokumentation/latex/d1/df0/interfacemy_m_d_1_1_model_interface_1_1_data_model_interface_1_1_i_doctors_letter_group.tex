@@ -1,0 +1,94 @@
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{
+\section{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter\-Group Interface Reference}
+\label{d1/df0/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}\index{myMD::ModelInterface::DataModelInterface::IDoctorsLetterGroup@{myMD::ModelInterface::DataModelInterface::IDoctorsLetterGroup}}
+}
+Schnittstelle f\"{u}r eine Arztbriefgruppe, die die \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{IData} Schnittstelle erweitert. Eine Arztbriefgruppe ist eine Ansammlung von beliebig vielen Arztbriefen.  
+
+
+Inheritance diagram for my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter\-Group:Collaboration diagram for my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter\-Group:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_369225fad276ca62dd1bd8f6a68ba24f}{Add} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter} letter)
+\begin{CompactList}\small\item\em F\"{u}gt einen Arztbrief zu dieser Gruppe hinzu. Falls der Arztbrief bereits in der Gruppe enthalten ist, passiert nichts. \item\end{CompactList}\item 
+void \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_938bc29cf5917f270a203b621472c238}{Remove} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter} letter)
+\begin{CompactList}\small\item\em Entfernt einen Arztbrief aus dieser Gruppe. \item\end{CompactList}\item 
+\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group}{Doctors\-Letter\-Group} \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_6135e1709db8de80bcc0241d6d99880e}{To\-Doctors\-Letter\-Group} ()
+\begin{CompactList}\small\item\em Konvertiert die Schnittstelle zu ihrer Implementierung. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Properties}
+\begin{CompactItemize}
+\item 
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_60f35d38f828e2c77f5243ebabc0e64b}{
+Date\-Time \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_60f35d38f828e2c77f5243ebabc0e64b}{Last\-Date}}
+\label{d1/df0/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_60f35d38f828e2c77f5243ebabc0e64b}
+
+\begin{CompactList}\small\item\em Aktuellstes Datum aller Arztbriefe in dieser Gruppe. \item\end{CompactList}\item 
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_54718291c29adece386cab47aaf27f45}{
+IList$<$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter} $>$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_54718291c29adece386cab47aaf27f45}{Doctors\-Letters}}
+\label{d1/df0/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_54718291c29adece386cab47aaf27f45}
+
+\begin{CompactList}\small\item\em Liste aller Arztbriefe in dieser Gruppe. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Schnittstelle f\"{u}r eine Arztbriefgruppe, die die \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{IData} Schnittstelle erweitert. Eine Arztbriefgruppe ist eine Ansammlung von beliebig vielen Arztbriefen. 
+
+
+
+Definition at line 11 of file IDoctors\-Letter\-Group.cs.
+
+\subsection{Member Function Documentation}
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_369225fad276ca62dd1bd8f6a68ba24f}{
+\index{myMD::ModelInterface::DataModelInterface::IDoctorsLetterGroup@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter\-Group}!Add@{Add}}
+\index{Add@{Add}!myMD::ModelInterface::DataModelInterface::IDoctorsLetterGroup@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter\-Group}}
+\subsubsection[Add]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter\-Group::Add (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter} {\em letter})}}
+\label{d1/df0/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_369225fad276ca62dd1bd8f6a68ba24f}
+
+
+F\"{u}gt einen Arztbrief zu dieser Gruppe hinzu. Falls der Arztbrief bereits in der Gruppe enthalten ist, passiert nichts. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em letter}]Der hinzuzuf\"{u}gende Arztbrief\end{description}
+\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_369225fad276ca62dd1bd8f6a68ba24f}{my\-MD::Model::Data\-Model::Doctors\-Letter\-Group}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_938bc29cf5917f270a203b621472c238}{
+\index{myMD::ModelInterface::DataModelInterface::IDoctorsLetterGroup@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter\-Group}!Remove@{Remove}}
+\index{Remove@{Remove}!myMD::ModelInterface::DataModelInterface::IDoctorsLetterGroup@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter\-Group}}
+\subsubsection[Remove]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter\-Group::Remove (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter} {\em letter})}}
+\label{d1/df0/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_938bc29cf5917f270a203b621472c238}
+
+
+Entfernt einen Arztbrief aus dieser Gruppe. 
+
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em System.Invalid\-Operation\-Exception}]Werfe wenn der Arztbrief letter nicht in dieser Arztbriefgruppe enthalten ist\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em letter}]Der zu entfernende Arztbrief\end{description}
+\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_938bc29cf5917f270a203b621472c238}{my\-MD::Model::Data\-Model::Doctors\-Letter\-Group}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_6135e1709db8de80bcc0241d6d99880e}{
+\index{myMD::ModelInterface::DataModelInterface::IDoctorsLetterGroup@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter\-Group}!ToDoctorsLetterGroup@{ToDoctorsLetterGroup}}
+\index{ToDoctorsLetterGroup@{ToDoctorsLetterGroup}!myMD::ModelInterface::DataModelInterface::IDoctorsLetterGroup@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter\-Group}}
+\subsubsection[ToDoctorsLetterGroup]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group}{Doctors\-Letter\-Group} my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter\-Group::To\-Doctors\-Letter\-Group ()}}
+\label{d1/df0/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_6135e1709db8de80bcc0241d6d99880e}
+
+
+Konvertiert die Schnittstelle zu ihrer Implementierung. 
+
+\begin{Desc}
+\item[Returns:]Konkrete Arztbriefgruppe\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_6135e1709db8de80bcc0241d6d99880e}{my\-MD::Model::Data\-Model::Doctors\-Letter\-Group}.
+
+The documentation for this interface was generated from the following file:\begin{CompactItemize}
+\item 
+D:/Studium/WS17-18/PSE/Implementierung/my\-MD/my\-MD/Model\-Interface/Data\-Model\-Interface/IDoctors\-Letter\-Group.cs\end{CompactItemize}

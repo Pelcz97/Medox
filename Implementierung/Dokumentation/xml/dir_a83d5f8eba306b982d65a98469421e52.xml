@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_a83d5f8eba306b982d65a98469421e52" kind="dir">
+    <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/TextBlob/Serializers</compoundname>
+    <innerfile refid="_json_blob_serializer_8cs">JsonBlobSerializer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/TextBlob/Serializers/"/>
+  </compounddef>
+</doxygen>

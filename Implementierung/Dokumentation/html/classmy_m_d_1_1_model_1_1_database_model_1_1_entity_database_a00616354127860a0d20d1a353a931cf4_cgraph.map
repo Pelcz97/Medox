@@ -1,0 +1,4 @@
+<map id="myMD.Model.DatabaseModel.EntityDatabase.Delete" name="myMD.Model.DatabaseModel.EntityDatabase.Delete">
+<area shape="rect" id="node2" href="$interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity.html#acc62ca98aadef285f342145264d23570" title="Konvertiert die Schnittstelle zu ihrer Implementierung " alt="" coords="255,5,453,47"/>
+<area shape="rect" id="node3" href="$classmy_m_d_1_1_model_1_1_data_model_1_1_entity.html#afe40113ddeb60fd81f4bbcc6d0e696b6" title="Führt die nötigen Aktionen aus um diese Entität zu löschen. Sollte immer zusammen mit einer Löschung aus d..." alt="" coords="251,71,457,112"/>
+</map>

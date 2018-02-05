@@ -1,0 +1,99 @@
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{
+\section{my\-MD::Model\-Interface::Data\-Model\-Interface::IMedication Interface Reference}
+\label{d2/dce/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}\index{myMD::ModelInterface::DataModelInterface::IMedication@{myMD::ModelInterface::DataModelInterface::IMedication}}
+}
+Schnittstelle f\"{u}r die Abstraktion einer Medikation, die die \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{IData} Schnittstelle erweitert. Eine Medikation ist ein Stoff oder eine Stoffzusammensetzungen, die zur Heilung oder zur Verh\"{u}tung menschlicher oder tierischer Krankheiten bestimmt ist oder sich dazu eignet physiologische Funktionen zu beeinflussen oder eine medizinische Diagnose zu erm\"{o}glichen. Sie kann von einem Arzt in einem Arztbrief verschrieben werden, f\"{u}r manche Medikationen wird dies jedoch nicht ben\"{o}tigt.  
+
+
+Inheritance diagram for my\-MD::Model\-Interface::Data\-Model\-Interface::IMedication:Collaboration diagram for my\-MD::Model\-Interface::Data\-Model\-Interface::IMedication:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_d1ca6f76b75fe87eac94cbac8bc61322}{Disattach\-From\-Letter} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter} letter)
+\begin{CompactList}\small\item\em L\"{o}st die Verbindung dieser Medikation zu einem Arztbrief auf. Besteht keine Verbindung zu diesem Arztbrief, so passiert nichts. \item\end{CompactList}\item 
+void \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_4e9eb33eb2d50445faed1fb21b100083}{Attach\-To\-Letter} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter} letter)
+\begin{CompactList}\small\item\em Verbindet diese Medikation mit einem Arztbrief. Ist der Arztbrief bereits verbunden, so passiert nichts. Existiert bereits eine Verbindung zu einem anderen Arztbrief, so wird diese zuvor aufgel\"{o}st. \item\end{CompactList}\item 
+\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication} \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_be8159bf4c393a1da18275bd4dfa8e4a}{To\-Medication} ()
+\begin{CompactList}\small\item\em Konvertiert die Schnittstelle zu ihrer Implementierung. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Properties}
+\begin{CompactItemize}
+\item 
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_44749712dbec183e983dcd78a7736c41}{
+new Date\-Time \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_44749712dbec183e983dcd78a7736c41}{Date}}
+\label{d2/dce/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_44749712dbec183e983dcd78a7736c41}
+
+\begin{CompactList}\small\item\em Das Datum an dem diese Medikation angefangen wurde. \item\end{CompactList}\item 
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_7cf395303ce3665a9834721d4b748e4b}{
+int \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_7cf395303ce3665a9834721d4b748e4b}{Frequency}}
+\label{d2/dce/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_7cf395303ce3665a9834721d4b748e4b}
+
+\begin{CompactList}\small\item\em H\"{a}ufigkeit in der diese Medikation in ihrem Intervall genommen werden soll. Das Intervall und die H\"{a}ufigkeit zusammen ergeben dann eine tats\"{a}chliche H\"{a}ufigkeit in der die Medikation eingenommen werden soll (z.B. 3 mal pro Tag). \item\end{CompactList}\item 
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_d16dd01adf735ed9b87eebff5fc39ce5}{
+\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_d16dd01adf735ed9b87eebff5fc39ce5}{Interval} \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_d16dd01adf735ed9b87eebff5fc39ce5}{Interval}}
+\label{d2/dce/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_d16dd01adf735ed9b87eebff5fc39ce5}
+
+\begin{CompactList}\small\item\em Das Zeitintervall in der diese Medikation eingenommen werden soll. Das Intervall und die H\"{a}ufigkeit zusammen ergeben dann eine tats\"{a}chliche H\"{a}ufigkeit in der die Medikation eingenommen werden soll (z.B. 3 mal pro Tag). \item\end{CompactList}\item 
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a7f44c44b37e090a40ad2d76aa86d08d}{
+Date\-Time \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a7f44c44b37e090a40ad2d76aa86d08d}{End\-Date}}
+\label{d2/dce/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a7f44c44b37e090a40ad2d76aa86d08d}
+
+\begin{CompactList}\small\item\em Das Datum, an dem diese Medikation abgesetzt werden soll. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Schnittstelle f\"{u}r die Abstraktion einer Medikation, die die \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{IData} Schnittstelle erweitert. Eine Medikation ist ein Stoff oder eine Stoffzusammensetzungen, die zur Heilung oder zur Verh\"{u}tung menschlicher oder tierischer Krankheiten bestimmt ist oder sich dazu eignet physiologische Funktionen zu beeinflussen oder eine medizinische Diagnose zu erm\"{o}glichen. Sie kann von einem Arzt in einem Arztbrief verschrieben werden, f\"{u}r manche Medikationen wird dies jedoch nicht ben\"{o}tigt. 
+
+
+
+Definition at line 12 of file IMedication.cs.
+
+\subsection{Member Function Documentation}
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_4e9eb33eb2d50445faed1fb21b100083}{
+\index{myMD::ModelInterface::DataModelInterface::IMedication@{my\-MD::Model\-Interface::Data\-Model\-Interface::IMedication}!AttachToLetter@{AttachToLetter}}
+\index{AttachToLetter@{AttachToLetter}!myMD::ModelInterface::DataModelInterface::IMedication@{my\-MD::Model\-Interface::Data\-Model\-Interface::IMedication}}
+\subsubsection[AttachToLetter]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model\-Interface::Data\-Model\-Interface::IMedication::Attach\-To\-Letter (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter} {\em letter})}}
+\label{d2/dce/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_4e9eb33eb2d50445faed1fb21b100083}
+
+
+Verbindet diese Medikation mit einem Arztbrief. Ist der Arztbrief bereits verbunden, so passiert nichts. Existiert bereits eine Verbindung zu einem anderen Arztbrief, so wird diese zuvor aufgel\"{o}st. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em letter}]Der zu verbindende Arztbrief\end{description}
+\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_4e9eb33eb2d50445faed1fb21b100083}{my\-MD::Model::Data\-Model::Medication}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_d1ca6f76b75fe87eac94cbac8bc61322}{
+\index{myMD::ModelInterface::DataModelInterface::IMedication@{my\-MD::Model\-Interface::Data\-Model\-Interface::IMedication}!DisattachFromLetter@{DisattachFromLetter}}
+\index{DisattachFromLetter@{DisattachFromLetter}!myMD::ModelInterface::DataModelInterface::IMedication@{my\-MD::Model\-Interface::Data\-Model\-Interface::IMedication}}
+\subsubsection[DisattachFromLetter]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model\-Interface::Data\-Model\-Interface::IMedication::Disattach\-From\-Letter (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter} {\em letter})}}
+\label{d2/dce/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_d1ca6f76b75fe87eac94cbac8bc61322}
+
+
+L\"{o}st die Verbindung dieser Medikation zu einem Arztbrief auf. Besteht keine Verbindung zu diesem Arztbrief, so passiert nichts. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em letter}]Der zu entfernende Arztbrief\end{description}
+\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_d1ca6f76b75fe87eac94cbac8bc61322}{my\-MD::Model::Data\-Model::Medication}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_be8159bf4c393a1da18275bd4dfa8e4a}{
+\index{myMD::ModelInterface::DataModelInterface::IMedication@{my\-MD::Model\-Interface::Data\-Model\-Interface::IMedication}!ToMedication@{ToMedication}}
+\index{ToMedication@{ToMedication}!myMD::ModelInterface::DataModelInterface::IMedication@{my\-MD::Model\-Interface::Data\-Model\-Interface::IMedication}}
+\subsubsection[ToMedication]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication} my\-MD::Model\-Interface::Data\-Model\-Interface::IMedication::To\-Medication ()}}
+\label{d2/dce/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_be8159bf4c393a1da18275bd4dfa8e4a}
+
+
+Konvertiert die Schnittstelle zu ihrer Implementierung. 
+
+\begin{Desc}
+\item[Returns:]Konkrete Medikation\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_be8159bf4c393a1da18275bd4dfa8e4a}{my\-MD::Model::Data\-Model::Medication}.
+
+The documentation for this interface was generated from the following file:\begin{CompactItemize}
+\item 
+D:/Studium/WS17-18/PSE/Implementierung/my\-MD/my\-MD/Model\-Interface/Data\-Model\-Interface/IMedication.cs\end{CompactItemize}

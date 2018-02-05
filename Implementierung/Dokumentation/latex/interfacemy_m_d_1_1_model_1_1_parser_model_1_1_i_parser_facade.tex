@@ -1,0 +1,84 @@
+\hypertarget{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade}{}\section{my\+M\+D.\+Model.\+Parser\+Model.\+I\+Parser\+Facade Schnittstellenreferenz}
+\label{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade}\index{my\+M\+D.\+Model.\+Parser\+Model.\+I\+Parser\+Facade@{my\+M\+D.\+Model.\+Parser\+Model.\+I\+Parser\+Facade}}
+
+
+Diese Schnittstelle ist die Haupteinstiegsstelle für andere Pakete in das \mbox{\hyperlink{namespacemy_m_d_1_1_model_1_1_parser_model}{Parser\+Model}} Paket. Hier können Informationen aus Dateien in eine Datenbank eingetragen werden oder Dateien aus Informationen aus der Datenbank erstellt werden.  
+
+
+
+
+Klassendiagramm fÃ¼r my\+M\+D.\+Model.\+Parser\+Model.\+I\+Parser\+Facade\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Ã–ffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_a0371197714d5ec08d9ad332ac62265db}{Parse\+File\+To\+Database}} (string filename, \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}{I\+Entity\+Database}} db)
+\begin{DoxyCompactList}\small\item\em Parse die Informationen in der gegebenen Datei in die gegebene Datenbank. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_a24348ea7e27f5d9cde94925fe1967ca3}{Parse\+Letter\+To\+Original\+File}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}} letter)
+\begin{DoxyCompactList}\small\item\em Parse den gegebenen Arztbrief in sein ursprüngliches Dateiformat \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{AusfÃ¼hrliche Beschreibung}
+Diese Schnittstelle ist die Haupteinstiegsstelle für andere Pakete in das \mbox{\hyperlink{namespacemy_m_d_1_1_model_1_1_parser_model}{Parser\+Model}} Paket. Hier können Informationen aus Dateien in eine Datenbank eingetragen werden oder Dateien aus Informationen aus der Datenbank erstellt werden. 
+
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_a0371197714d5ec08d9ad332ac62265db}\label{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_a0371197714d5ec08d9ad332ac62265db}} 
+\index{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Parser\+Facade@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Parser\+Facade}!Parse\+File\+To\+Database@{Parse\+File\+To\+Database}}
+\index{Parse\+File\+To\+Database@{Parse\+File\+To\+Database}!my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Parser\+Facade@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Parser\+Facade}}
+\subsubsection{\texorpdfstring{Parse\+File\+To\+Database()}{ParseFileToDatabase()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model.\+Parser\+Model.\+I\+Parser\+Facade.\+Parse\+File\+To\+Database (\begin{DoxyParamCaption}\item[{string}]{filename,  }\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}{I\+Entity\+Database}}}]{db }\end{DoxyParamCaption})}
+
+
+
+Parse die Informationen in der gegebenen Datei in die gegebene Datenbank. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em filename} & Die zu parsende Datei\\
+\hline
+{\em db} & Die Datenbank in die die geparsten Informationen eingetragen werden sollen\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Ausnahmebehandlung}
+{\em System.\+Not\+Supported\+Exception} & Werfe, wenn das Dateiformat der gegebenen Datei nicht unterstützt wird\\
+\hline
+\end{DoxyExceptions}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_a52bf8be888d38b6433f60edc1e4b1fff}{my\+M\+D.\+Model.\+Parser\+Model.\+Parser\+Facade}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_a24348ea7e27f5d9cde94925fe1967ca3}\label{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_a24348ea7e27f5d9cde94925fe1967ca3}} 
+\index{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Parser\+Facade@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Parser\+Facade}!Parse\+Letter\+To\+Original\+File@{Parse\+Letter\+To\+Original\+File}}
+\index{Parse\+Letter\+To\+Original\+File@{Parse\+Letter\+To\+Original\+File}!my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Parser\+Facade@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Parser\+Facade}}
+\subsubsection{\texorpdfstring{Parse\+Letter\+To\+Original\+File()}{ParseLetterToOriginalFile()}}
+{\footnotesize\ttfamily string my\+M\+D.\+Model.\+Parser\+Model.\+I\+Parser\+Facade.\+Parse\+Letter\+To\+Original\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}}}]{letter }\end{DoxyParamCaption})}
+
+
+
+Parse den gegebenen Arztbrief in sein ursprüngliches Dateiformat 
+
+
+\begin{DoxyParams}{Parameter}
+{\em letter} & Der zu parsende Arztbrief\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Pfad zur geparsten Datei
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_a21538d294bf09fe09e84faa7363d280c}{my\+M\+D.\+Model.\+Parser\+Model.\+Parser\+Facade}}.
+
+
+
+Die Dokumentation fÃ¼r diese Schnittstelle wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Parser\+Model/\mbox{\hyperlink{_i_parser_facade_8cs}{I\+Parser\+Facade.\+cs}}\end{DoxyCompactItemize}

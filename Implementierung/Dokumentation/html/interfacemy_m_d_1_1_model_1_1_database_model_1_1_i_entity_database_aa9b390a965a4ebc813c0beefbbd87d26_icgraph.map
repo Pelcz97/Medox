@@ -1,0 +1,6 @@
+<map id="myMD.Model.DatabaseModel.IEntityDatabase.Insert" name="myMD.Model.DatabaseModel.IEntityDatabase.Insert">
+<area shape="rect" id="node2" href="$classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade.html#ad7c7e2889846cf195ccdd4e61a804116" title="myMD.ModelInterface.ModelFacadeInterface.IModelFacade::CreateEmptyGroup()" alt="" coords="251,5,471,47"/>
+<area shape="rect" id="node3" href="$classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade.html#a5394beb3ee9308666dd7e16c00c943d7" title="myMD.ModelInterface.ModelFacadeInterface.IModelFacade::CreateEmptyMedication()" alt="" coords="251,71,471,112"/>
+<area shape="rect" id="node4" href="$classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade.html#ac41f7ff0d2279e786a2477f91df72e4a" title="myMD.ModelInterface.ModelFacadeInterface.IModelFacade::CreateEmptyProfile()" alt="" coords="251,136,471,177"/>
+<area shape="rect" id="node5" href="$classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser.html#a5657cfa5ac9ebf00394691de2f9cabe4" title="Fügt Informationen aus der Datei in die Datenbank ein. " alt="" coords="260,201,461,243"/>
+</map>

@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_detailed_doctors_letter_page" kind="class" language="C#" prot="public">
+    <compoundname>myMD::View::OverviewTabPages::DetailedDoctorsLetterPage</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page" prot="public" virt="non-virtual">myMD.View.AbstractPages.CustomContentPage</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_detailed_doctors_letter_page_1a813f0b4f7f3a55f71a71dd9203123521" prot="private" static="no" mutable="no">
+        <type><ref refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model" kindref="compound">DetailedDoctorsLetterViewModel</ref></type>
+        <definition>DetailedDoctorsLetterViewModel myMD.View.OverviewTabPages.DetailedDoctorsLetterPage.vm</definition>
+        <argsstring></argsstring>
+        <name>vm</name>
+        <briefdescription>
+<para>Das <ref refid="namespacemy_m_d_1_1_view_model" kindref="compound">ViewModel</ref>, zu welchem gebinded werden soll. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/DetailedDoctorsLetterPage.xaml.cs" line="17" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/DetailedDoctorsLetterPage.xaml.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_detailed_doctors_letter_page_1a28245631ccc5cb7fc5e5ced0bc4d7731" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.View.OverviewTabPages.DetailedDoctorsLetterPage.DetailedDoctorsLetterPage</definition>
+        <argsstring>(object item)</argsstring>
+        <name>DetailedDoctorsLetterPage</name>
+        <param>
+          <type>object</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the T:myMD.View.OverviewTabPages.DetailedDoctorsLetterPage class. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/DetailedDoctorsLetterPage.xaml.cs" line="23" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/DetailedDoctorsLetterPage.xaml.cs" bodystart="23" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_detailed_doctors_letter_page_1add124800227e87fb38f5a56697f2f150" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async void</type>
+        <definition>async void myMD.View.OverviewTabPages.DetailedDoctorsLetterPage.CancelDetailedPage_Clicked</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>CancelDetailedPage_Clicked</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Methode, wenn der Schließen-Button geklickt wird. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>E.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/DetailedDoctorsLetterPage.xaml.cs" line="35" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/DetailedDoctorsLetterPage.xaml.cs" bodystart="35" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Detailed doctors letter page. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="40">
+        <label>CustomContentPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>ContentPage</label>
+      </node>
+      <node id="39">
+        <label>myMD.View.OverviewTabPages.DetailedDoctorsLetterPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_detailed_doctors_letter_page"/>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="43">
+        <label>CustomContentPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
+        <childnode refid="44" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>ContentPage</label>
+      </node>
+      <node id="42">
+        <label>myMD.View.OverviewTabPages.DetailedDoctorsLetterPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_detailed_doctors_letter_page"/>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/DetailedDoctorsLetterPage.xaml.cs" line="13" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/DetailedDoctorsLetterPage.xaml.cs" bodystart="12" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_detailed_doctors_letter_page_1add124800227e87fb38f5a56697f2f150" prot="private" virt="non-virtual"><scope>myMD::View::OverviewTabPages::DetailedDoctorsLetterPage</scope><name>CancelDetailedPage_Clicked</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page_1a3cb9c69e49e16c30e2e5377790702769" prot="public" virt="non-virtual"><scope>myMD::View::OverviewTabPages::DetailedDoctorsLetterPage</scope><name>CustomContentPage</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_detailed_doctors_letter_page_1a28245631ccc5cb7fc5e5ced0bc4d7731" prot="public" virt="non-virtual"><scope>myMD::View::OverviewTabPages::DetailedDoctorsLetterPage</scope><name>DetailedDoctorsLetterPage</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_detailed_doctors_letter_page_1a813f0b4f7f3a55f71a71dd9203123521" prot="private" virt="non-virtual"><scope>myMD::View::OverviewTabPages::DetailedDoctorsLetterPage</scope><name>vm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

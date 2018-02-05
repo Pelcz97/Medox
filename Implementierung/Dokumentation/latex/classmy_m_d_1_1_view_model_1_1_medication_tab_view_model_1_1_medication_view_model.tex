@@ -1,0 +1,142 @@
+\hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model}{}\section{my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medication\+View\+Model Klassenreferenz}
+\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model}\index{my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medication\+View\+Model@{my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medication\+View\+Model}}
+
+
+Klassendiagramm für my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medication\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Zusammengehörigkeiten von my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medication\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_adea7437f11fade137b07865f0143d663}{Medication\+View\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Erstellt ein \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model}{Medication\+View\+Model}}, initialisiert die Medications\+List und -\/\+Items\+List, füllt beide über \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a51934d08200971cc38dfaeb26d790620}{Group\+List()}} mit den Einträgen der Datenbank auf. Abonniert zudem eine Benachrichtigung, falls der Nutzer eine Medikation speichert, um die Liste zu aktualisieren. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a51934d08200971cc38dfaeb26d790620}{Group\+List}} ()
+\begin{DoxyCompactList}\small\item\em Methode zum Gruppieren der vorhandenen Medikationen. Zunächst wird Medications\+List mit Medicine\+View\+Models befüllt, anschließend wird die Sortierung (orderby\+: Jahr, Monat, Tag; absteigend) festgelegt, danach das Gruppierungskriterium (group\+: .Medication.\+Date.\+to\+String(\char`\"{}\+Y\char`\"{}), zb. \char`\"{}\+September 2017\char`\"{}) festegelegt. Anhand dessen wird die Medications\+Items\+List befüllt. Zudem wird die Medications\+Items\+List Property benachrichtigt, falls es Änderungen gab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a420091b8fd48e45dddd1d25ca9cc7672}{Delete\+List\+Item\+Method}} (\mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model}{Medicine\+View\+Model}} item)
+\begin{DoxyCompactList}\small\item\em Methode zum Entfernen einer Medikation aus der Liste\+: Der Eintrag wird zuerst aus Datenbank entfernt, anschließend auch aus der Medications\+Items\+List, indem über die Gruppen und Einträge iteriert wird. Denkbar wäre auch ein Reload der Liste, sieht aber seltsam aus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_ae864883a931be2827039bc0d3dcf88f0}{Reload}} ()
+\begin{DoxyCompactList}\small\item\em Methode zum Neuladen der Liste \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Propertys}
+\begin{DoxyCompactItemize}
+\item 
+Observable\+Collection$<$ \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model}{Medicine\+View\+Model}} $>$ \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a54c6261db8bdb2a1b7bd30893223b859}{Medications\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Eine Observable\+Collection an Medicine\+View\+Models. Dient als Zwischenspeicher der Medications\+Items\+List, um Einträge der Datenbank hier zunächst abzulegen, bevor sie sortiert und gruppiert werden. \end{DoxyCompactList}\item 
+Observable\+Collection$<$ Grouping$<$ string, \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model}{Medicine\+View\+Model}} $>$ $>$ \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a16fb4b8fd866f347b828791564a56ead}{Medications\+Items\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Eine Observable\+Collection an Groupings, die wiederum die einzelnen Medicine\+View\+Models und somit die Medications beinhalten. Wird zur Gruppierung der Liste benötigt. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a2f46dfaf9adbc2b5d299d8b6b17c2b6b}{Key}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Der Schlüssel der Medications\+Items\+List, anhand dessen der Group\+Header festgelegt wird \end{DoxyCompactList}\item 
+I\+Command \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a9a31082ba1957dba80eaeca424c94d40}{Delete\+List\+Item}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command, welches das Löschen eines gewählten Listeneintrags initiiert. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Weitere Geerbte Elemente}
+
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_adea7437f11fade137b07865f0143d663}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_adea7437f11fade137b07865f0143d663}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}!Medication\+View\+Model@{Medication\+View\+Model}}
+\index{Medication\+View\+Model@{Medication\+View\+Model}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}}
+\subsubsection{\texorpdfstring{Medication\+View\+Model()}{MedicationViewModel()}}
+{\footnotesize\ttfamily my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medication\+View\+Model.\+Medication\+View\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Erstellt ein \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model}{Medication\+View\+Model}}, initialisiert die Medications\+List und -\/\+Items\+List, füllt beide über \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a51934d08200971cc38dfaeb26d790620}{Group\+List()}} mit den Einträgen der Datenbank auf. Abonniert zudem eine Benachrichtigung, falls der Nutzer eine Medikation speichert, um die Liste zu aktualisieren. 
+
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a420091b8fd48e45dddd1d25ca9cc7672}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a420091b8fd48e45dddd1d25ca9cc7672}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}!Delete\+List\+Item\+Method@{Delete\+List\+Item\+Method}}
+\index{Delete\+List\+Item\+Method@{Delete\+List\+Item\+Method}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}}
+\subsubsection{\texorpdfstring{Delete\+List\+Item\+Method()}{DeleteListItemMethod()}}
+{\footnotesize\ttfamily void my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medication\+View\+Model.\+Delete\+List\+Item\+Method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model}{Medicine\+View\+Model}}}]{item }\end{DoxyParamCaption})}
+
+
+
+Methode zum Entfernen einer Medikation aus der Liste\+: Der Eintrag wird zuerst aus Datenbank entfernt, anschließend auch aus der Medications\+Items\+List, indem über die Gruppen und Einträge iteriert wird. Denkbar wäre auch ein Reload der Liste, sieht aber seltsam aus. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em item} & Item.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a51934d08200971cc38dfaeb26d790620}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a51934d08200971cc38dfaeb26d790620}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}!Group\+List@{Group\+List}}
+\index{Group\+List@{Group\+List}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}}
+\subsubsection{\texorpdfstring{Group\+List()}{GroupList()}}
+{\footnotesize\ttfamily void my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medication\+View\+Model.\+Group\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Methode zum Gruppieren der vorhandenen Medikationen. Zunächst wird Medications\+List mit Medicine\+View\+Models befüllt, anschließend wird die Sortierung (orderby\+: Jahr, Monat, Tag; absteigend) festgelegt, danach das Gruppierungskriterium (group\+: .Medication.\+Date.\+to\+String(\char`\"{}\+Y\char`\"{}), zb. \char`\"{}\+September 2017\char`\"{}) festegelegt. Anhand dessen wird die Medications\+Items\+List befüllt. Zudem wird die Medications\+Items\+List Property benachrichtigt, falls es Änderungen gab. 
+
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_ae864883a931be2827039bc0d3dcf88f0}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_ae864883a931be2827039bc0d3dcf88f0}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}!Reload@{Reload}}
+\index{Reload@{Reload}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}}
+\subsubsection{\texorpdfstring{Reload()}{Reload()}}
+{\footnotesize\ttfamily void my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medication\+View\+Model.\+Reload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Methode zum Neuladen der Liste 
+
+
+
+\subsection{Dokumentation der Propertys}
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a9a31082ba1957dba80eaeca424c94d40}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a9a31082ba1957dba80eaeca424c94d40}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}!Delete\+List\+Item@{Delete\+List\+Item}}
+\index{Delete\+List\+Item@{Delete\+List\+Item}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}}
+\subsubsection{\texorpdfstring{Delete\+List\+Item}{DeleteListItem}}
+{\footnotesize\ttfamily I\+Command my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medication\+View\+Model.\+Delete\+List\+Item\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command, welches das Löschen eines gewählten Listeneintrags initiiert. 
+
+The delete list item.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a2f46dfaf9adbc2b5d299d8b6b17c2b6b}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a2f46dfaf9adbc2b5d299d8b6b17c2b6b}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}!Key@{Key}}
+\index{Key@{Key}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}}
+\subsubsection{\texorpdfstring{Key}{Key}}
+{\footnotesize\ttfamily string my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medication\+View\+Model.\+Key\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Der Schlüssel der Medications\+Items\+List, anhand dessen der Group\+Header festgelegt wird 
+
+The key.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a16fb4b8fd866f347b828791564a56ead}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a16fb4b8fd866f347b828791564a56ead}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}!Medications\+Items\+List@{Medications\+Items\+List}}
+\index{Medications\+Items\+List@{Medications\+Items\+List}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}}
+\subsubsection{\texorpdfstring{Medications\+Items\+List}{MedicationsItemsList}}
+{\footnotesize\ttfamily Observable\+Collection$<$Grouping$<$string, \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model}{Medicine\+View\+Model}}$>$ $>$ my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medication\+View\+Model.\+Medications\+Items\+List\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Eine Observable\+Collection an Groupings, die wiederum die einzelnen Medicine\+View\+Models und somit die Medications beinhalten. Wird zur Gruppierung der Liste benötigt. 
+
+The medications items list.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a54c6261db8bdb2a1b7bd30893223b859}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_a54c6261db8bdb2a1b7bd30893223b859}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}!Medications\+List@{Medications\+List}}
+\index{Medications\+List@{Medications\+List}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}}
+\subsubsection{\texorpdfstring{Medications\+List}{MedicationsList}}
+{\footnotesize\ttfamily Observable\+Collection$<$\mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model}{Medicine\+View\+Model}}$>$ my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medication\+View\+Model.\+Medications\+List\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Eine Observable\+Collection an Medicine\+View\+Models. Dient als Zwischenspeicher der Medications\+Items\+List, um Einträge der Datenbank hier zunächst abzulegen, bevor sie sortiert und gruppiert werden. 
+
+The medications list.
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Medication\+Tab\+View\+Model/\mbox{\hyperlink{_medication_view_model_8cs}{Medication\+View\+Model.\+cs}}\end{DoxyCompactItemize}

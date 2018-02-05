@@ -472,6 +472,13 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \end{minipage}
 \end{figure}
 
+Aufgrund der enormen Größe der Grafik lässt sich diese über folgenden QR-Code online abrufen, um bequem alle Details des Klassendiagrammes begutachten zu können. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{graphics/Klassendiagramme/myMD_QR}
+\caption{QR Code zur Online-Variante des myMD Klassendiagrammes}
+\end{figure}
+
 \chapter{Ergebnisse der Phase}
 \begin{figure}[H]
 \section{Ablauf}
@@ -481,8 +488,9 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \caption{Gantt Diagramm der Implementierungsphase}
 \end{minipage}
 \end{figure}
-Von dem, im Entwurf, geplanten Ablauf wurde hauptsächlich in der \textbf{View} und dem \textbf{ViewModel} abgewichen. Den hier, stellten wir fest, ist es sinnvoller eine Page der \textbf{View} parallel zum entsprechenden \textbf{ViewModel} zu implementieren. Da wir mit dem \textbf{MedicationTab} anfingen, brauchten wir hier länger als geplant. Jedoch holten wir die verlorene Zeit bei der Implementierung des \textbf{OverviewTabs} und des \textbf{ProfileTabs} wieder zurück. Den hier konnten wir das Know-How, das wir uns beim \textbf{MedicationTab} angeeignet haben, gut anwenden.
-Im Model gab es keine nennenswerten Abweichungen vom Zeitplan.
+Von dem, im Entwurf, geplanten Ablauf wurde hauptsächlich in der \textbf{View} und dem \textbf{ViewModel} abgewichen. Denn hier, stellten wir fest, ist es sinnvoller eine Page der \textbf{View} parallel zum entsprechenden \textbf{ViewModel} zu implementieren. Da wir mit dem \textbf{MedicationTab} anfingen, brauchten wir hier länger als geplant. Jedoch holten wir die verlorene Zeit bei der Implementierung des \textbf{OverviewTabs} und des \textbf{ProfileTabs} wieder zurück. Denn hier konnten wir das Know-How, das wir uns beim \textbf{MedicationTab} angeeignet haben, gut anwenden.
+
+Im \textbf{Model} gab es keine nennenswerten Abweichungen vom Zeitplan.
 \section{Zukunftspläne}
 Unsere höchste Priorität ist es die Desktop Anwendung funktionsfähig zu machen. Da durch sie unsere App erst vollständig benutzbar wird.
 

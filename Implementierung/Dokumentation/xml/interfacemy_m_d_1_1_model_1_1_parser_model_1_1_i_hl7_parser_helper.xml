@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper" kind="interface" language="C#" prot="public">
+    <compoundname>myMD::Model::ParserModel::IHl7ParserHelper</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper_1ab4114a84678d1b0ce5df7fdc00119dc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.ParserModel.IHl7ParserHelper.PrepareFormatter</definition>
+        <argsstring>(XmlIts1Formatter fmtr)</argsstring>
+        <name>PrepareFormatter</name>
+        <param>
+          <type>XmlIts1Formatter</type>
+          <declname>fmtr</declname>
+        </param>
+        <briefdescription>
+<para>Führt nötige Operationen aus um den gegebenen Xml-Formatierer benutzen zu können. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Der vorzubereitende Xml-Formatierer</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/IHl7ParserHelper.cs" line="16" column="1"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5c2d04fd614ecab8c9bc7f5ae7636a00" compoundref="_hl7_to_database_parser_8cs" startline="55" endline="66">myMD.Model.ParserModel.Hl7ToDatabaseParser.Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper_1acb71b41f4c50af3442b036e79ac53da1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.ParserModel.IHl7ParserHelper.FinalizeMedication</definition>
+        <argsstring>(SubstanceAdministration source, Medication target)</argsstring>
+        <name>FinalizeMedication</name>
+        <param>
+          <type>SubstanceAdministration</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication" kindref="compound">Medication</ref></type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>List die Werte für Frequency, Interval, Date und EndDate aus source und setzt sie in target. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die Quelle aus der die Informationen gelesen werden sollen</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die Medikation in die die Informationen eingetragen werden sollen</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/IHl7ParserHelper.cs" line="23" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Schnittstelle für Operationen beim Parsen von .hl7 Dateien, die plattformspezifisch ausgeführt werden müssen. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/IHl7ParserHelper.cs" line="11" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/IHl7ParserHelper.cs" bodystart="10" bodyend="24"/>
+    <listofallmembers>
+      <member refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper_1acb71b41f4c50af3442b036e79ac53da1" prot="public" virt="non-virtual"><scope>myMD::Model::ParserModel::IHl7ParserHelper</scope><name>FinalizeMedication</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper_1ab4114a84678d1b0ce5df7fdc00119dc4" prot="public" virt="non-virtual"><scope>myMD::Model::ParserModel::IHl7ParserHelper</scope><name>PrepareFormatter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

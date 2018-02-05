@@ -1,0 +1,163 @@
+\hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser}{}\section{my\+M\+D.\+Model.\+Parser\+Model.\+File\+To\+Database\+Parser Klassenreferenz}
+\label{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser}\index{my\+M\+D.\+Model.\+Parser\+Model.\+File\+To\+Database\+Parser@{my\+M\+D.\+Model.\+Parser\+Model.\+File\+To\+Database\+Parser}}
+
+
+Abstrakte Klasse zum Parsen von Dateien in eine Datenbank. Sollte dateiformatspezifisch erweitert werden.  
+
+
+
+
+Klassendiagramm fÃ¼r my\+M\+D.\+Model.\+Parser\+Model.\+File\+To\+Database\+Parser\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Ã–ffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a5657cfa5ac9ebf00394691de2f9cabe4}{Parse\+File}} (string filename, \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}{I\+Entity\+Database}} db)
+\begin{DoxyCompactList}\small\item\em Fügt Informationen aus der Datei in die Datenbank ein. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{GeschÃ¼tzte Methoden}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_afa4317cee37448666f91ad019c4d118e}{Init}} (string file)
+\begin{DoxyCompactList}\small\item\em Rufe diese Methode auf um den Parser zu initialisieren um danach über die Parse-\/\+Methoden die relevanten Informationen zu erhalten. \end{DoxyCompactList}\item 
+abstract \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctor}{Doctor}} \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a9fcc201f726f6c9e93cdb011a0b1dfae}{Parse\+Doctor}} ()
+\begin{DoxyCompactList}\small\item\em Erstelle den in der Datei spezifizierten Arzt. \end{DoxyCompactList}\item 
+abstract \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\+Letter}} \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a3ac888cb3cc241cc42e1b9ad7f4547ff}{Parse\+Letter}} ()
+\begin{DoxyCompactList}\small\item\em Erstelle einen Arztbrief mit den Informationen aus der Datei. \end{DoxyCompactList}\item 
+abstract I\+List$<$ \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication}} $>$ \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a73c15f8034e8d5a907b39ca8daa6a854}{Parse\+Medications}} ()
+\begin{DoxyCompactList}\small\item\em Erstelle die in der Datei spezifizierten Medikationen. \end{DoxyCompactList}\item 
+abstract \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}{Profile}} \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a9b95fdb381daef0799df52ccc28d8a80}{Parse\+Profile}} ()
+\begin{DoxyCompactList}\small\item\em Erstelle das in der Datei spezifizierten Profil. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{AusfÃ¼hrliche Beschreibung}
+Abstrakte Klasse zum Parsen von Dateien in eine Datenbank. Sollte dateiformatspezifisch erweitert werden. 
+
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_afa4317cee37448666f91ad019c4d118e}\label{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_afa4317cee37448666f91ad019c4d118e}} 
+\index{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}!Init@{Init}}
+\index{Init@{Init}!my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily abstract void my\+M\+D.\+Model.\+Parser\+Model.\+File\+To\+Database\+Parser.\+Init (\begin{DoxyParamCaption}\item[{string}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Rufe diese Methode auf um den Parser zu initialisieren um danach über die Parse-\/\+Methoden die relevanten Informationen zu erhalten. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em file} & Der Pfad zu der Datei die geparst werden soll\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_a5c2d04fd614ecab8c9bc7f5ae7636a00}{my\+M\+D.\+Model.\+Parser\+Model.\+Hl7\+To\+Database\+Parser}}.
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a9fcc201f726f6c9e93cdb011a0b1dfae}\label{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a9fcc201f726f6c9e93cdb011a0b1dfae}} 
+\index{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}!Parse\+Doctor@{Parse\+Doctor}}
+\index{Parse\+Doctor@{Parse\+Doctor}!my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}}
+\subsubsection{\texorpdfstring{Parse\+Doctor()}{ParseDoctor()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctor}{Doctor}} my\+M\+D.\+Model.\+Parser\+Model.\+File\+To\+Database\+Parser.\+Parse\+Doctor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Erstelle den in der Datei spezifizierten Arzt. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Den erstellten Arzt
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_a7a6690eb5f9d3c15ac4805c1695f2116}{my\+M\+D.\+Model.\+Parser\+Model.\+Hl7\+To\+Database\+Parser}}.
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a5657cfa5ac9ebf00394691de2f9cabe4}\label{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a5657cfa5ac9ebf00394691de2f9cabe4}} 
+\index{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}!Parse\+File@{Parse\+File}}
+\index{Parse\+File@{Parse\+File}!my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}}
+\subsubsection{\texorpdfstring{Parse\+File()}{ParseFile()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model.\+Parser\+Model.\+File\+To\+Database\+Parser.\+Parse\+File (\begin{DoxyParamCaption}\item[{string}]{filename,  }\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}{I\+Entity\+Database}}}]{db }\end{DoxyParamCaption})}
+
+
+
+Fügt Informationen aus der Datei in die Datenbank ein. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em filename} & Die zu parsende Datei\\
+\hline
+{\em db} & Die Datenbank in die die geparsten Informationen eingetragen werden\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Ausnahmebehandlung}
+{\em Invalid\+Operation\+Exception} & Werfe, wenn kein passendes Profil für die Datei gefunden wurde\\
+\hline
+\end{DoxyExceptions}
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a5657cfa5ac9ebf00394691de2f9cabe4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a3ac888cb3cc241cc42e1b9ad7f4547ff}\label{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a3ac888cb3cc241cc42e1b9ad7f4547ff}} 
+\index{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}!Parse\+Letter@{Parse\+Letter}}
+\index{Parse\+Letter@{Parse\+Letter}!my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}}
+\subsubsection{\texorpdfstring{Parse\+Letter()}{ParseLetter()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\+Letter}} my\+M\+D.\+Model.\+Parser\+Model.\+File\+To\+Database\+Parser.\+Parse\+Letter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Erstelle einen Arztbrief mit den Informationen aus der Datei. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Den erstellten Arztbrief
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_a7422f68b4596b2a59b052c3e13629747}{my\+M\+D.\+Model.\+Parser\+Model.\+Hl7\+To\+Database\+Parser}}.
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a73c15f8034e8d5a907b39ca8daa6a854}\label{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a73c15f8034e8d5a907b39ca8daa6a854}} 
+\index{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}!Parse\+Medications@{Parse\+Medications}}
+\index{Parse\+Medications@{Parse\+Medications}!my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}}
+\subsubsection{\texorpdfstring{Parse\+Medications()}{ParseMedications()}}
+{\footnotesize\ttfamily abstract I\+List$<$\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication}}$>$ my\+M\+D.\+Model.\+Parser\+Model.\+File\+To\+Database\+Parser.\+Parse\+Medications (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Erstelle die in der Datei spezifizierten Medikationen. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Liste der erstellten Medikationen
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_a5188e31e41b2778e36ca853cb346c7b2}{my\+M\+D.\+Model.\+Parser\+Model.\+Hl7\+To\+Database\+Parser}}.
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a9b95fdb381daef0799df52ccc28d8a80}\label{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_a9b95fdb381daef0799df52ccc28d8a80}} 
+\index{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}!Parse\+Profile@{Parse\+Profile}}
+\index{Parse\+Profile@{Parse\+Profile}!my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}}
+\subsubsection{\texorpdfstring{Parse\+Profile()}{ParseProfile()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}{Profile}} my\+M\+D.\+Model.\+Parser\+Model.\+File\+To\+Database\+Parser.\+Parse\+Profile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Erstelle das in der Datei spezifizierten Profil. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Das erstellte Profil
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_a5d6231cd8b2598bf1683778b0500c7fd}{my\+M\+D.\+Model.\+Parser\+Model.\+Hl7\+To\+Database\+Parser}}.
+
+
+
+Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Parser\+Model/\mbox{\hyperlink{_file_to_database_parser_8cs}{File\+To\+Database\+Parser.\+cs}}\end{DoxyCompactItemize}

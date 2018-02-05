@@ -1,0 +1,68 @@
+\hypertarget{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade}{
+\section{my\-MD::Model::Parser\-Model::IParser\-Facade Interface Reference}
+\label{d6/d07/interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade}\index{myMD::Model::ParserModel::IParserFacade@{myMD::Model::ParserModel::IParserFacade}}
+}
+Diese Schnittstelle ist die Haupteinstiegsstelle f\"{u}r andere Pakete in das \hyperlink{namespacemy_m_d_1_1_model_1_1_parser_model}{Parser\-Model} Paket. Hier k\"{o}nnen Informationen aus Dateien in eine Datenbank eingetragen werden oder Dateien aus Informationen aus der Datenbank erstellt werden.  
+
+
+Inheritance diagram for my\-MD::Model::Parser\-Model::IParser\-Facade:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_6ffe5b6c5af78ec3e9cdb29a04560a9f}{Parse\-File\-To\-Database} (string filename, \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}{IEntity\-Database} db)
+\begin{CompactList}\small\item\em Parse die Informationen in der gegebenen Datei in die gegebene Datenbank. \item\end{CompactList}\item 
+string \hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_b00612cc050463e46a4078ec61ef5bae}{Parse\-Letter\-To\-Original\-File} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter} letter)
+\begin{CompactList}\small\item\em Parse den gegebenen Arztbrief in sein urspr\"{u}ngliches Dateiformat. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Diese Schnittstelle ist die Haupteinstiegsstelle f\"{u}r andere Pakete in das \hyperlink{namespacemy_m_d_1_1_model_1_1_parser_model}{Parser\-Model} Paket. Hier k\"{o}nnen Informationen aus Dateien in eine Datenbank eingetragen werden oder Dateien aus Informationen aus der Datenbank erstellt werden. 
+
+
+
+Definition at line 10 of file IParser\-Facade.cs.
+
+\subsection{Member Function Documentation}
+\hypertarget{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_6ffe5b6c5af78ec3e9cdb29a04560a9f}{
+\index{myMD::Model::ParserModel::IParserFacade@{my\-MD::Model::Parser\-Model::IParser\-Facade}!ParseFileToDatabase@{ParseFileToDatabase}}
+\index{ParseFileToDatabase@{ParseFileToDatabase}!myMD::Model::ParserModel::IParserFacade@{my\-MD::Model::Parser\-Model::IParser\-Facade}}
+\subsubsection[ParseFileToDatabase]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model::Parser\-Model::IParser\-Facade::Parse\-File\-To\-Database (string {\em filename}, \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}{IEntity\-Database} {\em db})}}
+\label{d6/d07/interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_6ffe5b6c5af78ec3e9cdb29a04560a9f}
+
+
+Parse die Informationen in der gegebenen Datei in die gegebene Datenbank. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em filename}]Die zu parsende Datei\item[{\em db}]Die Datenbank in die die geparsten Informationen eingetragen werden sollen\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em System.Not\-Supported\-Exception}]Werfe, wenn das Dateiformat der gegebenen Datei nicht unterst\"{u}tzt wird\end{description}
+\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_6ffe5b6c5af78ec3e9cdb29a04560a9f}{my\-MD::Model::Parser\-Model::Parser\-Facade}.\hypertarget{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_b00612cc050463e46a4078ec61ef5bae}{
+\index{myMD::Model::ParserModel::IParserFacade@{my\-MD::Model::Parser\-Model::IParser\-Facade}!ParseLetterToOriginalFile@{ParseLetterToOriginalFile}}
+\index{ParseLetterToOriginalFile@{ParseLetterToOriginalFile}!myMD::Model::ParserModel::IParserFacade@{my\-MD::Model::Parser\-Model::IParser\-Facade}}
+\subsubsection[ParseLetterToOriginalFile]{\setlength{\rightskip}{0pt plus 5cm}string my\-MD::Model::Parser\-Model::IParser\-Facade::Parse\-Letter\-To\-Original\-File (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter} {\em letter})}}
+\label{d6/d07/interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_b00612cc050463e46a4078ec61ef5bae}
+
+
+Parse den gegebenen Arztbrief in sein urspr\"{u}ngliches Dateiformat. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em letter}]Der zu parsende Arztbrief\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Pfad zur geparsten Datei\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_b00612cc050463e46a4078ec61ef5bae}{my\-MD::Model::Parser\-Model::Parser\-Facade}.
+
+The documentation for this interface was generated from the following file:\begin{CompactItemize}
+\item 
+D:/Studium/WS17-18/PSE/Implementierung/my\-MD/my\-MD/Model/Parser\-Model/IParser\-Facade.cs\end{CompactItemize}

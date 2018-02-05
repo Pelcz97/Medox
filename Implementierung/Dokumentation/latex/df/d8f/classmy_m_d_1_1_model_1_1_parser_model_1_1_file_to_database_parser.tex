@@ -1,0 +1,135 @@
+\hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser}{
+\section{my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser Class Reference}
+\label{df/d8f/classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser}\index{myMD::Model::ParserModel::FileToDatabaseParser@{myMD::Model::ParserModel::FileToDatabaseParser}}
+}
+Abstrakte Klasse zum Parsen von Dateien in eine Datenbank. Sollte dateiformatspezifisch erweitert werden.  
+
+
+Inheritance diagram for my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_8ef40647d404611dade84e3f8f4e341c}{Parse\-File} (string filename, \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}{IEntity\-Database} db)
+\begin{CompactList}\small\item\em F\"{u}gt Informationen aus der Datei in die Datenbank ein. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+abstract \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\-Letter} \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_d8ae1d1ef5060c24906a67b82f7b3329}{Parse\-Letter} (string filename)
+\begin{CompactList}\small\item\em Erstelle einen Arztbrief mit den Informationen aus der Datei. \item\end{CompactList}\item 
+abstract IList$<$ \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication} $>$ \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_84eaf7d498558fe57b2f248968a439b4}{Parse\-Medications} (string filename)
+\begin{CompactList}\small\item\em Erstelle die in der Datei spezifizierten Medikationen. \item\end{CompactList}\item 
+abstract \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctor}{Doctor} \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_8f5b7fa31916486a50b050795daa395c}{Parse\-Doctor} (string filename)
+\begin{CompactList}\small\item\em Erstelle den in der Datei spezifizierten Arzt. \item\end{CompactList}\item 
+abstract \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}{Profile} \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_3bb98e867ab361116982cfb17dfe8de9}{Parse\-Profile} (string filename)
+\begin{CompactList}\small\item\em Erstelle das in der Datei spezifizierten Profil. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Abstrakte Klasse zum Parsen von Dateien in eine Datenbank. Sollte dateiformatspezifisch erweitert werden. 
+
+
+
+Definition at line 12 of file File\-To\-Database\-Parser.cs.
+
+\subsection{Member Function Documentation}
+\hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_8f5b7fa31916486a50b050795daa395c}{
+\index{myMD::Model::ParserModel::FileToDatabaseParser@{my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser}!ParseDoctor@{ParseDoctor}}
+\index{ParseDoctor@{ParseDoctor}!myMD::Model::ParserModel::FileToDatabaseParser@{my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser}}
+\subsubsection[ParseDoctor]{\setlength{\rightskip}{0pt plus 5cm}abstract \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctor}{Doctor} my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser::Parse\-Doctor (string {\em filename})\hspace{0.3cm}{\tt  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{df/d8f/classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_8f5b7fa31916486a50b050795daa395c}
+
+
+Erstelle den in der Datei spezifizierten Arzt. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em filename}]Die zu parsende Datei\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Den erstellten Arzt\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_8f5b7fa31916486a50b050795daa395c}{my\-MD::Model::Parser\-Model::Hl7To\-Database\-Parser}.\hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_8ef40647d404611dade84e3f8f4e341c}{
+\index{myMD::Model::ParserModel::FileToDatabaseParser@{my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser}!ParseFile@{ParseFile}}
+\index{ParseFile@{ParseFile}!myMD::Model::ParserModel::FileToDatabaseParser@{my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser}}
+\subsubsection[ParseFile]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser::Parse\-File (string {\em filename}, \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}{IEntity\-Database} {\em db})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{df/d8f/classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_8ef40647d404611dade84e3f8f4e341c}
+
+
+F\"{u}gt Informationen aus der Datei in die Datenbank ein. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em filename}]Die zu parsende Datei\item[{\em db}]Die Datenbank in die die geparsten Informationen eingetragen werden\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em Invalid\-Operation\-Exception}]Werfe, wenn kein passendes Profil f\"{u}r die Datei gefunden wurde\end{description}
+\end{Desc}
+
+
+Definition at line 20 of file File\-To\-Database\-Parser.cs.
+
+References my\-MD::Model::Data\-Model::Doctors\-Letter::Attach\-Medication(), my\-MD::Model::Data\-Model::Doctors\-Letter::Database\-Doctor, my\-MD::Model::Database\-Model::IEntity\-Database::Get\-Doctor(), my\-MD::Model::Database\-Model::IEntity\-Database::Get\-Profile(), my\-MD::Model::Database\-Model::IEntity\-Database::Insert(), my\-MD::Model::Data\-Model::Entity::Profile, and my\-MD::Model::Database\-Model::IEntity\-Database::Update().
+
+Here is the call graph for this function:\hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_d8ae1d1ef5060c24906a67b82f7b3329}{
+\index{myMD::Model::ParserModel::FileToDatabaseParser@{my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser}!ParseLetter@{ParseLetter}}
+\index{ParseLetter@{ParseLetter}!myMD::Model::ParserModel::FileToDatabaseParser@{my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser}}
+\subsubsection[ParseLetter]{\setlength{\rightskip}{0pt plus 5cm}abstract \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\-Letter} my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser::Parse\-Letter (string {\em filename})\hspace{0.3cm}{\tt  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{df/d8f/classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_d8ae1d1ef5060c24906a67b82f7b3329}
+
+
+Erstelle einen Arztbrief mit den Informationen aus der Datei. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em filename}]Die zu parsende Datei\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Den erstellten Arztbrief\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_d8ae1d1ef5060c24906a67b82f7b3329}{my\-MD::Model::Parser\-Model::Hl7To\-Database\-Parser}.\hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_84eaf7d498558fe57b2f248968a439b4}{
+\index{myMD::Model::ParserModel::FileToDatabaseParser@{my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser}!ParseMedications@{ParseMedications}}
+\index{ParseMedications@{ParseMedications}!myMD::Model::ParserModel::FileToDatabaseParser@{my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser}}
+\subsubsection[ParseMedications]{\setlength{\rightskip}{0pt plus 5cm}abstract IList$<$\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication}$>$ my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser::Parse\-Medications (string {\em filename})\hspace{0.3cm}{\tt  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{df/d8f/classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_84eaf7d498558fe57b2f248968a439b4}
+
+
+Erstelle die in der Datei spezifizierten Medikationen. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em filename}]Die zu parsende Datei\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Liste der erstellten Medikationen\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_84eaf7d498558fe57b2f248968a439b4}{my\-MD::Model::Parser\-Model::Hl7To\-Database\-Parser}.\hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_3bb98e867ab361116982cfb17dfe8de9}{
+\index{myMD::Model::ParserModel::FileToDatabaseParser@{my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser}!ParseProfile@{ParseProfile}}
+\index{ParseProfile@{ParseProfile}!myMD::Model::ParserModel::FileToDatabaseParser@{my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser}}
+\subsubsection[ParseProfile]{\setlength{\rightskip}{0pt plus 5cm}abstract \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}{Profile} my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser::Parse\-Profile (string {\em filename})\hspace{0.3cm}{\tt  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{df/d8f/classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_3bb98e867ab361116982cfb17dfe8de9}
+
+
+Erstelle das in der Datei spezifizierten Profil. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em filename}]Die zu parsende Datei\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Das erstellte Profil\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_3bb98e867ab361116982cfb17dfe8de9}{my\-MD::Model::Parser\-Model::Hl7To\-Database\-Parser}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+D:/Studium/WS17-18/PSE/Implementierung/my\-MD/my\-MD/Model/Parser\-Model/File\-To\-Database\-Parser.cs\end{CompactItemize}

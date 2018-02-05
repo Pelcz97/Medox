@@ -1,0 +1,4 @@
+<map id="myMD.Model.ModelFacade.ModelFacade.CreateEmptyGroup" name="myMD.Model.ModelFacade.ModelFacade.CreateEmptyGroup">
+<area shape="rect" id="node2" href="$interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory.html#afca4ecdc59f292073c7a40d258057484" title="Erstellt eine neue, leere Arztbriefgruppe. " alt="" coords="273,5,492,47"/>
+<area shape="rect" id="node3" href="$interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database.html#aa9b390a965a4ebc813c0beefbbd87d26" title="Fügt eine Entität in die Datenbank zu dem zur Zeit aktiven Profil ein. " alt="" coords="284,71,481,112"/>
+</map>

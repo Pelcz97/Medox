@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory" kind="interface" language="C#" prot="public">
+    <compoundname>myMD::Model::EntityFactory::IEntityFactory</compoundname>
+    <derivedcompoundref refid="classmy_m_d_1_1_model_1_1_entity_factory_1_1_entity_factory" prot="public" virt="non-virtual">myMD.Model.EntityFactory.EntityFactory</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory_1a02bf5fe00d1c0b40dbc510ce74619a33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kindref="compound">IMedication</ref></type>
+        <definition>IMedication myMD.Model.EntityFactory.IEntityFactory.CreateEmptyMedication</definition>
+        <argsstring>()</argsstring>
+        <name>CreateEmptyMedication</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_entity_factory_1_1_entity_factory_1a600515af5e312dbafa6dff80dfe5f25e">CreateEmptyMedication</reimplementedby>
+        <briefdescription>
+<para>Erstellt eine neue, leere Medikation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Die neue Medikation</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/EntityFactory/IEntityFactory.cs" line="15" column="1"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a5394beb3ee9308666dd7e16c00c943d7" compoundref="_model_facade_8cs" startline="77" endline="82">myMD.Model.ModelFacade.ModelFacade.CreateEmptyMedication</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory_1afca4ecdc59f292073c7a40d258057484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group" kindref="compound">IDoctorsLetterGroup</ref></type>
+        <definition>IDoctorsLetterGroup myMD.Model.EntityFactory.IEntityFactory.CreateEmptyGroup</definition>
+        <argsstring>()</argsstring>
+        <name>CreateEmptyGroup</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_entity_factory_1_1_entity_factory_1a0f609feca3acec23373501f96a8f9d69">CreateEmptyGroup</reimplementedby>
+        <briefdescription>
+<para>Erstellt eine neue, leere Arztbriefgruppe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Die neue Arztbriefgruppe</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/EntityFactory/IEntityFactory.cs" line="21" column="1"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ad7c7e2889846cf195ccdd4e61a804116" compoundref="_model_facade_8cs" startline="69" endline="74">myMD.Model.ModelFacade.ModelFacade.CreateEmptyGroup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory_1add734631a85e6021f04c4185f66e351d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref></type>
+        <definition>IProfile myMD.Model.EntityFactory.IEntityFactory.CreateEmptyProfile</definition>
+        <argsstring>()</argsstring>
+        <name>CreateEmptyProfile</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_entity_factory_1_1_entity_factory_1ac48b89bd93d6f39965d805b5f6af5f35">CreateEmptyProfile</reimplementedby>
+        <briefdescription>
+<para>Erstellt ein neues, leeres Profil. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Das neue Profil</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/EntityFactory/IEntityFactory.cs" line="27" column="1"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ac41f7ff0d2279e786a2477f91df72e4a" compoundref="_model_facade_8cs" startline="85" endline="91">myMD.Model.ModelFacade.ModelFacade.CreateEmptyProfile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory_1af4555786de34d8a68afce2709fb6b9e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref></type>
+        <definition>IDoctorsLetter myMD.Model.EntityFactory.IEntityFactory.CreateEmptyDoctorsLetter</definition>
+        <argsstring>()</argsstring>
+        <name>CreateEmptyDoctorsLetter</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_entity_factory_1_1_entity_factory_1ae5741e8b4c34de926c490d05fb6fc3f0">CreateEmptyDoctorsLetter</reimplementedby>
+        <briefdescription>
+<para>Erstellt einen neuen, leeren Arztbrief. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Der neue Arztbrief</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/EntityFactory/IEntityFactory.cs" line="33" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Fabrik zum instanziieren von Objekten aus dem DataModelInterface Paket. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface" kindref="compound">myMD.ModelInterface.DataModelInterface</ref></para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="220">
+        <label>myMD.Model.EntityFactory.EntityFactory</label>
+        <link refid="classmy_m_d_1_1_model_1_1_entity_factory_1_1_entity_factory"/>
+        <childnode refid="219" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="219">
+        <label>myMD.Model.EntityFactory.IEntityFactory</label>
+        <link refid="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory"/>
+      </node>
+    </inheritancegraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/EntityFactory/IEntityFactory.cs" line="10" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/EntityFactory/IEntityFactory.cs" bodystart="9" bodyend="34"/>
+    <listofallmembers>
+      <member refid="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory_1af4555786de34d8a68afce2709fb6b9e8" prot="public" virt="non-virtual"><scope>myMD::Model::EntityFactory::IEntityFactory</scope><name>CreateEmptyDoctorsLetter</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory_1afca4ecdc59f292073c7a40d258057484" prot="public" virt="non-virtual"><scope>myMD::Model::EntityFactory::IEntityFactory</scope><name>CreateEmptyGroup</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory_1a02bf5fe00d1c0b40dbc510ce74619a33" prot="public" virt="non-virtual"><scope>myMD::Model::EntityFactory::IEntityFactory</scope><name>CreateEmptyMedication</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory_1add734631a85e6021f04c4185f66e351d" prot="public" virt="non-virtual"><scope>myMD::Model::EntityFactory::IEntityFactory</scope><name>CreateEmptyProfile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

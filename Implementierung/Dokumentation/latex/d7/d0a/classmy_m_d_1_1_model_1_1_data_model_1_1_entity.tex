@@ -1,0 +1,97 @@
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{
+\section{my\-MD::Model::Data\-Model::Entity Class Reference}
+\label{d7/d0a/classmy_m_d_1_1_model_1_1_data_model_1_1_entity}\index{myMD::Model::DataModel::Entity@{myMD::Model::DataModel::Entity}}
+}
+Die \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity} Klasse implementiert die IEntity-Schnittstelle. Dabei dient die Klasse nur als Strukturelement f\"{u}r andere Klassen, die eine Vorlage f\"{u}r eine SQLite-Datenbank-Tabelle, unter Verwendung der SQLite-Net-Extensions Library, sein sollen und ist daher abstrakt. Diese Klassen sollten \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity} erweitern.  
+
+
+Inheritance diagram for my\-MD::Model::Data\-Model::Entity:Collaboration diagram for my\-MD::Model::Data\-Model::Entity:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_51a833214dab53bfafb630573fc0fe77}{
+virtual void \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_51a833214dab53bfafb630573fc0fe77}{Delete} ()}
+\label{d7/d0a/classmy_m_d_1_1_model_1_1_data_model_1_1_entity_51a833214dab53bfafb630573fc0fe77}
+
+\begin{CompactList}\small\item\em F\"{u}hrt die n\"{o}tigen Aktionen aus um diese Entit\"{a}t zu l\"{o}schen. Sollte immer zusammen mit einer L\"{o}schung aus der Datenbank aufgerufen werden. Sollte von Unterklassen \"{u}berschrieben werden, bei denen zus\"{a}tzliche Aktionen zur L\"{o}schung n\"{o}tig sind. \item\end{CompactList}\item 
+bool \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a75e8a3dc731ab0e2966da6f482119fc}{Equals} (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity} other)
+\begin{CompactList}\small\item\em Zwei Entit\"{a}ten sind genau dann gleich, wenn ihre Id, ihr Name und ihr Profil gleich sind. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_b93f11cf5ba054f230a537cff58bd1c9}{
+override bool \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_b93f11cf5ba054f230a537cff58bd1c9}{Equals} (object obj)}
+\label{d7/d0a/classmy_m_d_1_1_model_1_1_data_model_1_1_entity_b93f11cf5ba054f230a537cff58bd1c9}
+
+\begin{CompactList}\small\item\em System.Object::Equals(System.Object) \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_871aff832c00675bb79db4294f382e58}{
+override int \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_871aff832c00675bb79db4294f382e58}{Get\-Hash\-Code} ()}
+\label{d7/d0a/classmy_m_d_1_1_model_1_1_data_model_1_1_entity_871aff832c00675bb79db4294f382e58}
+
+\begin{CompactList}\small\item\em System.Object::Get\-Hash\-Code() \item\end{CompactList}\item 
+\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity} \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a8b26c73ec083d6930f1f39ce916df3}{To\-Entity} ()
+\begin{CompactList}\small\item\em Da diese Klasse bereits den verlangten R\"{u}ckgabetyp hab, ist keine Konvertierung n\"{o}tig. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Properties}
+\begin{CompactItemize}
+\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_b718adec73e04ce3ec720dd11a06a308}{
+int \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_b718adec73e04ce3ec720dd11a06a308}{ID}}
+\label{d7/d0a/classmy_m_d_1_1_model_1_1_data_model_1_1_entity_b718adec73e04ce3ec720dd11a06a308}
+
+\begin{CompactList}\small\item\em Prim\"{a}rer Schl\"{u}ssel um Zeilen in der korrespondierenden Tabelle zu identifizieren. Wird automatisch beim Einf\"{u}gen in die Datenbank gesetzt und sollte von sonst niemandem ver\"{a}ndert werden. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_49ee3087348e8d44e1feda1917443987}{
+string \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_49ee3087348e8d44e1feda1917443987}{Name}}
+\label{d7/d0a/classmy_m_d_1_1_model_1_1_data_model_1_1_entity_49ee3087348e8d44e1feda1917443987}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_49ee3087348e8d44e1feda1917443987}{my\-MD.Model\-Interface.Data\-Model\-Interface.IEntity::Name} \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_cce99c598cfdb9773ab041d54c3d973a}{
+\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}{Profile} \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_cce99c598cfdb9773ab041d54c3d973a}{Profile}}
+\label{d7/d0a/classmy_m_d_1_1_model_1_1_data_model_1_1_entity_cce99c598cfdb9773ab041d54c3d973a}
+
+\begin{CompactList}\small\item\em Das Nutzerprofil dem diese Entit\"{a}t eindeutig zugeordnet werden kann. Ein Nutzerprofil kann dabei mehrere Entit\"{a}ten enthalten. Wird automatisch beim Lesen aus der Datenbank gesetzt. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_dc82268d83d81e9cc62b809b61099abc}{
+int \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_dc82268d83d81e9cc62b809b61099abc}{Profile\-ID}}
+\label{d7/d0a/classmy_m_d_1_1_model_1_1_data_model_1_1_entity_dc82268d83d81e9cc62b809b61099abc}
+
+\begin{CompactList}\small\item\em Fremdschl\"{u}ssel zum Profil dieser Entit\"{a}t f\"{u}r die Datenbank. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Die \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity} Klasse implementiert die IEntity-Schnittstelle. Dabei dient die Klasse nur als Strukturelement f\"{u}r andere Klassen, die eine Vorlage f\"{u}r eine SQLite-Datenbank-Tabelle, unter Verwendung der SQLite-Net-Extensions Library, sein sollen und ist daher abstrakt. Diese Klassen sollten \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity} erweitern. 
+
+\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{my\-MD.Model\-Interface.Data\-Model\-Interface.IEntity} 
+
+
+
+Definition at line 16 of file Entity.cs.
+
+\subsection{Member Function Documentation}
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a75e8a3dc731ab0e2966da6f482119fc}{
+\index{myMD::Model::DataModel::Entity@{my\-MD::Model::Data\-Model::Entity}!Equals@{Equals}}
+\index{Equals@{Equals}!myMD::Model::DataModel::Entity@{my\-MD::Model::Data\-Model::Entity}}
+\subsubsection[Equals]{\setlength{\rightskip}{0pt plus 5cm}bool my\-MD::Model::Data\-Model::Entity::Equals (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity} {\em other})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{d7/d0a/classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a75e8a3dc731ab0e2966da6f482119fc}
+
+
+Zwei Entit\"{a}ten sind genau dann gleich, wenn ihre Id, ihr Name und ihr Profil gleich sind. 
+
+System.IEquatable$<$T$>$::Equals(T) 
+
+Definition at line 53 of file Entity.cs.
+
+References Equals(), ID, Name, and Profile.
+
+Referenced by Equals().
+
+Here is the call graph for this function:\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a8b26c73ec083d6930f1f39ce916df3}{
+\index{myMD::Model::DataModel::Entity@{my\-MD::Model::Data\-Model::Entity}!ToEntity@{ToEntity}}
+\index{ToEntity@{ToEntity}!myMD::Model::DataModel::Entity@{my\-MD::Model::Data\-Model::Entity}}
+\subsubsection[ToEntity]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity} my\-MD::Model::Data\-Model::Entity::To\-Entity ()}}
+\label{d7/d0a/classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a8b26c73ec083d6930f1f39ce916df3}
+
+
+Da diese Klasse bereits den verlangten R\"{u}ckgabetyp hab, ist keine Konvertierung n\"{o}tig. 
+
+\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_1a8b26c73ec083d6930f1f39ce916df3}{my\-MD.Model\-Interface.Data\-Model\-Interface.IEntity::To\-Entity()} 
+
+Implements \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_1a8b26c73ec083d6930f1f39ce916df3}{my\-MD::Model\-Interface::Data\-Model\-Interface::IEntity}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+D:/Studium/WS17-18/PSE/Implementierung/my\-MD/my\-MD/Model/Data\-Model/Entity.cs\end{CompactItemize}

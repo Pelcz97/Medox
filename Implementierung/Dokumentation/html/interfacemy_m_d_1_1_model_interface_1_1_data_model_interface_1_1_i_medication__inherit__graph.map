@@ -1,0 +1,5 @@
+<map id="myMD.ModelInterface.DataModelInterface.IMedication" name="myMD.ModelInterface.DataModelInterface.IMedication">
+<area shape="rect" id="node4" href="$classmy_m_d_1_1_model_1_1_data_model_1_1_medication.html" title="Diese Klasse implementiert die IMedication Schnittstelle und erweitert die abstrakte Data Klasse..." alt="" coords="5,244,237,271"/>
+<area shape="rect" id="node2" href="$interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data.html" title="Schnittstelle für die Abstraktion von Daten, die die IEntity Schnittstelle erweitert. Daten sind hier eine Ansammlung von medizinischen Informationen. " alt="" coords="95,80,147,107"/>
+<area shape="rect" id="node3" href="$interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity.html" title="Schnittstelle für eine Entität. Entitäten sind Abstraktionen von medizinischen Daten oder Akteuren..." alt="" coords="92,5,151,32"/>
+</map>

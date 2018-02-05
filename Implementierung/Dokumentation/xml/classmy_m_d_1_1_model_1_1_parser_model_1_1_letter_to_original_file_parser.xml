@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser" kind="class" language="C#" prot="public">
+    <compoundname>myMD::Model::ParserModel::LetterToOriginalFileParser</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser_1a3ec485556f6b68c51c447e82d14c6793" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string myMD.Model.ParserModel.LetterToOriginalFileParser.ParseLetter</definition>
+        <argsstring>(IDoctorsLetter letter)</argsstring>
+        <name>ParseLetter</name>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref></type>
+          <declname>letter</declname>
+        </param>
+        <briefdescription>
+<para>Parst den gegebenen Arztbrief in sein ursprüngliches Dateiformat. Da die usrprüngliche Datei gespeichert wird, muss nur ihr Pfad zurückgegeben werden. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>letter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Der zu parsende Arztbrief</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Dateipfad zur geparsten Datei</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/LetterToOriginalFileParser.cs" line="16" column="1"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_1a21538d294bf09fe09e84faa7363d280c" compoundref="_parser_facade_8cs" startline="36" endline="39">myMD.Model.ParserModel.ParserFacade.ParseLetterToOriginalFile</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Diese Klasse enthält die Logik um Arztbriefe in ihr ursprüngliches Dateiformat zu parsen. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/LetterToOriginalFileParser.cs" line="9" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/LetterToOriginalFileParser.cs" bodystart="8" bodyend="17"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser_1a3ec485556f6b68c51c447e82d14c6793" prot="public" virt="non-virtual"><scope>myMD::Model::ParserModel::LetterToOriginalFileParser</scope><name>ParseLetter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

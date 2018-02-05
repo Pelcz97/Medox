@@ -1,0 +1,4 @@
+<map id="myMD.Model.ModelFacade.ModelFacade.CreateEmptyMedication" name="myMD.Model.ModelFacade.ModelFacade.CreateEmptyMedication">
+<area shape="rect" id="node2" href="$interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory.html#a02bf5fe00d1c0b40dbc510ce74619a33" title="Erstellt eine neue, leere Medikation. " alt="" coords="273,5,520,47"/>
+<area shape="rect" id="node3" href="$interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database.html#aa9b390a965a4ebc813c0beefbbd87d26" title="Fügt eine Entität in die Datenbank zu dem zur Zeit aktiven Profil ein. " alt="" coords="298,71,495,112"/>
+</map>

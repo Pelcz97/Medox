@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacemy_m_d_1_1_view" kind="namespace" language="C#">
+    <compoundname>myMD::View</compoundname>
+    <innernamespace refid="namespacemy_m_d_1_1_view_1_1_abstract_pages">myMD::View::AbstractPages</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_view_1_1_medication_tab_pages">myMD::View::MedicationTabPages</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_view_1_1_overview_tab_pages">myMD::View::OverviewTabPages</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_view_1_1_profile_tab_pages">myMD::View::ProfileTabPages</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_view_1_1_send_data_tab_pages">myMD::View::SendDataTabPages</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="[generated]" line="1" column="1"/>
+  </compounddef>
+</doxygen>

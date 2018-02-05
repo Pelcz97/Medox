@@ -1,0 +1,168 @@
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{}\section{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication Schnittstellenreferenz}
+\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}\index{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication@{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication}}
+
+
+Schnittstelle für die Abstraktion einer Medikation, die die \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{I\+Data}} Schnittstelle erweitert. Eine Medikation ist ein Stoff oder eine Stoffzusammensetzungen, die zur Heilung oder zur Verhütung menschlicher oder tierischer Krankheiten bestimmt ist oder sich dazu eignet physiologische Funktionen zu beeinflussen oder eine medizinische Diagnose zu ermöglichen. Sie kann von einem Arzt in einem Arztbrief verschrieben werden, für manche Medikationen wird dies jedoch nicht benötigt.  
+
+
+
+
+Klassendiagramm fÃ¼r my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ZusammengehÃ¶rigkeiten von my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Ã–ffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a865fa8881e6857b4229afe7e74098d6f}{Attach\+To\+Letter}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}} letter)
+\begin{DoxyCompactList}\small\item\em Verbindet diese Medikation mit einem Arztbrief. Ist der Arztbrief bereits verbunden, so passiert nichts. Existiert bereits eine Verbindung zu einem anderen Arztbrief, so wird diese zuvor aufgelöst. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a0d31b79a6477198e771452b555f9713d}{Disattach\+From\+Letter}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}} letter)
+\begin{DoxyCompactList}\small\item\em Löst die Verbindung dieser Medikation zu einem Arztbrief auf. Besteht keine Verbindung zu diesem Arztbrief, so passiert nichts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication}} \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_af7b54c8ad197d61f4c19c505983df6ac}{To\+Medication}} ()
+\begin{DoxyCompactList}\small\item\em Konvertiert die Schnittstelle zu ihrer Implementierung \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Propertys}
+\begin{DoxyCompactItemize}
+\item 
+new Date\+Time \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_af7601032a7c83c189809efe368352689}{Date}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Das Datum an dem diese Medikation angefangen wurde \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_ac13cded8aa32f248fe33096a9616c55a}{Dosis}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Die Dosis, in der diese Medikation eingenommen wird. \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a73507174d400e964152fe103dae819f1}{End\+Date}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Das Datum, an dem diese Medikation abgesetzt werden soll. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a4d622115240e1d401656c00fbe28519f}{Frequency}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Häufigkeit in der diese Medikation in ihrem Intervall genommen werden soll. Das Intervall und die Häufigkeit zusammen ergeben dann eine tatsächliche Häufigkeit in der die Medikation eingenommen werden soll (z.\+B. 3 mal pro Tag). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782}{Interval}} \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_ad4dddb593f60e85655f9bc97f7432611}{Interval}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Das Zeitintervall in der diese Medikation eingenommen werden soll. Das Intervall und die Häufigkeit zusammen ergeben dann eine tatsächliche Häufigkeit in der die Medikation eingenommen werden soll (z.\+B. 3 mal pro Tag). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{AusfÃ¼hrliche Beschreibung}
+Schnittstelle für die Abstraktion einer Medikation, die die \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{I\+Data}} Schnittstelle erweitert. Eine Medikation ist ein Stoff oder eine Stoffzusammensetzungen, die zur Heilung oder zur Verhütung menschlicher oder tierischer Krankheiten bestimmt ist oder sich dazu eignet physiologische Funktionen zu beeinflussen oder eine medizinische Diagnose zu ermöglichen. Sie kann von einem Arzt in einem Arztbrief verschrieben werden, für manche Medikationen wird dies jedoch nicht benötigt. 
+
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a865fa8881e6857b4229afe7e74098d6f}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a865fa8881e6857b4229afe7e74098d6f}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}!Attach\+To\+Letter@{Attach\+To\+Letter}}
+\index{Attach\+To\+Letter@{Attach\+To\+Letter}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}}
+\subsubsection{\texorpdfstring{Attach\+To\+Letter()}{AttachToLetter()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication.\+Attach\+To\+Letter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}}}]{letter }\end{DoxyParamCaption})}
+
+
+
+Verbindet diese Medikation mit einem Arztbrief. Ist der Arztbrief bereits verbunden, so passiert nichts. Existiert bereits eine Verbindung zu einem anderen Arztbrief, so wird diese zuvor aufgelöst. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em letter} & Der zu verbindende Arztbrief\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a8b2802c0448d4791f9aa748b0ddedcca}{my\+M\+D.\+Model.\+Data\+Model.\+Medication}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a0d31b79a6477198e771452b555f9713d}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a0d31b79a6477198e771452b555f9713d}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}!Disattach\+From\+Letter@{Disattach\+From\+Letter}}
+\index{Disattach\+From\+Letter@{Disattach\+From\+Letter}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}}
+\subsubsection{\texorpdfstring{Disattach\+From\+Letter()}{DisattachFromLetter()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication.\+Disattach\+From\+Letter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}}}]{letter }\end{DoxyParamCaption})}
+
+
+
+Löst die Verbindung dieser Medikation zu einem Arztbrief auf. Besteht keine Verbindung zu diesem Arztbrief, so passiert nichts. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em letter} & Der zu entfernende Arztbrief\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_abc72524ce8f43e2c1e79ac82ed4efc2d}{my\+M\+D.\+Model.\+Data\+Model.\+Medication}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_af7b54c8ad197d61f4c19c505983df6ac}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_af7b54c8ad197d61f4c19c505983df6ac}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}!To\+Medication@{To\+Medication}}
+\index{To\+Medication@{To\+Medication}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}}
+\subsubsection{\texorpdfstring{To\+Medication()}{ToMedication()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication}} my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication.\+To\+Medication (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konvertiert die Schnittstelle zu ihrer Implementierung 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Konkrete Medikation
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_a63558cd2285f8716335212a3abcac800}{my\+M\+D.\+Model.\+Data\+Model.\+Medication}}.
+
+
+
+\subsection{Dokumentation der Propertys}
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_af7601032a7c83c189809efe368352689}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_af7601032a7c83c189809efe368352689}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}!Date@{Date}}
+\index{Date@{Date}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}}
+\subsubsection{\texorpdfstring{Date}{Date}}
+{\footnotesize\ttfamily new Date\+Time my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication.\+Date\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Das Datum an dem diese Medikation angefangen wurde 
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_ac13cded8aa32f248fe33096a9616c55a}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_ac13cded8aa32f248fe33096a9616c55a}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}!Dosis@{Dosis}}
+\index{Dosis@{Dosis}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}}
+\subsubsection{\texorpdfstring{Dosis}{Dosis}}
+{\footnotesize\ttfamily string my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication.\+Dosis\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Die Dosis, in der diese Medikation eingenommen wird. 
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a73507174d400e964152fe103dae819f1}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a73507174d400e964152fe103dae819f1}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}!End\+Date@{End\+Date}}
+\index{End\+Date@{End\+Date}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}}
+\subsubsection{\texorpdfstring{End\+Date}{EndDate}}
+{\footnotesize\ttfamily Date\+Time my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication.\+End\+Date\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Das Datum, an dem diese Medikation abgesetzt werden soll. 
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a4d622115240e1d401656c00fbe28519f}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_a4d622115240e1d401656c00fbe28519f}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}!Frequency@{Frequency}}
+\index{Frequency@{Frequency}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}}
+\subsubsection{\texorpdfstring{Frequency}{Frequency}}
+{\footnotesize\ttfamily int my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication.\+Frequency\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Häufigkeit in der diese Medikation in ihrem Intervall genommen werden soll. Das Intervall und die Häufigkeit zusammen ergeben dann eine tatsächliche Häufigkeit in der die Medikation eingenommen werden soll (z.\+B. 3 mal pro Tag). 
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_ad4dddb593f60e85655f9bc97f7432611}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_ad4dddb593f60e85655f9bc97f7432611}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}!Interval@{Interval}}
+\index{Interval@{Interval}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}}
+\subsubsection{\texorpdfstring{Interval}{Interval}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782}{Interval}} my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication.\+Interval\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Das Zeitintervall in der diese Medikation eingenommen werden soll. Das Intervall und die Häufigkeit zusammen ergeben dann eine tatsächliche Häufigkeit in der die Medikation eingenommen werden soll (z.\+B. 3 mal pro Tag). 
+
+
+
+Die Dokumentation fÃ¼r diese Schnittstelle wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model\+Interface/\+Data\+Model\+Interface/\mbox{\hyperlink{_i_medication_8cs}{I\+Medication.\+cs}}\end{DoxyCompactItemize}

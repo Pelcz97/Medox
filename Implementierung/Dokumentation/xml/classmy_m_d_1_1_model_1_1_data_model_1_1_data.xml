@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_model_1_1_data_model_1_1_data" kind="class" language="C#" prot="public">
+    <compoundname>myMD::Model::DataModel::Data</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity" prot="public" virt="non-virtual">myMD.Model.DataModel.Entity</basecompoundref>
+    <basecompoundref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity" prot="public" virt="non-virtual">myMD.ModelInterface.DataModelInterface.IEntity</basecompoundref>
+    <basecompoundref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data" prot="public" virt="non-virtual">myMD.ModelInterface.DataModelInterface.IData</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComparable&lt; Data &gt;</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IEquatable&lt; Data &gt;</basecompoundref>
+    <derivedcompoundref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter" prot="public" virt="non-virtual">myMD.Model.DataModel.DoctorsLetter</derivedcompoundref>
+    <derivedcompoundref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group" prot="public" virt="non-virtual">myMD.Model.DataModel.DoctorsLetterGroup</derivedcompoundref>
+    <derivedcompoundref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication" prot="public" virt="non-virtual">myMD.Model.DataModel.Medication</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a5a21826433266e6cf63ef2ffbac2383c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>virtual DateTime myMD.Model.DataModel.Data.Date</definition>
+        <argsstring></argsstring>
+        <name>Date</name>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_1a9d008b7dcd815aa50c08de56f5cbb902" kindref="member">myMD.ModelInterface.DataModelInterface.IData::Date</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Data.cs" line="19" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Data.cs" bodystart="19" bodyend="19"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a14a3510dbebdbb2e3cb3b37071fc9c2e" compoundref="_data_8cs" startline="28" endline="31">myMD.Model.DataModel.Data.CompareTo</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a8d82ac369678f7098eda396bb8d615e1" compoundref="_data_8cs" startline="38" endline="43">myMD.Model.DataModel.Data.Equals</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1ac34e47038aebd438d8e85639aa1b3fbe" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a3d0df45e579e37eccbab219eb94860da" kindref="member">Sensitivity</ref></type>
+        <definition>Sensitivity myMD.Model.DataModel.Data.Sensitivity</definition>
+        <argsstring></argsstring>
+        <name>Sensitivity</name>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_1a8ff35b1b7aeffdb14c900e6c807b1e4e" kindref="member">myMD.ModelInterface.DataModelInterface.IData::Sensitivity</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Data.cs" line="22" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Data.cs" bodystart="22" bodyend="22"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a8d82ac369678f7098eda396bb8d615e1" compoundref="_data_8cs" startline="38" endline="43">myMD.Model.DataModel.Data.Equals</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a14a3510dbebdbb2e3cb3b37071fc9c2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int myMD.Model.DataModel.Data.CompareTo</definition>
+        <argsstring>(Data other)</argsstring>
+        <name>CompareTo</name>
+        <param>
+          <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data" kindref="compound">Data</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Daten werden basierend auf ihrem Datum verglichen. </para>        </briefdescription>
+        <detaileddescription>
+<para>System.IComparable::CompareTo()</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Data.cs" line="28" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Data.cs" bodystart="28" bodyend="31"/>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a5a21826433266e6cf63ef2ffbac2383c" compoundref="_data_8cs" startline="19" endline="19">myMD.Model.DataModel.Data.Date</references>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1a3f0e6a7254b875a556f618b4ca0ccf13" compoundref="_doctors_letter_group_8cs" startline="72" endline="90">myMD.Model.DataModel.DoctorsLetterGroup.Add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a8d82ac369678f7098eda396bb8d615e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool myMD.Model.DataModel.Data.Equals</definition>
+        <argsstring>(Data other)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data" kindref="compound">Data</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Zwei Daten sind genau dann gleich, wenn sie als Entitäten gleich sind, ihre Sensitivitätsstufe übereinstimmt und ihr Datum gleich ist. </para>        </briefdescription>
+        <detaileddescription>
+<para>System.IEquatable&lt;T&gt;::Equals(T)</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Data.cs" line="38" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Data.cs" bodystart="38" bodyend="43"/>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1ac34e47038aebd438d8e85639aa1b3fbe" compoundref="_data_8cs" startline="22" endline="22">myMD.Model.DataModel.Data.Sensitivity</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a5a21826433266e6cf63ef2ffbac2383c" compoundref="_data_8cs" startline="19" endline="19">myMD.Model.DataModel.Data.Date</references>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a878089e14b27cb78f0e3d83d7c1151f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool myMD.Model.DataModel.Data.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>System.Object::Equals(System.Object)</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Data.cs" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1ab1a32ffb44374a5740fb1b464edffdc7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int myMD.Model.DataModel.Data.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+<para>System.Object::GetHashCode()</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Data.cs" line="49" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Data.cs" bodystart="49" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Diese Klasse implementiert die IData Schnittstelle und erweitert die abstrakte Enitity Klasse, um Information über medizinische Daten in einer SQLite-Datenbank speichern zu können. Dabei ist diese Klasse nur ein Strukturelement, dass von anderen Klassen erweitert werden sollte, um medizinische Daten in einer SQLite-Datenbank speichern zu können und daher abstrakt. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data" kindref="compound">myMD.ModelInterface.DataModelInterface.IData</ref></para><para>myMD.Model.DataModelInterface.Entity</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="26">
+        <label>IData</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>IEquatable&lt; Entity &gt;</label>
+      </node>
+      <node id="28">
+        <label>IEquatable&lt; Data &gt;</label>
+      </node>
+      <node id="29">
+        <label>myMD.Model.DataModel.DoctorsLetter</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>myMD.Model.DataModel.DoctorsLetterGroup</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Entity</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+      <node id="22">
+        <label>myMD.Model.DataModel.Data</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>IComparable&lt; Data &gt;</label>
+      </node>
+      <node id="31">
+        <label>myMD.Model.DataModel.Medication</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="36">
+        <label>IData</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
+        <childnode refid="34" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>IEquatable&lt; Entity &gt;</label>
+      </node>
+      <node id="38">
+        <label>IEquatable&lt; Data &gt;</label>
+      </node>
+      <node id="33">
+        <label>Entity</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
+        <childnode refid="34" relation="public-inheritance">
+        </childnode>
+        <childnode refid="35" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+      <node id="32">
+        <label>myMD.Model.DataModel.Data</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+        <childnode refid="34" relation="public-inheritance">
+        </childnode>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+        <childnode refid="38" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>IComparable&lt; Data &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Data.cs" line="17" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Data.cs" bodystart="16" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a14a3510dbebdbb2e3cb3b37071fc9c2e" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Data</scope><name>CompareTo</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a5a21826433266e6cf63ef2ffbac2383c" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Data</scope><name>Date</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1afe40113ddeb60fd81f4bbcc6d0e696b6" prot="public" virt="virtual"><scope>myMD::Model::DataModel::Data</scope><name>Delete</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a8d82ac369678f7098eda396bb8d615e1" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Data</scope><name>Equals</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a878089e14b27cb78f0e3d83d7c1151f1" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Data</scope><name>Equals</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1abe00d7d8a12deadbb57953f0cc57346c" prot="public" virt="non-virtual" ambiguityscope="myMD::Model::DataModel::Entity."><scope>myMD::Model::DataModel::Data</scope><name>Equals</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1ab1a32ffb44374a5740fb1b464edffdc7" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Data</scope><name>GetHashCode</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1ac2f81922151a57358d5d8f12dbab6d89" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Data</scope><name>ID</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a752f68aa01561c06c77bc2d3324a46e7" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Data</scope><name>Name</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a3df9a6eed5a26b09bbf075615db46b9c" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Data</scope><name>Profile</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a54eef4f2993b1ed6467ee8a7d4b1a4b7" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Data</scope><name>ProfileID</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1ac34e47038aebd438d8e85639aa1b3fbe" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Data</scope><name>Sensitivity</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1ab69c6b862e29567f6c103ac5520c863a" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Data</scope><name>ToEntity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

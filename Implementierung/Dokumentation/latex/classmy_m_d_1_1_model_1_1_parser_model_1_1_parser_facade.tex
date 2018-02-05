@@ -1,0 +1,80 @@
+\hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade}{}\section{my\+M\+D.\+Model.\+Parser\+Model.\+Parser\+Facade Klassenreferenz}
+\label{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade}\index{my\+M\+D.\+Model.\+Parser\+Model.\+Parser\+Facade@{my\+M\+D.\+Model.\+Parser\+Model.\+Parser\+Facade}}
+
+
+Implementierung der \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade}{I\+Parser\+Facade}} Schnittstelle. W‰hlt beim Methodenaufruf einen passenden Parser aus diesem Paket auf und delegiert an diesen.  
+
+
+
+
+Klassendiagramm f√ºr my\+M\+D.\+Model.\+Parser\+Model.\+Parser\+Facade\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Zusammengeh√∂rigkeiten von my\+M\+D.\+Model.\+Parser\+Model.\+Parser\+Facade\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{√ñffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_a52bf8be888d38b6433f60edc1e4b1fff}{Parse\+File\+To\+Database}} (string filename, \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}{I\+Entity\+Database}} db)
+\begin{DoxyCompactList}\small\item\em W‰hlt einen \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser}{File\+To\+Database\+Parser}} basierend auf dem Dateiformat von filename und delegiert an diesen. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_a21538d294bf09fe09e84faa7363d280c}{Parse\+Letter\+To\+Original\+File}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}} letter)
+\begin{DoxyCompactList}\small\item\em Delegiert an \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser}{Letter\+To\+Original\+File\+Parser}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Ausf√ºhrliche Beschreibung}
+Implementierung der \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade}{I\+Parser\+Facade}} Schnittstelle. W‰hlt beim Methodenaufruf einen passenden Parser aus diesem Paket auf und delegiert an diesen. 
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade}{my\+M\+D.\+Model.\+Parser\+Model.\+I\+Parser\+Facade}}
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_a52bf8be888d38b6433f60edc1e4b1fff}\label{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_a52bf8be888d38b6433f60edc1e4b1fff}} 
+\index{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Parser\+Facade@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Parser\+Facade}!Parse\+File\+To\+Database@{Parse\+File\+To\+Database}}
+\index{Parse\+File\+To\+Database@{Parse\+File\+To\+Database}!my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Parser\+Facade@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Parser\+Facade}}
+\subsubsection{\texorpdfstring{Parse\+File\+To\+Database()}{ParseFileToDatabase()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model.\+Parser\+Model.\+Parser\+Facade.\+Parse\+File\+To\+Database (\begin{DoxyParamCaption}\item[{string}]{filename,  }\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}{I\+Entity\+Database}}}]{db }\end{DoxyParamCaption})}
+
+
+
+W‰hlt einen \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser}{File\+To\+Database\+Parser}} basierend auf dem Dateiformat von filename und delegiert an diesen. 
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_a0371197714d5ec08d9ad332ac62265db}{my\+M\+D.\+Model.\+Parser\+Model.\+I\+Parser\+Facade\+::\+Parse\+File\+To\+Database}}(string, \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}{Model.\+Database\+Model.\+I\+Entity\+Database}})
+
+Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_a0371197714d5ec08d9ad332ac62265db}{my\+M\+D.\+Model.\+Parser\+Model.\+I\+Parser\+Facade}}.
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_a21538d294bf09fe09e84faa7363d280c}\label{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_a21538d294bf09fe09e84faa7363d280c}} 
+\index{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Parser\+Facade@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Parser\+Facade}!Parse\+Letter\+To\+Original\+File@{Parse\+Letter\+To\+Original\+File}}
+\index{Parse\+Letter\+To\+Original\+File@{Parse\+Letter\+To\+Original\+File}!my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Parser\+Facade@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Parser\+Facade}}
+\subsubsection{\texorpdfstring{Parse\+Letter\+To\+Original\+File()}{ParseLetterToOriginalFile()}}
+{\footnotesize\ttfamily string my\+M\+D.\+Model.\+Parser\+Model.\+Parser\+Facade.\+Parse\+Letter\+To\+Original\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}}}]{letter }\end{DoxyParamCaption})}
+
+
+
+Delegiert an \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser}{Letter\+To\+Original\+File\+Parser}}. 
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_a24348ea7e27f5d9cde94925fe1967ca3}{my\+M\+D.\+Model.\+Parser\+Model.\+I\+Parser\+Facade\+::\+Parse\+Letter\+To\+Original\+File}}(Model.\+Data\+Model\+Interface.\+I\+Doctors\+Letter)
+
+Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_a24348ea7e27f5d9cde94925fe1967ca3}{my\+M\+D.\+Model.\+Parser\+Model.\+I\+Parser\+Facade}}.
+
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_a21538d294bf09fe09e84faa7363d280c_cgraph}
+\end{center}
+\end{figure}
+
+
+Die Dokumentation f√ºr diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Parser\+Model/\mbox{\hyperlink{_parser_facade_8cs}{Parser\+Facade.\+cs}}\end{DoxyCompactItemize}

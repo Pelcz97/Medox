@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_extensions" kind="class" language="C#" prot="public">
+    <compoundname>myMD::Model::ParserModel::FileFormatExtensions</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_extensions_1aa92e36d890cead3acd1063a79711f739" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser" kindref="compound">FileToDatabaseParser</ref></type>
+        <definition>static FileToDatabaseParser myMD.Model.ParserModel.FileFormatExtensions.GetFileToDatabaseParser</definition>
+        <argsstring>(this FileFormat format)</argsstring>
+        <name>GetFileToDatabaseParser</name>
+        <param>
+          <type>this <ref refid="namespacemy_m_d_1_1_model_1_1_parser_model_1acd0bce598035ba27bbeaa1725eb5c7d9" kindref="member">FileFormat</ref></type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Wählt einen <ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser" kindref="compound">FileToDatabaseParser</ref> basierend auf dem gegebene Dateiformat </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Das Dateiformat auf dem die Methode aufgerufen wird</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Den <ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser" kindref="compound">FileToDatabaseParser</ref> für dieses Dateiformat oder null falls kein solcher Parser existiert</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileFormatExtensions.cs" line="14" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileFormatExtensions.cs" bodystart="14" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Diese Klasse enthält Methoden, die als Erweiterungen auf Werten des FileFormat enums aufgerufen werden können. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="namespacemy_m_d_1_1_model_1_1_parser_model_1acd0bce598035ba27bbeaa1725eb5c7d9" kindref="member">myMD.Model.ParserModel.FileFormat</ref></para>    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileFormatExtensions.cs" line="8" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileFormatExtensions.cs" bodystart="7" bodyend="24"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_extensions_1aa92e36d890cead3acd1063a79711f739" prot="public" virt="non-virtual"><scope>myMD::Model::ParserModel::FileFormatExtensions</scope><name>GetFileToDatabaseParser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

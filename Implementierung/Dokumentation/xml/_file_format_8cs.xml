@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_file_format_8cs" kind="file" language="C#">
+    <compoundname>FileFormat.cs</compoundname>
+    <innernamespace refid="namespacemy_m_d_1_1_model_1_1_parser_model">myMD::Model::ParserModel</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacemy_m_d_1_1_model_1_1_parser_model" refkind="compound"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemy_m_d" kindref="compound">myMD</ref>.Model.ParserModel</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6" refid="namespacemy_m_d_1_1_model_1_1_parser_model_1acd0bce598035ba27bbeaa1725eb5c7d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespacemy_m_d_1_1_model_1_1_parser_model_1acd0bce598035ba27bbeaa1725eb5c7d9" kindref="member">FileFormat</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemy_m_d_1_1_model_1_1_parser_model_1acd0bce598035ba27bbeaa1725eb5c7d9aa7c9c99692df8ba20833fe46c0a22ba2" kindref="member">hl7</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileFormat.cs"/>
+  </compounddef>
+</doxygen>

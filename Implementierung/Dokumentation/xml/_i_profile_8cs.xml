@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_i_profile_8cs" kind="file" language="C#">
+    <compoundname>IProfile.cs</compoundname>
+    <innerclass refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" prot="public">myMD::ModelInterface::DataModelInterface::IProfile</innerclass>
+    <innernamespace refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface">myMD::ModelInterface::DataModelInterface</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacemy_m_d" kindref="compound">myMD</ref>.<ref refid="namespacemy_m_d_1_1_model" kindref="compound">Model</ref>.<ref refid="namespacemy_m_d_1_1_model_1_1_data_model" kindref="compound">DataModel</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemy_m_d" kindref="compound">myMD</ref>.ModelInterface.DataModelInterface</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref><sp/>:<sp/><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity" kindref="compound">IEntity</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15" refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a79b0d5f4850c5fa0aabca016ffccf34c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DateTime<sp/>BirthDate<sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a9438f9d491f0caa5dabc7fec4abdeeb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17c" kindref="member">BloodType</ref><sp/><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17c" kindref="member">BloodType</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a2561117d433086f373455cedc9ede7f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>InsuranceNumber<sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a9647258e141ac7cc6a628eb901886d78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>LastName<sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile" kindref="compound">Profile</ref><sp/>ToProfile();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IProfile.cs"/>
+  </compounddef>
+</doxygen>

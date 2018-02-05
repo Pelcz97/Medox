@@ -1,0 +1,249 @@
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade}{}\section{my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade Schnittstellenreferenz}
+\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade}\index{my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade@{my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade}}
+
+
+Dies ist die Haupteinstiegsstelle für andere Subsysteme in das \mbox{\hyperlink{namespacemy_m_d_1_1_model}{Model}}. Als Ein-\/ und Ausgabeparameter werden die restlichen Schnittstellen aus \mbox{\hyperlink{namespacemy_m_d_1_1_model_interface}{Model\+Interface}} verwendet. Alle komplexeren Operationen, die nicht schon von diesen Schnittstellen übernommen werden, sind hier enthalten.  
+
+
+
+
+Klassendiagramm fÃ¼r my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Ã–ffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a0dd627e2af597fb44b8c8b6820834938}{Activate}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}} profile)
+\begin{DoxyCompactList}\small\item\em Aktiviert das gegebene Profil. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{I\+Doctors\+Letter\+Group}} \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ae4b53eee1d4ef8aa929b21761db164f6}{Create\+Empty\+Group}} ()
+\begin{DoxyCompactList}\small\item\em Legt eine neue Arztbriefgruppe an, die noch keine Arztbriefe enthält und gibt diese zurück. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}} \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a2b58006403e6d1fdc0b8764e6d908f48}{Create\+Empty\+Medication}} ()
+\begin{DoxyCompactList}\small\item\em Legt eine neue Medikation an, die noch keine Informationen enthält und gibt diese zurück. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}} \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a1a7a58c40cd157ebbf36809da4f03deb}{Create\+Empty\+Profile}} ()
+\begin{DoxyCompactList}\small\item\em Legt ein neues Profil an, das noch keine Informationen und Daten enthält und gibt dieses zurück. Wechselt außerdem das aktive Profil zu diesem Profil. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a4a1500102cde56c6cfd27002f11c71b8}{Delete}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Löscht die gegebene Entität. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}} \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_aeac1c3e24d92639576aba45cf48329db}{Get\+Active\+Profile}} ()
+\begin{DoxyCompactList}\small\item\em Gibt das aktive Profile zurück. \end{DoxyCompactList}\item 
+I\+List$<$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}} $>$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a1d1426bea42bcc857cc7f8075c1af9d1}{Get\+All\+Doctors\+Letters}} ()
+\begin{DoxyCompactList}\small\item\em Fordert alle Arztbriefe des aktiven Profils an und gibt diese zurück. \end{DoxyCompactList}\item 
+I\+List$<$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{I\+Doctors\+Letter\+Group}} $>$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a3c0555857b11400df12c8be746223eab}{Get\+All\+Groups}} ()
+\begin{DoxyCompactList}\small\item\em Fordert alle Arztbriefgruppen des aktiven Profils an und gibt diese zurück. \end{DoxyCompactList}\item 
+I\+List$<$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}} $>$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ac7cc1ff2f542e09632a8d6bdb2bca17d}{Get\+All\+Medications}} ()
+\begin{DoxyCompactList}\small\item\em Fordert alle Medikationen des aktiven Profils an und gibt diese zurück. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a13e12d0dc6ab4ddf5036a8492ba85e40}{Send\+Letter}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}} letter)
+\begin{DoxyCompactList}\small\item\em Bereitet den gewünschten Arztbrief für die Datenübertragung vor und veranlasst diese anschließend. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ad3fe364e44e55623a6e4a3a8920da8dd}{Update}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Aktualisiert die gegebene Entität. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{AusfÃ¼hrliche Beschreibung}
+Dies ist die Haupteinstiegsstelle für andere Subsysteme in das \mbox{\hyperlink{namespacemy_m_d_1_1_model}{Model}}. Als Ein-\/ und Ausgabeparameter werden die restlichen Schnittstellen aus \mbox{\hyperlink{namespacemy_m_d_1_1_model_interface}{Model\+Interface}} verwendet. Alle komplexeren Operationen, die nicht schon von diesen Schnittstellen übernommen werden, sind hier enthalten. 
+
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a0dd627e2af597fb44b8c8b6820834938}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a0dd627e2af597fb44b8c8b6820834938}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Activate@{Activate}}
+\index{Activate@{Activate}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Activate()}{Activate()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Activate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}}}]{profile }\end{DoxyParamCaption})}
+
+
+
+Aktiviert das gegebene Profil. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em entity} & Das zu aktivierende Profil\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_aa391999b0bfdc15cedfc8a6ad2921f19}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ae4b53eee1d4ef8aa929b21761db164f6}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ae4b53eee1d4ef8aa929b21761db164f6}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Create\+Empty\+Group@{Create\+Empty\+Group}}
+\index{Create\+Empty\+Group@{Create\+Empty\+Group}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Create\+Empty\+Group()}{CreateEmptyGroup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{I\+Doctors\+Letter\+Group}} my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Create\+Empty\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Legt eine neue Arztbriefgruppe an, die noch keine Arztbriefe enthält und gibt diese zurück. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Die neu erstellte, leere Arztbriefgruppe
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_ad7c7e2889846cf195ccdd4e61a804116}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a2b58006403e6d1fdc0b8764e6d908f48}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a2b58006403e6d1fdc0b8764e6d908f48}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Create\+Empty\+Medication@{Create\+Empty\+Medication}}
+\index{Create\+Empty\+Medication@{Create\+Empty\+Medication}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Create\+Empty\+Medication()}{CreateEmptyMedication()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}} my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Create\+Empty\+Medication (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Legt eine neue Medikation an, die noch keine Informationen enthält und gibt diese zurück. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Die neu erstellte, leere Medikation
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_a5394beb3ee9308666dd7e16c00c943d7}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a1a7a58c40cd157ebbf36809da4f03deb}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a1a7a58c40cd157ebbf36809da4f03deb}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Create\+Empty\+Profile@{Create\+Empty\+Profile}}
+\index{Create\+Empty\+Profile@{Create\+Empty\+Profile}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Create\+Empty\+Profile()}{CreateEmptyProfile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}} my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Create\+Empty\+Profile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Legt ein neues Profil an, das noch keine Informationen und Daten enthält und gibt dieses zurück. Wechselt außerdem das aktive Profil zu diesem Profil. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Das neu erstellte Profil
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_ac41f7ff0d2279e786a2477f91df72e4a}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a4a1500102cde56c6cfd27002f11c71b8}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a4a1500102cde56c6cfd27002f11c71b8}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Delete@{Delete}}
+\index{Delete@{Delete}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}}}]{entity }\end{DoxyParamCaption})}
+
+
+
+Löscht die gegebene Entität. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em entity} & Die zu löschende Entität\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_abd05927988a648a743e1e5c2ddbcfcb0}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_aeac1c3e24d92639576aba45cf48329db}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_aeac1c3e24d92639576aba45cf48329db}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Get\+Active\+Profile@{Get\+Active\+Profile}}
+\index{Get\+Active\+Profile@{Get\+Active\+Profile}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Get\+Active\+Profile()}{GetActiveProfile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}} my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Get\+Active\+Profile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gibt das aktive Profile zurück. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Das zurzeit aktive Profil
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_a64393dc4a9ee9291d08a066e301b8e5e}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a1d1426bea42bcc857cc7f8075c1af9d1}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a1d1426bea42bcc857cc7f8075c1af9d1}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Get\+All\+Doctors\+Letters@{Get\+All\+Doctors\+Letters}}
+\index{Get\+All\+Doctors\+Letters@{Get\+All\+Doctors\+Letters}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Get\+All\+Doctors\+Letters()}{GetAllDoctorsLetters()}}
+{\footnotesize\ttfamily I\+List$<$\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}}$>$ my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Get\+All\+Doctors\+Letters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fordert alle Arztbriefe des aktiven Profils an und gibt diese zurück. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Liste aller Arztbriefe des aktiven Profils
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_a09beb7d7b91b7f39f2e3c4e4a1c68eee}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a3c0555857b11400df12c8be746223eab}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a3c0555857b11400df12c8be746223eab}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Get\+All\+Groups@{Get\+All\+Groups}}
+\index{Get\+All\+Groups@{Get\+All\+Groups}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Get\+All\+Groups()}{GetAllGroups()}}
+{\footnotesize\ttfamily I\+List$<$\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{I\+Doctors\+Letter\+Group}}$>$ my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Get\+All\+Groups (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fordert alle Arztbriefgruppen des aktiven Profils an und gibt diese zurück. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Liste aller Arztbriefgruppen des aktiven Profils
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_ab56e35aaf429925902258902c84ec70f}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ac7cc1ff2f542e09632a8d6bdb2bca17d}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ac7cc1ff2f542e09632a8d6bdb2bca17d}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Get\+All\+Medications@{Get\+All\+Medications}}
+\index{Get\+All\+Medications@{Get\+All\+Medications}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Get\+All\+Medications()}{GetAllMedications()}}
+{\footnotesize\ttfamily I\+List$<$\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}}$>$ my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Get\+All\+Medications (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fordert alle Medikationen des aktiven Profils an und gibt diese zurück. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Liste aller Medikationen des aktiven Profils
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_aef10eb7295b8eee4b938e5639f54b78d}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a13e12d0dc6ab4ddf5036a8492ba85e40}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a13e12d0dc6ab4ddf5036a8492ba85e40}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Send\+Letter@{Send\+Letter}}
+\index{Send\+Letter@{Send\+Letter}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Send\+Letter()}{SendLetter()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Send\+Letter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}}}]{letter }\end{DoxyParamCaption})}
+
+
+
+Bereitet den gewünschten Arztbrief für die Datenübertragung vor und veranlasst diese anschließend. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em letter} & Der zu sendende Arztbrief\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_a89d84c76209109caac581c4d80ebc8e4}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ad3fe364e44e55623a6e4a3a8920da8dd}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ad3fe364e44e55623a6e4a3a8920da8dd}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Update@{Update}}
+\index{Update@{Update}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}}}]{entity }\end{DoxyParamCaption})}
+
+
+
+Aktualisiert die gegebene Entität. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em entity} & Die zu aktualisierende Entität\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_a25149455d25ce5c187c1f8f50c9735ba}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
+
+
+
+Die Dokumentation fÃ¼r diese Schnittstelle wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model\+Interface/\+Model\+Facade\+Interface/\mbox{\hyperlink{_i_model_facade_8cs}{I\+Model\+Facade.\+cs}}\end{DoxyCompactItemize}

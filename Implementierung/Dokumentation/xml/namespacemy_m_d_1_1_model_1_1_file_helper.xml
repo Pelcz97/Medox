@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacemy_m_d_1_1_model_1_1_file_helper" kind="namespace" language="C#">
+    <compoundname>myMD::Model::FileHelper</compoundname>
+    <innerclass refid="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper" prot="public">myMD::Model::FileHelper::IFileHelper</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper/IFileHelper.cs" line="2" column="1"/>
+  </compounddef>
+</doxygen>

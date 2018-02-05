@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade" kind="interface" language="C#" prot="public">
+    <compoundname>myMD::Model::ParserModel::IParserFacade</compoundname>
+    <derivedcompoundref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade" prot="public" virt="non-virtual">myMD.Model.ParserModel.ParserFacade</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_1a0371197714d5ec08d9ad332ac62265db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.ParserModel.IParserFacade.ParseFileToDatabase</definition>
+        <argsstring>(string filename, IEntityDatabase db)</argsstring>
+        <name>ParseFileToDatabase</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_1a52bf8be888d38b6433f60edc1e4b1fff">ParseFileToDatabase</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database" kindref="compound">IEntityDatabase</ref></type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+<para>Parse die Informationen in der gegebenen Datei in die gegebene Datenbank. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die zu parsende Datei</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>db</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die Datenbank in die die geparsten Informationen eingetragen werden sollen</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>System.NotSupportedException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Werfe, wenn das Dateiformat der gegebenen Datei nicht unterstützt wird</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/IParserFacade.cs" line="18" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_1a24348ea7e27f5d9cde94925fe1967ca3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string myMD.Model.ParserModel.IParserFacade.ParseLetterToOriginalFile</definition>
+        <argsstring>(IDoctorsLetter letter)</argsstring>
+        <name>ParseLetterToOriginalFile</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_1a21538d294bf09fe09e84faa7363d280c">ParseLetterToOriginalFile</reimplementedby>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref></type>
+          <declname>letter</declname>
+        </param>
+        <briefdescription>
+<para>Parse den gegebenen Arztbrief in sein ursprüngliches Dateiformat </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>letter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Der zu parsende Arztbrief</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pfad zur geparsten Datei</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/IParserFacade.cs" line="25" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Diese Schnittstelle ist die Haupteinstiegsstelle für andere Pakete in das <ref refid="namespacemy_m_d_1_1_model_1_1_parser_model" kindref="compound">ParserModel</ref> Paket. Hier können Informationen aus Dateien in eine Datenbank eingetragen werden oder Dateien aus Informationen aus der Datenbank erstellt werden. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="240">
+        <label>myMD.Model.ParserModel.IParserFacade</label>
+        <link refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade"/>
+      </node>
+      <node id="241">
+        <label>myMD.Model.ParserModel.ParserFacade</label>
+        <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade"/>
+        <childnode refid="240" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/IParserFacade.cs" line="11" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/IParserFacade.cs" bodystart="10" bodyend="26"/>
+    <listofallmembers>
+      <member refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_1a0371197714d5ec08d9ad332ac62265db" prot="public" virt="non-virtual"><scope>myMD::Model::ParserModel::IParserFacade</scope><name>ParseFileToDatabase</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_1a24348ea7e27f5d9cde94925fe1967ca3" prot="public" virt="non-virtual"><scope>myMD::Model::ParserModel::IParserFacade</scope><name>ParseLetterToOriginalFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

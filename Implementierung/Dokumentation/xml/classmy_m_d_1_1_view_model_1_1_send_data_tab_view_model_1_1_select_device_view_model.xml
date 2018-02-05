@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model" kind="class" language="C#" prot="public">
+    <compoundname>myMD::ViewModel::SendDataTabViewModel::SelectDeviceViewModel</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model" prot="public" virt="non-virtual">myMD.ViewModel.OverallViewModel.OverallViewModel</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a2c0271b0ca7d8b38d3297d023fcbb74d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>ObservableCollection&lt; <ref refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model" kindref="compound">ScanResultViewModel</ref> &gt;</type>
+        <definition>ObservableCollection&lt;ScanResultViewModel&gt; myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel.DeviceList</definition>
+        <argsstring></argsstring>
+        <name>DeviceList</name>
+        <briefdescription>
+<para>Liste an Geräten die in der Umgebung gefunden wurden </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" line="24" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a6ec857b28f362381f5808378e4f6fb1a" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel.isScanning</definition>
+        <argsstring></argsstring>
+        <name>isScanning</name>
+        <briefdescription>
+<para>Boolean, ob das Gerät des Nutzers gerade die Umbegung nach Geräten durchsucht </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" line="28" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a863852899d8408a5decf7f9e724163f9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>IDisposable</type>
+        <definition>IDisposable myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel.scan</definition>
+        <argsstring></argsstring>
+        <name>scan</name>
+        <briefdescription>
+<para>Ergebniss des Scans </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" line="33" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a4cc73a2d15f2489105da96da595750b0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>ICommand</type>
+        <definition>ICommand myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel.ScanForDevices_Clicked</definition>
+        <argsstring></argsstring>
+        <name>ScanForDevices_Clicked</name>
+        <briefdescription>
+<para>ICommand um das Antippen des Scan-Buttons zu handeln </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" line="38" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" bodystart="38" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a39d908572f42325912210144d3614d66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel.SelectDeviceViewModel</definition>
+        <argsstring>()</argsstring>
+        <name>SelectDeviceViewModel</name>
+        <briefdescription>
+<para>Konstruktor für ein <ref refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model" kindref="compound">SelectDeviceViewModel</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" line="43" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1aa20931acf9e9c3580019a5025d2f1abb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel.StartScan</definition>
+        <argsstring>()</argsstring>
+        <name>StartScan</name>
+        <briefdescription>
+<para>Methode um einen Scan zu starten. Dazu wird erst überprüft, ob gerade gescannt wird. Ist dies der Fall wird der aktive Scan abgebrochen. Dann wird geprüft ob Bluetooth für das Gerät verfügbar ist. Danach wird der Scan gestartet und die gefundenen Geräte in die Liste T:myMD.ViewModel.SendDataTabViewModel.SelectDeviceLetterViewModel.DeviceList gespeichert. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" line="54" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" bodystart="54" bodyend="85"/>
+        <references refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a46290df9ba85d55980f02b4569ac8649" compoundref="_scan_result_view_model_8cs" startline="16" endline="16">myMD.ViewModel.SendDataTabViewModel.ScanResultViewModel.Device</references>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1adfca7bb7ef30bb64e2247bcdff75f654" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel.StopScan</definition>
+        <argsstring>()</argsstring>
+        <name>StopScan</name>
+        <briefdescription>
+<para>Methode um einen Scan zu stoppen. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" line="90" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" bodystart="90" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a04c544486f732bddac2d5feded4193a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel.ConnectToDevice</definition>
+        <argsstring>(object item)</argsstring>
+        <name>ConnectToDevice</name>
+        <param>
+          <type>object</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Methode um sich mit einem anderen Gerät zu verbinden </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" line="103" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" bodystart="103" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Diese Klasse übernimmt die Auswahl des Gerätes an das die Arztbriefe gesendet werden sollen. Dazu wird die Umgebung nach Geräten gescannt, die dann in T:myMD.ViewModel.SendDataTabViewModel.ScanResultLetterViewModel modeliert werden. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="393">
+        <label>myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model"/>
+        <childnode refid="394" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="395">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="394">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="395" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="396">
+        <label>myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model"/>
+        <childnode refid="397" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="398">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="397">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="398" relation="public-inheritance">
+        </childnode>
+        <childnode refid="399" relation="usage">
+          <edgelabel>ModelFacade</edgelabel>
+        </childnode>
+      </node>
+      <node id="399">
+        <label>myMD.ModelInterface.ModelFacadeInterface.IModelFacade</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" line="18" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" bodystart="17" bodyend="112"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1acff4179c3cbf2cd35046729e99cd6921" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SelectDeviceViewModel</scope><name>BleAdapter</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a04c544486f732bddac2d5feded4193a1" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SelectDeviceViewModel</scope><name>ConnectToDevice</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a2c0271b0ca7d8b38d3297d023fcbb74d" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SelectDeviceViewModel</scope><name>DeviceList</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a6ec857b28f362381f5808378e4f6fb1a" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SelectDeviceViewModel</scope><name>isScanning</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1ab1b0e7b2ed9ae07614caa1e45b942e3f" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SelectDeviceViewModel</scope><name>ModelFacade</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a0333c153387ba2d38fb31eeb0419bfcf" prot="public" virt="virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SelectDeviceViewModel</scope><name>OnPropertyChanged</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SelectDeviceViewModel</scope><name>OverallViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1918d3d8d384486e278426327b16256f" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SelectDeviceViewModel</scope><name>PropertyChanged</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a863852899d8408a5decf7f9e724163f9" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SelectDeviceViewModel</scope><name>scan</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a4cc73a2d15f2489105da96da595750b0" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SelectDeviceViewModel</scope><name>ScanForDevices_Clicked</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a39d908572f42325912210144d3614d66" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SelectDeviceViewModel</scope><name>SelectDeviceViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1aa20931acf9e9c3580019a5025d2f1abb" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SelectDeviceViewModel</scope><name>StartScan</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1adfca7bb7ef30bb64e2247bcdff75f654" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SelectDeviceViewModel</scope><name>StopScan</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

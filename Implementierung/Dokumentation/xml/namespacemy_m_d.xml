@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacemy_m_d" kind="namespace" language="C#">
+    <compoundname>myMD</compoundname>
+    <innerclass refid="classmy_m_d_1_1_app" prot="public">myMD::App</innerclass>
+    <innerclass refid="classmy_m_d_1_1my_m_d_page" prot="public">myMD::myMDPage</innerclass>
+    <innernamespace refid="namespacemy_m_d_1_1_model">myMD::Model</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_model_interface">myMD::ModelInterface</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_view">myMD::View</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_view_model">myMD::ViewModel</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/App.xaml.cs" line="16" column="1"/>
+  </compounddef>
+</doxygen>

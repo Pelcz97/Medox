@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kind="interface" language="C#" prot="public">
+    <compoundname>myMD::ModelInterface::DataModelInterface::IProfile</compoundname>
+    <basecompoundref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity" prot="public" virt="non-virtual">myMD.ModelInterface.DataModelInterface.IEntity</basecompoundref>
+    <derivedcompoundref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile" prot="public" virt="non-virtual">myMD.Model.DataModel.Profile</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a79b0d5f4850c5fa0aabca016ffccf34c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime myMD.ModelInterface.DataModelInterface.IProfile.BirthDate</definition>
+        <argsstring></argsstring>
+        <name>BirthDate</name>
+        <briefdescription>
+<para>Das Geburtsdatum dieses Profils. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IProfile.cs" line="15" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IProfile.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a9438f9d491f0caa5dabc7fec4abdeeb5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17c" kindref="member">BloodType</ref></type>
+        <definition>BloodType myMD.ModelInterface.DataModelInterface.IProfile.BloodType</definition>
+        <argsstring></argsstring>
+        <name>BloodType</name>
+        <briefdescription>
+<para>Die Blutgruppe dieses Profils. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IProfile.cs" line="20" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IProfile.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a2561117d433086f373455cedc9ede7f5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.ModelInterface.DataModelInterface.IProfile.InsuranceNumber</definition>
+        <argsstring></argsstring>
+        <name>InsuranceNumber</name>
+        <briefdescription>
+<para>Die Versicherungsnummer dieses Profils. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IProfile.cs" line="25" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IProfile.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a9647258e141ac7cc6a628eb901886d78" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.ModelInterface.DataModelInterface.IProfile.LastName</definition>
+        <argsstring></argsstring>
+        <name>LastName</name>
+        <briefdescription>
+<para>Der Nachname dieses Profils. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IProfile.cs" line="30" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IProfile.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1aa525d1f3b15f7a82011022dbc8edbdd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile" kindref="compound">Profile</ref></type>
+        <definition>Profile myMD.ModelInterface.DataModelInterface.IProfile.ToProfile</definition>
+        <argsstring>()</argsstring>
+        <name>ToProfile</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1adb822d7b8eea929c85a90414a92951af">ToProfile</reimplementedby>
+        <briefdescription>
+<para>Konvertiert die Schnittstelle zu ihrer Implementierung </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Konkretes Profil</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IProfile.cs" line="36" column="1"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" compoundref="_file_to_database_parser_8cs" startline="21" endline="50">myMD.Model.ParserModel.FileToDatabaseParser.ParseFile</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Schnittstelle für die Abstraktion eines Nutzerprofils, die die <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity" kindref="compound">IEntity</ref> Schnittstelle erweitert. Ein Nutzerprofils enthält diverse Informationen über einen Nutzer. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="245">
+        <label>myMD.Model.DataModel.Profile</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile"/>
+        <childnode refid="243" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="244">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+      <node id="243">
+        <label>myMD.ModelInterface.DataModelInterface.IProfile</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile"/>
+        <childnode refid="244" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="247">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+      <node id="246">
+        <label>myMD.ModelInterface.DataModelInterface.IProfile</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile"/>
+        <childnode refid="247" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IProfile.cs" line="11" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IProfile.cs" bodystart="10" bodyend="37"/>
+    <listofallmembers>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a79b0d5f4850c5fa0aabca016ffccf34c" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IProfile</scope><name>BirthDate</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a9438f9d491f0caa5dabc7fec4abdeeb5" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IProfile</scope><name>BloodType</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a2561117d433086f373455cedc9ede7f5" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IProfile</scope><name>InsuranceNumber</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a9647258e141ac7cc6a628eb901886d78" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IProfile</scope><name>LastName</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_1a8160d8399f68f5db325a517c3114f7ae" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IProfile</scope><name>Name</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_1acc62ca98aadef285f342145264d23570" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IProfile</scope><name>ToEntity</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1aa525d1f3b15f7a82011022dbc8edbdd1" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IProfile</scope><name>ToProfile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

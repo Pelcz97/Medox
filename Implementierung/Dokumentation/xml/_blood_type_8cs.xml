@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_blood_type_8cs" kind="file" language="C#">
+    <compoundname>BloodType.cs</compoundname>
+    <innernamespace refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface">myMD::ModelInterface::DataModelInterface</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface" refkind="compound"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemy_m_d" kindref="compound">myMD</ref>.ModelInterface.DataModelInterface</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6" refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17c" kindref="member">BloodType</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17cafbf9dc822b8fc0fca4bcf70e2e97fae0" kindref="member">OMinus</ref>,</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17ca06f98828c062784619450978d55c3437" kindref="member">OPlus</ref>,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17ca54e7c3fa223fc38b8a7213e15bac19b6" kindref="member">AMinus</ref>,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17ca3efac03d9f5efd2a83319a8c58cd609d" kindref="member">APlus</ref>,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17ca0bacc15b42c55899a73dbb54e76cc97c" kindref="member">BMinus</ref>,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17ca2cb89e01e9aab2ef6c1488f5313876e6" kindref="member">BPlus</ref>,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17ca9fe817395879cfa501e579e018bdddff" kindref="member">ABMinus</ref>,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17cae3b9e7de2e7a6f6d12dbf540c3263ac9" kindref="member">ABPlus</ref>,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17cace2c8aed9c2fa0cfbed56cbda4d8bf07" kindref="member">Empty</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/BloodType.cs"/>
+  </compounddef>
+</doxygen>

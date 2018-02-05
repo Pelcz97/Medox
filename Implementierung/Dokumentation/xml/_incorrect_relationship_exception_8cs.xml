@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_incorrect_relationship_exception_8cs" kind="file" language="C#">
+    <compoundname>IncorrectRelationshipException.cs</compoundname>
+    <innerclass refid="class_s_q_lite_net_extensions_1_1_exceptions_1_1_incorrect_relationship_exception" prot="public">SQLiteNetExtensions::Exceptions::IncorrectRelationshipException</innerclass>
+    <innernamespace refid="namespace_s_q_lite_net_extensions_1_1_exceptions">SQLiteNetExtensions::Exceptions</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="namespace_s_q_lite_net_extensions_1_1_exceptions" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_s_q_lite_net_extensions" kindref="compound">SQLiteNetExtensions</ref>.Exceptions</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5" refid="class_s_q_lite_net_extensions_1_1_exceptions_1_1_incorrect_relationship_exception" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_q_lite_net_extensions_1_1_exceptions_1_1_incorrect_relationship_exception" kindref="compound">IncorrectRelationshipException</ref><sp/>:<sp/>Exception</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7" refid="class_s_q_lite_net_extensions_1_1_exceptions_1_1_incorrect_relationship_exception_1a697bc292eb9b3b10833aaa65dea6b66d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>PropertyName<sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="8" refid="class_s_q_lite_net_extensions_1_1_exceptions_1_1_incorrect_relationship_exception_1ae6b9142924bef5a986b740d7be71fdd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>TypeName<sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_s_q_lite_net_extensions_1_1_exceptions_1_1_incorrect_relationship_exception_1a5e93907be4ced4003bdc411c576646c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_s_q_lite_net_extensions_1_1_exceptions_1_1_incorrect_relationship_exception_1a5e93907be4ced4003bdc411c576646c6" kindref="member">IncorrectRelationshipException</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>typeName,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>propertyName,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>message)<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>base(string.Format(</highlight><highlight class="stringliteral">&quot;{0}.{1}:<sp/>{2}&quot;</highlight><highlight class="normal">,<sp/>typeName,<sp/>propertyName,<sp/>message))</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Exceptions/IncorrectRelationshipException.cs"/>
+  </compounddef>
+</doxygen>

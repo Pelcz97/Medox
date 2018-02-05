@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_edit_page" kind="class" language="C#" prot="public">
+    <compoundname>myMD::View::ProfileTabPages::ProfileEditPage</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page" prot="public" virt="non-virtual">myMD.View.AbstractPages.CustomContentPage</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_edit_page_1a76a0d333a83b3e2fb0690c895556c017" prot="private" static="no" mutable="no">
+        <type><ref refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_edit_view_model" kindref="compound">ProfileEditViewModel</ref></type>
+        <definition>ProfileEditViewModel myMD.View.ProfileTabPages.ProfileEditPage.vm</definition>
+        <argsstring></argsstring>
+        <name>vm</name>
+        <briefdescription>
+<para>Das <ref refid="namespacemy_m_d_1_1_view_model" kindref="compound">ViewModel</ref>, zu welchem gebinded werden soll. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/ProfileTabPages/ProfileEditPage.xaml.cs" line="17" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/ProfileTabPages/ProfileEditPage.xaml.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_edit_page_1a57cda13445f900fc10f7f1fcac4eac86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.View.ProfileTabPages.ProfileEditPage.ProfileEditPage</definition>
+        <argsstring>()</argsstring>
+        <name>ProfileEditPage</name>
+        <briefdescription>
+<para>Initializes a new instance of the T:myMD.View.ProfileTabPages.ProfileEditPage class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/ProfileTabPages/ProfileEditPage.xaml.cs" line="22" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/ProfileTabPages/ProfileEditPage.xaml.cs" bodystart="22" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_edit_page_1a510fff04e8ec8d5c23be2efa17093d50" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async void</type>
+        <definition>async void myMD.View.ProfileTabPages.ProfileEditPage.CancelButton_Clicked</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>CancelButton_Clicked</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Methode, wenn der Abbrechen-Button geklickt wird. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>E.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/ProfileTabPages/ProfileEditPage.xaml.cs" line="34" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/ProfileTabPages/ProfileEditPage.xaml.cs" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_edit_page_1a88c685c879497d9cfa5f72cf63fc1954" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async void</type>
+        <definition>async void myMD.View.ProfileTabPages.ProfileEditPage.SaveChangedProfileButton_Clicked</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SaveChangedProfileButton_Clicked</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Methode, wenn der Speichern-Button geklickt wurde. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>E.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/ProfileTabPages/ProfileEditPage.xaml.cs" line="44" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/ProfileTabPages/ProfileEditPage.xaml.cs" bodystart="44" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Profile edit page. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="346">
+        <label>myMD.View.ProfileTabPages.ProfileEditPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_edit_page"/>
+        <childnode refid="347" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="347">
+        <label>CustomContentPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
+        <childnode refid="348" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="348">
+        <label>ContentPage</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="349">
+        <label>myMD.View.ProfileTabPages.ProfileEditPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_edit_page"/>
+        <childnode refid="350" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="350">
+        <label>CustomContentPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
+        <childnode refid="351" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="351">
+        <label>ContentPage</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/ProfileTabPages/ProfileEditPage.xaml.cs" line="13" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/ProfileTabPages/ProfileEditPage.xaml.cs" bodystart="12" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_edit_page_1a510fff04e8ec8d5c23be2efa17093d50" prot="private" virt="non-virtual"><scope>myMD::View::ProfileTabPages::ProfileEditPage</scope><name>CancelButton_Clicked</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page_1a3cb9c69e49e16c30e2e5377790702769" prot="public" virt="non-virtual"><scope>myMD::View::ProfileTabPages::ProfileEditPage</scope><name>CustomContentPage</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_edit_page_1a57cda13445f900fc10f7f1fcac4eac86" prot="public" virt="non-virtual"><scope>myMD::View::ProfileTabPages::ProfileEditPage</scope><name>ProfileEditPage</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_edit_page_1a88c685c879497d9cfa5f72cf63fc1954" prot="private" virt="non-virtual"><scope>myMD::View::ProfileTabPages::ProfileEditPage</scope><name>SaveChangedProfileButton_Clicked</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_edit_page_1a76a0d333a83b3e2fb0690c895556c017" prot="private" virt="non-virtual"><scope>myMD::View::ProfileTabPages::ProfileEditPage</scope><name>vm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

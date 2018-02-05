@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model" kind="class" language="C#" prot="public">
+    <compoundname>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model" prot="public" virt="non-virtual">myMD.ViewModel.OverallViewModel.OverallViewModel</basecompoundref>
+    <derivedcompoundref refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model" prot="public" virt="non-virtual">myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a5705289ccdd374aceb0c0b88bbdcdaef" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kindref="compound">IMedication</ref></type>
+        <definition>IMedication myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.Medication</definition>
+        <argsstring></argsstring>
+        <name>Medication</name>
+        <briefdescription>
+<para>Die zum <ref refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model" kindref="compound">MedicineViewModel</ref> gehörende Medikation </para>        </briefdescription>
+        <detaileddescription>
+<para>The medication.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="20" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="20" bodyend="20"/>
+        <referencedby refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model_1a769d397e08d7ea770c0e24123624d287" compoundref="_detailed_medicine_view_model_8cs" startline="34" endline="42">myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel.DetailedMedicineViewModel</referencedby>
+        <referencedby refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a420091b8fd48e45dddd1d25ca9cc7672" compoundref="_medication_view_model_8cs" startline="101" endline="120">myMD.ViewModel.MedicationTabViewModel.MedicationViewModel.DeleteListItemMethod</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a9ada30bb9027a311c3934cef06431310" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.SavingPossible</definition>
+        <argsstring></argsstring>
+        <name>SavingPossible</name>
+        <briefdescription>
+<para>Boolean, ob der Speichern-Button sichtbar ist oder nicht T:myMD.ViewModel.MedicationTabViewModel.MedicineViewModel saving possible. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>true</computeroutput> if saving possible; otherwise, <computeroutput>false</computeroutput>.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="27" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1ae2bbbd81c983dbab025a3ed6a858c535" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.CancelPossible</definition>
+        <argsstring></argsstring>
+        <name>CancelPossible</name>
+        <briefdescription>
+<para>Boolean, ob der Abbrechen-Button sichtbar ist oder nicht T:myMD.ViewModel.MedicationTabViewModel.MedicineViewModel cancel possible. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>true</computeroutput> if cancel possible; otherwise, <computeroutput>false</computeroutput>.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="34" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a6d05471333a112926288d1c19073e52a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.MedicationName</definition>
+        <argsstring></argsstring>
+        <name>MedicationName</name>
+        <briefdescription>
+<para>Die Bezeichnung einer Medikation. Ist der zu setzende Name 0 Zeichen lang, wird der Speichern-Button deaktiviert. </para>        </briefdescription>
+        <detaileddescription>
+<para>The name of the medication.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="41" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="41" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a8c2bd69c170ca5aaaf6491824dc5fd16" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.MedicationStartDate</definition>
+        <argsstring></argsstring>
+        <name>MedicationStartDate</name>
+        <briefdescription>
+<para>Der Einnahmebeginn. Wird der Einnahmebeginn gesetzt, wird zugleich das minimale Einnahmeende auf denselben Wert gesetzt, um Überschneidungen zu vermeiden. Zudem wird die Einnahmedauer neu berechnet. </para>        </briefdescription>
+        <detaileddescription>
+<para>The medication start date.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="56" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="57" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1aeb953c1be24162e984238210872d23f3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.MedicationEndDate</definition>
+        <argsstring></argsstring>
+        <name>MedicationEndDate</name>
+        <briefdescription>
+<para>Das Einnahmeende. Wird das Einnahmeende gesetzt, wird zugleich der maximale Einnahmebeginn auf denselben Wert gesetzt, um Überschneidungen zu vermeiden. Zudem wird die Einnahmedauer neu berechnet. </para>        </briefdescription>
+        <detaileddescription>
+<para>The medication end date.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="73" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="73" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a45ae8e7eacf145d650cd97602a93018b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.MaxStartDate</definition>
+        <argsstring></argsstring>
+        <name>MaxStartDate</name>
+        <briefdescription>
+<para>Das maximale Startdatum. </para>        </briefdescription>
+        <detaileddescription>
+<para>The max start date.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="87" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1aee4be6017890f4b46f9adf50f0327322" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.MinEndDate</definition>
+        <argsstring></argsstring>
+        <name>MinEndDate</name>
+        <briefdescription>
+<para>Das minimale Enddatum. </para>        </briefdescription>
+        <detaileddescription>
+<para>The minimum end date.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="93" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1ac8ae23533e41015c959f994b4195ef7f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.MedicationDuration</definition>
+        <argsstring></argsstring>
+        <name>MedicationDuration</name>
+        <briefdescription>
+<para>Die Dauer einer Einnahme. </para>        </briefdescription>
+        <detaileddescription>
+<para>The duration of the medication.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="99" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a82fd4edb65b7e0afffe027f29217ac80" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1ad48afcd64f57a7b985ed525a6c054782" kindref="member">Interval</ref></type>
+        <definition>Interval myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.MedicationInterval</definition>
+        <argsstring></argsstring>
+        <name>MedicationInterval</name>
+        <briefdescription>
+<para>Gets or sets the medication interval. </para>        </briefdescription>
+        <detaileddescription>
+<para>The medication interval.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="105" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1ae6da5aa4432c4c03b46d10b86b78511e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.MedicationFrequency</definition>
+        <argsstring></argsstring>
+        <name>MedicationFrequency</name>
+        <briefdescription>
+<para>Die Häufigkeit einer Einnahme (täglich). </para>        </briefdescription>
+        <detaileddescription>
+<para>The medication frequency.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="111" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="111" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a01719d12c8718f0b11666205215f53fd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.MedicationDosis</definition>
+        <argsstring></argsstring>
+        <name>MedicationDosis</name>
+        <briefdescription>
+<para>Die Dosis einer Medikation (Dosierung/Einnahmemenge). </para>        </briefdescription>
+        <detaileddescription>
+<para>The medication dosis.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="120" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a93c6d3fe1297957deadbd1dc0d29475a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.NameSort</definition>
+        <argsstring></argsstring>
+        <name>NameSort</name>
+        <briefdescription>
+<para>Methode zum Gruppieren der Listeneinträge in <ref refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model" kindref="compound">MedicationViewModel</ref>. Wird zZ nicht eingesetzt, könnte aber noch hilfreich sein. </para>        </briefdescription>
+        <detaileddescription>
+<para>The name sort.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="151" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="152" bodyend="157"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1ae443badf863a9a10f8db6065c7c2268f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.MedicineViewModel</definition>
+        <argsstring>(IMedication medication)</argsstring>
+        <name>MedicineViewModel</name>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kindref="compound">IMedication</ref></type>
+          <declname>medication</declname>
+        </param>
+        <briefdescription>
+<para>Erzeugt ein <ref refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model" kindref="compound">MedicineViewModel</ref> anhand einer übergebenen Medikation. Berechnet zusätzlich die Einnahmedauer </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>medication</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Medication.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="131" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="131" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a31722e22ef4ffb25f9fc2f9629408ed4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.MedicineViewModel</definition>
+        <argsstring>()</argsstring>
+        <name>MedicineViewModel</name>
+        <briefdescription>
+<para>Initializes a new instance of the T:myMD.ViewModel.MedicationTabViewModel.MedicineViewModel class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="140" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="140" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a52aaba100457ccebc86aa394afe9b222" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.calcDuration</definition>
+        <argsstring>()</argsstring>
+        <name>calcDuration</name>
+        <briefdescription>
+<para>Methode zur Berechnung einer Einnahmedauer. Addiert den Wert 1, da eine Medikation, die am selben Tag begonnen und beendet wird, nicht 0 sondern 1 Tag lang eingenommen wurde. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="164" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="164" bodyend="167"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Das <ref refid="namespacemy_m_d_1_1_view_model" kindref="compound">ViewModel</ref> einer Medikation. Erleichtert das Binding zum <ref refid="namespacemy_m_d_1_1_view" kindref="compound">View</ref> durch das Bereitstellen der Properties </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="286">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="287">
+        <label>myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model"/>
+        <childnode refid="284" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="285">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="286" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="284">
+        <label>myMD.ViewModel.MedicationTabViewModel.MedicineViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model"/>
+        <childnode refid="285" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="290">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="289">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="290" relation="public-inheritance">
+        </childnode>
+        <childnode refid="291" relation="usage">
+          <edgelabel>ModelFacade</edgelabel>
+        </childnode>
+      </node>
+      <node id="288">
+        <label>myMD.ViewModel.MedicationTabViewModel.MedicineViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model"/>
+        <childnode refid="289" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="291">
+        <label>myMD.ModelInterface.ModelFacadeInterface.IModelFacade</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="15" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="14" bodyend="169"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1acff4179c3cbf2cd35046729e99cd6921" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>BleAdapter</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a52aaba100457ccebc86aa394afe9b222" prot="private" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>calcDuration</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1ae2bbbd81c983dbab025a3ed6a858c535" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>CancelPossible</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a45ae8e7eacf145d650cd97602a93018b" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>MaxStartDate</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a5705289ccdd374aceb0c0b88bbdcdaef" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>Medication</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a01719d12c8718f0b11666205215f53fd" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>MedicationDosis</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1ac8ae23533e41015c959f994b4195ef7f" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>MedicationDuration</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1aeb953c1be24162e984238210872d23f3" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>MedicationEndDate</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1ae6da5aa4432c4c03b46d10b86b78511e" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>MedicationFrequency</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a82fd4edb65b7e0afffe027f29217ac80" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>MedicationInterval</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a6d05471333a112926288d1c19073e52a" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>MedicationName</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a8c2bd69c170ca5aaaf6491824dc5fd16" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>MedicationStartDate</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1ae443badf863a9a10f8db6065c7c2268f" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>MedicineViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a31722e22ef4ffb25f9fc2f9629408ed4" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>MedicineViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1aee4be6017890f4b46f9adf50f0327322" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>MinEndDate</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1ab1b0e7b2ed9ae07614caa1e45b942e3f" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>ModelFacade</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a93c6d3fe1297957deadbd1dc0d29475a" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>NameSort</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a0333c153387ba2d38fb31eeb0419bfcf" prot="public" virt="virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>OnPropertyChanged</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>OverallViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1918d3d8d384486e278426327b16256f" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>PropertyChanged</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a9ada30bb9027a311c3934cef06431310" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>SavingPossible</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

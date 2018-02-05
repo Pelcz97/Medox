@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_i_data_8cs" kind="file" language="C#">
+    <compoundname>IData.cs</compoundname>
+    <innerclass refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data" prot="public">myMD::ModelInterface::DataModelInterface::IData</innerclass>
+    <innernamespace refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface">myMD::ModelInterface::DataModelInterface</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemy_m_d" kindref="compound">myMD</ref>.ModelInterface.DataModelInterface</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9" refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data" kindref="compound">IData</ref><sp/>:<sp/><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity" kindref="compound">IEntity</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_1a9d008b7dcd815aa50c08de56f5cbb902" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DateTime<sp/>Date<sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_1a8ff35b1b7aeffdb14c900e6c807b1e4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a3d0df45e579e37eccbab219eb94860da" kindref="member">Sensitivity</ref><sp/><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a3d0df45e579e37eccbab219eb94860da" kindref="member">Sensitivity</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IData.cs"/>
+  </compounddef>
+</doxygen>

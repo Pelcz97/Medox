@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication" kind="class" language="C#" prot="public">
+    <compoundname>myMD::Model::DataModel::Medication</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data" prot="public" virt="non-virtual">myMD.Model.DataModel.Data</basecompoundref>
+    <basecompoundref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" prot="public" virt="non-virtual">myMD.ModelInterface.DataModelInterface.IMedication</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IEquatable&lt; Medication &gt;</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a736cee7fdcbd4875eba554c5ab4a55ab" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter" kindref="compound">DoctorsLetter</ref></type>
+        <definition>DoctorsLetter myMD.Model.DataModel.Medication.DatabaseDoctorsLetter</definition>
+        <argsstring></argsstring>
+        <name>DatabaseDoctorsLetter</name>
+        <briefdescription>
+<para>Der Arztbrief, in dem diese Medikation verschrieben wurde und dem sie eindeutig zugeordnet werden kann. In einem Arztbrief können dabei mehrere Medikationen verschrieben werden. Wird automatisch beim Lesen aus der Datenbank gesetzt. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="23" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1ab30c68d629f7b1a3b4932dd24cc9c48d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.Model.DataModel.Medication.Dosis</definition>
+        <argsstring></argsstring>
+        <name>Dosis</name>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_1ac13cded8aa32f248fe33096a9616c55a" kindref="member">myMD.ModelInterface.DataModelInterface.IMedication::Dosis</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="29" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a9a2460bb39f05b9639c985f1c739afb2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime myMD.Model.DataModel.Medication.EndDate</definition>
+        <argsstring></argsstring>
+        <name>EndDate</name>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_1a73507174d400e964152fe103dae819f1" kindref="member">myMD.ModelInterface.DataModelInterface.IMedication::EndDate</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="32" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" bodystart="32" bodyend="32"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1ae4a8da4ac46dc47f3f8536258e4b4050" compoundref="_medication_8cs" startline="91" endline="97">myMD.Model.DataModel.Medication.Equals</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1afbb5e9dab6c6378917610e956481487a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int myMD.Model.DataModel.Medication.Frequency</definition>
+        <argsstring></argsstring>
+        <name>Frequency</name>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_1a4d622115240e1d401656c00fbe28519f" kindref="member">myMD.ModelInterface.DataModelInterface.IMedication::Frequency</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="35" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" bodystart="35" bodyend="35"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1ae4a8da4ac46dc47f3f8536258e4b4050" compoundref="_medication_8cs" startline="91" endline="97">myMD.Model.DataModel.Medication.Equals</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a1617cc5ad35dd8fdd0049ae2bad2cf62" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1ad48afcd64f57a7b985ed525a6c054782" kindref="member">Interval</ref></type>
+        <definition>Interval myMD.Model.DataModel.Medication.Interval</definition>
+        <argsstring></argsstring>
+        <name>Interval</name>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_1ad4dddb593f60e85655f9bc97f7432611" kindref="member">myMD.ModelInterface.DataModelInterface.IMedication::Interval</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="38" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" bodystart="38" bodyend="38"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1ae4a8da4ac46dc47f3f8536258e4b4050" compoundref="_medication_8cs" startline="91" endline="97">myMD.Model.DataModel.Medication.Equals</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1ad912f439eb0ba72cff231ecfc0adbcba" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int myMD.Model.DataModel.Medication.LetterId</definition>
+        <argsstring></argsstring>
+        <name>LetterId</name>
+        <briefdescription>
+<para>Fremdschlüssel zum Arztbrief dieser Medikation für die Datenbank. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="44" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" bodystart="44" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a99c8d7c6ba4bfb117a93f769c7365fe5" prot="public" static="no" mutable="no">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref></type>
+        <definition>IDoctorsLetter myMD.Model.DataModel.Medication.DoctorsLetter</definition>
+        <argsstring></argsstring>
+        <name>DoctorsLetter</name>
+        <initializer>=&gt; <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a736cee7fdcbd4875eba554c5ab4a55ab" kindref="member">DatabaseDoctorsLetter</ref></initializer>
+        <briefdescription>
+<para>myMD.ModelInterface.DataModelInterface.IMedication::DoctorsLetter()</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="26" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a73a40a343461ada165cb7901789cd101" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.DataModel.Medication.AttachToLetter</definition>
+        <argsstring>(DoctorsLetter letter)</argsstring>
+        <name>AttachToLetter</name>
+        <param>
+          <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter" kindref="compound">DoctorsLetter</ref></type>
+          <declname>letter</declname>
+        </param>
+        <briefdescription>
+<para>Überladung für konkrete Arztbriefe. </para>        </briefdescription>
+        <detaileddescription>
+<para>myMD.Model.DataModel.DoctorsLetter::AttachToLetter(<ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">ModelInterface.DataModelInterface.IDoctorsLetter</ref>)</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="50" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" bodystart="50" bodyend="57"/>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1ac99038390540105ef11fdcfe51c75ee8" compoundref="_doctors_letter_8cs" startline="120" endline="127">myMD.Model.DataModel.DoctorsLetter.AttachMedication</references>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1ac99038390540105ef11fdcfe51c75ee8" compoundref="_doctors_letter_8cs" startline="120" endline="127">myMD.Model.DataModel.DoctorsLetter.AttachMedication</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a8b2802c0448d4791f9aa748b0ddedcca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.DataModel.Medication.AttachToLetter</definition>
+        <argsstring>(IDoctorsLetter letter)</argsstring>
+        <name>AttachToLetter</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_1a865fa8881e6857b4229afe7e74098d6f">AttachToLetter</reimplements>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref></type>
+          <declname>letter</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_1a865fa8881e6857b4229afe7e74098d6f" kindref="member">myMD.ModelInterface.DataModelInterface.IMedication::AttachToLetter</ref>(Model.DataModelInterface.IDoctorsLetter)</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1ae4d571a758daafad57458858d461e6c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void myMD.Model.DataModel.Medication.Delete</definition>
+        <argsstring>()</argsstring>
+        <name>Delete</name>
+        <reimplements refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1afe40113ddeb60fd81f4bbcc6d0e696b6">Delete</reimplements>
+        <briefdescription>
+<para>Löst alle der Klasse bekannten Assoziatonen auf. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1afe40113ddeb60fd81f4bbcc6d0e696b6" kindref="member">myMD.Model.DataModel.Entity::Delete()</ref></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="66" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a1dc10571e4ab064b616e069feab798e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.DataModel.Medication.DisattachFromLetter</definition>
+        <argsstring>(DoctorsLetter letter)</argsstring>
+        <name>DisattachFromLetter</name>
+        <param>
+          <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter" kindref="compound">DoctorsLetter</ref></type>
+          <declname>letter</declname>
+        </param>
+        <briefdescription>
+<para>Überladung für konkrete Arztbriefe. </para>        </briefdescription>
+        <detaileddescription>
+<para>myMD.Model.DataModel.DoctorsLetter::DisattachFromLetter(<ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">ModelInterface.DataModelInterface.IDoctorsLetter</ref>)</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="75" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" bodystart="75" bodyend="82"/>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1af09111c1b74969bafa37a88321b2fdd0" compoundref="_doctors_letter_8cs" startline="153" endline="160">myMD.Model.DataModel.DoctorsLetter.DisattachMedication</references>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1af09111c1b74969bafa37a88321b2fdd0" compoundref="_doctors_letter_8cs" startline="153" endline="160">myMD.Model.DataModel.DoctorsLetter.DisattachMedication</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1abc72524ce8f43e2c1e79ac82ed4efc2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.DataModel.Medication.DisattachFromLetter</definition>
+        <argsstring>(IDoctorsLetter letter)</argsstring>
+        <name>DisattachFromLetter</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_1a0d31b79a6477198e771452b555f9713d">DisattachFromLetter</reimplements>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref></type>
+          <declname>letter</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_1a0d31b79a6477198e771452b555f9713d" kindref="member">myMD.ModelInterface.DataModelInterface.IMedication::DisattachFromLetter</ref>(Model.DataModelInterface.IDoctorsLetter)</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1ae4a8da4ac46dc47f3f8536258e4b4050" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool myMD.Model.DataModel.Medication.Equals</definition>
+        <argsstring>(Medication other)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication" kindref="compound">Medication</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Zwei Medikation sind genau dann gleich, wenn sie als Daten gleich sind und ihr Enddatum, Interval und ihre Frequenz gleich sind. </para>        </briefdescription>
+        <detaileddescription>
+<para>System.IEquatable&lt;T&gt;::Equals(T)</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="91" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" bodystart="91" bodyend="97"/>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1afbb5e9dab6c6378917610e956481487a" compoundref="_medication_8cs" startline="35" endline="35">myMD.Model.DataModel.Medication.Frequency</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a1617cc5ad35dd8fdd0049ae2bad2cf62" compoundref="_medication_8cs" startline="38" endline="38">myMD.Model.DataModel.Medication.Interval</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a9a2460bb39f05b9639c985f1c739afb2" compoundref="_medication_8cs" startline="32" endline="32">myMD.Model.DataModel.Medication.EndDate</references>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a4592050911006d5aa0de7c6a23a2252a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool myMD.Model.DataModel.Medication.Equals</definition>
+        <argsstring>(Object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>Object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>System.Object::Equals(System.Object)</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a31090149820e095275296b3fd5aa023c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int myMD.Model.DataModel.Medication.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+<para>System.Object::GetHashCode()</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="103" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" bodystart="103" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a63558cd2285f8716335212a3abcac800" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication" kindref="compound">Medication</ref></type>
+        <definition>Medication myMD.Model.DataModel.Medication.ToMedication</definition>
+        <argsstring>()</argsstring>
+        <name>ToMedication</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_1af7b54c8ad197d61f4c19c505983df6ac">ToMedication</reimplements>
+        <briefdescription>
+<para>Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_1af7b54c8ad197d61f4c19c505983df6ac" kindref="member">myMD.ModelInterface.DataModelInterface.IMedication::ToMedication()</ref></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="116" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Diese Klasse implementiert die IMedication Schnittstelle und erweitert die abstrakte <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data" kindref="compound">Data</ref> Klasse, um Medikationen in einer SQLite-Datenbank speichern zu können. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">myMD.ModelInterface.DataModelInterface.IDoctorsLetter</ref></para><para>myMD.Model.DataModelInterface.Data</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="255">
+        <label>IData</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
+        <childnode refid="253" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="254">
+        <label>IEquatable&lt; Entity &gt;</label>
+      </node>
+      <node id="257">
+        <label>IEquatable&lt; Data &gt;</label>
+      </node>
+      <node id="258">
+        <label>IMedication</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication"/>
+        <childnode refid="255" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="252">
+        <label>Entity</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
+        <childnode refid="253" relation="public-inheritance">
+        </childnode>
+        <childnode refid="254" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="251">
+        <label>Data</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
+        <childnode refid="252" relation="public-inheritance">
+        </childnode>
+        <childnode refid="253" relation="public-inheritance">
+        </childnode>
+        <childnode refid="255" relation="public-inheritance">
+        </childnode>
+        <childnode refid="256" relation="public-inheritance">
+        </childnode>
+        <childnode refid="257" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="253">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+      <node id="256">
+        <label>IComparable&lt; Data &gt;</label>
+      </node>
+      <node id="259">
+        <label>IEquatable&lt; Medication &gt;</label>
+      </node>
+      <node id="250">
+        <label>myMD.Model.DataModel.Medication</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication"/>
+        <childnode refid="251" relation="public-inheritance">
+        </childnode>
+        <childnode refid="258" relation="public-inheritance">
+        </childnode>
+        <childnode refid="259" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="265">
+        <label>IData</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
+        <childnode refid="263" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="264">
+        <label>IEquatable&lt; Entity &gt;</label>
+      </node>
+      <node id="267">
+        <label>IEquatable&lt; Data &gt;</label>
+      </node>
+      <node id="268">
+        <label>IMedication</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication"/>
+        <childnode refid="265" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="270">
+        <label>myMD.ModelInterface.DataModelInterface.IDoctorsLetter</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter"/>
+        <childnode refid="265" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="262">
+        <label>Entity</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
+        <childnode refid="263" relation="public-inheritance">
+        </childnode>
+        <childnode refid="264" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="261">
+        <label>Data</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
+        <childnode refid="262" relation="public-inheritance">
+        </childnode>
+        <childnode refid="263" relation="public-inheritance">
+        </childnode>
+        <childnode refid="265" relation="public-inheritance">
+        </childnode>
+        <childnode refid="266" relation="public-inheritance">
+        </childnode>
+        <childnode refid="267" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="263">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+      <node id="266">
+        <label>IComparable&lt; Data &gt;</label>
+      </node>
+      <node id="269">
+        <label>IEquatable&lt; Medication &gt;</label>
+      </node>
+      <node id="260">
+        <label>myMD.Model.DataModel.Medication</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication"/>
+        <childnode refid="261" relation="public-inheritance">
+        </childnode>
+        <childnode refid="268" relation="public-inheritance">
+        </childnode>
+        <childnode refid="269" relation="public-inheritance">
+        </childnode>
+        <childnode refid="270" relation="usage">
+          <edgelabel>DoctorsLetter</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" bodystart="15" bodyend="117"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a73a40a343461ada165cb7901789cd101" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>AttachToLetter</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a8b2802c0448d4791f9aa748b0ddedcca" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>AttachToLetter</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a14a3510dbebdbb2e3cb3b37071fc9c2e" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>CompareTo</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a736cee7fdcbd4875eba554c5ab4a55ab" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>DatabaseDoctorsLetter</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a5a21826433266e6cf63ef2ffbac2383c" prot="public" virt="non-virtual" ambiguityscope="myMD::Model::DataModel::Data."><scope>myMD::Model::DataModel::Medication</scope><name>Date</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_1af7601032a7c83c189809efe368352689" prot="public" virt="non-virtual" ambiguityscope="myMD::ModelInterface::DataModelInterface::IMedication."><scope>myMD::Model::DataModel::Medication</scope><name>Date</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1ae4d571a758daafad57458858d461e6c9" prot="public" virt="virtual"><scope>myMD::Model::DataModel::Medication</scope><name>Delete</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a1dc10571e4ab064b616e069feab798e1" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>DisattachFromLetter</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1abc72524ce8f43e2c1e79ac82ed4efc2d" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>DisattachFromLetter</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a99c8d7c6ba4bfb117a93f769c7365fe5" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>DoctorsLetter</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1ab30c68d629f7b1a3b4932dd24cc9c48d" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>Dosis</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a9a2460bb39f05b9639c985f1c739afb2" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>EndDate</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1ae4a8da4ac46dc47f3f8536258e4b4050" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>Equals</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a4592050911006d5aa0de7c6a23a2252a" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>Equals</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a8d82ac369678f7098eda396bb8d615e1" prot="public" virt="non-virtual" ambiguityscope="myMD::Model::DataModel::Data."><scope>myMD::Model::DataModel::Medication</scope><name>Equals</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a878089e14b27cb78f0e3d83d7c1151f1" prot="public" virt="non-virtual" ambiguityscope="myMD::Model::DataModel::Data."><scope>myMD::Model::DataModel::Medication</scope><name>Equals</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1abe00d7d8a12deadbb57953f0cc57346c" prot="public" virt="non-virtual" ambiguityscope="myMD::Model::DataModel::Entity."><scope>myMD::Model::DataModel::Medication</scope><name>Equals</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1afbb5e9dab6c6378917610e956481487a" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>Frequency</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a31090149820e095275296b3fd5aa023c" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>GetHashCode</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1ac2f81922151a57358d5d8f12dbab6d89" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>ID</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a1617cc5ad35dd8fdd0049ae2bad2cf62" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>Interval</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1ad912f439eb0ba72cff231ecfc0adbcba" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>LetterId</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a752f68aa01561c06c77bc2d3324a46e7" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>Name</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a3df9a6eed5a26b09bbf075615db46b9c" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>Profile</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a54eef4f2993b1ed6467ee8a7d4b1a4b7" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>ProfileID</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1ac34e47038aebd438d8e85639aa1b3fbe" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>Sensitivity</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1ab69c6b862e29567f6c103ac5520c863a" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>ToEntity</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a63558cd2285f8716335212a3abcac800" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Medication</scope><name>ToMedication</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

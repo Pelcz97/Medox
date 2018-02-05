@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacemy_m_d_1_1_view_model_1_1_overall_view_model" kind="namespace" language="C#">
+    <compoundname>myMD::ViewModel::OverallViewModel</compoundname>
+    <innerclass refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model" prot="public">myMD::ViewModel::OverallViewModel::OverallViewModel</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" line="9" column="1"/>
+  </compounddef>
+</doxygen>
