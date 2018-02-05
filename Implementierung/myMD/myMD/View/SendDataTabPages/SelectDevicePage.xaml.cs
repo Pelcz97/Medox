@@ -6,6 +6,9 @@ using Xamarin.Forms.Internals;
 
 namespace myMD.View.SendDataTabPages
 {
+    /// <summary>
+    /// Code-Behind Klasse zur SelectDevicePage
+    /// </summary>
     [Preserve(AllMembers = true)]
     public partial class SelectDevicePage : CustomContentPage
     {
@@ -27,8 +30,8 @@ namespace myMD.View.SendDataTabPages
         /// <summary>
         /// Methode, wenn der Abbrechen-Button geklickt wird.
         /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
+        /// <param name="sender">Sender der diese Methode aufruft</param>
+        /// <param name="e">Event des Senders</param>
         async void CancelSelectDevice_Clicked(object sender, EventArgs e)
         {
             vm.StopScan();
@@ -38,8 +41,8 @@ namespace myMD.View.SendDataTabPages
         /// <summary>
         /// Methode, wenn ein Gerät aus der Liste ausgewählt wird.
         /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
+        /// <param name="sender">Sender der diese Methode aufruft</param>
+        /// <param name="e">Event des Senders</param>
         void DeviceItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             vm.ConnectToDevice(e.SelectedItem);

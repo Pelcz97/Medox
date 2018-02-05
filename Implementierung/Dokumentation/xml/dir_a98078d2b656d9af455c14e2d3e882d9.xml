@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_a98078d2b656d9af455c14e2d3e882d9" kind="dir">
+    <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface</compoundname>
+    <innerdir refid="dir_1fa1482ed01b82fdb2f0bf1688db8db3">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface</innerdir>
+    <innerdir refid="dir_10d7d2710a67ed68a891310a373e9ebf">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface</innerdir>
+    <innerdir refid="dir_44d6842eda1a4f5da2dc84ff691814a2">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/TransmissionModelInterface</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/"/>
+  </compounddef>
+</doxygen>

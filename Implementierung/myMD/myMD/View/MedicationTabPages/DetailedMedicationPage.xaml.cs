@@ -11,7 +11,7 @@ using Xamarin.Forms.Internals;
 namespace myMD.View.MedicationTabPages
 {
     /// <summary>
-    /// DetailedMedication Ansicht.
+    /// Code-Behind Klasse zur DetailedMedicationPage
     /// </summary>
     [Preserve(AllMembers = true)]
     public partial class DetailedMedicationPage : CustomContentPage
@@ -35,7 +35,7 @@ namespace myMD.View.MedicationTabPages
         /// <summary>
         /// Initializes a new instance of the <see cref="T:myMD.View.MedicationTabPages.DetailedMedicationPage"/> class.
         /// </summary>
-        /// <param name="item">Item.</param>
+        /// <param name="item">DetailedMedication die geöffnet wird</param>
         public DetailedMedicationPage(object item)
         {
             InitializeComponent();
@@ -47,8 +47,8 @@ namespace myMD.View.MedicationTabPages
         /// <summary>
         /// Methode, wenn der Abbrechen-Button geklickt wird.
         /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
+        /// <param name="sender">Sender der diese Methode aufruft</param>
+        /// <param name="e">Event des Senders</param>
         async void CancelButton_Clicked(object sender, System.EventArgs e)
         {
             vm.CancelMedication();
@@ -58,8 +58,8 @@ namespace myMD.View.MedicationTabPages
         /// <summary>
         /// Methode, wenn der Speichern-Button geklickt wird.
         /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
+        /// <param name="sender">Sender der diese Methode aufruft</param>
+        /// <param name="e">Event des Senders</param>
         async void SaveMedication_Clicked(object sender, System.EventArgs e)
         {
             vm.SaveNewMedication();

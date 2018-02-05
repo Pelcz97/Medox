@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_a7f815eac380374e256b293e4edec7f7" kind="dir">
+    <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages</compoundname>
+    <innerfile refid="_select_device_page_8xaml">SelectDevicePage.xaml</innerfile>
+    <innerfile refid="_select_device_page_8xaml_8cs">SelectDevicePage.xaml.cs</innerfile>
+    <innerfile refid="_select_doctors_letters_page_8xaml">SelectDoctorsLettersPage.xaml</innerfile>
+    <innerfile refid="_select_doctors_letters_page_8xaml_8cs">SelectDoctorsLettersPage.xaml.cs</innerfile>
+    <innerfile refid="_send_data_page_8xaml">SendDataPage.xaml</innerfile>
+    <innerfile refid="_send_data_page_8xaml_8cs">SendDataPage.xaml.cs</innerfile>
+    <innerfile refid="_transmitting_data_page_8xaml">TransmittingDataPage.xaml</innerfile>
+    <innerfile refid="_transmitting_data_page_8xaml_8cs">TransmittingDataPage.xaml.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/"/>
+  </compounddef>
+</doxygen>

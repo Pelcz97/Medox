@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_355553b19d4aba53c860cd9bdfc14e2e" kind="dir">
+    <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD</compoundname>
+    <innerdir refid="dir_855725944d87f380d4d93a08551e72f9">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model</innerdir>
+    <innerdir refid="dir_a98078d2b656d9af455c14e2d3e882d9">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface</innerdir>
+    <innerdir refid="dir_d50f4de6b59645dbcb9737ea63e813d7">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View</innerdir>
+    <innerdir refid="dir_887ecb0787a12eace737bdff4513a56f">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel</innerdir>
+    <innerfile refid="_app_8xaml">App.xaml</innerfile>
+    <innerfile refid="_app_8xaml_8cs">App.xaml.cs</innerfile>
+    <innerfile refid="my_m_d_page_8xaml">myMDPage.xaml</innerfile>
+    <innerfile refid="my_m_d_page_8xaml_8cs">myMDPage.xaml.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/"/>
+  </compounddef>
+</doxygen>

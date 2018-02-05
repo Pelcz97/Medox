@@ -72,7 +72,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Send data page. </para>    </briefdescription>
+<para>Code-Behind Klasse zur <ref refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page" kindref="compound">SendDataPage</ref>. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>

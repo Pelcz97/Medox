@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_855725944d87f380d4d93a08551e72f9" kind="dir">
+    <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model</compoundname>
+    <innerdir refid="dir_fb806de235ee71be4d75dc6bca8cac7c">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel</innerdir>
+    <innerdir refid="dir_6448c94e58ffac0fc3497d11a282aa0c">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel</innerdir>
+    <innerdir refid="dir_bd4553aa7f9f7984a91633a919df8c89">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/EntityFactory</innerdir>
+    <innerdir refid="dir_49aec9f1ae05b5b573662876ec753127">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper</innerdir>
+    <innerdir refid="dir_2bfbc843a2f89cc4acb3bb9bcf159267">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade</innerdir>
+    <innerdir refid="dir_bf3fac227bc490848f1000ac879dd051">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel</innerdir>
+    <innerdir refid="dir_8a477c2c067ccd13f13e6514ada13644">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/"/>
+  </compounddef>
+</doxygen>

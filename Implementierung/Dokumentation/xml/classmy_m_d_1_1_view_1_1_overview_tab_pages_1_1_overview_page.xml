@@ -55,14 +55,14 @@
 <parametername>sender</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Sender.</para></parameterdescription>
+<para>Sender der diese Methode aufruft</para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>e</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>E.</para></parameterdescription>
+<para>Event des Senders</para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -72,7 +72,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Overview page. </para>    </briefdescription>
+<para>Code-Behind Klasse zur <ref refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page" kindref="compound">OverviewPage</ref> </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>

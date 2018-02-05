@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="15" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="15" bodyend="-1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="18" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="18" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="20" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="20" bodyend="25"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="23" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="23" bodyend="28"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -55,20 +55,20 @@
 <parametername>sender</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Sender.</para></parameterdescription>
+<para>Sender der diese Methode aufruft</para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>e</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>E.</para></parameterdescription>
+<para>Event des Senders</para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="32" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="32" bodyend="36"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="35" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="35" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1a25692c7f172d5bf2daf35706ed8c8a50" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -91,24 +91,24 @@
 <parametername>sender</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Sender.</para></parameterdescription>
+<para>Sender der diese Methode aufruft</para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>e</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>E.</para></parameterdescription>
+<para>Event des Senders</para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="43" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="43" bodyend="46"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="46" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="46" bodyend="49"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Code-Behind Klasse zur <ref refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page" kindref="compound">SelectDevicePage</ref> </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
@@ -145,7 +145,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="11" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="10" bodyend="47"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="14" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="13" bodyend="50"/>
     <listofallmembers>
       <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1a7724df6fda5fca6dbdb27c1848dddd3a" prot="private" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SelectDevicePage</scope><name>CancelSelectDevice_Clicked</name></member>
       <member refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page_1a3cb9c69e49e16c30e2e5377790702769" prot="public" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SelectDevicePage</scope><name>CustomContentPage</name></member>

@@ -7,7 +7,7 @@ using Xamarin.Forms.Internals;
 namespace myMD.View.SendDataTabPages
 {
     /// <summary>
-    /// Send data page.
+    /// Code-Behind Klasse zur SendDataPage.
     /// </summary>
     [Preserve(AllMembers = true)]
     public partial class SendDataPage : CustomContentPage
