@@ -117,7 +117,15 @@
 \addtocontents{toc}{\protect\enlargethispage{10cm}}
 \setlength{\parskip}{2.5mm}%
 \chapter{Einleitung}
-%TODO
+"myMD" ist eine mobile Anwendung, die es Patienten erlaubt ihre Arztbriefe digital über Bluetooth von ihren Ärzten zu erhalten, um dann in der Applikation die darin enthaltenen Informationen, wie die Diagnose oder verschrieben Medikationen, einsehen zu können.
+
+Die App wurde dabei mit Xamarin.Forms in C\# und XAML für Android- und iOS-Geräte entwickelt.
+
+Aufbauend auf dem vorangegangenen Pflichtenheft und dem Entwurfsdokument, wird in diesem Dokument der Fortschritt der Implementierung und die dabei vorgenommenen Änderungen an in Planung und Entwurf festgelegten Kriterien beschrieben.
+
+Zunächst werden noch einmal die wichtigsten Ergebnisse aus Planungs- und Entwurfsphase aufgelistet und danach die daran in dieser Phase vorgenommenen Änderungen. Dazu zählen geänderte Entwürfe, Klassen und nicht umgesetzt Kriterien. 
+
+Letztlich folgen noch abschließende Worte über den Verlauf der Phase und Pläne für die Zukunft.
 
 \chapter{Vorangegangene Planung}
 \section{Kriterien (Planungsphase)}
@@ -218,6 +226,11 @@ Alle Klassen aus dem \textbf{DataModel} Paket stellen Vorlagen für eine Datenba
 Um unnötiges Casten zu vermeiden, erhalten die Schnittstellen aus \textbf{DataModelInterface} noch eine Konvertierungsmethode zu der in \textbf{DataModel} definierten konkreten Implementierung (für die Klassen aus \textbf{DataModel} gibt diese Methode lediglich die Instanz der Klasse selbst zurück.)
 
 \subsubsection{Plattformspezifisches Parsen}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IHl7ParserHelper.png}
+\caption{IHl7ParserHelper Schnittstelle}
+\end{figure}
 Bestimmte Klassen des \textit{Everest} Frameworks, das zum Parsen von .hl7 Dateien benutzt wird, implementieren die \textbf{ICloneable} Schnittstelle, die in einem \textit{Xamarin-Cross-Platform} Projekt nicht verfügbar ist. 
 
 Manche dieser Klassen werden jedoch benötigt um die Dateien vollständig zu parsen, daher kann der \textbf{Hl7ToDatabaseParser} nicht mehr wie geplant komplett plattformunabhängig implementiert werden.
@@ -225,6 +238,11 @@ Manche dieser Klassen werden jedoch benötigt um die Dateien vollständig zu par
 Operationen mit diesen Klassen werden nun über die \textbf{IHl7ParserHelper} Schnittstelle aufgerufen und im \textbf{Hl7ParserHelper} plattformspezifisch implementiert.
 
 \subsubsection{Dateiformatunabhänigiges Parsen}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/FileToDatabaseParser.png}
+\caption{Klassen zum dateiformatunabhänigigen Parsen}
+\end{figure}
 Um in Zukunft die Implementierung der Unterstützung mehrere Dateiformate zu vereinfachen, wurden mehrere Änderungen am \textbf{FileToDabaseParser} vorgenommen:
 
 Das Auswählen des richtigen Parsers erfolgt nun über die Enumeration \textbf{FileFormat} der unterstützen Dateiformate und eine Erweiterungsmethode in \textbf{FileFormatExtensions} die einem Dateiformat aus \textbf{FileFormat} den passenden \textbf{FileToDabaseParser} zuordnet.
@@ -237,6 +255,11 @@ Beim vorherigen Ansatz musste für jeden Aufruf einer \textit{Parse} Methoden ne
 
 \subsection{ViewModel}
 \subsubsection{Enum-Picker}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/ViewModel/Enum-Picker.png}
+\caption{Enum Picker Klassen}
+\end{figure}
 Um Elemente aus einem Enum in einem Picker von \textit{Xamarin} darstellen zu können, wird ein Konvertierer (\textbf{IntEnumConverter}) benötigt, da die dafür von \textit{Xamarin} angebotene Funktionalität eine Liste von Elementen erwartet. Mit dem Konvertierer kann dann jedem Listeneintrag über \textit{DataBinding} ein Enum-Wert zugewiesen werden.
 
 Um die Namen von Enumwerten zum Anzeigen formatieren zu können wurden für diesen Zweck auch noch die Klasse \textbf{StringExtensions} mit Erweiterungsmethoden für strings hinzugefügt.
@@ -255,7 +278,7 @@ Während dem Entwurf stellten wir uns vor, dass es auf einer \textbf{ProfilePage
 \subsubsection{IModelFacade}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/ModelFacadeInterface.png}
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IModelFacade.png}
 \caption{IModelFacade Schnittstelle}
 \end{figure}
 \textbf{Art der Änderung:} Neue Methoden
@@ -267,7 +290,7 @@ Während dem Entwurf stellten wir uns vor, dass es auf einer \textbf{ProfilePage
 \subsubsection{IMedication}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IMedication.png}
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IMedication.png}
 \caption{IMedication Schnittstelle}
 \end{figure}
 \textbf{Art der Änderung:} Neues Attribut
@@ -282,7 +305,7 @@ Während dem Entwurf stellten wir uns vor, dass es auf einer \textbf{ProfilePage
 \subsubsection{IEntityDatabase}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IEntityDatabase.png}
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IEntityDatabase.png}
 \caption{IEntityDatabase Schnittstelle}
 \end{figure}
 \textbf{Art der Änderung:} Neue/geänderte Methoden
@@ -295,7 +318,7 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \subsubsection{EntityFactory}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/EntityFactory.png}
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/EntityFactory.png}
 \caption{EntityFactory Klasse}
 \end{figure}
 \textbf{Art der Änderung:} Entferntes Attribut
@@ -307,8 +330,8 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \subsubsection{DoctorsLetterGroupDoctorsLetter}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/EntityFactory.png}
-\caption{EntityFactory Klasse}
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/DoctorsLetterGroupDoctorsLetter.png}
+\caption{DoctorsLetterGroupDoctorsLetter Klasse}
 \end{figure}
 \textbf{Art der Änderung:} Neue Klasse
 
@@ -319,7 +342,7 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \subsubsection{IFileHelper}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IFileHelper.png}
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IFileHelper.png}
 \caption{IFileHelper Schnittstelle}
 \end{figure}
 \textbf{Art der Änderung:} Neue Methode
