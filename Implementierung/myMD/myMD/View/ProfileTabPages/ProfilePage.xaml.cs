@@ -8,7 +8,7 @@ using Xamarin.Forms.Internals;
 namespace myMD.View.ProfileTabPages
 {
     /// <summary>
-    /// Profile page.
+    /// Code-Behind Klasse zur ProfilePage
     /// </summary>
     [Preserve(AllMembers = true)]
     public partial class ProfilePage : CustomContentPage
@@ -32,8 +32,8 @@ namespace myMD.View.ProfileTabPages
         /// <summary>
         /// Methode, wenn der Bearbeiten-Button geklickt wird.
         /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
+        /// <param name="sender">Sender der diese Methode aufruft</param>
+        /// <param name="e">Event des Senders</param>
         public async void EditProfileButton(object sender, System.EventArgs e)
         {
             var view = new NavigationPage(new ProfileEditPage());

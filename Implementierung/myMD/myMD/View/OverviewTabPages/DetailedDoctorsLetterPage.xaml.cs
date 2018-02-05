@@ -6,7 +6,7 @@ using Xamarin.Forms.Internals;
 namespace myMD.View.OverviewTabPages
 {
     /// <summary>
-    /// Detailed doctors letter page.
+    /// Code-Behind Klasse zur DetailedDoctorsLetterPage
     /// </summary>
     [Preserve(AllMembers = true)]
     public partial class DetailedDoctorsLetterPage : CustomContentPage
@@ -19,7 +19,7 @@ namespace myMD.View.OverviewTabPages
         /// <summary>
         /// Initializes a new instance of the <see cref="T:myMD.View.OverviewTabPages.DetailedDoctorsLetterPage"/> class.
         /// </summary>
-        /// <param name="item">Item.</param>
+        /// <param name="item">DetailedDoctorsLetter der geöffnet wird</param>
         public DetailedDoctorsLetterPage(object item)
         {
             InitializeComponent();
@@ -30,8 +30,8 @@ namespace myMD.View.OverviewTabPages
         /// <summary>
         /// Methode, wenn der Schließen-Button geklickt wird.
         /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
+        /// <param name="sender">Sender der diese Methode aufruft</param>
+        /// <param name="e">Event des Senders</param>
         async void CancelDetailedPage_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();

@@ -20,16 +20,16 @@
         <argsstring>()</argsstring>
         <name>CustomContentPage</name>
         <briefdescription>
-        </briefdescription>
+<para>Konstruktor für eine CostumContentPage </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/AbstractPages/CustomContentPage.xaml.cs" line="10" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/AbstractPages/CustomContentPage.xaml.cs" bodystart="10" bodyend="15"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/AbstractPages/CustomContentPage.xaml.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/AbstractPages/CustomContentPage.xaml.cs" bodystart="16" bodyend="21"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Code-Behind Klasse zur CostumContent Page </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
@@ -114,7 +114,7 @@
         <label>ContentPage</label>
       </node>
     </collaborationgraph>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/AbstractPages/CustomContentPage.xaml.cs" line="9" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/AbstractPages/CustomContentPage.xaml.cs" bodystart="8" bodyend="16"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/AbstractPages/CustomContentPage.xaml.cs" line="12" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/AbstractPages/CustomContentPage.xaml.cs" bodystart="11" bodyend="22"/>
     <listofallmembers>
       <member refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page_1a3cb9c69e49e16c30e2e5377790702769" prot="public" virt="non-virtual"><scope>myMD::View::AbstractPages::CustomContentPage</scope><name>CustomContentPage</name></member>
     </listofallmembers>

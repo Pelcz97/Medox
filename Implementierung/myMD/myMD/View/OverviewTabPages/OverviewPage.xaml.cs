@@ -6,7 +6,7 @@ using Xamarin.Forms.Internals;
 namespace myMD.View.OverviewTabPages
 {
     /// <summary>
-    /// Overview page.
+    /// Code-Behind Klasse zur OverviewPage
     /// </summary>
     [Preserve(AllMembers = true)]
     public partial class OverviewPage : CustomContentPage
@@ -30,8 +30,8 @@ namespace myMD.View.OverviewTabPages
         /// Methode, wenn ein Arztbriefeintrag aus der Liste ausgewählt wird.
         /// Setzt SelectedItem auf null, um den Markiert-Status des Listeneintrags wieder zu deaktivieren
         /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
+        /// <param name="sender">Sender der diese Methode aufruft</param>
+        /// <param name="e">Event des Senders</param>
         void DoctorsLetter_Clicked(object sender, SelectedItemChangedEventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;

@@ -6,7 +6,7 @@ using Xamarin.Forms.Internals;
 namespace myMD.View.ProfileTabPages
 {
     /// <summary>
-    /// Profile edit page.
+    /// Code-Behind Klasse der ProfileEditPage
     /// </summary>
     [Preserve(AllMembers = true)]
     public partial class ProfileEditPage : CustomContentPage
@@ -29,8 +29,8 @@ namespace myMD.View.ProfileTabPages
         /// <summary>
         /// Methode, wenn der Abbrechen-Button geklickt wird.
         /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
+        /// <param name="sender">Sender der diese Methode aufruft</param>
+        /// <param name="e">Event des Senders</param>
         async void CancelButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
@@ -39,8 +39,8 @@ namespace myMD.View.ProfileTabPages
         /// <summary>
         /// Methode, wenn der Speichern-Button geklickt wurde.
         /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
+        /// <param name="sender">Sender der diese Methode aufruft</param>
+        /// <param name="e">Event des Senders</param>
         async void SaveChangedProfileButton_Clicked(object sender, EventArgs e)
         {
             vm.SaveChangedProfile();

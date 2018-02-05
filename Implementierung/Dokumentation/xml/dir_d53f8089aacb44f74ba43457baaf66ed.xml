@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_d53f8089aacb44f74ba43457baaf66ed" kind="dir">
+    <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/ProfileTabPages</compoundname>
+    <innerfile refid="_profile_edit_page_8xaml">ProfileEditPage.xaml</innerfile>
+    <innerfile refid="_profile_edit_page_8xaml_8cs">ProfileEditPage.xaml.cs</innerfile>
+    <innerfile refid="_profile_page_8xaml">ProfilePage.xaml</innerfile>
+    <innerfile refid="_profile_page_8xaml_8cs">ProfilePage.xaml.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/ProfileTabPages/"/>
+  </compounddef>
+</doxygen>

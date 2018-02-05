@@ -9,7 +9,7 @@ using Xamarin.Forms.Internals;
 namespace myMD.View.MedicationTabPages
 {
     /// <summary>
-    /// Medication page.
+    /// Code-Behind Klasse zur MedicationPage
     /// </summary>
     [Preserve(AllMembers = true)]
     public partial class MedicationPage : CustomContentPage
@@ -32,8 +32,8 @@ namespace myMD.View.MedicationTabPages
         /// <summary>
         /// Methode, wenn der Hinzufügen-Button geklickt wird.
         /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
+        /// <param name="sender">Sender der diese Methode aufruft</param>
+        /// <param name="e">Event des Senders</param>
         public async void AddMed_Clicked(object sender, EventArgs e)
         {
             var view = new NavigationPage(new DetailedMedicationPage());
@@ -46,8 +46,8 @@ namespace myMD.View.MedicationTabPages
         /// <summary>
         /// Methode, wenn ein Element der Medikationenliste geklickt wird.
         /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
+        /// <param name="sender">Sender der diese Methode aufruft</param>
+        /// <param name="e">Event des Senders</param>
         void MedicationItem_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var view = new NavigationPage(new DetailedMedicationPage(e.SelectedItem));

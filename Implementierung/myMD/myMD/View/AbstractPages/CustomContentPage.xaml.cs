@@ -5,8 +5,14 @@ using Xamarin.Forms;
 
 namespace myMD.View.AbstractPages
 {
+    /// <summary>
+    /// Code-Behind Klasse zur CostumContentPage
+    /// </summary>
     public partial class CustomContentPage : ContentPage
     {
+        /// <summary>
+        /// Konstruktor für eine CostumContentPage
+        /// </summary>
         public CustomContentPage()
         {
             InitializeComponent();

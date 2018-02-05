@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_887ecb0787a12eace737bdff4513a56f" kind="dir">
+    <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel</compoundname>
+    <innerdir refid="dir_5de99d88b0314182ab171a430c2c9a3a">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel</innerdir>
+    <innerdir refid="dir_2f8146dbdb2f13b33d74e4935a41d0a9">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel</innerdir>
+    <innerdir refid="dir_88ebe59d22d833dd1275c10515cbb178">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel</innerdir>
+    <innerdir refid="dir_0e0583b0fa0fd42018cb725aa05685ca">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel</innerdir>
+    <innerdir refid="dir_95ffadfd840002c2ab3a623a831ab376">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/"/>
+  </compounddef>
+</doxygen>
