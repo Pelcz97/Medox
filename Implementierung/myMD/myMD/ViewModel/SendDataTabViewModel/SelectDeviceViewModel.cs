@@ -22,6 +22,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// Liste an Geräten die in der Umgebung gefunden wurden
         /// </summary>
         public ObservableCollection<ScanResultViewModel> DeviceList { get; }
+
         /// <summary>
         /// Boolean, ob das Gerät des Nutzers gerade die Umbegung nach Geräten durchsucht
         /// </summary>
@@ -65,14 +66,12 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 Debug.WriteLine(status);
             });
 
-            if (status == AdapterStatus.PoweredOn)
-            {
                 isScanning = true;
-                this.scan = CrossBleAdapter.Current.Scan().Subscribe(scanResult =>
+                this.scan = CrossBleAdapter.Current.ScanWhenAdapterReady().Subscribe(scanResult =>
                 {
                     ScanResultViewModel test = new ScanResultViewModel();
                     test.Device = scanResult.Device;
-                    if (test != null && DeviceList.All(x => x.Device != test.Device))
+                if (test != null && DeviceList.All(x => x.Device != test.Device) && test.Device.Name != null)
                     {
                         DeviceList.Add(test);
                         DeviceList.FirstOrDefault();
@@ -81,7 +80,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
                         Debug.WriteLine("Device.UUID: " + test.Device.Uuid);
                     }
                 });
-            }
+
         }
 
         /// <summary>

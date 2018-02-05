@@ -11,42 +11,39 @@ using System.Threading.Tasks;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
+    /// <summary>
+    /// Transmitting data view model.
+    /// </summary>
     [Preserve(AllMembers = true)]
     public class TransmittingDataViewModel : OverallViewModel.OverallViewModel
     {
+        /// <summary>
+        /// Der Bluetooth GATT-Server, der die zu sendenden Arztbriefe einem Klient bereitstellen soll.
+        /// </summary>
         IGattServer server;
+
+        /// <summary>
+        /// The notify broadcast.
+        /// </summary>
         IDisposable notifyBroadcast;
 
-        string output;
-        public string Output
-        {
-            get => output;
-            private set => output = value;
-        }
-
-        string serverText = "Start Server";
-        public string ServerText
-        {
-            get => this.serverText;
-            set => serverText = value;
-        }
-
-        string chValue;
-        public string CharacteristicValue
-        {
-            get => this.chValue;
-            set => chValue = value;
-        }
-
+        /// <summary>
+        /// Initializes a new instance of the
+        /// <see cref="T:myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel"/> class.
+        /// </summary>
         public TransmittingDataViewModel()
         {
-
             AdapterStatus status = CrossBleAdapter.Current.Status;
             BuildServer();
-
         }
 
-        public void ServerSettings(){
+        /// <summary>
+        /// Methode zur Verwaltung des Servers:
+        /// Zu Testzwecken wird zunächst der Adapter Status ausgegeben.
+        /// Anschliessend wird versucht, einen Server zu erstellen, zu Starten und mit einem Namen 
+        /// anderen Geräten in der Nähe sichtbar zu machen.
+        /// </summary>
+        public async void ServerSettings(){
             if (this.BleAdapter.Status != AdapterStatus.PoweredOn)
             {
                 Debug.WriteLine(this.BleAdapter.Status);
@@ -62,7 +59,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 }
                 else
                 {
-                     server.Start(new AdvertisementData
+                    await server.Start(new AdvertisementData
                     {
                         LocalName = "TestServer"
                     });
@@ -77,9 +74,16 @@ namespace myMD.ViewModel.SendDataTabViewModel
 
         }
 
-        public async void BuildServer()
+        /// <summary>
+        /// Explizite Zusammensetzung des Servers.
+        /// Hier werden die einzelnen Charakteristiken erstellt, die notwendig sind, 
+        /// um Daten schreiben und lesen zu können sowie eine Benachrichtigung an Klienten versenden zu können.
+        /// Die hier angegeben Charakteristiken dienen Testzwecken, 
+        /// da ein grundlegendes Problem mit dem Server besteht.
+        /// </summary>
+        public void BuildServer()
         {
-            var server = CrossBleAdapter.Current.CreateGattServer();
+            server = CrossBleAdapter.Current.CreateGattServer();
             var service = server.AddService(Guid.NewGuid(), true);
 
             var characteristic = service.AddCharacteristic(
@@ -95,7 +99,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 GattPermissions.Read | GattPermissions.Write
             );
 
-            IDisposable notifyBroadcast = null;
+            notifyBroadcast = null;
             notifyCharacteristic.WhenDeviceSubscriptionChanged().Subscribe(e =>
             {
                 var @event = e.IsSubscribed ? "Subscribed" : "Unsubcribed";
@@ -129,26 +133,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 var write = Encoding.UTF8.GetString(x.Value, 0, x.Value.Length);
                 // do something value
             });
-            try
-            {
-                await server.Start(new AdvertisementData
-                {
-                    LocalName = "TestServer"
-                });
-            } catch (Exception e){
-                Debug.WriteLine(e.ToString());
-            }
-        }
-
-        void OnEvent(string msg)
-        {
-            Device.BeginInvokeOnMainThread(() =>
-                this.Output += msg + Environment.NewLine + Environment.NewLine
-            );
-        }
-
-        void StopServer(){
-            
         }
     }
 }
