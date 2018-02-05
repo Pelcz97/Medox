@@ -1,9 +1,0 @@
-digraph G
-{
-  edge [fontname="Helvetica",fontsize=10,labelfontname="Helvetica",labelfontsize=10];
-  node [fontname="Helvetica",fontsize=10,shape=record];
-  rankdir=LR;
-  Node1 [label="myMD::Model::DataModel::Medication::DisattachFromLetter",height=0.2,width=0.4,color="white", fillcolor="black", style="filled" fontcolor="white"];
-  Node1 -> Node2 [color="midnightblue",fontsize=10,style="solid"];
-  Node2 [label="myMD::Model::DataModel::DoctorsLetter::DisattachMedication",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter.html#054bedc79ee2e214b176609861b0f663"];
-}

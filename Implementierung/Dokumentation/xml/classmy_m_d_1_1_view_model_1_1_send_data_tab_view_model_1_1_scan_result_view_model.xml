@@ -15,7 +15,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="16" bodyend="16"/>
-        <referencedby refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1aa20931acf9e9c3580019a5025d2f1abb" compoundref="_select_device_view_model_8cs" startline="54" endline="85">myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel.StartScan</referencedby>
+        <referencedby refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1aa20931acf9e9c3580019a5025d2f1abb" compoundref="_select_device_view_model_8cs" startline="55" endline="84">myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel.StartScan</referencedby>
       </memberdef>
       <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a5fa7aaa6ca6d8d48917014cf1f99c091" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>

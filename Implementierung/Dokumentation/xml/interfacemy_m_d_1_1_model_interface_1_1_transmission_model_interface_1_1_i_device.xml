@@ -4,6 +4,21 @@
     <compoundname>myMD::ModelInterface::TransmissionModelInterface::IDevice</compoundname>
     <derivedcompoundref refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device" prot="public" virt="non-virtual">myMD.Model.TransmissionModel.Device</derivedcompoundref>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device_1ab43328062cfb240bc8b942f77635aa86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool myMD.ModelInterface.TransmissionModelInterface.IDevice.connected</definition>
+        <argsstring>()</argsstring>
+        <name>connected</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1a929ac575030efc1810879551f92f6a61">connected</reimplementedby>
+        <briefdescription>
+<para>Methode, um zu pruefen, ob man mit einem anderen Gerät verbunden ist </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true, falls man verbunden ist. Sonst false</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/TransmissionModelInterface/IDevice.cs" line="12" column="1"/>
+      </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device_1a0642c516236dc1a58f6199a47f174427" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
         <definition>string myMD.ModelInterface.TransmissionModelInterface.IDevice.getName</definition>
@@ -11,12 +26,13 @@
         <name>getName</name>
         <reimplementedby refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1ad3410ee962b5a3253e4ef99651b80c44">getName</reimplementedby>
         <briefdescription>
-        </briefdescription>
+<para>Methode um den Namen eines anderen Gerätes zu bekommen </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para>Name des anderen Gerätes</para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/TransmissionModelInterface/IDevice.cs" line="5" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/TransmissionModelInterface/IDevice.cs" line="18" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device_1a59013bc25e4ab2ef413e940d6e7c735f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -25,26 +41,13 @@
         <name>getUuid</name>
         <reimplementedby refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1a84a4d532edd011e5eabd0b6939b1e91c">getUuid</reimplementedby>
         <briefdescription>
-        </briefdescription>
+<para>Methode um die UUID eines anderen Gerätes zu bekommen </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para>UUID des anderen Gerätes</para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/TransmissionModelInterface/IDevice.cs" line="7" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device_1ab43328062cfb240bc8b942f77635aa86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool myMD.ModelInterface.TransmissionModelInterface.IDevice.connected</definition>
-        <argsstring>()</argsstring>
-        <name>connected</name>
-        <reimplementedby refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1a929ac575030efc1810879551f92f6a61">connected</reimplementedby>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/TransmissionModelInterface/IDevice.cs" line="9" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/TransmissionModelInterface/IDevice.cs" line="24" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device_1a2979ec84b80f8ac2efcfc29797e1daa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -53,16 +56,17 @@
         <name>paired</name>
         <reimplementedby refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1af8485fc857a036d58e8b1ba38e7d098a">paired</reimplementedby>
         <briefdescription>
-        </briefdescription>
+<para>Methode, um zu pruefen, ob man mit einem anderen Gerät gekoppelt ist </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para>true, falls man gekoppelt ist. Sonst false</para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/TransmissionModelInterface/IDevice.cs" line="11" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/TransmissionModelInterface/IDevice.cs" line="30" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Schnittstelle, die ein anderes Gerät implementieren muss </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
@@ -77,7 +81,7 @@
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device"/>
       </node>
     </inheritancegraph>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/TransmissionModelInterface/IDevice.cs" line="4" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/TransmissionModelInterface/IDevice.cs" bodystart="3" bodyend="13"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/TransmissionModelInterface/IDevice.cs" line="7" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/TransmissionModelInterface/IDevice.cs" bodystart="6" bodyend="32"/>
     <listofallmembers>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device_1ab43328062cfb240bc8b942f77635aa86" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::TransmissionModelInterface::IDevice</scope><name>connected</name></member>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device_1a0642c516236dc1a58f6199a47f174427" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::TransmissionModelInterface::IDevice</scope><name>getName</name></member>

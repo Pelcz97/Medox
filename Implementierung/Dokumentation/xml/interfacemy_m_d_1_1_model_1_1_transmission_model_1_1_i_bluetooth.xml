@@ -11,12 +11,13 @@
         <name>scanForDevices</name>
         <reimplementedby refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1a551c99750193ce8a6fc03c92864d24e8">scanForDevices</reimplementedby>
         <briefdescription>
-        </briefdescription>
+<para>Methode um nach Geräten in der Nähe zu suchen </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para>Liste an Geräten</para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" line="8" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" line="15" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1a3ae2f74750177a849765df54ea32f788" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -29,12 +30,20 @@
           <declname>filePath</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Methode um eine Datei zu senden </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dateipfad zur Datei, die gesendet werden soll</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" line="10" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" line="21" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1ad17c0199f5a72b2964b5b38b565ad6fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -43,12 +52,12 @@
         <name>cancelSend</name>
         <reimplementedby refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1aaf2c47cc102234818e414fe362ea14a7">cancelSend</reimplementedby>
         <briefdescription>
-        </briefdescription>
+<para>Methode um einen Sendevorgang abzubrechen </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" line="12" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" line="26" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1a8bb41d3ca3ff3264de397bccd555e8b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -65,12 +74,28 @@
           <declname>pin</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Methode um sich mit einem andern Gerät zu koppeln </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Das andere Gerät</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Eine Art Passwort, um die Geräte zu verifizieren</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" line="14" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" line="34" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1a02d846b9c9b31d1ea1d35780928c3ba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -83,12 +108,21 @@
           <declname>device</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Methode um sich mit einem anderen Gerät zu verbinden </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Das andere Gerät</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true, falls die Geräte sich erfolgreich verbunden haben. Sonst false</para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" line="16" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" line="41" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1aa835ad437ee703e3ae74f43e09c28fbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -97,16 +131,17 @@
         <name>receive</name>
         <reimplementedby refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1aedbb2bbfe638eb5e83497c7b4e74d99d">receive</reimplementedby>
         <briefdescription>
-        </briefdescription>
+<para>Methode um daten zu Empfangen </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" line="18" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" line="47" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Schnittstelle zur Bluetoothuebertragung </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
@@ -121,7 +156,7 @@
         <link refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth"/>
       </node>
     </inheritancegraph>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" line="7" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" bodystart="6" bodyend="20"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" line="10" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetooth.cs" bodystart="9" bodyend="49"/>
     <listofallmembers>
       <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1ad17c0199f5a72b2964b5b38b565ad6fc" prot="public" virt="non-virtual"><scope>myMD::Model::TransmissionModel::IBluetooth</scope><name>cancelSend</name></member>
       <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1a02d846b9c9b31d1ea1d35780928c3ba4" prot="public" virt="non-virtual"><scope>myMD::Model::TransmissionModel::IBluetooth</scope><name>connect</name></member>

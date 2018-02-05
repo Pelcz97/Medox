@@ -62,7 +62,7 @@ PROJECT_LOGO           = D:/Studium/WS17-18/PSE/Pflichtenheft/graphics/myMD_Logo
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = C:\Users\ppelc\Desktop\DoxygenTest
+OUTPUT_DIRECTORY       = D:\Studium\WS17-18\PSE\Implementierung\Dokumentation
 
 # If the CREATE_SUBDIRS tag is set to YES then doxygen will create 4096 sub-
 # directories (in 2 levels) under the output directory of each output format and
@@ -882,7 +882,8 @@ RECURSIVE              = YES
 EXCLUDE                = D:\Studium\WS17-18\PSE\Implementierung\myMD\myMD\bin \
                          D:\Studium\WS17-18\PSE\Implementierung\myMD\myMD\obj \
                          D:\Studium\WS17-18\PSE\Implementierung\myMD\myMD\packages \
-                         D:\Studium\WS17-18\PSE\Implementierung\myMD\myMD\Properties
+                         D:\Studium\WS17-18\PSE\Implementierung\myMD\myMD\Properties \
+                         D:\Studium\WS17-18\PSE\Implementierung\myMD\myMD\Resources
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
 # directories that are symbolic links (a Unix file system feature) are excluded

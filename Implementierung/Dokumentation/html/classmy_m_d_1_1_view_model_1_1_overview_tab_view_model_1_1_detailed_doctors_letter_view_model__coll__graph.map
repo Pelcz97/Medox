@@ -1,5 +1,5 @@
 <map id="myMD.ViewModel.OverviewTabViewModel.DetailedDoctorsLetterViewModel" name="myMD.ViewModel.OverviewTabViewModel.DetailedDoctorsLetterViewModel">
-<area shape="rect" id="node2" href="$classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model.html" title="Doctors letter view model. " alt="" coords="105,200,267,227"/>
+<area shape="rect" id="node2" href="$classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model.html" title="ViewModel zur Modelierung eines DoctorsLetter " alt="" coords="105,200,267,227"/>
 <area shape="rect" id="node3" href="$classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model.html" title="ViewModel Elternklasse erbt an alle anderen ViewModel, um Redundanz der ModelFacade zu vermeiden ..." alt="" coords="101,109,271,151"/>
 <area shape="rect" id="node5" href="$interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade.html" title="Dies ist die Haupteinstiegsstelle für andere Subsysteme in das Model. Als Ein&#45; und Ausgabeparameter we..." alt="" coords="188,5,387,47"/>
 </map>

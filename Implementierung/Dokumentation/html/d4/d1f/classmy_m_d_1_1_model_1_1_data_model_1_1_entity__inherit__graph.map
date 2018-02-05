@@ -1,8 +1,0 @@
-base referer
-rect $db/dac/classmy_m_d_1_1_model_1_1_data_model_1_1_data.html 332,322 540,443
-rect $db/d24/classmy_m_d_1_1_model_1_1_data_model_1_1_doctor.html 564,322 783,443
-rect $d6/d2c/classmy_m_d_1_1_model_1_1_data_model_1_1_profile.html 807,315 1025,451
-rect $d2/d64/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity.html 515,5 831,83
-rect $dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter.html 5,499 264,767
-rect $db/dfe/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group.html 289,528 583,737
-rect $d0/daf/classmy_m_d_1_1_model_1_1_data_model_1_1_medication.html 607,535 851,730

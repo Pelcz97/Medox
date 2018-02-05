@@ -71,7 +71,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Detailed doctors letter view model. </para>    </briefdescription>
+<para><ref refid="namespacemy_m_d_1_1_view_model" kindref="compound">ViewModel</ref> zur Modelierung eines DetailedDoctorsLetter </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>

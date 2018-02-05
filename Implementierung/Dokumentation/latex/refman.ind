@@ -2,868 +2,865 @@
 
   \item {Activate}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
-		\hyperpage{70}
+		\hyperpage{71}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}, 
-		\hyperpage{99}
+		\hyperpage{101}
     \subitem {my\+M\+D\+::\+Model\+::\+Model\+Facade\+::\+Model\+Facade}, 
-		\hyperpage{134}
+		\hyperpage{137}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}, 
-		\hyperpage{111}
+		\hyperpage{114}
   \item {Add}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}, 
-		\hyperpage{55, 56}
+		\hyperpage{57}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}, 
-		\hyperpage{95}
+		\hyperpage{97}
   \item {Add\+Dummy\+Letter}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model}, 
-		\hyperpage{142}
+		\hyperpage{145}
   \item {Add\+Med\+\_\+\+Clicked}
     \subitem {my\+M\+D\+::\+View\+::\+Medication\+Tab\+Pages\+::\+Medication\+Page}, 
-		\hyperpage{125}
+		\hyperpage{128}
   \item {Add\+To\+Group}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{47}
+		\hyperpage{48, 49}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}, 
-		\hyperpage{91}
+		\hyperpage{94}
   \item {App}
     \subitem {my\+M\+D\+::\+App}, \hyperpage{24}
   \item {Attach\+Medication}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{48}
+		\hyperpage{49, 50}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}, 
-		\hyperpage{92}
+		\hyperpage{94}
   \item {Attach\+To\+Letter}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
-		\hyperpage{121}
+		\hyperpage{124}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}, 
-		\hyperpage{108}
+		\hyperpage{111}
 
   \indexspace
 
   \item {Birth\+Date}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}, 
-		\hyperpage{147}
+		\hyperpage{150}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Profile}, 
-		\hyperpage{118}
+		\hyperpage{121}
   \item {Birthdate}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}, 
-		\hyperpage{152}
+		\hyperpage{155}
   \item {Ble\+Adapter}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Overall\+View\+Model\+::\+Overall\+View\+Model}, 
-		\hyperpage{139}
+		\hyperpage{142}
   \item {Blood\+Type}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}, 
-		\hyperpage{147}
+		\hyperpage{150}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}, 
 		\hyperpage{17}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Profile}, 
-		\hyperpage{118}
+		\hyperpage{121}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}, 
-		\hyperpage{152}
+		\hyperpage{155}
   \item {Blood\+Type\+Name}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}, 
-		\hyperpage{152}
+		\hyperpage{155}
   \item {Blood\+Type\+Names}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}, 
-		\hyperpage{152}
+		\hyperpage{155}
   \item {Build\+Server}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Transmitting\+Data\+View\+Model}, 
-		\hyperpage{169}
+		\hyperpage{172}
 
   \indexspace
 
   \item {Cancel\+Medication}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Detailed\+Medicine\+View\+Model}, 
-		\hyperpage{40}
+		\hyperpage{41}
   \item {Cancel\+Possible}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}, 
-		\hyperpage{131}
+		\hyperpage{134}
   \item {cancel\+Send}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+Bluetooth}, 
 		\hyperpage{26}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+I\+Bluetooth}, 
-		\hyperpage{83}
-  \item {Characteristic\+Value}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Transmitting\+Data\+View\+Model}, 
-		\hyperpage{169}
+		\hyperpage{84}
   \item {Compare\+To}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}, 
-		\hyperpage{29}
+		\hyperpage{31}
   \item {connect}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+Bluetooth}, 
 		\hyperpage{26}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+I\+Bluetooth}, 
-		\hyperpage{83}
+		\hyperpage{85}
   \item {Connect\+To\+Device}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}, 
-		\hyperpage{160}
+		\hyperpage{163}
   \item {connected}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+Device}, 
-		\hyperpage{41}
+		\hyperpage{42}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Transmission\+Model\+Interface\+::\+I\+Device}, 
-		\hyperpage{87}
+		\hyperpage{89}
   \item {Convert}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Int\+Enum\+Converter}, 
-		\hyperpage{114}
+		\hyperpage{117}
   \item {Convert\+Back}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Int\+Enum\+Converter}, 
-		\hyperpage{114}
+		\hyperpage{117}
   \item {Create}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
-		\hyperpage{70}
+		\hyperpage{71}
   \item {Create\+Empty\+Doctors\+Letter}
     \subitem {my\+M\+D\+::\+Model\+::\+Entity\+Factory\+::\+Entity\+Factory}, 
-		\hyperpage{75}
+		\hyperpage{76}
     \subitem {my\+M\+D\+::\+Model\+::\+Entity\+Factory\+::\+I\+Entity\+Factory}, 
-		\hyperpage{103}
+		\hyperpage{106}
   \item {Create\+Empty\+Group}
     \subitem {my\+M\+D\+::\+Model\+::\+Entity\+Factory\+::\+Entity\+Factory}, 
-		\hyperpage{75}
+		\hyperpage{76}
     \subitem {my\+M\+D\+::\+Model\+::\+Entity\+Factory\+::\+I\+Entity\+Factory}, 
-		\hyperpage{103}
+		\hyperpage{106}
     \subitem {my\+M\+D\+::\+Model\+::\+Model\+Facade\+::\+Model\+Facade}, 
-		\hyperpage{134}
+		\hyperpage{137}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}, 
-		\hyperpage{111}
+		\hyperpage{114}
   \item {Create\+Empty\+Medication}
     \subitem {my\+M\+D\+::\+Model\+::\+Entity\+Factory\+::\+Entity\+Factory}, 
-		\hyperpage{75}
+		\hyperpage{76}
     \subitem {my\+M\+D\+::\+Model\+::\+Entity\+Factory\+::\+I\+Entity\+Factory}, 
-		\hyperpage{104}
+		\hyperpage{107}
     \subitem {my\+M\+D\+::\+Model\+::\+Model\+Facade\+::\+Model\+Facade}, 
-		\hyperpage{135}
+		\hyperpage{138}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}, 
-		\hyperpage{111}
+		\hyperpage{114}
   \item {Create\+Empty\+Profile}
     \subitem {my\+M\+D\+::\+Model\+::\+Entity\+Factory\+::\+Entity\+Factory}, 
-		\hyperpage{75}
+		\hyperpage{76}
     \subitem {my\+M\+D\+::\+Model\+::\+Entity\+Factory\+::\+I\+Entity\+Factory}, 
-		\hyperpage{104}
+		\hyperpage{107}
     \subitem {my\+M\+D\+::\+Model\+::\+Model\+Facade\+::\+Model\+Facade}, 
-		\hyperpage{135}
+		\hyperpage{138}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}, 
-		\hyperpage{111}
+		\hyperpage{114}
   \item {Custom\+Content\+Page}
     \subitem {my\+M\+D\+::\+View\+::\+Abstract\+Pages\+::\+Custom\+Content\+Page}, 
-		\hyperpage{28}
+		\hyperpage{29}
 
   \indexspace
 
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+App.\+xaml}, 
-		\hyperpage{171}
+		\hyperpage{173}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+App.\+xaml.\+cs}, 
-		\hyperpage{171}
+		\hyperpage{173}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Data\+Model/\+Data.\+cs}, 
-		\hyperpage{172}
+		\hyperpage{174}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Data\+Model/\+Doctor.\+cs}, 
-		\hyperpage{172}
+		\hyperpage{174}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Data\+Model/\+Doctors\+Letter.\+cs}, 
-		\hyperpage{172}
+		\hyperpage{174}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Data\+Model/\+Doctors\+Letter\+Group.\+cs}, 
-		\hyperpage{172}
+		\hyperpage{174}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Data\+Model/\+Doctors\+Letter\+Group\+Doctors\+Letter.\+cs}, 
-		\hyperpage{173}
+		\hyperpage{175}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Data\+Model/\+Entity.\+cs}, 
-		\hyperpage{173}
+		\hyperpage{175}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Data\+Model/\+Medication.\+cs}, 
-		\hyperpage{173}
+		\hyperpage{175}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Data\+Model/\+Profile.\+cs}, 
-		\hyperpage{173}
+		\hyperpage{175}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Database\+Model/\+Entity\+Database.\+cs}, 
-		\hyperpage{171}
+		\hyperpage{173}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Database\+Model/\+I\+Entity\+Database.\+cs}, 
-		\hyperpage{171}
+		\hyperpage{173}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Entity\+Factory/\+Entity\+Factory.\+cs}, 
-		\hyperpage{174}
+		\hyperpage{176}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Entity\+Factory/\+I\+Entity\+Factory.\+cs}, 
-		\hyperpage{174}
+		\hyperpage{176}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+File\+Helper/\+I\+File\+Helper.\+cs}, 
-		\hyperpage{174}
+		\hyperpage{176}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Model\+Facade/\+Model\+Facade.\+cs}, 
-		\hyperpage{174}
+		\hyperpage{176}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Parser\+Model/\+File\+Format.\+cs}, 
-		\hyperpage{174}
+		\hyperpage{176}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Parser\+Model/\+File\+Format\+Extensions.\+cs}, 
-		\hyperpage{175}
+		\hyperpage{177}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Parser\+Model/\+File\+To\+Database\+Parser.\+cs}, 
-		\hyperpage{175}
+		\hyperpage{177}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Parser\+Model/\+Hl7\+To\+Database\+Parser.\+cs}, 
-		\hyperpage{175}
+		\hyperpage{177}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Parser\+Model/\+I\+Hl7\+Parser\+Helper.\+cs}, 
-		\hyperpage{175}
+		\hyperpage{177}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Parser\+Model/\+I\+Parser\+Facade.\+cs}, 
-		\hyperpage{176}
+		\hyperpage{178}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Parser\+Model/\+Letter\+To\+Original\+File\+Parser.\+cs}, 
-		\hyperpage{176}
+		\hyperpage{178}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Parser\+Model/\+Parser\+Facade.\+cs}, 
-		\hyperpage{176}
+		\hyperpage{178}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Transmission\+Model/\+Bluetooth.\+cs}, 
-		\hyperpage{176}
+		\hyperpage{178}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Transmission\+Model/\+Device.\+cs}, 
-		\hyperpage{176}
+		\hyperpage{178}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Transmission\+Model/\+I\+Bluetooth.\+cs}, 
-		\hyperpage{177}
+		\hyperpage{179}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model\+Interface/\+Data\+Model\+Interface/\+Blood\+Type.\+cs}, 
-		\hyperpage{177}
+		\hyperpage{179}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model\+Interface/\+Data\+Model\+Interface/\+I\+Data.\+cs}, 
-		\hyperpage{177}
+		\hyperpage{179}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model\+Interface/\+Data\+Model\+Interface/\+I\+Doctor.\+cs}, 
-		\hyperpage{177}
+		\hyperpage{179}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model\+Interface/\+Data\+Model\+Interface/\+I\+Doctors\+Letter.\+cs}, 
-		\hyperpage{178}
+		\hyperpage{180}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model\+Interface/\+Data\+Model\+Interface/\+I\+Doctors\+Letter\+Group.\+cs}, 
-		\hyperpage{178}
+		\hyperpage{180}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model\+Interface/\+Data\+Model\+Interface/\+I\+Entity.\+cs}, 
-		\hyperpage{178}
+		\hyperpage{180}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model\+Interface/\+Data\+Model\+Interface/\+I\+Medication.\+cs}, 
-		\hyperpage{178}
+		\hyperpage{180}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model\+Interface/\+Data\+Model\+Interface/\+I\+Profile.\+cs}, 
-		\hyperpage{179}
+		\hyperpage{181}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model\+Interface/\+Data\+Model\+Interface/\+Interval.\+cs}, 
-		\hyperpage{179}
+		\hyperpage{181}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model\+Interface/\+Data\+Model\+Interface/\+Sensitivity.\+cs}, 
-		\hyperpage{179}
+		\hyperpage{181}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model\+Interface/\+Model\+Facade\+Interface/\+I\+Model\+Facade.\+cs}, 
-		\hyperpage{180}
+		\hyperpage{182}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model\+Interface/\+Transmission\+Model\+Interface/\+I\+Device.\+cs}, 
-		\hyperpage{180}
+		\hyperpage{182}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Abstract\+Pages/\+Custom\+Content\+Page.\+xaml}, 
-		\hyperpage{180}
+		\hyperpage{182}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Abstract\+Pages/\+Custom\+Content\+Page.\+xaml.\+cs}, 
-		\hyperpage{180}
+		\hyperpage{182}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Medication\+Tab\+Pages/\+Detailed\+Medication\+Page.\+xaml}, 
-		\hyperpage{181}
+		\hyperpage{183}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Medication\+Tab\+Pages/\+Detailed\+Medication\+Page.\+xaml.\+cs}, 
-		\hyperpage{181}
+		\hyperpage{183}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Medication\+Tab\+Pages/\+Medication\+Page.\+xaml}, 
-		\hyperpage{181}
+		\hyperpage{183}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Medication\+Tab\+Pages/\+Medication\+Page.\+xaml.\+cs}, 
-		\hyperpage{181}
+		\hyperpage{183}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Overview\+Tab\+Pages/\+Detailed\+Doctors\+Letter\+Page.\+xaml}, 
-		\hyperpage{181}
+		\hyperpage{183}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Overview\+Tab\+Pages/\+Detailed\+Doctors\+Letter\+Page.\+xaml.\+cs}, 
-		\hyperpage{181}
+		\hyperpage{183}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Overview\+Tab\+Pages/\+Overview\+Page.\+xaml}, 
-		\hyperpage{181}
+		\hyperpage{183}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Overview\+Tab\+Pages/\+Overview\+Page.\+xaml.\+cs}, 
-		\hyperpage{181}
+		\hyperpage{183}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Profile\+Tab\+Pages/\+Profile\+Edit\+Page.\+xaml}, 
-		\hyperpage{182}
+		\hyperpage{184}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Profile\+Tab\+Pages/\+Profile\+Edit\+Page.\+xaml.\+cs}, 
-		\hyperpage{182}
+		\hyperpage{184}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Profile\+Tab\+Pages/\+Profile\+Page.\+xaml}, 
-		\hyperpage{182}
+		\hyperpage{184}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Profile\+Tab\+Pages/\+Profile\+Page.\+xaml.\+cs}, 
-		\hyperpage{182}
+		\hyperpage{184}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Send\+Data\+Tab\+Pages/\+Select\+Device\+Page.\+xaml}, 
-		\hyperpage{182}
+		\hyperpage{184}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Send\+Data\+Tab\+Pages/\+Select\+Device\+Page.\+xaml.\+cs}, 
-		\hyperpage{182}
+		\hyperpage{184}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Send\+Data\+Tab\+Pages/\+Select\+Doctors\+Letters\+Page.\+xaml}, 
-		\hyperpage{183}
+		\hyperpage{185}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Send\+Data\+Tab\+Pages/\+Select\+Doctors\+Letters\+Page.\+xaml.\+cs}, 
-		\hyperpage{183}
+		\hyperpage{185}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Send\+Data\+Tab\+Pages/\+Send\+Data\+Page.\+xaml}, 
-		\hyperpage{183}
+		\hyperpage{185}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Send\+Data\+Tab\+Pages/\+Send\+Data\+Page.\+xaml.\+cs}, 
-		\hyperpage{183}
+		\hyperpage{185}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Send\+Data\+Tab\+Pages/\+Transmitting\+Data\+Page.\+xaml}, 
-		\hyperpage{183}
+		\hyperpage{185}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View/\+Send\+Data\+Tab\+Pages/\+Transmitting\+Data\+Page.\+xaml.\+cs}, 
-		\hyperpage{183}
+		\hyperpage{185}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Medication\+Tab\+View\+Model/\+Detailed\+Medicine\+View\+Model.\+cs}, 
-		\hyperpage{183}
+		\hyperpage{185}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Medication\+Tab\+View\+Model/\+Medication\+View\+Model.\+cs}, 
-		\hyperpage{184}
+		\hyperpage{186}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Medication\+Tab\+View\+Model/\+Medicine\+View\+Model.\+cs}, 
-		\hyperpage{184}
+		\hyperpage{186}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Overall\+View\+Model/\+Overall\+View\+Model.\+cs}, 
-		\hyperpage{184}
+		\hyperpage{186}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Overview\+Tab\+View\+Model/\+Detailed\+Doctors\+Letter\+View\+Model.\+cs}, 
-		\hyperpage{184}
+		\hyperpage{186}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Overview\+Tab\+View\+Model/\+Doctors\+Letter\+View\+Model.\+cs}, 
-		\hyperpage{185}
+		\hyperpage{187}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Overview\+Tab\+View\+Model/\+Overview\+View\+Model.\+cs}, 
-		\hyperpage{185}
+		\hyperpage{187}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Profile\+Tab\+View\+Model/\+Int\+Enum\+Converter.\+cs}, 
-		\hyperpage{185}
+		\hyperpage{187}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Profile\+Tab\+View\+Model/\+Profile\+Edit\+View\+Model.\+cs}, 
-		\hyperpage{185}
+		\hyperpage{187}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Profile\+Tab\+View\+Model/\+Profile\+Item\+View\+Model.\+cs}, 
-		\hyperpage{185}
+		\hyperpage{187}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Profile\+Tab\+View\+Model/\+Profile\+View\+Model.\+cs}, 
-		\hyperpage{186}
+		\hyperpage{188}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Profile\+Tab\+View\+Model/\+String\+Extensions.\+cs}, 
-		\hyperpage{186}
+		\hyperpage{188}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Send\+Data\+Tab\+View\+Model/\+Scan\+Result\+View\+Model.\+cs}, 
-		\hyperpage{186}
+		\hyperpage{188}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Send\+Data\+Tab\+View\+Model/\+Select\+Device\+View\+Model.\+cs}, 
-		\hyperpage{186}
+		\hyperpage{188}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Send\+Data\+Tab\+View\+Model/\+Select\+Doctors\+Letters\+View\+Model.\+cs}, 
-		\hyperpage{187}
+		\hyperpage{189}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Send\+Data\+Tab\+View\+Model/\+Send\+Data\+View\+Model.\+cs}, 
-		\hyperpage{187}
+		\hyperpage{189}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Send\+Data\+Tab\+View\+Model/\+Transmitting\+Data\+View\+Model.\+cs}, 
-		\hyperpage{187}
+		\hyperpage{189}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/my\+M\+D\+Page.\+xaml}, 
-		\hyperpage{180}
+		\hyperpage{182}
   \item {D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/my\+M\+D\+Page.\+xaml.\+cs}, 
-		\hyperpage{180}
+		\hyperpage{182}
   \item {Database\+Doctor}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{51}
+		\hyperpage{53}
   \item {Database\+Doctors\+Letter}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
-		\hyperpage{123}
+		\hyperpage{126}
   \item {Database\+Groups}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{52}
+		\hyperpage{53}
   \item {Database\+Letters}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}, 
-		\hyperpage{58}
+		\hyperpage{60}
   \item {Database\+Medication}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{52}
+		\hyperpage{54}
   \item {Date}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}, 
-		\hyperpage{30}
+		\hyperpage{32}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}, 
-		\hyperpage{58}
+		\hyperpage{60}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Data}, 
-		\hyperpage{86}
+		\hyperpage{87}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}, 
-		\hyperpage{109}
+		\hyperpage{112}
   \item {Delete}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{48}
-    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}, 
-		\hyperpage{56}
-    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}, 
-		\hyperpage{65}
-    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
-		\hyperpage{122}
-    \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
-		\hyperpage{70}
-    \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}, 
-		\hyperpage{100}
-    \subitem {my\+M\+D\+::\+Model\+::\+Model\+Facade\+::\+Model\+Facade}, 
-		\hyperpage{135}
-    \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}, 
-		\hyperpage{112}
-  \item {Delete\+File}
-    \subitem {my\+M\+D\+::\+Model\+::\+File\+Helper\+::\+I\+File\+Helper}, 
-		\hyperpage{105}
-  \item {Delete\+List\+Item}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}, 
-		\hyperpage{128}
-  \item {Delete\+List\+Item\+Method}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}, 
-		\hyperpage{127}
-  \item {Destroy}
-    \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
-		\hyperpage{71}
-  \item {Detailed\+Doctors\+Letter\+Page}
-    \subitem {my\+M\+D\+::\+View\+::\+Overview\+Tab\+Pages\+::\+Detailed\+Doctors\+Letter\+Page}, 
-		\hyperpage{32}
-  \item {Detailed\+Doctors\+Letter\+View\+Model}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Detailed\+Doctors\+Letter\+View\+Model}, 
-		\hyperpage{34, 35}
-  \item {Detailed\+Medication\+Page}
-    \subitem {my\+M\+D\+::\+View\+::\+Medication\+Tab\+Pages\+::\+Detailed\+Medication\+Page}, 
-		\hyperpage{37}
-  \item {Detailed\+Medicine\+View\+Model}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Detailed\+Medicine\+View\+Model}, 
-		\hyperpage{39}
-  \item {Device}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Scan\+Result\+View\+Model}, 
-		\hyperpage{156}
-  \item {Device\+List}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}, 
-		\hyperpage{160}
-  \item {Device\+Name}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Scan\+Result\+View\+Model}, 
-		\hyperpage{156}
-  \item {Diagnosis}
-    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{52}
-    \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}, 
-		\hyperpage{93}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Detailed\+Doctors\+Letter\+View\+Model}, 
-		\hyperpage{35}
-  \item {Disattach\+From\+Letter}
-    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
-		\hyperpage{122}
-    \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}, 
-		\hyperpage{109}
-  \item {Disattach\+Medication}
-    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{49}
-  \item {Doctor}
-    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{51}
-    \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}, 
-		\hyperpage{93}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Doctors\+Letter\+View\+Model}, 
-		\hyperpage{62}
-  \item {Doctor\+ID}
-    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{52}
-  \item {Doctors\+Field}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Doctors\+Letter\+View\+Model}, 
-		\hyperpage{62}
-  \item {Doctors\+Letter}
-    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{47}
-    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
-		\hyperpage{123}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Doctors\+Letter\+View\+Model}, 
-		\hyperpage{62}
-  \item {Doctors\+Letter\+Date}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Doctors\+Letter\+View\+Model}, 
-		\hyperpage{63}
-  \item {Doctors\+Letter\+Group}
-    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}, 
-		\hyperpage{55}
-  \item {Doctors\+Letter\+Group\+ID}
-    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group\+Doctors\+Letter}, 
-		\hyperpage{59}
-  \item {Doctors\+Letter\+ID}
-    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group\+Doctors\+Letter}, 
-		\hyperpage{59}
-  \item {Doctors\+Letter\+View\+Model}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Doctors\+Letter\+View\+Model}, 
-		\hyperpage{62}
-  \item {Doctors\+Letters}
+		\hyperpage{50}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}, 
 		\hyperpage{58}
-    \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}, 
-		\hyperpage{96}
-  \item {Doctors\+Letters\+List}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model}, 
-		\hyperpage{142}
-  \item {Doctors\+Name}
+    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}, 
+		\hyperpage{66}
+    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
+		\hyperpage{125}
+    \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
+		\hyperpage{72}
+    \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}, 
+		\hyperpage{103}
+    \subitem {my\+M\+D\+::\+Model\+::\+Model\+Facade\+::\+Model\+Facade}, 
+		\hyperpage{138}
+    \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}, 
+		\hyperpage{115}
+  \item {Delete\+File}
+    \subitem {my\+M\+D\+::\+Model\+::\+File\+Helper\+::\+I\+File\+Helper}, 
+		\hyperpage{108}
+  \item {Delete\+List\+Item}
+    \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}, 
+		\hyperpage{131}
+  \item {Delete\+List\+Item\+Method}
+    \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}, 
+		\hyperpage{130}
+  \item {Destroy}
+    \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
+		\hyperpage{72}
+  \item {Detailed\+Doctors\+Letter\+Page}
+    \subitem {my\+M\+D\+::\+View\+::\+Overview\+Tab\+Pages\+::\+Detailed\+Doctors\+Letter\+Page}, 
+		\hyperpage{33}
+  \item {Detailed\+Doctors\+Letter\+View\+Model}
+    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Detailed\+Doctors\+Letter\+View\+Model}, 
+		\hyperpage{35, 36}
+  \item {Detailed\+Medication\+Page}
+    \subitem {my\+M\+D\+::\+View\+::\+Medication\+Tab\+Pages\+::\+Detailed\+Medication\+Page}, 
+		\hyperpage{38}
+  \item {Detailed\+Medicine\+View\+Model}
+    \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Detailed\+Medicine\+View\+Model}, 
+		\hyperpage{40}
+  \item {Device}
+    \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Scan\+Result\+View\+Model}, 
+		\hyperpage{159}
+  \item {Device\+List}
+    \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}, 
+		\hyperpage{163}
+  \item {Device\+Name}
+    \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Scan\+Result\+View\+Model}, 
+		\hyperpage{159}
+  \item {Diagnosis}
+    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
+		\hyperpage{54}
+    \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}, 
+		\hyperpage{95}
+    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Detailed\+Doctors\+Letter\+View\+Model}, 
+		\hyperpage{36}
+  \item {Disattach\+From\+Letter}
+    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
+		\hyperpage{125}
+    \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}, 
+		\hyperpage{112}
+  \item {Disattach\+Medication}
+    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
+		\hyperpage{50}
+  \item {Doctor}
+    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
+		\hyperpage{53}
+    \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}, 
+		\hyperpage{95}
+    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Doctors\+Letter\+View\+Model}, 
+		\hyperpage{64}
+  \item {Doctor\+ID}
+    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
+		\hyperpage{54}
+  \item {Doctors\+Field}
+    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Doctors\+Letter\+View\+Model}, 
+		\hyperpage{64}
+  \item {Doctors\+Letter}
+    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
+		\hyperpage{48}
+    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
+		\hyperpage{126}
+    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Doctors\+Letter\+View\+Model}, 
+		\hyperpage{64}
+  \item {Doctors\+Letter\+Date}
+    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Doctors\+Letter\+View\+Model}, 
+		\hyperpage{64}
+  \item {Doctors\+Letter\+Group}
+    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}, 
+		\hyperpage{57}
+  \item {Doctors\+Letter\+Group\+ID}
+    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group\+Doctors\+Letter}, 
+		\hyperpage{61}
+  \item {Doctors\+Letter\+ID}
+    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group\+Doctors\+Letter}, 
+		\hyperpage{61}
+  \item {Doctors\+Letter\+View\+Model}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Doctors\+Letter\+View\+Model}, 
 		\hyperpage{63}
+  \item {Doctors\+Letters}
+    \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}, 
+		\hyperpage{60}
+    \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}, 
+		\hyperpage{98}
+  \item {Doctors\+Letters\+List}
+    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model}, 
+		\hyperpage{145}
+  \item {Doctors\+Name}
+    \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Doctors\+Letter\+View\+Model}, 
+		\hyperpage{64}
   \item {Dosis}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
-		\hyperpage{123}
+		\hyperpage{126}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}, 
-		\hyperpage{109}
+		\hyperpage{112}
 
   \indexspace
 
   \item {Edit\+Profile\+Button}
     \subitem {my\+M\+D\+::\+View\+::\+Profile\+Tab\+Pages\+::\+Profile\+Page}, 
-		\hyperpage{154}
+		\hyperpage{157}
   \item {End\+Date}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
-		\hyperpage{123}
+		\hyperpage{126}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}, 
-		\hyperpage{109}
+		\hyperpage{112}
   \item {Entity\+Database}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
-		\hyperpage{69}
+		\hyperpage{70, 71}
   \item {Equals}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}, 
-		\hyperpage{30}
+		\hyperpage{31}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctor}, 
-		\hyperpage{43}
+		\hyperpage{45}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{49}
+		\hyperpage{51}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}, 
-		\hyperpage{56}
+		\hyperpage{58}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}, 
-		\hyperpage{65, 66}
+		\hyperpage{67}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
-		\hyperpage{122}
+		\hyperpage{125}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}, 
-		\hyperpage{146}
+		\hyperpage{149}
 
   \indexspace
 
   \item {Field}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctor}, 
-		\hyperpage{44}
+		\hyperpage{46}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctor}, 
-		\hyperpage{89}
+		\hyperpage{91}
   \item {File\+Format}
     \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model}, \hyperpage{15}
   \item {Filepath}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{52}
+		\hyperpage{54}
   \item {Finalize\+Medication}
     \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Hl7\+Parser\+Helper}, 
-		\hyperpage{106}
+		\hyperpage{109}
   \item {Frequency}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
-		\hyperpage{123}
+		\hyperpage{126}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}, 
-		\hyperpage{109}
+		\hyperpage{112}
 
   \indexspace
 
   \item {Get\+Active\+Profile}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
-		\hyperpage{71}
+		\hyperpage{72}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}, 
-		\hyperpage{100}
+		\hyperpage{103}
     \subitem {my\+M\+D\+::\+Model\+::\+Model\+Facade\+::\+Model\+Facade}, 
-		\hyperpage{136}
+		\hyperpage{139}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}, 
-		\hyperpage{112}
+		\hyperpage{115}
   \item {Get\+All\+Data\+From\+Profile$<$ E $>$}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
-		\hyperpage{71}
+		\hyperpage{72}
   \item {Get\+All\+Doctors\+Letter\+Groups}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
-		\hyperpage{72}
+		\hyperpage{73}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}, 
-		\hyperpage{100}
+		\hyperpage{103}
   \item {Get\+All\+Doctors\+Letters}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
-		\hyperpage{72}
+		\hyperpage{73}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}, 
-		\hyperpage{100}
+		\hyperpage{103}
     \subitem {my\+M\+D\+::\+Model\+::\+Model\+Facade\+::\+Model\+Facade}, 
-		\hyperpage{136}
+		\hyperpage{139}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}, 
-		\hyperpage{112}
+		\hyperpage{115}
   \item {Get\+All\+Groups}
     \subitem {my\+M\+D\+::\+Model\+::\+Model\+Facade\+::\+Model\+Facade}, 
-		\hyperpage{136}
+		\hyperpage{139}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}, 
-		\hyperpage{112}
+		\hyperpage{115}
   \item {Get\+All\+Medications}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
-		\hyperpage{72}
+		\hyperpage{73}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}, 
-		\hyperpage{100}
+		\hyperpage{103}
     \subitem {my\+M\+D\+::\+Model\+::\+Model\+Facade\+::\+Model\+Facade}, 
-		\hyperpage{136}
+		\hyperpage{139}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}, 
-		\hyperpage{112}
+		\hyperpage{115}
   \item {Get\+All\+Profiles}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
-		\hyperpage{72}
+		\hyperpage{73}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}, 
-		\hyperpage{100}
+		\hyperpage{103}
   \item {Get\+Doctor}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
-		\hyperpage{73}
+		\hyperpage{74}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}, 
-		\hyperpage{101}
+		\hyperpage{104}
   \item {Get\+Hash\+Code}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}, 
-		\hyperpage{30}
+		\hyperpage{31}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctor}, 
-		\hyperpage{43}
+		\hyperpage{45}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{50}
+		\hyperpage{51}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}, 
-		\hyperpage{56}
+		\hyperpage{58}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}, 
-		\hyperpage{66}
+		\hyperpage{68}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
-		\hyperpage{123}
+		\hyperpage{126}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}, 
-		\hyperpage{146}
+		\hyperpage{149}
   \item {Get\+Local\+File\+Path}
     \subitem {my\+M\+D\+::\+Model\+::\+File\+Helper\+::\+I\+File\+Helper}, 
-		\hyperpage{105}
+		\hyperpage{108}
   \item {get\+Name}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+Device}, 
-		\hyperpage{41}
+		\hyperpage{42}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Transmission\+Model\+Interface\+::\+I\+Device}, 
-		\hyperpage{87}
+		\hyperpage{89}
   \item {Get\+Profile}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
-		\hyperpage{73}
+		\hyperpage{74}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}, 
-		\hyperpage{101}
+		\hyperpage{104}
   \item {get\+Uuid}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+Device}, 
-		\hyperpage{41}
+		\hyperpage{43}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Transmission\+Model\+Interface\+::\+I\+Device}, 
-		\hyperpage{87}
+		\hyperpage{89}
   \item {Group\+List}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}, 
-		\hyperpage{127}
+		\hyperpage{130}
   \item {Groups}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{52}
+		\hyperpage{54}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}, 
-		\hyperpage{93}
+		\hyperpage{95}
 
   \indexspace
 
   \item {Hl7\+To\+Database\+Parser}
     \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Hl7\+To\+Database\+Parser}, 
-		\hyperpage{80, 81}
+		\hyperpage{81, 82}
 
   \indexspace
 
   \item {ID}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}, 
-		\hyperpage{66}
+		\hyperpage{68}
   \item {Init}
     \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}, 
-		\hyperpage{77}
+		\hyperpage{78}
     \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Hl7\+To\+Database\+Parser}, 
-		\hyperpage{81}
+		\hyperpage{82}
   \item {Insert}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
-		\hyperpage{73}
+		\hyperpage{74}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}, 
-		\hyperpage{102}
+		\hyperpage{105}
   \item {Insurance\+Number}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}, 
-		\hyperpage{147}
+		\hyperpage{150}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Profile}, 
-		\hyperpage{118}
+		\hyperpage{121}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}, 
-		\hyperpage{152}
+		\hyperpage{155}
   \item {Interval}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
-		\hyperpage{123}
+		\hyperpage{126}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}, 
 		\hyperpage{17}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}, 
-		\hyperpage{110}
+		\hyperpage{113}
   \item {Is\+Connected}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Scan\+Result\+View\+Model}, 
-		\hyperpage{156}
+		\hyperpage{159}
 
   \indexspace
 
   \item {Key}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}, 
-		\hyperpage{128}
+		\hyperpage{131}
 
   \indexspace
 
   \item {Last\+Date}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}, 
-		\hyperpage{58}
+		\hyperpage{60}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}, 
-		\hyperpage{96}
+		\hyperpage{99}
   \item {Last\+Name}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}, 
-		\hyperpage{147}
+		\hyperpage{150}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Profile}, 
-		\hyperpage{118}
+		\hyperpage{121}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}, 
-		\hyperpage{152}
+		\hyperpage{155}
   \item {Letter\+Id}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
-		\hyperpage{124}
+		\hyperpage{127}
   \item {Local\+Name}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Scan\+Result\+View\+Model}, 
-		\hyperpage{157}
+		\hyperpage{160}
 
   \indexspace
 
   \item {Max\+Start\+Date}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}, 
-		\hyperpage{131}
+		\hyperpage{134}
   \item {Medication}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{53}
+		\hyperpage{54}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}, 
-		\hyperpage{93}
+		\hyperpage{96}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}, 
-		\hyperpage{131}
+		\hyperpage{134}
   \item {Medication\+Dosis}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}, 
-		\hyperpage{131}
+		\hyperpage{134}
   \item {Medication\+Duration}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}, 
-		\hyperpage{131}
+		\hyperpage{134}
   \item {Medication\+End\+Date}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}, 
-		\hyperpage{131}
+		\hyperpage{134}
   \item {Medication\+Frequency}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}, 
-		\hyperpage{131}
+		\hyperpage{134}
   \item {Medication\+Interval}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}, 
-		\hyperpage{132}
+		\hyperpage{135}
   \item {Medication\+Name}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}, 
-		\hyperpage{132}
+		\hyperpage{135}
   \item {Medication\+Page}
     \subitem {my\+M\+D\+::\+View\+::\+Medication\+Tab\+Pages\+::\+Medication\+Page}, 
-		\hyperpage{125}
+		\hyperpage{128}
   \item {Medication\+Start\+Date}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}, 
-		\hyperpage{132}
+		\hyperpage{135}
   \item {Medication\+View\+Model}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}, 
-		\hyperpage{127}
+		\hyperpage{130}
   \item {Medications\+Items\+List}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}, 
-		\hyperpage{128}
+		\hyperpage{131}
   \item {Medications\+List}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}, 
-		\hyperpage{128}
+		\hyperpage{131}
   \item {Medicine\+View\+Model}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}, 
-		\hyperpage{130}
+		\hyperpage{133}
   \item {Min\+End\+Date}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}, 
-		\hyperpage{132}
+		\hyperpage{135}
   \item {Model}
     \subitem {my\+M\+D\+::\+App}, \hyperpage{24}
   \item {Model\+Facade}
     \subitem {my\+M\+D\+::\+Model\+::\+Model\+Facade\+::\+Model\+Facade}, 
-		\hyperpage{134}
+		\hyperpage{137}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Overall\+View\+Model\+::\+Overall\+View\+Model}, 
-		\hyperpage{139}
+		\hyperpage{142}
   \item {my\+M\+D.\+App}, \hyperpage{23}
   \item {my\+M\+D.\+Model}, \hyperpage{13}
   \item {my\+M\+D.\+Model.\+Data\+Model}, \hyperpage{14}
-  \item {my\+M\+D.\+Model.\+Data\+Model.\+Data}, \hyperpage{28}
-  \item {my\+M\+D.\+Model.\+Data\+Model.\+Doctor}, \hyperpage{42}
+  \item {my\+M\+D.\+Model.\+Data\+Model.\+Data}, \hyperpage{30}
+  \item {my\+M\+D.\+Model.\+Data\+Model.\+Doctor}, \hyperpage{44}
   \item {my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter}, 
-		\hyperpage{45}
+		\hyperpage{46}
   \item {my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group}, 
-		\hyperpage{53}
+		\hyperpage{55}
   \item {my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group\+Doctors\+Letter}, 
-		\hyperpage{59}
-  \item {my\+M\+D.\+Model.\+Data\+Model.\+Entity}, \hyperpage{63}
-  \item {my\+M\+D.\+Model.\+Data\+Model.\+Medication}, \hyperpage{119}
-  \item {my\+M\+D.\+Model.\+Data\+Model.\+Profile}, \hyperpage{144}
+		\hyperpage{61}
+  \item {my\+M\+D.\+Model.\+Data\+Model.\+Entity}, \hyperpage{65}
+  \item {my\+M\+D.\+Model.\+Data\+Model.\+Medication}, \hyperpage{122}
+  \item {my\+M\+D.\+Model.\+Data\+Model.\+Profile}, \hyperpage{147}
   \item {my\+M\+D.\+Model.\+Database\+Model}, \hyperpage{13}
   \item {my\+M\+D.\+Model.\+Database\+Model.\+Entity\+Database}, 
-		\hyperpage{68}
+		\hyperpage{69}
   \item {my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database}, 
-		\hyperpage{98}
+		\hyperpage{101}
   \item {my\+M\+D.\+Model.\+Entity\+Factory}, \hyperpage{14}
   \item {my\+M\+D.\+Model.\+Entity\+Factory.\+Entity\+Factory}, 
-		\hyperpage{74}
+		\hyperpage{75}
   \item {my\+M\+D.\+Model.\+Entity\+Factory.\+I\+Entity\+Factory}, 
-		\hyperpage{103}
+		\hyperpage{106}
   \item {my\+M\+D.\+Model.\+File\+Helper}, \hyperpage{14}
   \item {my\+M\+D.\+Model.\+File\+Helper.\+I\+File\+Helper}, 
-		\hyperpage{105}
+		\hyperpage{108}
   \item {my\+M\+D.\+Model.\+Model\+Facade}, \hyperpage{15}
   \item {my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}, 
-		\hyperpage{132}
+		\hyperpage{135}
   \item {my\+M\+D.\+Model.\+Parser\+Model}, \hyperpage{15}
   \item {my\+M\+D.\+Model.\+Parser\+Model.\+File\+To\+Database\+Parser}, 
-		\hyperpage{76}
+		\hyperpage{77}
   \item {my\+M\+D.\+Model.\+Parser\+Model.\+Hl7\+To\+Database\+Parser}, 
-		\hyperpage{79}
+		\hyperpage{80}
   \item {my\+M\+D.\+Model.\+Parser\+Model.\+I\+Hl7\+Parser\+Helper}, 
-		\hyperpage{106}
+		\hyperpage{109}
   \item {my\+M\+D.\+Model.\+Parser\+Model.\+I\+Parser\+Facade}, 
-		\hyperpage{115}
-  \item {my\+M\+D.\+Model.\+Parser\+Model.\+Letter\+To\+Original\+File\+Parser}, 
 		\hyperpage{118}
+  \item {my\+M\+D.\+Model.\+Parser\+Model.\+Letter\+To\+Original\+File\+Parser}, 
+		\hyperpage{121}
   \item {my\+M\+D.\+Model.\+Parser\+Model.\+Parser\+Facade}, 
-		\hyperpage{142}
+		\hyperpage{145}
   \item {my\+M\+D.\+Model.\+Transmission\+Model}, \hyperpage{16}
   \item {my\+M\+D.\+Model.\+Transmission\+Model.\+Bluetooth}, 
 		\hyperpage{25}
   \item {my\+M\+D.\+Model.\+Transmission\+Model.\+Device}, 
-		\hyperpage{40}
+		\hyperpage{41}
   \item {my\+M\+D.\+Model.\+Transmission\+Model.\+I\+Bluetooth}, 
-		\hyperpage{83}
+		\hyperpage{84}
   \item {my\+M\+D.\+Model\+Interface}, \hyperpage{16}
   \item {my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface}, 
 		\hyperpage{16}
   \item {my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Data}, 
-		\hyperpage{85}
+		\hyperpage{86}
   \item {my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctor}, 
-		\hyperpage{88}
-  \item {my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter}, 
 		\hyperpage{90}
+  \item {my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter}, 
+		\hyperpage{92}
   \item {my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter\+Group}, 
-		\hyperpage{94}
+		\hyperpage{96}
   \item {my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Entity}, 
-		\hyperpage{97}
+		\hyperpage{99}
   \item {my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Medication}, 
-		\hyperpage{107}
+		\hyperpage{110}
   \item {my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Profile}, 
-		\hyperpage{116}
+		\hyperpage{119}
   \item {my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface}, 
 		\hyperpage{18}
   \item {my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade}, 
-		\hyperpage{110}
+		\hyperpage{113}
   \item {my\+M\+D.\+Model\+Interface.\+Transmission\+Model\+Interface}, 
 		\hyperpage{18}
   \item {my\+M\+D.\+Model\+Interface.\+Transmission\+Model\+Interface.\+I\+Device}, 
-		\hyperpage{86}
-  \item {my\+M\+D.\+my\+M\+D\+Page}, \hyperpage{137}
+		\hyperpage{88}
+  \item {my\+M\+D.\+my\+M\+D\+Page}, \hyperpage{140}
   \item {my\+M\+D.\+View}, \hyperpage{18}
   \item {my\+M\+D.\+View.\+Abstract\+Pages}, \hyperpage{18}
   \item {my\+M\+D.\+View.\+Abstract\+Pages.\+Custom\+Content\+Page}, 
-		\hyperpage{27}
+		\hyperpage{28}
   \item {my\+M\+D.\+View.\+Medication\+Tab\+Pages}, \hyperpage{19}
   \item {my\+M\+D.\+View.\+Medication\+Tab\+Pages.\+Detailed\+Medication\+Page}, 
-		\hyperpage{36}
+		\hyperpage{37}
   \item {my\+M\+D.\+View.\+Medication\+Tab\+Pages.\+Medication\+Page}, 
-		\hyperpage{124}
+		\hyperpage{127}
   \item {my\+M\+D.\+View.\+Overview\+Tab\+Pages}, \hyperpage{19}
   \item {my\+M\+D.\+View.\+Overview\+Tab\+Pages.\+Detailed\+Doctors\+Letter\+Page}, 
-		\hyperpage{31}
+		\hyperpage{32}
   \item {my\+M\+D.\+View.\+Overview\+Tab\+Pages.\+Overview\+Page}, 
-		\hyperpage{139}
+		\hyperpage{142}
   \item {my\+M\+D.\+View.\+Profile\+Tab\+Pages}, \hyperpage{19}
   \item {my\+M\+D.\+View.\+Profile\+Tab\+Pages.\+Profile\+Edit\+Page}, 
-		\hyperpage{147}
+		\hyperpage{150}
   \item {my\+M\+D.\+View.\+Profile\+Tab\+Pages.\+Profile\+Page}, 
-		\hyperpage{153}
+		\hyperpage{156}
   \item {my\+M\+D.\+View.\+Send\+Data\+Tab\+Pages}, \hyperpage{19}
   \item {my\+M\+D.\+View.\+Send\+Data\+Tab\+Pages.\+Select\+Device\+Page}, 
-		\hyperpage{157}
+		\hyperpage{160}
   \item {my\+M\+D.\+View.\+Send\+Data\+Tab\+Pages.\+Select\+Doctors\+Letters\+Page}, 
-		\hyperpage{161}
-  \item {my\+M\+D.\+View.\+Send\+Data\+Tab\+Pages.\+Send\+Data\+Page}, 
 		\hyperpage{164}
+  \item {my\+M\+D.\+View.\+Send\+Data\+Tab\+Pages.\+Send\+Data\+Page}, 
+		\hyperpage{167}
   \item {my\+M\+D.\+View.\+Send\+Data\+Tab\+Pages.\+Transmitting\+Data\+Page}, 
-		\hyperpage{166}
-  \item {my\+M\+D.\+View\+Model}, \hyperpage{19}
+		\hyperpage{169}
+  \item {my\+M\+D.\+View\+Model}, \hyperpage{20}
   \item {my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model}, 
 		\hyperpage{20}
   \item {my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Detailed\+Medicine\+View\+Model}, 
-		\hyperpage{37}
+		\hyperpage{38}
   \item {my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medication\+View\+Model}, 
-		\hyperpage{126}
+		\hyperpage{129}
   \item {my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model}, 
-		\hyperpage{128}
+		\hyperpage{131}
   \item {my\+M\+D.\+View\+Model.\+Overall\+View\+Model}, \hyperpage{20}
   \item {my\+M\+D.\+View\+Model.\+Overall\+View\+Model.\+Overall\+View\+Model}, 
-		\hyperpage{137}
+		\hyperpage{140}
   \item {my\+M\+D.\+View\+Model.\+Overview\+Tab\+View\+Model}, 
 		\hyperpage{20}
   \item {my\+M\+D.\+View\+Model.\+Overview\+Tab\+View\+Model.\+Detailed\+Doctors\+Letter\+View\+Model}, 
-		\hyperpage{33}
+		\hyperpage{34}
   \item {my\+M\+D.\+View\+Model.\+Overview\+Tab\+View\+Model.\+Doctors\+Letter\+View\+Model}, 
-		\hyperpage{60}
+		\hyperpage{62}
   \item {my\+M\+D.\+View\+Model.\+Overview\+Tab\+View\+Model.\+Overview\+View\+Model}, 
-		\hyperpage{141}
+		\hyperpage{144}
   \item {my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model}, 
-		\hyperpage{20}
+		\hyperpage{21}
   \item {my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Int\+Enum\+Converter}, 
-		\hyperpage{113}
+		\hyperpage{116}
   \item {my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Edit\+View\+Model}, 
-		\hyperpage{148}
+		\hyperpage{151}
   \item {my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Item\+View\+Model}, 
-		\hyperpage{150}
+		\hyperpage{153}
   \item {my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+View\+Model}, 
-		\hyperpage{154}
+		\hyperpage{157}
   \item {my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model}, 
 		\hyperpage{21}
   \item {my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Scan\+Result\+View\+Model}, 
-		\hyperpage{156}
+		\hyperpage{159}
   \item {my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model}, 
-		\hyperpage{158}
+		\hyperpage{161}
   \item {my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Doctors\+Letters\+View\+Model}, 
-		\hyperpage{162}
-  \item {my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Send\+Data\+View\+Model}, 
 		\hyperpage{165}
-  \item {my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Transmitting\+Data\+View\+Model}, 
+  \item {my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Send\+Data\+View\+Model}, 
 		\hyperpage{168}
+  \item {my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Transmitting\+Data\+View\+Model}, 
+		\hyperpage{171}
   \item {my\+M\+D\+::\+App}
     \subitem {App}, \hyperpage{24}
     \subitem {Model}, \hyperpage{24}
@@ -871,638 +868,629 @@
     \subitem {On\+Sleep}, \hyperpage{24}
     \subitem {On\+Start}, \hyperpage{24}
   \item {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}
-    \subitem {Compare\+To}, \hyperpage{29}
-    \subitem {Date}, \hyperpage{30}
-    \subitem {Equals}, \hyperpage{30}
-    \subitem {Get\+Hash\+Code}, \hyperpage{30}
-    \subitem {Sensitivity}, \hyperpage{31}
+    \subitem {Compare\+To}, \hyperpage{31}
+    \subitem {Date}, \hyperpage{32}
+    \subitem {Equals}, \hyperpage{31}
+    \subitem {Get\+Hash\+Code}, \hyperpage{31}
+    \subitem {Sensitivity}, \hyperpage{32}
   \item {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctor}
-    \subitem {Equals}, \hyperpage{43}
-    \subitem {Field}, \hyperpage{44}
-    \subitem {Get\+Hash\+Code}, \hyperpage{43}
-    \subitem {To\+Doctor}, \hyperpage{44}
+    \subitem {Equals}, \hyperpage{45}
+    \subitem {Field}, \hyperpage{46}
+    \subitem {Get\+Hash\+Code}, \hyperpage{45}
+    \subitem {To\+Doctor}, \hyperpage{45}
   \item {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}
-    \subitem {Add\+To\+Group}, \hyperpage{47}
-    \subitem {Attach\+Medication}, \hyperpage{48}
-    \subitem {Database\+Doctor}, \hyperpage{51}
-    \subitem {Database\+Groups}, \hyperpage{52}
-    \subitem {Database\+Medication}, \hyperpage{52}
-    \subitem {Delete}, \hyperpage{48}
-    \subitem {Diagnosis}, \hyperpage{52}
-    \subitem {Disattach\+Medication}, \hyperpage{49}
-    \subitem {Doctor}, \hyperpage{51}
-    \subitem {Doctor\+ID}, \hyperpage{52}
-    \subitem {Doctors\+Letter}, \hyperpage{47}
-    \subitem {Equals}, \hyperpage{49}
-    \subitem {Filepath}, \hyperpage{52}
-    \subitem {Get\+Hash\+Code}, \hyperpage{50}
-    \subitem {Groups}, \hyperpage{52}
-    \subitem {Medication}, \hyperpage{53}
-    \subitem {Remove\+From\+Group}, \hyperpage{50}
-    \subitem {Remove\+Medication}, \hyperpage{51}
-    \subitem {To\+Doctors\+Letter}, \hyperpage{51}
+    \subitem {Add\+To\+Group}, \hyperpage{48, 49}
+    \subitem {Attach\+Medication}, \hyperpage{49, 50}
+    \subitem {Database\+Doctor}, \hyperpage{53}
+    \subitem {Database\+Groups}, \hyperpage{53}
+    \subitem {Database\+Medication}, \hyperpage{54}
+    \subitem {Delete}, \hyperpage{50}
+    \subitem {Diagnosis}, \hyperpage{54}
+    \subitem {Disattach\+Medication}, \hyperpage{50}
+    \subitem {Doctor}, \hyperpage{53}
+    \subitem {Doctor\+ID}, \hyperpage{54}
+    \subitem {Doctors\+Letter}, \hyperpage{48}
+    \subitem {Equals}, \hyperpage{51}
+    \subitem {Filepath}, \hyperpage{54}
+    \subitem {Get\+Hash\+Code}, \hyperpage{51}
+    \subitem {Groups}, \hyperpage{54}
+    \subitem {Medication}, \hyperpage{54}
+    \subitem {Remove\+From\+Group}, \hyperpage{52}
+    \subitem {Remove\+Medication}, \hyperpage{52}
+    \subitem {To\+Doctors\+Letter}, \hyperpage{53}
   \item {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}
-    \subitem {Add}, \hyperpage{55, 56}
-    \subitem {Database\+Letters}, \hyperpage{58}
-    \subitem {Date}, \hyperpage{58}
-    \subitem {Delete}, \hyperpage{56}
-    \subitem {Doctors\+Letter\+Group}, \hyperpage{55}
-    \subitem {Doctors\+Letters}, \hyperpage{58}
-    \subitem {Equals}, \hyperpage{56}
-    \subitem {Get\+Hash\+Code}, \hyperpage{56}
-    \subitem {Last\+Date}, \hyperpage{58}
-    \subitem {Remove}, \hyperpage{57}
-    \subitem {To\+Doctors\+Letter\+Group}, \hyperpage{57}
+    \subitem {Add}, \hyperpage{57}
+    \subitem {Database\+Letters}, \hyperpage{60}
+    \subitem {Date}, \hyperpage{60}
+    \subitem {Delete}, \hyperpage{58}
+    \subitem {Doctors\+Letter\+Group}, \hyperpage{57}
+    \subitem {Doctors\+Letters}, \hyperpage{60}
+    \subitem {Equals}, \hyperpage{58}
+    \subitem {Get\+Hash\+Code}, \hyperpage{58}
+    \subitem {Last\+Date}, \hyperpage{60}
+    \subitem {Remove}, \hyperpage{58, 59}
+    \subitem {To\+Doctors\+Letter\+Group}, \hyperpage{59}
   \item {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group\+Doctors\+Letter}
-    \subitem {Doctors\+Letter\+Group\+ID}, \hyperpage{59}
-    \subitem {Doctors\+Letter\+ID}, \hyperpage{59}
+    \subitem {Doctors\+Letter\+Group\+ID}, \hyperpage{61}
+    \subitem {Doctors\+Letter\+ID}, \hyperpage{61}
   \item {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}
-    \subitem {Delete}, \hyperpage{65}
-    \subitem {Equals}, \hyperpage{65, 66}
-    \subitem {Get\+Hash\+Code}, \hyperpage{66}
-    \subitem {ID}, \hyperpage{66}
-    \subitem {Name}, \hyperpage{67}
-    \subitem {Profile}, \hyperpage{67}
-    \subitem {Profile\+ID}, \hyperpage{67}
-    \subitem {To\+Entity}, \hyperpage{66}
+    \subitem {Delete}, \hyperpage{66}
+    \subitem {Equals}, \hyperpage{67}
+    \subitem {Get\+Hash\+Code}, \hyperpage{68}
+    \subitem {ID}, \hyperpage{68}
+    \subitem {Name}, \hyperpage{68}
+    \subitem {Profile}, \hyperpage{68}
+    \subitem {Profile\+ID}, \hyperpage{69}
+    \subitem {To\+Entity}, \hyperpage{68}
   \item {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}
-    \subitem {Attach\+To\+Letter}, \hyperpage{121}
-    \subitem {Database\+Doctors\+Letter}, \hyperpage{123}
-    \subitem {Delete}, \hyperpage{122}
-    \subitem {Disattach\+From\+Letter}, \hyperpage{122}
-    \subitem {Doctors\+Letter}, \hyperpage{123}
-    \subitem {Dosis}, \hyperpage{123}
-    \subitem {End\+Date}, \hyperpage{123}
-    \subitem {Equals}, \hyperpage{122}
-    \subitem {Frequency}, \hyperpage{123}
-    \subitem {Get\+Hash\+Code}, \hyperpage{123}
-    \subitem {Interval}, \hyperpage{123}
-    \subitem {Letter\+Id}, \hyperpage{124}
-    \subitem {To\+Medication}, \hyperpage{123}
+    \subitem {Attach\+To\+Letter}, \hyperpage{124}
+    \subitem {Database\+Doctors\+Letter}, \hyperpage{126}
+    \subitem {Delete}, \hyperpage{125}
+    \subitem {Disattach\+From\+Letter}, \hyperpage{125}
+    \subitem {Doctors\+Letter}, \hyperpage{126}
+    \subitem {Dosis}, \hyperpage{126}
+    \subitem {End\+Date}, \hyperpage{126}
+    \subitem {Equals}, \hyperpage{125}
+    \subitem {Frequency}, \hyperpage{126}
+    \subitem {Get\+Hash\+Code}, \hyperpage{126}
+    \subitem {Interval}, \hyperpage{126}
+    \subitem {Letter\+Id}, \hyperpage{127}
+    \subitem {To\+Medication}, \hyperpage{126}
   \item {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}
-    \subitem {Birth\+Date}, \hyperpage{147}
-    \subitem {Blood\+Type}, \hyperpage{147}
-    \subitem {Equals}, \hyperpage{146}
-    \subitem {Get\+Hash\+Code}, \hyperpage{146}
-    \subitem {Insurance\+Number}, \hyperpage{147}
-    \subitem {Last\+Name}, \hyperpage{147}
-    \subitem {Profile}, \hyperpage{145}
-    \subitem {To\+Profile}, \hyperpage{146}
+    \subitem {Birth\+Date}, \hyperpage{150}
+    \subitem {Blood\+Type}, \hyperpage{150}
+    \subitem {Equals}, \hyperpage{149}
+    \subitem {Get\+Hash\+Code}, \hyperpage{149}
+    \subitem {Insurance\+Number}, \hyperpage{150}
+    \subitem {Last\+Name}, \hyperpage{150}
+    \subitem {Profile}, \hyperpage{148}
+    \subitem {To\+Profile}, \hyperpage{149}
   \item {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}
-    \subitem {Activate}, \hyperpage{70}
-    \subitem {Create}, \hyperpage{70}
-    \subitem {Delete}, \hyperpage{70}
-    \subitem {Destroy}, \hyperpage{71}
-    \subitem {Entity\+Database}, \hyperpage{69}
-    \subitem {Get\+Active\+Profile}, \hyperpage{71}
-    \subitem {Get\+All\+Data\+From\+Profile$<$ E $>$}, \hyperpage{71}
-    \subitem {Get\+All\+Doctors\+Letter\+Groups}, \hyperpage{72}
-    \subitem {Get\+All\+Doctors\+Letters}, \hyperpage{72}
-    \subitem {Get\+All\+Medications}, \hyperpage{72}
-    \subitem {Get\+All\+Profiles}, \hyperpage{72}
-    \subitem {Get\+Doctor}, \hyperpage{73}
-    \subitem {Get\+Profile}, \hyperpage{73}
-    \subitem {Insert}, \hyperpage{73}
-    \subitem {Update}, \hyperpage{73}
+    \subitem {Activate}, \hyperpage{71}
+    \subitem {Create}, \hyperpage{71}
+    \subitem {Delete}, \hyperpage{72}
+    \subitem {Destroy}, \hyperpage{72}
+    \subitem {Entity\+Database}, \hyperpage{70, 71}
+    \subitem {Get\+Active\+Profile}, \hyperpage{72}
+    \subitem {Get\+All\+Data\+From\+Profile$<$ E $>$}, \hyperpage{72}
+    \subitem {Get\+All\+Doctors\+Letter\+Groups}, \hyperpage{73}
+    \subitem {Get\+All\+Doctors\+Letters}, \hyperpage{73}
+    \subitem {Get\+All\+Medications}, \hyperpage{73}
+    \subitem {Get\+All\+Profiles}, \hyperpage{73}
+    \subitem {Get\+Doctor}, \hyperpage{74}
+    \subitem {Get\+Profile}, \hyperpage{74}
+    \subitem {Insert}, \hyperpage{74}
+    \subitem {Update}, \hyperpage{74}
   \item {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}
-    \subitem {Activate}, \hyperpage{99}
-    \subitem {Delete}, \hyperpage{100}
-    \subitem {Get\+Active\+Profile}, \hyperpage{100}
-    \subitem {Get\+All\+Doctors\+Letter\+Groups}, \hyperpage{100}
-    \subitem {Get\+All\+Doctors\+Letters}, \hyperpage{100}
-    \subitem {Get\+All\+Medications}, \hyperpage{100}
-    \subitem {Get\+All\+Profiles}, \hyperpage{100}
-    \subitem {Get\+Doctor}, \hyperpage{101}
-    \subitem {Get\+Profile}, \hyperpage{101}
-    \subitem {Insert}, \hyperpage{102}
-    \subitem {Update}, \hyperpage{102}
+    \subitem {Activate}, \hyperpage{101}
+    \subitem {Delete}, \hyperpage{103}
+    \subitem {Get\+Active\+Profile}, \hyperpage{103}
+    \subitem {Get\+All\+Doctors\+Letter\+Groups}, \hyperpage{103}
+    \subitem {Get\+All\+Doctors\+Letters}, \hyperpage{103}
+    \subitem {Get\+All\+Medications}, \hyperpage{103}
+    \subitem {Get\+All\+Profiles}, \hyperpage{103}
+    \subitem {Get\+Doctor}, \hyperpage{104}
+    \subitem {Get\+Profile}, \hyperpage{104}
+    \subitem {Insert}, \hyperpage{105}
+    \subitem {Update}, \hyperpage{105}
   \item {my\+M\+D\+::\+Model\+::\+Entity\+Factory\+::\+Entity\+Factory}
-    \subitem {Create\+Empty\+Doctors\+Letter}, \hyperpage{75}
-    \subitem {Create\+Empty\+Group}, \hyperpage{75}
-    \subitem {Create\+Empty\+Medication}, \hyperpage{75}
-    \subitem {Create\+Empty\+Profile}, \hyperpage{75}
+    \subitem {Create\+Empty\+Doctors\+Letter}, \hyperpage{76}
+    \subitem {Create\+Empty\+Group}, \hyperpage{76}
+    \subitem {Create\+Empty\+Medication}, \hyperpage{76}
+    \subitem {Create\+Empty\+Profile}, \hyperpage{76}
   \item {my\+M\+D\+::\+Model\+::\+Entity\+Factory\+::\+I\+Entity\+Factory}
-    \subitem {Create\+Empty\+Doctors\+Letter}, \hyperpage{103}
-    \subitem {Create\+Empty\+Group}, \hyperpage{103}
-    \subitem {Create\+Empty\+Medication}, \hyperpage{104}
-    \subitem {Create\+Empty\+Profile}, \hyperpage{104}
+    \subitem {Create\+Empty\+Doctors\+Letter}, \hyperpage{106}
+    \subitem {Create\+Empty\+Group}, \hyperpage{106}
+    \subitem {Create\+Empty\+Medication}, \hyperpage{107}
+    \subitem {Create\+Empty\+Profile}, \hyperpage{107}
   \item {my\+M\+D\+::\+Model\+::\+File\+Helper\+::\+I\+File\+Helper}
-    \subitem {Delete\+File}, \hyperpage{105}
-    \subitem {Get\+Local\+File\+Path}, \hyperpage{105}
+    \subitem {Delete\+File}, \hyperpage{108}
+    \subitem {Get\+Local\+File\+Path}, \hyperpage{108}
   \item {my\+M\+D\+::\+Model\+::\+Model\+Facade\+::\+Model\+Facade}
-    \subitem {Activate}, \hyperpage{134}
-    \subitem {Create\+Empty\+Group}, \hyperpage{134}
-    \subitem {Create\+Empty\+Medication}, \hyperpage{135}
-    \subitem {Create\+Empty\+Profile}, \hyperpage{135}
-    \subitem {Delete}, \hyperpage{135}
-    \subitem {Get\+Active\+Profile}, \hyperpage{136}
-    \subitem {Get\+All\+Doctors\+Letters}, \hyperpage{136}
-    \subitem {Get\+All\+Groups}, \hyperpage{136}
-    \subitem {Get\+All\+Medications}, \hyperpage{136}
-    \subitem {Model\+Facade}, \hyperpage{134}
-    \subitem {Send\+Letter}, \hyperpage{136}
-    \subitem {Update}, \hyperpage{136}
+    \subitem {Activate}, \hyperpage{137}
+    \subitem {Create\+Empty\+Group}, \hyperpage{137}
+    \subitem {Create\+Empty\+Medication}, \hyperpage{138}
+    \subitem {Create\+Empty\+Profile}, \hyperpage{138}
+    \subitem {Delete}, \hyperpage{138}
+    \subitem {Get\+Active\+Profile}, \hyperpage{139}
+    \subitem {Get\+All\+Doctors\+Letters}, \hyperpage{139}
+    \subitem {Get\+All\+Groups}, \hyperpage{139}
+    \subitem {Get\+All\+Medications}, \hyperpage{139}
+    \subitem {Model\+Facade}, \hyperpage{137}
+    \subitem {Send\+Letter}, \hyperpage{139}
+    \subitem {Update}, \hyperpage{139}
   \item {my\+M\+D\+::\+Model\+::\+Parser\+Model}
     \subitem {File\+Format}, \hyperpage{15}
   \item {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}
-    \subitem {Init}, \hyperpage{77}
-    \subitem {Parse\+Doctor}, \hyperpage{77}
-    \subitem {Parse\+File}, \hyperpage{77}
-    \subitem {Parse\+Letter}, \hyperpage{78}
-    \subitem {Parse\+Medications}, \hyperpage{78}
-    \subitem {Parse\+Profile}, \hyperpage{79}
+    \subitem {Init}, \hyperpage{78}
+    \subitem {Parse\+Doctor}, \hyperpage{78}
+    \subitem {Parse\+File}, \hyperpage{78}
+    \subitem {Parse\+Letter}, \hyperpage{79}
+    \subitem {Parse\+Medications}, \hyperpage{79}
+    \subitem {Parse\+Profile}, \hyperpage{80}
   \item {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Hl7\+To\+Database\+Parser}
-    \subitem {Hl7\+To\+Database\+Parser}, \hyperpage{80, 81}
-    \subitem {Init}, \hyperpage{81}
-    \subitem {Parse\+Doctor}, \hyperpage{81}
-    \subitem {Parse\+Letter}, \hyperpage{82}
-    \subitem {Parse\+Medications}, \hyperpage{82}
-    \subitem {Parse\+Profile}, \hyperpage{82}
+    \subitem {Hl7\+To\+Database\+Parser}, \hyperpage{81, 82}
+    \subitem {Init}, \hyperpage{82}
+    \subitem {Parse\+Doctor}, \hyperpage{82}
+    \subitem {Parse\+Letter}, \hyperpage{83}
+    \subitem {Parse\+Medications}, \hyperpage{83}
+    \subitem {Parse\+Profile}, \hyperpage{83}
   \item {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Hl7\+Parser\+Helper}
-    \subitem {Finalize\+Medication}, \hyperpage{106}
-    \subitem {Prepare\+Formatter}, \hyperpage{106}
+    \subitem {Finalize\+Medication}, \hyperpage{109}
+    \subitem {Prepare\+Formatter}, \hyperpage{109}
   \item {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Parser\+Facade}
-    \subitem {Parse\+File\+To\+Database}, \hyperpage{115}
-    \subitem {Parse\+Letter\+To\+Original\+File}, \hyperpage{116}
+    \subitem {Parse\+File\+To\+Database}, \hyperpage{118}
+    \subitem {Parse\+Letter\+To\+Original\+File}, \hyperpage{119}
   \item {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Letter\+To\+Original\+File\+Parser}
-    \subitem {Parse\+Letter}, \hyperpage{119}
+    \subitem {Parse\+Letter}, \hyperpage{122}
   \item {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Parser\+Facade}
-    \subitem {Parse\+File\+To\+Database}, \hyperpage{143}
-    \subitem {Parse\+Letter\+To\+Original\+File}, \hyperpage{144}
+    \subitem {Parse\+File\+To\+Database}, \hyperpage{146}
+    \subitem {Parse\+Letter\+To\+Original\+File}, \hyperpage{147}
   \item {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+Bluetooth}
     \subitem {cancel\+Send}, \hyperpage{26}
     \subitem {connect}, \hyperpage{26}
-    \subitem {pair}, \hyperpage{26}
-    \subitem {receive}, \hyperpage{26}
-    \subitem {scan\+For\+Devices}, \hyperpage{26}
-    \subitem {send}, \hyperpage{26}
+    \subitem {pair}, \hyperpage{27}
+    \subitem {receive}, \hyperpage{27}
+    \subitem {scan\+For\+Devices}, \hyperpage{27}
+    \subitem {send}, \hyperpage{27}
   \item {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+Device}
-    \subitem {connected}, \hyperpage{41}
-    \subitem {get\+Name}, \hyperpage{41}
-    \subitem {get\+Uuid}, \hyperpage{41}
-    \subitem {paired}, \hyperpage{41}
+    \subitem {connected}, \hyperpage{42}
+    \subitem {get\+Name}, \hyperpage{42}
+    \subitem {get\+Uuid}, \hyperpage{43}
+    \subitem {paired}, \hyperpage{43}
   \item {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+I\+Bluetooth}
-    \subitem {cancel\+Send}, \hyperpage{83}
-    \subitem {connect}, \hyperpage{83}
-    \subitem {pair}, \hyperpage{83}
-    \subitem {receive}, \hyperpage{84}
-    \subitem {scan\+For\+Devices}, \hyperpage{84}
-    \subitem {send}, \hyperpage{84}
+    \subitem {cancel\+Send}, \hyperpage{84}
+    \subitem {connect}, \hyperpage{85}
+    \subitem {pair}, \hyperpage{85}
+    \subitem {receive}, \hyperpage{85}
+    \subitem {scan\+For\+Devices}, \hyperpage{86}
+    \subitem {send}, \hyperpage{86}
   \item {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}
     \subitem {Blood\+Type}, \hyperpage{17}
     \subitem {Interval}, \hyperpage{17}
     \subitem {Sensitivity}, \hyperpage{18}
   \item {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Data}
-    \subitem {Date}, \hyperpage{86}
-    \subitem {Sensitivity}, \hyperpage{86}
+    \subitem {Date}, \hyperpage{87}
+    \subitem {Sensitivity}, \hyperpage{88}
   \item {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctor}
-    \subitem {Field}, \hyperpage{89}
-    \subitem {To\+Doctor}, \hyperpage{89}
+    \subitem {Field}, \hyperpage{91}
+    \subitem {To\+Doctor}, \hyperpage{91}
   \item {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}
-    \subitem {Add\+To\+Group}, \hyperpage{91}
-    \subitem {Attach\+Medication}, \hyperpage{92}
-    \subitem {Diagnosis}, \hyperpage{93}
-    \subitem {Doctor}, \hyperpage{93}
-    \subitem {Groups}, \hyperpage{93}
-    \subitem {Medication}, \hyperpage{93}
-    \subitem {Remove\+From\+Group}, \hyperpage{92}
-    \subitem {Remove\+Medication}, \hyperpage{92}
-    \subitem {To\+Doctors\+Letter}, \hyperpage{92}
+    \subitem {Add\+To\+Group}, \hyperpage{94}
+    \subitem {Attach\+Medication}, \hyperpage{94}
+    \subitem {Diagnosis}, \hyperpage{95}
+    \subitem {Doctor}, \hyperpage{95}
+    \subitem {Groups}, \hyperpage{95}
+    \subitem {Medication}, \hyperpage{96}
+    \subitem {Remove\+From\+Group}, \hyperpage{94}
+    \subitem {Remove\+Medication}, \hyperpage{94}
+    \subitem {To\+Doctors\+Letter}, \hyperpage{95}
   \item {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}
-    \subitem {Add}, \hyperpage{95}
-    \subitem {Doctors\+Letters}, \hyperpage{96}
-    \subitem {Last\+Date}, \hyperpage{96}
-    \subitem {Remove}, \hyperpage{95}
-    \subitem {To\+Doctors\+Letter\+Group}, \hyperpage{96}
+    \subitem {Add}, \hyperpage{97}
+    \subitem {Doctors\+Letters}, \hyperpage{98}
+    \subitem {Last\+Date}, \hyperpage{99}
+    \subitem {Remove}, \hyperpage{98}
+    \subitem {To\+Doctors\+Letter\+Group}, \hyperpage{98}
   \item {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Entity}
-    \subitem {Name}, \hyperpage{98}
-    \subitem {To\+Entity}, \hyperpage{97}
+    \subitem {Name}, \hyperpage{100}
+    \subitem {To\+Entity}, \hyperpage{100}
   \item {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}
-    \subitem {Attach\+To\+Letter}, \hyperpage{108}
-    \subitem {Date}, \hyperpage{109}
-    \subitem {Disattach\+From\+Letter}, \hyperpage{109}
-    \subitem {Dosis}, \hyperpage{109}
-    \subitem {End\+Date}, \hyperpage{109}
-    \subitem {Frequency}, \hyperpage{109}
-    \subitem {Interval}, \hyperpage{110}
-    \subitem {To\+Medication}, \hyperpage{109}
+    \subitem {Attach\+To\+Letter}, \hyperpage{111}
+    \subitem {Date}, \hyperpage{112}
+    \subitem {Disattach\+From\+Letter}, \hyperpage{112}
+    \subitem {Dosis}, \hyperpage{112}
+    \subitem {End\+Date}, \hyperpage{112}
+    \subitem {Frequency}, \hyperpage{112}
+    \subitem {Interval}, \hyperpage{113}
+    \subitem {To\+Medication}, \hyperpage{112}
   \item {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Profile}
-    \subitem {Birth\+Date}, \hyperpage{118}
-    \subitem {Blood\+Type}, \hyperpage{118}
-    \subitem {Insurance\+Number}, \hyperpage{118}
-    \subitem {Last\+Name}, \hyperpage{118}
-    \subitem {To\+Profile}, \hyperpage{118}
+    \subitem {Birth\+Date}, \hyperpage{121}
+    \subitem {Blood\+Type}, \hyperpage{121}
+    \subitem {Insurance\+Number}, \hyperpage{121}
+    \subitem {Last\+Name}, \hyperpage{121}
+    \subitem {To\+Profile}, \hyperpage{121}
   \item {my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}
-    \subitem {Activate}, \hyperpage{111}
-    \subitem {Create\+Empty\+Group}, \hyperpage{111}
-    \subitem {Create\+Empty\+Medication}, \hyperpage{111}
-    \subitem {Create\+Empty\+Profile}, \hyperpage{111}
-    \subitem {Delete}, \hyperpage{112}
-    \subitem {Get\+Active\+Profile}, \hyperpage{112}
-    \subitem {Get\+All\+Doctors\+Letters}, \hyperpage{112}
-    \subitem {Get\+All\+Groups}, \hyperpage{112}
-    \subitem {Get\+All\+Medications}, \hyperpage{112}
-    \subitem {Send\+Letter}, \hyperpage{112}
-    \subitem {Update}, \hyperpage{113}
+    \subitem {Activate}, \hyperpage{114}
+    \subitem {Create\+Empty\+Group}, \hyperpage{114}
+    \subitem {Create\+Empty\+Medication}, \hyperpage{114}
+    \subitem {Create\+Empty\+Profile}, \hyperpage{114}
+    \subitem {Delete}, \hyperpage{115}
+    \subitem {Get\+Active\+Profile}, \hyperpage{115}
+    \subitem {Get\+All\+Doctors\+Letters}, \hyperpage{115}
+    \subitem {Get\+All\+Groups}, \hyperpage{115}
+    \subitem {Get\+All\+Medications}, \hyperpage{115}
+    \subitem {Send\+Letter}, \hyperpage{115}
+    \subitem {Update}, \hyperpage{116}
   \item {my\+M\+D\+::\+Model\+Interface\+::\+Transmission\+Model\+Interface\+::\+I\+Device}
-    \subitem {connected}, \hyperpage{87}
-    \subitem {get\+Name}, \hyperpage{87}
-    \subitem {get\+Uuid}, \hyperpage{87}
-    \subitem {paired}, \hyperpage{87}
+    \subitem {connected}, \hyperpage{89}
+    \subitem {get\+Name}, \hyperpage{89}
+    \subitem {get\+Uuid}, \hyperpage{89}
+    \subitem {paired}, \hyperpage{89}
   \item {my\+M\+D\+::\+View\+::\+Abstract\+Pages\+::\+Custom\+Content\+Page}
-    \subitem {Custom\+Content\+Page}, \hyperpage{28}
+    \subitem {Custom\+Content\+Page}, \hyperpage{29}
   \item {my\+M\+D\+::\+View\+::\+Medication\+Tab\+Pages\+::\+Detailed\+Medication\+Page}
-    \subitem {Detailed\+Medication\+Page}, \hyperpage{37}
+    \subitem {Detailed\+Medication\+Page}, \hyperpage{38}
   \item {my\+M\+D\+::\+View\+::\+Medication\+Tab\+Pages\+::\+Medication\+Page}
-    \subitem {Add\+Med\+\_\+\+Clicked}, \hyperpage{125}
-    \subitem {Medication\+Page}, \hyperpage{125}
+    \subitem {Add\+Med\+\_\+\+Clicked}, \hyperpage{128}
+    \subitem {Medication\+Page}, \hyperpage{128}
   \item {my\+M\+D\+::\+View\+::\+Overview\+Tab\+Pages\+::\+Detailed\+Doctors\+Letter\+Page}
-    \subitem {Detailed\+Doctors\+Letter\+Page}, \hyperpage{32}
+    \subitem {Detailed\+Doctors\+Letter\+Page}, \hyperpage{33}
   \item {my\+M\+D\+::\+View\+::\+Overview\+Tab\+Pages\+::\+Overview\+Page}
-    \subitem {Overview\+Page}, \hyperpage{140}
+    \subitem {Overview\+Page}, \hyperpage{143}
   \item {my\+M\+D\+::\+View\+::\+Profile\+Tab\+Pages\+::\+Profile\+Edit\+Page}
-    \subitem {Profile\+Edit\+Page}, \hyperpage{148}
+    \subitem {Profile\+Edit\+Page}, \hyperpage{151}
   \item {my\+M\+D\+::\+View\+::\+Profile\+Tab\+Pages\+::\+Profile\+Page}
-    \subitem {Edit\+Profile\+Button}, \hyperpage{154}
-    \subitem {Profile\+Page}, \hyperpage{154}
+    \subitem {Edit\+Profile\+Button}, \hyperpage{157}
+    \subitem {Profile\+Page}, \hyperpage{157}
   \item {my\+M\+D\+::\+View\+::\+Send\+Data\+Tab\+Pages\+::\+Select\+Device\+Page}
-    \subitem {Select\+Device\+Page}, \hyperpage{158}
+    \subitem {Select\+Device\+Page}, \hyperpage{161}
   \item {my\+M\+D\+::\+View\+::\+Send\+Data\+Tab\+Pages\+::\+Select\+Doctors\+Letters\+Page}
-    \subitem {Select\+Doctors\+Letters\+Page}, \hyperpage{162}
+    \subitem {Select\+Doctors\+Letters\+Page}, \hyperpage{165}
   \item {my\+M\+D\+::\+View\+::\+Send\+Data\+Tab\+Pages\+::\+Send\+Data\+Page}
-    \subitem {Send\+Data\+Page}, \hyperpage{165}
+    \subitem {Send\+Data\+Page}, \hyperpage{168}
   \item {my\+M\+D\+::\+View\+::\+Send\+Data\+Tab\+Pages\+::\+Transmitting\+Data\+Page}
-    \subitem {Select\+Device\+Button\+\_\+\+Clicked}, \hyperpage{167}
-    \subitem {Select\+Letters\+Button\+\_\+\+Clicked}, \hyperpage{167}
-    \subitem {Transmitting\+Data\+Page}, \hyperpage{167}
+    \subitem {Select\+Device\+Button\+\_\+\+Clicked}, \hyperpage{170}
+    \subitem {Select\+Letters\+Button\+\_\+\+Clicked}, \hyperpage{170}
+    \subitem {Transmitting\+Data\+Page}, \hyperpage{170}
   \item {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Detailed\+Medicine\+View\+Model}
-    \subitem {Cancel\+Medication}, \hyperpage{40}
-    \subitem {Detailed\+Medicine\+View\+Model}, \hyperpage{39}
-    \subitem {Save\+New\+Medication}, \hyperpage{40}
+    \subitem {Cancel\+Medication}, \hyperpage{41}
+    \subitem {Detailed\+Medicine\+View\+Model}, \hyperpage{40}
+    \subitem {Save\+New\+Medication}, \hyperpage{41}
   \item {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}
-    \subitem {Delete\+List\+Item}, \hyperpage{128}
-    \subitem {Delete\+List\+Item\+Method}, \hyperpage{127}
-    \subitem {Group\+List}, \hyperpage{127}
-    \subitem {Key}, \hyperpage{128}
-    \subitem {Medication\+View\+Model}, \hyperpage{127}
-    \subitem {Medications\+Items\+List}, \hyperpage{128}
-    \subitem {Medications\+List}, \hyperpage{128}
-    \subitem {Reload}, \hyperpage{128}
+    \subitem {Delete\+List\+Item}, \hyperpage{131}
+    \subitem {Delete\+List\+Item\+Method}, \hyperpage{130}
+    \subitem {Group\+List}, \hyperpage{130}
+    \subitem {Key}, \hyperpage{131}
+    \subitem {Medication\+View\+Model}, \hyperpage{130}
+    \subitem {Medications\+Items\+List}, \hyperpage{131}
+    \subitem {Medications\+List}, \hyperpage{131}
+    \subitem {Reload}, \hyperpage{131}
   \item {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}
-    \subitem {Cancel\+Possible}, \hyperpage{131}
-    \subitem {Max\+Start\+Date}, \hyperpage{131}
-    \subitem {Medication}, \hyperpage{131}
-    \subitem {Medication\+Dosis}, \hyperpage{131}
-    \subitem {Medication\+Duration}, \hyperpage{131}
-    \subitem {Medication\+End\+Date}, \hyperpage{131}
-    \subitem {Medication\+Frequency}, \hyperpage{131}
-    \subitem {Medication\+Interval}, \hyperpage{132}
-    \subitem {Medication\+Name}, \hyperpage{132}
-    \subitem {Medication\+Start\+Date}, \hyperpage{132}
-    \subitem {Medicine\+View\+Model}, \hyperpage{130}
-    \subitem {Min\+End\+Date}, \hyperpage{132}
-    \subitem {Name\+Sort}, \hyperpage{132}
-    \subitem {Saving\+Possible}, \hyperpage{132}
+    \subitem {Cancel\+Possible}, \hyperpage{134}
+    \subitem {Max\+Start\+Date}, \hyperpage{134}
+    \subitem {Medication}, \hyperpage{134}
+    \subitem {Medication\+Dosis}, \hyperpage{134}
+    \subitem {Medication\+Duration}, \hyperpage{134}
+    \subitem {Medication\+End\+Date}, \hyperpage{134}
+    \subitem {Medication\+Frequency}, \hyperpage{134}
+    \subitem {Medication\+Interval}, \hyperpage{135}
+    \subitem {Medication\+Name}, \hyperpage{135}
+    \subitem {Medication\+Start\+Date}, \hyperpage{135}
+    \subitem {Medicine\+View\+Model}, \hyperpage{133}
+    \subitem {Min\+End\+Date}, \hyperpage{135}
+    \subitem {Name\+Sort}, \hyperpage{135}
+    \subitem {Saving\+Possible}, \hyperpage{135}
   \item {my\+M\+D\+::\+View\+Model\+::\+Overall\+View\+Model\+::\+Overall\+View\+Model}
-    \subitem {Ble\+Adapter}, \hyperpage{139}
-    \subitem {Model\+Facade}, \hyperpage{139}
-    \subitem {On\+Property\+Changed}, \hyperpage{139}
-    \subitem {Overall\+View\+Model}, \hyperpage{139}
-    \subitem {Property\+Changed}, \hyperpage{139}
+    \subitem {Ble\+Adapter}, \hyperpage{142}
+    \subitem {Model\+Facade}, \hyperpage{142}
+    \subitem {On\+Property\+Changed}, \hyperpage{142}
+    \subitem {Overall\+View\+Model}, \hyperpage{142}
+    \subitem {Property\+Changed}, \hyperpage{142}
   \item {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Detailed\+Doctors\+Letter\+View\+Model}
     \subitem {Detailed\+Doctors\+Letter\+View\+Model}, 
-		\hyperpage{34, 35}
-    \subitem {Diagnosis}, \hyperpage{35}
+		\hyperpage{35, 36}
+    \subitem {Diagnosis}, \hyperpage{36}
   \item {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Doctors\+Letter\+View\+Model}
-    \subitem {Doctor}, \hyperpage{62}
-    \subitem {Doctors\+Field}, \hyperpage{62}
-    \subitem {Doctors\+Letter}, \hyperpage{62}
-    \subitem {Doctors\+Letter\+Date}, \hyperpage{63}
-    \subitem {Doctors\+Letter\+View\+Model}, \hyperpage{62}
-    \subitem {Doctors\+Name}, \hyperpage{63}
+    \subitem {Doctor}, \hyperpage{64}
+    \subitem {Doctors\+Field}, \hyperpage{64}
+    \subitem {Doctors\+Letter}, \hyperpage{64}
+    \subitem {Doctors\+Letter\+Date}, \hyperpage{64}
+    \subitem {Doctors\+Letter\+View\+Model}, \hyperpage{63}
+    \subitem {Doctors\+Name}, \hyperpage{64}
   \item {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model}
-    \subitem {Add\+Dummy\+Letter}, \hyperpage{142}
-    \subitem {Doctors\+Letters\+List}, \hyperpage{142}
-    \subitem {Overview\+View\+Model}, \hyperpage{142}
+    \subitem {Add\+Dummy\+Letter}, \hyperpage{145}
+    \subitem {Doctors\+Letters\+List}, \hyperpage{145}
+    \subitem {Overview\+View\+Model}, \hyperpage{145}
   \item {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Int\+Enum\+Converter}
-    \subitem {Convert}, \hyperpage{114}
-    \subitem {Convert\+Back}, \hyperpage{114}
+    \subitem {Convert}, \hyperpage{117}
+    \subitem {Convert\+Back}, \hyperpage{117}
   \item {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Edit\+View\+Model}
-    \subitem {Profile\+Edit\+View\+Model}, \hyperpage{150}
-    \subitem {Save\+Changed\+Profile}, \hyperpage{150}
+    \subitem {Profile\+Edit\+View\+Model}, \hyperpage{153}
+    \subitem {Save\+Changed\+Profile}, \hyperpage{153}
   \item {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}
-    \subitem {Birthdate}, \hyperpage{152}
-    \subitem {Blood\+Type}, \hyperpage{152}
-    \subitem {Blood\+Type\+Name}, \hyperpage{152}
-    \subitem {Blood\+Type\+Names}, \hyperpage{152}
-    \subitem {Insurance\+Number}, \hyperpage{152}
-    \subitem {Last\+Name}, \hyperpage{152}
-    \subitem {Name}, \hyperpage{152}
-    \subitem {Profile}, \hyperpage{152}
-    \subitem {Profile\+Item\+View\+Model}, \hyperpage{151}
+    \subitem {Birthdate}, \hyperpage{155}
+    \subitem {Blood\+Type}, \hyperpage{155}
+    \subitem {Blood\+Type\+Name}, \hyperpage{155}
+    \subitem {Blood\+Type\+Names}, \hyperpage{155}
+    \subitem {Insurance\+Number}, \hyperpage{155}
+    \subitem {Last\+Name}, \hyperpage{155}
+    \subitem {Name}, \hyperpage{155}
+    \subitem {Profile}, \hyperpage{155}
+    \subitem {Profile\+Item\+View\+Model}, \hyperpage{154}
   \item {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+View\+Model}
-    \subitem {Profile\+View\+Model}, \hyperpage{156}
+    \subitem {Profile\+View\+Model}, \hyperpage{159}
   \item {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Scan\+Result\+View\+Model}
-    \subitem {Device}, \hyperpage{156}
-    \subitem {Device\+Name}, \hyperpage{156}
-    \subitem {Is\+Connected}, \hyperpage{156}
-    \subitem {Local\+Name}, \hyperpage{157}
-    \subitem {Uuid}, \hyperpage{157}
+    \subitem {Device}, \hyperpage{159}
+    \subitem {Device\+Name}, \hyperpage{159}
+    \subitem {Is\+Connected}, \hyperpage{159}
+    \subitem {Local\+Name}, \hyperpage{160}
+    \subitem {Uuid}, \hyperpage{160}
   \item {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}
-    \subitem {Connect\+To\+Device}, \hyperpage{160}
-    \subitem {Device\+List}, \hyperpage{160}
-    \subitem {scan}, \hyperpage{161}
-    \subitem {Scan\+For\+Devices\+\_\+\+Clicked}, \hyperpage{161}
-    \subitem {Select\+Device\+View\+Model}, \hyperpage{160}
-    \subitem {Start\+Scan}, \hyperpage{160}
-    \subitem {Stop\+Scan}, \hyperpage{160}
+    \subitem {Connect\+To\+Device}, \hyperpage{163}
+    \subitem {Device\+List}, \hyperpage{163}
+    \subitem {scan}, \hyperpage{164}
+    \subitem {Scan\+For\+Devices\+\_\+\+Clicked}, \hyperpage{164}
+    \subitem {Select\+Device\+View\+Model}, \hyperpage{163}
+    \subitem {Start\+Scan}, \hyperpage{163}
+    \subitem {Stop\+Scan}, \hyperpage{163}
   \item {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Doctors\+Letters\+View\+Model}
-    \subitem {Select\+Doctors\+Letters\+View\+Model}, \hyperpage{164}
+    \subitem {Select\+Doctors\+Letters\+View\+Model}, \hyperpage{167}
   \item {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Send\+Data\+View\+Model}
-    \subitem {Send\+Data\+View\+Model}, \hyperpage{166}
+    \subitem {Send\+Data\+View\+Model}, \hyperpage{169}
   \item {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Transmitting\+Data\+View\+Model}
-    \subitem {Build\+Server}, \hyperpage{169}
-    \subitem {Characteristic\+Value}, \hyperpage{169}
-    \subitem {Output}, \hyperpage{169}
-    \subitem {Server\+Settings}, \hyperpage{169}
-    \subitem {Server\+Text}, \hyperpage{169}
-    \subitem {Transmitting\+Data\+View\+Model}, \hyperpage{169}
+    \subitem {Build\+Server}, \hyperpage{172}
+    \subitem {Server\+Settings}, \hyperpage{172}
+    \subitem {Transmitting\+Data\+View\+Model}, \hyperpage{172}
   \item {my\+M\+D\+::my\+M\+D\+Page}
-    \subitem {my\+M\+D\+Page}, \hyperpage{137}
+    \subitem {my\+M\+D\+Page}, \hyperpage{140}
   \item {my\+M\+D\+Page}
-    \subitem {my\+M\+D\+::my\+M\+D\+Page}, \hyperpage{137}
+    \subitem {my\+M\+D\+::my\+M\+D\+Page}, \hyperpage{140}
   \item {my\+MD}, \hyperpage{13}
 
   \indexspace
 
   \item {Name}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}, 
-		\hyperpage{67}
+		\hyperpage{68}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Entity}, 
-		\hyperpage{98}
+		\hyperpage{100}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}, 
-		\hyperpage{152}
+		\hyperpage{155}
   \item {Name\+Sort}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}, 
-		\hyperpage{132}
+		\hyperpage{135}
 
   \indexspace
 
   \item {On\+Property\+Changed}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Overall\+View\+Model\+::\+Overall\+View\+Model}, 
-		\hyperpage{139}
+		\hyperpage{142}
   \item {On\+Resume}
     \subitem {my\+M\+D\+::\+App}, \hyperpage{24}
   \item {On\+Sleep}
     \subitem {my\+M\+D\+::\+App}, \hyperpage{24}
   \item {On\+Start}
     \subitem {my\+M\+D\+::\+App}, \hyperpage{24}
-  \item {Output}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Transmitting\+Data\+View\+Model}, 
-		\hyperpage{169}
   \item {Overall\+View\+Model}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Overall\+View\+Model\+::\+Overall\+View\+Model}, 
-		\hyperpage{139}
+		\hyperpage{142}
   \item {Overview\+Page}
     \subitem {my\+M\+D\+::\+View\+::\+Overview\+Tab\+Pages\+::\+Overview\+Page}, 
-		\hyperpage{140}
+		\hyperpage{143}
   \item {Overview\+View\+Model}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model}, 
-		\hyperpage{142}
+		\hyperpage{145}
 
   \indexspace
 
   \item {pair}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+Bluetooth}, 
-		\hyperpage{26}
+		\hyperpage{27}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+I\+Bluetooth}, 
-		\hyperpage{83}
+		\hyperpage{85}
   \item {paired}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+Device}, 
-		\hyperpage{41}
+		\hyperpage{43}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Transmission\+Model\+Interface\+::\+I\+Device}, 
-		\hyperpage{87}
+		\hyperpage{89}
   \item {Parse\+Doctor}
     \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}, 
-		\hyperpage{77}
+		\hyperpage{78}
     \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Hl7\+To\+Database\+Parser}, 
-		\hyperpage{81}
+		\hyperpage{82}
   \item {Parse\+File}
     \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}, 
-		\hyperpage{77}
+		\hyperpage{78}
   \item {Parse\+File\+To\+Database}
     \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Parser\+Facade}, 
-		\hyperpage{115}
+		\hyperpage{118}
     \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Parser\+Facade}, 
-		\hyperpage{143}
+		\hyperpage{146}
   \item {Parse\+Letter}
-    \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}, 
-		\hyperpage{78}
-    \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Hl7\+To\+Database\+Parser}, 
-		\hyperpage{82}
-    \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Letter\+To\+Original\+File\+Parser}, 
-		\hyperpage{119}
-  \item {Parse\+Letter\+To\+Original\+File}
-    \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Parser\+Facade}, 
-		\hyperpage{116}
-    \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Parser\+Facade}, 
-		\hyperpage{144}
-  \item {Parse\+Medications}
-    \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}, 
-		\hyperpage{78}
-    \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Hl7\+To\+Database\+Parser}, 
-		\hyperpage{82}
-  \item {Parse\+Profile}
     \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}, 
 		\hyperpage{79}
     \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Hl7\+To\+Database\+Parser}, 
-		\hyperpage{82}
+		\hyperpage{83}
+    \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Letter\+To\+Original\+File\+Parser}, 
+		\hyperpage{122}
+  \item {Parse\+Letter\+To\+Original\+File}
+    \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Parser\+Facade}, 
+		\hyperpage{119}
+    \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Parser\+Facade}, 
+		\hyperpage{147}
+  \item {Parse\+Medications}
+    \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}, 
+		\hyperpage{79}
+    \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Hl7\+To\+Database\+Parser}, 
+		\hyperpage{83}
+  \item {Parse\+Profile}
+    \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+File\+To\+Database\+Parser}, 
+		\hyperpage{80}
+    \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+Hl7\+To\+Database\+Parser}, 
+		\hyperpage{83}
   \item {Prepare\+Formatter}
     \subitem {my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Hl7\+Parser\+Helper}, 
-		\hyperpage{106}
+		\hyperpage{109}
   \item {Profile}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}, 
-		\hyperpage{67}
+		\hyperpage{68}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}, 
-		\hyperpage{145}
+		\hyperpage{148}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}, 
-		\hyperpage{152}
+		\hyperpage{155}
   \item {Profile\+Edit\+Page}
     \subitem {my\+M\+D\+::\+View\+::\+Profile\+Tab\+Pages\+::\+Profile\+Edit\+Page}, 
-		\hyperpage{148}
+		\hyperpage{151}
   \item {Profile\+Edit\+View\+Model}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Edit\+View\+Model}, 
-		\hyperpage{150}
+		\hyperpage{153}
   \item {Profile\+ID}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}, 
-		\hyperpage{67}
+		\hyperpage{69}
   \item {Profile\+Item\+View\+Model}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}, 
-		\hyperpage{151}
+		\hyperpage{154}
   \item {Profile\+Page}
     \subitem {my\+M\+D\+::\+View\+::\+Profile\+Tab\+Pages\+::\+Profile\+Page}, 
-		\hyperpage{154}
+		\hyperpage{157}
   \item {Profile\+View\+Model}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+View\+Model}, 
-		\hyperpage{156}
+		\hyperpage{159}
   \item {Property\+Changed}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Overall\+View\+Model\+::\+Overall\+View\+Model}, 
-		\hyperpage{139}
+		\hyperpage{142}
 
   \indexspace
 
   \item {receive}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+Bluetooth}, 
-		\hyperpage{26}
+		\hyperpage{27}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+I\+Bluetooth}, 
-		\hyperpage{84}
+		\hyperpage{85}
   \item {Reload}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medication\+View\+Model}, 
-		\hyperpage{128}
+		\hyperpage{131}
   \item {Remove}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}, 
-		\hyperpage{57}
+		\hyperpage{58, 59}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}, 
-		\hyperpage{95}
+		\hyperpage{98}
   \item {Remove\+From\+Group}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{50}
+		\hyperpage{52}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}, 
-		\hyperpage{92}
+		\hyperpage{94}
   \item {Remove\+Medication}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{51}
+		\hyperpage{52}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}, 
-		\hyperpage{92}
+		\hyperpage{94}
 
   \indexspace
 
   \item {Save\+Changed\+Profile}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Edit\+View\+Model}, 
-		\hyperpage{150}
+		\hyperpage{153}
   \item {Save\+New\+Medication}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Detailed\+Medicine\+View\+Model}, 
-		\hyperpage{40}
+		\hyperpage{41}
   \item {Saving\+Possible}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}, 
-		\hyperpage{132}
+		\hyperpage{135}
   \item {scan}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}, 
-		\hyperpage{161}
+		\hyperpage{164}
   \item {scan\+For\+Devices}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+Bluetooth}, 
-		\hyperpage{26}
+		\hyperpage{27}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+I\+Bluetooth}, 
-		\hyperpage{84}
+		\hyperpage{86}
   \item {Scan\+For\+Devices\+\_\+\+Clicked}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}, 
-		\hyperpage{161}
+		\hyperpage{164}
   \item {Select\+Device\+Button\+\_\+\+Clicked}
     \subitem {my\+M\+D\+::\+View\+::\+Send\+Data\+Tab\+Pages\+::\+Transmitting\+Data\+Page}, 
-		\hyperpage{167}
+		\hyperpage{170}
   \item {Select\+Device\+Page}
     \subitem {my\+M\+D\+::\+View\+::\+Send\+Data\+Tab\+Pages\+::\+Select\+Device\+Page}, 
-		\hyperpage{158}
+		\hyperpage{161}
   \item {Select\+Device\+View\+Model}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}, 
-		\hyperpage{160}
+		\hyperpage{163}
   \item {Select\+Doctors\+Letters\+Page}
     \subitem {my\+M\+D\+::\+View\+::\+Send\+Data\+Tab\+Pages\+::\+Select\+Doctors\+Letters\+Page}, 
-		\hyperpage{162}
+		\hyperpage{165}
   \item {Select\+Doctors\+Letters\+View\+Model}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Doctors\+Letters\+View\+Model}, 
-		\hyperpage{164}
+		\hyperpage{167}
   \item {Select\+Letters\+Button\+\_\+\+Clicked}
     \subitem {my\+M\+D\+::\+View\+::\+Send\+Data\+Tab\+Pages\+::\+Transmitting\+Data\+Page}, 
-		\hyperpage{167}
+		\hyperpage{170}
   \item {send}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+Bluetooth}, 
-		\hyperpage{26}
+		\hyperpage{27}
     \subitem {my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+I\+Bluetooth}, 
-		\hyperpage{84}
+		\hyperpage{86}
   \item {Send\+Data\+Page}
     \subitem {my\+M\+D\+::\+View\+::\+Send\+Data\+Tab\+Pages\+::\+Send\+Data\+Page}, 
-		\hyperpage{165}
+		\hyperpage{168}
   \item {Send\+Data\+View\+Model}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Send\+Data\+View\+Model}, 
-		\hyperpage{166}
+		\hyperpage{169}
   \item {Send\+Letter}
     \subitem {my\+M\+D\+::\+Model\+::\+Model\+Facade\+::\+Model\+Facade}, 
-		\hyperpage{136}
+		\hyperpage{139}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}, 
-		\hyperpage{112}
+		\hyperpage{115}
   \item {Sensitivity}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}, 
-		\hyperpage{31}
+		\hyperpage{32}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}, 
 		\hyperpage{18}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Data}, 
-		\hyperpage{86}
+		\hyperpage{88}
   \item {Server\+Settings}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Transmitting\+Data\+View\+Model}, 
-		\hyperpage{169}
-  \item {Server\+Text}
-    \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Transmitting\+Data\+View\+Model}, 
-		\hyperpage{169}
+		\hyperpage{172}
   \item {Start\+Scan}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}, 
-		\hyperpage{160}
+		\hyperpage{163}
   \item {Stop\+Scan}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}, 
-		\hyperpage{160}
+		\hyperpage{163}
 
   \indexspace
 
   \item {To\+Doctor}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctor}, 
-		\hyperpage{44}
+		\hyperpage{45}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctor}, 
-		\hyperpage{89}
+		\hyperpage{91}
   \item {To\+Doctors\+Letter}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter}, 
-		\hyperpage{51}
+		\hyperpage{53}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}, 
-		\hyperpage{92}
+		\hyperpage{95}
   \item {To\+Doctors\+Letter\+Group}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}, 
-		\hyperpage{57}
+		\hyperpage{59}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}, 
-		\hyperpage{96}
+		\hyperpage{98}
   \item {To\+Entity}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}, 
-		\hyperpage{66}
+		\hyperpage{68}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Entity}, 
-		\hyperpage{97}
+		\hyperpage{100}
   \item {To\+Medication}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Medication}, 
-		\hyperpage{123}
+		\hyperpage{126}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Medication}, 
-		\hyperpage{109}
+		\hyperpage{112}
   \item {To\+Profile}
     \subitem {my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}, 
-		\hyperpage{146}
+		\hyperpage{149}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Profile}, 
-		\hyperpage{118}
+		\hyperpage{121}
   \item {Transmitting\+Data\+Page}
     \subitem {my\+M\+D\+::\+View\+::\+Send\+Data\+Tab\+Pages\+::\+Transmitting\+Data\+Page}, 
-		\hyperpage{167}
+		\hyperpage{170}
   \item {Transmitting\+Data\+View\+Model}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Transmitting\+Data\+View\+Model}, 
-		\hyperpage{169}
+		\hyperpage{172}
 
   \indexspace
 
   \item {Update}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+Entity\+Database}, 
-		\hyperpage{73}
+		\hyperpage{74}
     \subitem {my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}, 
-		\hyperpage{102}
+		\hyperpage{105}
     \subitem {my\+M\+D\+::\+Model\+::\+Model\+Facade\+::\+Model\+Facade}, 
-		\hyperpage{136}
+		\hyperpage{139}
     \subitem {my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}, 
-		\hyperpage{113}
+		\hyperpage{116}
   \item {Uuid}
     \subitem {my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Scan\+Result\+View\+Model}, 
-		\hyperpage{157}
+		\hyperpage{160}
 
 \end{theindex}

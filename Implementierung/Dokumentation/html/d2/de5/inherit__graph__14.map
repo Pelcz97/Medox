@@ -1,9 +1,0 @@
-base referer
-rect $dd/d0e/classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model.html 5,107 356,133
-rect $dc/d91/classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model.html 407,5 827,32
-rect $d0/d4a/classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model.html 413,56 822,83
-rect $d5/d96/classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model.html 406,107 829,133
-rect $dc/d21/classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model.html 420,157 815,184
-rect $d9/d00/classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model.html 404,208 831,235
-rect $d7/d4b/classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model.html 885,56 1341,83
-rect $dc/d42/classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model.html 879,107 1348,133

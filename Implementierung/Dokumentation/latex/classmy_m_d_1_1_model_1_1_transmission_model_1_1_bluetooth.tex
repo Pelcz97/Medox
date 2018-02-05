@@ -2,7 +2,13 @@
 \label{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth}\index{my\+M\+D.\+Model.\+Transmission\+Model.\+Bluetooth@{my\+M\+D.\+Model.\+Transmission\+Model.\+Bluetooth}}
 
 
-Klassendiagramm f√ºr my\+M\+D.\+Model.\+Transmission\+Model.\+Bluetooth\+:\nopagebreak
+Klasse um alle Bluetoothvorg‰nge zu kapseln  
+
+
+
+
+Klassendiagramm f√ºr my\+M\+D.\+Model.\+Transmission\+Model.\+Bluetooth\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,7 +17,8 @@ Klassendiagramm f√ºr my\+M\+D.\+Model.\+Transmission\+Model.\+Bluetooth\+:\nopag
 \end{figure}
 
 
-Zusammengeh√∂rigkeiten von my\+M\+D.\+Model.\+Transmission\+Model.\+Bluetooth\+:\nopagebreak
+Zusammengeh√∂rigkeiten von my\+M\+D.\+Model.\+Transmission\+Model.\+Bluetooth\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,18 +28,23 @@ Zusammengeh√∂rigkeiten von my\+M\+D.\+Model.\+Transmission\+Model.\+Bluetooth\+:
 \subsection*{√ñffentliche Methoden}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_aaf2c47cc102234818e414fe362ea14a7}{cancel\+Send}} ()
-\item 
-bool \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_add794d082480db984a9d49630d1e5bba}{connect}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device}{I\+Device}} device)
-\item 
-bool \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_a4955c9878fb425d4c20f344ecd16c2d1}{pair}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device}{I\+Device}} device, string pin)
-\item 
-string \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_aedbb2bbfe638eb5e83497c7b4e74d99d}{receive}} ()
-\item 
 I\+List$<$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device}{I\+Device}} $>$ \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_a551c99750193ce8a6fc03c92864d24e8}{scan\+For\+Devices}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Methode um nach Ger‰ten in der N‰he zu suchen \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_a5be7341663a848cdc5bd2209c11890ad}{send}} (string file\+Path)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Methode um eine Datei zu senden \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_aaf2c47cc102234818e414fe362ea14a7}{cancel\+Send}} ()
+\begin{DoxyCompactList}\small\item\em Methode um einen Sendevorgang abzubrechen \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_a4955c9878fb425d4c20f344ecd16c2d1}{pair}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device}{I\+Device}} device, string pin)
+\begin{DoxyCompactList}\small\item\em Methode um sich mit einem andern Ger‰t zu koppeln \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_add794d082480db984a9d49630d1e5bba}{connect}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device}{I\+Device}} device)
+\begin{DoxyCompactList}\small\item\em Methode um sich mit einem anderen Ger‰t zu verbinden \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_aedbb2bbfe638eb5e83497c7b4e74d99d}{receive}} ()
+\begin{DoxyCompactList}\small\item\em Methode um daten zu Empfangen \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Ausf√ºhrliche Beschreibung}
+Klasse um alle Bluetoothvorg‰nge zu kapseln 
+
 
 
 \subsection{Dokumentation der Elementfunktionen}
@@ -41,6 +53,10 @@ void \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth
 \index{cancel\+Send@{cancel\+Send}!my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+Bluetooth@{my\+M\+D\+::\+Model\+::\+Transmission\+Model\+::\+Bluetooth}}
 \subsubsection{\texorpdfstring{cancel\+Send()}{cancelSend()}}
 {\footnotesize\ttfamily void my\+M\+D.\+Model.\+Transmission\+Model.\+Bluetooth.\+cancel\+Send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Methode um einen Sendevorgang abzubrechen 
 
 
 
@@ -54,6 +70,18 @@ Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_transmission_model_
 
 
 
+Methode um sich mit einem anderen Ger‰t zu verbinden 
+
+
+\begin{DoxyParams}{Parameter}
+{\em device} & Das andere Ger‰t\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{R√ºckgabe}
+true, falls die Ger‰te sich erfolgreich verbunden haben. Sonst false
+\end{DoxyReturn}
+
+
 Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_a02d846b9c9b31d1ea1d35780928c3ba4}{my\+M\+D.\+Model.\+Transmission\+Model.\+I\+Bluetooth}}.
 
 \mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_a4955c9878fb425d4c20f344ecd16c2d1}\label{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_a4955c9878fb425d4c20f344ecd16c2d1}} 
@@ -62,6 +90,20 @@ Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_transmission_model_
 \subsubsection{\texorpdfstring{pair()}{pair()}}
 {\footnotesize\ttfamily bool my\+M\+D.\+Model.\+Transmission\+Model.\+Bluetooth.\+pair (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device}{I\+Device}}}]{device,  }\item[{string}]{pin }\end{DoxyParamCaption})}
 
+
+
+Methode um sich mit einem andern Ger‰t zu koppeln 
+
+
+\begin{DoxyParams}{Parameter}
+{\em device} & Das andere Ger‰t\\
+\hline
+{\em pin} & Eine Art Passwort, um die Ger‰te zu verifizieren\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{R√ºckgabe}
+
+\end{DoxyReturn}
 
 
 Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_a8bb41d3ca3ff3264de397bccd555e8b8}{my\+M\+D.\+Model.\+Transmission\+Model.\+I\+Bluetooth}}.
@@ -74,6 +116,13 @@ Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_transmission_model_
 
 
 
+Methode um daten zu Empfangen 
+
+\begin{DoxyReturn}{R√ºckgabe}
+
+\end{DoxyReturn}
+
+
 Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_aa835ad437ee703e3ae74f43e09c28fbc}{my\+M\+D.\+Model.\+Transmission\+Model.\+I\+Bluetooth}}.
 
 \mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_a551c99750193ce8a6fc03c92864d24e8}\label{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_a551c99750193ce8a6fc03c92864d24e8}} 
@@ -84,6 +133,13 @@ Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_transmission_model_
 
 
 
+Methode um nach Ger‰ten in der N‰he zu suchen 
+
+\begin{DoxyReturn}{R√ºckgabe}
+Liste an Ger‰ten
+\end{DoxyReturn}
+
+
 Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_adfa691c5290cab1d92390f585cc9abdb}{my\+M\+D.\+Model.\+Transmission\+Model.\+I\+Bluetooth}}.
 
 \mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_a5be7341663a848cdc5bd2209c11890ad}\label{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_a5be7341663a848cdc5bd2209c11890ad}} 
@@ -92,6 +148,15 @@ Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_transmission_model_
 \subsubsection{\texorpdfstring{send()}{send()}}
 {\footnotesize\ttfamily void my\+M\+D.\+Model.\+Transmission\+Model.\+Bluetooth.\+send (\begin{DoxyParamCaption}\item[{string}]{file\+Path }\end{DoxyParamCaption})}
 
+
+
+Methode um eine Datei zu senden 
+
+
+\begin{DoxyParams}{Parameter}
+{\em file\+Path} & Dateipfad zur Datei, die gesendet werden soll\\
+\hline
+\end{DoxyParams}
 
 
 Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_a3ae2f74750177a849765df54ea32f788}{my\+M\+D.\+Model.\+Transmission\+Model.\+I\+Bluetooth}}.

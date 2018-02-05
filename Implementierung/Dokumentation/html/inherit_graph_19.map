@@ -1,8 +1,0 @@
-<map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node2" href="$class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute.html" title="SQLiteNetExtensions.Attributes.\lRelationshipAttribute" alt="" coords="160,136,371,177"/>
-<area shape="rect" id="node3" href="$class_s_q_lite_net_extensions_1_1_attributes_1_1_many_to_many_attribute.html" title="SQLiteNetExtensions.Attributes.\lManyToManyAttribute" alt="" coords="419,5,629,47"/>
-<area shape="rect" id="node4" href="$class_s_q_lite_net_extensions_1_1_attributes_1_1_many_to_one_attribute.html" title="SQLiteNetExtensions.Attributes.\lManyToOneAttribute" alt="" coords="419,71,629,112"/>
-<area shape="rect" id="node5" href="$class_s_q_lite_net_extensions_1_1_attributes_1_1_one_to_many_attribute.html" title="SQLiteNetExtensions.Attributes.\lOneToManyAttribute" alt="" coords="419,136,629,177"/>
-<area shape="rect" id="node6" href="$class_s_q_lite_net_extensions_1_1_attributes_1_1_one_to_one_attribute.html" title="SQLiteNetExtensions.Attributes.\lOneToOneAttribute" alt="" coords="419,201,629,243"/>
-<area shape="rect" id="node7" href="$class_s_q_lite_net_extensions_1_1_attributes_1_1_text_blob_attribute.html" title="SQLiteNetExtensions.Attributes.\lTextBlobAttribute" alt="" coords="419,267,629,308"/>
-</map>
