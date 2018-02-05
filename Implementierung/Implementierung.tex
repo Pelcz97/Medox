@@ -192,7 +192,7 @@ Letztlich folgen noch abschließende Worte über den Verlauf der Phase und Plän
 \begin{figure}[H]
 \hspace{-1.8cm}
 \begin{minipage}[c]{\textwidth}
-\includegraphics[width=1.6\textwidth, angle=90]{graphics/Klassendiagramme/myMD}
+\includegraphics[width=1.6\textwidth, angle=90]{graphics/Klassendiagramme/myMDEntwurf}
 \caption{myMD Klassendiagramm der Entwurfsphase}
 \end{minipage}
 \end{figure}
@@ -263,6 +263,9 @@ Beim vorherigen Ansatz musste für jeden Aufruf einer \textit{Parse} Methoden ne
 Um Elemente aus einem Enum in einem Picker von \textit{Xamarin} darstellen zu können, wird ein Konvertierer (\textbf{IntEnumConverter}) benötigt, da die dafür von \textit{Xamarin} angebotene Funktionalität eine Liste von Elementen erwartet. Mit dem Konvertierer kann dann jedem Listeneintrag über \textit{DataBinding} ein Enum-Wert zugewiesen werden.
 
 Um die Namen von Enumwerten zum Anzeigen formatieren zu können wurden für diesen Zweck auch noch die Klasse \textbf{StringExtensions} mit Erweiterungsmethoden für strings hinzugefügt.
+
+\subsubsection{ProfileItemViewModel}
+Um die Daten eines Profils beim Wechseln vom \textbf{ProfileViewModel} zum \textbf{ProfileEditViewModel} (und zurück) konsistent zu halten, mussten wir ein neues ViewModel einführen, dass diese Daten kapselt.
 
 \subsection{View}
 \subsubsection{Benutzeroberflächenlogik}
@@ -351,6 +354,69 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 
 \textbf{Paket:} Model.FileHelper
 
+\subsection{ViewModel}
+\subsubsection{OverviewViewModel}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/OverviewViewModel}
+\caption{OverviewViewModel Klasse}
+\end{figure}
+\textbf{Art der Änderung:} Attribut hinzugefügt
+
+\textbf{Beschreibung:} Um eine Liste an DoctorsLetter zu modelieren, muss diese dem ViewModel vorliegen. Dieser Fehler wurde im Entwurf übersehen. 
+
+\textbf{Paket:} ViewModel.OverviewTabViewModel
+
+
+
+\subsubsection{DetailedDoctorsletterViewModel}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/DetailedDoctorsletterViewModel}
+\caption{DetailedDoctorsLetterViewModel Klasse}
+\end{figure}
+\textbf{Art der Änderung:} Methoden entfernt
+
+\textbf{Beschreibung:} Im Entwurf wurden im DetailedDoctorsletterViewModel Methoden eingeführt um aus einem DoctorsLetter Daten zu extrahieren und in einem String zu speichern. Während der Implementierung stellten wir fest, dass diese Methoden nicht nötig sind. 
+
+\textbf{Paket:} ViewModel.OverviewTabViewModel
+
+\subsubsection{DoctorsLetterViewModel}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/DoctorsLetterViewModel}
+\caption{DoctorsLetterViewModel Klasse}
+\end{figure}
+\textbf{Art der Änderung:} Attribut hinzugefügt
+
+\textbf{Beschreibung:}  Da ein Arztbrief alle Informationen zu einem Arzt anzeigt, bietet es sich an, dass das DoctorsLetterViewModel ein Attribut vom IDoctor besitzt.
+
+\textbf{Paket:} ViewModel.OverviewTabViewModel
+
+\subsubsection{MedicationViewModel}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/MedicationViewModel}
+\caption{MedicationViewModel Klasse}
+\end{figure}
+\textbf{Art der Änderung:} Methoden und Attribute hinzugefügt
+
+\textbf{Beschreibung:}  Während dem Entwurf war uns nicht klar, dass man eine für das Gruppieren und Sortieren von Medikationen eigene Attribute und Methoden benötigt. Diese wurden bei der Implementierung hinzugefügt.
+
+\textbf{Paket:} ViewModel.MedicationTabViewModel
+
+\subsubsection{MedicineViewModel}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/ViewModel/MedicineViewModel}
+\caption{MedicineViewModel Klasse}
+\end{figure}
+\textbf{Art der Änderung:} Methoden und Attribute hinzugefügt
+
+\textbf{Beschreibung:}  Um eine Eingabe auf ihre Korrektheit zu überprüfen haben wir neue Attribute eingeführt und Methoden um die Attribute auf korrekte Werte zu setzen.
+
+\textbf{Paket:} ViewModel.MedicationTabViewModel
+
 \section{Nicht umgesetzte Kriterien}
 \textit{Hinweis: Manche dieser Kriterien (z.B. [PK2030]) wurden nur teilweise umgesetzt. D.h. nur manche Teile unseres Projektes unterstützen diese Kriterien, aber aus Zeitgründen wurde die vollständige Implementierung verschoben. Die halbfertigen Kriterien werden durch ein \dq{}!\dq{} gekennzeichnet.}
 \subsubsection{Patientenseitige Datenübertragung}
@@ -391,7 +457,16 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 {[WK5040]} & \multicolumn{2}{p{12cm}}  {Die myMD \gls{App} kann \gls{Arztbrief}e im .csv Dateiformat anzeigen.} \\
 
 \end{tabular}
+
 \section{Klassendiagramm (Implementierungsphase)}
+\begin{figure}[H]
+\hspace{-1.8cm}
+\begin{minipage}[c]{\textwidth}
+\centering
+\includegraphics[width=1.7\textwidth, angle=90]{graphics/Klassendiagramme/myMDImplementierung}
+\caption{myMD Klassendiagramm der Implementierungsphase}
+\end{minipage}
+\end{figure}
 
 \chapter{Ergebnisse der Phase}
 \begin{figure}
@@ -402,7 +477,9 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \caption{Gantt Diagramm der Implementierungsphase}
 \end{minipage}
 \end{figure}
+%TODO kurzen Text schreiben. (Wieso haben wir unseren Ablauf geändert)
 \section{Zukunftspläne}
+%TODO Redesign der App: Ein Tab für Arztbriefe, Medikationen und Impfungen (alle möglichen Information) um Informationsdichte zu erhöhen. Dazu kommt dann eine Sortier/Suchfunktion. Implementierung der nicht umgesetzten Kriterien.
 
 
 

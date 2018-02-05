@@ -45,5 +45,12 @@
 	<false/>
 	<key>UIRequiresPersistentWiFi</key>
 	<false/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Bluetooth is required for the transfer of Doctors Letters</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+		<string>bluetooth-peripheral</string>
+	</array>
 </dict>
 </plist>

@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using System.Diagnostics;
 using System.Text;
 using System.Reactive.Linq;
+using System.Threading.Tasks;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
@@ -23,96 +24,120 @@ namespace myMD.ViewModel.SendDataTabViewModel
             private set => output = value;
         }
 
+        string serverText = "Start Server";
+        public string ServerText
+        {
+            get => this.serverText;
+            set => serverText = value;
+        }
+
+        string chValue;
+        public string CharacteristicValue
+        {
+            get => this.chValue;
+            set => chValue = value;
+        }
 
         public TransmittingDataViewModel()
         {
 
             AdapterStatus status = CrossBleAdapter.Current.Status;
+            BuildServer();
 
-            CrossBleAdapter.Current.WhenStatusChanged().Subscribe(x =>
-            {
-                Debug.WriteLine("AdapterStatus: " + status);
-            });
-
-            if (status == AdapterStatus.PoweredOn)
-            {
-                StartServer();
-                if (server.IsRunning)
-                {
-                    server.Stop();
-                }
-                else
-                {
-                    server.Start(new AdvertisementData
-                    {
-                        LocalName = "TestServer"
-                    });
-                }
-            }
-            else
-            {
-                Debug.WriteLine("Status is: " + status);
-            }
         }
 
-        public void StartServer()
-        {
-            Debug.WriteLine("Entered StartServerMethod");
-            if (this.server != null){
-                Debug.WriteLine("Fuck"); 
+        public void ServerSettings(){
+            if (this.BleAdapter.Status != AdapterStatus.PoweredOn)
+            {
+                Debug.WriteLine(this.BleAdapter.Status);
                 return;
             }
 
-            this.server = CrossBleAdapter.Current.CreateGattServer();
-            var service = this.server.AddService(Guid.NewGuid(), true);
+            try
+            {
+                this.BuildServer();
+                if (this.server.IsRunning)
+                {
+                    this.server.Stop();
+                }
+                else
+                {
+                     server.Start(new AdvertisementData
+                    {
+                        LocalName = "TestServer"
+                    });
 
-            /*var characteristic = service.AddCharacteristic(
-                    Guid.NewGuid(),
-                    CharacteristicProperties.Read | CharacteristicProperties.Write | CharacteristicProperties.WriteNoResponse,
-                    GattPermissions.Read | GattPermissions.Write
-                );
+                }
+            }
+
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
+
+        }
+
+        public async void BuildServer()
+        {
+            var server = CrossBleAdapter.Current.CreateGattServer();
+            var service = server.AddService(Guid.NewGuid(), true);
+
+            var characteristic = service.AddCharacteristic(
+                Guid.NewGuid(),
+                CharacteristicProperties.Read | CharacteristicProperties.Write,
+                GattPermissions.Read | GattPermissions.Write
+            );
 
             var notifyCharacteristic = service.AddCharacteristic
-                (
-                    Guid.NewGuid(),
-                    CharacteristicProperties.Notify,
-                    GattPermissions.Read | GattPermissions.Write
-                );
+            (
+                Guid.NewGuid(),
+                CharacteristicProperties.Indicate | CharacteristicProperties.Notify,
+                GattPermissions.Read | GattPermissions.Write
+            );
 
+            IDisposable notifyBroadcast = null;
             notifyCharacteristic.WhenDeviceSubscriptionChanged().Subscribe(e =>
             {
                 var @event = e.IsSubscribed ? "Subscribed" : "Unsubcribed";
-                this.OnEvent($"Device {e.Device.Uuid} {@event}");
-                this.OnEvent($"Charcteristic Subcribers: {notifyCharacteristic.SubscribedDevices.Count}");
 
-                if (this.notifyBroadcast == null)
+                if (notifyBroadcast == null)
                 {
-                    this.OnEvent("Starting Subscriber Thread");
                     this.notifyBroadcast = Observable
                         .Interval(TimeSpan.FromSeconds(1))
                         .Where(x => notifyCharacteristic.SubscribedDevices.Count > 0)
                         .Subscribe(_ =>
                         {
-                            try
-                            {
-                                var dt = DateTime.Now.ToString("g");
-                                var bytes = Encoding.UTF8.GetBytes(dt);
-                                notifyCharacteristic
-                                    .BroadcastObserve(bytes)
-                                    .Subscribe(x =>
-                                    {
-                                        var state = x.Success ? "Successfully" : "Failed";
-                                        var data = Encoding.UTF8.GetString(x.Data, 0, x.Data.Length);
-                                        this.OnEvent($"{state} Broadcast {data} to device {x.Device.Uuid} from characteristic {x.Characteristic}");
-                                    });
-                            }
-                            catch (Exception ex)
-                            {
-                                Debug.WriteLine("Error during broadcast: " + ex);
-                            }
+                            Debug.WriteLine("Sending Broadcast");
+                            var dt = DateTime.Now.ToString("g");
+                            var bytes = Encoding.UTF8.GetBytes(dt);
+                            notifyCharacteristic.Broadcast(bytes);
                         });
                 }
-            });*/
+            });
+
+            characteristic.WhenReadReceived().Subscribe(x =>
+            {
+                var write = "HELLO";
+
+                // you must set a reply value
+                x.Value = Encoding.UTF8.GetBytes(write);
+
+                x.Status = GattStatus.Success; // you can optionally set a status, but it defaults to Success
+            });
+            characteristic.WhenWriteReceived().Subscribe(x =>
+            {
+                var write = Encoding.UTF8.GetString(x.Value, 0, x.Value.Length);
+                // do something value
+            });
+            try
+            {
+                await server.Start(new AdvertisementData
+                {
+                    LocalName = "TestServer"
+                });
+            } catch (Exception e){
+                Debug.WriteLine(e.ToString());
+            }
         }
 
         void OnEvent(string msg)
@@ -120,6 +145,10 @@ namespace myMD.ViewModel.SendDataTabViewModel
             Device.BeginInvokeOnMainThread(() =>
                 this.Output += msg + Environment.NewLine + Environment.NewLine
             );
+        }
+
+        void StopServer(){
+            
         }
     }
 }
