@@ -117,7 +117,7 @@
 \addtocontents{toc}{\protect\enlargethispage{10cm}}
 \setlength{\parskip}{2.5mm}%
 \chapter{Einleitung}
-"myMD" ist eine mobile Anwendung, die es Patienten erlaubt ihre Arztbriefe digital über Bluetooth von ihren Ärzten zu erhalten, um dann in der Applikation die darin enthaltenen Informationen, wie die Diagnose oder verschrieben Medikationen, einsehen zu können.
+\dq{}myMD\dq{} ist eine mobile Anwendung, die es Patienten erlaubt ihre Arztbriefe digital über Bluetooth von ihren Ärzten zu erhalten, um dann in der Applikation die darin enthaltenen Informationen, wie die Diagnose oder verschrieben Medikationen, einsehen zu können.
 
 Die App wurde dabei mit Xamarin.Forms in C\# und XAML für Android- und iOS-Geräte entwickelt.
 
@@ -129,7 +129,7 @@ Letztlich folgen noch abschließende Worte über den Verlauf der Phase und Plän
 
 \chapter{Vorangegangene Planung}
 \section{Kriterien (Planungsphase)}
-\textit{Hinweis: Der Übersicht wegen sind hier Pflicht- und Wunschkriterien zusammen aufgeführt. Sie sind weiterhin anhand der Kürzel voneinander unterscheidbar (PK = Pflichtkriterium WK = Wunschkriterium).}
+\textit{Hinweis: Der Übersicht wegen sind hier Pflicht- und Wunschkriterien zusammen aufgeführt. Sie sind weiterhin anhand der Kürzel voneinander unterscheidbar (PK = Pflichtkriterium, WK = Wunschkriterium).}
 \subsubsection{Patientenseitige Datenübertragung}
 \begin{tabular}{lll}
 
@@ -262,7 +262,7 @@ Beim vorherigen Ansatz musste für jeden Aufruf einer \textit{Parse} Methoden ne
 \end{figure}
 Um Elemente aus einem Enum in einem Picker von \textit{Xamarin} darstellen zu können, wird ein Konvertierer (\textbf{IntEnumConverter}) benötigt, da die dafür von \textit{Xamarin} angebotene Funktionalität eine Liste von Elementen erwartet. Mit dem Konvertierer kann dann jedem Listeneintrag über \textit{DataBinding} ein Enum-Wert zugewiesen werden.
 
-Um die Namen von Enumwerten zum Anzeigen formatieren zu können wurden für diesen Zweck auch noch die Klasse \textbf{StringExtensions} mit Erweiterungsmethoden für strings hinzugefügt.
+Um die Namen von Enumwerten zum Anzeigen formatieren zu können, wurden für diesen Zweck auch noch die Klasse \textbf{StringExtensions} mit Erweiterungsmethoden für strings hinzugefügt.
 
 \subsubsection{ProfileItemViewModel}
 Um die Daten eines Profils beim Wechseln vom \textbf{ProfileViewModel} zum \textbf{ProfileEditViewModel} (und zurück) konsistent zu halten, mussten wir ein neues ViewModel einführen, dass diese Daten kapselt.
@@ -272,10 +272,10 @@ Um die Daten eines Profils beim Wechseln vom \textbf{ProfileViewModel} zum \text
 In der Entwurfsphase orientierten wir uns daran, dass die Benutzeroberflächenlogik nach dem \textit{MVVM-Prinzip} in den jeweiligen \textit{ViewModeln} implementiert wird. Jedoch fiel uns auf, dass dies sehr umständlich ist. Deshalb haben wir die Benutzeroberflächenlogik im Code-Behind zu jeder entsprechenden Seite in der \textit{View} implementiert.
 \subsubsection{ProfileEditPage}
 Während dem Entwurf stellten wir uns vor, dass es auf einer \textbf{ProfilePage} einen Toggle zum Bearbeiten der Daten im Profil gibt, der die Labels, in denen die Daten stehen, durch Entrys ersetzt. Da sich diese Funktion, aber durch die Gestaltung der Seite in .xaml nur suboptimal implementieren lässt, haben wir uns dazu entschieden, die neue Seite \textbf{ProfileEditPage} einzuführen. Diese wird geöffnet, wenn man den \textit{Bearbeiten-Button
-} der \textbf{ProfilePage} antippt. Die \textbf{ProfileEditPage} gleicht der \textbf{ProfilePage} im Design. Die Unterschiede begrenzen sich auf die zwei \textit{StatusBar-Elemente} \dq{}Abrechen\dq{}, \dq{}Fertig\dq{} und die Ersetzung der Labels (in der \textbf{ProfilPage}) durch Entrys.
+} der \textbf{ProfilePage} antippt. Die \textbf{ProfileEditPage} gleicht der \textbf{ProfilePage} im Design. Die Unterschiede begrenzen sich auf die zwei \textit{StatusBar-Elemente} \dq{}Abbrechen\dq{}, \dq{}Fertig\dq{} und die Ersetzung der Labels (in der \textbf{ProfilePage}) durch Entrys.
 
 \section{Geänderte Klassen}
-\textit{Hinweis: Nur leicht (z.B. in der Namensgebung) geänderte Klassen oder solche, die bereits in den Geänderten Entwürfen erwähnt sind hier nicht aufgelistet. Weiterhin wurden die meisten Getter- und Setter-Methoden durch die in C\# üblichen Properties ersetzt. Da dies mehr eine optische als tatsächlich inhaltliche Änderung darstellt, wird auch dies hier übergangen.}
+\textit{Hinweis: Nur leicht (z.B. in der Namensgebung) geänderte Klassen oder solche, die bereits in den geänderten Entwürfen erwähnt sind hier nicht aufgelistet. Weiterhin wurden die meisten Getter- und Setter-Methoden durch die in C\# üblichen Properties ersetzt. Da dies mehr eine optische als tatsächlich inhaltliche Änderung darstellt, wird auch dies hier übergangen.}
 
 \subsection{ModelInterface}
 \subsubsection{IModelFacade}
@@ -481,11 +481,14 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \caption{Gantt Diagramm der Implementierungsphase}
 \end{minipage}
 \end{figure}
-%TODO kurzen Text schreiben. (Wieso haben wir unseren Ablauf geändert)
+Von dem, im Entwurf, geplanten Ablauf wurde hauptsächlich in der View und dem ViewModel abgewichen. Den hier, stellten wir fest, ist es sinnvoller eine Page der View parallel zum entsprechenden ViewModel zu implementieren. Da wir mit dem MedicationTab anfingen, brauchten wir hier länger als geplant. Jedoch holten wir die verlorene Zeit bei der Implementierung des OverviewTabs und des ProfileTabs wieder zurück. Den hier konnten wir das Know-How, das wir uns beim MedicationTab angeeignet haben, gut anwenden.
+Im Model gab es keine nennenswerten Abweichungen vom Zeitplan.
 \section{Zukunftspläne}
-%TODO Redesign der App: Ein Tab für Arztbriefe, Medikationen und Impfungen (alle möglichen Information) um Informationsdichte zu erhöhen. Dazu kommt dann eine Sortier/Suchfunktion. Implementierung der nicht umgesetzten Kriterien.
+Unsere höchste Priorität ist es die Desktop Anwendung funktionsfähig zu machen. Da durch sie unsere App erst vollständig benutzbar wird.
 
+Dann folgt die Vorbereitung für den Microsoft ImagineCup, für den wir noch ein paar Bugs aus der App beseitigen und Englisch als zweite Sprache anbieten wollen. Außerdem sollen für die Vorbereitung ein paar der nicht umgesetzten Kriterien (z.B. Such/Sortierfunktion im OverviewTab und MedicationTab) implementiert werden.
 
+Danach würden wir die App neu strukturieren. D.h. der OverviewTab wird mit dem MedicationTab zusammengelegt. Dies soll eine höhere Informationsdichte bewirken.
 
 \glsaddall
 \printnoidxglossaries
