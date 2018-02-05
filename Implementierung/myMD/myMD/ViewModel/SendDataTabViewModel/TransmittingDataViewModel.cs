@@ -40,10 +40,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
 
         public TransmittingDataViewModel()
         {
-
             AdapterStatus status = CrossBleAdapter.Current.Status;
             BuildServer();
-
         }
 
         public void ServerSettings(){
@@ -62,7 +60,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 }
                 else
                 {
-                     server.Start(new AdvertisementData
+                    server.Start(new AdvertisementData
                     {
                         LocalName = "TestServer"
                     });
@@ -79,7 +77,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
 
         public async void BuildServer()
         {
-            var server = CrossBleAdapter.Current.CreateGattServer();
+            server = CrossBleAdapter.Current.CreateGattServer();
             var service = server.AddService(Guid.NewGuid(), true);
 
             var characteristic = service.AddCharacteristic(

@@ -65,14 +65,12 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 Debug.WriteLine(status);
             });
 
-            if (status == AdapterStatus.PoweredOn)
-            {
                 isScanning = true;
-                this.scan = CrossBleAdapter.Current.Scan().Subscribe(scanResult =>
+                this.scan = CrossBleAdapter.Current.ScanWhenAdapterReady().Subscribe(scanResult =>
                 {
                     ScanResultViewModel test = new ScanResultViewModel();
                     test.Device = scanResult.Device;
-                    if (test != null && DeviceList.All(x => x.Device != test.Device))
+                if (test != null && DeviceList.All(x => x.Device != test.Device) && test.Device.Name != null)
                     {
                         DeviceList.Add(test);
                         DeviceList.FirstOrDefault();
@@ -81,7 +79,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
                         Debug.WriteLine("Device.UUID: " + test.Device.Uuid);
                     }
                 });
-            }
+
         }
 
         /// <summary>
