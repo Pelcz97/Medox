@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_doctors_letter" kind="class" language="C#" prot="public">
+    <compoundname>myMD::Model::DataModel::DoctorsLetterGroupDoctorsLetter</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_doctors_letter_1a72d46cc74b5a18580b6fd38347463689" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int myMD.Model.DataModel.DoctorsLetterGroupDoctorsLetter.DoctorsLetterGroupID</definition>
+        <argsstring></argsstring>
+        <name>DoctorsLetterGroupID</name>
+        <briefdescription>
+<para>Fremdschlüssel zur Arztbriefgruppe in dieser Relation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroupDoctorsLetter.cs" line="17" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroupDoctorsLetter.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_doctors_letter_1a9ab739570b1ed8e567f199de0370bc3d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int myMD.Model.DataModel.DoctorsLetterGroupDoctorsLetter.DoctorsLetterID</definition>
+        <argsstring></argsstring>
+        <name>DoctorsLetterID</name>
+        <briefdescription>
+<para>Fremdschlüssel zum Arztbrief in dieser Relation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroupDoctorsLetter.cs" line="23" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroupDoctorsLetter.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Diese Klasse wird von der SQLite-Net-Extensions Library benötigt um die bestehenden Beziehungen zwischen Arztrbriefen und Arztbriefgruppen speichern zu können. Abseits davon hat diese Klasse keinen Nutzen und sollte daher auch von sonst niemand instanziiert oder anderweitig verwendet werden. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroupDoctorsLetter.cs" line="12" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroupDoctorsLetter.cs" bodystart="11" bodyend="24"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_doctors_letter_1a72d46cc74b5a18580b6fd38347463689" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::DoctorsLetterGroupDoctorsLetter</scope><name>DoctorsLetterGroupID</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_doctors_letter_1a9ab739570b1ed8e567f199de0370bc3d" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::DoctorsLetterGroupDoctorsLetter</scope><name>DoctorsLetterID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

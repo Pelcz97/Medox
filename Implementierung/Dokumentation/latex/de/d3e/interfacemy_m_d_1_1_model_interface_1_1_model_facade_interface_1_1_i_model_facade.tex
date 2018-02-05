@@ -1,0 +1,187 @@
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade}{
+\section{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade Interface Reference}
+\label{de/d3e/interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade}\index{myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{myMD::ModelInterface::ModelFacadeInterface::IModelFacade}}
+}
+Dies ist die Haupteinstiegsstelle f\"{u}r andere Subsysteme in das Model. Als Ein- und Ausgabeparameter werden die restlichen Schnittstellen aus Model\-Interface verwendet. Alle komplexeren Operationen, die nicht schon von diesen Schnittstellen \"{u}bernommen werden, sind hier enthalten.  
+
+
+Inheritance diagram for my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{IProfile} \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_d81849285c0ecfe46b822095df995e8e}{Create\-Empty\-Profile} ()
+\begin{CompactList}\small\item\em Legt ein neues Profil an, das noch keine Informationen und Daten enth\"{a}lt und gibt dieses zur\"{u}ck. Wechselt au\ss{}erdem das aktive Profil zu diesem Profil. \item\end{CompactList}\item 
+IList$<$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter} $>$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_d824e78a8274c2fc04719a66a7030fd7}{Get\-All\-Doctors\-Letters} ()
+\begin{CompactList}\small\item\em Fordert alle Arztbriefe des aktiven Profils an und gibt diese zur\"{u}ck. \item\end{CompactList}\item 
+IList$<$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{IMedication} $>$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ecff6715a9c8e9604242cc7a688c9939}{Get\-All\-Medications} ()
+\begin{CompactList}\small\item\em Fordert alle Medikationen des aktiven Profils an und gibt diese zur\"{u}ck. \item\end{CompactList}\item 
+\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{IMedication} \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_3fd69c99a27372f99eae3cda6e23e2e6}{Create\-Empty\-Medication} ()
+\begin{CompactList}\small\item\em Legt eine neue Medikation an, die noch keine Informationen enth\"{a}lt und gibt diese zur\"{u}ck. \item\end{CompactList}\item 
+IList$<$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{IDoctors\-Letter\-Group} $>$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_5975f81012b1229ab03cbfa932f3a8ae}{Get\-All\-Groups} ()
+\begin{CompactList}\small\item\em Fordert alle Arztbriefgruppen des aktiven Profils an und gibt diese zur\"{u}ck. \item\end{CompactList}\item 
+\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{IDoctors\-Letter\-Group} \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_7ce2fe6e33d0a78829c47a6b2f35e0fe}{Create\-Empty\-Group} ()
+\begin{CompactList}\small\item\em Legt eine neue Arztbriefgruppe an, die noch keine Arztbriefe enth\"{a}lt und gibt diese zur\"{u}ck. \item\end{CompactList}\item 
+void \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_bf510dc6cf79d153f564eca0f10971d2}{Update} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{IEntity} entity)
+\begin{CompactList}\small\item\em Aktualisiert die gegebene Entit\"{a}t. \item\end{CompactList}\item 
+void \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ec3022b27f9091440cb495f510d25b0}{Delete} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{IEntity} entity)
+\begin{CompactList}\small\item\em L\"{o}scht die gegebene Entit\"{a}t. \item\end{CompactList}\item 
+void \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_6ffa7bbff9bc4db881433251a158fbd0}{Activate} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{IProfile} profile)
+\begin{CompactList}\small\item\em Aktiviert das gegebene Profil. \item\end{CompactList}\item 
+void \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_dbd560ba513112ff2c7fcf625fdf6597}{Send\-Letter} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter} letter)
+\begin{CompactList}\small\item\em Bereitet den gew\"{u}nschten Arztbrief f\"{u}r die Daten\"{u}bertragung vor und veranlasst diese anschlie\ss{}end. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Dies ist die Haupteinstiegsstelle f\"{u}r andere Subsysteme in das Model. Als Ein- und Ausgabeparameter werden die restlichen Schnittstellen aus Model\-Interface verwendet. Alle komplexeren Operationen, die nicht schon von diesen Schnittstellen \"{u}bernommen werden, sind hier enthalten. 
+
+
+
+Definition at line 11 of file IModel\-Facade.cs.
+
+\subsection{Member Function Documentation}
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_6ffa7bbff9bc4db881433251a158fbd0}{
+\index{myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}!Activate@{Activate}}
+\index{Activate@{Activate}!myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}}
+\subsubsection[Activate]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade::Activate (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{IProfile} {\em profile})}}
+\label{de/d3e/interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_6ffa7bbff9bc4db881433251a158fbd0}
+
+
+Aktiviert das gegebene Profil. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em entity}]Das zu aktivierende Profil\end{description}
+\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_6ffa7bbff9bc4db881433251a158fbd0}{my\-MD::Model::Model\-Facade::Model\-Facade}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_7ce2fe6e33d0a78829c47a6b2f35e0fe}{
+\index{myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}!CreateEmptyGroup@{CreateEmptyGroup}}
+\index{CreateEmptyGroup@{CreateEmptyGroup}!myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}}
+\subsubsection[CreateEmptyGroup]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{IDoctors\-Letter\-Group} my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade::Create\-Empty\-Group ()}}
+\label{de/d3e/interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_7ce2fe6e33d0a78829c47a6b2f35e0fe}
+
+
+Legt eine neue Arztbriefgruppe an, die noch keine Arztbriefe enth\"{a}lt und gibt diese zur\"{u}ck. 
+
+\begin{Desc}
+\item[Returns:]Die neu erstellte, leere Arztbriefgruppe\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_7ce2fe6e33d0a78829c47a6b2f35e0fe}{my\-MD::Model::Model\-Facade::Model\-Facade}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_3fd69c99a27372f99eae3cda6e23e2e6}{
+\index{myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}!CreateEmptyMedication@{CreateEmptyMedication}}
+\index{CreateEmptyMedication@{CreateEmptyMedication}!myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}}
+\subsubsection[CreateEmptyMedication]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{IMedication} my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade::Create\-Empty\-Medication ()}}
+\label{de/d3e/interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_3fd69c99a27372f99eae3cda6e23e2e6}
+
+
+Legt eine neue Medikation an, die noch keine Informationen enth\"{a}lt und gibt diese zur\"{u}ck. 
+
+\begin{Desc}
+\item[Returns:]Die neu erstellte, leere Medikation\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_3fd69c99a27372f99eae3cda6e23e2e6}{my\-MD::Model::Model\-Facade::Model\-Facade}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_d81849285c0ecfe46b822095df995e8e}{
+\index{myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}!CreateEmptyProfile@{CreateEmptyProfile}}
+\index{CreateEmptyProfile@{CreateEmptyProfile}!myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}}
+\subsubsection[CreateEmptyProfile]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{IProfile} my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade::Create\-Empty\-Profile ()}}
+\label{de/d3e/interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_d81849285c0ecfe46b822095df995e8e}
+
+
+Legt ein neues Profil an, das noch keine Informationen und Daten enth\"{a}lt und gibt dieses zur\"{u}ck. Wechselt au\ss{}erdem das aktive Profil zu diesem Profil. 
+
+\begin{Desc}
+\item[Returns:]Das neu erstellte Profil\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_d81849285c0ecfe46b822095df995e8e}{my\-MD::Model::Model\-Facade::Model\-Facade}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ec3022b27f9091440cb495f510d25b0}{
+\index{myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}!Delete@{Delete}}
+\index{Delete@{Delete}!myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}}
+\subsubsection[Delete]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade::Delete (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{IEntity} {\em entity})}}
+\label{de/d3e/interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ec3022b27f9091440cb495f510d25b0}
+
+
+L\"{o}scht die gegebene Entit\"{a}t. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em entity}]Die zu l\"{o}schende Entit\"{a}t\end{description}
+\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ec3022b27f9091440cb495f510d25b0}{my\-MD::Model::Model\-Facade::Model\-Facade}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_d824e78a8274c2fc04719a66a7030fd7}{
+\index{myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}!GetAllDoctorsLetters@{GetAllDoctorsLetters}}
+\index{GetAllDoctorsLetters@{GetAllDoctorsLetters}!myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}}
+\subsubsection[GetAllDoctorsLetters]{\setlength{\rightskip}{0pt plus 5cm}IList$<$\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter}$>$ my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade::Get\-All\-Doctors\-Letters ()}}
+\label{de/d3e/interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_d824e78a8274c2fc04719a66a7030fd7}
+
+
+Fordert alle Arztbriefe des aktiven Profils an und gibt diese zur\"{u}ck. 
+
+\begin{Desc}
+\item[Returns:]Liste aller Arztbriefe des aktiven Profils\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_d824e78a8274c2fc04719a66a7030fd7}{my\-MD::Model::Model\-Facade::Model\-Facade}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_5975f81012b1229ab03cbfa932f3a8ae}{
+\index{myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}!GetAllGroups@{GetAllGroups}}
+\index{GetAllGroups@{GetAllGroups}!myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}}
+\subsubsection[GetAllGroups]{\setlength{\rightskip}{0pt plus 5cm}IList$<$\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{IDoctors\-Letter\-Group}$>$ my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade::Get\-All\-Groups ()}}
+\label{de/d3e/interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_5975f81012b1229ab03cbfa932f3a8ae}
+
+
+Fordert alle Arztbriefgruppen des aktiven Profils an und gibt diese zur\"{u}ck. 
+
+\begin{Desc}
+\item[Returns:]Liste aller Arztbriefgruppen des aktiven Profils\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_5975f81012b1229ab03cbfa932f3a8ae}{my\-MD::Model::Model\-Facade::Model\-Facade}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ecff6715a9c8e9604242cc7a688c9939}{
+\index{myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}!GetAllMedications@{GetAllMedications}}
+\index{GetAllMedications@{GetAllMedications}!myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}}
+\subsubsection[GetAllMedications]{\setlength{\rightskip}{0pt plus 5cm}IList$<$\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{IMedication}$>$ my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade::Get\-All\-Medications ()}}
+\label{de/d3e/interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ecff6715a9c8e9604242cc7a688c9939}
+
+
+Fordert alle Medikationen des aktiven Profils an und gibt diese zur\"{u}ck. 
+
+\begin{Desc}
+\item[Returns:]Liste aller Medikationen des aktiven Profils\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_ecff6715a9c8e9604242cc7a688c9939}{my\-MD::Model::Model\-Facade::Model\-Facade}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_dbd560ba513112ff2c7fcf625fdf6597}{
+\index{myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}!SendLetter@{SendLetter}}
+\index{SendLetter@{SendLetter}!myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}}
+\subsubsection[SendLetter]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade::Send\-Letter (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter} {\em letter})}}
+\label{de/d3e/interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_dbd560ba513112ff2c7fcf625fdf6597}
+
+
+Bereitet den gew\"{u}nschten Arztbrief f\"{u}r die Daten\"{u}bertragung vor und veranlasst diese anschlie\ss{}end. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em letter}]Der zu sendende Arztbrief\end{description}
+\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_dbd560ba513112ff2c7fcf625fdf6597}{my\-MD::Model::Model\-Facade::Model\-Facade}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_bf510dc6cf79d153f564eca0f10971d2}{
+\index{myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}!Update@{Update}}
+\index{Update@{Update}!myMD::ModelInterface::ModelFacadeInterface::IModelFacade@{my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade}}
+\subsubsection[Update]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model\-Interface::Model\-Facade\-Interface::IModel\-Facade::Update (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{IEntity} {\em entity})}}
+\label{de/d3e/interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_bf510dc6cf79d153f564eca0f10971d2}
+
+
+Aktualisiert die gegebene Entit\"{a}t. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em entity}]Die zu aktualisierende Entit\"{a}t\end{description}
+\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_bf510dc6cf79d153f564eca0f10971d2}{my\-MD::Model::Model\-Facade::Model\-Facade}.
+
+The documentation for this interface was generated from the following file:\begin{CompactItemize}
+\item 
+D:/Studium/WS17-18/PSE/Implementierung/my\-MD/my\-MD/Model\-Interface/Model\-Facade\-Interface/IModel\-Facade.cs\end{CompactItemize}

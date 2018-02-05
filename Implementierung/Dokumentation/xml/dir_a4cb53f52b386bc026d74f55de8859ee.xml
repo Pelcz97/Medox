@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_a4cb53f52b386bc026d74f55de8859ee" kind="dir">
+    <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions</compoundname>
+    <innerdir refid="dir_7e24632d72d6309d33d496bb12288739">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes</innerdir>
+    <innerdir refid="dir_ee73fc57789a583734da134a13ed5f4a">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Exceptions</innerdir>
+    <innerdir refid="dir_9ee7c74798b213a0fd9019772b1d4d80">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions</innerdir>
+    <innerdir refid="dir_6d64004bda89bf22150036f4f2373cf4">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Properties</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/"/>
+  </compounddef>
+</doxygen>

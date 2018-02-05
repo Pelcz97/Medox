@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model" kind="class" language="C#" prot="public">
+    <compoundname>myMD::ViewModel::SendDataTabViewModel::SendDataViewModel</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model_1abdf1a8159aac4d3f726a307fc37ca6b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.ViewModel.SendDataTabViewModel.SendDataViewModel.SendDataViewModel</definition>
+        <argsstring>()</argsstring>
+        <name>SendDataViewModel</name>
+        <briefdescription>
+<para>Konstruktor für ein <ref refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model" kindref="compound">SendDataViewModel</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" line="14" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" bodystart="14" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Die <ref refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model" kindref="compound">SendDataViewModel</ref> Klasse bietet den Einstiegspunkt in den SendDataTab. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" line="10" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" bodystart="9" bodyend="17"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model_1abdf1a8159aac4d3f726a307fc37ca6b6" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SendDataViewModel</scope><name>SendDataViewModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

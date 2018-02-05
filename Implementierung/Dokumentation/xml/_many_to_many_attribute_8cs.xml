@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_many_to_many_attribute_8cs" kind="file" language="C#">
+    <compoundname>ManyToManyAttribute.cs</compoundname>
+    <innerclass refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_many_to_many_attribute" prot="public">SQLiteNetExtensions::Attributes::ManyToManyAttribute</innerclass>
+    <innernamespace refid="namespace_s_q_lite_net_extensions_1_1_attributes">SQLiteNetExtensions::Attributes</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_s_q_lite_net_extensions" kindref="compound">SQLiteNetExtensions</ref>.Attributes</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5" refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_many_to_many_attribute" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_many_to_many_attribute" kindref="compound">ManyToManyAttribute</ref><sp/>:<sp/><ref refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute" kindref="compound">RelationshipAttribute</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7" refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_many_to_many_attribute_1a39df441ee696d1c0bafe428e2b17624b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_many_to_many_attribute_1a39df441ee696d1c0bafe428e2b17624b" kindref="member">ManyToManyAttribute</ref>(Type<sp/>intermediateType,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>inverseForeignKey<sp/>=<sp/>null,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>inverseProperty<sp/>=<sp/>null)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>base(null,<sp/>inverseForeignKey,<sp/>inverseProperty)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IntermediateType<sp/>=<sp/>intermediateType;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_many_to_many_attribute_1af7b3aa1a3521ecf61260f8ea2886a4e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Type<sp/>IntermediateType<sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/ManyToManyAttribute.cs"/>
+  </compounddef>
+</doxygen>

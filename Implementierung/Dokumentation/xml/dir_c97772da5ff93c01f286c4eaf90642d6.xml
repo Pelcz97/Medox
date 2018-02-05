@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_c97772da5ff93c01f286c4eaf90642d6" kind="dir">
+    <compoundname>D:/Studium/WS17-18/PSE</compoundname>
+    <innerdir refid="dir_db814d43ffb2b3d651c8e2f2e46c51ac">D:/Studium/WS17-18/PSE/Implementierung</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/"/>
+  </compounddef>
+</doxygen>

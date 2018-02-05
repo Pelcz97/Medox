@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute" kind="class" language="C#" prot="public">
+    <compoundname>SQLiteNetExtensions::Attributes::RelationshipAttribute</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IgnoreAttribute</basecompoundref>
+    <derivedcompoundref refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_many_to_many_attribute" prot="public" virt="non-virtual">SQLiteNetExtensions.Attributes.ManyToManyAttribute</derivedcompoundref>
+    <derivedcompoundref refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_many_to_one_attribute" prot="public" virt="non-virtual">SQLiteNetExtensions.Attributes.ManyToOneAttribute</derivedcompoundref>
+    <derivedcompoundref refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_one_to_many_attribute" prot="public" virt="non-virtual">SQLiteNetExtensions.Attributes.OneToManyAttribute</derivedcompoundref>
+    <derivedcompoundref refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_one_to_one_attribute" prot="public" virt="non-virtual">SQLiteNetExtensions.Attributes.OneToOneAttribute</derivedcompoundref>
+    <derivedcompoundref refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_text_blob_attribute" prot="public" virt="non-virtual">SQLiteNetExtensions.Attributes.TextBlobAttribute</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1af5fc4182158ea4da6e1b345cd0a09e79" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>string</type>
+        <definition>string SQLiteNetExtensions.Attributes.RelationshipAttribute.ForeignKey</definition>
+        <argsstring></argsstring>
+        <name>ForeignKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a6302ea89b31299d8486ca7306c8b8ef0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>string</type>
+        <definition>string SQLiteNetExtensions.Attributes.RelationshipAttribute.InverseProperty</definition>
+        <argsstring></argsstring>
+        <name>InverseProperty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" line="17" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a38084177a18ee0c68ffaf50dbfe92606" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>string</type>
+        <definition>string SQLiteNetExtensions.Attributes.RelationshipAttribute.InverseForeignKey</definition>
+        <argsstring></argsstring>
+        <name>InverseForeignKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" line="18" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a9eed664a0e2e43c227a1255d62d7cf3e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="namespace_s_q_lite_net_extensions_1_1_attributes_1a84ac4ba359abf94192d7335a2303c619" kindref="member">CascadeOperation</ref></type>
+        <definition>virtual CascadeOperation SQLiteNetExtensions.Attributes.RelationshipAttribute.CascadeOperations</definition>
+        <argsstring></argsstring>
+        <name>CascadeOperations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" line="19" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a52012e486a916f58a6038f33ffd4af7f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SQLiteNetExtensions.Attributes.RelationshipAttribute.ReadOnly</definition>
+        <argsstring></argsstring>
+        <name>ReadOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" line="20" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a223e2054d5355619a2839194de3c4bfb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SQLiteNetExtensions.Attributes.RelationshipAttribute.IsCascadeRead</definition>
+        <argsstring></argsstring>
+        <name>IsCascadeRead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" line="22" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1ae1525777d74d22b173db932d383483e2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SQLiteNetExtensions.Attributes.RelationshipAttribute.IsCascadeInsert</definition>
+        <argsstring></argsstring>
+        <name>IsCascadeInsert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" line="23" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a4dca0795fd0c06d47584ff868f66dd3a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SQLiteNetExtensions.Attributes.RelationshipAttribute.IsCascadeDelete</definition>
+        <argsstring></argsstring>
+        <name>IsCascadeDelete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" line="24" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a95f43e2f5d7c48df08f2c89e353e06fd" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SQLiteNetExtensions.Attributes.RelationshipAttribute.RelationshipAttribute</definition>
+        <argsstring>(string foreignKey, string inverseForeignKey, string inverseProperty)</argsstring>
+        <name>RelationshipAttribute</name>
+        <param>
+          <type>string</type>
+          <declname>foreignKey</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>inverseForeignKey</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>inverseProperty</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" line="9" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" bodystart="9" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="463">
+        <label>IgnoreAttribute</label>
+      </node>
+      <node id="468">
+        <label>SQLiteNetExtensions.Attributes.TextBlobAttribute</label>
+        <link refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_text_blob_attribute"/>
+        <childnode refid="462" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="465">
+        <label>SQLiteNetExtensions.Attributes.ManyToOneAttribute</label>
+        <link refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_many_to_one_attribute"/>
+        <childnode refid="462" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="467">
+        <label>SQLiteNetExtensions.Attributes.OneToOneAttribute</label>
+        <link refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_one_to_one_attribute"/>
+        <childnode refid="462" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="462">
+        <label>SQLiteNetExtensions.Attributes.RelationshipAttribute</label>
+        <link refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute"/>
+        <childnode refid="463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="466">
+        <label>SQLiteNetExtensions.Attributes.OneToManyAttribute</label>
+        <link refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_one_to_many_attribute"/>
+        <childnode refid="462" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="464">
+        <label>SQLiteNetExtensions.Attributes.ManyToManyAttribute</label>
+        <link refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_many_to_many_attribute"/>
+        <childnode refid="462" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="470">
+        <label>IgnoreAttribute</label>
+      </node>
+      <node id="469">
+        <label>SQLiteNetExtensions.Attributes.RelationshipAttribute</label>
+        <link refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute"/>
+        <childnode refid="470" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" line="8" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs" bodystart="7" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a9eed664a0e2e43c227a1255d62d7cf3e" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::RelationshipAttribute</scope><name>CascadeOperations</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1af5fc4182158ea4da6e1b345cd0a09e79" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::RelationshipAttribute</scope><name>ForeignKey</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a38084177a18ee0c68ffaf50dbfe92606" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::RelationshipAttribute</scope><name>InverseForeignKey</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a6302ea89b31299d8486ca7306c8b8ef0" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::RelationshipAttribute</scope><name>InverseProperty</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a4dca0795fd0c06d47584ff868f66dd3a" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::RelationshipAttribute</scope><name>IsCascadeDelete</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1ae1525777d74d22b173db932d383483e2" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::RelationshipAttribute</scope><name>IsCascadeInsert</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a223e2054d5355619a2839194de3c4bfb" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::RelationshipAttribute</scope><name>IsCascadeRead</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a52012e486a916f58a6038f33ffd4af7f" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::RelationshipAttribute</scope><name>ReadOnly</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a95f43e2f5d7c48df08f2c89e353e06fd" prot="protected" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::RelationshipAttribute</scope><name>RelationshipAttribute</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_int_enum_converter" kind="class" language="C#" prot="public">
+    <compoundname>myMD::ViewModel::ProfileTabViewModel::IntEnumConverter</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IValueConverter</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_int_enum_converter_1a73bbd4493664686f44c7411cbb4ac98a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>object myMD.ViewModel.ProfileTabViewModel.IntEnumConverter.Convert</definition>
+        <argsstring>(object value, Type targetType, object parameter, CultureInfo culture)</argsstring>
+        <name>Convert</name>
+        <param>
+          <type>object</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>targetType</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>parameter</declname>
+        </param>
+        <param>
+          <type>CultureInfo</type>
+          <declname>culture</declname>
+        </param>
+        <briefdescription>
+<para>Konvertiert das gegebene Objekt zu einem integer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Das zu konvertierende Objekt</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>targetType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hier nicht benutzt</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hier nicht benutzt</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>culture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hier nicht benutzt</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Der zu value gehörende Integer Wert</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/IntEnumConverter.cs" line="22" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/IntEnumConverter.cs" bodystart="22" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_int_enum_converter_1a03ac7d0bfe40bd5cb4ffb2f2c7145df7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>object myMD.ViewModel.ProfileTabViewModel.IntEnumConverter.ConvertBack</definition>
+        <argsstring>(object value, Type targetType, object parameter, CultureInfo culture)</argsstring>
+        <name>ConvertBack</name>
+        <param>
+          <type>object</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>targetType</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>parameter</declname>
+        </param>
+        <param>
+          <type>CultureInfo</type>
+          <declname>culture</declname>
+        </param>
+        <briefdescription>
+<para>Konvertiert das gegebene Objekt zum gegebenen Enum-Typ. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Der Integer der zu einem Enum-Wert konvertiert werden soll</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>targetType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Der Enum Typ zu dem value konvertiert werden soll</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hier nicht benutzt</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>culture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hier nicht benutzt</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/IntEnumConverter.cs" line="39" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/IntEnumConverter.cs" bodystart="39" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Konverter zwischen Enum und Integer, zur Verwendung in XAML-Seiten. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="237">
+        <label>IValueConverter</label>
+      </node>
+      <node id="236">
+        <label>myMD.ViewModel.ProfileTabViewModel.IntEnumConverter</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_int_enum_converter"/>
+        <childnode refid="237" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="239">
+        <label>IValueConverter</label>
+      </node>
+      <node id="238">
+        <label>myMD.ViewModel.ProfileTabViewModel.IntEnumConverter</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_int_enum_converter"/>
+        <childnode refid="239" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/IntEnumConverter.cs" line="13" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/IntEnumConverter.cs" bodystart="12" bodyend="47"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_int_enum_converter_1a73bbd4493664686f44c7411cbb4ac98a" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::IntEnumConverter</scope><name>Convert</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_int_enum_converter_1a03ac7d0bfe40bd5cb4ffb2f2c7145df7" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::IntEnumConverter</scope><name>ConvertBack</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

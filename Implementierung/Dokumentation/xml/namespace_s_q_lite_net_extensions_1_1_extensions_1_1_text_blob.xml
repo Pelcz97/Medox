@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob" kind="namespace" language="C#">
+    <compoundname>SQLiteNetExtensions::Extensions::TextBlob</compoundname>
+    <innerclass refid="interface_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob_1_1_i_text_blob_serializer" prot="public">SQLiteNetExtensions::Extensions::TextBlob::ITextBlobSerializer</innerclass>
+    <innerclass refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob_1_1_text_blob_operations" prot="public">SQLiteNetExtensions::Extensions::TextBlob::TextBlobOperations</innerclass>
+    <innernamespace refid="namespace_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob_1_1_serializers">SQLiteNetExtensions::Extensions::TextBlob::Serializers</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/TextBlob/ITextBlobSerializer.cs" line="4" column="1"/>
+  </compounddef>
+</doxygen>

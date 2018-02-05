@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_doctors_letter_group_doctors_letter_8cs" kind="file" language="C#">
+    <compoundname>DoctorsLetterGroupDoctorsLetter.cs</compoundname>
+    <innerclass refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_doctors_letter" prot="public">myMD::Model::DataModel::DoctorsLetterGroupDoctorsLetter</innerclass>
+    <innernamespace refid="namespacemy_m_d_1_1_model_1_1_data_model">myMD::Model::DataModel</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>SQLiteNetExtensions.Attributes;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Xamarin.Forms.Internals;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemy_m_d" kindref="compound">myMD</ref>.Model.DataModel</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>[Preserve(AllMembers<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="11" refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_doctors_letter" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_doctors_letter" kindref="compound">DoctorsLetterGroupDoctorsLetter</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[ForeignKey(typeof(<ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group" kindref="compound">DoctorsLetterGroup</ref>))]</highlight></codeline>
+<codeline lineno="17" refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_doctors_letter_1a72d46cc74b5a18580b6fd38347463689" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>DoctorsLetterGroupID<sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[ForeignKey(typeof(<ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter" kindref="compound">DoctorsLetter</ref>))]</highlight></codeline>
+<codeline lineno="23" refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_doctors_letter_1a9ab739570b1ed8e567f199de0370bc3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>DoctorsLetterID<sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroupDoctorsLetter.cs"/>
+  </compounddef>
+</doxygen>

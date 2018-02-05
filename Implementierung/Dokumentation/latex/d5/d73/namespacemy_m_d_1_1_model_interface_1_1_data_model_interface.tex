@@ -1,0 +1,32 @@
+\hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface}{
+\section{my\-MD::Model\-Interface::Data\-Model\-Interface Namespace Reference}
+\label{d5/d73/namespacemy_m_d_1_1_model_interface_1_1_data_model_interface}\index{myMD::ModelInterface::DataModelInterface@{myMD::ModelInterface::DataModelInterface}}
+}
+
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+interface \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{IData}
+\begin{CompactList}\small\item\em Schnittstelle f\"{u}r die Abstraktion von Daten, die die \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{IEntity} Schnittstelle erweitert. Daten sind hier eine Ansammlung von medizinischen Informationen. \item\end{CompactList}\item 
+interface \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor}{IDoctor}
+\begin{CompactList}\small\item\em Schnittstelle f\"{u}r die Abstraktion eines Arztes, die die \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{IEntity} Schnittstelle erweitert. \item\end{CompactList}\item 
+interface \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter}
+\begin{CompactList}\small\item\em Schnittstelle f\"{u}r die Abstraktion eines Arztbriefes, die die \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{IData} Schnittstelle erweitert. Ein Arztbrief ist ein Transferdokument f\"{u}r die Kommunikation zwischen \"{A}rzten. Er gibt einen zusammenfassenden \"{U}berblick \"{u}ber den Status des Patienten bei der Entlassung, einen R\"{u}ckblick \"{u}ber den Krankheitsverlauf, die veranlasste Therapie und eine Interpretation des Geschehens zum Krankheitsverlauf im speziellen Fall. \item\end{CompactList}\item 
+interface \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{IDoctors\-Letter\-Group}
+\begin{CompactList}\small\item\em Schnittstelle f\"{u}r eine Arztbriefgruppe, die die \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{IData} Schnittstelle erweitert. Eine Arztbriefgruppe ist eine Ansammlung von beliebig vielen Arztbriefen. \item\end{CompactList}\item 
+interface \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{IEntity}
+\begin{CompactList}\small\item\em Schnittstelle f\"{u}r eine Entit\"{a}t. Entit\"{a}ten sind Abstraktionen von medizinischen Daten oder Akteuren. \item\end{CompactList}\item 
+interface \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{IMedication}
+\begin{CompactList}\small\item\em Schnittstelle f\"{u}r die Abstraktion einer Medikation, die die \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{IData} Schnittstelle erweitert. Eine Medikation ist ein Stoff oder eine Stoffzusammensetzungen, die zur Heilung oder zur Verh\"{u}tung menschlicher oder tierischer Krankheiten bestimmt ist oder sich dazu eignet physiologische Funktionen zu beeinflussen oder eine medizinische Diagnose zu erm\"{o}glichen. Sie kann von einem Arzt in einem Arztbrief verschrieben werden, f\"{u}r manche Medikationen wird dies jedoch nicht ben\"{o}tigt. \item\end{CompactList}\item 
+interface \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{IProfile}
+\begin{CompactList}\small\item\em Schnittstelle f\"{u}r die Abstraktion eines Nutzerprofils, die die \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{IEntity} Schnittstelle erweitert. Ein Nutzerprofils enth\"{a}lt diverse Informationen \"{u}ber einen Nutzer. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ae7d78aea8d446d685c618fcde65e1a9}{Blood\-Type} 
+\begin{CompactList}\small\item\em Enumeration aller m\"{o}glichen Blutgruppen. \item\end{CompactList}\item 
+enum \hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_d16dd01adf735ed9b87eebff5fc39ce5}{Interval} 
+\begin{CompactList}\small\item\em Enumeration aller m\"{o}glicher Zeitintervalle in der eine Medikation eingenommen werden soll. \item\end{CompactList}\item 
+enum \hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_456ce8fc5315d26a3f7145a5228d8fd3}{Sensitivity} 
+\begin{CompactList}\small\item\em Enumeration aller m\"{o}glicher Sensitiv\"{a}tsstufen f\"{u}r einen Arztbrief. \item\end{CompactList}\end{CompactItemize}

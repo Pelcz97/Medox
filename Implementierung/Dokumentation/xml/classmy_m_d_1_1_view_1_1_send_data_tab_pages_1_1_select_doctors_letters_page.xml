@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_doctors_letters_page" kind="class" language="C#" prot="public">
+    <compoundname>myMD::View::SendDataTabPages::SelectDoctorsLettersPage</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page" prot="public" virt="non-virtual">myMD.View.AbstractPages.CustomContentPage</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_doctors_letters_page_1a77d659f3e73475deec2abf7684f8af82" prot="private" static="no" mutable="no">
+        <type><ref refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_doctors_letters_view_model" kindref="compound">SelectDoctorsLettersViewModel</ref></type>
+        <definition>SelectDoctorsLettersViewModel myMD.View.SendDataTabPages.SelectDoctorsLettersPage.vm</definition>
+        <argsstring></argsstring>
+        <name>vm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDoctorsLettersPage.xaml.cs" line="13" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDoctorsLettersPage.xaml.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_doctors_letters_page_1a8ae482a882150437ce322f4796d6c98e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.View.SendDataTabPages.SelectDoctorsLettersPage.SelectDoctorsLettersPage</definition>
+        <argsstring>()</argsstring>
+        <name>SelectDoctorsLettersPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDoctorsLettersPage.xaml.cs" line="14" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDoctorsLettersPage.xaml.cs" bodystart="14" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_doctors_letters_page_1afdaa4405f8a80063f5e12ecd91bc91ff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async void</type>
+        <definition>async void myMD.View.SendDataTabPages.SelectDoctorsLettersPage.CancelSelectDoctorsLetters_Clicked</definition>
+        <argsstring>(object sender, System.EventArgs e)</argsstring>
+        <name>CancelSelectDoctorsLetters_Clicked</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDoctorsLettersPage.xaml.cs" line="20" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDoctorsLettersPage.xaml.cs" bodystart="20" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="401">
+        <label>CustomContentPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
+        <childnode refid="402" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="402">
+        <label>ContentPage</label>
+      </node>
+      <node id="400">
+        <label>myMD.View.SendDataTabPages.SelectDoctorsLettersPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_doctors_letters_page"/>
+        <childnode refid="401" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="404">
+        <label>CustomContentPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
+        <childnode refid="405" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="405">
+        <label>ContentPage</label>
+      </node>
+      <node id="403">
+        <label>myMD.View.SendDataTabPages.SelectDoctorsLettersPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_doctors_letters_page"/>
+        <childnode refid="404" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDoctorsLettersPage.xaml.cs" line="12" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDoctorsLettersPage.xaml.cs" bodystart="11" bodyend="24"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_doctors_letters_page_1afdaa4405f8a80063f5e12ecd91bc91ff" prot="private" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SelectDoctorsLettersPage</scope><name>CancelSelectDoctorsLetters_Clicked</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page_1a3cb9c69e49e16c30e2e5377790702769" prot="public" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SelectDoctorsLettersPage</scope><name>CustomContentPage</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_doctors_letters_page_1a8ae482a882150437ce322f4796d6c98e" prot="public" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SelectDoctorsLettersPage</scope><name>SelectDoctorsLettersPage</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_doctors_letters_page_1a77d659f3e73475deec2abf7684f8af82" prot="private" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SelectDoctorsLettersPage</scope><name>vm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

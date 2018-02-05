@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device" kind="class" language="C#" prot="public">
+    <compoundname>myMD::Model::TransmissionModel::Device</compoundname>
+    <basecompoundref refid="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device" prot="public" virt="non-virtual">myMD.ModelInterface.TransmissionModelInterface.IDevice</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1a929ac575030efc1810879551f92f6a61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool myMD.Model.TransmissionModel.Device.connected</definition>
+        <argsstring>()</argsstring>
+        <name>connected</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device_1ab43328062cfb240bc8b942f77635aa86">connected</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/Device.cs" line="7" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/Device.cs" bodystart="7" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1ad3410ee962b5a3253e4ef99651b80c44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string myMD.Model.TransmissionModel.Device.getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device_1a0642c516236dc1a58f6199a47f174427">getName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/Device.cs" line="12" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/Device.cs" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1a84a4d532edd011e5eabd0b6939b1e91c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string myMD.Model.TransmissionModel.Device.getUuid</definition>
+        <argsstring>()</argsstring>
+        <name>getUuid</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device_1a59013bc25e4ab2ef413e940d6e7c735f">getUuid</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/Device.cs" line="17" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/Device.cs" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1af8485fc857a036d58e8b1ba38e7d098a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool myMD.Model.TransmissionModel.Device.paired</definition>
+        <argsstring>()</argsstring>
+        <name>paired</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device_1a2979ec84b80f8ac2efcfc29797e1daa2">paired</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/Device.cs" line="22" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/Device.cs" bodystart="22" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="69">
+        <label>myMD.Model.TransmissionModel.Device</label>
+        <link refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device"/>
+        <childnode refid="70" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>IDevice</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="71">
+        <label>myMD.Model.TransmissionModel.Device</label>
+        <link refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device"/>
+        <childnode refid="72" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>IDevice</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/Device.cs" line="6" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/Device.cs" bodystart="5" bodyend="26"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1a929ac575030efc1810879551f92f6a61" prot="public" virt="non-virtual"><scope>myMD::Model::TransmissionModel::Device</scope><name>connected</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1ad3410ee962b5a3253e4ef99651b80c44" prot="public" virt="non-virtual"><scope>myMD::Model::TransmissionModel::Device</scope><name>getName</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1a84a4d532edd011e5eabd0b6939b1e91c" prot="public" virt="non-virtual"><scope>myMD::Model::TransmissionModel::Device</scope><name>getUuid</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1af8485fc857a036d58e8b1ba38e7d098a" prot="public" virt="non-virtual"><scope>myMD::Model::TransmissionModel::Device</scope><name>paired</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

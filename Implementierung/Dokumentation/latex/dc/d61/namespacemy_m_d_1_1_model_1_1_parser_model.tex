@@ -1,0 +1,24 @@
+\hypertarget{namespacemy_m_d_1_1_model_1_1_parser_model}{
+\section{my\-MD::Model::Parser\-Model Namespace Reference}
+\label{dc/d61/namespacemy_m_d_1_1_model_1_1_parser_model}\index{myMD::Model::ParserModel@{myMD::Model::ParserModel}}
+}
+
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser}{File\-To\-Database\-Parser}
+\begin{CompactList}\small\item\em Abstrakte Klasse zum Parsen von Dateien in eine Datenbank. Sollte dateiformatspezifisch erweitert werden. \item\end{CompactList}\item 
+class \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser}{Hl7To\-Database\-Parser}
+\begin{CompactList}\small\item\em Diese Klasse ist ein \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser}{File\-To\-Database\-Parser} f\"{u}r Dateien im .hl7 Format. \item\end{CompactList}\item 
+interface \hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade}{IParser\-Facade}
+\begin{CompactList}\small\item\em Diese Schnittstelle ist die Haupteinstiegsstelle f\"{u}r andere Pakete in das \hyperlink{namespacemy_m_d_1_1_model_1_1_parser_model}{Parser\-Model} Paket. Hier k\"{o}nnen Informationen aus Dateien in eine Datenbank eingetragen werden oder Dateien aus Informationen aus der Datenbank erstellt werden. \item\end{CompactList}\item 
+class \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser}{Letter\-To\-Original\-File\-Parser}
+\begin{CompactList}\small\item\em Diese Klasse enth\"{a}lt die Logik um Arztbriefe in ihr urspr\"{u}ngliches Dateiformat zu parsen. \item\end{CompactList}\item 
+class \hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade}{Parser\-Facade}
+\begin{CompactList}\small\item\em Implementierung der \hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade}{IParser\-Facade} Schnittstelle. W\"{a}hlt beim Methodenaufruf einen passenden Parser aus diesem Paket auf und delegiert an diesen. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{namespacemy_m_d_1_1_model_1_1_parser_model_93c26a65dd116719b5e655923b887b9f}{File\-Format} 
+\begin{CompactList}\small\item\em Enumeration der unterst\~{A}¼tzen Dateiformate. \item\end{CompactList}\end{CompactItemize}

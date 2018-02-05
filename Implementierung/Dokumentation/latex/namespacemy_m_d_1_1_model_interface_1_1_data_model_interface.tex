@@ -1,0 +1,157 @@
+\hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface}{}\section{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface-\/\+Namensbereichsreferenz}
+\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface}\index{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface@{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface}}
+\subsection*{Klassen}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{I\+Data}}
+\begin{DoxyCompactList}\small\item\em Schnittstelle für die Abstraktion von Daten, die die \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}} Schnittstelle erweitert. Daten sind hier eine Ansammlung von medizinischen Informationen. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor}{I\+Doctor}}
+\begin{DoxyCompactList}\small\item\em Schnittstelle für die Abstraktion eines Arztes, die die \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}} Schnittstelle erweitert. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}}
+\begin{DoxyCompactList}\small\item\em Schnittstelle für die Abstraktion eines Arztbriefes, die die \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{I\+Data}} Schnittstelle erweitert. Ein Arztbrief ist ein Transferdokument für die Kommunikation zwischen Ärzten. Er gibt einen zusammenfassenden Überblick über den Status des Patienten bei der Entlassung, einen Rückblick über den Krankheitsverlauf, die veranlasste Therapie und eine Interpretation des Geschehens zum Krankheitsverlauf im speziellen Fall. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{I\+Doctors\+Letter\+Group}}
+\begin{DoxyCompactList}\small\item\em Schnittstelle für eine Arztbriefgruppe, die die \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{I\+Data}} Schnittstelle erweitert. Eine Arztbriefgruppe ist eine Ansammlung von beliebig vielen Arztbriefen. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}}
+\begin{DoxyCompactList}\small\item\em Schnittstelle für eine Entität. Entitäten sind Abstraktionen von medizinischen Daten oder Akteuren. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}}
+\begin{DoxyCompactList}\small\item\em Schnittstelle für die Abstraktion einer Medikation, die die \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{I\+Data}} Schnittstelle erweitert. Eine Medikation ist ein Stoff oder eine Stoffzusammensetzungen, die zur Heilung oder zur Verhütung menschlicher oder tierischer Krankheiten bestimmt ist oder sich dazu eignet physiologische Funktionen zu beeinflussen oder eine medizinische Diagnose zu ermöglichen. Sie kann von einem Arzt in einem Arztbrief verschrieben werden, für manche Medikationen wird dies jedoch nicht benötigt. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}}
+\begin{DoxyCompactList}\small\item\em Schnittstelle für die Abstraktion eines Nutzerprofils, die die \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}} Schnittstelle erweitert. Ein Nutzerprofils enthält diverse Informationen über einen Nutzer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{AufzÃ¤hlungen}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17c}{Blood\+Type}} \{ \newline
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17cafbf9dc822b8fc0fca4bcf70e2e97fae0}{Blood\+Type.\+O\+Minus}}, 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca06f98828c062784619450978d55c3437}{Blood\+Type.\+O\+Plus}}, 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca54e7c3fa223fc38b8a7213e15bac19b6}{Blood\+Type.\+A\+Minus}}, 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca3efac03d9f5efd2a83319a8c58cd609d}{Blood\+Type.\+A\+Plus}}, 
+\newline
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca0bacc15b42c55899a73dbb54e76cc97c}{Blood\+Type.\+B\+Minus}}, 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca2cb89e01e9aab2ef6c1488f5313876e6}{Blood\+Type.\+B\+Plus}}, 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca9fe817395879cfa501e579e018bdddff}{Blood\+Type.\+A\+B\+Minus}}, 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17cae3b9e7de2e7a6f6d12dbf540c3263ac9}{Blood\+Type.\+A\+B\+Plus}}, 
+\newline
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17cace2c8aed9c2fa0cfbed56cbda4d8bf07}{Blood\+Type.\+Empty}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration aller möglichen Blutgruppen \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782}{Interval}} \{ \newline
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782ab55e509c697e4cca0e1d160a7806698f}{Interval.\+Hour}} = \textquotesingle{}h\textquotesingle{}, 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782a03727ac48595a24daed975559c944a44}{Interval.\+Day}} = \textquotesingle{}d\textquotesingle{}, 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782ad2ce009594dcc60befa6a4e6cbeb71fc}{Interval.\+Week}} = \textquotesingle{}w\textquotesingle{}, 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782a7cbb885aa1164b390a0bc050a64e1812}{Interval.\+Month}} = \textquotesingle{}m\textquotesingle{}, 
+\newline
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782a537c66b24ef5c83b7382cdc3f34885f2}{Interval.\+Year}} = \textquotesingle{}y\textquotesingle{}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration aller möglicher Zeitintervalle in der eine Medikation eingenommen werden soll \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a3d0df45e579e37eccbab219eb94860da}{Sensitivity}} \{ \mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a3d0df45e579e37eccbab219eb94860daa28d0edd045e05cf5af64e35ae0c4c6ef}{Sensitivity.\+Low}}, 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a3d0df45e579e37eccbab219eb94860daa960b44c579bc2f6818d2daaf9e4c16f0}{Sensitivity.\+Normal}}, 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a3d0df45e579e37eccbab219eb94860daa655d20c1ca69519ca647684edbb2db35}{Sensitivity.\+High}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration aller möglicher Sensitivätsstufen für einen Arztbrief \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentation der AufzÃ¤hlungstypen}
+\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17c}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17c}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!Blood\+Type@{Blood\+Type}}
+\index{Blood\+Type@{Blood\+Type}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}
+\subsubsection{\texorpdfstring{Blood\+Type}{BloodType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17c}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+Blood\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration aller möglichen Blutgruppen 
+
+\begin{DoxyEnumFields}{AufzÃ¤hlungswerte}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+Minus@{O\+Minus}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!O\+Minus@{O\+Minus}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17cafbf9dc822b8fc0fca4bcf70e2e97fae0}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17cafbf9dc822b8fc0fca4bcf70e2e97fae0}} 
+O\+Minus&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+Plus@{O\+Plus}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!O\+Plus@{O\+Plus}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca06f98828c062784619450978d55c3437}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca06f98828c062784619450978d55c3437}} 
+O\+Plus&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+Minus@{A\+Minus}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!A\+Minus@{A\+Minus}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca54e7c3fa223fc38b8a7213e15bac19b6}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca54e7c3fa223fc38b8a7213e15bac19b6}} 
+A\+Minus&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+Plus@{A\+Plus}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!A\+Plus@{A\+Plus}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca3efac03d9f5efd2a83319a8c58cd609d}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca3efac03d9f5efd2a83319a8c58cd609d}} 
+A\+Plus&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+Minus@{B\+Minus}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!B\+Minus@{B\+Minus}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca0bacc15b42c55899a73dbb54e76cc97c}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca0bacc15b42c55899a73dbb54e76cc97c}} 
+B\+Minus&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+Plus@{B\+Plus}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!B\+Plus@{B\+Plus}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca2cb89e01e9aab2ef6c1488f5313876e6}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca2cb89e01e9aab2ef6c1488f5313876e6}} 
+B\+Plus&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+B\+Minus@{A\+B\+Minus}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!A\+B\+Minus@{A\+B\+Minus}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca9fe817395879cfa501e579e018bdddff}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17ca9fe817395879cfa501e579e018bdddff}} 
+A\+B\+Minus&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+B\+Plus@{A\+B\+Plus}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!A\+B\+Plus@{A\+B\+Plus}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17cae3b9e7de2e7a6f6d12dbf540c3263ac9}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17cae3b9e7de2e7a6f6d12dbf540c3263ac9}} 
+A\+B\+Plus&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Empty@{Empty}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!Empty@{Empty}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17cace2c8aed9c2fa0cfbed56cbda4d8bf07}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17cace2c8aed9c2fa0cfbed56cbda4d8bf07}} 
+Empty&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!Interval@{Interval}}
+\index{Interval@{Interval}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}
+\subsubsection{\texorpdfstring{Interval}{Interval}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+Interval}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration aller möglicher Zeitintervalle in der eine Medikation eingenommen werden soll 
+
+\begin{DoxyEnumFields}{AufzÃ¤hlungswerte}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hour@{Hour}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!Hour@{Hour}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782ab55e509c697e4cca0e1d160a7806698f}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782ab55e509c697e4cca0e1d160a7806698f}} 
+Hour&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Day@{Day}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!Day@{Day}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782a03727ac48595a24daed975559c944a44}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782a03727ac48595a24daed975559c944a44}} 
+Day&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Week@{Week}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!Week@{Week}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782ad2ce009594dcc60befa6a4e6cbeb71fc}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782ad2ce009594dcc60befa6a4e6cbeb71fc}} 
+Week&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Month@{Month}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!Month@{Month}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782a7cbb885aa1164b390a0bc050a64e1812}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782a7cbb885aa1164b390a0bc050a64e1812}} 
+Month&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Year@{Year}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!Year@{Year}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782a537c66b24ef5c83b7382cdc3f34885f2}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782a537c66b24ef5c83b7382cdc3f34885f2}} 
+Year&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a3d0df45e579e37eccbab219eb94860da}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a3d0df45e579e37eccbab219eb94860da}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!Sensitivity@{Sensitivity}}
+\index{Sensitivity@{Sensitivity}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}
+\subsubsection{\texorpdfstring{Sensitivity}{Sensitivity}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a3d0df45e579e37eccbab219eb94860da}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+Sensitivity}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration aller möglicher Sensitivätsstufen für einen Arztbrief 
+
+\begin{DoxyEnumFields}{AufzÃ¤hlungswerte}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Low@{Low}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!Low@{Low}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a3d0df45e579e37eccbab219eb94860daa28d0edd045e05cf5af64e35ae0c4c6ef}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a3d0df45e579e37eccbab219eb94860daa28d0edd045e05cf5af64e35ae0c4c6ef}} 
+Low&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Normal@{Normal}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!Normal@{Normal}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a3d0df45e579e37eccbab219eb94860daa960b44c579bc2f6818d2daaf9e4c16f0}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a3d0df45e579e37eccbab219eb94860daa960b44c579bc2f6818d2daaf9e4c16f0}} 
+Normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{High@{High}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}}\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface}!High@{High}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a3d0df45e579e37eccbab219eb94860daa655d20c1ca69519ca647684edbb2db35}\label{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a3d0df45e579e37eccbab219eb94860daa655d20c1ca69519ca647684edbb2db35}} 
+High&\\
+\hline
+
+\end{DoxyEnumFields}

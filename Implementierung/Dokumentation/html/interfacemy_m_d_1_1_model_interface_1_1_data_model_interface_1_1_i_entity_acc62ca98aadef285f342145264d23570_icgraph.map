@@ -1,0 +1,4 @@
+<map id="myMD.ModelInterface.DataModelInterface.IEntity.ToEntity" name="myMD.ModelInterface.DataModelInterface.IEntity.ToEntity">
+<area shape="rect" id="node2" href="$classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database.html#a00616354127860a0d20d1a353a931cf4" title="myMD.Model.DatabaseModel.IEntityDatabase::Delete(ModelInterface.DataModelInterface.IEntity)" alt="" coords="252,5,449,47"/>
+<area shape="rect" id="node3" href="$classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database.html#a498caa3b7e7a7745f7066620ac9a14ae" title="myMD.Model.DatabaseModel.IEntityDatabase::Insert(ModelInterface.DataModelInterface.IEntity)" alt="" coords="252,71,449,112"/>
+</map>

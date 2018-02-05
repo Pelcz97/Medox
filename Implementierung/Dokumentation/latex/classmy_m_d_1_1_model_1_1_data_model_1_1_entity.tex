@@ -1,0 +1,184 @@
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{}\section{my\+M\+D.\+Model.\+Data\+Model.\+Entity Klassenreferenz}
+\label{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}\index{my\+M\+D.\+Model.\+Data\+Model.\+Entity@{my\+M\+D.\+Model.\+Data\+Model.\+Entity}}
+
+
+Die \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity}} Klasse implementiert die I\+Entity-\/\+Schnittstelle. Dabei dient die Klasse nur als Strukturelement für andere Klassen, die eine Vorlage für eine S\+Q\+Lite-\/\+Datenbank-\/\+Tabelle, unter Verwendung der S\+Q\+Lite-\/\+Net-\/\+Extensions Library, sein sollen und ist daher abstrakt. Diese Klassen sollten \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity}} erweitern.  
+
+
+
+
+Klassendiagramm fÃ¼r my\+M\+D.\+Model.\+Data\+Model.\+Entity\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_entity__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ZusammengehÃ¶rigkeiten von my\+M\+D.\+Model.\+Data\+Model.\+Entity\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_entity__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Ã–ffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_afe40113ddeb60fd81f4bbcc6d0e696b6}{Delete}} ()
+\begin{DoxyCompactList}\small\item\em Führt die nötigen Aktionen aus um diese Entität zu löschen. Sollte immer zusammen mit einer Löschung aus der Datenbank aufgerufen werden. Sollte von Unterklassen überschrieben werden, bei denen zusätzliche Aktionen zur Löschung nötig sind \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_abe00d7d8a12deadbb57953f0cc57346c}{Equals}} (\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity}} other)
+\begin{DoxyCompactList}\small\item\em Zwei Entitäten sind genau dann gleich, wenn ihre Id, ihr Name und ihr Profil gleich sind. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a23d3a79ef271ea1ecfd7bb85671e7148}{Equals}} (object obj)
+\begin{DoxyCompactList}\small\item\em System.\+Object\+::\+Equals(System.\+Object)\end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a3ecbd0af049bc94e1d51670ba5b2c256}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em System.\+Object\+::\+Get\+Hash\+Code()\end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity}} \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_ab69c6b862e29567f6c103ac5520c863a}{To\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Propertys}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_ac2f81922151a57358d5d8f12dbab6d89}{ID}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Primärer Schlüssel um Zeilen in der korrespondierenden Tabelle zu identifizieren. Wird automatisch beim Einfügen in die Datenbank gesetzt und sollte von sonst niemandem verändert werden. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a752f68aa01561c06c77bc2d3324a46e7}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_a8160d8399f68f5db325a517c3114f7ae}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Entity\+::\+Name}}\end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}{Profile}} \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a3df9a6eed5a26b09bbf075615db46b9c}{Profile}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Das Nutzerprofil dem diese Entität eindeutig zugeordnet werden kann. Ein Nutzerprofil kann dabei mehrere Entitäten enthalten. Wird automatisch beim Lesen aus der Datenbank gesetzt. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a54eef4f2993b1ed6467ee8a7d4b1a4b7}{Profile\+ID}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Fremdschlüssel zum Profil dieser Entität für die Datenbank. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{AusfÃ¼hrliche Beschreibung}
+Die \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity}} Klasse implementiert die I\+Entity-\/\+Schnittstelle. Dabei dient die Klasse nur als Strukturelement für andere Klassen, die eine Vorlage für eine S\+Q\+Lite-\/\+Datenbank-\/\+Tabelle, unter Verwendung der S\+Q\+Lite-\/\+Net-\/\+Extensions Library, sein sollen und ist daher abstrakt. Diese Klassen sollten \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity}} erweitern. 
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Entity}}
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_afe40113ddeb60fd81f4bbcc6d0e696b6}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_afe40113ddeb60fd81f4bbcc6d0e696b6}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}!Delete@{Delete}}
+\index{Delete@{Delete}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}}
+\subsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily virtual void my\+M\+D.\+Model.\+Data\+Model.\+Entity.\+Delete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Führt die nötigen Aktionen aus um diese Entität zu löschen. Sollte immer zusammen mit einer Löschung aus der Datenbank aufgerufen werden. Sollte von Unterklassen überschrieben werden, bei denen zusätzliche Aktionen zur Löschung nötig sind 
+
+
+
+Erneute Implementation in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_af0060519c7a729848d819a507cc6157a}{my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter}}, \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_a03d95deed0cfec8721713fd565daf81e}{my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group}} und \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication_ae4d571a758daafad57458858d461e6c9}{my\+M\+D.\+Model.\+Data\+Model.\+Medication}}.
+
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_afe40113ddeb60fd81f4bbcc6d0e696b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_abe00d7d8a12deadbb57953f0cc57346c}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_abe00d7d8a12deadbb57953f0cc57346c}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}!Equals@{Equals}}
+\index{Equals@{Equals}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}}
+\subsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool my\+M\+D.\+Model.\+Data\+Model.\+Entity.\+Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity}}}]{other }\end{DoxyParamCaption})}
+
+
+
+Zwei Entitäten sind genau dann gleich, wenn ihre Id, ihr Name und ihr Profil gleich sind. 
+
+System.\+I\+Equatable$<$\+T$>$\+::\+Equals(\+T)Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_abe00d7d8a12deadbb57953f0cc57346c_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_abe00d7d8a12deadbb57953f0cc57346c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a23d3a79ef271ea1ecfd7bb85671e7148}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a23d3a79ef271ea1ecfd7bb85671e7148}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}!Equals@{Equals}}
+\index{Equals@{Equals}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}}
+\subsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily override bool my\+M\+D.\+Model.\+Data\+Model.\+Entity.\+Equals (\begin{DoxyParamCaption}\item[{object}]{obj }\end{DoxyParamCaption})}
+
+
+
+System.\+Object\+::\+Equals(System.\+Object)
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a3ecbd0af049bc94e1d51670ba5b2c256}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a3ecbd0af049bc94e1d51670ba5b2c256}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}!Get\+Hash\+Code@{Get\+Hash\+Code}}
+\index{Get\+Hash\+Code@{Get\+Hash\+Code}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}}
+\subsubsection{\texorpdfstring{Get\+Hash\+Code()}{GetHashCode()}}
+{\footnotesize\ttfamily override int my\+M\+D.\+Model.\+Data\+Model.\+Entity.\+Get\+Hash\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+System.\+Object\+::\+Get\+Hash\+Code()
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_ab69c6b862e29567f6c103ac5520c863a}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_ab69c6b862e29567f6c103ac5520c863a}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}!To\+Entity@{To\+Entity}}
+\index{To\+Entity@{To\+Entity}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}}
+\subsubsection{\texorpdfstring{To\+Entity()}{ToEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{Entity}} my\+M\+D.\+Model.\+Data\+Model.\+Entity.\+To\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig. 
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_acc62ca98aadef285f342145264d23570}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Entity\+::\+To\+Entity()}}
+
+Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_acc62ca98aadef285f342145264d23570}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Entity}}.
+
+
+
+\subsection{Dokumentation der Propertys}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_ac2f81922151a57358d5d8f12dbab6d89}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_ac2f81922151a57358d5d8f12dbab6d89}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}!ID@{ID}}
+\index{ID@{ID}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}}
+\subsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily int my\+M\+D.\+Model.\+Data\+Model.\+Entity.\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Primärer Schlüssel um Zeilen in der korrespondierenden Tabelle zu identifizieren. Wird automatisch beim Einfügen in die Datenbank gesetzt und sollte von sonst niemandem verändert werden. 
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a752f68aa01561c06c77bc2d3324a46e7}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a752f68aa01561c06c77bc2d3324a46e7}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}!Name@{Name}}
+\index{Name@{Name}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}}
+\subsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string my\+M\+D.\+Model.\+Data\+Model.\+Entity.\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_a8160d8399f68f5db325a517c3114f7ae}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Entity\+::\+Name}}
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a3df9a6eed5a26b09bbf075615db46b9c}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a3df9a6eed5a26b09bbf075615db46b9c}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}!Profile@{Profile}}
+\index{Profile@{Profile}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}}
+\subsubsection{\texorpdfstring{Profile}{Profile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}{Profile}} my\+M\+D.\+Model.\+Data\+Model.\+Entity.\+Profile\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Das Nutzerprofil dem diese Entität eindeutig zugeordnet werden kann. Ein Nutzerprofil kann dabei mehrere Entitäten enthalten. Wird automatisch beim Lesen aus der Datenbank gesetzt. 
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a54eef4f2993b1ed6467ee8a7d4b1a4b7}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_a54eef4f2993b1ed6467ee8a7d4b1a4b7}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}!Profile\+ID@{Profile\+ID}}
+\index{Profile\+ID@{Profile\+ID}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Entity}}
+\subsubsection{\texorpdfstring{Profile\+ID}{ProfileID}}
+{\footnotesize\ttfamily int my\+M\+D.\+Model.\+Data\+Model.\+Entity.\+Profile\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Fremdschlüssel zum Profil dieser Entität für die Datenbank. 
+
+
+
+Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Data\+Model/\mbox{\hyperlink{_entity_8cs}{Entity.\+cs}}\end{DoxyCompactItemize}

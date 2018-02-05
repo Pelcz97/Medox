@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_i_hl7_parser_helper_8cs" kind="file" language="C#">
+    <compoundname>IHl7ParserHelper.cs</compoundname>
+    <innerclass refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper" prot="public">myMD::Model::ParserModel::IHl7ParserHelper</innerclass>
+    <innernamespace refid="namespacemy_m_d_1_1_model_1_1_parser_model">myMD::Model::ParserModel</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>MARC.Everest.Formatters.XML.ITS1;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>MARC.Everest.RMIM.UV.CDAr2.POCD_MT000040UV;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacemy_m_d" kindref="compound">myMD</ref>.<ref refid="namespacemy_m_d_1_1_model" kindref="compound">Model</ref>.<ref refid="namespacemy_m_d_1_1_model_1_1_data_model" kindref="compound">DataModel</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemy_m_d" kindref="compound">myMD</ref>.Model.ParserModel</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper" kindref="compound">IHl7ParserHelper</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PrepareFormatter(XmlIts1Formatter<sp/>fmtr);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FinalizeMedication(SubstanceAdministration<sp/>source,<sp/><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication" kindref="compound">Medication</ref><sp/>target);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/IHl7ParserHelper.cs"/>
+  </compounddef>
+</doxygen>

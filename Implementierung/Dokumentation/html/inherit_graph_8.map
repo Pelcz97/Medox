@@ -1,0 +1,4 @@
+<map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
+<area shape="rect" id="node1" href="$interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade.html" title="Diese Schnittstelle ist die Haupteinstiegsstelle für andere Pakete in das ParserModel Paket..." alt="" coords="5,5,227,47"/>
+<area shape="rect" id="node2" href="$classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade.html" title="Implementierung der IParserFacade Schnittstelle. Wählt beim Methodenaufruf einen passenden Parser aus ..." alt="" coords="275,5,493,47"/>
+</map>

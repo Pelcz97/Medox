@@ -1,0 +1,162 @@
+\hypertarget{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model}{}\section{my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Item\+View\+Model Klassenreferenz}
+\label{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model}\index{my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Item\+View\+Model@{my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Item\+View\+Model}}
+
+
+\mbox{\hyperlink{namespacemy_m_d_1_1_view_model}{View\+Model}} zur Darstellung eines einzelnen Profils  
+
+
+
+
+Klassendiagramm für my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Item\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Zusammengehörigkeiten von my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Item\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_ae846bc0f8c6962ada62fa7f9a4640d1d}{Profile\+Item\+View\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Erzeugt ein Profil\+Item\+View\+Model und setzt das Profil auf das momentan aktive Profil. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Öffentliche Attribute}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_a8f900454a817a4b4400ede47e418a512}{Blood\+Type\+Name}} =$>$ Blood\+Type.\+To\+String().Format\+Plus\+And\+Minus()
+\begin{DoxyCompactList}\small\item\em Zum Anzeigen formatierter Name der Blutgruppe dieses Profils \end{DoxyCompactList}\item 
+List$<$ string $>$ \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_af9b06e26394989f3cb500fe452a25ce8}{Blood\+Type\+Names}} =$>$ Enum.\+Get\+Names(typeof(\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17c}{Blood\+Type}})).Select(b =$>$ b.\+Format\+Plus\+And\+Minus()).To\+List()
+\begin{DoxyCompactList}\small\item\em Liste zum Anzeigen formatierter Namen aller Blutgruppen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Propertys}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}} \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_a91367f8be2f7fda904e1292cd5049c35}{Profile}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Das Profil des Profile\+Item\+View\+Models \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_abf7ee39f67915e326cbaa633368b9846}{Last\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Der Nachname des Profils. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_aa16bc16413aef57a6b63caedf7b5632a}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Der Vorname des Profils. \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_ae34d809cc99f6592154df455ad3b7ef9}{Birthdate}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Das Geburtsdatum des Profils. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_ac303c5083bf4ad4b307798a4c4e8af6e}{Insurance\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Die Versicherungsnummer des Profils. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17c}{Blood\+Type}} \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_a9c67eb1da84c7d284d533b89a0737859}{Blood\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Die Blutgruppe des Profils. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Weitere Geerbte Elemente}
+
+
+\subsection{Ausführliche Beschreibung}
+\mbox{\hyperlink{namespacemy_m_d_1_1_view_model}{View\+Model}} zur Darstellung eines einzelnen Profils 
+
+
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_ae846bc0f8c6962ada62fa7f9a4640d1d}\label{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_ae846bc0f8c6962ada62fa7f9a4640d1d}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}!Profile\+Item\+View\+Model@{Profile\+Item\+View\+Model}}
+\index{Profile\+Item\+View\+Model@{Profile\+Item\+View\+Model}!my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}}
+\subsubsection{\texorpdfstring{Profile\+Item\+View\+Model()}{ProfileItemViewModel()}}
+{\footnotesize\ttfamily my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Item\+View\+Model.\+Profile\+Item\+View\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Erzeugt ein Profil\+Item\+View\+Model und setzt das Profil auf das momentan aktive Profil. 
+
+
+
+\subsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_a8f900454a817a4b4400ede47e418a512}\label{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_a8f900454a817a4b4400ede47e418a512}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}!Blood\+Type\+Name@{Blood\+Type\+Name}}
+\index{Blood\+Type\+Name@{Blood\+Type\+Name}!my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}}
+\subsubsection{\texorpdfstring{Blood\+Type\+Name}{BloodTypeName}}
+{\footnotesize\ttfamily string my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Item\+View\+Model.\+Blood\+Type\+Name =$>$ Blood\+Type.\+To\+String().Format\+Plus\+And\+Minus()}
+
+
+
+Zum Anzeigen formatierter Name der Blutgruppe dieses Profils 
+
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_af9b06e26394989f3cb500fe452a25ce8}\label{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_af9b06e26394989f3cb500fe452a25ce8}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}!Blood\+Type\+Names@{Blood\+Type\+Names}}
+\index{Blood\+Type\+Names@{Blood\+Type\+Names}!my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}}
+\subsubsection{\texorpdfstring{Blood\+Type\+Names}{BloodTypeNames}}
+{\footnotesize\ttfamily List$<$string$>$ my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Item\+View\+Model.\+Blood\+Type\+Names =$>$ Enum.\+Get\+Names(typeof(\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17c}{Blood\+Type}})).Select(b =$>$ b.\+Format\+Plus\+And\+Minus()).To\+List()}
+
+
+
+Liste zum Anzeigen formatierter Namen aller Blutgruppen. 
+
+
+
+\subsection{Dokumentation der Propertys}
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_ae34d809cc99f6592154df455ad3b7ef9}\label{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_ae34d809cc99f6592154df455ad3b7ef9}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}!Birthdate@{Birthdate}}
+\index{Birthdate@{Birthdate}!my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}}
+\subsubsection{\texorpdfstring{Birthdate}{Birthdate}}
+{\footnotesize\ttfamily Date\+Time my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Item\+View\+Model.\+Birthdate\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Das Geburtsdatum des Profils. 
+
+The birthdate.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_a9c67eb1da84c7d284d533b89a0737859}\label{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_a9c67eb1da84c7d284d533b89a0737859}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}!Blood\+Type@{Blood\+Type}}
+\index{Blood\+Type@{Blood\+Type}!my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}}
+\subsubsection{\texorpdfstring{Blood\+Type}{BloodType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17c}{Blood\+Type}} my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Item\+View\+Model.\+Blood\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Die Blutgruppe des Profils. 
+
+The type of the blood.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_ac303c5083bf4ad4b307798a4c4e8af6e}\label{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_ac303c5083bf4ad4b307798a4c4e8af6e}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}!Insurance\+Number@{Insurance\+Number}}
+\index{Insurance\+Number@{Insurance\+Number}!my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}}
+\subsubsection{\texorpdfstring{Insurance\+Number}{InsuranceNumber}}
+{\footnotesize\ttfamily string my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Item\+View\+Model.\+Insurance\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Die Versicherungsnummer des Profils. 
+
+The insurance number.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_abf7ee39f67915e326cbaa633368b9846}\label{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_abf7ee39f67915e326cbaa633368b9846}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}!Last\+Name@{Last\+Name}}
+\index{Last\+Name@{Last\+Name}!my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}}
+\subsubsection{\texorpdfstring{Last\+Name}{LastName}}
+{\footnotesize\ttfamily string my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Item\+View\+Model.\+Last\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Der Nachname des Profils. 
+
+The last name.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_aa16bc16413aef57a6b63caedf7b5632a}\label{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_aa16bc16413aef57a6b63caedf7b5632a}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}!Name@{Name}}
+\index{Name@{Name}!my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}}
+\subsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Item\+View\+Model.\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Der Vorname des Profils. 
+
+The name.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_a91367f8be2f7fda904e1292cd5049c35}\label{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_a91367f8be2f7fda904e1292cd5049c35}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}!Profile@{Profile}}
+\index{Profile@{Profile}!my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Profile\+Tab\+View\+Model\+::\+Profile\+Item\+View\+Model}}
+\subsubsection{\texorpdfstring{Profile}{Profile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}} my\+M\+D.\+View\+Model.\+Profile\+Tab\+View\+Model.\+Profile\+Item\+View\+Model.\+Profile\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Das Profil des Profile\+Item\+View\+Models 
+
+The profile.
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Profile\+Tab\+View\+Model/\mbox{\hyperlink{_profile_item_view_model_8cs}{Profile\+Item\+View\+Model.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface" kind="namespace" language="C#">
+    <compoundname>myMD::ModelInterface::DataModelInterface</compoundname>
+    <innerclass refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data" prot="public">myMD::ModelInterface::DataModelInterface::IData</innerclass>
+    <innerclass refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor" prot="public">myMD::ModelInterface::DataModelInterface::IDoctor</innerclass>
+    <innerclass refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" prot="public">myMD::ModelInterface::DataModelInterface::IDoctorsLetter</innerclass>
+    <innerclass refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group" prot="public">myMD::ModelInterface::DataModelInterface::IDoctorsLetterGroup</innerclass>
+    <innerclass refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity" prot="public">myMD::ModelInterface::DataModelInterface::IEntity</innerclass>
+    <innerclass refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" prot="public">myMD::ModelInterface::DataModelInterface::IMedication</innerclass>
+    <innerclass refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" prot="public">myMD::ModelInterface::DataModelInterface::IProfile</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17c" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>BloodType</name>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17cafbf9dc822b8fc0fca4bcf70e2e97fae0" prot="public">
+          <name>OMinus</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17ca06f98828c062784619450978d55c3437" prot="public">
+          <name>OPlus</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17ca54e7c3fa223fc38b8a7213e15bac19b6" prot="public">
+          <name>AMinus</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17ca3efac03d9f5efd2a83319a8c58cd609d" prot="public">
+          <name>APlus</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17ca0bacc15b42c55899a73dbb54e76cc97c" prot="public">
+          <name>BMinus</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17ca2cb89e01e9aab2ef6c1488f5313876e6" prot="public">
+          <name>BPlus</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17ca9fe817395879cfa501e579e018bdddff" prot="public">
+          <name>ABMinus</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17cae3b9e7de2e7a6f6d12dbf540c3263ac9" prot="public">
+          <name>ABPlus</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17cace2c8aed9c2fa0cfbed56cbda4d8bf07" prot="public">
+          <name>Empty</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration aller möglichen Blutgruppen </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/BloodType.cs" line="7" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/BloodType.cs" bodystart="6" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1ad48afcd64f57a7b985ed525a6c054782" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Interval</name>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1ad48afcd64f57a7b985ed525a6c054782ab55e509c697e4cca0e1d160a7806698f" prot="public">
+          <name>Hour</name>
+          <initializer>= &apos;h&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1ad48afcd64f57a7b985ed525a6c054782a03727ac48595a24daed975559c944a44" prot="public">
+          <name>Day</name>
+          <initializer>= &apos;d&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1ad48afcd64f57a7b985ed525a6c054782ad2ce009594dcc60befa6a4e6cbeb71fc" prot="public">
+          <name>Week</name>
+          <initializer>= &apos;w&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1ad48afcd64f57a7b985ed525a6c054782a7cbb885aa1164b390a0bc050a64e1812" prot="public">
+          <name>Month</name>
+          <initializer>= &apos;m&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1ad48afcd64f57a7b985ed525a6c054782a537c66b24ef5c83b7382cdc3f34885f2" prot="public">
+          <name>Year</name>
+          <initializer>= &apos;y&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration aller möglicher Zeitintervalle in der eine Medikation eingenommen werden soll </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/Interval.cs" line="7" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/Interval.cs" bodystart="6" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a3d0df45e579e37eccbab219eb94860da" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Sensitivity</name>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a3d0df45e579e37eccbab219eb94860daa28d0edd045e05cf5af64e35ae0c4c6ef" prot="public">
+          <name>Low</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a3d0df45e579e37eccbab219eb94860daa960b44c579bc2f6818d2daaf9e4c16f0" prot="public">
+          <name>Normal</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a3d0df45e579e37eccbab219eb94860daa655d20c1ca69519ca647684edbb2db35" prot="public">
+          <name>High</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration aller möglicher Sensitivätsstufen für einen Arztbrief </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/Sensitivity.cs" line="7" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/Sensitivity.cs" bodystart="6" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/BloodType.cs" line="2" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_model_1_1_data_model_1_1_entity" kind="class" language="C#" prot="public">
+    <compoundname>myMD::Model::DataModel::Entity</compoundname>
+    <basecompoundref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity" prot="public" virt="non-virtual">myMD.ModelInterface.DataModelInterface.IEntity</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IEquatable&lt; Entity &gt;</basecompoundref>
+    <derivedcompoundref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data" prot="public" virt="non-virtual">myMD.Model.DataModel.Data</derivedcompoundref>
+    <derivedcompoundref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctor" prot="public" virt="non-virtual">myMD.Model.DataModel.Doctor</derivedcompoundref>
+    <derivedcompoundref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile" prot="public" virt="non-virtual">myMD.Model.DataModel.Profile</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1ac2f81922151a57358d5d8f12dbab6d89" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int myMD.Model.DataModel.Entity.ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <briefdescription>
+<para>Primärer Schlüssel um Zeilen in der korrespondierenden Tabelle zu identifizieren. Wird automatisch beim Einfügen in die Datenbank gesetzt und sollte von sonst niemandem verändert werden. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" line="25" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" bodystart="25" bodyend="25"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1ab74ea0d94ef90f0c2c6653f2be46c4f9" compoundref="_entity_database_8cs" startline="97" endline="100">myMD.Model.DatabaseModel.EntityDatabase.GetAllDataFromProfile&lt; E &gt;</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1abe00d7d8a12deadbb57953f0cc57346c" compoundref="_entity_8cs" startline="55" endline="61">myMD.Model.DataModel.Entity.Equals</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1af26a4f9cf5ac6b8ee14e629e0a36a004" compoundref="_profile_8cs" startline="43" endline="52">myMD.Model.DataModel.Profile.Equals</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a752f68aa01561c06c77bc2d3324a46e7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.Model.DataModel.Entity.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_1a8160d8399f68f5db325a517c3114f7ae" kindref="member">myMD.ModelInterface.DataModelInterface.IEntity::Name</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" line="28" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" bodystart="28" bodyend="28"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1abe00d7d8a12deadbb57953f0cc57346c" compoundref="_entity_8cs" startline="55" endline="61">myMD.Model.DataModel.Entity.Equals</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1af26a4f9cf5ac6b8ee14e629e0a36a004" compoundref="_profile_8cs" startline="43" endline="52">myMD.Model.DataModel.Profile.Equals</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a7a6690eb5f9d3c15ac4805c1695f2116" compoundref="_hl7_to_database_parser_8cs" startline="69" endline="80">myMD.Model.ParserModel.Hl7ToDatabaseParser.ParseDoctor</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5d6231cd8b2598bf1683778b0500c7fd" compoundref="_hl7_to_database_parser_8cs" startline="133" endline="148">myMD.Model.ParserModel.Hl7ToDatabaseParser.ParseProfile</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a3df9a6eed5a26b09bbf075615db46b9c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile" kindref="compound">Profile</ref></type>
+        <definition>Profile myMD.Model.DataModel.Entity.Profile</definition>
+        <argsstring></argsstring>
+        <name>Profile</name>
+        <briefdescription>
+<para>Das Nutzerprofil dem diese Entität eindeutig zugeordnet werden kann. Ein Nutzerprofil kann dabei mehrere Entitäten enthalten. Wird automatisch beim Lesen aus der Datenbank gesetzt. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" line="36" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" bodystart="36" bodyend="36"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a498caa3b7e7a7745f7066620ac9a14ae" compoundref="_entity_database_8cs" startline="133" endline="138">myMD.Model.DatabaseModel.EntityDatabase.Insert</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1abe00d7d8a12deadbb57953f0cc57346c" compoundref="_entity_8cs" startline="55" endline="61">myMD.Model.DataModel.Entity.Equals</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" compoundref="_file_to_database_parser_8cs" startline="21" endline="50">myMD.Model.ParserModel.FileToDatabaseParser.ParseFile</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a54eef4f2993b1ed6467ee8a7d4b1a4b7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int myMD.Model.DataModel.Entity.ProfileID</definition>
+        <argsstring></argsstring>
+        <name>ProfileID</name>
+        <briefdescription>
+<para>Fremdschlüssel zum Profil dieser Entität für die Datenbank. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" line="42" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1afe40113ddeb60fd81f4bbcc6d0e696b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void myMD.Model.DataModel.Entity.Delete</definition>
+        <argsstring>()</argsstring>
+        <name>Delete</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1ae4d571a758daafad57458858d461e6c9">Delete</reimplementedby>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1a03d95deed0cfec8721713fd565daf81e">Delete</reimplementedby>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1af0060519c7a729848d819a507cc6157a">Delete</reimplementedby>
+        <briefdescription>
+<para>Führt die nötigen Aktionen aus um diese Entität zu löschen. Sollte immer zusammen mit einer Löschung aus der Datenbank aufgerufen werden. Sollte von Unterklassen überschrieben werden, bei denen zusätzliche Aktionen zur Löschung nötig sind </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" line="49" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" bodystart="49" bodyend="49"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a00616354127860a0d20d1a353a931cf4" compoundref="_entity_database_8cs" startline="69" endline="74">myMD.Model.DatabaseModel.EntityDatabase.Delete</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1abe00d7d8a12deadbb57953f0cc57346c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool myMD.Model.DataModel.Entity.Equals</definition>
+        <argsstring>(Entity other)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity" kindref="compound">Entity</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Zwei Entitäten sind genau dann gleich, wenn ihre Id, ihr Name und ihr Profil gleich sind. </para>        </briefdescription>
+        <detaileddescription>
+<para>System.IEquatable&lt;T&gt;::Equals(T)</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" line="55" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" bodystart="55" bodyend="61"/>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1abe00d7d8a12deadbb57953f0cc57346c" compoundref="_entity_8cs" startline="55" endline="61">myMD.Model.DataModel.Entity.Equals</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1ac2f81922151a57358d5d8f12dbab6d89" compoundref="_entity_8cs" startline="25" endline="25">myMD.Model.DataModel.Entity.ID</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a752f68aa01561c06c77bc2d3324a46e7" compoundref="_entity_8cs" startline="28" endline="28">myMD.Model.DataModel.Entity.Name</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a3df9a6eed5a26b09bbf075615db46b9c" compoundref="_entity_8cs" startline="36" endline="36">myMD.Model.DataModel.Entity.Profile</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1af26a4f9cf5ac6b8ee14e629e0a36a004" compoundref="_profile_8cs" startline="43" endline="52">myMD.Model.DataModel.Profile.Equals</references>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1abe00d7d8a12deadbb57953f0cc57346c" compoundref="_entity_8cs" startline="55" endline="61">myMD.Model.DataModel.Entity.Equals</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a23d3a79ef271ea1ecfd7bb85671e7148" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool myMD.Model.DataModel.Entity.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>System.Object::Equals(System.Object)</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a3ecbd0af049bc94e1d51670ba5b2c256" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int myMD.Model.DataModel.Entity.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+<para>System.Object::GetHashCode()</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" line="67" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" bodystart="67" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1ab69c6b862e29567f6c103ac5520c863a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity" kindref="compound">Entity</ref></type>
+        <definition>Entity myMD.Model.DataModel.Entity.ToEntity</definition>
+        <argsstring>()</argsstring>
+        <name>ToEntity</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_1acc62ca98aadef285f342145264d23570">ToEntity</reimplements>
+        <briefdescription>
+<para>Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_1acc62ca98aadef285f342145264d23570" kindref="member">myMD.ModelInterface.DataModelInterface.IEntity::ToEntity()</ref></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" line="80" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Die <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity" kindref="compound">Entity</ref> Klasse implementiert die IEntity-Schnittstelle. Dabei dient die Klasse nur als Strukturelement für andere Klassen, die eine Vorlage für eine SQLite-Datenbank-Tabelle, unter Verwendung der SQLite-Net-Extensions Library, sein sollen und ist daher abstrakt. Diese Klassen sollten <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity" kindref="compound">Entity</ref> erweitern. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity" kindref="compound">myMD.ModelInterface.DataModelInterface.IEntity</ref></para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="138">
+        <label>IEquatable&lt; Entity &gt;</label>
+      </node>
+      <node id="136">
+        <label>myMD.Model.DataModel.Entity</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
+        <childnode refid="137" relation="public-inheritance">
+        </childnode>
+        <childnode refid="138" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="140">
+        <label>myMD.Model.DataModel.DoctorsLetter</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter"/>
+        <childnode refid="139" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="141">
+        <label>myMD.Model.DataModel.DoctorsLetterGroup</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group"/>
+        <childnode refid="139" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="143">
+        <label>myMD.Model.DataModel.Doctor</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctor"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="144">
+        <label>myMD.Model.DataModel.Profile</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="137">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+      <node id="139">
+        <label>myMD.Model.DataModel.Data</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="142">
+        <label>myMD.Model.DataModel.Medication</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication"/>
+        <childnode refid="139" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="147">
+        <label>IEquatable&lt; Entity &gt;</label>
+      </node>
+      <node id="145">
+        <label>myMD.Model.DataModel.Entity</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
+        <childnode refid="146" relation="public-inheritance">
+        </childnode>
+        <childnode refid="147" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="146">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" line="19" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" bodystart="18" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1afe40113ddeb60fd81f4bbcc6d0e696b6" prot="public" virt="virtual"><scope>myMD::Model::DataModel::Entity</scope><name>Delete</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1abe00d7d8a12deadbb57953f0cc57346c" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Entity</scope><name>Equals</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a23d3a79ef271ea1ecfd7bb85671e7148" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Entity</scope><name>Equals</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a3ecbd0af049bc94e1d51670ba5b2c256" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Entity</scope><name>GetHashCode</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1ac2f81922151a57358d5d8f12dbab6d89" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Entity</scope><name>ID</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a752f68aa01561c06c77bc2d3324a46e7" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Entity</scope><name>Name</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a3df9a6eed5a26b09bbf075615db46b9c" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Entity</scope><name>Profile</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a54eef4f2993b1ed6467ee8a7d4b1a4b7" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Entity</scope><name>ProfileID</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1ab69c6b862e29567f6c103ac5520c863a" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::Entity</scope><name>ToEntity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1my_m_d_page" kind="class" language="C#" prot="public">
+    <compoundname>myMD::myMDPage</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TabbedPage</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1my_m_d_page_1a116c2084cfab3cc170d6f0c0d32e92c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.myMDPage.myMDPage</definition>
+        <argsstring>()</argsstring>
+        <name>myMDPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/myMDPage.xaml.cs" line="9" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/myMDPage.xaml.cs" bodystart="9" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="297">
+        <label>TabbedPage</label>
+      </node>
+      <node id="296">
+        <label>myMD.myMDPage</label>
+        <link refid="classmy_m_d_1_1my_m_d_page"/>
+        <childnode refid="297" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="299">
+        <label>TabbedPage</label>
+      </node>
+      <node id="298">
+        <label>myMD.myMDPage</label>
+        <link refid="classmy_m_d_1_1my_m_d_page"/>
+        <childnode refid="299" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/myMDPage.xaml.cs" line="8" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/myMDPage.xaml.cs" bodystart="7" bodyend="14"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1my_m_d_page_1a116c2084cfab3cc170d6f0c0d32e92c7" prot="public" virt="non-virtual"><scope>myMD::myMDPage</scope><name>myMDPage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

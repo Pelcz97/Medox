@@ -1,0 +1,209 @@
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{
+\section{my\-MD::Model::Data\-Model::Doctors\-Letter Class Reference}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}\index{myMD::Model::DataModel::DoctorsLetter@{myMD::Model::DataModel::DoctorsLetter}}
+}
+Diese Klasse implementiert die IDoctors\-Letter Schnittstelle und erweitert die abstrakte \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data}{Data} Klasse, um Arztbriefe in einer SQLite-Datenbank speichern zu k\"{o}nnen.  
+
+
+Inheritance diagram for my\-MD::Model::Data\-Model::Doctors\-Letter:Collaboration diagram for my\-MD::Model::Data\-Model::Doctors\-Letter:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_6ed917ddc74b4d077c7be937e9407b18}{
+\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_6ed917ddc74b4d077c7be937e9407b18}{Doctors\-Letter} ()}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_6ed917ddc74b4d077c7be937e9407b18}
+
+\begin{CompactList}\small\item\em Initialisiert n\"{o}tige Listen. \item\end{CompactList}\item 
+void \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_8eb99f11555636e6e2192231b87b59f0}{Add\-To\-Group} (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group}{Doctors\-Letter\-Group} group)
+\begin{CompactList}\small\item\em \"{U}berladung f\"{u}r konkrete Arztbriefgruppen. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_06720c4c5d7e38157063166e916bbf8a}{
+void \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_06720c4c5d7e38157063166e916bbf8a}{Add\-To\-Group} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{IDoctors\-Letter\-Group} group)}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_06720c4c5d7e38157063166e916bbf8a}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_06720c4c5d7e38157063166e916bbf8a}{my\-MD.Model\-Interface.Data\-Model\-Interface.IDoctors\-Letter::Add\-To\-Group}(\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{Model\-Interface.Data\-Model\-Interface.IDoctors\-Letter\-Group}) \item\end{CompactList}\item 
+void \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_c6c9d35845c1c0e4c389656215df6e2e}{Attach\-Medication} (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication} med)
+\begin{CompactList}\small\item\em \"{U}berladung f\"{u}r konkrete Medikationen. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_d30d4a881bdfd437b1b1da6f3fa7cb38}{
+void \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_d30d4a881bdfd437b1b1da6f3fa7cb38}{Attach\-Medication} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{IMedication} med)}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_d30d4a881bdfd437b1b1da6f3fa7cb38}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_d30d4a881bdfd437b1b1da6f3fa7cb38}{my\-MD.Model\-Interface.Data\-Model\-Interface.IDoctors\-Letter::Attach\-Medication}(\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{Model\-Interface.Data\-Model\-Interface.IMedication}) \item\end{CompactList}\item 
+override void \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_51a833214dab53bfafb630573fc0fe77}{Delete} ()
+\begin{CompactList}\small\item\em L\"{o}st alle der Klasse bekannten Assoziatonen auf und l\"{o}scht die Datei aus der dieser Arztbrief stammt. \item\end{CompactList}\item 
+void \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_054bedc79ee2e214b176609861b0f663}{Disattach\-Medication} (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication} med)
+\begin{CompactList}\small\item\em \"{U}berladung f\"{u}r konkrete Medikationen. \item\end{CompactList}\item 
+bool \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_727bb18102761937ee7d2d755bf4db6b}{Equals} (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\-Letter} other)
+\begin{CompactList}\small\item\em Zwei Arztbriefe sind genau dann gleich, wenn sie als Daten gleich sind, ihr Dateipfad, ihr Doktor, ihre Diagnose und ihre Medikationen gleich sind. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_438d2c1653522e9aff51f785434e952d}{
+override bool \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_438d2c1653522e9aff51f785434e952d}{Equals} (Object obj)}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_438d2c1653522e9aff51f785434e952d}
+
+\begin{CompactList}\small\item\em System.Object::Equals(System.Object) \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_871aff832c00675bb79db4294f382e58}{
+override int \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_871aff832c00675bb79db4294f382e58}{Get\-Hash\-Code} ()}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_871aff832c00675bb79db4294f382e58}
+
+\begin{CompactList}\small\item\em System.Object::Get\-Hash\-Code() \item\end{CompactList}\item 
+void \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_7f55c973858b86b4f86b78d8b55ccd4e}{Remove\-From\-Group} (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group}{Doctors\-Letter\-Group} group)
+\begin{CompactList}\small\item\em \"{U}berladung f\"{u}r konkrete Arztbriefgruppen. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_921a6a4ce8826ab9e42d5d5b22a5bc79}{
+void \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_921a6a4ce8826ab9e42d5d5b22a5bc79}{Remove\-From\-Group} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{IDoctors\-Letter\-Group} group)}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_921a6a4ce8826ab9e42d5d5b22a5bc79}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_921a6a4ce8826ab9e42d5d5b22a5bc79}{my\-MD.Model\-Interface.Data\-Model\-Interface.IDoctors\-Letter::Remove\-From\-Group}(Model.Data\-Model\-Interface.IDoctors\-Letter\-Group) \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_21bff2bea1b5f08bc7e79dd65b9ccf16}{
+void \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_21bff2bea1b5f08bc7e79dd65b9ccf16}{Remove\-Medication} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{IMedication} med)}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_21bff2bea1b5f08bc7e79dd65b9ccf16}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_21bff2bea1b5f08bc7e79dd65b9ccf16}{my\-MD.Model\-Interface.Data\-Model\-Interface.IDoctors\-Letter::Remove\-Medication}(Model.Data\-Model\-Interface.IMedication) \item\end{CompactList}\item 
+\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\-Letter} \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_a52c06afbc0038d351f09b083e586b2e}{To\-Doctors\-Letter} ()
+\begin{CompactList}\small\item\em Da diese Klasse bereits den verlangten R\"{u}ckgabetyp hab, ist keine Konvertierung n\"{o}tig. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Properties}
+\begin{CompactItemize}
+\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_69695c2f690cea99f6f3810a92e2b071}{
+\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctor}{Doctor} \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_69695c2f690cea99f6f3810a92e2b071}{Database\-Doctor}}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_69695c2f690cea99f6f3810a92e2b071}
+
+\begin{CompactList}\small\item\em Der Doktor, der diesen Arztbrief erstellt hat und dem der Arztbrief eindeutig zugeordnet werden kann. Ein Doktor kann dabei mehrere Arztbriefe erstellt haben. Wird automatisch beim Lesen aus der Datenbank gesetzt. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_b32a1b3d31c25f3dd1108b15c169aa23}{
+List$<$ \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group}{Doctors\-Letter\-Group} $>$ \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_b32a1b3d31c25f3dd1108b15c169aa23}{Database\-Groups}}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_b32a1b3d31c25f3dd1108b15c169aa23}
+
+\begin{CompactList}\small\item\em Die Arztgruppen in denen dieser Arztbrief enthalten ist. Eine Arztbriefgruppe enth\"{a}lt dabei mehrere Arztbriefe. Wird automatisch beim Lesen aus der Datenbank gesetzt. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_3c07a2050bc1e19f7c84ade6aba5be24}{
+List$<$ \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication} $>$ \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_3c07a2050bc1e19f7c84ade6aba5be24}{Database\-Medication}}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_3c07a2050bc1e19f7c84ade6aba5be24}
+
+\begin{CompactList}\small\item\em Die Medikationen die in diesem Arztbrief verordnet wurde Einer Medikation kann dabei eindeutig ein Arztbrief zugeordnet werden. Wird automatisch beim Lesen aus der Datenbank gesetzt. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_523223d6c6fe8798f0d70f376ffc99b8}{
+string \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_523223d6c6fe8798f0d70f376ffc99b8}{Diagnosis}}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_523223d6c6fe8798f0d70f376ffc99b8}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_523223d6c6fe8798f0d70f376ffc99b8}{my\-MD.Model\-Interface.Data\-Model\-Interface.IDoctors\-Letter::Diagnosis()} \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_cbb67c65f2abd1005d46939a7b3aff5f}{
+\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor}{IDoctor} \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_cbb67c65f2abd1005d46939a7b3aff5f}{Doctor} = $>$ Database\-Doctor}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_cbb67c65f2abd1005d46939a7b3aff5f}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_cbb67c65f2abd1005d46939a7b3aff5f}{my\-MD.Model\-Interface.Data\-Model\-Interface.IDoctors\-Letter::Doctor()} \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_3ca9ada9ca35d9d0b3491f210f340322}{
+int \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_3ca9ada9ca35d9d0b3491f210f340322}{Doctor\-ID}}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_3ca9ada9ca35d9d0b3491f210f340322}
+
+\begin{CompactList}\small\item\em Fremdschl\"{u}ssel zum Doktor dieses Arztbriefs f\"{u}r die Datenbank. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_6e1da65a53ccced47cbd4c1d5b48e856}{
+string \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_6e1da65a53ccced47cbd4c1d5b48e856}{Filepath}}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_6e1da65a53ccced47cbd4c1d5b48e856}
+
+\begin{CompactList}\small\item\em Jede Instanz dieser Klasse basiert auf einer Datei. Dies ist der Pfad zu dieser Datei. Sollte bei der Erstellung aus der Datei gesetzt werden. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_a37ede293936e29279ed543129451ec3}{
+IList$<$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{IDoctors\-Letter\-Group} $>$ \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_a37ede293936e29279ed543129451ec3}{Groups}}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_a37ede293936e29279ed543129451ec3}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a37ede293936e29279ed543129451ec3}{my\-MD.Model\-Interface.Data\-Model\-Interface.IDoctors\-Letter::Groups()} \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_353bd6f65060d17097c3b03141e79cce}{
+IList$<$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{IMedication} $>$ \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_353bd6f65060d17097c3b03141e79cce}{Medication}}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_353bd6f65060d17097c3b03141e79cce}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_353bd6f65060d17097c3b03141e79cce}{my\-MD.Model\-Interface.Data\-Model\-Interface.IDoctors\-Letter::Medication()} \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Diese Klasse implementiert die IDoctors\-Letter Schnittstelle und erweitert die abstrakte \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data}{Data} Klasse, um Arztbriefe in einer SQLite-Datenbank speichern zu k\"{o}nnen. 
+
+\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{my\-MD.Model\-Interface.Data\-Model\-Interface.IDoctors\-Letter} my\-MD.Model.Data\-Model\-Interface.Data 
+
+
+
+Definition at line 17 of file Doctors\-Letter.cs.
+
+\subsection{Member Function Documentation}
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_8eb99f11555636e6e2192231b87b59f0}{
+\index{myMD::Model::DataModel::DoctorsLetter@{my\-MD::Model::Data\-Model::Doctors\-Letter}!AddToGroup@{AddToGroup}}
+\index{AddToGroup@{AddToGroup}!myMD::Model::DataModel::DoctorsLetter@{my\-MD::Model::Data\-Model::Doctors\-Letter}}
+\subsubsection[AddToGroup]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model::Data\-Model::Doctors\-Letter::Add\-To\-Group (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group}{Doctors\-Letter\-Group} {\em group})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_8eb99f11555636e6e2192231b87b59f0}
+
+
+\"{U}berladung f\"{u}r konkrete Arztbriefgruppen. 
+
+\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_8eb99f11555636e6e2192231b87b59f0}{my\-MD.Model.Data\-Model.Doctors\-Letter::Add\-To\-Group}(\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{Model\-Interface.Data\-Model\-Interface.IDoctors\-Letter\-Group}) 
+
+Definition at line 102 of file Doctors\-Letter.cs.\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_c6c9d35845c1c0e4c389656215df6e2e}{
+\index{myMD::Model::DataModel::DoctorsLetter@{my\-MD::Model::Data\-Model::Doctors\-Letter}!AttachMedication@{AttachMedication}}
+\index{AttachMedication@{AttachMedication}!myMD::Model::DataModel::DoctorsLetter@{my\-MD::Model::Data\-Model::Doctors\-Letter}}
+\subsubsection[AttachMedication]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model::Data\-Model::Doctors\-Letter::Attach\-Medication (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication} {\em med})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_c6c9d35845c1c0e4c389656215df6e2e}
+
+
+\"{U}berladung f\"{u}r konkrete Medikationen. 
+
+\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_c6c9d35845c1c0e4c389656215df6e2e}{my\-MD.Model.Data\-Model.Doctors\-Letter::Attach\-Medication}(\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{Model\-Interface.Data\-Model\-Interface.IMedication}) 
+
+Definition at line 118 of file Doctors\-Letter.cs.
+
+Referenced by my\-MD::Model::Data\-Model::Medication::Attach\-To\-Letter(), and my\-MD::Model::Parser\-Model::File\-To\-Database\-Parser::Parse\-File().\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_51a833214dab53bfafb630573fc0fe77}{
+\index{myMD::Model::DataModel::DoctorsLetter@{my\-MD::Model::Data\-Model::Doctors\-Letter}!Delete@{Delete}}
+\index{Delete@{Delete}!myMD::Model::DataModel::DoctorsLetter@{my\-MD::Model::Data\-Model::Doctors\-Letter}}
+\subsubsection[Delete]{\setlength{\rightskip}{0pt plus 5cm}override void my\-MD::Model::Data\-Model::Doctors\-Letter::Delete ()\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_51a833214dab53bfafb630573fc0fe77}
+
+
+L\"{o}st alle der Klasse bekannten Assoziatonen auf und l\"{o}scht die Datei aus der dieser Arztbrief stammt. 
+
+\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_51a833214dab53bfafb630573fc0fe77}{my\-MD.Model.Data\-Model.Entity::Delete()} 
+
+Reimplemented from \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity_51a833214dab53bfafb630573fc0fe77}{my\-MD::Model::Data\-Model::Entity}.
+
+Definition at line 134 of file Doctors\-Letter.cs.\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_054bedc79ee2e214b176609861b0f663}{
+\index{myMD::Model::DataModel::DoctorsLetter@{my\-MD::Model::Data\-Model::Doctors\-Letter}!DisattachMedication@{DisattachMedication}}
+\index{DisattachMedication@{DisattachMedication}!myMD::Model::DataModel::DoctorsLetter@{my\-MD::Model::Data\-Model::Doctors\-Letter}}
+\subsubsection[DisattachMedication]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model::Data\-Model::Doctors\-Letter::Disattach\-Medication (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication} {\em med})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_054bedc79ee2e214b176609861b0f663}
+
+
+\"{U}berladung f\"{u}r konkrete Medikationen. 
+
+\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_054bedc79ee2e214b176609861b0f663}{my\-MD.Model.Data\-Model.Doctors\-Letter::Disattach\-Medication}(\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{Model\-Interface.Data\-Model\-Interface.IMedication}) 
+
+Definition at line 151 of file Doctors\-Letter.cs.
+
+Referenced by my\-MD::Model::Data\-Model::Medication::Disattach\-From\-Letter().\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_727bb18102761937ee7d2d755bf4db6b}{
+\index{myMD::Model::DataModel::DoctorsLetter@{my\-MD::Model::Data\-Model::Doctors\-Letter}!Equals@{Equals}}
+\index{Equals@{Equals}!myMD::Model::DataModel::DoctorsLetter@{my\-MD::Model::Data\-Model::Doctors\-Letter}}
+\subsubsection[Equals]{\setlength{\rightskip}{0pt plus 5cm}bool my\-MD::Model::Data\-Model::Doctors\-Letter::Equals (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\-Letter} {\em other})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_727bb18102761937ee7d2d755bf4db6b}
+
+
+Zwei Arztbriefe sind genau dann gleich, wenn sie als Daten gleich sind, ihr Dateipfad, ihr Doktor, ihre Diagnose und ihre Medikationen gleich sind. 
+
+System.IEquatable$<$T$>$::Equals(T) 
+
+Definition at line 164 of file Doctors\-Letter.cs.
+
+References Database\-Doctor, Database\-Medication, Diagnosis, and Filepath.\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_7f55c973858b86b4f86b78d8b55ccd4e}{
+\index{myMD::Model::DataModel::DoctorsLetter@{my\-MD::Model::Data\-Model::Doctors\-Letter}!RemoveFromGroup@{RemoveFromGroup}}
+\index{RemoveFromGroup@{RemoveFromGroup}!myMD::Model::DataModel::DoctorsLetter@{my\-MD::Model::Data\-Model::Doctors\-Letter}}
+\subsubsection[RemoveFromGroup]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model::Data\-Model::Doctors\-Letter::Remove\-From\-Group (\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group}{Doctors\-Letter\-Group} {\em group})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_7f55c973858b86b4f86b78d8b55ccd4e}
+
+
+\"{U}berladung f\"{u}r konkrete Arztbriefgruppen. 
+
+\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_7f55c973858b86b4f86b78d8b55ccd4e}{my\-MD.Model.Data\-Model.Doctors\-Letter::Remove\-From\-Group}(\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{Model\-Interface.Data\-Model\-Interface.IDoctors\-Letter\-Group}) 
+
+Definition at line 191 of file Doctors\-Letter.cs.\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_a52c06afbc0038d351f09b083e586b2e}{
+\index{myMD::Model::DataModel::DoctorsLetter@{my\-MD::Model::Data\-Model::Doctors\-Letter}!ToDoctorsLetter@{ToDoctorsLetter}}
+\index{ToDoctorsLetter@{ToDoctorsLetter}!myMD::Model::DataModel::DoctorsLetter@{my\-MD::Model::Data\-Model::Doctors\-Letter}}
+\subsubsection[ToDoctorsLetter]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\-Letter} my\-MD::Model::Data\-Model::Doctors\-Letter::To\-Doctors\-Letter ()}}
+\label{dc/d86/classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_a52c06afbc0038d351f09b083e586b2e}
+
+
+Da diese Klasse bereits den verlangten R\"{u}ckgabetyp hab, ist keine Konvertierung n\"{o}tig. 
+
+\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a52c06afbc0038d351f09b083e586b2e}{my\-MD.Model\-Interface.Data\-Model\-Interface.IDoctors\-Letter::To\-Doctors\-Letter()} 
+
+Implements \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a52c06afbc0038d351f09b083e586b2e}{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+D:/Studium/WS17-18/PSE/Implementierung/my\-MD/my\-MD/Model/Data\-Model/Doctors\-Letter.cs\end{CompactItemize}

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob_1_1_serializers_1_1_json_blob_serializer" kind="class" language="C#" prot="public">
+    <compoundname>SQLiteNetExtensions::Extensions::TextBlob::Serializers::JsonBlobSerializer</compoundname>
+    <basecompoundref refid="interface_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob_1_1_i_text_blob_serializer" prot="public" virt="non-virtual">SQLiteNetExtensions.Extensions.TextBlob.ITextBlobSerializer</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob_1_1_serializers_1_1_json_blob_serializer_1ab8efea2b436de4940db88ec2f224b85f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string SQLiteNetExtensions.Extensions.TextBlob.Serializers.JsonBlobSerializer.Serialize</definition>
+        <argsstring>(object element)</argsstring>
+        <name>Serialize</name>
+        <reimplements refid="interface_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob_1_1_i_text_blob_serializer_1a3e0a51dfda28489d8ad53c2e9ee8ed57">Serialize</reimplements>
+        <param>
+          <type>object</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/TextBlob/Serializers/JsonBlobSerializer.cs" line="8" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/TextBlob/Serializers/JsonBlobSerializer.cs" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob_1_1_serializers_1_1_json_blob_serializer_1a9d0b3ea894c5a047b15bff731c25c82f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>object SQLiteNetExtensions.Extensions.TextBlob.Serializers.JsonBlobSerializer.Deserialize</definition>
+        <argsstring>(string text, Type type)</argsstring>
+        <name>Deserialize</name>
+        <reimplements refid="interface_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob_1_1_i_text_blob_serializer_1a4213bacb6d2dee3ef1e4d1950c01c57e">Deserialize</reimplements>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/TextBlob/Serializers/JsonBlobSerializer.cs" line="13" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/TextBlob/Serializers/JsonBlobSerializer.cs" bodystart="13" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="272">
+        <label>ITextBlobSerializer</label>
+        <link refid="interface_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob_1_1_i_text_blob_serializer"/>
+      </node>
+      <node id="271">
+        <label>SQLiteNetExtensions.Extensions.TextBlob.Serializers.JsonBlobSerializer</label>
+        <link refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob_1_1_serializers_1_1_json_blob_serializer"/>
+        <childnode refid="272" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="274">
+        <label>ITextBlobSerializer</label>
+        <link refid="interface_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob_1_1_i_text_blob_serializer"/>
+      </node>
+      <node id="273">
+        <label>SQLiteNetExtensions.Extensions.TextBlob.Serializers.JsonBlobSerializer</label>
+        <link refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob_1_1_serializers_1_1_json_blob_serializer"/>
+        <childnode refid="274" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/TextBlob/Serializers/JsonBlobSerializer.cs" line="7" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/TextBlob/Serializers/JsonBlobSerializer.cs" bodystart="6" bodyend="17"/>
+    <listofallmembers>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob_1_1_serializers_1_1_json_blob_serializer_1a9d0b3ea894c5a047b15bff731c25c82f" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::TextBlob::Serializers::JsonBlobSerializer</scope><name>Deserialize</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_text_blob_1_1_serializers_1_1_json_blob_serializer_1ab8efea2b436de4940db88ec2f224b85f" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::TextBlob::Serializers::JsonBlobSerializer</scope><name>Serialize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

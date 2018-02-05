@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page" kind="class" language="C#" prot="public">
+    <compoundname>myMD::View::OverviewTabPages::OverviewPage</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page" prot="public" virt="non-virtual">myMD.View.AbstractPages.CustomContentPage</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page_1ac0f4b9a722e9c88e7166b6e0dfbee0b0" prot="private" static="no" mutable="no">
+        <type><ref refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model" kindref="compound">OverviewViewModel</ref></type>
+        <definition>OverviewViewModel myMD.View.OverviewTabPages.OverviewPage.vm</definition>
+        <argsstring></argsstring>
+        <name>vm</name>
+        <briefdescription>
+<para>Das <ref refid="namespacemy_m_d_1_1_view_model" kindref="compound">ViewModel</ref>, zu welchem gebinded werden soll. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" line="17" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page_1a42d690c280c75084ebfeb81628352f8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.View.OverviewTabPages.OverviewPage.OverviewPage</definition>
+        <argsstring>()</argsstring>
+        <name>OverviewPage</name>
+        <briefdescription>
+<para>Initializes a new instance of the T:myMD.View.OverviewTabPages.OverviewPage class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" line="22" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" bodystart="22" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page_1aa67d1ce336d67d89832cc6d5c51113fa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.View.OverviewTabPages.OverviewPage.DoctorsLetter_Clicked</definition>
+        <argsstring>(object sender, SelectedItemChangedEventArgs e)</argsstring>
+        <name>DoctorsLetter_Clicked</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>SelectedItemChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Methode, wenn ein Arztbriefeintrag aus der Liste ausgewählt wird. Setzt SelectedItem auf null, um den Markiert-Status des Listeneintrags wieder zu deaktivieren </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>E.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" line="35" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" bodystart="35" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Overview page. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="317">
+        <label>myMD.View.OverviewTabPages.OverviewPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page"/>
+        <childnode refid="318" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="318">
+        <label>CustomContentPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
+        <childnode refid="319" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="319">
+        <label>ContentPage</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="320">
+        <label>myMD.View.OverviewTabPages.OverviewPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page"/>
+        <childnode refid="321" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="321">
+        <label>CustomContentPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
+        <childnode refid="322" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="322">
+        <label>ContentPage</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" line="13" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" bodystart="12" bodyend="46"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page_1a3cb9c69e49e16c30e2e5377790702769" prot="public" virt="non-virtual"><scope>myMD::View::OverviewTabPages::OverviewPage</scope><name>CustomContentPage</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page_1aa67d1ce336d67d89832cc6d5c51113fa" prot="private" virt="non-virtual"><scope>myMD::View::OverviewTabPages::OverviewPage</scope><name>DoctorsLetter_Clicked</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page_1a42d690c280c75084ebfeb81628352f8e" prot="public" virt="non-virtual"><scope>myMD::View::OverviewTabPages::OverviewPage</scope><name>OverviewPage</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page_1ac0f4b9a722e9c88e7166b6e0dfbee0b0" prot="private" virt="non-virtual"><scope>myMD::View::OverviewTabPages::OverviewPage</scope><name>vm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

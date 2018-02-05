@@ -1,0 +1,359 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade" kind="class" language="C#" prot="public">
+    <compoundname>myMD::Model::ModelFacade::ModelFacade</compoundname>
+    <basecompoundref refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade" prot="public" virt="non-virtual">myMD.ModelInterface.ModelFacadeInterface.IModelFacade</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a88c8453b2f8429e52d3273910f1910cb" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth" kindref="compound">IBluetooth</ref></type>
+        <definition>IBluetooth myMD.Model.ModelFacade.ModelFacade.bluetooth</definition>
+        <argsstring></argsstring>
+        <name>bluetooth</name>
+        <briefdescription>
+<para>Die verwendete Datenübertragungsmöglichkeit </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="22" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1afa193ffc627fde544d592049db733d5a" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database" kindref="compound">IEntityDatabase</ref></type>
+        <definition>IEntityDatabase myMD.Model.ModelFacade.ModelFacade.database</definition>
+        <argsstring></argsstring>
+        <name>database</name>
+        <briefdescription>
+<para>Die verwendete Datenbank </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="27" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ab20e55f86d6e6059e0de4f85724a2ee7" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory" kindref="compound">IEntityFactory</ref></type>
+        <definition>IEntityFactory myMD.Model.ModelFacade.ModelFacade.factory</definition>
+        <argsstring></argsstring>
+        <name>factory</name>
+        <briefdescription>
+<para>Die verwendete Fabrik </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="32" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1aa8c7a767fab9828415e6922142effc6b" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper" kindref="compound">IFileHelper</ref></type>
+        <definition>IFileHelper myMD.Model.ModelFacade.ModelFacade.fileHelper</definition>
+        <argsstring></argsstring>
+        <name>fileHelper</name>
+        <briefdescription>
+<para>Der verwendete Dateihelfer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="37" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a7ff3cb1e1b5efdf3c7499ab0ec6954b9" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade" kindref="compound">IParserFacade</ref></type>
+        <definition>IParserFacade myMD.Model.ModelFacade.ModelFacade.parser</definition>
+        <argsstring></argsstring>
+        <name>parser</name>
+        <briefdescription>
+<para>Der verwendete Parser </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="42" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1af4409668a62959fbf5ae1f89d065a4bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.Model.ModelFacade.ModelFacade.ModelFacade</definition>
+        <argsstring>(IEntityDatabase database, IEntityFactory factory, IParserFacade parser, IBluetooth bluetooth)</argsstring>
+        <name>ModelFacade</name>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database" kindref="compound">IEntityDatabase</ref></type>
+          <declname>database</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory" kindref="compound">IEntityFactory</ref></type>
+          <declname>factory</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade" kindref="compound">IParserFacade</ref></type>
+          <declname>parser</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth" kindref="compound">IBluetooth</ref></type>
+          <declname>bluetooth</declname>
+        </param>
+        <briefdescription>
+<para>Konstruktor in dem die Schnittstellen, von dem die Klasse abhänig ist injiziert werden können. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>database</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die zu verwendende Datenbank</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die zu verwendende Fabrik</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Der zu verwendende Parser</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bluetooth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die zu verwendende Datenübertragungsmöglichkeit</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="51" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" bodystart="51" bodyend="63"/>
+        <references refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a2f27475135240f49000022de346dfbdd">myMD.Model.DatabaseModel.IEntityDatabase.GetAllProfiles</references>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1aa391999b0bfdc15cedfc8a6ad2921f19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.ModelFacade.ModelFacade.Activate</definition>
+        <argsstring>(IProfile profile)</argsstring>
+        <name>Activate</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a0dd627e2af597fb44b8c8b6820834938">Activate</reimplements>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref></type>
+          <declname>profile</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a0dd627e2af597fb44b8c8b6820834938" kindref="member">myMD.ModelInterface.ModelFacadeInterface.IModelFacade::Activate</ref>(Model.DataModelInterface.IProfile)</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ad7c7e2889846cf195ccdd4e61a804116" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group" kindref="compound">IDoctorsLetterGroup</ref></type>
+        <definition>IDoctorsLetterGroup myMD.Model.ModelFacade.ModelFacade.CreateEmptyGroup</definition>
+        <argsstring>()</argsstring>
+        <name>CreateEmptyGroup</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ae4b53eee1d4ef8aa929b21761db164f6">CreateEmptyGroup</reimplements>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ae4b53eee1d4ef8aa929b21761db164f6" kindref="member">myMD.ModelInterface.ModelFacadeInterface.IModelFacade::CreateEmptyGroup()</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="69" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" bodystart="69" bodyend="74"/>
+        <references refid="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory_1afca4ecdc59f292073c7a40d258057484">myMD.Model.EntityFactory.IEntityFactory.CreateEmptyGroup</references>
+        <references refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1aa9b390a965a4ebc813c0beefbbd87d26">myMD.Model.DatabaseModel.IEntityDatabase.Insert</references>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a5394beb3ee9308666dd7e16c00c943d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kindref="compound">IMedication</ref></type>
+        <definition>IMedication myMD.Model.ModelFacade.ModelFacade.CreateEmptyMedication</definition>
+        <argsstring>()</argsstring>
+        <name>CreateEmptyMedication</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a2b58006403e6d1fdc0b8764e6d908f48">CreateEmptyMedication</reimplements>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a2b58006403e6d1fdc0b8764e6d908f48" kindref="member">myMD.ModelInterface.ModelFacadeInterface.IModelFacade::CreateEmptyMedication()</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="77" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" bodystart="77" bodyend="82"/>
+        <references refid="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory_1a02bf5fe00d1c0b40dbc510ce74619a33">myMD.Model.EntityFactory.IEntityFactory.CreateEmptyMedication</references>
+        <references refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1aa9b390a965a4ebc813c0beefbbd87d26">myMD.Model.DatabaseModel.IEntityDatabase.Insert</references>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ac41f7ff0d2279e786a2477f91df72e4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref></type>
+        <definition>IProfile myMD.Model.ModelFacade.ModelFacade.CreateEmptyProfile</definition>
+        <argsstring>()</argsstring>
+        <name>CreateEmptyProfile</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a1a7a58c40cd157ebbf36809da4f03deb">CreateEmptyProfile</reimplements>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a1a7a58c40cd157ebbf36809da4f03deb" kindref="member">myMD.ModelInterface.ModelFacadeInterface.IModelFacade::CreateEmptyProfile()</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="85" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" bodystart="85" bodyend="91"/>
+        <references refid="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory_1add734631a85e6021f04c4185f66e351d">myMD.Model.EntityFactory.IEntityFactory.CreateEmptyProfile</references>
+        <references refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1aa9b390a965a4ebc813c0beefbbd87d26">myMD.Model.DatabaseModel.IEntityDatabase.Insert</references>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1abd05927988a648a743e1e5c2ddbcfcb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.ModelFacade.ModelFacade.Delete</definition>
+        <argsstring>(IEntity entity)</argsstring>
+        <name>Delete</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a4a1500102cde56c6cfd27002f11c71b8">Delete</reimplements>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a4a1500102cde56c6cfd27002f11c71b8" kindref="member">myMD.ModelInterface.ModelFacadeInterface.IModelFacade::Delete</ref>(Model.DataModelInterface.IEntity)</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="94" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a64393dc4a9ee9291d08a066e301b8e5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref></type>
+        <definition>IProfile myMD.Model.ModelFacade.ModelFacade.GetActiveProfile</definition>
+        <argsstring>()</argsstring>
+        <name>GetActiveProfile</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1aeac1c3e24d92639576aba45cf48329db">GetActiveProfile</reimplements>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1aeac1c3e24d92639576aba45cf48329db" kindref="member">myMD.ModelInterface.ModelFacadeInterface.IModelFacade::GetActiveProfile()</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="97" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a09beb7d7b91b7f39f2e3c4e4a1c68eee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref> &gt;</type>
+        <definition>IList&lt;IDoctorsLetter&gt; myMD.Model.ModelFacade.ModelFacade.GetAllDoctorsLetters</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllDoctorsLetters</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a1d1426bea42bcc857cc7f8075c1af9d1">GetAllDoctorsLetters</reimplements>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a1d1426bea42bcc857cc7f8075c1af9d1" kindref="member">myMD.ModelInterface.ModelFacadeInterface.IModelFacade::GetAllDoctorsLetters()</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ab56e35aaf429925902258902c84ec70f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group" kindref="compound">IDoctorsLetterGroup</ref> &gt;</type>
+        <definition>IList&lt;IDoctorsLetterGroup&gt; myMD.Model.ModelFacade.ModelFacade.GetAllGroups</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllGroups</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a3c0555857b11400df12c8be746223eab">GetAllGroups</reimplements>
+        <briefdescription>
+<para>myMD.ModelInterface.ModelFacadeInterface.IModelFacade::getAllGroups()</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1aef10eb7295b8eee4b938e5639f54b78d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kindref="compound">IMedication</ref> &gt;</type>
+        <definition>IList&lt;IMedication&gt; myMD.Model.ModelFacade.ModelFacade.GetAllMedications</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllMedications</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ac7cc1ff2f542e09632a8d6bdb2bca17d">GetAllMedications</reimplements>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ac7cc1ff2f542e09632a8d6bdb2bca17d" kindref="member">myMD.ModelInterface.ModelFacadeInterface.IModelFacade::GetAllMedications()</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="106" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a89d84c76209109caac581c4d80ebc8e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.ModelFacade.ModelFacade.SendLetter</definition>
+        <argsstring>(IDoctorsLetter letter)</argsstring>
+        <name>SendLetter</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a13e12d0dc6ab4ddf5036a8492ba85e40">SendLetter</reimplements>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref></type>
+          <declname>letter</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a13e12d0dc6ab4ddf5036a8492ba85e40" kindref="member">myMD.ModelInterface.ModelFacadeInterface.IModelFacade::SendLetter</ref>(Model.DataModelInterface.IDoctorsLetter)</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a25149455d25ce5c187c1f8f50c9735ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.ModelFacade.ModelFacade.Update</definition>
+        <argsstring>(IEntity entity)</argsstring>
+        <name>Update</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ad3fe364e44e55623a6e4a3a8920da8dd">Update</reimplements>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ad3fe364e44e55623a6e4a3a8920da8dd" kindref="member">myMD.ModelInterface.ModelFacadeInterface.IModelFacade::Update</ref>(Model.DataModelInterface.IEntity)</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="112" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Fassade zum Einstieg ins <ref refid="namespacemy_m_d_1_1_model" kindref="compound">Model</ref>. Enthält Schnittstellen zu den anderen Paketen im <ref refid="namespacemy_m_d_1_1_model" kindref="compound">Model</ref> an die beim Methodenaufruf delegiert wird. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade" kindref="compound">myMD.ModelInterface.ModelFacadeInterface.IModelFacade</ref></para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="292">
+        <label>myMD.Model.ModelFacade.ModelFacade</label>
+        <link refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade"/>
+        <childnode refid="293" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="293">
+        <label>IModelFacade</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="294">
+        <label>myMD.Model.ModelFacade.ModelFacade</label>
+        <link refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade"/>
+        <childnode refid="295" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="295">
+        <label>IModelFacade</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" line="18" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade/ModelFacade.cs" bodystart="17" bodyend="113"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1aa391999b0bfdc15cedfc8a6ad2921f19" prot="public" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>Activate</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a88c8453b2f8429e52d3273910f1910cb" prot="private" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>bluetooth</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ad7c7e2889846cf195ccdd4e61a804116" prot="public" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>CreateEmptyGroup</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a5394beb3ee9308666dd7e16c00c943d7" prot="public" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>CreateEmptyMedication</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ac41f7ff0d2279e786a2477f91df72e4a" prot="public" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>CreateEmptyProfile</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1afa193ffc627fde544d592049db733d5a" prot="private" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>database</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1abd05927988a648a743e1e5c2ddbcfcb0" prot="public" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>Delete</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ab20e55f86d6e6059e0de4f85724a2ee7" prot="private" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>factory</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1aa8c7a767fab9828415e6922142effc6b" prot="private" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>fileHelper</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a64393dc4a9ee9291d08a066e301b8e5e" prot="public" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>GetActiveProfile</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a09beb7d7b91b7f39f2e3c4e4a1c68eee" prot="public" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>GetAllDoctorsLetters</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ab56e35aaf429925902258902c84ec70f" prot="public" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>GetAllGroups</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1aef10eb7295b8eee4b938e5639f54b78d" prot="public" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>GetAllMedications</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1af4409668a62959fbf5ae1f89d065a4bb" prot="public" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>ModelFacade</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a7ff3cb1e1b5efdf3c7499ab0ec6954b9" prot="private" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>parser</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a89d84c76209109caac581c4d80ebc8e4" prot="public" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>SendLetter</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a25149455d25ce5c187c1f8f50c9735ba" prot="public" virt="non-virtual"><scope>myMD::Model::ModelFacade::ModelFacade</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,287 @@
+\hypertarget{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}{}\section{my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database Schnittstellenreferenz}
+\label{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}\index{my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database@{my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database}}
+
+
+Schnittstelle zur Interaktion mit einer Datenbank, in der alle Entitäten aus dem Data\+Model\+Interface Paket gespeichert werden können.  
+
+
+
+
+Klassendiagramm fÃ¼r my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Ã–ffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a1f41694f8d5c28720ebaf2e8fc841f36}{Activate}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}} profile)
+\begin{DoxyCompactList}\small\item\em Aktiviert ein Profil. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a1f6de467a7561470984cd761da35d004}{Delete}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Löscht eine Entität aus der Datenbank. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}} \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a252e240e409cd86695ef17f3381ab7b1}{Get\+Active\+Profile}} ()
+\begin{DoxyCompactList}\small\item\em Gibt das aktive Profile zurück. \end{DoxyCompactList}\item 
+I\+List$<$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{I\+Doctors\+Letter\+Group}} $>$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a0ffa07a2c944e1f1b209f211a96f2343}{Get\+All\+Doctors\+Letter\+Groups}} ()
+\begin{DoxyCompactList}\small\item\em Holt alle Arztbriefgruppen des zur Zeit aktiven Profils aus der Datenbank. \end{DoxyCompactList}\item 
+I\+List$<$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}} $>$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a31905fab07a84c0c21cd4a107b83e062}{Get\+All\+Doctors\+Letters}} ()
+\begin{DoxyCompactList}\small\item\em Holt alle Arztbriefe des zur Zeit aktiven Profils aus der Datenbank. \end{DoxyCompactList}\item 
+I\+List$<$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}} $>$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a4106a8b12b9aadc1768da8f86eb51d60}{Get\+All\+Medications}} ()
+\begin{DoxyCompactList}\small\item\em Holt alle Medikationen des zur Zeit aktiven Profils aus der Datenbank. \end{DoxyCompactList}\item 
+I\+List$<$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}} $>$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a2f27475135240f49000022de346dfbdd}{Get\+All\+Profiles}} ()
+\begin{DoxyCompactList}\small\item\em Holt alle Profile aus der Datenbank. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor}{I\+Doctor}} \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_ab7da53690d9a658c2e30326524b42fef}{Get\+Doctor}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor}{I\+Doctor}} doctor)
+\begin{DoxyCompactList}\small\item\em Suche nach ähnlichem Arzt in der Datenbank. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}} \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a3b62f2bec78aba18c58ce62580898f3a}{Get\+Profile}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}} profile)
+\begin{DoxyCompactList}\small\item\em Suche nach ähnlichem Profil in der Datenbank. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_aa9b390a965a4ebc813c0beefbbd87d26}{Insert}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Fügt eine Entität in die Datenbank zu dem zur Zeit aktiven Profil ein. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a61821f96fe74626966cdb12ca9691de1}{Update}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Aktualisiert eine Entität in der Datenbank. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{AusfÃ¼hrliche Beschreibung}
+Schnittstelle zur Interaktion mit einer Datenbank, in der alle Entitäten aus dem Data\+Model\+Interface Paket gespeichert werden können. 
+
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface}}
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a1f41694f8d5c28720ebaf2e8fc841f36}\label{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a1f41694f8d5c28720ebaf2e8fc841f36}} 
+\index{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}!Activate@{Activate}}
+\index{Activate@{Activate}!my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}}
+\subsubsection{\texorpdfstring{Activate()}{Activate()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database.\+Activate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}}}]{profile }\end{DoxyParamCaption})}
+
+
+
+Aktiviert ein Profil. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em profile} & Das zu aktivierende Profil\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_aeca102593fba9b3985762b2140237b9a}{my\+M\+D.\+Model.\+Database\+Model.\+Entity\+Database}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a1f6de467a7561470984cd761da35d004}\label{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a1f6de467a7561470984cd761da35d004}} 
+\index{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}!Delete@{Delete}}
+\index{Delete@{Delete}!my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}}
+\subsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}}}]{entity }\end{DoxyParamCaption})}
+
+
+
+Löscht eine Entität aus der Datenbank. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em entity} & Die zu löschende Entität\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_a00616354127860a0d20d1a353a931cf4}{my\+M\+D.\+Model.\+Database\+Model.\+Entity\+Database}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a252e240e409cd86695ef17f3381ab7b1}\label{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a252e240e409cd86695ef17f3381ab7b1}} 
+\index{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}!Get\+Active\+Profile@{Get\+Active\+Profile}}
+\index{Get\+Active\+Profile@{Get\+Active\+Profile}!my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}}
+\subsubsection{\texorpdfstring{Get\+Active\+Profile()}{GetActiveProfile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}} my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database.\+Get\+Active\+Profile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gibt das aktive Profile zurück. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Das zurzeit aktive Profil
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_afc59027838e67173bbd42744c85b19eb}{my\+M\+D.\+Model.\+Database\+Model.\+Entity\+Database}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a0ffa07a2c944e1f1b209f211a96f2343}\label{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a0ffa07a2c944e1f1b209f211a96f2343}} 
+\index{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}!Get\+All\+Doctors\+Letter\+Groups@{Get\+All\+Doctors\+Letter\+Groups}}
+\index{Get\+All\+Doctors\+Letter\+Groups@{Get\+All\+Doctors\+Letter\+Groups}!my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}}
+\subsubsection{\texorpdfstring{Get\+All\+Doctors\+Letter\+Groups()}{GetAllDoctorsLetterGroups()}}
+{\footnotesize\ttfamily I\+List$<$\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{I\+Doctors\+Letter\+Group}}$>$ my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database.\+Get\+All\+Doctors\+Letter\+Groups (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Holt alle Arztbriefgruppen des zur Zeit aktiven Profils aus der Datenbank. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Liste aller Arztbriefgruppen des aktiven Profils
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_ad47a77a171fddb2c0286be95166dca21}{my\+M\+D.\+Model.\+Database\+Model.\+Entity\+Database}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a31905fab07a84c0c21cd4a107b83e062}\label{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a31905fab07a84c0c21cd4a107b83e062}} 
+\index{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}!Get\+All\+Doctors\+Letters@{Get\+All\+Doctors\+Letters}}
+\index{Get\+All\+Doctors\+Letters@{Get\+All\+Doctors\+Letters}!my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}}
+\subsubsection{\texorpdfstring{Get\+All\+Doctors\+Letters()}{GetAllDoctorsLetters()}}
+{\footnotesize\ttfamily I\+List$<$\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}}$>$ my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database.\+Get\+All\+Doctors\+Letters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Holt alle Arztbriefe des zur Zeit aktiven Profils aus der Datenbank. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Liste aller Arztbriefe des aktiven Profils
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_af56d0d06d5339c63b856e1f8d9705935}{my\+M\+D.\+Model.\+Database\+Model.\+Entity\+Database}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a4106a8b12b9aadc1768da8f86eb51d60}\label{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a4106a8b12b9aadc1768da8f86eb51d60}} 
+\index{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}!Get\+All\+Medications@{Get\+All\+Medications}}
+\index{Get\+All\+Medications@{Get\+All\+Medications}!my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}}
+\subsubsection{\texorpdfstring{Get\+All\+Medications()}{GetAllMedications()}}
+{\footnotesize\ttfamily I\+List$<$\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}}$>$ my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database.\+Get\+All\+Medications (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Holt alle Medikationen des zur Zeit aktiven Profils aus der Datenbank. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Liste aller Medikationen des aktiven Profils
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_a2517548d0dbacc9f776f2b8400f11754}{my\+M\+D.\+Model.\+Database\+Model.\+Entity\+Database}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a2f27475135240f49000022de346dfbdd}\label{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a2f27475135240f49000022de346dfbdd}} 
+\index{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}!Get\+All\+Profiles@{Get\+All\+Profiles}}
+\index{Get\+All\+Profiles@{Get\+All\+Profiles}!my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}}
+\subsubsection{\texorpdfstring{Get\+All\+Profiles()}{GetAllProfiles()}}
+{\footnotesize\ttfamily I\+List$<$\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}}$>$ my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database.\+Get\+All\+Profiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Holt alle Profile aus der Datenbank. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Liste aller in der Datenbank gespeicherten Profile
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_acd77d4cb145a47a7d5d04f4ecfc2079d}{my\+M\+D.\+Model.\+Database\+Model.\+Entity\+Database}}.
+
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a2f27475135240f49000022de346dfbdd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_ab7da53690d9a658c2e30326524b42fef}\label{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_ab7da53690d9a658c2e30326524b42fef}} 
+\index{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}!Get\+Doctor@{Get\+Doctor}}
+\index{Get\+Doctor@{Get\+Doctor}!my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}}
+\subsubsection{\texorpdfstring{Get\+Doctor()}{GetDoctor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor}{I\+Doctor}} my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database.\+Get\+Doctor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor}{I\+Doctor}}}]{doctor }\end{DoxyParamCaption})}
+
+
+
+Suche nach ähnlichem Arzt in der Datenbank. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em doctor} & Suche nach Arzt der ähnlich zu diesem Arzt ist\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Ähnlicher Arzt aus der Datenbank oder null falls kein solcher Arzt existiert
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_a300d53e2e23b82c4bbf56813d2ff5285}{my\+M\+D.\+Model.\+Database\+Model.\+Entity\+Database}}.
+
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_ab7da53690d9a658c2e30326524b42fef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a3b62f2bec78aba18c58ce62580898f3a}\label{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a3b62f2bec78aba18c58ce62580898f3a}} 
+\index{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}!Get\+Profile@{Get\+Profile}}
+\index{Get\+Profile@{Get\+Profile}!my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}}
+\subsubsection{\texorpdfstring{Get\+Profile()}{GetProfile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}} my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database.\+Get\+Profile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{I\+Profile}}}]{profile }\end{DoxyParamCaption})}
+
+
+
+Suche nach ähnlichem Profil in der Datenbank. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em profile} & Suche nach Profil das ähnlich zu diesem Profil ist\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Ähnliches Profil aus der Datenbank oder null falls kein solches Profil existiert
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_a0bd750b2731c7f4c1a7890c1c58141e4}{my\+M\+D.\+Model.\+Database\+Model.\+Entity\+Database}}.
+
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a3b62f2bec78aba18c58ce62580898f3a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_aa9b390a965a4ebc813c0beefbbd87d26}\label{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_aa9b390a965a4ebc813c0beefbbd87d26}} 
+\index{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}!Insert@{Insert}}
+\index{Insert@{Insert}!my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}}
+\subsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database.\+Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}}}]{entity }\end{DoxyParamCaption})}
+
+
+
+Fügt eine Entität in die Datenbank zu dem zur Zeit aktiven Profil ein. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em entity} & Die einzufügende Entität\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_a498caa3b7e7a7745f7066620ac9a14ae}{my\+M\+D.\+Model.\+Database\+Model.\+Entity\+Database}}.
+
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_aa9b390a965a4ebc813c0beefbbd87d26_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a61821f96fe74626966cdb12ca9691de1}\label{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a61821f96fe74626966cdb12ca9691de1}} 
+\index{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}!Update@{Update}}
+\index{Update@{Update}!my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database@{my\+M\+D\+::\+Model\+::\+Database\+Model\+::\+I\+Entity\+Database}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model.\+Database\+Model.\+I\+Entity\+Database.\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}}}]{entity }\end{DoxyParamCaption})}
+
+
+
+Aktualisiert eine Entität in der Datenbank. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em entity} & Die zu aktualisierende Entität\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_a193a4912949f792f9907fad34802ff19}{my\+M\+D.\+Model.\+Database\+Model.\+Entity\+Database}}.
+
+
+
+Die Dokumentation fÃ¼r diese Schnittstelle wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Database\+Model/\mbox{\hyperlink{_i_entity_database_8cs}{I\+Entity\+Database.\+cs}}\end{DoxyCompactItemize}

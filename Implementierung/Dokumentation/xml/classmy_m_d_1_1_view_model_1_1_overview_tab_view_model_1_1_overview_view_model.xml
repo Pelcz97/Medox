@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model" kind="class" language="C#" prot="public">
+    <compoundname>myMD::ViewModel::OverviewTabViewModel::OverviewViewModel</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model" prot="public" virt="non-virtual">myMD.ViewModel.OverallViewModel.OverallViewModel</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_1ab0450e3df5b99c435084ad74c2ea65d0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>ObservableCollection&lt; <ref refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model" kindref="compound">DoctorsLetterViewModel</ref> &gt;</type>
+        <definition>ObservableCollection&lt;DoctorsLetterViewModel&gt; myMD.ViewModel.OverviewTabViewModel.OverviewViewModel.DoctorsLettersList</definition>
+        <argsstring></argsstring>
+        <name>DoctorsLettersList</name>
+        <briefdescription>
+<para>Die Liste der vorhandenen Arztbriefe. </para>        </briefdescription>
+        <detaileddescription>
+<para>The doctors letters list.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/OverviewViewModel.cs" line="21" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/OverviewViewModel.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_1a82f6eaa58ba38f2761d5f6e3d9ac9518" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>ICommand</type>
+        <definition>ICommand myMD.ViewModel.OverviewTabViewModel.OverviewViewModel.AddDummyLetter</definition>
+        <argsstring></argsstring>
+        <name>AddDummyLetter</name>
+        <briefdescription>
+<para>Command, das ein Dummy Element mit den gegebenen festen Werten erstellt. Nur zu Testzwecken. </para>        </briefdescription>
+        <detaileddescription>
+<para>The add dummy letter.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/OverviewViewModel.cs" line="28" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/OverviewViewModel.cs" bodystart="28" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_1a8099d87e6d22edcd5119a845cd16d96b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.ViewModel.OverviewTabViewModel.OverviewViewModel.OverviewViewModel</definition>
+        <argsstring>()</argsstring>
+        <name>OverviewViewModel</name>
+        <briefdescription>
+<para>Erzeugt ein <ref refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model" kindref="compound">OverviewViewModel</ref>. Zunächst wird die DoctorsLettersList als neue leere Liste initialisiert, danach werden alle in der Datenbank gespeicherten Arztbriefe als <ref refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model" kindref="compound">DoctorsLetterViewModel</ref> in die Liste eingefügt. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/OverviewViewModel.cs" line="107" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/OverviewViewModel.cs" bodystart="107" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="namespacemy_m_d_1_1_view_model" kindref="compound">ViewModel</ref> zur Hauptseite des OverviewTabs. Hier wird hauptsächlich die Liste an Arztbriefen modeliert. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="325">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="324">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="325" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="323">
+        <label>myMD.ViewModel.OverviewTabViewModel.OverviewViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model"/>
+        <childnode refid="324" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="328">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="327">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="328" relation="public-inheritance">
+        </childnode>
+        <childnode refid="329" relation="usage">
+          <edgelabel>ModelFacade</edgelabel>
+        </childnode>
+      </node>
+      <node id="329">
+        <label>myMD.ModelInterface.ModelFacadeInterface.IModelFacade</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
+      </node>
+      <node id="326">
+        <label>myMD.ViewModel.OverviewTabViewModel.OverviewViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model"/>
+        <childnode refid="327" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/OverviewViewModel.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/OverviewViewModel.cs" bodystart="15" bodyend="115"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_1a82f6eaa58ba38f2761d5f6e3d9ac9518" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::OverviewViewModel</scope><name>AddDummyLetter</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1acff4179c3cbf2cd35046729e99cd6921" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::OverviewViewModel</scope><name>BleAdapter</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_1ab0450e3df5b99c435084ad74c2ea65d0" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::OverviewViewModel</scope><name>DoctorsLettersList</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1ab1b0e7b2ed9ae07614caa1e45b942e3f" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::OverviewViewModel</scope><name>ModelFacade</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a0333c153387ba2d38fb31eeb0419bfcf" prot="public" virt="virtual"><scope>myMD::ViewModel::OverviewTabViewModel::OverviewViewModel</scope><name>OnPropertyChanged</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::OverviewViewModel</scope><name>OverallViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_1a8099d87e6d22edcd5119a845cd16d96b" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::OverviewViewModel</scope><name>OverviewViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1918d3d8d384486e278426327b16256f" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverviewTabViewModel::OverviewViewModel</scope><name>PropertyChanged</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

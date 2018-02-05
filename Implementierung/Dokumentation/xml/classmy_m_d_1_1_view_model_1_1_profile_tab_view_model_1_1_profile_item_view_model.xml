@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model" kind="class" language="C#" prot="public">
+    <compoundname>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model" prot="public" virt="non-virtual">myMD.ViewModel.OverallViewModel.OverallViewModel</basecompoundref>
+    <derivedcompoundref refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_edit_view_model" prot="public" virt="non-virtual">myMD.ViewModel.ProfileTabViewModel.ProfileEditViewModel</derivedcompoundref>
+    <derivedcompoundref refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_view_model" prot="public" virt="non-virtual">myMD.ViewModel.ProfileTabViewModel.ProfileViewModel</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1a91367f8be2f7fda904e1292cd5049c35" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref></type>
+        <definition>IProfile myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel.Profile</definition>
+        <argsstring></argsstring>
+        <name>Profile</name>
+        <briefdescription>
+<para>Das Profil des ProfileItemViewModels </para>        </briefdescription>
+        <detaileddescription>
+<para>The profile.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" line="20" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" bodystart="20" bodyend="20"/>
+        <referencedby refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_view_model_1aa7d7cd132645a689b99eccd006b51c40" compoundref="_profile_view_model_8cs" startline="20" endline="28">myMD.ViewModel.ProfileTabViewModel.ProfileViewModel.ProfileViewModel</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1abf7ee39f67915e326cbaa633368b9846" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel.LastName</definition>
+        <argsstring></argsstring>
+        <name>LastName</name>
+        <briefdescription>
+<para>Der Nachname des Profils. </para>        </briefdescription>
+        <detaileddescription>
+<para>The last name.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" line="26" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1aa16bc16413aef57a6b63caedf7b5632a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+<para>Der Vorname des Profils. </para>        </briefdescription>
+        <detaileddescription>
+<para>The name.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" line="35" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1ae34d809cc99f6592154df455ad3b7ef9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel.Birthdate</definition>
+        <argsstring></argsstring>
+        <name>Birthdate</name>
+        <briefdescription>
+<para>Das Geburtsdatum des Profils. </para>        </briefdescription>
+        <detaileddescription>
+<para>The birthdate.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" line="44" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1ac303c5083bf4ad4b307798a4c4e8af6e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel.InsuranceNumber</definition>
+        <argsstring></argsstring>
+        <name>InsuranceNumber</name>
+        <briefdescription>
+<para>Die Versicherungsnummer des Profils. </para>        </briefdescription>
+        <detaileddescription>
+<para>The insurance number.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" line="53" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1a9c67eb1da84c7d284d533b89a0737859" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17c" kindref="member">BloodType</ref></type>
+        <definition>BloodType myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel.BloodType</definition>
+        <argsstring></argsstring>
+        <name>BloodType</name>
+        <briefdescription>
+<para>Die Blutgruppe des Profils. </para>        </briefdescription>
+        <detaileddescription>
+<para>The type of the blood.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" line="62" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" bodystart="62" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1a8f900454a817a4b4400ede47e418a512" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel.BloodTypeName</definition>
+        <argsstring></argsstring>
+        <name>BloodTypeName</name>
+        <initializer>=&gt; BloodType.ToString().FormatPlusAndMinus()</initializer>
+        <briefdescription>
+<para>Zum Anzeigen formatierter Name der Blutgruppe dieses Profils </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" line="72" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1af9b06e26394989f3cb500fe452a25ce8" prot="public" static="no" mutable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel.BloodTypeNames</definition>
+        <argsstring></argsstring>
+        <name>BloodTypeNames</name>
+        <initializer>=&gt; Enum.GetNames(typeof(<ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a5da1f31200b9d5cbc5d0704b8da3d17c" kindref="member">BloodType</ref>)).Select(b =&gt; b.FormatPlusAndMinus()).ToList()</initializer>
+        <briefdescription>
+<para>Liste zum Anzeigen formatierter Namen aller Blutgruppen. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" line="77" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1ae846bc0f8c6962ada62fa7f9a4640d1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel.ProfileItemViewModel</definition>
+        <argsstring>()</argsstring>
+        <name>ProfileItemViewModel</name>
+        <briefdescription>
+<para>Erzeugt ein ProfilItemViewModel und setzt das Profil auf das momentan aktive Profil. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" line="82" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" bodystart="82" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="namespacemy_m_d_1_1_view_model" kindref="compound">ViewModel</ref> zur Darstellung eines einzelnen Profils </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="363">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="365">
+        <label>myMD.ViewModel.ProfileTabViewModel.ProfileViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_view_model"/>
+        <childnode refid="361" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="362">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="363" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="361">
+        <label>myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model"/>
+        <childnode refid="362" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="364">
+        <label>myMD.ViewModel.ProfileTabViewModel.ProfileEditViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_edit_view_model"/>
+        <childnode refid="361" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="368">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="367">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="368" relation="public-inheritance">
+        </childnode>
+        <childnode refid="369" relation="usage">
+          <edgelabel>ModelFacade</edgelabel>
+        </childnode>
+      </node>
+      <node id="366">
+        <label>myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model"/>
+        <childnode refid="367" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="369">
+        <label>myMD.ModelInterface.ModelFacadeInterface.IModelFacade</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" line="15" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" bodystart="14" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1ae34d809cc99f6592154df455ad3b7ef9" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>Birthdate</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1acff4179c3cbf2cd35046729e99cd6921" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>BleAdapter</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1a9c67eb1da84c7d284d533b89a0737859" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>BloodType</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1a8f900454a817a4b4400ede47e418a512" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>BloodTypeName</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1af9b06e26394989f3cb500fe452a25ce8" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>BloodTypeNames</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1ac303c5083bf4ad4b307798a4c4e8af6e" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>InsuranceNumber</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1abf7ee39f67915e326cbaa633368b9846" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>LastName</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1ab1b0e7b2ed9ae07614caa1e45b942e3f" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>ModelFacade</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1aa16bc16413aef57a6b63caedf7b5632a" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>Name</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a0333c153387ba2d38fb31eeb0419bfcf" prot="public" virt="virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>OnPropertyChanged</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>OverallViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1a91367f8be2f7fda904e1292cd5049c35" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>Profile</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1ae846bc0f8c6962ada62fa7f9a4640d1d" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>ProfileItemViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1918d3d8d384486e278426327b16256f" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>PropertyChanged</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

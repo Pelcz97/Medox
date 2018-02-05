@@ -1,0 +1,135 @@
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{
+\section{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter Interface Reference}
+\label{db/d8c/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}\index{myMD::ModelInterface::DataModelInterface::IDoctorsLetter@{myMD::ModelInterface::DataModelInterface::IDoctorsLetter}}
+}
+Schnittstelle f\"{u}r die Abstraktion eines Arztbriefes, die die \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{IData} Schnittstelle erweitert. Ein Arztbrief ist ein Transferdokument f\"{u}r die Kommunikation zwischen \"{A}rzten. Er gibt einen zusammenfassenden \"{U}berblick \"{u}ber den Status des Patienten bei der Entlassung, einen R\"{u}ckblick \"{u}ber den Krankheitsverlauf, die veranlasste Therapie und eine Interpretation des Geschehens zum Krankheitsverlauf im speziellen Fall.  
+
+
+Inheritance diagram for my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter:Collaboration diagram for my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_21bff2bea1b5f08bc7e79dd65b9ccf16}{Remove\-Medication} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{IMedication} med)
+\begin{CompactList}\small\item\em L\"{o}st die Verbindung zwischen einer Medikation und diesem Arztbrief auf. \item\end{CompactList}\item 
+void \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_d30d4a881bdfd437b1b1da6f3fa7cb38}{Attach\-Medication} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{IMedication} med)
+\begin{CompactList}\small\item\em Verbindet eine Medikation mit diesem Arztbrief. Ist die Medikation bereits mit dem Arztbrief verbunden, so passiert nichts. \item\end{CompactList}\item 
+void \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_06720c4c5d7e38157063166e916bbf8a}{Add\-To\-Group} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{IDoctors\-Letter\-Group} group)
+\begin{CompactList}\small\item\em F\"{u}gt diesen Arztbrief zu einer Arztbriefgruppe hinzu. \item\end{CompactList}\item 
+void \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_921a6a4ce8826ab9e42d5d5b22a5bc79}{Remove\-From\-Group} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{IDoctors\-Letter\-Group} group)
+\begin{CompactList}\small\item\em Entfernt diesen Arztbrief aus einer Arztbriefgruppe. \item\end{CompactList}\item 
+\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\-Letter} \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a52c06afbc0038d351f09b083e586b2e}{To\-Doctors\-Letter} ()
+\begin{CompactList}\small\item\em Konvertiert die Schnittstelle zu ihrer Implementierung. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Properties}
+\begin{CompactItemize}
+\item 
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_523223d6c6fe8798f0d70f376ffc99b8}{
+string \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_523223d6c6fe8798f0d70f376ffc99b8}{Diagnosis}}
+\label{db/d8c/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_523223d6c6fe8798f0d70f376ffc99b8}
+
+\begin{CompactList}\small\item\em Die Diagnose in diesem Arztbrief. \item\end{CompactList}\item 
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_cbb67c65f2abd1005d46939a7b3aff5f}{
+\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor}{IDoctor} \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_cbb67c65f2abd1005d46939a7b3aff5f}{Doctor}}
+\label{db/d8c/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_cbb67c65f2abd1005d46939a7b3aff5f}
+
+\begin{CompactList}\small\item\em Der Arzt, von dem dieser Arztbrief stammt. \item\end{CompactList}\item 
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_353bd6f65060d17097c3b03141e79cce}{
+IList$<$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{IMedication} $>$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_353bd6f65060d17097c3b03141e79cce}{Medication}}
+\label{db/d8c/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_353bd6f65060d17097c3b03141e79cce}
+
+\begin{CompactList}\small\item\em Liste aller Medikationen, die in diesem Arztbrief verschrieben wurden. \item\end{CompactList}\item 
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a37ede293936e29279ed543129451ec3}{
+IList$<$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{IDoctors\-Letter\-Group} $>$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a37ede293936e29279ed543129451ec3}{Groups}}
+\label{db/d8c/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a37ede293936e29279ed543129451ec3}
+
+\begin{CompactList}\small\item\em Liste aller Arztbriefgruppen, in denen dieser Arztbrief enthalten ist. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Schnittstelle f\"{u}r die Abstraktion eines Arztbriefes, die die \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{IData} Schnittstelle erweitert. Ein Arztbrief ist ein Transferdokument f\"{u}r die Kommunikation zwischen \"{A}rzten. Er gibt einen zusammenfassenden \"{U}berblick \"{u}ber den Status des Patienten bei der Entlassung, einen R\"{u}ckblick \"{u}ber den Krankheitsverlauf, die veranlasste Therapie und eine Interpretation des Geschehens zum Krankheitsverlauf im speziellen Fall. 
+
+
+
+Definition at line 11 of file IDoctors\-Letter.cs.
+
+\subsection{Member Function Documentation}
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_06720c4c5d7e38157063166e916bbf8a}{
+\index{myMD::ModelInterface::DataModelInterface::IDoctorsLetter@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter}!AddToGroup@{AddToGroup}}
+\index{AddToGroup@{AddToGroup}!myMD::ModelInterface::DataModelInterface::IDoctorsLetter@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter}}
+\subsubsection[AddToGroup]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter::Add\-To\-Group (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{IDoctors\-Letter\-Group} {\em group})}}
+\label{db/d8c/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_06720c4c5d7e38157063166e916bbf8a}
+
+
+F\"{u}gt diesen Arztbrief zu einer Arztbriefgruppe hinzu. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em group}]Die Gruppe zu der dieser Arztbrief hinzugef\"{u}gt werden soll\end{description}
+\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_06720c4c5d7e38157063166e916bbf8a}{my\-MD::Model::Data\-Model::Doctors\-Letter}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_d30d4a881bdfd437b1b1da6f3fa7cb38}{
+\index{myMD::ModelInterface::DataModelInterface::IDoctorsLetter@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter}!AttachMedication@{AttachMedication}}
+\index{AttachMedication@{AttachMedication}!myMD::ModelInterface::DataModelInterface::IDoctorsLetter@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter}}
+\subsubsection[AttachMedication]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter::Attach\-Medication (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{IMedication} {\em med})}}
+\label{db/d8c/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_d30d4a881bdfd437b1b1da6f3fa7cb38}
+
+
+Verbindet eine Medikation mit diesem Arztbrief. Ist die Medikation bereits mit dem Arztbrief verbunden, so passiert nichts. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em med}]Die zu verbindendene Medikation\end{description}
+\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_d30d4a881bdfd437b1b1da6f3fa7cb38}{my\-MD::Model::Data\-Model::Doctors\-Letter}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_921a6a4ce8826ab9e42d5d5b22a5bc79}{
+\index{myMD::ModelInterface::DataModelInterface::IDoctorsLetter@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter}!RemoveFromGroup@{RemoveFromGroup}}
+\index{RemoveFromGroup@{RemoveFromGroup}!myMD::ModelInterface::DataModelInterface::IDoctorsLetter@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter}}
+\subsubsection[RemoveFromGroup]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter::Remove\-From\-Group (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{IDoctors\-Letter\-Group} {\em group})}}
+\label{db/d8c/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_921a6a4ce8826ab9e42d5d5b22a5bc79}
+
+
+Entfernt diesen Arztbrief aus einer Arztbriefgruppe. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em group}]Die Gruppe aus der dieser Arztbrief entfernt werden soll\end{description}
+\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_921a6a4ce8826ab9e42d5d5b22a5bc79}{my\-MD::Model::Data\-Model::Doctors\-Letter}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_21bff2bea1b5f08bc7e79dd65b9ccf16}{
+\index{myMD::ModelInterface::DataModelInterface::IDoctorsLetter@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter}!RemoveMedication@{RemoveMedication}}
+\index{RemoveMedication@{RemoveMedication}!myMD::ModelInterface::DataModelInterface::IDoctorsLetter@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter}}
+\subsubsection[RemoveMedication]{\setlength{\rightskip}{0pt plus 5cm}void my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter::Remove\-Medication (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{IMedication} {\em med})}}
+\label{db/d8c/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_21bff2bea1b5f08bc7e79dd65b9ccf16}
+
+
+L\"{o}st die Verbindung zwischen einer Medikation und diesem Arztbrief auf. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em med}]Zu entferndene Medikation\end{description}
+\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_21bff2bea1b5f08bc7e79dd65b9ccf16}{my\-MD::Model::Data\-Model::Doctors\-Letter}.\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a52c06afbc0038d351f09b083e586b2e}{
+\index{myMD::ModelInterface::DataModelInterface::IDoctorsLetter@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter}!ToDoctorsLetter@{ToDoctorsLetter}}
+\index{ToDoctorsLetter@{ToDoctorsLetter}!myMD::ModelInterface::DataModelInterface::IDoctorsLetter@{my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter}}
+\subsubsection[ToDoctorsLetter]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\-Letter} my\-MD::Model\-Interface::Data\-Model\-Interface::IDoctors\-Letter::To\-Doctors\-Letter ()}}
+\label{db/d8c/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a52c06afbc0038d351f09b083e586b2e}
+
+
+Konvertiert die Schnittstelle zu ihrer Implementierung. 
+
+\begin{Desc}
+\item[Returns:]Konkreter Arztbrief\end{Desc}
+
+
+Implemented in \hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_a52c06afbc0038d351f09b083e586b2e}{my\-MD::Model::Data\-Model::Doctors\-Letter}.
+
+The documentation for this interface was generated from the following file:\begin{CompactItemize}
+\item 
+D:/Studium/WS17-18/PSE/Implementierung/my\-MD/my\-MD/Model\-Interface/Data\-Model\-Interface/IDoctors\-Letter.cs\end{CompactItemize}

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_s_q_lite_net_extensions_1_1_extensions_1_1_many_to_many_meta_info" kind="class" language="C#" prot="public">
+    <compoundname>SQLiteNetExtensions::Extensions::ManyToManyMetaInfo</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_many_to_many_meta_info_1addac6754252cc5d8ddd79676aed73000" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Type</type>
+        <definition>Type SQLiteNetExtensions.Extensions.ManyToManyMetaInfo.IntermediateType</definition>
+        <argsstring></argsstring>
+        <name>IntermediateType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="23" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_many_to_many_meta_info_1a2a71eb0c2e3ae9335e1fff84494ac34a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>PropertyInfo</type>
+        <definition>PropertyInfo SQLiteNetExtensions.Extensions.ManyToManyMetaInfo.OriginProperty</definition>
+        <argsstring></argsstring>
+        <name>OriginProperty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="24" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_many_to_many_meta_info_1aecb9912e2e3809b868d4d109a01e8a4b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>PropertyInfo</type>
+        <definition>PropertyInfo SQLiteNetExtensions.Extensions.ManyToManyMetaInfo.DestinationProperty</definition>
+        <argsstring></argsstring>
+        <name>DestinationProperty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="25" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="22" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="21" bodyend="26"/>
+    <listofallmembers>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_many_to_many_meta_info_1aecb9912e2e3809b868d4d109a01e8a4b" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ManyToManyMetaInfo</scope><name>DestinationProperty</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_many_to_many_meta_info_1addac6754252cc5d8ddd79676aed73000" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ManyToManyMetaInfo</scope><name>IntermediateType</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_many_to_many_meta_info_1a2a71eb0c2e3ae9335e1fff84494ac34a" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ManyToManyMetaInfo</scope><name>OriginProperty</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

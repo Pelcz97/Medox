@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_69b0732e2aea9bb833cde0b0488e749f" kind="dir">
+    <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel</compoundname>
+    <innerfile refid="_detailed_doctors_letter_view_model_8cs">DetailedDoctorsLetterViewModel.cs</innerfile>
+    <innerfile refid="_doctors_letter_view_model_8cs">DoctorsLetterViewModel.cs</innerfile>
+    <innerfile refid="_overview_view_model_8cs">OverviewViewModel.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverviewTabViewModel/"/>
+  </compounddef>
+</doxygen>

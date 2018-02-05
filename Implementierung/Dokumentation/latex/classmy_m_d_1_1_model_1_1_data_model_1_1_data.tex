@@ -1,0 +1,128 @@
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_data}{}\section{my\+M\+D.\+Model.\+Data\+Model.\+Data Klassenreferenz}
+\label{classmy_m_d_1_1_model_1_1_data_model_1_1_data}\index{my\+M\+D.\+Model.\+Data\+Model.\+Data@{my\+M\+D.\+Model.\+Data\+Model.\+Data}}
+
+
+Diese Klasse implementiert die I\+Data Schnittstelle und erweitert die abstrakte Enitity Klasse, um Information über medizinische Daten in einer S\+Q\+Lite-\/\+Datenbank speichern zu können. Dabei ist diese Klasse nur ein Strukturelement, dass von anderen Klassen erweitert werden sollte, um medizinische Daten in einer S\+Q\+Lite-\/\+Datenbank speichern zu können und daher abstrakt.  
+
+
+
+
+Klassendiagramm fÃ¼r my\+M\+D.\+Model.\+Data\+Model.\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_data__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ZusammengehÃ¶rigkeiten von my\+M\+D.\+Model.\+Data\+Model.\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_data__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Ã–ffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data_a14a3510dbebdbb2e3cb3b37071fc9c2e}{Compare\+To}} (\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data}{Data}} other)
+\begin{DoxyCompactList}\small\item\em Daten werden basierend auf ihrem Datum verglichen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data_a8d82ac369678f7098eda396bb8d615e1}{Equals}} (\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data}{Data}} other)
+\begin{DoxyCompactList}\small\item\em Zwei Daten sind genau dann gleich, wenn sie als Entitäten gleich sind, ihre Sensitivitätsstufe übereinstimmt und ihr Datum gleich ist. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data_a878089e14b27cb78f0e3d83d7c1151f1}{Equals}} (object obj)
+\begin{DoxyCompactList}\small\item\em System.\+Object\+::\+Equals(System.\+Object)\end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data_ab1a32ffb44374a5740fb1b464edffdc7}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em System.\+Object\+::\+Get\+Hash\+Code()\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Propertys}
+\begin{DoxyCompactItemize}
+\item 
+virtual Date\+Time \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data_a5a21826433266e6cf63ef2ffbac2383c}{Date}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_a9d008b7dcd815aa50c08de56f5cbb902}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Data\+::\+Date}}\end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a3d0df45e579e37eccbab219eb94860da}{Sensitivity}} \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data_ac34e47038aebd438d8e85639aa1b3fbe}{Sensitivity}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_a8ff35b1b7aeffdb14c900e6c807b1e4e}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Data\+::\+Sensitivity}}\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{AusfÃ¼hrliche Beschreibung}
+Diese Klasse implementiert die I\+Data Schnittstelle und erweitert die abstrakte Enitity Klasse, um Information über medizinische Daten in einer S\+Q\+Lite-\/\+Datenbank speichern zu können. Dabei ist diese Klasse nur ein Strukturelement, dass von anderen Klassen erweitert werden sollte, um medizinische Daten in einer S\+Q\+Lite-\/\+Datenbank speichern zu können und daher abstrakt. 
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Data}}
+
+my\+M\+D.\+Model.\+Data\+Model\+Interface.\+Entity
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_data_a14a3510dbebdbb2e3cb3b37071fc9c2e}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_data_a14a3510dbebdbb2e3cb3b37071fc9c2e}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}!Compare\+To@{Compare\+To}}
+\index{Compare\+To@{Compare\+To}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}}
+\subsubsection{\texorpdfstring{Compare\+To()}{CompareTo()}}
+{\footnotesize\ttfamily int my\+M\+D.\+Model.\+Data\+Model.\+Data.\+Compare\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data}{Data}}}]{other }\end{DoxyParamCaption})}
+
+
+
+Daten werden basierend auf ihrem Datum verglichen. 
+
+System.\+I\+Comparable\+::\+Compare\+To()Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_data_a14a3510dbebdbb2e3cb3b37071fc9c2e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_data_a8d82ac369678f7098eda396bb8d615e1}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_data_a8d82ac369678f7098eda396bb8d615e1}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}!Equals@{Equals}}
+\index{Equals@{Equals}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}}
+\subsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool my\+M\+D.\+Model.\+Data\+Model.\+Data.\+Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_data}{Data}}}]{other }\end{DoxyParamCaption})}
+
+
+
+Zwei Daten sind genau dann gleich, wenn sie als Entitäten gleich sind, ihre Sensitivitätsstufe übereinstimmt und ihr Datum gleich ist. 
+
+System.\+I\+Equatable$<$\+T$>$\+::\+Equals(\+T)\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_data_a878089e14b27cb78f0e3d83d7c1151f1}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_data_a878089e14b27cb78f0e3d83d7c1151f1}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}!Equals@{Equals}}
+\index{Equals@{Equals}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}}
+\subsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily override bool my\+M\+D.\+Model.\+Data\+Model.\+Data.\+Equals (\begin{DoxyParamCaption}\item[{object}]{obj }\end{DoxyParamCaption})}
+
+
+
+System.\+Object\+::\+Equals(System.\+Object)
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_data_ab1a32ffb44374a5740fb1b464edffdc7}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_data_ab1a32ffb44374a5740fb1b464edffdc7}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}!Get\+Hash\+Code@{Get\+Hash\+Code}}
+\index{Get\+Hash\+Code@{Get\+Hash\+Code}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}}
+\subsubsection{\texorpdfstring{Get\+Hash\+Code()}{GetHashCode()}}
+{\footnotesize\ttfamily override int my\+M\+D.\+Model.\+Data\+Model.\+Data.\+Get\+Hash\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+System.\+Object\+::\+Get\+Hash\+Code()
+
+
+
+\subsection{Dokumentation der Propertys}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_data_a5a21826433266e6cf63ef2ffbac2383c}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_data_a5a21826433266e6cf63ef2ffbac2383c}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}!Date@{Date}}
+\index{Date@{Date}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}}
+\subsubsection{\texorpdfstring{Date}{Date}}
+{\footnotesize\ttfamily virtual Date\+Time my\+M\+D.\+Model.\+Data\+Model.\+Data.\+Date\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_a9d008b7dcd815aa50c08de56f5cbb902}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Data\+::\+Date}}
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_data_ac34e47038aebd438d8e85639aa1b3fbe}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_data_ac34e47038aebd438d8e85639aa1b3fbe}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}!Sensitivity@{Sensitivity}}
+\index{Sensitivity@{Sensitivity}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Data}}
+\subsubsection{\texorpdfstring{Sensitivity}{Sensitivity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a3d0df45e579e37eccbab219eb94860da}{Sensitivity}} my\+M\+D.\+Model.\+Data\+Model.\+Data.\+Sensitivity\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_a8ff35b1b7aeffdb14c900e6c807b1e4e}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Data\+::\+Sensitivity}}
+
+
+
+Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Data\+Model/\mbox{\hyperlink{_data_8cs}{Data.\+cs}}\end{DoxyCompactItemize}

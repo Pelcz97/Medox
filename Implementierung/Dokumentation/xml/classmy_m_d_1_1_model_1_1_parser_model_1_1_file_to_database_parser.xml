@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser" kind="class" language="C#" prot="public" abstract="yes">
+    <compoundname>myMD::Model::ParserModel::FileToDatabaseParser</compoundname>
+    <derivedcompoundref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser" prot="public" virt="non-virtual">myMD.Model.ParserModel.Hl7ToDatabaseParser</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.ParserModel.FileToDatabaseParser.ParseFile</definition>
+        <argsstring>(string filename, IEntityDatabase db)</argsstring>
+        <name>ParseFile</name>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database" kindref="compound">IEntityDatabase</ref></type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+<para>Fügt Informationen aus der Datei in die Datenbank ein. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die zu parsende Datei</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>db</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die Datenbank in die die geparsten Informationen eingetragen werden</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Werfe, wenn kein passendes Profil für die Datei gefunden wurde</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="21" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" bodystart="21" bodyend="50"/>
+        <references refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a3b62f2bec78aba18c58ce62580898f3a">myMD.Model.DatabaseModel.IEntityDatabase.GetProfile</references>
+        <references refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1aa525d1f3b15f7a82011022dbc8edbdd1">myMD.ModelInterface.DataModelInterface.IProfile.ToProfile</references>
+        <references refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1ab7da53690d9a658c2e30326524b42fef">myMD.Model.DatabaseModel.IEntityDatabase.GetDoctor</references>
+        <references refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1aa9b390a965a4ebc813c0beefbbd87d26">myMD.Model.DatabaseModel.IEntityDatabase.Insert</references>
+        <references refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor_1aedadc4e156829d4734a47f5613eb7af2">myMD.ModelInterface.DataModelInterface.IDoctor.ToDoctor</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a3df9a6eed5a26b09bbf075615db46b9c" compoundref="_entity_8cs" startline="36" endline="36">myMD.Model.DataModel.Entity.Profile</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1ace793853564df796217d90fc8a56f01b" compoundref="_doctors_letter_8cs" startline="36" endline="36">myMD.Model.DataModel.DoctorsLetter.DatabaseDoctor</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1afa4317cee37448666f91ad019c4d118e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract void</type>
+        <definition>abstract void myMD.Model.ParserModel.FileToDatabaseParser.Init</definition>
+        <argsstring>(string file)</argsstring>
+        <name>Init</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5c2d04fd614ecab8c9bc7f5ae7636a00">Init</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Rufe diese Methode auf um den Parser zu initialisieren um danach über die Parse-Methoden die relevanten Informationen zu erhalten. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Der Pfad zu der Datei die geparst werden soll</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a9fcc201f726f6c9e93cdb011a0b1dfae" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctor" kindref="compound">Doctor</ref></type>
+        <definition>abstract Doctor myMD.Model.ParserModel.FileToDatabaseParser.ParseDoctor</definition>
+        <argsstring>()</argsstring>
+        <name>ParseDoctor</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a7a6690eb5f9d3c15ac4805c1695f2116">ParseDoctor</reimplementedby>
+        <briefdescription>
+<para>Erstelle den in der Datei spezifizierten Arzt. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Den erstellten Arzt</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a3ac888cb3cc241cc42e1b9ad7f4547ff" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter" kindref="compound">DoctorsLetter</ref></type>
+        <definition>abstract DoctorsLetter myMD.Model.ParserModel.FileToDatabaseParser.ParseLetter</definition>
+        <argsstring>()</argsstring>
+        <name>ParseLetter</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a7422f68b4596b2a59b052c3e13629747">ParseLetter</reimplementedby>
+        <briefdescription>
+<para>Erstelle einen Arztbrief mit den Informationen aus der Datei. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Den erstellten Arztbrief</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a73c15f8034e8d5a907b39ca8daa6a854" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract IList&lt; <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication" kindref="compound">Medication</ref> &gt;</type>
+        <definition>abstract IList&lt;Medication&gt; myMD.Model.ParserModel.FileToDatabaseParser.ParseMedications</definition>
+        <argsstring>()</argsstring>
+        <name>ParseMedications</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5188e31e41b2778e36ca853cb346c7b2">ParseMedications</reimplementedby>
+        <briefdescription>
+<para>Erstelle die in der Datei spezifizierten Medikationen. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Liste der erstellten Medikationen</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="74" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a9b95fdb381daef0799df52ccc28d8a80" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile" kindref="compound">Profile</ref></type>
+        <definition>abstract Profile myMD.Model.ParserModel.FileToDatabaseParser.ParseProfile</definition>
+        <argsstring>()</argsstring>
+        <name>ParseProfile</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5d6231cd8b2598bf1683778b0500c7fd">ParseProfile</reimplementedby>
+        <briefdescription>
+<para>Erstelle das in der Datei spezifizierten Profil. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Das erstellte Profil</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="80" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstrakte Klasse zum Parsen von Dateien in eine Datenbank. Sollte dateiformatspezifisch erweitert werden. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="159">
+        <label>myMD.Model.ParserModel.Hl7ToDatabaseParser</label>
+        <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser"/>
+        <childnode refid="158" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="158">
+        <label>myMD.Model.ParserModel.FileToDatabaseParser</label>
+        <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser"/>
+      </node>
+    </inheritancegraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="14" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" bodystart="13" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1afa4317cee37448666f91ad019c4d118e" prot="protected" virt="pure-virtual"><scope>myMD::Model::ParserModel::FileToDatabaseParser</scope><name>Init</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a9fcc201f726f6c9e93cdb011a0b1dfae" prot="protected" virt="pure-virtual"><scope>myMD::Model::ParserModel::FileToDatabaseParser</scope><name>ParseDoctor</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" prot="public" virt="non-virtual"><scope>myMD::Model::ParserModel::FileToDatabaseParser</scope><name>ParseFile</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a3ac888cb3cc241cc42e1b9ad7f4547ff" prot="protected" virt="pure-virtual"><scope>myMD::Model::ParserModel::FileToDatabaseParser</scope><name>ParseLetter</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a73c15f8034e8d5a907b39ca8daa6a854" prot="protected" virt="pure-virtual"><scope>myMD::Model::ParserModel::FileToDatabaseParser</scope><name>ParseMedications</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a9b95fdb381daef0799df52ccc28d8a80" prot="protected" virt="pure-virtual"><scope>myMD::Model::ParserModel::FileToDatabaseParser</scope><name>ParseProfile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

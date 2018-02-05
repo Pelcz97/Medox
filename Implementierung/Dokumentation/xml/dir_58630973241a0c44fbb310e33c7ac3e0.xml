@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_58630973241a0c44fbb310e33c7ac3e0" kind="dir">
+    <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/TextBlob</compoundname>
+    <innerdir refid="dir_a83d5f8eba306b982d65a98469421e52">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/TextBlob/Serializers</innerdir>
+    <innerfile refid="_i_text_blob_serializer_8cs">ITextBlobSerializer.cs</innerfile>
+    <innerfile refid="_text_blob_operations_8cs">TextBlobOperations.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/TextBlob/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,4 @@
+<map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
+<area shape="rect" id="node1" href="$classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser.html" title="Abstrakte Klasse zum Parsen von Dateien in eine Datenbank. Sollte dateiformatspezifisch erweitert wer..." alt="" coords="5,5,207,47"/>
+<area shape="rect" id="node2" href="$classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser.html" title="Diese Klasse ist ein FileToDatabaseParser für Dateien im .hl7 Format. Das tatsächliche Parsen der Datei..." alt="" coords="255,5,453,47"/>
+</map>

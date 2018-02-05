@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_s_q_lite_net_extensions_1_1_attributes_1_1_foreign_key_attribute" kind="class" language="C#" prot="public">
+    <compoundname>SQLiteNetExtensions::Attributes::ForeignKeyAttribute</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IndexedAttribute</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_s_q_lite_net_extensions_1_1_attributes_1_1_foreign_key_attribute_1aacea2bb25b66d54a2af4aeba118f4bb9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Type</type>
+        <definition>Type SQLiteNetExtensions.Attributes.ForeignKeyAttribute.ForeignType</definition>
+        <argsstring></argsstring>
+        <name>ForeignType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/ForeignKeyAttribute.cs" line="14" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/ForeignKeyAttribute.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_attributes_1_1_foreign_key_attribute_1a02f773c238f632af29551c709180a138" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SQLiteNetExtensions.Attributes.ForeignKeyAttribute.ForeignKeyAttribute</definition>
+        <argsstring>(Type foreignType)</argsstring>
+        <name>ForeignKeyAttribute</name>
+        <param>
+          <type>Type</type>
+          <declname>foreignType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/ForeignKeyAttribute.cs" line="9" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/ForeignKeyAttribute.cs" bodystart="9" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="174">
+        <label>IndexedAttribute</label>
+      </node>
+      <node id="173">
+        <label>SQLiteNetExtensions.Attributes.ForeignKeyAttribute</label>
+        <link refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_foreign_key_attribute"/>
+        <childnode refid="174" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="176">
+        <label>IndexedAttribute</label>
+      </node>
+      <node id="175">
+        <label>SQLiteNetExtensions.Attributes.ForeignKeyAttribute</label>
+        <link refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_foreign_key_attribute"/>
+        <childnode refid="176" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/ForeignKeyAttribute.cs" line="8" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/ForeignKeyAttribute.cs" bodystart="7" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_foreign_key_attribute_1a02f773c238f632af29551c709180a138" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::ForeignKeyAttribute</scope><name>ForeignKeyAttribute</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_foreign_key_attribute_1aacea2bb25b66d54a2af4aeba118f4bb9" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::ForeignKeyAttribute</scope><name>ForeignType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

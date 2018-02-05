@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacemy_m_d_1_1_model" kind="namespace" language="C#">
+    <compoundname>myMD::Model</compoundname>
+    <innernamespace refid="namespacemy_m_d_1_1_model_1_1_database_model">myMD::Model::DatabaseModel</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_model_1_1_data_model">myMD::Model::DataModel</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_model_1_1_entity_factory">myMD::Model::EntityFactory</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_model_1_1_file_helper">myMD::Model::FileHelper</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_model_1_1_model_facade">myMD::Model::ModelFacade</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_model_1_1_parser_model">myMD::Model::ParserModel</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_model_1_1_transmission_model">myMD::Model::TransmissionModel</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="[generated]" line="1" column="1"/>
+  </compounddef>
+</doxygen>

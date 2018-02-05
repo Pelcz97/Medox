@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacemy_m_d_1_1_view_1_1_overview_tab_pages" kind="namespace" language="C#">
+    <compoundname>myMD::View::OverviewTabPages</compoundname>
+    <innerclass refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_detailed_doctors_letter_page" prot="public">myMD::View::OverviewTabPages::DetailedDoctorsLetterPage</innerclass>
+    <innerclass refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page" prot="public">myMD::View::OverviewTabPages::OverviewPage</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/DetailedDoctorsLetterPage.xaml.cs" line="7" column="1"/>
+  </compounddef>
+</doxygen>

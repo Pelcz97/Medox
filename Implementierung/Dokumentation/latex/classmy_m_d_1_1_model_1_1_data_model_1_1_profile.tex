@@ -1,0 +1,178 @@
+\hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}{}\section{my\+M\+D.\+Model.\+Data\+Model.\+Profile Klassenreferenz}
+\label{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}\index{my\+M\+D.\+Model.\+Data\+Model.\+Profile@{my\+M\+D.\+Model.\+Data\+Model.\+Profile}}
+
+
+Diese Klasse implementiert die I\+Profile Schnittstelle und erweitert die abstrakte Enitity Klasse, um Information über einen Nutzer in einer S\+Q\+Lite-\/\+Datenbank speichern zu können  
+
+
+
+
+Klassendiagramm fÃ¼r my\+M\+D.\+Model.\+Data\+Model.\+Profile\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_profile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ZusammengehÃ¶rigkeiten von my\+M\+D.\+Model.\+Data\+Model.\+Profile\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_profile__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Ã–ffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a313775fe1812c9b721b67e335901e25b}{Profile}} ()
+\begin{DoxyCompactList}\small\item\em Jeder Entität soll eindeutig einem Nutzerprofile zugeordnet werden können. Das Profil eines Profils, sollte dabei natürlich immer das Profil selbst sein. Dies wird hier initialisiert. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_af26a4f9cf5ac6b8ee14e629e0a36a004}{Equals}} (\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}{Profile}} other)
+\begin{DoxyCompactList}\small\item\em Zwei \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}{Profile}} sind genau dann gleich, wenn ihr Name, Nachname, Geburtsdatum, ihre Blutgruppe, ID und Versicherungsnummer gleich sind. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a413a90b8eb1b39e13bdc8dcd83872164}{Equals}} (object obj)
+\begin{DoxyCompactList}\small\item\em System.\+Object\+::\+Equals(System.\+Object)\end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a7b0e1fab2251f4ce82c1a489a6d8e0b6}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em System.\+Object\+::\+Get\+Hash\+Code()\end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}{Profile}} \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_adb822d7b8eea929c85a90414a92951af}{To\+Profile}} ()
+\begin{DoxyCompactList}\small\item\em Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Propertys}
+\begin{DoxyCompactItemize}
+\item 
+Date\+Time \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a7e9b00c470f863fcb3ca45cdf8c77cf1}{Birth\+Date}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_a79b0d5f4850c5fa0aabca016ffccf34c}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Profile\+::\+Birth\+Date()}}\end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17c}{Blood\+Type}} \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a81a7f07ba0a9fe43d5579c8c5a0783c7}{Blood\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_a9438f9d491f0caa5dabc7fec4abdeeb5}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Profile\+::\+Blood\+Type}}\end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a07ff7aced06e3f7f5f930e93908cd2e9}{Insurance\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_a2561117d433086f373455cedc9ede7f5}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Profile\+::\+Insurance\+Number}}\end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a7871b0de751bccf0e6cd9a89c4d9605c}{Last\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Profile\+::\+Last\+Name(string)\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{AusfÃ¼hrliche Beschreibung}
+Diese Klasse implementiert die I\+Profile Schnittstelle und erweitert die abstrakte Enitity Klasse, um Information über einen Nutzer in einer S\+Q\+Lite-\/\+Datenbank speichern zu können 
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Profile}}
+
+\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}{my\+M\+D.\+Model.\+Data\+Model.\+Entity}}
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a313775fe1812c9b721b67e335901e25b}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a313775fe1812c9b721b67e335901e25b}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}!Profile@{Profile}}
+\index{Profile@{Profile}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}}
+\subsubsection{\texorpdfstring{Profile()}{Profile()}}
+{\footnotesize\ttfamily my\+M\+D.\+Model.\+Data\+Model.\+Profile.\+Profile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Jeder Entität soll eindeutig einem Nutzerprofile zugeordnet werden können. Das Profil eines Profils, sollte dabei natürlich immer das Profil selbst sein. Dies wird hier initialisiert. 
+
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_af26a4f9cf5ac6b8ee14e629e0a36a004}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_af26a4f9cf5ac6b8ee14e629e0a36a004}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}!Equals@{Equals}}
+\index{Equals@{Equals}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}}
+\subsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool my\+M\+D.\+Model.\+Data\+Model.\+Profile.\+Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}{Profile}}}]{other }\end{DoxyParamCaption})}
+
+
+
+Zwei \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}{Profile}} sind genau dann gleich, wenn ihr Name, Nachname, Geburtsdatum, ihre Blutgruppe, ID und Versicherungsnummer gleich sind. 
+
+System.\+I\+Equatable$<$\+T$>$\+::\+Equals(\+T)Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_af26a4f9cf5ac6b8ee14e629e0a36a004_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_af26a4f9cf5ac6b8ee14e629e0a36a004_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a413a90b8eb1b39e13bdc8dcd83872164}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a413a90b8eb1b39e13bdc8dcd83872164}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}!Equals@{Equals}}
+\index{Equals@{Equals}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}}
+\subsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily override bool my\+M\+D.\+Model.\+Data\+Model.\+Profile.\+Equals (\begin{DoxyParamCaption}\item[{object}]{obj }\end{DoxyParamCaption})}
+
+
+
+System.\+Object\+::\+Equals(System.\+Object)
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a7b0e1fab2251f4ce82c1a489a6d8e0b6}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a7b0e1fab2251f4ce82c1a489a6d8e0b6}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}!Get\+Hash\+Code@{Get\+Hash\+Code}}
+\index{Get\+Hash\+Code@{Get\+Hash\+Code}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}}
+\subsubsection{\texorpdfstring{Get\+Hash\+Code()}{GetHashCode()}}
+{\footnotesize\ttfamily override int my\+M\+D.\+Model.\+Data\+Model.\+Profile.\+Get\+Hash\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+System.\+Object\+::\+Get\+Hash\+Code()
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_adb822d7b8eea929c85a90414a92951af}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_adb822d7b8eea929c85a90414a92951af}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}!To\+Profile@{To\+Profile}}
+\index{To\+Profile@{To\+Profile}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}}
+\subsubsection{\texorpdfstring{To\+Profile()}{ToProfile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}{Profile}} my\+M\+D.\+Model.\+Data\+Model.\+Profile.\+To\+Profile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig. 
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_aa525d1f3b15f7a82011022dbc8edbdd1}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Profile\+::\+To\+Profile()}}
+
+Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_aa525d1f3b15f7a82011022dbc8edbdd1}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Profile}}.
+
+
+
+\subsection{Dokumentation der Propertys}
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a7e9b00c470f863fcb3ca45cdf8c77cf1}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a7e9b00c470f863fcb3ca45cdf8c77cf1}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}!Birth\+Date@{Birth\+Date}}
+\index{Birth\+Date@{Birth\+Date}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}}
+\subsubsection{\texorpdfstring{Birth\+Date}{BirthDate}}
+{\footnotesize\ttfamily Date\+Time my\+M\+D.\+Model.\+Data\+Model.\+Profile.\+Birth\+Date\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_a79b0d5f4850c5fa0aabca016ffccf34c}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Profile\+::\+Birth\+Date()}}
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a81a7f07ba0a9fe43d5579c8c5a0783c7}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a81a7f07ba0a9fe43d5579c8c5a0783c7}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}!Blood\+Type@{Blood\+Type}}
+\index{Blood\+Type@{Blood\+Type}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}}
+\subsubsection{\texorpdfstring{Blood\+Type}{BloodType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_a5da1f31200b9d5cbc5d0704b8da3d17c}{Blood\+Type}} my\+M\+D.\+Model.\+Data\+Model.\+Profile.\+Blood\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_a9438f9d491f0caa5dabc7fec4abdeeb5}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Profile\+::\+Blood\+Type}}
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a07ff7aced06e3f7f5f930e93908cd2e9}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a07ff7aced06e3f7f5f930e93908cd2e9}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}!Insurance\+Number@{Insurance\+Number}}
+\index{Insurance\+Number@{Insurance\+Number}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}}
+\subsubsection{\texorpdfstring{Insurance\+Number}{InsuranceNumber}}
+{\footnotesize\ttfamily string my\+M\+D.\+Model.\+Data\+Model.\+Profile.\+Insurance\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_a2561117d433086f373455cedc9ede7f5}{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Profile\+::\+Insurance\+Number}}
+
+\mbox{\Hypertarget{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a7871b0de751bccf0e6cd9a89c4d9605c}\label{classmy_m_d_1_1_model_1_1_data_model_1_1_profile_a7871b0de751bccf0e6cd9a89c4d9605c}} 
+\index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}!Last\+Name@{Last\+Name}}
+\index{Last\+Name@{Last\+Name}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Profile}}
+\subsubsection{\texorpdfstring{Last\+Name}{LastName}}
+{\footnotesize\ttfamily string my\+M\+D.\+Model.\+Data\+Model.\+Profile.\+Last\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Profile\+::\+Last\+Name(string)
+
+
+
+Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Data\+Model/\mbox{\hyperlink{_profile_8cs}{Profile.\+cs}}\end{DoxyCompactItemize}

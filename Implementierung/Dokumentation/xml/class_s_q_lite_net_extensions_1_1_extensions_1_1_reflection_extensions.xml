@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions" kind="class" language="C#" prot="public">
+    <compoundname>SQLiteNetExtensions::Extensions::ReflectionExtensions</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a3592572712d45280d00cdc7348a1988b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>static T SQLiteNetExtensions.Extensions.ReflectionExtensions.GetAttribute&lt; T &gt;</definition>
+        <argsstring>(this Type type)</argsstring>
+        <name>GetAttribute&lt; T &gt;</name>
+        <param>
+          <type>this Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="30" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="30" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1aebba8b2503f04ded9f8235b6daf10bac" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>static T SQLiteNetExtensions.Extensions.ReflectionExtensions.GetAttribute&lt; T &gt;</definition>
+        <argsstring>(this PropertyInfo property)</argsstring>
+        <name>GetAttribute&lt; T &gt;</name>
+        <param>
+          <type>this PropertyInfo</type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="40" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="40" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a3a592a4f53ee76f80bad2f38e8a61f8e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>static Type SQLiteNetExtensions.Extensions.ReflectionExtensions.GetEntityType</definition>
+        <argsstring>(this PropertyInfo property, out EnclosedType enclosedType)</argsstring>
+        <name>GetEntityType</name>
+        <param>
+          <type>this PropertyInfo</type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>out <ref refid="namespace_s_q_lite_net_extensions_1_1_extensions_1aace11eca8565821a25238868e3b0e64b" kindref="member">EnclosedType</ref></type>
+          <declname>enclosedType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="51" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="51" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a5bcda07be2e4127015ae3174c855da83" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>static object SQLiteNetExtensions.Extensions.ReflectionExtensions.GetDefault</definition>
+        <argsstring>(this Type type)</argsstring>
+        <name>GetDefault</name>
+        <param>
+          <type>this Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="75" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a2465d53d431e9156459b456928fe561d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PropertyInfo</type>
+        <definition>static PropertyInfo SQLiteNetExtensions.Extensions.ReflectionExtensions.GetForeignKeyProperty</definition>
+        <argsstring>(this Type type, PropertyInfo relationshipProperty, Type intermediateType=null, bool inverse=false)</argsstring>
+        <name>GetForeignKeyProperty</name>
+        <param>
+          <type>this Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>PropertyInfo</type>
+          <declname>relationshipProperty</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>intermediateType</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>inverse</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="102" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="102" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a4ca3fa40c443802784714e6b46735e86" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PropertyInfo</type>
+        <definition>static PropertyInfo SQLiteNetExtensions.Extensions.ReflectionExtensions.GetInverseProperty</definition>
+        <argsstring>(this Type elementType, PropertyInfo property)</argsstring>
+        <name>GetInverseProperty</name>
+        <param>
+          <type>this Type</type>
+          <declname>elementType</declname>
+        </param>
+        <param>
+          <type>PropertyInfo</type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="152" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="152" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a428f2f71f4206ed0203a520362054993" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PropertyInfo</type>
+        <definition>static PropertyInfo SQLiteNetExtensions.Extensions.ReflectionExtensions.GetProperty&lt; T &gt;</definition>
+        <argsstring>(Expression&lt; Func&lt; T, object &gt;&gt; expression)</argsstring>
+        <name>GetProperty&lt; T &gt;</name>
+        <param>
+          <type>Expression&lt; Func&lt; T, object &gt;&gt;</type>
+          <declname>expression</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="189" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="189" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a7cb5d5313a70ef7e6f47a7b90522e220" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_many_to_many_meta_info" kindref="compound">ManyToManyMetaInfo</ref></type>
+        <definition>static ManyToManyMetaInfo SQLiteNetExtensions.Extensions.ReflectionExtensions.GetManyToManyMetaInfo</definition>
+        <argsstring>(this Type type, PropertyInfo relationship)</argsstring>
+        <name>GetManyToManyMetaInfo</name>
+        <param>
+          <type>this Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>PropertyInfo</type>
+          <declname>relationship</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="198" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="198" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a04c2ab9b16cbfc9eb3c983b8cede1682" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_s_q_lite_net_extensions_1_1_extensions_1aace11eca8565821a25238868e3b0e64ba4ee29ca12c7d126654bd0e5275de6135" kindref="member">List</ref>&lt; PropertyInfo &gt;</type>
+        <definition>static List&lt;PropertyInfo&gt; SQLiteNetExtensions.Extensions.ReflectionExtensions.GetRelationshipProperties</definition>
+        <argsstring>(this Type type)</argsstring>
+        <name>GetRelationshipProperties</name>
+        <param>
+          <type>this Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="215" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="215" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a5d0299c00bc17cc06669e5726d2a0294" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PropertyInfo</type>
+        <definition>static PropertyInfo SQLiteNetExtensions.Extensions.ReflectionExtensions.GetPrimaryKey</definition>
+        <argsstring>(this Type type)</argsstring>
+        <name>GetPrimaryKey</name>
+        <param>
+          <type>this Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="222" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="222" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1aa7463f21e1846ba756ab5480049144c2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string SQLiteNetExtensions.Extensions.ReflectionExtensions.GetTableName</definition>
+        <argsstring>(this Type type)</argsstring>
+        <name>GetTableName</name>
+        <param>
+          <type>this Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="229" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="229" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a6e76e49ce28da129becff72c80747d7b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string SQLiteNetExtensions.Extensions.ReflectionExtensions.GetColumnName</definition>
+        <argsstring>(this PropertyInfo property)</argsstring>
+        <name>GetColumnName</name>
+        <param>
+          <type>this PropertyInfo</type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="238" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="238" bodyend="245"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a5c65977715fb6bcfe55d83a2af9088c1" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PropertyInfo</type>
+        <definition>static PropertyInfo SQLiteNetExtensions.Extensions.ReflectionExtensions.GetExplicitForeignKeyProperty</definition>
+        <argsstring>(this Type type, Type destinationType)</argsstring>
+        <name>GetExplicitForeignKeyProperty</name>
+        <param>
+          <type>this Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>destinationType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="80" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="80" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a8b50485cdc6502c38ecd71441225076f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PropertyInfo</type>
+        <definition>static PropertyInfo SQLiteNetExtensions.Extensions.ReflectionExtensions.GetConventionForeignKeyProperty</definition>
+        <argsstring>(this Type type, string destinationTypeName)</argsstring>
+        <name>GetConventionForeignKeyProperty</name>
+        <param>
+          <type>this Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>destinationTypeName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="89" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="89" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1ab58cc182e0a50f5f782f96e06794e063" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SQLiteNetExtensions.Extensions.ReflectionExtensions.IsPublicInstance</definition>
+        <argsstring>(this PropertyInfo propertyInfo)</argsstring>
+        <name>IsPublicInstance</name>
+        <param>
+          <type>this PropertyInfo</type>
+          <declname>propertyInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="248" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="248" bodyend="253"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" line="29" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs" bodystart="28" bodyend="254"/>
+    <listofallmembers>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a3592572712d45280d00cdc7348a1988b" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ReflectionExtensions</scope><name>GetAttribute&lt; T &gt;</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1aebba8b2503f04ded9f8235b6daf10bac" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ReflectionExtensions</scope><name>GetAttribute&lt; T &gt;</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a6e76e49ce28da129becff72c80747d7b" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ReflectionExtensions</scope><name>GetColumnName</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a8b50485cdc6502c38ecd71441225076f" prot="private" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ReflectionExtensions</scope><name>GetConventionForeignKeyProperty</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a5bcda07be2e4127015ae3174c855da83" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ReflectionExtensions</scope><name>GetDefault</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a3a592a4f53ee76f80bad2f38e8a61f8e" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ReflectionExtensions</scope><name>GetEntityType</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a5c65977715fb6bcfe55d83a2af9088c1" prot="private" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ReflectionExtensions</scope><name>GetExplicitForeignKeyProperty</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a2465d53d431e9156459b456928fe561d" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ReflectionExtensions</scope><name>GetForeignKeyProperty</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a4ca3fa40c443802784714e6b46735e86" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ReflectionExtensions</scope><name>GetInverseProperty</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a7cb5d5313a70ef7e6f47a7b90522e220" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ReflectionExtensions</scope><name>GetManyToManyMetaInfo</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a5d0299c00bc17cc06669e5726d2a0294" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ReflectionExtensions</scope><name>GetPrimaryKey</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a428f2f71f4206ed0203a520362054993" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ReflectionExtensions</scope><name>GetProperty&lt; T &gt;</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1a04c2ab9b16cbfc9eb3c983b8cede1682" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ReflectionExtensions</scope><name>GetRelationshipProperties</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1aa7463f21e1846ba756ab5480049144c2" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ReflectionExtensions</scope><name>GetTableName</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_extensions_1_1_reflection_extensions_1ab58cc182e0a50f5f782f96e06794e063" prot="private" virt="non-virtual"><scope>SQLiteNetExtensions::Extensions::ReflectionExtensions</scope><name>IsPublicInstance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

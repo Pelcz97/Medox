@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_50bc5c77f384cae4db88dc43a965cb80" kind="dir">
+    <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface</compoundname>
+    <innerfile refid="_blood_type_8cs">BloodType.cs</innerfile>
+    <innerfile refid="_i_data_8cs">IData.cs</innerfile>
+    <innerfile refid="_i_doctor_8cs">IDoctor.cs</innerfile>
+    <innerfile refid="_i_doctors_letter_8cs">IDoctorsLetter.cs</innerfile>
+    <innerfile refid="_i_doctors_letter_group_8cs">IDoctorsLetterGroup.cs</innerfile>
+    <innerfile refid="_i_entity_8cs">IEntity.cs</innerfile>
+    <innerfile refid="_i_medication_8cs">IMedication.cs</innerfile>
+    <innerfile refid="_interval_8cs">Interval.cs</innerfile>
+    <innerfile refid="_i_profile_8cs">IProfile.cs</innerfile>
+    <innerfile refid="_sensitivity_8cs">Sensitivity.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/"/>
+  </compounddef>
+</doxygen>

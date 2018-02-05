@@ -1,0 +1,137 @@
+\hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{}\section{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter\+Group Schnittstellenreferenz}
+\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}\index{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter\+Group@{my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter\+Group}}
+
+
+Schnittstelle für eine Arztbriefgruppe, die die \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{I\+Data}} Schnittstelle erweitert. Eine Arztbriefgruppe ist eine Ansammlung von beliebig vielen Arztbriefen.  
+
+
+
+
+Klassendiagramm fÃ¼r my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter\+Group\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ZusammengehÃ¶rigkeiten von my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter\+Group\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Ã–ffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_a120dce869d90167a4937b7153cb79afb}{Add}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}} letter)
+\begin{DoxyCompactList}\small\item\em Fügt einen Arztbrief zu dieser Gruppe hinzu. Falls der Arztbrief bereits in der Gruppe enthalten ist, passiert nichts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_a214eb576c90e446cfc1f301061b4965a}{Remove}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}} letter)
+\begin{DoxyCompactList}\small\item\em Entfernt einen Arztbrief aus dieser Gruppe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group}{Doctors\+Letter\+Group}} \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_a2ac524fda5f57ce7b220c0bb17aac11c}{To\+Doctors\+Letter\+Group}} ()
+\begin{DoxyCompactList}\small\item\em Konvertiert die Schnittstelle zu ihrer Implementierung \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Propertys}
+\begin{DoxyCompactItemize}
+\item 
+I\+List$<$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}} $>$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_a444e9d536ecb23d2fa5c9792540451e3}{Doctors\+Letters}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Liste aller Arztbriefe in dieser Gruppe. \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_aae3692100f685fc02336c79a83e94d18}{Last\+Date}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Aktuellstes Datum aller Arztbriefe in dieser Gruppe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{AusfÃ¼hrliche Beschreibung}
+Schnittstelle für eine Arztbriefgruppe, die die \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}{I\+Data}} Schnittstelle erweitert. Eine Arztbriefgruppe ist eine Ansammlung von beliebig vielen Arztbriefen. 
+
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_a120dce869d90167a4937b7153cb79afb}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_a120dce869d90167a4937b7153cb79afb}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}!Add@{Add}}
+\index{Add@{Add}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter\+Group.\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}}}]{letter }\end{DoxyParamCaption})}
+
+
+
+Fügt einen Arztbrief zu dieser Gruppe hinzu. Falls der Arztbrief bereits in der Gruppe enthalten ist, passiert nichts. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em letter} & Der hinzuzufügende Arztbrief\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_a06085b5f32f7923e804bfa1ecdbbe5f9}{my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_a214eb576c90e446cfc1f301061b4965a}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_a214eb576c90e446cfc1f301061b4965a}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}!Remove@{Remove}}
+\index{Remove@{Remove}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}}
+\subsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter\+Group.\+Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}}}]{letter }\end{DoxyParamCaption})}
+
+
+
+Entfernt einen Arztbrief aus dieser Gruppe. 
+
+
+\begin{DoxyExceptions}{Ausnahmebehandlung}
+{\em System.\+Invalid\+Operation\+Exception} & Werfe wenn der Arztbrief letter nicht in dieser Arztbriefgruppe enthalten ist\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameter}
+{\em letter} & Der zu entfernende Arztbrief\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_a76722662366b356397e11a2467c19c67}{my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_a2ac524fda5f57ce7b220c0bb17aac11c}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_a2ac524fda5f57ce7b220c0bb17aac11c}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}!To\+Doctors\+Letter\+Group@{To\+Doctors\+Letter\+Group}}
+\index{To\+Doctors\+Letter\+Group@{To\+Doctors\+Letter\+Group}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}}
+\subsubsection{\texorpdfstring{To\+Doctors\+Letter\+Group()}{ToDoctorsLetterGroup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group}{Doctors\+Letter\+Group}} my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter\+Group.\+To\+Doctors\+Letter\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konvertiert die Schnittstelle zu ihrer Implementierung 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Konkrete Arztbriefgruppe
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_a484d8fc0d69e01285924622f8a945095}{my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group}}.
+
+
+
+\subsection{Dokumentation der Propertys}
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_a444e9d536ecb23d2fa5c9792540451e3}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_a444e9d536ecb23d2fa5c9792540451e3}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}!Doctors\+Letters@{Doctors\+Letters}}
+\index{Doctors\+Letters@{Doctors\+Letters}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}}
+\subsubsection{\texorpdfstring{Doctors\+Letters}{DoctorsLetters}}
+{\footnotesize\ttfamily I\+List$<$\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}}$>$ my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter\+Group.\+Doctors\+Letters\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Liste aller Arztbriefe in dieser Gruppe. 
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_aae3692100f685fc02336c79a83e94d18}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_aae3692100f685fc02336c79a83e94d18}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}!Last\+Date@{Last\+Date}}
+\index{Last\+Date@{Last\+Date}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter\+Group}}
+\subsubsection{\texorpdfstring{Last\+Date}{LastDate}}
+{\footnotesize\ttfamily Date\+Time my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter\+Group.\+Last\+Date\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Aktuellstes Datum aller Arztbriefe in dieser Gruppe. 
+
+
+
+Die Dokumentation fÃ¼r diese Schnittstelle wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model\+Interface/\+Data\+Model\+Interface/\mbox{\hyperlink{_i_doctors_letter_group_8cs}{I\+Doctors\+Letter\+Group.\+cs}}\end{DoxyCompactItemize}

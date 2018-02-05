@@ -1,0 +1,6 @@
+base referer
+rect $db/dac/classmy_m_d_1_1_model_1_1_data_model_1_1_data.html 46,315 254,436
+rect $d7/d0a/classmy_m_d_1_1_model_1_1_data_model_1_1_entity.html 42,131 257,267
+rect $d6/d01/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data.html 282,160 591,237
+rect $d0/d0d/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor.html 615,160 935,237
+rect $da/d94/interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile.html 960,160 1278,237

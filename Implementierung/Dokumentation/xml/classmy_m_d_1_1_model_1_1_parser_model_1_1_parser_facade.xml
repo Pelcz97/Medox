@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade" kind="class" language="C#" prot="public">
+    <compoundname>myMD::Model::ParserModel::ParserFacade</compoundname>
+    <basecompoundref refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade" prot="public" virt="non-virtual">myMD.Model.ParserModel.IParserFacade</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_1a52bf8be888d38b6433f60edc1e4b1fff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.Model.ParserModel.ParserFacade.ParseFileToDatabase</definition>
+        <argsstring>(string filename, IEntityDatabase db)</argsstring>
+        <name>ParseFileToDatabase</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_1a0371197714d5ec08d9ad332ac62265db">ParseFileToDatabase</reimplements>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database" kindref="compound">IEntityDatabase</ref></type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+<para>Wählt einen <ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser" kindref="compound">FileToDatabaseParser</ref> basierend auf dem Dateiformat von filename und delegiert an diesen. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_1a0371197714d5ec08d9ad332ac62265db" kindref="member">myMD.Model.ParserModel.IParserFacade::ParseFileToDatabase</ref>(string, <ref refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database" kindref="compound">Model.DatabaseModel.IEntityDatabase</ref>)</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/ParserFacade.cs" line="19" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/ParserFacade.cs" bodystart="19" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_1a21538d294bf09fe09e84faa7363d280c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string myMD.Model.ParserModel.ParserFacade.ParseLetterToOriginalFile</definition>
+        <argsstring>(IDoctorsLetter letter)</argsstring>
+        <name>ParseLetterToOriginalFile</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_1a24348ea7e27f5d9cde94925fe1967ca3">ParseLetterToOriginalFile</reimplements>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref></type>
+          <declname>letter</declname>
+        </param>
+        <briefdescription>
+<para>Delegiert an <ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser" kindref="compound">LetterToOriginalFileParser</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_1a24348ea7e27f5d9cde94925fe1967ca3" kindref="member">myMD.Model.ParserModel.IParserFacade::ParseLetterToOriginalFile</ref>(Model.DataModelInterface.IDoctorsLetter)</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/ParserFacade.cs" line="36" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/ParserFacade.cs" bodystart="36" bodyend="39"/>
+        <references refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser_1a3ec485556f6b68c51c447e82d14c6793">myMD.Model.ParserModel.LetterToOriginalFileParser.ParseLetter</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementierung der <ref refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade" kindref="compound">IParserFacade</ref> Schnittstelle. Wählt beim Methodenaufruf einen passenden Parser aus diesem Paket auf und delegiert an diesen. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade" kindref="compound">myMD.Model.ParserModel.IParserFacade</ref></para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="330">
+        <label>myMD.Model.ParserModel.ParserFacade</label>
+        <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade"/>
+        <childnode refid="331" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="331">
+        <label>IParserFacade</label>
+        <link refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="332">
+        <label>myMD.Model.ParserModel.ParserFacade</label>
+        <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade"/>
+        <childnode refid="333" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="333">
+        <label>IParserFacade</label>
+        <link refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/ParserFacade.cs" line="14" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/ParserFacade.cs" bodystart="13" bodyend="40"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_1a52bf8be888d38b6433f60edc1e4b1fff" prot="public" virt="non-virtual"><scope>myMD::Model::ParserModel::ParserFacade</scope><name>ParseFileToDatabase</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_1a21538d294bf09fe09e84faa7363d280c" prot="public" virt="non-virtual"><scope>myMD::Model::ParserModel::ParserFacade</scope><name>ParseLetterToOriginalFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,44 @@
+\hypertarget{namespacemy_m_d_1_1_model_1_1_parser_model}{}\section{my\+M\+D.\+Model.\+Parser\+Model-\/\+Namensbereichsreferenz}
+\label{namespacemy_m_d_1_1_model_1_1_parser_model}\index{my\+M\+D.\+Model.\+Parser\+Model@{my\+M\+D.\+Model.\+Parser\+Model}}
+\subsection*{Klassen}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries File\+Format\+Extensions}
+\begin{DoxyCompactList}\small\item\em Diese Klasse enth√§lt Methoden, die als Erweiterungen auf Werten des File\+Format enums aufgerufen werden k√∂nnen. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser}{File\+To\+Database\+Parser}}
+\begin{DoxyCompactList}\small\item\em Abstrakte Klasse zum Parsen von Dateien in eine Datenbank. Sollte dateiformatspezifisch erweitert werden. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser}{Hl7\+To\+Database\+Parser}}
+\begin{DoxyCompactList}\small\item\em Diese Klasse ist ein \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser}{File\+To\+Database\+Parser}} f¸r Dateien im .hl7 Format. Das tats‰chliche Parsen der Datei wird dabei grˆﬂtenteils an das Everest Framework delegiert. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper}{I\+Hl7\+Parser\+Helper}}
+\begin{DoxyCompactList}\small\item\em Schnittstelle f√ºr Operationen beim Parsen von .hl7 Dateien, die plattformspezifisch ausgef√ºhrt werden m√ºssen. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade}{I\+Parser\+Facade}}
+\begin{DoxyCompactList}\small\item\em Diese Schnittstelle ist die Haupteinstiegsstelle f¸r andere Pakete in das \mbox{\hyperlink{namespacemy_m_d_1_1_model_1_1_parser_model}{Parser\+Model}} Paket. Hier kˆnnen Informationen aus Dateien in eine Datenbank eingetragen werden oder Dateien aus Informationen aus der Datenbank erstellt werden. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser}{Letter\+To\+Original\+File\+Parser}}
+\begin{DoxyCompactList}\small\item\em Diese Klasse enth‰lt die Logik um Arztbriefe in ihr urspr¸ngliches Dateiformat zu parsen. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade}{Parser\+Facade}}
+\begin{DoxyCompactList}\small\item\em Implementierung der \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade}{I\+Parser\+Facade}} Schnittstelle. W‰hlt beim Methodenaufruf einen passenden Parser aus diesem Paket auf und delegiert an diesen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Aufz√§hlungen}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacemy_m_d_1_1_model_1_1_parser_model_acd0bce598035ba27bbeaa1725eb5c7d9}{File\+Format}} \{ \mbox{\hyperlink{namespacemy_m_d_1_1_model_1_1_parser_model_acd0bce598035ba27bbeaa1725eb5c7d9aa7c9c99692df8ba20833fe46c0a22ba2}{File\+Format.\+hl7}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration der unterst√ºtzen Dateiformate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentation der Aufz√§hlungstypen}
+\mbox{\Hypertarget{namespacemy_m_d_1_1_model_1_1_parser_model_acd0bce598035ba27bbeaa1725eb5c7d9}\label{namespacemy_m_d_1_1_model_1_1_parser_model_acd0bce598035ba27bbeaa1725eb5c7d9}} 
+\index{my\+M\+D\+::\+Model\+::\+Parser\+Model@{my\+M\+D\+::\+Model\+::\+Parser\+Model}!File\+Format@{File\+Format}}
+\index{File\+Format@{File\+Format}!my\+M\+D\+::\+Model\+::\+Parser\+Model@{my\+M\+D\+::\+Model\+::\+Parser\+Model}}
+\subsubsection{\texorpdfstring{File\+Format}{FileFormat}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacemy_m_d_1_1_model_1_1_parser_model_acd0bce598035ba27bbeaa1725eb5c7d9}{my\+M\+D.\+Model.\+Parser\+Model.\+File\+Format}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration der unterst√ºtzen Dateiformate. 
+
+\begin{DoxyEnumFields}{Aufz√§hlungswerte}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hl7@{hl7}!my\+M\+D\+::\+Model\+::\+Parser\+Model@{my\+M\+D\+::\+Model\+::\+Parser\+Model}}\index{my\+M\+D\+::\+Model\+::\+Parser\+Model@{my\+M\+D\+::\+Model\+::\+Parser\+Model}!hl7@{hl7}}}\mbox{\Hypertarget{namespacemy_m_d_1_1_model_1_1_parser_model_acd0bce598035ba27bbeaa1725eb5c7d9aa7c9c99692df8ba20833fe46c0a22ba2}\label{namespacemy_m_d_1_1_model_1_1_parser_model_acd0bce598035ba27bbeaa1725eb5c7d9aa7c9c99692df8ba20833fe46c0a22ba2}} 
+hl7&\\
+\hline
+
+\end{DoxyEnumFields}

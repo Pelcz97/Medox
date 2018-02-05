@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser" kind="class" language="C#" prot="public">
+    <compoundname>myMD::Model::ParserModel::Hl7ToDatabaseParser</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser" prot="public" virt="non-virtual">myMD.Model.ParserModel.FileToDatabaseParser</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1aaf9a9a96ffea1490d1770900e3c09020" prot="private" static="no" mutable="no">
+        <type>ClinicalDocument</type>
+        <definition>ClinicalDocument myMD.Model.ParserModel.Hl7ToDatabaseParser.document</definition>
+        <argsstring></argsstring>
+        <name>document</name>
+        <briefdescription>
+<para>Das Dokument aus dem beim Aufrufen der Parse-Methoden gelesen wird. Muss zuvor durch Aufruf der <ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5c2d04fd614ecab8c9bc7f5ae7636a00" kindref="member">Init()</ref> Methode initialisiert werden. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" line="28" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a13abb8364acdb14c417f562bb95d1972" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string myMD.Model.ParserModel.Hl7ToDatabaseParser.file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <briefdescription>
+<para>Der Dateipfad zu dem Dokument aus dem gerade gelesen wird. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" line="33" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1aca6b2c01a8680364bf64c4dec2110fe3" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper" kindref="compound">IHl7ParserHelper</ref></type>
+        <definition>IHl7ParserHelper myMD.Model.ParserModel.Hl7ToDatabaseParser.helper</definition>
+        <argsstring></argsstring>
+        <name>helper</name>
+        <briefdescription>
+<para>Helfer zum ausführen plattformsepzifischer Operationen </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" line="38" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1af4d3b95667a81c3436fac34f1d54ce45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.Model.ParserModel.Hl7ToDatabaseParser.Hl7ToDatabaseParser</definition>
+        <argsstring>()</argsstring>
+        <name>Hl7ToDatabaseParser</name>
+        <briefdescription>
+<para>Konstruktor mit automatisch nach Plattform ausgewähltem Helfer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" line="43" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1ab842988577d11395c53a233a6c03ba4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>myMD.Model.ParserModel.Hl7ToDatabaseParser.Hl7ToDatabaseParser</definition>
+        <argsstring>(IHl7ParserHelper helper)</argsstring>
+        <name>Hl7ToDatabaseParser</name>
+        <param>
+          <type><ref refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper" kindref="compound">IHl7ParserHelper</ref></type>
+          <declname>helper</declname>
+        </param>
+        <briefdescription>
+<para>Konstrukter mit Helfer als Parameter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>helper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Der Helfer der zum Ausführen plattformspezifischer Operationen verwendet werden soll</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5c2d04fd614ecab8c9bc7f5ae7636a00" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void myMD.Model.ParserModel.Hl7ToDatabaseParser.Init</definition>
+        <argsstring>(string file)</argsstring>
+        <name>Init</name>
+        <reimplements refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1afa4317cee37448666f91ad019c4d118e">Init</reimplements>
+        <param>
+          <type>string</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Initialisiert document, in dem es aus dem gegebenen Dateipfad liest. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1afa4317cee37448666f91ad019c4d118e" kindref="member">myMD.Model.ParserModel.FileToDatabaseParser::Init(string)</ref></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" line="55" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" bodystart="55" bodyend="66"/>
+        <references refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper_1ab4114a84678d1b0ce5df7fdc00119dc4">myMD.Model.ParserModel.IHl7ParserHelper.PrepareFormatter</references>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a7a6690eb5f9d3c15ac4805c1695f2116" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctor" kindref="compound">Doctor</ref></type>
+        <definition>override Doctor myMD.Model.ParserModel.Hl7ToDatabaseParser.ParseDoctor</definition>
+        <argsstring>()</argsstring>
+        <name>ParseDoctor</name>
+        <reimplements refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a9fcc201f726f6c9e93cdb011a0b1dfae">ParseDoctor</reimplements>
+        <briefdescription>
+<para><ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a9b95fdb381daef0799df52ccc28d8a80" kindref="member">myMD.Model.ParserModel.FileToDatabaseParser::ParseProfile()</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" line="69" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" bodystart="69" bodyend="80"/>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a752f68aa01561c06c77bc2d3324a46e7" compoundref="_entity_8cs" startline="28" endline="28">myMD.Model.DataModel.Entity.Name</references>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a7422f68b4596b2a59b052c3e13629747" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter" kindref="compound">DoctorsLetter</ref></type>
+        <definition>override DoctorsLetter myMD.Model.ParserModel.Hl7ToDatabaseParser.ParseLetter</definition>
+        <argsstring>()</argsstring>
+        <name>ParseLetter</name>
+        <reimplements refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a3ac888cb3cc241cc42e1b9ad7f4547ff">ParseLetter</reimplements>
+        <briefdescription>
+<para><ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a9b95fdb381daef0799df52ccc28d8a80" kindref="member">myMD.Model.ParserModel.FileToDatabaseParser::ParseProfile()</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" line="83" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" bodystart="83" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5188e31e41b2778e36ca853cb346c7b2" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override IList&lt; <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication" kindref="compound">Medication</ref> &gt;</type>
+        <definition>override IList&lt;Medication&gt; myMD.Model.ParserModel.Hl7ToDatabaseParser.ParseMedications</definition>
+        <argsstring>()</argsstring>
+        <name>ParseMedications</name>
+        <reimplements refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a73c15f8034e8d5a907b39ca8daa6a854">ParseMedications</reimplements>
+        <briefdescription>
+<para><ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a9b95fdb381daef0799df52ccc28d8a80" kindref="member">myMD.Model.ParserModel.FileToDatabaseParser::ParseProfile()</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" line="99" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" bodystart="99" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5d6231cd8b2598bf1683778b0500c7fd" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile" kindref="compound">Profile</ref></type>
+        <definition>override Profile myMD.Model.ParserModel.Hl7ToDatabaseParser.ParseProfile</definition>
+        <argsstring>()</argsstring>
+        <name>ParseProfile</name>
+        <reimplements refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a9b95fdb381daef0799df52ccc28d8a80">ParseProfile</reimplements>
+        <briefdescription>
+<para><ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a9b95fdb381daef0799df52ccc28d8a80" kindref="member">myMD.Model.ParserModel.FileToDatabaseParser::ParseProfile()</ref></para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" line="133" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" bodystart="133" bodyend="148"/>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a752f68aa01561c06c77bc2d3324a46e7" compoundref="_entity_8cs" startline="28" endline="28">myMD.Model.DataModel.Entity.Name</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1aa4bc605fa97d0efa4597d1c43773f1cf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication" kindref="compound">Medication</ref></type>
+        <definition>Medication myMD.Model.ParserModel.Hl7ToDatabaseParser.ParseMedication</definition>
+        <argsstring>(SubstanceAdministration med, Sensitivity sensitivity)</argsstring>
+        <name>ParseMedication</name>
+        <param>
+          <type>SubstanceAdministration</type>
+          <declname>med</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a3d0df45e579e37eccbab219eb94860da" kindref="member">Sensitivity</ref></type>
+          <declname>sensitivity</declname>
+        </param>
+        <briefdescription>
+<para>Parst die gegebenen Informationen in eine Medikation </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>med</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die zu parsenden Informationen über die Medikation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sensitivity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die Sensitivitätsstufe der Medikation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Medikation mit den Informationen aus med</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" line="119" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" bodystart="119" bodyend="130"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Diese Klasse ist ein <ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser" kindref="compound">FileToDatabaseParser</ref> für Dateien im .hl7 Format. Das tatsächliche Parsen der Datei wird dabei größtenteils an das Everest Framework delegiert. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser" kindref="compound">myMD.Model.ParserModel.FileToDatabaseParser</ref></para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="162">
+        <label>FileToDatabaseParser</label>
+        <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser"/>
+      </node>
+      <node id="161">
+        <label>myMD.Model.ParserModel.Hl7ToDatabaseParser</label>
+        <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser"/>
+        <childnode refid="162" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="164">
+        <label>FileToDatabaseParser</label>
+        <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser"/>
+      </node>
+      <node id="163">
+        <label>myMD.Model.ParserModel.Hl7ToDatabaseParser</label>
+        <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser"/>
+        <childnode refid="164" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" line="23" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/Hl7ToDatabaseParser.cs" bodystart="22" bodyend="149"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1aaf9a9a96ffea1490d1770900e3c09020" prot="private" virt="non-virtual"><scope>myMD::Model::ParserModel::Hl7ToDatabaseParser</scope><name>document</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a13abb8364acdb14c417f562bb95d1972" prot="private" virt="non-virtual"><scope>myMD::Model::ParserModel::Hl7ToDatabaseParser</scope><name>file</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1aca6b2c01a8680364bf64c4dec2110fe3" prot="private" virt="non-virtual"><scope>myMD::Model::ParserModel::Hl7ToDatabaseParser</scope><name>helper</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1af4d3b95667a81c3436fac34f1d54ce45" prot="public" virt="non-virtual"><scope>myMD::Model::ParserModel::Hl7ToDatabaseParser</scope><name>Hl7ToDatabaseParser</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1ab842988577d11395c53a233a6c03ba4c" prot="public" virt="non-virtual"><scope>myMD::Model::ParserModel::Hl7ToDatabaseParser</scope><name>Hl7ToDatabaseParser</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5c2d04fd614ecab8c9bc7f5ae7636a00" prot="protected" virt="virtual"><scope>myMD::Model::ParserModel::Hl7ToDatabaseParser</scope><name>Init</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a7a6690eb5f9d3c15ac4805c1695f2116" prot="protected" virt="virtual"><scope>myMD::Model::ParserModel::Hl7ToDatabaseParser</scope><name>ParseDoctor</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" prot="public" virt="non-virtual"><scope>myMD::Model::ParserModel::Hl7ToDatabaseParser</scope><name>ParseFile</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a7422f68b4596b2a59b052c3e13629747" prot="protected" virt="virtual"><scope>myMD::Model::ParserModel::Hl7ToDatabaseParser</scope><name>ParseLetter</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1aa4bc605fa97d0efa4597d1c43773f1cf" prot="private" virt="non-virtual"><scope>myMD::Model::ParserModel::Hl7ToDatabaseParser</scope><name>ParseMedication</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5188e31e41b2778e36ca853cb346c7b2" prot="protected" virt="virtual"><scope>myMD::Model::ParserModel::Hl7ToDatabaseParser</scope><name>ParseMedications</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5d6231cd8b2598bf1683778b0500c7fd" prot="protected" virt="virtual"><scope>myMD::Model::ParserModel::Hl7ToDatabaseParser</scope><name>ParseProfile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

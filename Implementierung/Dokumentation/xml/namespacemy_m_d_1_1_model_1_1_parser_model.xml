@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacemy_m_d_1_1_model_1_1_parser_model" kind="namespace" language="C#">
+    <compoundname>myMD::Model::ParserModel</compoundname>
+    <innerclass refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_extensions" prot="public">myMD::Model::ParserModel::FileFormatExtensions</innerclass>
+    <innerclass refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser" prot="public">myMD::Model::ParserModel::FileToDatabaseParser</innerclass>
+    <innerclass refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser" prot="public">myMD::Model::ParserModel::Hl7ToDatabaseParser</innerclass>
+    <innerclass refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper" prot="public">myMD::Model::ParserModel::IHl7ParserHelper</innerclass>
+    <innerclass refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade" prot="public">myMD::Model::ParserModel::IParserFacade</innerclass>
+    <innerclass refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser" prot="public">myMD::Model::ParserModel::LetterToOriginalFileParser</innerclass>
+    <innerclass refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade" prot="public">myMD::Model::ParserModel::ParserFacade</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacemy_m_d_1_1_model_1_1_parser_model_1acd0bce598035ba27bbeaa1725eb5c7d9" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>FileFormat</name>
+        <enumvalue id="namespacemy_m_d_1_1_model_1_1_parser_model_1acd0bce598035ba27bbeaa1725eb5c7d9aa7c9c99692df8ba20833fe46c0a22ba2" prot="public">
+          <name>hl7</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration der unterstützen Dateiformate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileFormat.cs" line="7" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileFormat.cs" bodystart="6" bodyend="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileFormat.cs" line="2" column="1"/>
+  </compounddef>
+</doxygen>

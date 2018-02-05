@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_s_q_lite_net_extensions_1_1_attributes_1_1_text_blob_attribute" kind="class" language="C#" prot="public">
+    <compoundname>SQLiteNetExtensions::Attributes::TextBlobAttribute</compoundname>
+    <basecompoundref refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute" prot="public" virt="non-virtual">SQLiteNetExtensions.Attributes.RelationshipAttribute</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_s_q_lite_net_extensions_1_1_attributes_1_1_text_blob_attribute_1a30bb52fdf2d622ee564d8f1bcab1f3d3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>string</type>
+        <definition>string SQLiteNetExtensions.Attributes.TextBlobAttribute.TextProperty</definition>
+        <argsstring></argsstring>
+        <name>TextProperty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/TextBlobAttribute.cs" line="13" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/TextBlobAttribute.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_lite_net_extensions_1_1_attributes_1_1_text_blob_attribute_1a03bbcbdf6ce6e6900120f20022136ac7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override <ref refid="namespace_s_q_lite_net_extensions_1_1_attributes_1a84ac4ba359abf94192d7335a2303c619" kindref="member">CascadeOperation</ref></type>
+        <definition>override CascadeOperation SQLiteNetExtensions.Attributes.TextBlobAttribute.CascadeOperations</definition>
+        <argsstring></argsstring>
+        <name>CascadeOperations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/TextBlobAttribute.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/TextBlobAttribute.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_q_lite_net_extensions_1_1_attributes_1_1_text_blob_attribute_1ac925ad0b0db166fe0c720e794104699c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SQLiteNetExtensions.Attributes.TextBlobAttribute.TextBlobAttribute</definition>
+        <argsstring>(string textProperty)</argsstring>
+        <name>TextBlobAttribute</name>
+        <param>
+          <type>string</type>
+          <declname>textProperty</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/TextBlobAttribute.cs" line="8" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/TextBlobAttribute.cs" bodystart="8" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="523">
+        <label>IgnoreAttribute</label>
+      </node>
+      <node id="521">
+        <label>SQLiteNetExtensions.Attributes.TextBlobAttribute</label>
+        <link refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_text_blob_attribute"/>
+        <childnode refid="522" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="522">
+        <label>RelationshipAttribute</label>
+        <link refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute"/>
+        <childnode refid="523" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="526">
+        <label>IgnoreAttribute</label>
+      </node>
+      <node id="524">
+        <label>SQLiteNetExtensions.Attributes.TextBlobAttribute</label>
+        <link refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_text_blob_attribute"/>
+        <childnode refid="525" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="525">
+        <label>RelationshipAttribute</label>
+        <link refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute"/>
+        <childnode refid="526" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/TextBlobAttribute.cs" line="7" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/packages/SQLiteNetExtensions.2.0.0/src/SQLiteNetExtensions/Attributes/TextBlobAttribute.cs" bodystart="6" bodyend="17"/>
+    <listofallmembers>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_text_blob_attribute_1a03bbcbdf6ce6e6900120f20022136ac7" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::TextBlobAttribute</scope><name>CascadeOperations</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1af5fc4182158ea4da6e1b345cd0a09e79" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::TextBlobAttribute</scope><name>ForeignKey</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a38084177a18ee0c68ffaf50dbfe92606" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::TextBlobAttribute</scope><name>InverseForeignKey</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a6302ea89b31299d8486ca7306c8b8ef0" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::TextBlobAttribute</scope><name>InverseProperty</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a4dca0795fd0c06d47584ff868f66dd3a" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::TextBlobAttribute</scope><name>IsCascadeDelete</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1ae1525777d74d22b173db932d383483e2" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::TextBlobAttribute</scope><name>IsCascadeInsert</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a223e2054d5355619a2839194de3c4bfb" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::TextBlobAttribute</scope><name>IsCascadeRead</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a52012e486a916f58a6038f33ffd4af7f" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::TextBlobAttribute</scope><name>ReadOnly</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_relationship_attribute_1a95f43e2f5d7c48df08f2c89e353e06fd" prot="protected" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::TextBlobAttribute</scope><name>RelationshipAttribute</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_text_blob_attribute_1ac925ad0b0db166fe0c720e794104699c" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::TextBlobAttribute</scope><name>TextBlobAttribute</name></member>
+      <member refid="class_s_q_lite_net_extensions_1_1_attributes_1_1_text_blob_attribute_1a30bb52fdf2d622ee564d8f1bcab1f3d3" prot="public" virt="non-virtual"><scope>SQLiteNetExtensions::Attributes::TextBlobAttribute</scope><name>TextProperty</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

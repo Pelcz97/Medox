@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_cfc8d3c79900d6aec0b4264179e2a368" kind="dir">
+    <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages</compoundname>
+    <innerfile refid="_detailed_doctors_letter_page_8xaml">DetailedDoctorsLetterPage.xaml</innerfile>
+    <innerfile refid="_detailed_doctors_letter_page_8xaml_8cs">DetailedDoctorsLetterPage.xaml.cs</innerfile>
+    <innerfile refid="_overview_page_8xaml">OverviewPage.xaml</innerfile>
+    <innerfile refid="_overview_page_8xaml_8cs">OverviewPage.xaml.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/"/>
+  </compounddef>
+</doxygen>

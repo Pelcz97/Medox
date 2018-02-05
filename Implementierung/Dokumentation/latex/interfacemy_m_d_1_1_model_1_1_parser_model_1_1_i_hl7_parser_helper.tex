@@ -1,0 +1,66 @@
+\hypertarget{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper}{}\section{my\+M\+D.\+Model.\+Parser\+Model.\+I\+Hl7\+Parser\+Helper Schnittstellenreferenz}
+\label{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper}\index{my\+M\+D.\+Model.\+Parser\+Model.\+I\+Hl7\+Parser\+Helper@{my\+M\+D.\+Model.\+Parser\+Model.\+I\+Hl7\+Parser\+Helper}}
+
+
+Schnittstelle für Operationen beim Parsen von .hl7 Dateien, die plattformspezifisch ausgeführt werden müssen.  
+
+
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper_ab4114a84678d1b0ce5df7fdc00119dc4}{Prepare\+Formatter}} (Xml\+Its1\+Formatter fmtr)
+\begin{DoxyCompactList}\small\item\em Führt nötige Operationen aus um den gegebenen Xml-\/\+Formatierer benutzen zu können. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper_acb71b41f4c50af3442b036e79ac53da1}{Finalize\+Medication}} (Substance\+Administration source, \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication}} target)
+\begin{DoxyCompactList}\small\item\em List die Werte für Frequency, Interval, Date und End\+Date aus source und setzt sie in target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+Schnittstelle für Operationen beim Parsen von .hl7 Dateien, die plattformspezifisch ausgeführt werden müssen. 
+
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper_acb71b41f4c50af3442b036e79ac53da1}\label{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper_acb71b41f4c50af3442b036e79ac53da1}} 
+\index{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Hl7\+Parser\+Helper@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Hl7\+Parser\+Helper}!Finalize\+Medication@{Finalize\+Medication}}
+\index{Finalize\+Medication@{Finalize\+Medication}!my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Hl7\+Parser\+Helper@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Hl7\+Parser\+Helper}}
+\subsubsection{\texorpdfstring{Finalize\+Medication()}{FinalizeMedication()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model.\+Parser\+Model.\+I\+Hl7\+Parser\+Helper.\+Finalize\+Medication (\begin{DoxyParamCaption}\item[{Substance\+Administration}]{source,  }\item[{\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}{Medication}}}]{target }\end{DoxyParamCaption})}
+
+
+
+List die Werte für Frequency, Interval, Date und End\+Date aus source und setzt sie in target. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em source} & Die Quelle aus der die Informationen gelesen werden sollen\\
+\hline
+{\em target} & Die Medikation in die die Informationen eingetragen werden sollen\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper_ab4114a84678d1b0ce5df7fdc00119dc4}\label{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper_ab4114a84678d1b0ce5df7fdc00119dc4}} 
+\index{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Hl7\+Parser\+Helper@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Hl7\+Parser\+Helper}!Prepare\+Formatter@{Prepare\+Formatter}}
+\index{Prepare\+Formatter@{Prepare\+Formatter}!my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Hl7\+Parser\+Helper@{my\+M\+D\+::\+Model\+::\+Parser\+Model\+::\+I\+Hl7\+Parser\+Helper}}
+\subsubsection{\texorpdfstring{Prepare\+Formatter()}{PrepareFormatter()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model.\+Parser\+Model.\+I\+Hl7\+Parser\+Helper.\+Prepare\+Formatter (\begin{DoxyParamCaption}\item[{Xml\+Its1\+Formatter}]{fmtr }\end{DoxyParamCaption})}
+
+
+
+Führt nötige Operationen aus um den gegebenen Xml-\/\+Formatierer benutzen zu können. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em fmtr} & Der vorzubereitende Xml-\/\+Formatierer\\
+\hline
+\end{DoxyParams}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper_ab4114a84678d1b0ce5df7fdc00119dc4_icgraph}
+\end{center}
+\end{figure}
+
+
+Die Dokumentation für diese Schnittstelle wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+Model/\+Parser\+Model/\mbox{\hyperlink{_i_hl7_parser_helper_8cs}{I\+Hl7\+Parser\+Helper.\+cs}}\end{DoxyCompactItemize}

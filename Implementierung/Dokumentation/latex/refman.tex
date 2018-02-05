@@ -1,0 +1,331 @@
+\documentclass[twoside]{book}
+
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage[export]{adjustbox} % also loads graphicx
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+
+% NLS support packages
+\usepackage[ngerman]{babel}
+
+% Font selection
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{3ex plus 2ex minus 2ex}
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Erzeugt von Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Erzeugt von Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+% Hyperlinks (required, but should be loaded last)
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \usepackage[ps2pdf,pagebackref=true]{hyperref}
+\fi
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+\usepackage{caption}
+\captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+
+%===== C O N T E N T S =====
+
+\begin{document}
+
+% Titlepage & ToC
+\hypersetup{pageanchor=false,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
+\pagenumbering{alph}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large my\+MD \\[1ex]\large 1.\+0 }\\
+\vspace*{1cm}
+{\large Erzeugt von Doxygen 1.8.14}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+
+%--- Begin generated contents ---
+\chapter{Verzeichnis der Namensbereiche}
+\input{namespaces}
+\chapter{Hierarchie-\/\+Verzeichnis}
+\input{hierarchy}
+\chapter{Klassen-\/\+Verzeichnis}
+\input{annotated}
+\chapter{Datei-\/\+Verzeichnis}
+\input{files}
+\chapter{Dokumentation der Namensbereiche}
+\input{namespacemy_m_d}
+\input{namespacemy_m_d_1_1_model}
+\input{namespacemy_m_d_1_1_model_1_1_database_model}
+\input{namespacemy_m_d_1_1_model_1_1_data_model}
+\input{namespacemy_m_d_1_1_model_1_1_entity_factory}
+\input{namespacemy_m_d_1_1_model_1_1_file_helper}
+\input{namespacemy_m_d_1_1_model_1_1_model_facade}
+\input{namespacemy_m_d_1_1_model_1_1_parser_model}
+\input{namespacemy_m_d_1_1_model_1_1_transmission_model}
+\input{namespacemy_m_d_1_1_model_interface}
+\input{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface}
+\input{namespacemy_m_d_1_1_model_interface_1_1_model_facade_interface}
+\input{namespacemy_m_d_1_1_model_interface_1_1_transmission_model_interface}
+\input{namespacemy_m_d_1_1_view}
+\input{namespacemy_m_d_1_1_view_1_1_abstract_pages}
+\input{namespacemy_m_d_1_1_view_1_1_medication_tab_pages}
+\input{namespacemy_m_d_1_1_view_1_1_overview_tab_pages}
+\input{namespacemy_m_d_1_1_view_1_1_profile_tab_pages}
+\input{namespacemy_m_d_1_1_view_1_1_send_data_tab_pages}
+\input{namespacemy_m_d_1_1_view_model}
+\input{namespacemy_m_d_1_1_view_model_1_1_medication_tab_view_model}
+\input{namespacemy_m_d_1_1_view_model_1_1_overall_view_model}
+\input{namespacemy_m_d_1_1_view_model_1_1_overview_tab_view_model}
+\input{namespacemy_m_d_1_1_view_model_1_1_profile_tab_view_model}
+\input{namespacemy_m_d_1_1_view_model_1_1_send_data_tab_view_model}
+\chapter{Klassen-\/\+Dokumentation}
+\input{classmy_m_d_1_1_app}
+\input{classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth}
+\input{classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page}
+\input{classmy_m_d_1_1_model_1_1_data_model_1_1_data}
+\input{classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_detailed_doctors_letter_page}
+\input{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model}
+\input{classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page}
+\input{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model}
+\input{classmy_m_d_1_1_model_1_1_transmission_model_1_1_device}
+\input{classmy_m_d_1_1_model_1_1_data_model_1_1_doctor}
+\input{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}
+\input{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group}
+\input{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_doctors_letter}
+\input{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model}
+\input{classmy_m_d_1_1_model_1_1_data_model_1_1_entity}
+\input{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database}
+\input{classmy_m_d_1_1_model_1_1_entity_factory_1_1_entity_factory}
+\input{classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser}
+\input{classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser}
+\input{interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth}
+\input{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data}
+\input{interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device}
+\input{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor}
+\input{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}
+\input{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}
+\input{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}
+\input{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}
+\input{interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory}
+\input{interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper}
+\input{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper}
+\input{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}
+\input{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade}
+\input{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_int_enum_converter}
+\input{interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade}
+\input{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}
+\input{classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser}
+\input{classmy_m_d_1_1_model_1_1_data_model_1_1_medication}
+\input{classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_medication_page}
+\input{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model}
+\input{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model}
+\input{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade}
+\input{classmy_m_d_1_1my_m_d_page}
+\input{classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model}
+\input{classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page}
+\input{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model}
+\input{classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade}
+\input{classmy_m_d_1_1_model_1_1_data_model_1_1_profile}
+\input{classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_edit_page}
+\input{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_edit_view_model}
+\input{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model}
+\input{classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_page}
+\input{classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_view_model}
+\input{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model}
+\input{classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page}
+\input{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model}
+\input{classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_doctors_letters_page}
+\input{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_doctors_letters_view_model}
+\input{classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page}
+\input{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model}
+\input{classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_transmitting_data_page}
+\input{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model}
+\chapter{Datei-\/\+Dokumentation}
+\input{_app_8xaml}
+\input{_app_8xaml_8cs}
+\input{_entity_database_8cs}
+\input{_i_entity_database_8cs}
+\input{_data_8cs}
+\input{_doctor_8cs}
+\input{_doctors_letter_8cs}
+\input{_doctors_letter_group_8cs}
+\input{_doctors_letter_group_doctors_letter_8cs}
+\input{_entity_8cs}
+\input{_medication_8cs}
+\input{_profile_8cs}
+\input{_entity_factory_8cs}
+\input{_i_entity_factory_8cs}
+\input{_i_file_helper_8cs}
+\input{_model_facade_8cs}
+\input{_file_format_8cs}
+\input{_file_format_extensions_8cs}
+\input{_file_to_database_parser_8cs}
+\input{_hl7_to_database_parser_8cs}
+\input{_i_hl7_parser_helper_8cs}
+\input{_i_parser_facade_8cs}
+\input{_letter_to_original_file_parser_8cs}
+\input{_parser_facade_8cs}
+\input{_bluetooth_8cs}
+\input{_device_8cs}
+\input{_i_bluetooth_8cs}
+\input{_blood_type_8cs}
+\input{_i_data_8cs}
+\input{_i_doctor_8cs}
+\input{_i_doctors_letter_8cs}
+\input{_i_doctors_letter_group_8cs}
+\input{_i_entity_8cs}
+\input{_i_medication_8cs}
+\input{_interval_8cs}
+\input{_i_profile_8cs}
+\input{_sensitivity_8cs}
+\input{_i_model_facade_8cs}
+\input{_i_device_8cs}
+\input{my_m_d_page_8xaml}
+\input{my_m_d_page_8xaml_8cs}
+\input{_custom_content_page_8xaml}
+\input{_custom_content_page_8xaml_8cs}
+\input{_detailed_medication_page_8xaml}
+\input{_detailed_medication_page_8xaml_8cs}
+\input{_medication_page_8xaml}
+\input{_medication_page_8xaml_8cs}
+\input{_detailed_doctors_letter_page_8xaml}
+\input{_detailed_doctors_letter_page_8xaml_8cs}
+\input{_overview_page_8xaml}
+\input{_overview_page_8xaml_8cs}
+\input{_profile_edit_page_8xaml}
+\input{_profile_edit_page_8xaml_8cs}
+\input{_profile_page_8xaml}
+\input{_profile_page_8xaml_8cs}
+\input{_select_device_page_8xaml}
+\input{_select_device_page_8xaml_8cs}
+\input{_select_doctors_letters_page_8xaml}
+\input{_select_doctors_letters_page_8xaml_8cs}
+\input{_send_data_page_8xaml}
+\input{_send_data_page_8xaml_8cs}
+\input{_transmitting_data_page_8xaml}
+\input{_transmitting_data_page_8xaml_8cs}
+\input{_detailed_medicine_view_model_8cs}
+\input{_medication_view_model_8cs}
+\input{_medicine_view_model_8cs}
+\input{_overall_view_model_8cs}
+\input{_detailed_doctors_letter_view_model_8cs}
+\input{_doctors_letter_view_model_8cs}
+\input{_overview_view_model_8cs}
+\input{_int_enum_converter_8cs}
+\input{_profile_edit_view_model_8cs}
+\input{_profile_item_view_model_8cs}
+\input{_profile_view_model_8cs}
+\input{_string_extensions_8cs}
+\input{_scan_result_view_model_8cs}
+\input{_select_device_view_model_8cs}
+\input{_select_doctors_letters_view_model_8cs}
+\input{_send_data_view_model_8cs}
+\input{_transmitting_data_view_model_8cs}
+%--- End generated contents ---
+
+% Index
+\backmatter
+\newpage
+\phantomsection
+\clearemptydoublepage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+\end{document}

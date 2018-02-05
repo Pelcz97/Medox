@@ -1,0 +1,7 @@
+<map id="myMD.Model.ParserModel.FileToDatabaseParser.ParseFile" name="myMD.Model.ParserModel.FileToDatabaseParser.ParseFile">
+<area shape="rect" id="node2" href="$interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database.html#a3b62f2bec78aba18c58ce62580898f3a" title="Suche nach ähnlichem Profil in der Datenbank. " alt="" coords="259,5,457,47"/>
+<area shape="rect" id="node3" href="$interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile.html#aa525d1f3b15f7a82011022dbc8edbdd1" title="Konvertiert die Schnittstelle zu ihrer Implementierung " alt="" coords="257,71,459,112"/>
+<area shape="rect" id="node4" href="$interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database.html#ab7da53690d9a658c2e30326524b42fef" title="Suche nach ähnlichem Arzt in der Datenbank. " alt="" coords="259,136,457,177"/>
+<area shape="rect" id="node5" href="$interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database.html#aa9b390a965a4ebc813c0beefbbd87d26" title="Fügt eine Entität in die Datenbank zu dem zur Zeit aktiven Profil ein. " alt="" coords="259,201,457,243"/>
+<area shape="rect" id="node6" href="$interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor.html#aedadc4e156829d4734a47f5613eb7af2" title="Konvertiert die Schnittstelle zu ihrer Implementierung " alt="" coords="255,267,461,308"/>
+</map>

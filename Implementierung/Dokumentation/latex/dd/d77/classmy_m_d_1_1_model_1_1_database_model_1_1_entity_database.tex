@@ -1,0 +1,150 @@
+\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database}{
+\section{my\-MD::Model::Database\-Model::Entity\-Database Class Reference}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database}\index{myMD::Model::DatabaseModel::EntityDatabase@{myMD::Model::DatabaseModel::EntityDatabase}}
+}
+Implementierung der \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}{IEntity\-Database} Schnittstelle als Adapter zu einer SQLite Datenbank.  
+
+
+Inheritance diagram for my\-MD::Model::Database\-Model::Entity\-Database:Collaboration diagram for my\-MD::Model::Database\-Model::Entity\-Database:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_e7a63762a30ee10ba8c323619eccd584}{Entity\-Database} ()
+\begin{CompactList}\small\item\em Konstruktor mit automatisch nach Plattform ausgew\"{a}hltem Dateihelfer. \item\end{CompactList}\item 
+\hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_81426df1f225a7d6a66b94c95a89122d}{Entity\-Database} (\hyperlink{interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper}{IFile\-Helper} helper)
+\begin{CompactList}\small\item\em Erstellt die Datenbank, falls sie noch nicht existiert, verbinet sich mit ihr und setzt das aktive Profil auf das erste Profil in der Datenbank. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_bf510dc6cf79d153f564eca0f10971d2}{
+void \hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_bf510dc6cf79d153f564eca0f10971d2}{Update} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{IEntity} entity)}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_bf510dc6cf79d153f564eca0f10971d2}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_bf510dc6cf79d153f564eca0f10971d2}{my\-MD.Model.Database\-Model.IEntity\-Database::Update}(\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{Model\-Interface.Data\-Model\-Interface.IEntity}) \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1ec3022b27f9091440cb495f510d25b0}{
+void \hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1ec3022b27f9091440cb495f510d25b0}{Delete} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{IEntity} entity)}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1ec3022b27f9091440cb495f510d25b0}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1ec3022b27f9091440cb495f510d25b0}{my\-MD.Model.Database\-Model.IEntity\-Database::Delete}(\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{Model\-Interface.Data\-Model\-Interface.IEntity}) \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_71b401e7c809fdda0a0b15b6792e69c8}{
+void \hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_71b401e7c809fdda0a0b15b6792e69c8}{Insert} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{IEntity} entity)}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_71b401e7c809fdda0a0b15b6792e69c8}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_71b401e7c809fdda0a0b15b6792e69c8}{my\-MD.Model.Database\-Model.IEntity\-Database::Insert}(\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{Model\-Interface.Data\-Model\-Interface.IEntity}) \item\end{CompactList}\item 
+IList$<$ E $>$ \hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_04d844f17f0406ef8ab2156907984b7e}{Get\-All\-Data\-From\-Profile} () where E
+\begin{CompactList}\small\item\em Holt alle E des zur Zeit aktiven Profils aus der Datenbank. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_d824e78a8274c2fc04719a66a7030fd7}{
+IList$<$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{IDoctors\-Letter} $>$ \hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_d824e78a8274c2fc04719a66a7030fd7}{Get\-All\-Doctors\-Letters} ()}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_d824e78a8274c2fc04719a66a7030fd7}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_d824e78a8274c2fc04719a66a7030fd7}{my\-MD.Model.Database\-Model.IEntity\-Database::Get\-All\-Doctors\-Letters()} \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_ebf03ac78145d306eed6f8bb7a92934f}{
+IList$<$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{IDoctors\-Letter\-Group} $>$ \hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_ebf03ac78145d306eed6f8bb7a92934f}{Get\-All\-Doctors\-Letter\-Groups} ()}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_ebf03ac78145d306eed6f8bb7a92934f}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_ebf03ac78145d306eed6f8bb7a92934f}{my\-MD.Model.Database\-Model.IEntity\-Database::Get\-All\-Doctors\-Letter\-Groups()} \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_ecff6715a9c8e9604242cc7a688c9939}{
+IList$<$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{IMedication} $>$ \hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_ecff6715a9c8e9604242cc7a688c9939}{Get\-All\-Medications} ()}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_ecff6715a9c8e9604242cc7a688c9939}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_ecff6715a9c8e9604242cc7a688c9939}{my\-MD.Model.Database\-Model.IEntity\-Database::Get\-All\-Medications()} \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_cdd42df8b8413bdd0cd36422d4e3f33c}{
+IList$<$ \hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{IProfile} $>$ \hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_cdd42df8b8413bdd0cd36422d4e3f33c}{Get\-All\-Profiles} ()}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_cdd42df8b8413bdd0cd36422d4e3f33c}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_cdd42df8b8413bdd0cd36422d4e3f33c}{my\-MD.Model.Database\-Model.IEntity\-Database::Get\-All\-Profiles()} \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_6ffa7bbff9bc4db881433251a158fbd0}{
+void \hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_6ffa7bbff9bc4db881433251a158fbd0}{Activate} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{IProfile} profile)}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_6ffa7bbff9bc4db881433251a158fbd0}
+
+\begin{CompactList}\small\item\em \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_6ffa7bbff9bc4db881433251a158fbd0}{my\-MD.Model.Database\-Model.IEntity\-Database::Activate}(\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{my\-MD.Model\-Interface.Data\-Model\-Interface.IProfile}) \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_4b5d559a49b5a7b7cedeeb423ea1a820}{
+void \hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_4b5d559a49b5a7b7cedeeb423ea1a820}{Destroy} ()}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_4b5d559a49b5a7b7cedeeb423ea1a820}
+
+\begin{CompactList}\small\item\em Zerst\"{o}rt alle Datenbanktabellen. \item\end{CompactList}\item 
+\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_0b896841bdafdcc8d4bf2997716bcc87}{
+void \hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_0b896841bdafdcc8d4bf2997716bcc87}{Create} ()}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_0b896841bdafdcc8d4bf2997716bcc87}
+
+\begin{CompactList}\small\item\em Erstellt die n\"{o}tigen Datenbanktabellen. \item\end{CompactList}\item 
+\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{IProfile} \hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_a22117377d44ffae8e1381d0814d1960}{Get\-Profile} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{IProfile} profile)
+\item 
+\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor}{IDoctor} \hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_cc41e08b876f7f88b63138dc9ee26aea}{Get\-Doctor} (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor}{IDoctor} doctor)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Implementierung der \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}{IEntity\-Database} Schnittstelle als Adapter zu einer SQLite Datenbank. 
+
+\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database}{my\-MD.Model.Database\-Model.IEntity\-Database} 
+
+
+
+Definition at line 16 of file Entity\-Database.cs.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_e7a63762a30ee10ba8c323619eccd584}{
+\index{myMD::Model::DatabaseModel::EntityDatabase@{my\-MD::Model::Database\-Model::Entity\-Database}!EntityDatabase@{EntityDatabase}}
+\index{EntityDatabase@{EntityDatabase}!myMD::Model::DatabaseModel::EntityDatabase@{my\-MD::Model::Database\-Model::Entity\-Database}}
+\subsubsection[EntityDatabase]{\setlength{\rightskip}{0pt plus 5cm}my\-MD::Model::Database\-Model::Entity\-Database::Entity\-Database ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_e7a63762a30ee10ba8c323619eccd584}
+
+
+Konstruktor mit automatisch nach Plattform ausgew\"{a}hltem Dateihelfer. 
+
+\hyperlink{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_e7a63762a30ee10ba8c323619eccd584}{my\-MD.Model.Database\-Model.Entity\-Database::Entity\-Database}(\hyperlink{interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper}{my\-MD.Model.File\-Helper.IFile\-Helper}) 
+
+Definition at line 22 of file Entity\-Database.cs.\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_81426df1f225a7d6a66b94c95a89122d}{
+\index{myMD::Model::DatabaseModel::EntityDatabase@{my\-MD::Model::Database\-Model::Entity\-Database}!EntityDatabase@{EntityDatabase}}
+\index{EntityDatabase@{EntityDatabase}!myMD::Model::DatabaseModel::EntityDatabase@{my\-MD::Model::Database\-Model::Entity\-Database}}
+\subsubsection[EntityDatabase]{\setlength{\rightskip}{0pt plus 5cm}my\-MD::Model::Database\-Model::Entity\-Database::Entity\-Database (\hyperlink{interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper}{IFile\-Helper} {\em helper})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_81426df1f225a7d6a66b94c95a89122d}
+
+
+Erstellt die Datenbank, falls sie noch nicht existiert, verbinet sich mit ihr und setzt das aktive Profil auf das erste Profil in der Datenbank. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em helper}]Der Dateihelfer der verwendet werden soll um auf die Datenbankdatei zuzugreifen\end{description}
+\end{Desc}
+
+
+Definition at line 28 of file Entity\-Database.cs.
+
+References my\-MD::Model::File\-Helper::IFile\-Helper::Get\-Local\-File\-Path().
+
+Here is the call graph for this function:
+
+\subsection{Member Function Documentation}
+\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_04d844f17f0406ef8ab2156907984b7e}{
+\index{myMD::Model::DatabaseModel::EntityDatabase@{my\-MD::Model::Database\-Model::Entity\-Database}!GetAllDataFromProfile@{GetAllDataFromProfile}}
+\index{GetAllDataFromProfile@{GetAllDataFromProfile}!myMD::Model::DatabaseModel::EntityDatabase@{my\-MD::Model::Database\-Model::Entity\-Database}}
+\subsubsection[GetAllDataFromProfile]{\setlength{\rightskip}{0pt plus 5cm}IList$<$E$>$ my\-MD::Model::Database\-Model::Entity\-Database::Get\-All\-Data\-From\-Profile ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_04d844f17f0406ef8ab2156907984b7e}
+
+
+Holt alle E des zur Zeit aktiven Profils aus der Datenbank. 
+
+$<$typeparam name=\char`\"{}E\char`\"{}$>$Der Typ Entit\"{a}t der aus der Datenbank geholt werden soll$<$/typeparam$>$ \begin{Desc}
+\item[Returns:]Liste aller E des aktiven Profils\end{Desc}
+\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_cc41e08b876f7f88b63138dc9ee26aea}{
+\index{myMD::Model::DatabaseModel::EntityDatabase@{my\-MD::Model::Database\-Model::Entity\-Database}!GetDoctor@{GetDoctor}}
+\index{GetDoctor@{GetDoctor}!myMD::Model::DatabaseModel::EntityDatabase@{my\-MD::Model::Database\-Model::Entity\-Database}}
+\subsubsection[GetDoctor]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor}{IDoctor} my\-MD::Model::Database\-Model::Entity\-Database::Get\-Doctor (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor}{IDoctor} {\em doctor})}}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_cc41e08b876f7f88b63138dc9ee26aea}
+
+
+\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_cc41e08b876f7f88b63138dc9ee26aea}{my\-MD.Model.Database\-Model.IEntity\-Database::Get\-Doctor}(\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor}{my\-MD.Model\-Interface.Data\-Model\-Interface.IDoctor}) 
+
+Implements \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_cc41e08b876f7f88b63138dc9ee26aea}{my\-MD::Model::Database\-Model::IEntity\-Database}.\hypertarget{classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_a22117377d44ffae8e1381d0814d1960}{
+\index{myMD::Model::DatabaseModel::EntityDatabase@{my\-MD::Model::Database\-Model::Entity\-Database}!GetProfile@{GetProfile}}
+\index{GetProfile@{GetProfile}!myMD::Model::DatabaseModel::EntityDatabase@{my\-MD::Model::Database\-Model::Entity\-Database}}
+\subsubsection[GetProfile]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{IProfile} my\-MD::Model::Database\-Model::Entity\-Database::Get\-Profile (\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{IProfile} {\em profile})}}
+\label{dd/d77/classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_a22117377d44ffae8e1381d0814d1960}
+
+
+\hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a22117377d44ffae8e1381d0814d1960}{my\-MD.Model.Database\-Model.IEntity\-Database::Get\-Profile}(\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile}{my\-MD.Model\-Interface.Data\-Model\-Interface.IProfile}) 
+
+Implements \hyperlink{interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_a22117377d44ffae8e1381d0814d1960}{my\-MD::Model::Database\-Model::IEntity\-Database}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+D:/Studium/WS17-18/PSE/Implementierung/my\-MD/my\-MD/Model/Database\-Model/Entity\-Database.cs\end{CompactItemize}

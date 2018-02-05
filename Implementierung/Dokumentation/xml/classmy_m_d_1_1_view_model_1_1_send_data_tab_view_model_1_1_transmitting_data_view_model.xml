@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model" kind="class" language="C#" prot="public">
+    <compoundname>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model" prot="public" virt="non-virtual">myMD.ViewModel.OverallViewModel.OverallViewModel</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1afea82c22a42901685bc89e40469fe76d" prot="private" static="no" mutable="no">
+        <type>IGattServer</type>
+        <definition>IGattServer myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.server</definition>
+        <argsstring></argsstring>
+        <name>server</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="17" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1af59cdf3c02ddf2b2c792a4d0c139c9c4" prot="private" static="no" mutable="no">
+        <type>IDisposable</type>
+        <definition>IDisposable myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.notifyBroadcast</definition>
+        <argsstring></argsstring>
+        <name>notifyBroadcast</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="18" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1ae4b4c5356e1971b13ec13e2ff898b38f" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="20" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a1a74a403bce11dc9fff0581bb9afc50f" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.serverText</definition>
+        <argsstring></argsstring>
+        <name>serverText</name>
+        <initializer>= &quot;Start Server&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="27" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a9221936e275e05a90ae5f652de9ed497" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.chValue</definition>
+        <argsstring></argsstring>
+        <name>chValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="34" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1abac4636fdab3bde5b4f2a0c4e1e25811" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.Output</definition>
+        <argsstring></argsstring>
+        <name>Output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="21" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1af1a42f300aeebfb80d4cce14dcc76c8b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.ServerText</definition>
+        <argsstring></argsstring>
+        <name>ServerText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="28" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a7d651be602b1354dbaaf975773269bf7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.CharacteristicValue</definition>
+        <argsstring></argsstring>
+        <name>CharacteristicValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="35" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="36" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a010f4e5a18f39b8df0e14fe18c13c1a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.TransmittingDataViewModel</definition>
+        <argsstring>()</argsstring>
+        <name>TransmittingDataViewModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="41" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="41" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1afed618540c221f2ff1c694562ca13e6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.ServerSettings</definition>
+        <argsstring>()</argsstring>
+        <name>ServerSettings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="49" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="49" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a9cf8af0162866af5ef75828b8fc7fac7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async void</type>
+        <definition>async void myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.BuildServer</definition>
+        <argsstring>()</argsstring>
+        <name>BuildServer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="80" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="80" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a37875c173c36752e6e3aa058d88c7bf0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.OnEvent</definition>
+        <argsstring>(string msg)</argsstring>
+        <name>OnEvent</name>
+        <param>
+          <type>string</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="143" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="143" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a239c0e53392d8dd2430fd82079f6c98f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.StopServer</definition>
+        <argsstring>()</argsstring>
+        <name>StopServer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="150" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="150" bodyend="152"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="431">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="429">
+        <label>myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model"/>
+        <childnode refid="430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="430">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="431" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="434">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="432">
+        <label>myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model"/>
+        <childnode refid="433" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="433">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="434" relation="public-inheritance">
+        </childnode>
+        <childnode refid="435" relation="usage">
+          <edgelabel>ModelFacade</edgelabel>
+        </childnode>
+      </node>
+      <node id="435">
+        <label>myMD.ModelInterface.ModelFacadeInterface.IModelFacade</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="15" bodyend="153"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1acff4179c3cbf2cd35046729e99cd6921" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>BleAdapter</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a9cf8af0162866af5ef75828b8fc7fac7" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>BuildServer</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a7d651be602b1354dbaaf975773269bf7" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>CharacteristicValue</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a9221936e275e05a90ae5f652de9ed497" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>chValue</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1ab1b0e7b2ed9ae07614caa1e45b942e3f" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>ModelFacade</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1af59cdf3c02ddf2b2c792a4d0c139c9c4" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>notifyBroadcast</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a37875c173c36752e6e3aa058d88c7bf0" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>OnEvent</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a0333c153387ba2d38fb31eeb0419bfcf" prot="public" virt="virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>OnPropertyChanged</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1abac4636fdab3bde5b4f2a0c4e1e25811" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>Output</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1ae4b4c5356e1971b13ec13e2ff898b38f" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>output</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>OverallViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1918d3d8d384486e278426327b16256f" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>PropertyChanged</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1afea82c22a42901685bc89e40469fe76d" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>server</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1afed618540c221f2ff1c694562ca13e6b" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>ServerSettings</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1af1a42f300aeebfb80d4cce14dcc76c8b" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>ServerText</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a1a74a403bce11dc9fff0581bb9afc50f" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>serverText</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a239c0e53392d8dd2430fd82079f6c98f" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>StopServer</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a010f4e5a18f39b8df0e14fe18c13c1a3" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>TransmittingDataViewModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

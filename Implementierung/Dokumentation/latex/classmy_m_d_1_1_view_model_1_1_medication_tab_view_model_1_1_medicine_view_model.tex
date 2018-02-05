@@ -1,0 +1,233 @@
+\hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model}{}\section{my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model Klassenreferenz}
+\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model}\index{my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model@{my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model}}
+
+
+Das \mbox{\hyperlink{namespacemy_m_d_1_1_view_model}{View\+Model}} einer Medikation. Erleichtert das Binding zum \mbox{\hyperlink{namespacemy_m_d_1_1_view}{View}} durch das Bereitstellen der Properties  
+
+
+
+
+Klassendiagramm für my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Zusammengehörigkeiten von my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_ae443badf863a9a10f8db6065c7c2268f}{Medicine\+View\+Model}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}} medication)
+\begin{DoxyCompactList}\small\item\em Erzeugt ein \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model}{Medicine\+View\+Model}} anhand einer übergebenen Medikation. Berechnet zusätzlich die Einnahmedauer \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a31722e22ef4ffb25f9fc2f9629408ed4}{Medicine\+View\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the T\+:my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Propertys}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}} \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a5705289ccdd374aceb0c0b88bbdcdaef}{Medication}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Die zum \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model}{Medicine\+View\+Model}} gehörende Medikation \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a9ada30bb9027a311c3934cef06431310}{Saving\+Possible}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Boolean, ob der Speichern-\/\+Button sichtbar ist oder nicht T\+:my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model saving possible. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_ae2bbbd81c983dbab025a3ed6a858c535}{Cancel\+Possible}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Boolean, ob der Abbrechen-\/\+Button sichtbar ist oder nicht T\+:my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model cancel possible. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a6d05471333a112926288d1c19073e52a}{Medication\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Die Bezeichnung einer Medikation. Ist der zu setzende Name 0 Zeichen lang, wird der Speichern-\/\+Button deaktiviert. \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a8c2bd69c170ca5aaaf6491824dc5fd16}{Medication\+Start\+Date}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Der Einnahmebeginn. Wird der Einnahmebeginn gesetzt, wird zugleich das minimale Einnahmeende auf denselben Wert gesetzt, um Überschneidungen zu vermeiden. Zudem wird die Einnahmedauer neu berechnet. \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_aeb953c1be24162e984238210872d23f3}{Medication\+End\+Date}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Das Einnahmeende. Wird das Einnahmeende gesetzt, wird zugleich der maximale Einnahmebeginn auf denselben Wert gesetzt, um Überschneidungen zu vermeiden. Zudem wird die Einnahmedauer neu berechnet. \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a45ae8e7eacf145d650cd97602a93018b}{Max\+Start\+Date}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Das maximale Startdatum. \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_aee4be6017890f4b46f9adf50f0327322}{Min\+End\+Date}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Das minimale Enddatum. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_ac8ae23533e41015c959f994b4195ef7f}{Medication\+Duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Die Dauer einer Einnahme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782}{Interval}} \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a82fd4edb65b7e0afffe027f29217ac80}{Medication\+Interval}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the medication interval. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_ae6da5aa4432c4c03b46d10b86b78511e}{Medication\+Frequency}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Die Häufigkeit einer Einnahme (täglich). \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a01719d12c8718f0b11666205215f53fd}{Medication\+Dosis}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Die Dosis einer Medikation (Dosierung/\+Einnahmemenge). \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a93c6d3fe1297957deadbd1dc0d29475a}{Name\+Sort}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Methode zum Gruppieren der Listeneinträge in \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model}{Medication\+View\+Model}}. Wird zZ nicht eingesetzt, könnte aber noch hilfreich sein. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Weitere Geerbte Elemente}
+
+
+\subsection{Ausführliche Beschreibung}
+Das \mbox{\hyperlink{namespacemy_m_d_1_1_view_model}{View\+Model}} einer Medikation. Erleichtert das Binding zum \mbox{\hyperlink{namespacemy_m_d_1_1_view}{View}} durch das Bereitstellen der Properties 
+
+
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_ae443badf863a9a10f8db6065c7c2268f}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_ae443badf863a9a10f8db6065c7c2268f}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}!Medicine\+View\+Model@{Medicine\+View\+Model}}
+\index{Medicine\+View\+Model@{Medicine\+View\+Model}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}}
+\subsubsection{\texorpdfstring{Medicine\+View\+Model()}{MedicineViewModel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model.\+Medicine\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}}}]{medication }\end{DoxyParamCaption})}
+
+
+
+Erzeugt ein \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model}{Medicine\+View\+Model}} anhand einer übergebenen Medikation. Berechnet zusätzlich die Einnahmedauer 
+
+
+\begin{DoxyParams}{Parameter}
+{\em medication} & Medication.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a31722e22ef4ffb25f9fc2f9629408ed4}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a31722e22ef4ffb25f9fc2f9629408ed4}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}!Medicine\+View\+Model@{Medicine\+View\+Model}}
+\index{Medicine\+View\+Model@{Medicine\+View\+Model}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}}
+\subsubsection{\texorpdfstring{Medicine\+View\+Model()}{MedicineViewModel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model.\+Medicine\+View\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the T\+:my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model class. 
+
+
+
+\subsection{Dokumentation der Propertys}
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_ae2bbbd81c983dbab025a3ed6a858c535}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_ae2bbbd81c983dbab025a3ed6a858c535}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}!Cancel\+Possible@{Cancel\+Possible}}
+\index{Cancel\+Possible@{Cancel\+Possible}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}}
+\subsubsection{\texorpdfstring{Cancel\+Possible}{CancelPossible}}
+{\footnotesize\ttfamily bool my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model.\+Cancel\+Possible\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Boolean, ob der Abbrechen-\/\+Button sichtbar ist oder nicht T\+:my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model cancel possible. 
+
+{\ttfamily true} if cancel possible; otherwise, {\ttfamily false}.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a45ae8e7eacf145d650cd97602a93018b}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a45ae8e7eacf145d650cd97602a93018b}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}!Max\+Start\+Date@{Max\+Start\+Date}}
+\index{Max\+Start\+Date@{Max\+Start\+Date}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}}
+\subsubsection{\texorpdfstring{Max\+Start\+Date}{MaxStartDate}}
+{\footnotesize\ttfamily Date\+Time my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model.\+Max\+Start\+Date\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Das maximale Startdatum. 
+
+The max start date.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a5705289ccdd374aceb0c0b88bbdcdaef}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a5705289ccdd374aceb0c0b88bbdcdaef}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}!Medication@{Medication}}
+\index{Medication@{Medication}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}}
+\subsubsection{\texorpdfstring{Medication}{Medication}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}} my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model.\+Medication\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Die zum \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model}{Medicine\+View\+Model}} gehörende Medikation 
+
+The medication.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a01719d12c8718f0b11666205215f53fd}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a01719d12c8718f0b11666205215f53fd}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}!Medication\+Dosis@{Medication\+Dosis}}
+\index{Medication\+Dosis@{Medication\+Dosis}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}}
+\subsubsection{\texorpdfstring{Medication\+Dosis}{MedicationDosis}}
+{\footnotesize\ttfamily string my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model.\+Medication\+Dosis\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Die Dosis einer Medikation (Dosierung/\+Einnahmemenge). 
+
+The medication dosis.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_ac8ae23533e41015c959f994b4195ef7f}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_ac8ae23533e41015c959f994b4195ef7f}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}!Medication\+Duration@{Medication\+Duration}}
+\index{Medication\+Duration@{Medication\+Duration}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}}
+\subsubsection{\texorpdfstring{Medication\+Duration}{MedicationDuration}}
+{\footnotesize\ttfamily int my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model.\+Medication\+Duration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Die Dauer einer Einnahme. 
+
+The duration of the medication.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_aeb953c1be24162e984238210872d23f3}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_aeb953c1be24162e984238210872d23f3}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}!Medication\+End\+Date@{Medication\+End\+Date}}
+\index{Medication\+End\+Date@{Medication\+End\+Date}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}}
+\subsubsection{\texorpdfstring{Medication\+End\+Date}{MedicationEndDate}}
+{\footnotesize\ttfamily Date\+Time my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model.\+Medication\+End\+Date\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Das Einnahmeende. Wird das Einnahmeende gesetzt, wird zugleich der maximale Einnahmebeginn auf denselben Wert gesetzt, um Überschneidungen zu vermeiden. Zudem wird die Einnahmedauer neu berechnet. 
+
+The medication end date.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_ae6da5aa4432c4c03b46d10b86b78511e}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_ae6da5aa4432c4c03b46d10b86b78511e}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}!Medication\+Frequency@{Medication\+Frequency}}
+\index{Medication\+Frequency@{Medication\+Frequency}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}}
+\subsubsection{\texorpdfstring{Medication\+Frequency}{MedicationFrequency}}
+{\footnotesize\ttfamily int my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model.\+Medication\+Frequency\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Die Häufigkeit einer Einnahme (täglich). 
+
+The medication frequency.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a82fd4edb65b7e0afffe027f29217ac80}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a82fd4edb65b7e0afffe027f29217ac80}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}!Medication\+Interval@{Medication\+Interval}}
+\index{Medication\+Interval@{Medication\+Interval}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}}
+\subsubsection{\texorpdfstring{Medication\+Interval}{MedicationInterval}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_ad48afcd64f57a7b985ed525a6c054782}{Interval}} my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model.\+Medication\+Interval\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the medication interval. 
+
+The medication interval.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a6d05471333a112926288d1c19073e52a}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a6d05471333a112926288d1c19073e52a}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}!Medication\+Name@{Medication\+Name}}
+\index{Medication\+Name@{Medication\+Name}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}}
+\subsubsection{\texorpdfstring{Medication\+Name}{MedicationName}}
+{\footnotesize\ttfamily string my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model.\+Medication\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Die Bezeichnung einer Medikation. Ist der zu setzende Name 0 Zeichen lang, wird der Speichern-\/\+Button deaktiviert. 
+
+The name of the medication.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a8c2bd69c170ca5aaaf6491824dc5fd16}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a8c2bd69c170ca5aaaf6491824dc5fd16}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}!Medication\+Start\+Date@{Medication\+Start\+Date}}
+\index{Medication\+Start\+Date@{Medication\+Start\+Date}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}}
+\subsubsection{\texorpdfstring{Medication\+Start\+Date}{MedicationStartDate}}
+{\footnotesize\ttfamily Date\+Time my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model.\+Medication\+Start\+Date\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Der Einnahmebeginn. Wird der Einnahmebeginn gesetzt, wird zugleich das minimale Einnahmeende auf denselben Wert gesetzt, um Überschneidungen zu vermeiden. Zudem wird die Einnahmedauer neu berechnet. 
+
+The medication start date.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_aee4be6017890f4b46f9adf50f0327322}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_aee4be6017890f4b46f9adf50f0327322}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}!Min\+End\+Date@{Min\+End\+Date}}
+\index{Min\+End\+Date@{Min\+End\+Date}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}}
+\subsubsection{\texorpdfstring{Min\+End\+Date}{MinEndDate}}
+{\footnotesize\ttfamily Date\+Time my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model.\+Min\+End\+Date\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Das minimale Enddatum. 
+
+The minimum end date.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a93c6d3fe1297957deadbd1dc0d29475a}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a93c6d3fe1297957deadbd1dc0d29475a}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}!Name\+Sort@{Name\+Sort}}
+\index{Name\+Sort@{Name\+Sort}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}}
+\subsubsection{\texorpdfstring{Name\+Sort}{NameSort}}
+{\footnotesize\ttfamily string my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model.\+Name\+Sort\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Methode zum Gruppieren der Listeneinträge in \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model}{Medication\+View\+Model}}. Wird zZ nicht eingesetzt, könnte aber noch hilfreich sein. 
+
+The name sort.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a9ada30bb9027a311c3934cef06431310}\label{classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_a9ada30bb9027a311c3934cef06431310}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}!Saving\+Possible@{Saving\+Possible}}
+\index{Saving\+Possible@{Saving\+Possible}!my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Medication\+Tab\+View\+Model\+::\+Medicine\+View\+Model}}
+\subsubsection{\texorpdfstring{Saving\+Possible}{SavingPossible}}
+{\footnotesize\ttfamily bool my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model.\+Saving\+Possible\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Boolean, ob der Speichern-\/\+Button sichtbar ist oder nicht T\+:my\+M\+D.\+View\+Model.\+Medication\+Tab\+View\+Model.\+Medicine\+View\+Model saving possible. 
+
+{\ttfamily true} if saving possible; otherwise, {\ttfamily false}.
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Studium/\+W\+S17-\/18/\+P\+S\+E/\+Implementierung/my\+M\+D/my\+M\+D/\+View\+Model/\+Medication\+Tab\+View\+Model/\mbox{\hyperlink{_medicine_view_model_8cs}{Medicine\+View\+Model.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page" kind="class" language="C#" prot="public">
+    <compoundname>myMD::View::MedicationTabPages::DetailedMedicationPage</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page" prot="public" virt="non-virtual">myMD.View.AbstractPages.CustomContentPage</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1aa8cd8227e2ec0e2007a7905ea19ddbde" prot="private" static="no" mutable="no">
+        <type><ref refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model" kindref="compound">DetailedMedicineViewModel</ref></type>
+        <definition>DetailedMedicineViewModel myMD.View.MedicationTabPages.DetailedMedicationPage.vm</definition>
+        <argsstring></argsstring>
+        <name>vm</name>
+        <briefdescription>
+<para>Das <ref refid="namespacemy_m_d_1_1_view_model" kindref="compound">ViewModel</ref>, zu welchem gebinded werden soll. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/DetailedMedicationPage.xaml.cs" line="22" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/DetailedMedicationPage.xaml.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1ad79a81b82b91b290f8e80534849eab79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.View.MedicationTabPages.DetailedMedicationPage.DetailedMedicationPage</definition>
+        <argsstring>()</argsstring>
+        <name>DetailedMedicationPage</name>
+        <briefdescription>
+<para>Initializes a new instance of the T:myMD.View.MedicationTabPages.DetailedMedicationPage class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/DetailedMedicationPage.xaml.cs" line="27" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/DetailedMedicationPage.xaml.cs" bodystart="27" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1a85fb3c6227ab81ef9b263263d76726b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.View.MedicationTabPages.DetailedMedicationPage.DetailedMedicationPage</definition>
+        <argsstring>(object item)</argsstring>
+        <name>DetailedMedicationPage</name>
+        <param>
+          <type>object</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the T:myMD.View.MedicationTabPages.DetailedMedicationPage class. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/DetailedMedicationPage.xaml.cs" line="39" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/DetailedMedicationPage.xaml.cs" bodystart="39" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1a0f734144086235a8f70146e131dadb9f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async void</type>
+        <definition>async void myMD.View.MedicationTabPages.DetailedMedicationPage.CancelButton_Clicked</definition>
+        <argsstring>(object sender, System.EventArgs e)</argsstring>
+        <name>CancelButton_Clicked</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Methode, wenn der Abbrechen-Button geklickt wird. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>E.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/DetailedMedicationPage.xaml.cs" line="52" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/DetailedMedicationPage.xaml.cs" bodystart="52" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1ac5dfce8d2830c45bf07de93faf6bf3ba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async void</type>
+        <definition>async void myMD.View.MedicationTabPages.DetailedMedicationPage.SaveMedication_Clicked</definition>
+        <argsstring>(object sender, System.EventArgs e)</argsstring>
+        <name>SaveMedication_Clicked</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Methode, wenn der Speichern-Button geklickt wird. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>E.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/DetailedMedicationPage.xaml.cs" line="63" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/DetailedMedicationPage.xaml.cs" bodystart="63" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>DetailedMedication Ansicht. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="54">
+        <label>myMD.View.MedicationTabPages.DetailedMedicationPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page"/>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>CustomContentPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
+        <childnode refid="56" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>ContentPage</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="57">
+        <label>myMD.View.MedicationTabPages.DetailedMedicationPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page"/>
+        <childnode refid="58" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>CustomContentPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>ContentPage</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/DetailedMedicationPage.xaml.cs" line="18" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/DetailedMedicationPage.xaml.cs" bodystart="17" bodyend="69"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1a0f734144086235a8f70146e131dadb9f" prot="private" virt="non-virtual"><scope>myMD::View::MedicationTabPages::DetailedMedicationPage</scope><name>CancelButton_Clicked</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page_1a3cb9c69e49e16c30e2e5377790702769" prot="public" virt="non-virtual"><scope>myMD::View::MedicationTabPages::DetailedMedicationPage</scope><name>CustomContentPage</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1ad79a81b82b91b290f8e80534849eab79" prot="public" virt="non-virtual"><scope>myMD::View::MedicationTabPages::DetailedMedicationPage</scope><name>DetailedMedicationPage</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1a85fb3c6227ab81ef9b263263d76726b9" prot="public" virt="non-virtual"><scope>myMD::View::MedicationTabPages::DetailedMedicationPage</scope><name>DetailedMedicationPage</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1ac5dfce8d2830c45bf07de93faf6bf3ba" prot="private" virt="non-virtual"><scope>myMD::View::MedicationTabPages::DetailedMedicationPage</scope><name>SaveMedication_Clicked</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1aa8cd8227e2ec0e2007a7905ea19ddbde" prot="private" virt="non-virtual"><scope>myMD::View::MedicationTabPages::DetailedMedicationPage</scope><name>vm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

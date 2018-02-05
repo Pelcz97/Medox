@@ -1,0 +1,8 @@
+<map id="myMD.Model.DataModel.Data" name="myMD.Model.DataModel.Data">
+<area shape="rect" id="node8" href="$classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter.html" title="Diese Klasse implementiert die IDoctorsLetter Schnittstelle und erweitert die abstrakte Data Klasse..." alt="" coords="641,5,855,47"/>
+<area shape="rect" id="node9" href="$classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group.html" title="Diese Klasse implementiert die IDoctorsLetterGroup Schnittstelle und erweitert die abstrakte Data Kla..." alt="" coords="641,71,855,112"/>
+<area shape="rect" id="node10" href="$classmy_m_d_1_1_model_1_1_data_model_1_1_medication.html" title="Diese Klasse implementiert die IMedication Schnittstelle und erweitert die abstrakte Data Klasse..." alt="" coords="632,137,864,163"/>
+<area shape="rect" id="node2" href="$classmy_m_d_1_1_model_1_1_data_model_1_1_entity.html" title="Die Entity Klasse implementiert die IEntity&#45;Schnittstelle. Dabei dient die Klasse nur als Strukturele..." alt="" coords="239,78,295,105"/>
+<area shape="rect" id="node3" href="$interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity.html" title="Schnittstelle für eine Entität. Entitäten sind Abstraktionen von medizinischen Daten oder Akteuren..." alt="" coords="47,27,105,54"/>
+<area shape="rect" id="node5" href="$interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data.html" title="Schnittstelle für die Abstraktion von Daten, die die IEntity Schnittstelle erweitert. Daten sind hier eine Ansammlung von medizinischen Informationen. " alt="" coords="241,27,293,54"/>
+</map>
