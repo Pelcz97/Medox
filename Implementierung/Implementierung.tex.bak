@@ -69,7 +69,7 @@
 }
 \newglossaryentry{Cloud}
 {	name=Cloud,
-	description={Die Cloud ist keine physische Größe, sondern ein riesiges Netzwerk aus Remoteservern, die über die ganzen Welt verteilt aber miteinander verbunden sind, damit sie als ein einziges großes Ökosystem funktionieren können}
+	description={Die Cloud ist keine physische Größe, sondern ein riesiges Netzwerk aus Remoteservern, die über die ganze Welt verteilt aber miteinander verbunden sind, damit sie als ein einziges großes Ökosystem funktionieren können}
 }
 \newglossaryentry{Tab}
 {	name=Tab,
@@ -117,11 +117,19 @@
 \addtocontents{toc}{\protect\enlargethispage{10cm}}
 \setlength{\parskip}{2.5mm}%
 \chapter{Einleitung}
-%TODO
+\dq{}myMD\dq{} ist eine mobile Anwendung, die es Patienten erlaubt, ihre Arztbriefe digital über Bluetooth von ihren Ärzten zu erhalten, um dann in der Applikation die darin enthaltenen Informationen, wie die Diagnose oder verschrieben Medikationen, einsehen zu können.
+
+Die App wurde dabei mit Xamarin.Forms in C\# und XAML für Android- und iOS-Geräte entwickelt.
+
+Aufbauend auf dem vorangegangenen Pflichtenheft und dem Entwurfsdokument, wird in diesem Dokument der Fortschritt der Implementierung und die dabei vorgenommenen Änderungen an in Planung und Entwurf festgelegten Kriterien beschrieben.
+
+Zunächst werden noch einmal die wichtigsten Ergebnisse aus Planungs- und Entwurfsphase aufgelistet und danach die daran in dieser Phase vorgenommenen Änderungen. Dazu zählen geänderte Entwürfe, Klassen und nicht umgesetzt Kriterien. 
+
+Letztlich folgen noch abschließende Worte über den Verlauf der Phase und Pläne für die Zukunft.
 
 \chapter{Vorangegangene Planung}
 \section{Kriterien (Planungsphase)}
-\textit{Hinweis: Der Übersicht wegen sind hier Pflicht- und Wunschkriterien zusammen aufgeführt. Sie sind weiterhin anhand der Kürzel voneinander unterscheidbar (PK = Pflichtkriterium WK = Wunschkriterium).}
+\textit{Hinweis: Der Übersicht wegen sind hier Pflicht- und Wunschkriterien zusammen aufgeführt. Sie sind weiterhin anhand der Kürzel voneinander unterscheidbar (PK = Pflichtkriterium, WK = Wunschkriterium).}
 \subsubsection{Patientenseitige Datenübertragung}
 \begin{tabular}{lll}
 
@@ -218,6 +226,11 @@ Alle Klassen aus dem \textbf{DataModel} Paket stellen Vorlagen für eine Datenba
 Um unnötiges Casten zu vermeiden, erhalten die Schnittstellen aus \textbf{DataModelInterface} noch eine Konvertierungsmethode zu der in \textbf{DataModel} definierten konkreten Implementierung (für die Klassen aus \textbf{DataModel} gibt diese Methode lediglich die Instanz der Klasse selbst zurück.)
 
 \subsubsection{Plattformspezifisches Parsen}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IHl7ParserHelper.png}
+\caption{IHl7ParserHelper Schnittstelle}
+\end{figure}
 Bestimmte Klassen des \textit{Everest} Frameworks, das zum Parsen von .hl7 Dateien benutzt wird, implementieren die \textbf{ICloneable} Schnittstelle, die in einem \textit{Xamarin-Cross-Platform} Projekt nicht verfügbar ist. 
 
 Manche dieser Klassen werden jedoch benötigt um die Dateien vollständig zu parsen, daher kann der \textbf{Hl7ToDatabaseParser} nicht mehr wie geplant komplett plattformunabhängig implementiert werden.
@@ -225,6 +238,11 @@ Manche dieser Klassen werden jedoch benötigt um die Dateien vollständig zu par
 Operationen mit diesen Klassen werden nun über die \textbf{IHl7ParserHelper} Schnittstelle aufgerufen und im \textbf{Hl7ParserHelper} plattformspezifisch implementiert.
 
 \subsubsection{Dateiformatunabhänigiges Parsen}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/FileToDatabaseParser.png}
+\caption{Klassen zum dateiformatunabhänigigen Parsen}
+\end{figure}
 Um in Zukunft die Implementierung der Unterstützung mehrere Dateiformate zu vereinfachen, wurden mehrere Änderungen am \textbf{FileToDabaseParser} vorgenommen:
 
 Das Auswählen des richtigen Parsers erfolgt nun über die Enumeration \textbf{FileFormat} der unterstützen Dateiformate und eine Erweiterungsmethode in \textbf{FileFormatExtensions} die einem Dateiformat aus \textbf{FileFormat} den passenden \textbf{FileToDabaseParser} zuordnet.
@@ -237,9 +255,14 @@ Beim vorherigen Ansatz musste für jeden Aufruf einer \textit{Parse} Methoden ne
 
 \subsection{ViewModel}
 \subsubsection{Enum-Picker}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/ViewModel/Enum-Picker.png}
+\caption{Enum Picker Klassen}
+\end{figure}
 Um Elemente aus einem Enum in einem Picker von \textit{Xamarin} darstellen zu können, wird ein Konvertierer (\textbf{IntEnumConverter}) benötigt, da die dafür von \textit{Xamarin} angebotene Funktionalität eine Liste von Elementen erwartet. Mit dem Konvertierer kann dann jedem Listeneintrag über \textit{DataBinding} ein Enum-Wert zugewiesen werden.
 
-Um die Namen von Enumwerten zum Anzeigen formatieren zu können wurden für diesen Zweck auch noch die Klasse \textbf{StringExtensions} mit Erweiterungsmethoden für strings hinzugefügt.
+Um die Namen von Enumwerten zum Anzeigen formatieren zu können, wurden für diesen Zweck auch noch die Klasse \textbf{StringExtensions} mit Erweiterungsmethoden für strings hinzugefügt.
 
 \subsubsection{ProfileItemViewModel}
 Um die Daten eines Profils beim Wechseln vom \textbf{ProfileViewModel} zum \textbf{ProfileEditViewModel} (und zurück) konsistent zu halten, mussten wir ein neues ViewModel einführen, dass diese Daten kapselt.
@@ -249,16 +272,16 @@ Um die Daten eines Profils beim Wechseln vom \textbf{ProfileViewModel} zum \text
 In der Entwurfsphase orientierten wir uns daran, dass die Benutzeroberflächenlogik nach dem \textit{MVVM-Prinzip} in den jeweiligen \textit{ViewModeln} implementiert wird. Jedoch fiel uns auf, dass dies sehr umständlich ist. Deshalb haben wir die Benutzeroberflächenlogik im Code-Behind zu jeder entsprechenden Seite in der \textit{View} implementiert.
 \subsubsection{ProfileEditPage}
 Während dem Entwurf stellten wir uns vor, dass es auf einer \textbf{ProfilePage} einen Toggle zum Bearbeiten der Daten im Profil gibt, der die Labels, in denen die Daten stehen, durch Entrys ersetzt. Da sich diese Funktion, aber durch die Gestaltung der Seite in .xaml nur suboptimal implementieren lässt, haben wir uns dazu entschieden, die neue Seite \textbf{ProfileEditPage} einzuführen. Diese wird geöffnet, wenn man den \textit{Bearbeiten-Button
-} der \textbf{ProfilePage} antippt. Die \textbf{ProfileEditPage} gleicht der \textbf{ProfilePage} im Design. Die Unterschiede begrenzen sich auf die zwei \textit{StatusBar-Elemente} \dq{}Abrechen\dq{}, \dq{}Fertig\dq{} und die Ersetzung der Labels (in der \textbf{ProfilPage}) durch Entrys.
+} der \textbf{ProfilePage} antippt. Die \textbf{ProfileEditPage} gleicht der \textbf{ProfilePage} im Design. Die Unterschiede begrenzen sich auf die zwei \textit{StatusBar-Elemente} \dq{}Abbrechen\dq{}, \dq{}Fertig\dq{} und die Ersetzung der Labels (in der \textbf{ProfilePage}) durch Entrys.
 
 \section{Geänderte Klassen}
-\textit{Hinweis: Nur leicht (z.B. in der Namensgebung) geänderte Klassen oder solche, die bereits in den Geänderten Entwürfen erwähnt sind hier nicht aufgelistet. Weiterhin wurden die meisten Getter- und Setter-Methoden durch die in C\# üblichen Properties ersetzt. Da dies mehr eine optische als tatsächlich inhaltliche Änderung darstellt, wird auch dies hier übergangen.}
+\textit{Hinweis: Nur leicht (z.B. in der Namensgebung) geänderte Klassen oder solche, die bereits in den geänderten Entwürfen erwähnt sind hier nicht aufgelistet. Weiterhin wurden die meisten Getter- und Setter-Methoden durch die in C\# üblichen Properties ersetzt. Da dies mehr eine optische als tatsächlich inhaltliche Änderung darstellt, wird auch dies hier übergangen.}
 
 \subsection{ModelInterface}
 \subsubsection{IModelFacade}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/ModelFacadeInterface.png}
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IModelFacade.png}
 \caption{IModelFacade Schnittstelle}
 \end{figure}
 \textbf{Art der Änderung:} Neue Methoden
@@ -270,7 +293,7 @@ Während dem Entwurf stellten wir uns vor, dass es auf einer \textbf{ProfilePage
 \subsubsection{IMedication}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IMedication.png}
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IMedication.png}
 \caption{IMedication Schnittstelle}
 \end{figure}
 \textbf{Art der Änderung:} Neues Attribut
@@ -285,7 +308,7 @@ Während dem Entwurf stellten wir uns vor, dass es auf einer \textbf{ProfilePage
 \subsubsection{IEntityDatabase}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IEntityDatabase.png}
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IEntityDatabase.png}
 \caption{IEntityDatabase Schnittstelle}
 \end{figure}
 \textbf{Art der Änderung:} Neue/geänderte Methoden
@@ -298,7 +321,7 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \subsubsection{EntityFactory}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/EntityFactory.png}
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/EntityFactory.png}
 \caption{EntityFactory Klasse}
 \end{figure}
 \textbf{Art der Änderung:} Entferntes Attribut
@@ -310,19 +333,19 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \subsubsection{DoctorsLetterGroupDoctorsLetter}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/EntityFactory.png}
-\caption{EntityFactory Klasse}
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/DoctorsLetterGroupDoctorsLetter.png}
+\caption{DoctorsLetterGroupDoctorsLetter Klasse}
 \end{figure}
 \textbf{Art der Änderung:} Neue Klasse
 
-\textbf{Beschreibung:} Um Many-To-Many Relationen darstellen zu können, benötigt das SQLite-net-extensions Framework eine separate Klasse für die Relation. Da Arztbriefe und Gruppen in einer solchen Relation stehen wird diese Klasse benötigt.
+\textbf{Beschreibung:} Um Many-To-Many Relationen darstellen zu können, benötigt das SQLite-net-extensions Framework eine separate Klasse für die Relation. Da Arztbriefe und Gruppen in einer solchen Relation stehen, wird diese Klasse benötigt.
 
 \textbf{Paket:} Model.DataModel
 
 \subsubsection{IFileHelper}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textheight]{graphics/Klassendiagramme/Model/IFileHelper.png}
+\includegraphics[width=0.75\textheight]{graphics/Klassendiagramme/Model/IFileHelper.png}
 \caption{IFileHelper Schnittstelle}
 \end{figure}
 \textbf{Art der Änderung:} Neue Methode
@@ -354,7 +377,7 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \end{figure}
 \textbf{Art der Änderung:} Methoden entfernt
 
-\textbf{Beschreibung:} Im Entwurf wurden im DetailedDoctorsletterViewModel Methoden eingeführt um aus einem DoctorsLetter Daten zu extrahieren und in einem String zu speichern. Während der Implementierung stellten wir fest, dass diese Methoden nicht nötig sind. 
+\textbf{Beschreibung:} Im Entwurf wurden im DetailedDoctorsletterViewModel Methoden eingeführt, um aus einem DoctorsLetter Daten zu extrahieren und in einem String zu speichern. Während der Implementierung stellten wir fest, dass diese Methoden nicht nötig sind. 
 
 \textbf{Paket:} ViewModel.OverviewTabViewModel
 
@@ -390,7 +413,7 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \end{figure}
 \textbf{Art der Änderung:} Methoden und Attribute hinzugefügt
 
-\textbf{Beschreibung:}  Um eine Eingabe auf ihre Korrektheit zu überprüfen haben wir neue Attribute eingeführt und Methoden um die Attribute auf korrekte Werte zu setzen.
+\textbf{Beschreibung:}  Um eine Eingabe auf ihre Korrektheit zu überprüfen, haben wir neue Attribute eingeführt und Methoden um die Attribute auf korrekte Werte zu setzen.
 
 \textbf{Paket:} ViewModel.MedicationTabViewModel
 
@@ -424,7 +447,11 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 
 \subsubsection{\gls{Desktop Anwendung}}
 \begin{tabular}{lll}
-{![WK4010]} & \multicolumn{2}{p{12cm}}  {Die \gls{Versichertennummer}, die in einem \gls{Arztbrief} auf dem Computer des Arztes eingetragen ist, wird vor dem Senden mit der in der myMD App des Patienten hinterlegten \gls{Versichertennummer} abgeglichen und nur bei Übereinstimmung wird der \gls{Arztbrief} gesendet.} \\
+{[PK4010]} & \multicolumn{2}{p{12cm}}  {Die \gls{Desktop Anwendung} kann die Geräte in der Nähe anzeigen.} \\
+{[PK4020]} & \multicolumn{2}{p{12cm}}  {Der Arzt kann unter den Geräten in der Nähe das Mobilgerät des Patienten als Empfänger auswählen.} \\
+{[PK4030]} & \multicolumn{2}{p{12cm}}  {Digitale \glspl{Arztbrief} können entweder per \gls{Drag and Drop} oder über einen Explorer in die \gls{Desktop Anwendung} geladen werden.} \\
+{[PK4040]} & \multicolumn{2}{p{12cm}}  {Die Daten werden auf Knopfdruck an das Mobilgerät des Patienten gesendet.} \\
+{[WK4010]} & \multicolumn{2}{p{12cm}}  {Die \gls{Versichertennummer}, die in einem \gls{Arztbrief} auf dem Computer des Arztes eingetragen ist, wird vor dem Senden mit der in der myMD App des Patienten hinterlegten \gls{Versichertennummer} abgeglichen und nur bei Übereinstimmung wird der \gls{Arztbrief} gesendet.} \\
 \end{tabular}
 
 \subsubsection{Kompatibilität}
@@ -441,12 +468,12 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \begin{minipage}[c]{\textwidth}
 \centering
 \includegraphics[width=1.7\textwidth, angle=90]{graphics/Klassendiagramme/myMDImplementierung}
-\caption{myMD Klassendiagramm der Entwurfsphase}
+\caption{myMD Klassendiagramm der Implementierungsphase}
 \end{minipage}
 \end{figure}
 
 \chapter{Ergebnisse der Phase}
-\begin{figure}
+\begin{figure}[H]
 \section{Ablauf}
 \begin{minipage}[c]{\textwidth}
 \centering
@@ -454,11 +481,14 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \caption{Gantt Diagramm der Implementierungsphase}
 \end{minipage}
 \end{figure}
-%TODO kurzen Text schreiben. (Wieso haben wir unseren Ablau
+Von dem, im Entwurf, geplanten Ablauf wurde hauptsächlich in der \textbf{View} und dem \textbf{ViewModel} abgewichen. Den hier, stellten wir fest, ist es sinnvoller eine Page der \textbf{View} parallel zum entsprechenden \textbf{ViewModel} zu implementieren. Da wir mit dem \textbf{MedicationTab} anfingen, brauchten wir hier länger als geplant. Jedoch holten wir die verlorene Zeit bei der Implementierung des \textbf{OverviewTabs} und des \textbf{ProfileTabs} wieder zurück. Den hier konnten wir das Know-How, das wir uns beim \textbf{MedicationTab} angeeignet haben, gut anwenden.
+Im Model gab es keine nennenswerten Abweichungen vom Zeitplan.
 \section{Zukunftspläne}
-%TODO Redesign der App: Ein Tab für Arztbriefe, Medikationen und Impfungen (alle möglichen Information) um Informationsdichte zu erhöhen. Dazu kommt dann eine Sortier/Suchfunktion. Implementierung der nicht umgesetzten Kriterien.
+Unsere höchste Priorität ist es die Desktop Anwendung funktionsfähig zu machen. Da durch sie unsere App erst vollständig benutzbar wird.
 
+Dann folgt die Vorbereitung für den \textit{Microsoft ImagineCup}, für den wir noch ein paar Bugs aus der App beseitigen und Englisch als zweite Sprache anbieten wollen. Außerdem sollen für die Vorbereitung ein paar der nicht umgesetzten Kriterien (z.B. Such/Sortierfunktion im \textbf{OverviewTab} und \textbf{MedicationTab}) implementiert werden.
 
+Danach würden wir die App neu strukturieren. D.h. der \textbf{OverviewTab} wird mit dem \textbf{MedicationTab} zusammengelegt. Dies soll eine höhere Informationsdichte bewirken.
 
 \glsaddall
 \printnoidxglossaries
