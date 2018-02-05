@@ -69,7 +69,7 @@
 }
 \newglossaryentry{Cloud}
 {	name=Cloud,
-	description={Die Cloud ist keine physische Größe, sondern ein riesiges Netzwerk aus Remoteservern, die über die ganzen Welt verteilt aber miteinander verbunden sind, damit sie als ein einziges großes Ökosystem funktionieren können}
+	description={Die Cloud ist keine physische Größe, sondern ein riesiges Netzwerk aus Remoteservern, die über die ganze Welt verteilt aber miteinander verbunden sind, damit sie als ein einziges großes Ökosystem funktionieren können}
 }
 \newglossaryentry{Tab}
 {	name=Tab,
@@ -117,7 +117,7 @@
 \addtocontents{toc}{\protect\enlargethispage{10cm}}
 \setlength{\parskip}{2.5mm}%
 \chapter{Einleitung}
-\dq{}myMD\dq{} ist eine mobile Anwendung, die es Patienten erlaubt ihre Arztbriefe digital über Bluetooth von ihren Ärzten zu erhalten, um dann in der Applikation die darin enthaltenen Informationen, wie die Diagnose oder verschrieben Medikationen, einsehen zu können.
+\dq{}myMD\dq{} ist eine mobile Anwendung, die es Patienten erlaubt, ihre Arztbriefe digital über Bluetooth von ihren Ärzten zu erhalten, um dann in der Applikation die darin enthaltenen Informationen, wie die Diagnose oder verschrieben Medikationen, einsehen zu können.
 
 Die App wurde dabei mit Xamarin.Forms in C\# und XAML für Android- und iOS-Geräte entwickelt.
 
@@ -338,7 +338,7 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \end{figure}
 \textbf{Art der Änderung:} Neue Klasse
 
-\textbf{Beschreibung:} Um Many-To-Many Relationen darstellen zu können, benötigt das SQLite-net-extensions Framework eine separate Klasse für die Relation. Da Arztbriefe und Gruppen in einer solchen Relation stehen wird diese Klasse benötigt.
+\textbf{Beschreibung:} Um Many-To-Many Relationen darstellen zu können, benötigt das SQLite-net-extensions Framework eine separate Klasse für die Relation. Da Arztbriefe und Gruppen in einer solchen Relation stehen, wird diese Klasse benötigt.
 
 \textbf{Paket:} Model.DataModel
 
@@ -377,7 +377,7 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \end{figure}
 \textbf{Art der Änderung:} Methoden entfernt
 
-\textbf{Beschreibung:} Im Entwurf wurden im DetailedDoctorsletterViewModel Methoden eingeführt um aus einem DoctorsLetter Daten zu extrahieren und in einem String zu speichern. Während der Implementierung stellten wir fest, dass diese Methoden nicht nötig sind. 
+\textbf{Beschreibung:} Im Entwurf wurden im DetailedDoctorsletterViewModel Methoden eingeführt, um aus einem DoctorsLetter Daten zu extrahieren und in einem String zu speichern. Während der Implementierung stellten wir fest, dass diese Methoden nicht nötig sind. 
 
 \textbf{Paket:} ViewModel.OverviewTabViewModel
 
@@ -413,7 +413,7 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \end{figure}
 \textbf{Art der Änderung:} Methoden und Attribute hinzugefügt
 
-\textbf{Beschreibung:}  Um eine Eingabe auf ihre Korrektheit zu überprüfen haben wir neue Attribute eingeführt und Methoden um die Attribute auf korrekte Werte zu setzen.
+\textbf{Beschreibung:}  Um eine Eingabe auf ihre Korrektheit zu überprüfen, haben wir neue Attribute eingeführt und Methoden um die Attribute auf korrekte Werte zu setzen.
 
 \textbf{Paket:} ViewModel.MedicationTabViewModel
 
@@ -481,14 +481,14 @@ Außerdem wurde die generischen Methoden durch typspezifische Methoden ersetzt, 
 \caption{Gantt Diagramm der Implementierungsphase}
 \end{minipage}
 \end{figure}
-Von dem, im Entwurf, geplanten Ablauf wurde hauptsächlich in der View und dem ViewModel abgewichen. Den hier, stellten wir fest, ist es sinnvoller eine Page der View parallel zum entsprechenden ViewModel zu implementieren. Da wir mit dem MedicationTab anfingen, brauchten wir hier länger als geplant. Jedoch holten wir die verlorene Zeit bei der Implementierung des OverviewTabs und des ProfileTabs wieder zurück. Den hier konnten wir das Know-How, das wir uns beim MedicationTab angeeignet haben, gut anwenden.
+Von dem, im Entwurf, geplanten Ablauf wurde hauptsächlich in der \textbf{View} und dem \textbf{ViewModel} abgewichen. Den hier, stellten wir fest, ist es sinnvoller eine Page der \textbf{View} parallel zum entsprechenden \textbf{ViewModel} zu implementieren. Da wir mit dem \textbf{MedicationTab} anfingen, brauchten wir hier länger als geplant. Jedoch holten wir die verlorene Zeit bei der Implementierung des \textbf{OverviewTabs} und des \textbf{ProfileTabs} wieder zurück. Den hier konnten wir das Know-How, das wir uns beim \textbf{MedicationTab} angeeignet haben, gut anwenden.
 Im Model gab es keine nennenswerten Abweichungen vom Zeitplan.
 \section{Zukunftspläne}
 Unsere höchste Priorität ist es die Desktop Anwendung funktionsfähig zu machen. Da durch sie unsere App erst vollständig benutzbar wird.
 
-Dann folgt die Vorbereitung für den Microsoft ImagineCup, für den wir noch ein paar Bugs aus der App beseitigen und Englisch als zweite Sprache anbieten wollen. Außerdem sollen für die Vorbereitung ein paar der nicht umgesetzten Kriterien (z.B. Such/Sortierfunktion im OverviewTab und MedicationTab) implementiert werden.
+Dann folgt die Vorbereitung für den \textit{Microsoft ImagineCup}, für den wir noch ein paar Bugs aus der App beseitigen und Englisch als zweite Sprache anbieten wollen. Außerdem sollen für die Vorbereitung ein paar der nicht umgesetzten Kriterien (z.B. Such/Sortierfunktion im \textbf{OverviewTab} und \textbf{MedicationTab}) implementiert werden.
 
-Danach würden wir die App neu strukturieren. D.h. der OverviewTab wird mit dem MedicationTab zusammengelegt. Dies soll eine höhere Informationsdichte bewirken.
+Danach würden wir die App neu strukturieren. D.h. der \textbf{OverviewTab} wird mit dem \textbf{MedicationTab} zusammengelegt. Dies soll eine höhere Informationsdichte bewirken.
 
 \glsaddall
 \printnoidxglossaries
