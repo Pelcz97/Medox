@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Windows.Input;
 using Plugin.BluetoothLE;
+using ble.net;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using System.Linq;
@@ -67,6 +68,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
             });
 
                 isScanning = true;
+
+
                 this.scan = CrossBleAdapter.Current.ScanWhenAdapterReady().Subscribe(scanResult =>
                 {
                     ScanResultViewModel test = new ScanResultViewModel();
