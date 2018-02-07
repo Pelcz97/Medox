@@ -15,6 +15,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SelectDevicePage.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SelectDoctorsLettersPage.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SendDataPage.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\TransmittingDataPage.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SendDataTabViewModel\ScanResultViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SendDataTabViewModel\SelectDeviceViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SendDataTabViewModel\SelectDoctorsLettersViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SendDataTabViewModel\SendDataViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SendDataTabViewModel\TransmittingDataViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml">
@@ -25,5 +34,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SelectDevicePage.xaml" />
+    <None Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SelectDoctorsLettersPage.xaml" />
+    <None Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SendDataPage.xaml" />
+    <None Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\TransmittingDataPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Model\" />
   </ItemGroup>
 </Project>
