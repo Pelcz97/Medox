@@ -186,6 +186,15 @@ SQLiteNetExtensions;SQLite-net;SQLitePCLRaw.batteries_green;SQLitePCLRaw.batteri
     <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xamarin.Forms.2.5.0.122203\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="nexus.core">
+      <HintPath>..\packages\nexus.core.0.31.0\lib\portable45-net45+win8\nexus.core.dll</HintPath>
+    </Reference>
+    <Reference Include="ble.net">
+      <HintPath>..\packages\ble.net.1.0.0\lib\portable45-net45+win8\ble.net.dll</HintPath>
+    </Reference>
+    <Reference Include="ble.net-android21">
+      <HintPath>..\packages\ble.net-android.1.0.0\lib\MonoAndroid50\ble.net-android21.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\myMD\myMD.csproj">
