@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using myMDesktop.View;
 using Xamarin.Forms;
 
 namespace myMDesktop
 {
 	public partial class App : Application
 	{
-		public App ()
-		{
-			InitializeComponent();
+        public App()
+        {
+            InitializeComponent();
 
-			MainPage = new myMDesktop.MainPage();
-		}
+            MainPage = new myMDesktop.View.SendDataPage();
+        }
 
 		protected override void OnStart ()
 		{
