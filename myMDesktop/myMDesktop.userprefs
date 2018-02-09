@@ -1,17 +1,31 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="myMDesktop/myMDesktop/App.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="myMDesktop/myMDesktop/View/AbstractPages/CustomContentPage.xaml">
     <Files>
       <File FileName="myMDesktop/myMDesktop/MainPage.xaml" Line="13" Column="15" />
       <File FileName="myMDesktop/myMDesktop/MainPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="myMDesktop/myMDesktop/App.xaml.cs" Line="5" Column="23" />
+      <File FileName="myMDesktop/myMDesktop/App.xaml.cs" Line="13" Column="10" />
+      <File FileName="myMDesktop/myMDesktop/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" Line="1" Column="1" />
+      <File FileName="myMDesktop/myMDesktop/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" Line="1" Column="1" />
+      <File FileName="myMDesktop/myMDesktop/ViewModel/SendDataTabViewModel/SelectDoctorsLettersViewModel.cs" Line="1" Column="1" />
+      <File FileName="myMDesktop/myMDesktop/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" Line="1" Column="1" />
+      <File FileName="myMDesktop/myMDesktop/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" Line="1" Column="1" />
+      <File FileName="myMDesktop/myMDesktop/View/AbstractPages/CustomContentPage.xaml" Line="6" Column="1" />
+      <File FileName="myMDesktop/myMDesktop/View/AbstractPages/CustomContentPage.xaml.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="myMDesktop" expanded="True">
-            <Node name="myMDesktop" expanded="True" selected="True">
+            <Node name="myMDesktop" expanded="True">
               <Node name="View" expanded="True">
+                <Node name="AbstractPages" expanded="True">
+                  <Node name="CustomContentPage.xaml.cs" selected="True" />
+                </Node>
                 <Node name="SendDataTabPages" expanded="True" />
+              </Node>
+              <Node name="ViewModel" expanded="True">
+                <Node name="OverallViewModel" expanded="True" />
+                <Node name="SendDataTabViewModel" expanded="True" />
               </Node>
               <Node name="App.xaml" expanded="True" />
               <Node name="MainPage.xaml" expanded="True" />
