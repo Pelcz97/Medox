@@ -7,6 +7,70 @@
     <ContentPage.ToolbarItems>
             <ToolbarItem Name="CancelSelectDoctorsLetters" Text="Abbrechen" 
                         Order="Primary" Priority="-1" Clicked="CancelSelectDoctorsLetters_Clicked"/>
+        <ToolbarItem Name="ConfirmSelectDoctorsLetters" Text="Fertig" 
+                        Order="Primary" Priority="1" Clicked="ConfirmSelectDoctorsLetters_Clicked"/>
     </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+            <ListView x:Name="DoctorsLettersSendList" 
+                HasUnevenRows="true" 
+                BackgroundColor="#191928" 
+                ItemsSource="{Binding DoctorsLettersSendList}" 
+                SeparatorVisibility="None" 
+                ItemSelected="DoctorsLetter_Clicked"
+                CachingStrategy="RecycleElement">
+            
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Frame x:Name="WhiteFrame" CornerRadius="15" 
+                                        BackgroundColor="#FFFFFF" 
+                                        Margin="10,3,10,3"
+                                        HorizontalOptions="FillAndExpand" 
+                                        VerticalOptions="FillAndExpand" 
 
+                                        HasShadow="true">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/> 
+                                        </Grid.ColumnDefinitions>
+
+                                            <Label Text="{Binding DoctorsName}" 
+                                            TextColor="#191928" 
+                                            FontSize="Small" 
+                                            FontAttributes="Bold"
+                                            Grid.Column="0" 
+                                            Grid.RowSpan="2"   
+                                            Grid.Row="0" 
+                                            HorizontalTextAlignment="Start" />
+                                        
+                                            <Label Text="{Binding DoctorsLetterDate, StringFormat='{0:MMMM dd, yyyy}'}" 
+                                            TextColor="#4A4A4A" 
+                                            FontSize="Small" 
+                                            HorizontalTextAlignment="End" 
+                                            FontAttributes="Bold" 
+                                            Grid.Column="1" 
+                                            Grid.Row="0" 
+                                            HorizontalOptions="EndAndExpand"/>
+                                        
+                                            <Label Text="{Binding DoctorsField}" 
+                                            TextColor="#00B9B4" 
+                                            FontSize="35" 
+                                            FontAttributes="Bold" 
+                                            HorizontalTextAlignment="Start" 
+                                            Grid.ColumnSpan="2" 
+                                            Grid.Row="1" />
+                                    </Grid>
+                                </Frame>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+    </ContentPage.Content>
 </local:CustomContentPage>

@@ -36,5 +36,12 @@ namespace myMD.View.SendDataTabPages
         {
             await Navigation.PopModalAsync();
         }
+
+
+        async void ConfirmSelectDoctorsLetters_Clicked(object sender, System.EventArgs e)
+        {
+            vm.SelectionConfirmed();
+            await Navigation.PopModalAsync();
+        }
     }
 }

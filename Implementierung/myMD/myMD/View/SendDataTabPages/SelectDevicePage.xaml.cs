@@ -46,5 +46,11 @@ namespace myMD.View.SendDataTabPages
         {
             vm.ConnectToDevice(e.SelectedItem);
         }
+
+        void ConfirmDevice_Clicked(object sender, System.EventArgs e)
+        {
+            vm.TargetDeviceConfirmed();
+            Navigation.PopModalAsync();
+        }
     }
 }

@@ -23,11 +23,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// </summary>
         public ObservableCollection<ScanResultViewModel> DeviceList { get; }
 
-        /// <summary>
-        /// ICommand um das Antippen des Scan-Buttons zu handeln
-        /// </summary>
-        public ICommand ScanForDevices_Clicked { get => new Command(StartScan); }
-
         public IBlePeripheral ConnectedDevice { get; set; }
 
         /// <summary>
@@ -42,7 +37,12 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 BluetoothAdapter.EnableAdapter();
             }
 
-            BluetoothAdapter.CurrentState.Subscribe(state => Debug.WriteLine("New State: {0}", state));
+            BluetoothAdapter.CurrentState.Subscribe(state => {
+                Debug.WriteLine("New State: {0}", state);
+                if (state == EnabledDisabledState.Enabled){
+                    StartScan();
+                }
+            });
 
             this.DeviceList = new ObservableCollection<ScanResultViewModel>();
         }
@@ -88,10 +88,20 @@ namespace myMD.ViewModel.SendDataTabViewModel
             if (connection.IsSuccessful())
             {
                 ConnectedDevice = device;
+                
             }
             else
             {
                 Debug.WriteLine("Connecting failed");
+            }
+        }
+
+        public void TargetDeviceConfirmed()
+        {
+            if (ConnectedDevice != null)
+            {
+                MessagingCenter.Send(this, "ConnectedDevice", ConnectedDevice);
+                MessagingCenter.Unsubscribe<SelectDeviceViewModel>(this, "ConnectedDevice");
             }
         }
     }
