@@ -9,7 +9,7 @@ using System.Text;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 
-namespace myMD.ViewModel.SendDataTabViewModel
+namespace myMDesktop.ViewModel.SendDataTabViewModel
 {
     /// <summary>
     /// Transmitting data view model.
@@ -29,7 +29,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
 
         /// <summary>
         /// Initializes a new instance of the
-        /// <see cref="T:myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel"/> class.
+        /// <see cref="T:myMDesktop.ViewModel.SendDataTabViewModel.TransmittingDataViewModel"/> class.
         /// </summary>
         public TransmittingDataViewModel()
         {
@@ -43,7 +43,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// Anschliessend wird versucht, einen Server zu erstellen, zu Starten und mit einem Namen 
         /// anderen Geräten in der Nähe sichtbar zu machen.
         /// </summary>
-        public async void ServerSettings(){
+        /*public async void ServerSettings()
+        {
             if (this.BleAdapter.Status != AdapterStatus.PoweredOn)
             {
                 Debug.WriteLine(this.BleAdapter.Status);
@@ -72,7 +73,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 Debug.WriteLine(ex.ToString());
             }
 
-        }
+        }*/
 
         /// <summary>
         /// Explizite Zusammensetzung des Servers.

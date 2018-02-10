@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using myMD.View.AbstractPages;
-using myMD.ViewModel.SendDataTabViewModel;
+using myMDesktop.View.AbstractPages;
+using myMDesktop.ViewModel.SendDataTabViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
-namespace myMD.View.SendDataTabPages
+namespace myMDesktop.View.SendDataTabPages
 {
     /// <summary>
     /// Code-Behind Klasse zurTransmittingDataPage.
@@ -19,7 +19,7 @@ namespace myMD.View.SendDataTabPages
         TransmittingDataViewModel vm;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:myMD.View.SendDataTabPages.TransmittingDataPage"/> class.
+        /// Initializes a new instance of the <see cref="T:myMDesktop.View.SendDataTabPages.TransmittingDataPage"/> class.
         /// </summary>
         public TransmittingDataPage()
         {
@@ -35,9 +35,11 @@ namespace myMD.View.SendDataTabPages
         /// <param name="e">E.</param>
         public async void SelectLettersButton_Clicked(object sender, EventArgs e)
         {
-            var view = new NavigationPage(new SelectDoctorsLettersPage());
-            view.BarTextColor = Color.White;
-            view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
+            var view = new NavigationPage(new SelectDoctorsLettersPage())
+            {
+                BarTextColor = Color.White,
+                BarBackgroundColor = Color.FromRgb(25, 25, 40)
+            };
             await Navigation.PushModalAsync(view);
         }
 
@@ -48,7 +50,7 @@ namespace myMD.View.SendDataTabPages
         /// <param name="e">E.</param>
         public async void SelectDeviceButton_Clicked(object sender, EventArgs e)
         {
-            var view = new NavigationPage(new SelectDevicePage()); 
+            var view = new NavigationPage(new SelectDevicePage());
             view.BarTextColor = Color.White;
             view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             await Navigation.PushModalAsync(view);

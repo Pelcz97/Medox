@@ -3,13 +3,13 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Windows.Input;
 using Plugin.BluetoothLE;
-using ble.net;
+//using ble.net;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using System.Linq;
 
 
-namespace myMD.ViewModel.SendDataTabViewModel
+namespace myMDesktop.ViewModel.SendDataTabViewModel
 {
     /// <summary>
     /// Diese Klasse übernimmt die Auswahl des Gerätes an das die Arztbriefe gesendet werden sollen. Dazu wird die Umgebung nach Geräten gescannt, die dann in  <see cref="T:myMD.ViewModel.SendDataTabViewModel.ScanResultLetterViewModel"/> modeliert werden.
@@ -44,16 +44,17 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// </summary>
         public SelectDeviceViewModel()
         {
-            this.DeviceList = new ObservableCollection<ScanResultViewModel>();   
+            this.DeviceList = new ObservableCollection<ScanResultViewModel>();
         }
 
         /// <summary>
         /// Methode um einen Scan zu starten.
         /// Dazu wird erst überprüft, ob gerade gescannt wird. Ist dies der Fall wird der aktive Scan abgebrochen.
         /// Dann wird geprüft ob Bluetooth für das Gerät verfügbar ist.
-        /// Danach wird der Scan gestartet und die gefundenen Geräte in die Liste <see cref="T:myMD.ViewModel.SendDataTabViewModel.SelectDeviceLetterViewModel.DeviceList"/> gespeichert.
+        /// Danach wird der Scan gestartet und die gefundenen Geräte in die Liste <see cref="T:myMDesktop.ViewModel.SendDataTabViewModel.SelectDeviceLetterViewModel.DeviceList"/> gespeichert.
         /// </summary>
-        public void StartScan(){
+        public void StartScan()
+        {
             if (isScanning == true)
             {
                 scan.Dispose();
@@ -67,22 +68,22 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 Debug.WriteLine(status);
             });
 
-                isScanning = true;
+            isScanning = true;
 
 
-                this.scan = CrossBleAdapter.Current.ScanWhenAdapterReady().Subscribe(scanResult =>
-                {
-                    ScanResultViewModel test = new ScanResultViewModel();
-                    test.Device = scanResult.Device;
+            this.scan = CrossBleAdapter.Current.ScanWhenAdapterReady().Subscribe(scanResult =>
+            {
+                ScanResultViewModel test = new ScanResultViewModel();
+                test.Device = scanResult.Device;
                 if (test != null && DeviceList.All(x => x.Device != test.Device) && test.Device.Name != null)
-                    {
-                        DeviceList.Add(test);
-                        DeviceList.FirstOrDefault();
-                        Debug.WriteLine("Device: " + test.Device);
-                        Debug.WriteLine("Device.Name: " + test.Device.Name);
-                        Debug.WriteLine("Device.UUID: " + test.Device.Uuid);
-                    }
-                });
+                {
+                    DeviceList.Add(test);
+                    DeviceList.FirstOrDefault();
+                    Debug.WriteLine("Device: " + test.Device);
+                    Debug.WriteLine("Device.Name: " + test.Device.Name);
+                    Debug.WriteLine("Device.UUID: " + test.Device.Uuid);
+                }
+            });
 
         }
 
@@ -102,7 +103,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// Methode um sich mit einem anderen Gerät zu verbinden
         /// </summary>
         /// <param name="item"></param>
-        public void ConnectToDevice(object item){
+        public void ConnectToDevice(object item)
+        {
             var ScanResultItem = (ScanResultViewModel)item;
             IDevice device = ScanResultItem.Device;
             Debug.WriteLine("Gerät = " + device.Name);
@@ -113,3 +115,4 @@ namespace myMD.ViewModel.SendDataTabViewModel
         }
     }
 }
+

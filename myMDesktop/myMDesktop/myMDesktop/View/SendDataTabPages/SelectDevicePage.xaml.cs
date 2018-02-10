@@ -1,10 +1,10 @@
 ﻿using System;
-using myMD.View.AbstractPages;
+using myMDesktop.View.AbstractPages;
 using Xamarin.Forms;
-using myMD.ViewModel.SendDataTabViewModel;
+using myMDesktop.ViewModel.SendDataTabViewModel;
 using Xamarin.Forms.Internals;
 
-namespace myMD.View.SendDataTabPages
+namespace myMDesktop.View.SendDataTabPages
 {
     /// <summary>
     /// Code-Behind Klasse zur SelectDevicePage
@@ -18,7 +18,7 @@ namespace myMD.View.SendDataTabPages
         SelectDeviceViewModel vm;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:myMD.View.SendDataTabPages.SelectDevicePage"/> class.
+        /// Initializes a new instance of the <see cref="T:myMDesktop.View.SendDataTabPages.SelectDevicePage"/> class.
         /// </summary>
         public SelectDevicePage()
         {

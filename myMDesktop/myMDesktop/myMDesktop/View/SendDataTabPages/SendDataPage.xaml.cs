@@ -1,10 +1,10 @@
 ﻿using System;
-using myMD.View.AbstractPages;
-using myMD.ViewModel.SendDataTabViewModel;
+using myMDesktop.View.AbstractPages;
+using myMDesktop.ViewModel.SendDataTabViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
-namespace myMD.View.SendDataTabPages
+namespace myMDesktop.View.SendDataTabPages
 {
     /// <summary>
     /// Code-Behind Klasse zur SendDataPage.

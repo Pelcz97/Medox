@@ -2,7 +2,7 @@
 using Plugin.BluetoothLE;
 using Xamarin.Forms.Internals;
 
-namespace myMD.ViewModel.SendDataTabViewModel
+namespace myMDesktop.ViewModel.SendDataTabViewModel
 {
     /// <summary>
     /// Klasse die ein gefundenes Gerät modeliert

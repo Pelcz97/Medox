@@ -15,17 +15,32 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SelectDevicePage.xaml.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SelectDoctorsLettersPage.xaml.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SendDataPage.xaml.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\TransmittingDataPage.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\OverallViewModel\OverallViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SendDataTabViewModel\ScanResultViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SendDataTabViewModel\SelectDeviceViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SendDataTabViewModel\SelectDoctorsLettersViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SendDataTabViewModel\SelectDoctorsLetterViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SendDataTabViewModel\SendDataViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SendDataTabViewModel\TransmittingDataViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)View\AbstractPages\CustomContentPage.xaml.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\OverallViewModel\OverallViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\AbstractPages\CustomContentPage.xaml.cs">
+      <DependentUpon>CustomContentPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SelectDevicePage.xaml.cs">
+      <DependentUpon>SelectDevicePage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SelectDoctorsLettersPage.xaml.cs">
+      <DependentUpon>SelectDoctorsLettersPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SendDataPage.xaml.cs">
+      <DependentUpon>SendDataPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\TransmittingDataPage.xaml.cs">
+      <DependentUpon>TransmittingDataPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml">
@@ -36,13 +51,36 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SelectDevicePage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SelectDoctorsLettersPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SendDataPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\TransmittingDataPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\AbstractPages\CustomContentPage.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Model\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModel\SendDataTabViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\AbstractPages\CustomContentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SelectDevicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SelectDoctorsLettersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SendDataPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\TransmittingDataPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

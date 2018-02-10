@@ -9,9 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myMDesktop.UWP", "myMDeskto
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		myMDesktop\myMDesktop\myMDesktop.projitems*{03f38226-6df9-4a70-8814-6d0b5897fb12}*SharedItemsImports = 4
-		myMDesktop\myMDesktop\myMDesktop.projitems*{4672e38e-3eab-4462-9c67-56dc18f5b0b5}*SharedItemsImports = 4
 		myMDesktop\myMDesktop\myMDesktop.projitems*{532cba51-92a6-4794-90b8-c9f81084363e}*SharedItemsImports = 13
+		myMDesktop\myMDesktop\myMDesktop.projitems*{aec4fa0b-2ccb-4f17-b33d-66a584da8da7}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -77,6 +76,8 @@ Global
 		{AEC4FA0B-2CCB-4F17-B33D-66A584DA8DA7}.AppStore|x86.Build.0 = Release|x86
 		{AEC4FA0B-2CCB-4F17-B33D-66A584DA8DA7}.AppStore|x86.Deploy.0 = Release|x86
 		{AEC4FA0B-2CCB-4F17-B33D-66A584DA8DA7}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{AEC4FA0B-2CCB-4F17-B33D-66A584DA8DA7}.Debug|Any CPU.Build.0 = Debug|x86
+		{AEC4FA0B-2CCB-4F17-B33D-66A584DA8DA7}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{AEC4FA0B-2CCB-4F17-B33D-66A584DA8DA7}.Debug|ARM.ActiveCfg = Debug|ARM
 		{AEC4FA0B-2CCB-4F17-B33D-66A584DA8DA7}.Debug|ARM.Build.0 = Debug|ARM
 		{AEC4FA0B-2CCB-4F17-B33D-66A584DA8DA7}.Debug|ARM.Deploy.0 = Debug|ARM
