@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms.Internals;
 
-namespace myMD.ViewModel.SendDataTabViewModel
+namespace myMDesktop.ViewModel.SendDataTabViewModel
 {
     /// <summary>
     /// Die SendDataViewModel Klasse bietet den Einstiegspunkt in den SendDataTab.

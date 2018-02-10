@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
-    x:Class="myMD.View.SendDataTabPages.TransmittingDataPage">
-	<ContentPage.Content>
+    xmlns:local="clr-namespace:myMDesktop.View.AbstractPages;assembly=myMDesktop"
+    x:Class="myMDesktop.View.SendDataTabPages.TransmittingDataPage">
+    <ContentPage.Content>
         <Grid x:Name="Grid" RowSpacing="1" ColumnSpacing="1" Margin="15,0,15,15">
             <Grid.RowDefinitions>
                 <!--Durch Benutzung des *'s wird der Button immer am unteren Ende der Seite dargestellt-->
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-        <Button Clicked="SelectLettersButton_Clicked"
+            <Button Clicked="SelectLettersButton_Clicked"
                     Text="Arztbriefe wählen"
                     TextColor="White"
                     FontAttributes="Bold"
@@ -32,6 +32,6 @@
                     HeightRequest="50"
                     WidthRequest="400"
                     BorderRadius="10" />
-            </Grid>
-	</ContentPage.Content>
+        </Grid>
+    </ContentPage.Content>
 </local:CustomContentPage>

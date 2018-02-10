@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace myMD.View.AbstractPages
+namespace myMDesktop.View.AbstractPages
 {
     /// <summary>
     /// Code-Behind Klasse zur CostumContentPage

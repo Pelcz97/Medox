@@ -13,7 +13,7 @@ namespace myMDesktop
         {
             InitializeComponent();
 
-            MainPage = new myMDesktop.View.SendDataPage();
+            MainPage = new NavigationPage(new View.SendDataTabPages.SendDataPage());
         }
 
 		protected override void OnStart ()

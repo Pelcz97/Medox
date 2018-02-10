@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms.Internals;
 
-namespace myMD.ViewModel.SendDataTabViewModel
+namespace myMDesktop.ViewModel.SendDataTabViewModel
 {
     /// <summary>
     /// Die SelectDoctorsLetterViewModel Klasse bearbeitet die Auswahl der DoctorsLetter die zum Senden freigegeben werden sollen.

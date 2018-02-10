@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
-    x:Class="myMD.View.SendDataTabPages.SelectDevicePage">
+    xmlns:local="clr-namespace:myMDesktop.View.AbstractPages;assembly=myMDesktop"
+    x:Class="myMDesktop.View.SendDataTabPages.SelectDevicePage">
     <ContentPage.ToolbarItems>
-            <ToolbarItem Name="CancelSelectDevice" Text="Abbrechen" 
+        <ToolbarItem Name="CancelSelectDevice" Text="Abbrechen" 
                         Order="Primary" Priority="-1" Clicked="CancelSelectDevice_Clicked"/>
-            <ToolbarItem Name="ScanForDevices" Text="Scan" 
+        <ToolbarItem Name="ScanForDevices" Text="Scan" 
                         Order="Primary" Priority="1" Command="{Binding ScanForDevices_Clicked}"/>
-        </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
         <StackLayout>
@@ -37,7 +37,7 @@
                                             <RowDefinition Height="17" />
                                         </Grid.RowDefinitions>
 
-                                            <Label Text="PH1" 
+                                        <Label Text="PH1" 
                                             TextColor="#4A4A4A" 
                                             FontSize="Small" 
                                             FontAttributes="Bold" 
@@ -45,30 +45,30 @@
                                             HorizontalTextAlignment="Start" 
                                             VerticalTextAlignment="Start" 
                                             VerticalOptions="Start"/>
-                                            
-                                            <Label Text="PH2" 
+
+                                        <Label Text="PH2" 
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 
                                             FontAttributes="Bold" 
                                             Grid.Row="0" 
                                             HorizontalOptions="EndAndExpand"/>
-                                            
-                                            <Label Text="{Binding DeviceName}" 
+
+                                        <Label Text="{Binding DeviceName}" 
                                             TextColor="#D0001E" 
                                             FontSize="35" 
                                             FontAttributes="Bold" 
                                             HorizontalTextAlignment="Start" 
                                             Grid.Row="1" />
-                                            
-                                            <Label Text="PH3" 
+
+                                        <Label Text="PH3" 
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             FontAttributes="Bold" 
                                             HorizontalTextAlignment="Start" 
                                             Grid.Row="2" />
-                                            
-                                            <Label Text="PH4" 
+
+                                        <Label Text="PH4" 
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 
@@ -83,5 +83,5 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
-	</ContentPage.Content>
+    </ContentPage.Content>
 </local:CustomContentPage>
