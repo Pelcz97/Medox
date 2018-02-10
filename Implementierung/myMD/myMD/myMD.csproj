@@ -85,6 +85,7 @@
     <Compile Include="Model\ParserModel\FileToDatabaseParser.cs" />
     <Compile Include="Model\ParserModel\Hl7ToDatabaseParser.cs" />
     <Compile Include="Model\ParserModel\IHl7ParserHelper.cs" />
+    <Compile Include="Model\TransmissionModel\IBluetoothHelper.cs" />
     <Compile Include="myMDPage.xaml.cs">
       <DependentUpon>myMDPage.xaml</DependentUpon>
     </Compile>
