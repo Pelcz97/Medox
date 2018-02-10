@@ -34,7 +34,6 @@ namespace myMD.View.SendDataTabPages
         /// <param name="e">Event des Senders</param>
         async void CancelSelectDevice_Clicked(object sender, EventArgs e)
         {
-            vm.StopScan();
             await Navigation.PopModalAsync();
         }
 

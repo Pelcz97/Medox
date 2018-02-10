@@ -2,12 +2,11 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Windows.Input;
-using Plugin.BluetoothLE;
-using ble.net;
+using nexus.protocols.ble;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using System.Linq;
-
+using nexus.protocols.ble.scan;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
@@ -25,26 +24,27 @@ namespace myMD.ViewModel.SendDataTabViewModel
         public ObservableCollection<ScanResultViewModel> DeviceList { get; }
 
         /// <summary>
-        /// Boolean, ob das Gerät des Nutzers gerade die Umbegung nach Geräten durchsucht
-        /// </summary>
-        private bool isScanning { get; set; }
-
-        /// <summary>
-        /// Ergebniss des Scans
-        /// </summary>
-        public IDisposable scan { get; set; }
-
-        /// <summary>
         /// ICommand um das Antippen des Scan-Buttons zu handeln
         /// </summary>
         public ICommand ScanForDevices_Clicked { get => new Command(StartScan); }
+
+        public IBlePeripheral ConnectedDevice { get; set; }
 
         /// <summary>
         /// Konstruktor für ein SelectDeviceViewModel
         /// </summary>
         public SelectDeviceViewModel()
         {
-            this.DeviceList = new ObservableCollection<ScanResultViewModel>();   
+            ConnectedDevice = null;
+
+            if (BluetoothAdapter.AdapterCanBeEnabled && BluetoothAdapter.CurrentState.IsDisabledOrDisabling())
+            {
+                BluetoothAdapter.EnableAdapter();
+            }
+
+            BluetoothAdapter.CurrentState.Subscribe(state => Debug.WriteLine("New State: {0}", state));
+
+            this.DeviceList = new ObservableCollection<ScanResultViewModel>();
         }
 
         /// <summary>
@@ -53,63 +53,46 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// Dann wird geprüft ob Bluetooth für das Gerät verfügbar ist.
         /// Danach wird der Scan gestartet und die gefundenen Geräte in die Liste <see cref="T:myMD.ViewModel.SendDataTabViewModel.SelectDeviceLetterViewModel.DeviceList"/> gespeichert.
         /// </summary>
-        public void StartScan(){
-            if (isScanning == true)
+        public async void StartScan(){
+
+            await BluetoothAdapter.ScanForBroadcasts(peripheral =>
             {
-                scan.Dispose();
-                DeviceList.Clear();
-            }
+                Device.BeginInvokeOnMainThread(
+                   () =>
+                   {
+                       ScanResultViewModel test = new ScanResultViewModel();
+                       test.Device = peripheral;
 
-            AdapterStatus status = CrossBleAdapter.Current.Status;
-
-            CrossBleAdapter.Current.WhenStatusChanged().Subscribe(x =>
-            {
-                Debug.WriteLine(status);
-            });
-
-                isScanning = true;
-
-
-                this.scan = CrossBleAdapter.Current.ScanWhenAdapterReady().Subscribe(scanResult =>
-                {
-                    ScanResultViewModel test = new ScanResultViewModel();
-                    test.Device = scanResult.Device;
-                if (test != null && DeviceList.All(x => x.Device != test.Device) && test.Device.Name != null)
-                    {
+                    if (peripheral != null && DeviceList.All(x => x.Device.DeviceId != test.Device.DeviceId)){
                         DeviceList.Add(test);
-                        DeviceList.FirstOrDefault();
-                        Debug.WriteLine("Device: " + test.Device);
-                        Debug.WriteLine("Device.Name: " + test.Device.Name);
-                        Debug.WriteLine("Device.UUID: " + test.Device.Uuid);
                     }
-                });
 
-        }
-
-        /// <summary>
-        /// Methode um einen Scan zu stoppen.
-        /// </summary>
-        public void StopScan()
-        {
-            if (isScanning)
-            {
-                this.scan.Dispose();
-            }
-            isScanning = false;
+                   });
+            });
         }
 
         /// <summary>
         /// Methode um sich mit einem anderen Gerät zu verbinden
         /// </summary>
         /// <param name="item"></param>
-        public void ConnectToDevice(object item){
+        public async void ConnectToDevice(object item){
             var ScanResultItem = (ScanResultViewModel)item;
-            IDevice device = ScanResultItem.Device;
-            Debug.WriteLine("Gerät = " + device.Name);
-            Debug.WriteLine("PairingStatus = " + device.PairingStatus);
-            Debug.WriteLine("PairingPossible = " + device.IsPairingAvailable());
-            ScanResultItem.Device.Connect();
+            IBlePeripheral device = ScanResultItem.Device;
 
+            Debug.WriteLine("Gerät = " + device.Advertisement.DeviceName);
+
+            var connection = await BluetoothAdapter.ConnectToDevice(device, 
+                                TimeSpan.FromSeconds(15),
+                                progress => Debug.WriteLine(progress));
+
+            if (connection.IsSuccessful())
+            {
+                ConnectedDevice = device;
+            }
+            else
+            {
+                Debug.WriteLine("Connecting failed");
+            }
         }
     }
 }

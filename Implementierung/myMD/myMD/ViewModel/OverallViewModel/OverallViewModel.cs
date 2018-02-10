@@ -1,7 +1,8 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using myMD.Model.TransmissionModel;
 using myMD.ModelInterface.ModelFacadeInterface;
-using Plugin.BluetoothLE;
+using nexus.protocols.ble;
 using Xamarin.Forms.Internals;
 
 
@@ -41,8 +42,7 @@ namespace myMD.ViewModel.OverallViewModel
             
         }
 
-        protected IAdapter BleAdapter => CrossBleAdapter.Current;
-
+        protected IBluetoothLowEnergyAdapter BluetoothAdapter => Xamarin.Forms.DependencyService.Get<IBluetoothHelper>().Adapter;
 
     }
 }

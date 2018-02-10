@@ -9,6 +9,7 @@ using myMD.View.MedicationTabPages;
 using myMD.View.OverviewTabPages;
 using myMD.View.ProfileTabPages;
 using myMD.View.SendDataTabPages;
+using nexus.protocols.ble;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 

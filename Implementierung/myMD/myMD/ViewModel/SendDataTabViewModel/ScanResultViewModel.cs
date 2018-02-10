@@ -1,4 +1,5 @@
 ﻿using System;
+using nexus.protocols.ble.scan;
 using Plugin.BluetoothLE;
 using Xamarin.Forms.Internals;
 
@@ -13,18 +14,12 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// <summary>
         /// Das gefundene Gerät
         /// </summary>
-        public IDevice Device { get; set; }
-
-        bool connected;
-
-        Guid uuid;
-
-        string localName;
+        public IBlePeripheral Device { get; set; }
 
         /// <summary>
         /// Der Name des Gerätes
         /// </summary>
-        public string DeviceName { get => this.Device.Name; }
+        public string DeviceName { get => this.Device.Advertisement.DeviceName; }
 
         /// <summary>
         /// Boolean, ob man schon mit dem Gerät verbunden ist
