@@ -74,10 +74,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SendDataPage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SendDataPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </Page>
+    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\TransmittingDataPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
