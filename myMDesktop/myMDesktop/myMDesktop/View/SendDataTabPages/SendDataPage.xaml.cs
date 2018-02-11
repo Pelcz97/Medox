@@ -2,6 +2,7 @@
 using myMDesktop.View.AbstractPages;
 using myMDesktop.ViewModel.SendDataTabViewModel;
 using Xamarin.Forms;
+using Xamarin.Forms.Core;
 using Xamarin.Forms.Internals;
 
 namespace myMDesktop.View.SendDataTabPages
