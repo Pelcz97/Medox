@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using myMD.Model.TransmissionModel;
 using myMD.ModelInterface.ModelFacadeInterface;
+using nexus.core;
 using nexus.protocols.ble;
 using Xamarin.Forms.Internals;
 
@@ -33,16 +35,19 @@ namespace myMD.ViewModel.OverallViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        protected IBluetoothLowEnergyAdapter BluetoothAdapter => Xamarin.Forms.DependencyService.Get<IBluetoothHelper>().Adapter;
+
         /// <summary>
         /// Konstruktor für ein OverallViewModel
         /// </summary>
         public OverallViewModel()
         {
             ModelFacade = App.Model;
-            
+
+            BluetoothAdapter.CurrentState.Subscribe(state => Debug.WriteLine("New State: {0}", state));   
         }
 
-        protected IBluetoothLowEnergyAdapter BluetoothAdapter => Xamarin.Forms.DependencyService.Get<IBluetoothHelper>().Adapter;
+
 
     }
 }

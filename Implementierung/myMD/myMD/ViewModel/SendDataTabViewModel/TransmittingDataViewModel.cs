@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using nexus.protocols.ble.scan;
 using System.Collections.ObjectModel;
 using myMD.ViewModel.OverviewTabViewModel;
+using nexus.protocols.ble.gatt.adopted;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {

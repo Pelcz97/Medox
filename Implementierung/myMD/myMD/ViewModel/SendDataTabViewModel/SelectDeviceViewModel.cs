@@ -7,6 +7,9 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using System.Linq;
 using nexus.protocols.ble.scan;
+using System.Threading.Tasks;
+using nexus.protocols.ble.gatt;
+using nexus.protocols.ble.gatt.adopted;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
@@ -24,6 +27,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
         public ObservableCollection<ScanResultViewModel> DeviceList { get; }
 
         public IBlePeripheral ConnectedDevice { get; set; }
+
+        public IBleGattServerConnection serverConnection;
 
         /// <summary>
         /// Konstruktor für ein SelectDeviceViewModel
@@ -88,7 +93,43 @@ namespace myMD.ViewModel.SendDataTabViewModel
             if (connection.IsSuccessful())
             {
                 ConnectedDevice = device;
-                
+                using (serverConnection = connection.GattServer)
+                    try
+                    {
+                        var known = new KnownAttributes();
+
+                        //Guid like: xxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+                        Guid TestService = new Guid("1234567899-1111-1111-1111-1234567899");
+                        Guid TestCharacteristic = new Guid("1234567899-2222-2222-2222-1234567899");
+                        Guid TestDescriptor = new Guid("1234567899-3333-3333-3333-1234567899");
+
+                        // You can add descriptions for any desired
+                        // characteristics, services, and descriptors
+                        known.AddService(TestService, "Foo");
+                        known.AddCharacteristic(TestCharacteristic, "Bar");
+                        known.AddDescriptor(TestDescriptor, "Baz");
+
+                        // There are shortcuts to add all the attributes
+                        // that have been adopted by the Bluetooth SIG
+                        known.AddAdoptedServices();
+                        known.AddAdoptedCharacteristics();
+                        known.AddAdoptedDescriptors();
+
+                        // You can also create a new KnownAttributes with all
+                        // the above adopted attributes already populated:
+                        known = KnownAttributes.CreateWithAdoptedAttributes();
+
+                        // The resulting value of the characteristic is returned. In nearly all cases this
+                        // will be the same value that was provided to the write call (e.g. `byte[]{ 1, 2, 3 }`)
+                        var value = await serverConnection.WriteCharacteristicValue(
+                        TestService,
+                        TestCharacteristic,
+                        new byte[] { 1, 2, 3 });
+                    }
+                    catch (GattException ex)
+                    {
+                        Debug.WriteLine(ex.ToString());
+                    }
             }
             else
             {
