@@ -242,3 +242,4 @@ D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Debug\MultipleQual
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Debug\Plugin.BluetoothLE.pri.xml
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Debug\ProjectArchitectures.txt
+D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Debug\myMDesktop.UWP.csprojResolveAssemblyReference.cache
