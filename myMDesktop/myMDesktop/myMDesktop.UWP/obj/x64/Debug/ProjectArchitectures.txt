@@ -1,1 +1,0 @@
-D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\myMDesktop.UWP.csproj;x64

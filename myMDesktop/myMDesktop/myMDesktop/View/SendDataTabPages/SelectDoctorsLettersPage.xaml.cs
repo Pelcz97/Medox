@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using myMDesktop.View.AbstractPages;
+﻿
 using myMDesktop.ViewModel.SendDataTabViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -11,7 +9,7 @@ namespace myMDesktop.View.SendDataTabPages
     /// Code-Behind Klasse zur SelectDoctorsLettersPage
     /// </summary>
     [Preserve(AllMembers = true)]
-    public partial class SelectDoctorsLettersPage : CustomContentPage
+    public partial class SelectDoctorsLettersPage : ContentPage
     {
         /// <summary>
         /// Das ViewModel, zu welchem gebinded werden soll.
@@ -34,6 +32,13 @@ namespace myMDesktop.View.SendDataTabPages
         /// <param name="e">Das Event, dass des Senders</param>
         async void CancelSelectDoctorsLetters_Clicked(object sender, System.EventArgs e)
         {
+            await Navigation.PopModalAsync();
+        }
+
+
+        async void ConfirmSelectDoctorsLetters_Clicked(object sender, System.EventArgs e)
+        {
+            vm.SelectionConfirmed();
             await Navigation.PopModalAsync();
         }
     }

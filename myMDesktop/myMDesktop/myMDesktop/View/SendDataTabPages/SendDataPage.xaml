@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="myMDesktop.View.SendDataTabPages.SendDataPage"
-    xmlns:local="clr-namespace:myMDesktop.View.AbstractPages;assembly=myMDesktop"
-    Title="Senden">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myMDesktop.View.SendDataTabPages.SendDataPage">
     <ContentPage.Content>
         <Grid x:Name="Grid" RowSpacing="1" ColumnSpacing="1" Margin="15,0,15,15">
             <Grid.RowDefinitions>
@@ -29,4 +27,4 @@
                     BorderRadius="10" />
         </Grid>
     </ContentPage.Content>
-</local:CustomContentPage>
+</ContentPage>

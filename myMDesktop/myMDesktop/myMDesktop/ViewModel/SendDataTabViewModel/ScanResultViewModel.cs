@@ -1,5 +1,4 @@
 ﻿using System;
-using Plugin.BluetoothLE;
 using Xamarin.Forms.Internals;
 
 namespace myMDesktop.ViewModel.SendDataTabViewModel
@@ -10,21 +9,11 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class ScanResultViewModel
     {
-        /// <summary>
-        /// Das gefundene Gerät
-        /// </summary>
-        public IDevice Device { get; set; }
-
-        bool connected;
-
-        Guid uuid;
-
-        string localName;
 
         /// <summary>
         /// Der Name des Gerätes
         /// </summary>
-        public string DeviceName { get => this.Device.Name; }
+        public string DeviceName { get => "Test"; }
 
         /// <summary>
         /// Boolean, ob man schon mit dem Gerät verbunden ist

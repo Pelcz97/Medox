@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
-//using myMD.ModelInterface.ModelFacadeInterface;
-using Plugin.BluetoothLE;
+
 using Xamarin.Forms.Internals;
 
 
-namespace myMDesktop.ViewModel.OverallViewModel
+namespace myMD.ViewModel.OverallViewModel
 {
     [Preserve(AllMembers = true)]
     /// <summary>
@@ -13,10 +13,6 @@ namespace myMDesktop.ViewModel.OverallViewModel
     /// </summary>
     public class OverallViewModel : INotifyPropertyChanged
     {
-        /// <summary>
-        /// Attribut für die ModelFacade
-        /// </summary>
-        //protected IModelFacade ModelFacade;
 
         /// <summary>
         /// Attribut für ein PropertyChangedEventHandler
@@ -37,13 +33,10 @@ namespace myMDesktop.ViewModel.OverallViewModel
         /// </summary>
         public OverallViewModel()
         {
-            //ModelFacade = App.Model;
-
+            
         }
 
-        protected IAdapter BleAdapter => CrossBleAdapter.Current;
 
 
     }
 }
-

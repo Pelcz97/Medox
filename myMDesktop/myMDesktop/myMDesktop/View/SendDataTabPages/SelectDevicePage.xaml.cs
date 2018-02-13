@@ -1,5 +1,4 @@
 ﻿using System;
-using myMDesktop.View.AbstractPages;
 using Xamarin.Forms;
 using myMDesktop.ViewModel.SendDataTabViewModel;
 using Xamarin.Forms.Internals;
@@ -10,7 +9,7 @@ namespace myMDesktop.View.SendDataTabPages
     /// Code-Behind Klasse zur SelectDevicePage
     /// </summary>
     [Preserve(AllMembers = true)]
-    public partial class SelectDevicePage : CustomContentPage
+    public partial class SelectDevicePage : ContentPage
     {
         /// <summary>
         /// Das ViewModel, zu welchem gebinded werden soll.
@@ -18,7 +17,7 @@ namespace myMDesktop.View.SendDataTabPages
         SelectDeviceViewModel vm;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:myMDesktop.View.SendDataTabPages.SelectDevicePage"/> class.
+        /// Initializes a new instance of the <see cref="T:myMD.View.SendDataTabPages.SelectDevicePage"/> class.
         /// </summary>
         public SelectDevicePage()
         {
@@ -34,7 +33,6 @@ namespace myMDesktop.View.SendDataTabPages
         /// <param name="e">Event des Senders</param>
         async void CancelSelectDevice_Clicked(object sender, EventArgs e)
         {
-            vm.StopScan();
             await Navigation.PopModalAsync();
         }
 
@@ -45,7 +43,13 @@ namespace myMDesktop.View.SendDataTabPages
         /// <param name="e">Event des Senders</param>
         void DeviceItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            vm.ConnectToDevice(e.SelectedItem);
+            
+        }
+
+        void ConfirmDevice_Clicked(object sender, System.EventArgs e)
+        {
+           
+            Navigation.PopModalAsync();
         }
     }
 }

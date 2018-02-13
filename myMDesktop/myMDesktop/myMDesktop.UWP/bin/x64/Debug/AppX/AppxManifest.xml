@@ -7,16 +7,16 @@
 
     Weitere Informationen zu Paketmanifestdateien finden Sie unter http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="83c4ac61-170f-4d5b-b99d-1fac685d2c0f" Publisher="CN=Jan-Luca" Version="1.0.0.0" ProcessorArchitecture="x64" />
-  <mp:PhoneIdentity PhoneProductId="f736c883-f105-4d30-a719-4bf328872f5e" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="ec0cc741-fd3e-485c-81be-68815c480690" Publisher="CN=Pierce Boggan" Version="1.0.0.0" ProcessorArchitecture="x64" />
+  <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>myMDesktop.UWP</DisplayName>
-    <PublisherDisplayName>Jan-Luca</PublisherDisplayName>
+    <PublisherDisplayName>Pierce Boggan</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
-    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.16299.0" />
-    <PackageDependency Name="Microsoft.NET.CoreRuntime.1.1" MinVersion="1.1.25305.1" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.16299.0" MaxVersionTested="10.0.16299.0" />
+    <PackageDependency Name="Microsoft.NET.CoreRuntime.2.1" MinVersion="2.1.25801.2" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
     <PackageDependency Name="Microsoft.VCLibs.140.00.Debug" MinVersion="14.0.25830.2" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
   <Resources>
@@ -34,14 +34,12 @@
     <Capability Name="internetClient" />
   </Capabilities>
   <build:Metadata>
-    <build:Item Name="SharedGUID" Value="532cba51-92a6-4794-90b8-c9f81084363e" />
-    <build:Item Name="CodeSharingProject" Value="248F659F-DAC5-46E8-AC09-60EC9FC95053" />
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v5.0" />
     <build:Item Name="VisualStudio" Version="15.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Enterprise 2017" />
     <build:Item Name="OperatingSystem" Version="10.0.16299.15 (WinBuild.160101.0800)" />
     <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="15.0.27128.1" />
-    <build:Item Name="ProjectGUID" Value="{AEC4FA0B-2CCB-4F17-B33D-66A584DA8DA7}" />
+    <build:Item Name="ProjectGUID" Value="{C1D89293-3C05-4BAC-914E-9EEB5A899B08}" />
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="Managed" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="15.0.27128.1" />

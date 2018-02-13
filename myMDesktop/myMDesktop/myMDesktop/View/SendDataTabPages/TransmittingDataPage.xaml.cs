@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using myMDesktop.View.AbstractPages;
+
 using myMDesktop.ViewModel.SendDataTabViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -11,7 +10,7 @@ namespace myMDesktop.View.SendDataTabPages
     /// Code-Behind Klasse zurTransmittingDataPage.
     /// </summary>
     [Preserve(AllMembers = true)]
-    public partial class TransmittingDataPage : CustomContentPage
+    public partial class TransmittingDataPage : ContentPage
     {
         /// <summary>
         /// Das ViewModel, zu welchem gebinded werden soll.
@@ -19,7 +18,7 @@ namespace myMDesktop.View.SendDataTabPages
         TransmittingDataViewModel vm;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:myMDesktop.View.SendDataTabPages.TransmittingDataPage"/> class.
+        /// Initializes a new instance of the <see cref="T:myMD.View.SendDataTabPages.TransmittingDataPage"/> class.
         /// </summary>
         public TransmittingDataPage()
         {
@@ -35,11 +34,9 @@ namespace myMDesktop.View.SendDataTabPages
         /// <param name="e">E.</param>
         public async void SelectLettersButton_Clicked(object sender, EventArgs e)
         {
-            var view = new NavigationPage(new SelectDoctorsLettersPage())
-            {
-                BarTextColor = Color.White,
-                BarBackgroundColor = Color.FromRgb(25, 25, 40)
-            };
+            var view = new NavigationPage(new SelectDoctorsLettersPage());
+            view.BarTextColor = Color.White;
+            view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             await Navigation.PushModalAsync(view);
         }
 
