@@ -13,7 +13,7 @@ namespace myMDesktop.View.SendDataTabPages {
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\View\\SendDataTabPages\\SelectDoc" +
         "torsLettersPage.xaml")]
-    public partial class SelectDoctorsLettersPage : global::Xamarin.Forms.ContentPage {
+    public partial class SelectDoctorsLettersPage : global::myMDesktop.View.AbstractPages.CustomContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {

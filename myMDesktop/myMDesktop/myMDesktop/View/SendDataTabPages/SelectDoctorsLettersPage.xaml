@@ -1,11 +1,12 @@
-﻿ ?xml version="1.0" encoding="UTF-8"?><local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:CustomContentPage xmlns:forms="using:Xamarin.Forms.Platform.UWP" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:myMDesktop.View.AbstractPages;assembly=myMDesktop"
     x:Class="myMDesktop.View.SendDataTabPages.SelectDoctorsLettersPage"
     Title="Arztbriefe wählen">
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="CancelSelectDoctorsLetters" Text="Abbrechen" 
-                        Order="Primary" Priority="-1" Clicked="CancelSelectDoctorsLetters_Clicked"/>
+                        Order="Primary" Priority="1" Clicked="CancelSelectDoctorsLetters_Clicked"/>
     </ContentPage.ToolbarItems>
 
 </local:CustomContentPage>

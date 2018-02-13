@@ -5,7 +5,7 @@
     x:Class="myMDesktop.View.SendDataTabPages.SelectDevicePage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="CancelSelectDevice" Text="Abbrechen" 
-                        Order="Primary" Priority="-1" Clicked="CancelSelectDevice_Clicked"/>
+                        Order="Primary" Priority="1" Clicked="CancelSelectDevice_Clicked"/>
         <ToolbarItem Name="ScanForDevices" Text="Scan" 
                         Order="Primary" Priority="1" Command="{Binding ScanForDevices_Clicked}"/>
     </ContentPage.ToolbarItems>

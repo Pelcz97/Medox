@@ -13,11 +13,15 @@ namespace myMDesktop.View.SendDataTabPages {
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\View\\SendDataTabPages\\Transmitt" +
         "ingDataPage.xaml")]
-    public partial class TransmittingDataPage : global::Xamarin.Forms.ContentPage {
+    public partial class TransmittingDataPage : global::myMDesktop.View.AbstractPages.CustomContentPage {
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Grid Grid;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(TransmittingDataPage));
+            Grid = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Grid>(this, "Grid");
         }
     }
 }

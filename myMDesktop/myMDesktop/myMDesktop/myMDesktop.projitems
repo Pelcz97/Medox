@@ -36,6 +36,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SendDataPage.xaml.cs">
       <DependentUpon>SendDataPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\TransmittingDataPage.xaml.cs">
       <DependentUpon>TransmittingDataPage.xaml</DependentUpon>
@@ -74,11 +75,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SendDataPage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\TransmittingDataPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\TransmittingDataPage.xaml">
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\SendDataTabPages\SendDataPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

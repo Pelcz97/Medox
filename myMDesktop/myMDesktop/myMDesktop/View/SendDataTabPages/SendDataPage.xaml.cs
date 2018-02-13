@@ -2,7 +2,6 @@
 using myMDesktop.View.AbstractPages;
 using myMDesktop.ViewModel.SendDataTabViewModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Core;
 using Xamarin.Forms.Internals;
 
 namespace myMDesktop.View.SendDataTabPages
@@ -19,7 +18,7 @@ namespace myMDesktop.View.SendDataTabPages
         SendDataViewModel vm;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:myMD.View.SendDataTabPages.SendDataPage"/> class.
+        /// Initializes a new instance of the <see cref="T:myMDesktop.View.SendDataTabPages.SendDataPage"/> class.
         /// </summary>
         public SendDataPage()
         {

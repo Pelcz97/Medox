@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace myMD.View.SendDataTabPages {
+namespace myMDesktop.View.SendDataTabPages {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\View\\SendDataTabPages\\SendDataP" +
         "age.xaml")]
-    public partial class SendDataPage : global::myMD.View.AbstractPages.CustomContentPage {
+    public partial class SendDataPage : global::myMDesktop.View.AbstractPages.CustomContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Grid Grid;
