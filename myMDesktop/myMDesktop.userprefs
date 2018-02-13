@@ -1,7 +1,7 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="myMDesktop/myMDesktop.UWP/MainPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="myMDesktop/myMDesktop.UWP/Properties/Default.rd.xml">
     <Files>
-      <File FileName="myMDesktop/myMDesktop/MainPage.xaml" Line="7" Column="8" />
+      <File FileName="myMDesktop/myMDesktop/MainPage.xaml" Line="7" Column="15" />
       <File FileName="myMDesktop/myMDesktop/MainPage.xaml.cs" Line="1" Column="1" />
       <File FileName="myMDesktop/myMDesktop/App.xaml.cs" Line="13" Column="10" />
       <File FileName="myMDesktop/myMDesktop/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" Line="1" Column="1" />
@@ -14,6 +14,10 @@
       <File FileName="myMDesktop/myMDesktop.UWP/App.xaml.cs" Line="1" Column="1" />
       <File FileName="myMDesktop/myMDesktop.UWP/MainPage.xaml" Line="1" Column="1" />
       <File FileName="myMDesktop/myMDesktop.UWP/MainPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="myMDesktop/myMDesktop.UWP/project.json" Line="1" Column="1" />
+      <File FileName="myMDesktop/myMDesktop.UWP/Package.appxmanifest" Line="1" Column="1" />
+      <File FileName="myMDesktop/myMDesktop.UWP/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="myMDesktop/myMDesktop.UWP/Properties/Default.rd.xml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
