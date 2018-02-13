@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-13T21:15:35.895</Modified>
+      <Modified>2018-02-13T21:41:53.260</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\myMDesktop.UWP.exe">
       <PackagePath>entrypoint\myMDesktop.UWP.exe</PackagePath>
-      <Modified>2018-02-13T21:15:34.141</Modified>
+      <Modified>2018-02-13T21:41:52.156</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -103,121 +103,121 @@
       <PackagePath>Plugin.BluetoothLE.dll</PackagePath>
       <Modified>2018-01-22T16:44:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.collections\4.0.11\lib\netcore50\System.Collections.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.collections\4.3.0\lib\netcore50\System.Collections.dll">
       <PackagePath>System.Collections.dll</PackagePath>
-      <Modified>2016-06-11T21:13:24.000</Modified>
+      <Modified>2016-11-05T03:55:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.diagnostics.tools\4.0.1\lib\netcore50\System.Diagnostics.Tools.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.diagnostics.tools\4.3.0\lib\netcore50\System.Diagnostics.Tools.dll">
       <PackagePath>System.Diagnostics.Tools.dll</PackagePath>
-      <Modified>2016-06-11T21:13:32.000</Modified>
+      <Modified>2016-11-05T03:55:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.diagnostics.tracing\4.1.0\lib\netcore50\System.Diagnostics.Tracing.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.diagnostics.tracing\4.3.0\lib\netcore50\System.Diagnostics.Tracing.dll">
       <PackagePath>System.Diagnostics.Tracing.dll</PackagePath>
-      <Modified>2016-06-11T21:13:38.000</Modified>
+      <Modified>2016-11-05T03:55:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.globalization\4.0.11\lib\netcore50\System.Globalization.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.globalization\4.3.0\lib\netcore50\System.Globalization.dll">
       <PackagePath>System.Globalization.dll</PackagePath>
-      <Modified>2016-06-11T21:13:38.000</Modified>
+      <Modified>2016-11-05T03:56:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.globalization.calendars\4.0.1\lib\netcore50\System.Globalization.Calendars.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.globalization.calendars\4.3.0\lib\netcore50\System.Globalization.Calendars.dll">
       <PackagePath>System.Globalization.Calendars.dll</PackagePath>
-      <Modified>2016-06-11T21:13:38.000</Modified>
+      <Modified>2016-11-05T03:55:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.io\4.1.0\lib\netcore50\System.IO.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.io\4.3.0\lib\netcore50\System.IO.dll">
       <PackagePath>System.IO.dll</PackagePath>
-      <Modified>2016-06-11T21:13:50.000</Modified>
+      <Modified>2016-11-05T03:56:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.reflection\4.1.0\lib\netcore50\System.Reflection.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.reflection\4.3.0\lib\netcore50\System.Reflection.dll">
       <PackagePath>System.Reflection.dll</PackagePath>
-      <Modified>2016-06-11T21:14:16.000</Modified>
+      <Modified>2016-11-05T03:56:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.reflection.extensions\4.0.1\lib\netcore50\System.Reflection.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.reflection.extensions\4.3.0\lib\netcore50\System.Reflection.Extensions.dll">
       <PackagePath>System.Reflection.Extensions.dll</PackagePath>
-      <Modified>2016-06-11T21:14:14.000</Modified>
+      <Modified>2016-11-05T03:56:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.reflection.primitives\4.0.1\lib\netcore50\System.Reflection.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.reflection.primitives\4.3.0\lib\netcore50\System.Reflection.Primitives.dll">
       <PackagePath>System.Reflection.Primitives.dll</PackagePath>
-      <Modified>2016-06-11T21:14:18.000</Modified>
+      <Modified>2016-11-05T03:56:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.resources.resourcemanager\4.0.1\lib\netcore50\System.Resources.ResourceManager.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.resources.resourcemanager\4.3.0\lib\netcore50\System.Resources.ResourceManager.dll">
       <PackagePath>System.Resources.ResourceManager.dll</PackagePath>
-      <Modified>2016-06-11T21:14:20.000</Modified>
+      <Modified>2016-11-05T03:56:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.runtime\4.1.0\lib\netcore50\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.runtime\4.3.0\lib\netcore50\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
-      <Modified>2016-06-11T21:14:32.000</Modified>
+      <Modified>2016-11-05T03:57:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.runtime.handles\4.0.1\lib\netstandard1.3\System.Runtime.Handles.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.runtime.handles\4.3.0\lib\netstandard1.3\System.Runtime.Handles.dll">
       <PackagePath>System.Runtime.Handles.dll</PackagePath>
-      <Modified>2016-06-11T21:14:24.000</Modified>
+      <Modified>2016-11-05T03:56:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.runtime.interopservices\4.1.0\lib\netcore50\System.Runtime.InteropServices.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.runtime.interopservices\4.3.0\lib\netcore50\System.Runtime.InteropServices.dll">
       <PackagePath>System.Runtime.InteropServices.dll</PackagePath>
-      <Modified>2016-06-11T21:14:22.000</Modified>
+      <Modified>2016-11-05T03:56:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.text.encoding\4.0.11\lib\netcore50\System.Text.Encoding.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.text.encoding\4.3.0\lib\netcore50\System.Text.Encoding.dll">
       <PackagePath>System.Text.Encoding.dll</PackagePath>
-      <Modified>2016-06-11T21:14:48.000</Modified>
+      <Modified>2016-11-05T03:57:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.text.encoding.extensions\4.0.11\lib\netcore50\System.Text.Encoding.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.text.encoding.extensions\4.3.0\lib\netcore50\System.Text.Encoding.Extensions.dll">
       <PackagePath>System.Text.Encoding.Extensions.dll</PackagePath>
-      <Modified>2016-06-11T21:14:50.000</Modified>
+      <Modified>2016-11-05T03:57:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.threading.tasks\4.0.11\lib\netcore50\System.Threading.Tasks.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.threading.tasks\4.3.0\lib\netcore50\System.Threading.Tasks.dll">
       <PackagePath>System.Threading.Tasks.dll</PackagePath>
-      <Modified>2016-06-11T21:14:54.000</Modified>
+      <Modified>2016-11-05T03:57:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.threading.timer\4.0.1\lib\netcore50\System.Threading.Timer.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.any.system.threading.timer\4.3.0\lib\netcore50\System.Threading.Timer.dll">
       <PackagePath>System.Threading.Timer.dll</PackagePath>
-      <Modified>2016-06-11T21:14:58.000</Modified>
+      <Modified>2016-11-05T03:57:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win.microsoft.win32.primitives\4.0.1\runtimes\win\lib\netstandard1.3\Microsoft.Win32.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win.microsoft.win32.primitives\4.3.0\runtimes\win\lib\netstandard1.3\Microsoft.Win32.Primitives.dll">
       <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
-      <Modified>2016-06-11T21:13:14.000</Modified>
+      <Modified>2016-11-05T03:55:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win.system.console\4.0.0\runtimes\win\lib\netcore50\System.Console.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win.system.console\4.3.0\runtimes\win\lib\netcore50\System.Console.dll">
       <PackagePath>System.Console.dll</PackagePath>
-      <Modified>2016-06-11T21:13:24.000</Modified>
+      <Modified>2016-11-05T03:55:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win.system.diagnostics.debug\4.0.11\runtimes\win\lib\netcore50\System.Diagnostics.Debug.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win.system.diagnostics.debug\4.3.0\runtimes\win\lib\netcore50\System.Diagnostics.Debug.dll">
       <PackagePath>System.Diagnostics.Debug.dll</PackagePath>
-      <Modified>2016-06-11T21:13:26.000</Modified>
+      <Modified>2016-11-05T03:55:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win.system.io.filesystem\4.0.1\runtimes\win\lib\netcore50\System.IO.FileSystem.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win.system.io.filesystem\4.3.0\runtimes\win\lib\netcore50\System.IO.FileSystem.dll">
       <PackagePath>System.IO.FileSystem.dll</PackagePath>
-      <Modified>2016-06-11T21:13:44.000</Modified>
+      <Modified>2016-11-05T03:56:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win.system.net.primitives\4.0.11\runtimes\win\lib\netcore50\System.Net.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win.system.net.primitives\4.3.0\runtimes\win\lib\netcore50\System.Net.Primitives.dll">
       <PackagePath>System.Net.Primitives.dll</PackagePath>
-      <Modified>2016-06-11T21:14:00.000</Modified>
+      <Modified>2016-11-05T03:56:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win.system.net.sockets\4.1.0\runtimes\win\lib\netcore50\System.Net.Sockets.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win.system.net.sockets\4.3.0\runtimes\win\lib\netcore50\System.Net.Sockets.dll">
       <PackagePath>System.Net.Sockets.dll</PackagePath>
-      <Modified>2016-06-11T21:14:04.000</Modified>
+      <Modified>2016-11-05T03:56:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win.system.runtime.extensions\4.1.0\runtimes\win\lib\netcore50\System.Runtime.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win.system.runtime.extensions\4.3.0\runtimes\win\lib\netcore50\System.Runtime.Extensions.dll">
       <PackagePath>System.Runtime.Extensions.dll</PackagePath>
-      <Modified>2016-06-11T21:14:20.000</Modified>
+      <Modified>2016-11-05T03:56:48.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win7-x64.microsoft.netcore.jit\1.0.3\runtimes\win7-x64\native\clrjit.dll">
       <PackagePath>clrjit.dll</PackagePath>
       <Modified>2016-06-13T16:26:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win7-x64.runtime.native.system.io.compression\4.0.1\runtimes\win7-x64\native\clrcompression.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win7-x64.runtime.native.system.io.compression\4.3.0\runtimes\win7-x64\native\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
-      <Modified>2016-06-13T19:46:18.000</Modified>
+      <Modified>2016-11-05T03:34:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win7.system.private.uri\4.0.2\runtimes\win\lib\netcore50\System.Private.Uri.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win7.system.private.uri\4.3.0\runtimes\win\lib\netcore50\System.Private.Uri.dll">
       <PackagePath>System.Private.Uri.dll</PackagePath>
-      <Modified>2016-07-01T13:48:12.000</Modified>
+      <Modified>2016-11-05T03:56:36.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.appcontext\4.1.0\lib\netcore50\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
       <Modified>2016-06-11T21:13:20.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.buffers\4.0.0\lib\netstandard1.1\System.Buffers.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.buffers\4.3.0\lib\netstandard1.1\System.Buffers.dll">
       <PackagePath>System.Buffers.dll</PackagePath>
-      <Modified>2016-06-11T21:13:14.000</Modified>
+      <Modified>2016-11-05T03:55:30.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.collections.concurrent\4.0.12\lib\netcore50\System.Collections.Concurrent.dll">
       <PackagePath>System.Collections.Concurrent.dll</PackagePath>
@@ -279,9 +279,9 @@
       <PackagePath>System.IO.Compression.ZipFile.dll</PackagePath>
       <Modified>2016-06-11T21:13:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.io.filesystem.primitives\4.0.1\lib\netstandard1.3\System.IO.FileSystem.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.io.filesystem.primitives\4.3.0\lib\netstandard1.3\System.IO.FileSystem.Primitives.dll">
       <PackagePath>System.IO.FileSystem.Primitives.dll</PackagePath>
-      <Modified>2016-06-11T21:13:46.000</Modified>
+      <Modified>2016-11-05T03:56:08.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.io.isolatedstorage\4.0.1\lib\netcore50\System.IO.IsolatedStorage.dll">
       <PackagePath>System.IO.IsolatedStorage.dll</PackagePath>
@@ -315,9 +315,9 @@
       <PackagePath>System.Net.Http.Rtc.dll</PackagePath>
       <Modified>2016-06-11T21:13:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.net.nameresolution\4.0.0\runtimes\win\lib\netcore50\System.Net.NameResolution.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.net.nameresolution\4.3.0\runtimes\win\lib\netcore50\System.Net.NameResolution.dll">
       <PackagePath>System.Net.NameResolution.dll</PackagePath>
-      <Modified>2016-06-11T21:13:58.000</Modified>
+      <Modified>2016-11-05T03:56:26.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.net.networkinformation\4.1.0\runtimes\win\lib\netcore50\System.Net.NetworkInformation.dll">
       <PackagePath>System.Net.NetworkInformation.dll</PackagePath>
@@ -499,13 +499,13 @@
       <PackagePath>System.Text.RegularExpressions.dll</PackagePath>
       <Modified>2016-06-11T21:14:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.threading\4.0.11\lib\netcore50\System.Threading.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.threading\4.3.0\lib\netcore50\System.Threading.dll">
       <PackagePath>System.Threading.dll</PackagePath>
-      <Modified>2016-06-11T21:15:00.000</Modified>
+      <Modified>2016-11-05T03:57:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.threading.overlapped\4.0.1\runtimes\win\lib\netcore50\System.Threading.Overlapped.dll">
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.threading.overlapped\4.3.0\runtimes\win\lib\netcore50\System.Threading.Overlapped.dll">
       <PackagePath>System.Threading.Overlapped.dll</PackagePath>
-      <Modified>2016-06-11T21:14:54.000</Modified>
+      <Modified>2016-11-05T03:57:26.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.threading.tasks.dataflow\4.6.0\lib\netstandard1.1\System.Threading.Tasks.Dataflow.dll">
       <PackagePath>System.Threading.Tasks.Dataflow.dll</PackagePath>
@@ -700,11 +700,11 @@
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-13T21:15:35.581</Modified>
+      <Modified>2018-02-13T21:25:45.393</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\Core\myMDesktop.UWP.exe">
       <PackagePath>myMDesktop.UWP.exe</PackagePath>
-      <Modified>2018-02-13T21:15:35.891</Modified>
+      <Modified>2018-02-13T21:41:53.253</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
