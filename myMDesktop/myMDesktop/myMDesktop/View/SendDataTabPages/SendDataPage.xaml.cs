@@ -3,6 +3,7 @@
 using myMDesktop.ViewModel.SendDataTabViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using Xamarin.Forms.PlatformConfiguration;
 
 namespace myMDesktop.View.SendDataTabPages
 {
@@ -35,8 +36,6 @@ namespace myMDesktop.View.SendDataTabPages
         void SendDataButton_Clicked(object sender, EventArgs e)
         {
             var page = new TransmittingDataPage();
-
-            NavigationPage.SetBackButtonTitle(page, "Senden");
             Navigation.PushAsync(page);
         }
     }
