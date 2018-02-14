@@ -13,7 +13,7 @@ namespace myMDesktop
 		{
 			InitializeComponent();
 
-			MainPage = new myMDesktop.View.SelectDevicePage();
+			MainPage = new myMDesktop.View.SendDataTabPages.SelectDevicePage();
 		}
 
 		protected override void OnStart ()

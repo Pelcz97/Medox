@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace myMDesktop.View {
+namespace myMDesktop.View.SendDataTabPages {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\View\\SendDataTabPages\\SelectDev" +

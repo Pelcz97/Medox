@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="myMDesktop.View.SelectDevicePage">
+             x:Class="myMDesktop.View.SendDataTabPages.SelectDevicePage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="CancelSelectDevice" Text="Abbrechen" 
-                        Order="Primary" Priority="-1" Clicked="CancelSelectDevice_Clicked"/>
+                        Order="Primary" Priority="1"/>
         <ToolbarItem Name="ConfirmDevice" Text="Fertig" 
-                        Order="Primary" Priority="1" Clicked="ConfirmDevice_Clicked"/>
+                        Order="Primary" Priority="1"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
@@ -15,8 +15,7 @@
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding DeviceList}"
-                SeparatorVisibility="Default"
-                ItemSelected="DeviceItemSelected">
+                SeparatorVisibility="Default">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -53,7 +52,7 @@
                                             Grid.Row="0" 
                                             HorizontalOptions="EndAndExpand"/>
 
-                                        <Label Text="{Binding DeviceName}" 
+                                        <Label Text="DeviceName" 
                                             TextColor="#D0001E" 
                                             FontSize="35" 
                                             FontAttributes="Bold" 

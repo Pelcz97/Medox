@@ -1,6 +1,6 @@
-﻿using System;
+﻿using myMDesktop.ViewModel.SendDataTabViewModel;
+using System;
 using Xamarin.Forms;
-using myMDesktop.ViewModel.SendDataTabViewModel;
 using Xamarin.Forms.Internals;
 
 namespace myMDesktop.View.SendDataTabPages
