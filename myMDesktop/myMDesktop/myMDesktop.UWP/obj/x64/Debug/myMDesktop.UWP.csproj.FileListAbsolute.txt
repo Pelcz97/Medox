@@ -307,3 +307,8 @@ D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Debug\System.React
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Debug\System.Reactive.PlatformServices\en-US\System.Reactive.PlatformServices.Strings_PlatformServices.resw
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Debug\System.Reactive.Windows.Threading\en-US\System.Reactive.Windows.Threading.Strings_WindowsThreading.resw
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Debug\Plugin.BluetoothLE.pri.xml
+D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\ReactiveUI.dll
+D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\ReactiveUI.pdb
+D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\Splat.dll
+D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\Splat.pdb
+D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Debug\Splat.pri.xml

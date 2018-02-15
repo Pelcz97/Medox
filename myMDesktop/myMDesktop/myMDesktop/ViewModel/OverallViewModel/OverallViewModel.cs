@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-
+using Plugin.BluetoothLE;
 using Xamarin.Forms.Internals;
 
 
@@ -33,7 +33,8 @@ namespace myMD.ViewModel.OverallViewModel
         /// </summary>
         public OverallViewModel()
         {
-            
+
+            //CrossBleAdapter.Current.WhenStatusChanged().Subscribe(status => { Debug.WriteLine("CrossBLEAdapterstatus : " + status); });
         }
 
 

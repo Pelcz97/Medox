@@ -10,6 +10,8 @@ using Plugin.BluetoothLE;
 using Plugin.BluetoothLE.Server;
 using System.Text;
 using System.Reactive.Linq;
+using ReactiveUI;
+using System.Collections.Generic;
 
 namespace myMDesktop.ViewModel.SendDataTabViewModel
 {
@@ -21,6 +23,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
     {
 
         string output;
+        public static Guid myMDguid = new Guid("00000000-1000-1000-1000-00805F9B0000");
         public string Output
         {
             get => this.output;
@@ -29,12 +32,18 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
 
         private IDisposable notifyBroadcast;
         private IGattServer server { get; set; }
+
+        private IAdapter BleAdapter { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the
         /// <see cref="T:myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel"/> class.
         /// </summary>
-        public TransmittingDataViewModel()
-        {
+        public TransmittingDataViewModel() { 
+
+            
+            CrossBleAdapter.Current.WhenStatusChanged().Subscribe(status => { Debug.WriteLine("CrossBLEAdapterstatus : " + status); });
+            Debug.WriteLine("status : " + CrossBleAdapter.Current.Status);
             StartServer();
 
             /*MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<DoctorsLetterViewModel>>(this, "SelectedLetters", (sender, arg) => {
@@ -65,7 +74,8 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
                 {
                     await this.server.Start(new AdvertisementData
                     {
-                        LocalName = "TestServer"
+                        LocalName = "TestServer",
+                        ServiceUuids = new List<Guid> { myMDguid }
                     });
                 }
             }

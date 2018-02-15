@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "6c7fd811dd18a7f718d7d86e5841b461f95fa205"
+    "signature": "4ecf2a4bbf5caa41a00058aedecb3fa8fdffff39"
   },
   "compilationOptions": {},
   "targets": {
@@ -13,7 +13,8 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
-          "Xamarin.Forms": "2.5.0.274780"
+          "Xamarin.Forms": "2.5.0.274780",
+          "reactiveui": "7.4.0"
         },
         "runtime": {
           "myMDesktop.dll": {}
@@ -33,6 +34,51 @@
         "runtime": {
           "lib/netstandard2.0/Plugin.BluetoothLE.Abstractions.dll": {},
           "lib/netstandard2.0/Plugin.BluetoothLE.dll": {}
+        }
+      },
+      "reactiveui/7.4.0": {
+        "dependencies": {
+          "reactiveui-core": "7.4.0"
+        }
+      },
+      "reactiveui-core/7.4.0": {
+        "dependencies": {
+          "Rx-Main": "2.2.5",
+          "Splat": "1.4.0"
+        },
+        "runtime": {
+          "lib/Net45/ReactiveUI.dll": {}
+        }
+      },
+      "Rx-Core/2.2.5": {
+        "dependencies": {
+          "Rx-Interfaces": "2.2.5"
+        }
+      },
+      "Rx-Interfaces/2.2.5": {},
+      "Rx-Linq/2.2.5": {
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        }
+      },
+      "Rx-Main/2.2.5": {
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5"
+        }
+      },
+      "Rx-PlatformServices/2.2.5": {
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        }
+      },
+      "Splat/1.4.0": {
+        "runtime": {
+          "lib/Net45/Splat.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -353,6 +399,62 @@
       "sha512": "sha512-n47Qkv6Bm/Bku9+uEsi7zG9jnAQZ6fh/NbquZtAfppZn6pNK3uVgKCKlnGDr4R5s8kF6Rgt/XEKut4RSXFNYtA==",
       "path": "plugin.bluetoothle/5.3.2",
       "hashPath": "plugin.bluetoothle.5.3.2.nupkg.sha512"
+    },
+    "reactiveui/7.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ut/4fezqMH3mzkI/SUzmxnYLj8tDwi9NZ8RmLfaEwhmQ7OELBNhsVZqQrG+Hqc1yr1mfPoTW0vyIbQSicLHjuA==",
+      "path": "reactiveui/7.4.0",
+      "hashPath": "reactiveui.7.4.0.nupkg.sha512"
+    },
+    "reactiveui-core/7.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BseZIvDK1MFYjBZ18mZvQJ5hhYz/yZ1U0cs7WG0VVvE37b6PEN9kSS6bPdg+K8N0JFj8AHespHtfup4cEOgyaw==",
+      "path": "reactiveui-core/7.4.0",
+      "hashPath": "reactiveui-core.7.4.0.nupkg.sha512"
+    },
+    "Rx-Core/2.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DfWVTfW6tvRkkqpnRHKxPIvaRZyDJGADuqrE6J2nwejOQbLRWi0rNUwXkViDWz++25BGDy3iRE5OE6Dv8mJxYQ==",
+      "path": "rx-core/2.2.5",
+      "hashPath": "rx-core.2.2.5.nupkg.sha512"
+    },
+    "Rx-Interfaces/2.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FKtG2QfMIeUcfB7r3a89VoAiszX3DTvYETkpC6U0FzWpxRK/mcHyzYOsniDfag+NsDG0P1k1c8yNSefXKp3t2A==",
+      "path": "rx-interfaces/2.2.5",
+      "hashPath": "rx-interfaces.2.2.5.nupkg.sha512"
+    },
+    "Rx-Linq/2.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UTeCIu3cWPExxmTzdiVq7SalqTBhUaomBTaAC9LpYPoAopjlFwA3hjVWXoLkGlDc/44wqJemJuEwFP00KphiFg==",
+      "path": "rx-linq/2.2.5",
+      "hashPath": "rx-linq.2.2.5.nupkg.sha512"
+    },
+    "Rx-Main/2.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qdQ6qENEiLsp/LRdzZlLlodihWN8VDjwNfWa8c2ELjEHZgTdKzt1V4i61gkHVtFKZXe8Px6KupbMP3pZ+1tusQ==",
+      "path": "rx-main/2.2.5",
+      "hashPath": "rx-main.2.2.5.nupkg.sha512"
+    },
+    "Rx-PlatformServices/2.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pMnNEvJVjT+wuDib+W/bi5hhIYcre7dW5yxvKrJxnR4iKJ1VLA/dY2FTtjDriHGx7OeGn12lQewXlH2oHiWFPA==",
+      "path": "rx-platformservices/2.2.5",
+      "hashPath": "rx-platformservices.2.2.5.nupkg.sha512"
+    },
+    "Splat/1.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F2crrxugiQOigrFIhLkgsCsar3k9ZCBYKd845qnskj51A6EsTQdlE8OQ0uakpm+HThYp/sKnvJ6HdotGPeo6hg==",
+      "path": "splat/1.4.0",
+      "hashPath": "splat.1.4.0.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",

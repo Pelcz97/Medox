@@ -997,7 +997,8 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
-          "Xamarin.Forms": "2.5.0.274780"
+          "Xamarin.Forms": "2.5.0.274780",
+          "reactiveui": "7.4.0"
         },
         "compile": {
           "bin/placeholder/myMDesktop.dll": {}
@@ -2398,7 +2399,8 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
-          "Xamarin.Forms": "2.5.0.274780"
+          "Xamarin.Forms": "2.5.0.274780",
+          "reactiveui": "7.4.0"
         },
         "compile": {
           "bin/placeholder/myMDesktop.dll": {}
@@ -3830,7 +3832,8 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
-          "Xamarin.Forms": "2.5.0.274780"
+          "Xamarin.Forms": "2.5.0.274780",
+          "reactiveui": "7.4.0"
         },
         "compile": {
           "bin/placeholder/myMDesktop.dll": {}
@@ -5231,7 +5234,8 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
-          "Xamarin.Forms": "2.5.0.274780"
+          "Xamarin.Forms": "2.5.0.274780",
+          "reactiveui": "7.4.0"
         },
         "compile": {
           "bin/placeholder/myMDesktop.dll": {}
@@ -6663,7 +6667,8 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
-          "Xamarin.Forms": "2.5.0.274780"
+          "Xamarin.Forms": "2.5.0.274780",
+          "reactiveui": "7.4.0"
         },
         "compile": {
           "bin/placeholder/myMDesktop.dll": {}
@@ -8064,7 +8069,8 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
-          "Xamarin.Forms": "2.5.0.274780"
+          "Xamarin.Forms": "2.5.0.274780",
+          "reactiveui": "7.4.0"
         },
         "compile": {
           "bin/placeholder/myMDesktop.dll": {}
@@ -9496,7 +9502,8 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
-          "Xamarin.Forms": "2.5.0.274780"
+          "Xamarin.Forms": "2.5.0.274780",
+          "reactiveui": "7.4.0"
         },
         "compile": {
           "bin/placeholder/myMDesktop.dll": {}

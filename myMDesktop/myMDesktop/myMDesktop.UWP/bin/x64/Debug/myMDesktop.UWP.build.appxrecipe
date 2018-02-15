@@ -34,6 +34,9 @@
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\plugin.bluetoothle\5.3.2\lib\uap10.0\Plugin.BluetoothLE.dll">
       <PackagePath>Plugin.BluetoothLE.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\reactiveui-core\7.4.0\lib\UAP10\ReactiveUI.dll">
+      <PackagePath>ReactiveUI.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.0.7\runtimes\win10-x64\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
     </AppxPackagedFile>
@@ -525,6 +528,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.0.7\runtimes\win10-x64\lib\uap10.0.15138\netstandard.dll">
       <PackagePath>netstandard.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\splat\1.6.2\lib\NetCore45\Splat.dll">
+      <PackagePath>Splat.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.reactive.core\3.1.1\lib\uap10.0\System.Reactive.Core.dll">
       <PackagePath>System.Reactive.Core.dll</PackagePath>

@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>D5125DFEBCD41DFE05260A0779F6DC1C1EEC61E9BE8DCA0624401FC8A4916ACE</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>E37AA584C9BF6C16A0A63C2E6C809619197C0F4B365BC504F638B60CD4834CAC</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>ec0cc741-fd3e-485c-81be-68815c480690_1.0.0.0_x64__hma5z8g0e8z20</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>ec0cc741-fd3e-485c-81be-68815c480690_hma5z8g0e8z20!App</RegisteredUserModeAppID>
     <RegisteredPackageID>ec0cc741-fd3e-485c-81be-68815c480690</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-15T18:17:19.005</Modified>
+      <Modified>2018-02-15T22:43:46.218</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\myMDesktop.UWP.exe">
       <PackagePath>entrypoint\myMDesktop.UWP.exe</PackagePath>
-      <Modified>2018-02-15T18:17:17.770</Modified>
+      <Modified>2018-02-15T22:40:43.912</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\plugin.bluetoothle\5.3.2\lib\uap10.0\Plugin.BluetoothLE.Abstractions.dll">
       <PackagePath>Plugin.BluetoothLE.Abstractions.dll</PackagePath>
@@ -46,6 +46,10 @@
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\plugin.bluetoothle\5.3.2\lib\uap10.0\Plugin.BluetoothLE.dll">
       <PackagePath>Plugin.BluetoothLE.dll</PackagePath>
       <Modified>2018-01-22T16:44:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\reactiveui-core\7.4.0\lib\UAP10\ReactiveUI.dll">
+      <PackagePath>ReactiveUI.dll</PackagePath>
+      <Modified>2017-05-23T09:57:08.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.0.7\runtimes\win10-x64\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -703,6 +707,10 @@
       <PackagePath>netstandard.dll</PackagePath>
       <Modified>2018-01-23T23:34:50.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\splat\1.6.2\lib\NetCore45\Splat.dll">
+      <PackagePath>Splat.dll</PackagePath>
+      <Modified>2015-03-21T20:07:40.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.reactive.core\3.1.1\lib\uap10.0\System.Reactive.Core.dll">
       <PackagePath>System.Reactive.Core.dll</PackagePath>
       <Modified>2016-11-21T13:01:44.000</Modified>
@@ -745,7 +753,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\myMDesktop.dll">
       <PackagePath>myMDesktop.dll</PackagePath>
-      <Modified>2018-02-15T18:17:12.159</Modified>
+      <Modified>2018-02-15T22:40:38.856</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -916,11 +924,11 @@
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-15T18:17:18.532</Modified>
+      <Modified>2018-02-15T22:43:45.760</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\Core\myMDesktop.UWP.exe">
       <PackagePath>myMDesktop.UWP.exe</PackagePath>
-      <Modified>2018-02-15T18:17:18.997</Modified>
+      <Modified>2018-02-15T22:43:46.212</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
