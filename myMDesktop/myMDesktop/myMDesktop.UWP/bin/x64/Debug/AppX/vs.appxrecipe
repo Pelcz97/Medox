@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-14T22:23:30.546</Modified>
+      <Modified>2018-02-15T18:17:19.005</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\myMDesktop.UWP.exe">
       <PackagePath>entrypoint\myMDesktop.UWP.exe</PackagePath>
-      <Modified>2018-02-14T22:23:29.174</Modified>
+      <Modified>2018-02-15T18:17:17.770</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\plugin.bluetoothle\5.3.2\lib\uap10.0\Plugin.BluetoothLE.Abstractions.dll">
       <PackagePath>Plugin.BluetoothLE.Abstractions.dll</PackagePath>
@@ -745,7 +745,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\myMDesktop.dll">
       <PackagePath>myMDesktop.dll</PackagePath>
-      <Modified>2018-02-14T22:23:23.237</Modified>
+      <Modified>2018-02-15T18:17:12.159</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -916,11 +916,11 @@
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-14T22:23:30.041</Modified>
+      <Modified>2018-02-15T18:17:18.532</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\Core\myMDesktop.UWP.exe">
       <PackagePath>myMDesktop.UWP.exe</PackagePath>
-      <Modified>2018-02-14T22:23:30.538</Modified>
+      <Modified>2018-02-15T18:17:18.997</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

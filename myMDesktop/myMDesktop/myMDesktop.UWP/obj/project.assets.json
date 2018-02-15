@@ -257,6 +257,47 @@
           "lib/uap10.0/Plugin.BluetoothLE.dll": {}
         }
       },
+      "reactiveui/7.4.0": {
+        "type": "package",
+        "dependencies": {
+          "reactiveui-core": "[7.4.0]"
+        }
+      },
+      "reactiveui-core/7.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5",
+          "Rx-WinRT": "2.2.5",
+          "Rx-WindowStoreApps": "2.2.5",
+          "Splat": "1.6.2",
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Diagnostics.Tools": "4.0.0",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Linq.Expressions": "4.0.10",
+          "System.ObjectModel": "4.0.10",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Runtime.Serialization.Xml": "4.1.0",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Threading.Tasks": "4.0.10"
+        },
+        "compile": {
+          "lib/UAP10/ReactiveUI.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/ReactiveUI.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
@@ -276,6 +317,96 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "Rx-Core/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Core.dll": {}
+        }
+      },
+      "Rx-Interfaces/2.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/windows8/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "Rx-Linq/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Rx-Main/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5"
+        }
+      },
+      "Rx-PlatformServices/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.PlatformServices.dll": {}
+        }
+      },
+      "Rx-WindowStoreApps/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Main": "2.2.5",
+          "Rx-WinRT": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Windows.Threading.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Windows.Threading.dll": {}
+        }
+      },
+      "Rx-WinRT/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Main": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.WindowsRuntime.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.WindowsRuntime.dll": {}
+        }
+      },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/Splat.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -330,10 +461,25 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Diagnostics.Debug.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
+        }
+      },
+      "System.Diagnostics.Tools/4.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcore50/System.Diagnostics.Tools.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Diagnostics.Tools.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win8-aot/lib/netcore50/System.Diagnostics.Tools.dll": {
+            "assetType": "runtime",
+            "rid": "win8-aot"
+          }
         }
       },
       "System.Dynamic.Runtime/4.0.11": {
@@ -373,7 +519,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Globalization.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -457,6 +603,12 @@
         },
         "runtime": {
           "lib/netcore50/System.ObjectModel.dll": {}
+        }
+      },
+      "System.Private.DataContractSerialization/4.1.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcore50/_._": {}
         }
       },
       "System.Reactive/3.1.1": {
@@ -609,7 +761,7 @@
           "System.Runtime": "4.1.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Reflection.Extensions.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -664,7 +816,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Resources.ResourceManager.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -691,7 +843,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Runtime.Extensions.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -712,6 +864,48 @@
           "runtimes/aot/lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll": {
             "assetType": "runtime",
             "rid": "aot"
+          }
+        }
+      },
+      "System.Runtime.Serialization.Primitives/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.Serialization.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Runtime.Serialization.Primitives.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win8-aot/lib/netcore50/System.Runtime.Serialization.Primitives.dll": {
+            "assetType": "runtime",
+            "rid": "win8-aot"
+          }
+        }
+      },
+      "System.Runtime.Serialization.Xml/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Private.DataContractSerialization": "4.1.0",
+          "System.Runtime": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Xml.ReaderWriter": "4.0.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.Serialization.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Runtime.Serialization.Xml.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win8-aot/lib/netcore50/System.Runtime.Serialization.Xml.dll": {
+            "assetType": "runtime",
+            "rid": "win8-aot"
           }
         }
       },
@@ -736,7 +930,7 @@
           "System.Threading.Tasks": "4.0.11"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Threading.dll": {}
         },
         "runtime": {
           "lib/netcore50/System.Threading.dll": {}
@@ -757,6 +951,21 @@
         },
         "compile": {
           "ref/netcore50/System.Threading.Tasks.dll": {}
+        },
+        "runtime": {
+          "lib/win8/_._": {}
+        }
+      },
+      "System.Xml.ReaderWriter/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Runtime": "4.0.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Xml.ReaderWriter.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -1055,6 +1264,47 @@
           "lib/uap10.0/Plugin.BluetoothLE.dll": {}
         }
       },
+      "reactiveui/7.4.0": {
+        "type": "package",
+        "dependencies": {
+          "reactiveui-core": "[7.4.0]"
+        }
+      },
+      "reactiveui-core/7.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5",
+          "Rx-WinRT": "2.2.5",
+          "Rx-WindowStoreApps": "2.2.5",
+          "Splat": "1.6.2",
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Diagnostics.Tools": "4.0.0",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Linq.Expressions": "4.0.10",
+          "System.ObjectModel": "4.0.10",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Runtime.Serialization.Xml": "4.1.0",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Threading.Tasks": "4.0.10"
+        },
+        "compile": {
+          "lib/UAP10/ReactiveUI.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/ReactiveUI.dll": {}
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1065,6 +1315,15 @@
         },
         "runtime": {
           "lib/netcore50/System.Collections.dll": {}
+        }
+      },
+      "runtime.any.System.Diagnostics.Tools/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Diagnostics.Tools.dll": {}
         }
       },
       "runtime.any.System.Globalization/4.3.0": {
@@ -1083,6 +1342,40 @@
         },
         "runtime": {
           "lib/netcore50/System.IO.dll": {}
+        }
+      },
+      "runtime.any.System.Private.DataContractSerialization/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Emit.ILGeneration": "4.0.0",
+          "System.Reflection.Emit.Lightweight": "4.0.0",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Reflection.Primitives": "4.0.0",
+          "System.Reflection.TypeExtensions": "4.0.0",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Text.Encoding": "4.0.10",
+          "System.Text.Encoding.Extensions": "4.0.10",
+          "System.Text.RegularExpressions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Threading.Tasks": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10",
+          "System.Xml.XmlDocument": "4.0.0",
+          "System.Xml.XmlSerializer": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/_._": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Private.DataContractSerialization.dll": {}
         }
       },
       "runtime.any.System.Reflection/4.3.0": {
@@ -1140,6 +1433,15 @@
         },
         "runtime": {
           "lib/netcore50/System.Text.Encoding.dll": {}
+        }
+      },
+      "runtime.any.System.Text.Encoding.Extensions/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Text.Encoding.Extensions.dll": {}
         }
       },
       "runtime.any.System.Threading.Tasks/4.3.0": {
@@ -1376,6 +1678,96 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Rx-Core/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Core.dll": {}
+        }
+      },
+      "Rx-Interfaces/2.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/windows8/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "Rx-Linq/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Rx-Main/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5"
+        }
+      },
+      "Rx-PlatformServices/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.PlatformServices.dll": {}
+        }
+      },
+      "Rx-WindowStoreApps/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Main": "2.2.5",
+          "Rx-WinRT": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Windows.Threading.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Windows.Threading.dll": {}
+        }
+      },
+      "Rx-WinRT/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Main": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.WindowsRuntime.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.WindowsRuntime.dll": {}
+        }
+      },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/Splat.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1424,10 +1816,22 @@
           "runtime.win.System.Diagnostics.Debug": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Diagnostics.Debug.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
+        }
+      },
+      "System.Diagnostics.Tools/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.any.System.Diagnostics.Tools": "4.3.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Diagnostics.Tools.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Diagnostics.Tools.dll": {}
         }
       },
       "System.Dynamic.Runtime/4.0.11": {
@@ -1462,7 +1866,7 @@
           "runtime.any.System.Globalization": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Globalization.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -1541,6 +1945,15 @@
         },
         "runtime": {
           "lib/netcore50/System.ObjectModel.dll": {}
+        }
+      },
+      "System.Private.DataContractSerialization/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.any.System.Private.DataContractSerialization": "4.1.0"
+        },
+        "compile": {
+          "ref/netcore50/_._": {}
         }
       },
       "System.Private.Uri/4.3.0": {
@@ -1663,7 +2076,7 @@
           "System.Runtime": "4.1.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.Reflection.Emit.ILGeneration.dll": {}
         },
         "runtime": {
           "lib/netcore50/System.Reflection.Emit.ILGeneration.dll": {}
@@ -1678,7 +2091,7 @@
           "System.Runtime": "4.1.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll": {}
         },
         "runtime": {
           "lib/netcore50/System.Reflection.Emit.Lightweight.dll": {}
@@ -1694,7 +2107,7 @@
           "runtime.any.System.Reflection.Extensions": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Reflection.Extensions.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -1728,7 +2141,7 @@
           "System.Runtime.Extensions": "4.1.0"
         },
         "compile": {
-          "ref/netstandard1.5/_._": {}
+          "ref/netstandard1.5/System.Reflection.TypeExtensions.dll": {}
         },
         "runtime": {
           "lib/netcore50/System.Reflection.TypeExtensions.dll": {}
@@ -1745,7 +2158,7 @@
           "runtime.any.System.Resources.ResourceManager": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Resources.ResourceManager.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -1774,7 +2187,7 @@
           "runtime.win.System.Runtime.Extensions": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Runtime.Extensions.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -1792,6 +2205,36 @@
           "lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll": {}
         }
       },
+      "System.Runtime.Serialization.Primitives/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.Serialization.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Runtime.Serialization.Primitives.dll": {}
+        }
+      },
+      "System.Runtime.Serialization.Xml/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Private.DataContractSerialization": "4.1.0",
+          "System.Runtime": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Xml.ReaderWriter": "4.0.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.Serialization.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Runtime.Serialization.Xml.dll": {}
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1807,6 +2250,37 @@
           "lib/win8/_._": {}
         }
       },
+      "System.Text.Encoding.Extensions/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.0.0",
+          "System.Text.Encoding": "4.0.10",
+          "runtime.any.System.Text.Encoding.Extensions": "4.3.0"
+        },
+        "compile": {
+          "ref/dotnet/System.Text.Encoding.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Text.Encoding.Extensions.dll": {}
+        }
+      },
+      "System.Text.RegularExpressions/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Text.RegularExpressions.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Text.RegularExpressions.dll": {}
+        }
+      },
       "System.Threading/4.0.11": {
         "type": "package",
         "dependencies": {
@@ -1814,7 +2288,7 @@
           "System.Threading.Tasks": "4.0.11"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Threading.dll": {}
         },
         "runtime": {
           "lib/netcore50/System.Threading.dll": {}
@@ -1833,6 +2307,69 @@
         },
         "runtime": {
           "lib/win8/_._": {}
+        }
+      },
+      "System.Xml.ReaderWriter/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Runtime": "4.0.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Xml.ReaderWriter.dll": {}
+        },
+        "runtime": {
+          "lib/win8/_._": {}
+        }
+      },
+      "System.Xml.XmlDocument/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XmlDocument.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Xml.XmlDocument.dll": {}
+        }
+      },
+      "System.Xml.XmlSerializer/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Reflection.Primitives": "4.0.0",
+          "System.Reflection.TypeExtensions": "4.0.0",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.RegularExpressions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10",
+          "System.Xml.XmlDocument": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XmlSerializer.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
       "Xamarin.Forms/2.5.0.274780": {
@@ -2128,6 +2665,47 @@
           "lib/uap10.0/Plugin.BluetoothLE.dll": {}
         }
       },
+      "reactiveui/7.4.0": {
+        "type": "package",
+        "dependencies": {
+          "reactiveui-core": "[7.4.0]"
+        }
+      },
+      "reactiveui-core/7.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5",
+          "Rx-WinRT": "2.2.5",
+          "Rx-WindowStoreApps": "2.2.5",
+          "Splat": "1.6.2",
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Diagnostics.Tools": "4.0.0",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Linq.Expressions": "4.0.10",
+          "System.ObjectModel": "4.0.10",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Runtime.Serialization.Xml": "4.1.0",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Threading.Tasks": "4.0.10"
+        },
+        "compile": {
+          "lib/UAP10/ReactiveUI.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/ReactiveUI.dll": {}
+        }
+      },
       "runtime.aot.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2142,6 +2720,15 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Collections.dll": {}
+        }
+      },
+      "runtime.aot.System.Diagnostics.Tools/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Diagnostics.Tools.dll": {}
         }
       },
       "runtime.aot.System.Globalization/4.3.0": {
@@ -2168,6 +2755,38 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.IO.dll": {}
+        }
+      },
+      "runtime.aot.System.Private.DataContractSerialization/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Reflection.Primitives": "4.0.0",
+          "System.Reflection.TypeExtensions": "4.0.0",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Text.Encoding": "4.0.10",
+          "System.Text.Encoding.Extensions": "4.0.10",
+          "System.Text.RegularExpressions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Threading.Tasks": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10",
+          "System.Xml.XmlDocument": "4.0.0",
+          "System.Xml.XmlSerializer": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/_._": {}
+        },
+        "runtime": {
+          "runtimes/win8-aot/lib/netcore50/System.Private.DataContractSerialization.dll": {}
         }
       },
       "runtime.aot.System.Reflection/4.3.0": {
@@ -2489,6 +3108,96 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Rx-Core/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Core.dll": {}
+        }
+      },
+      "Rx-Interfaces/2.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/windows8/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "Rx-Linq/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Rx-Main/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5"
+        }
+      },
+      "Rx-PlatformServices/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.PlatformServices.dll": {}
+        }
+      },
+      "Rx-WindowStoreApps/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Main": "2.2.5",
+          "Rx-WinRT": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Windows.Threading.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Windows.Threading.dll": {}
+        }
+      },
+      "Rx-WinRT/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Main": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.WindowsRuntime.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.WindowsRuntime.dll": {}
+        }
+      },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/Splat.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2541,6 +3250,18 @@
         },
         "runtime": {
           "lib/win8/_._": {}
+        }
+      },
+      "System.Diagnostics.Tools/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.aot.System.Diagnostics.Tools": "4.3.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Diagnostics.Tools.dll": {}
+        },
+        "runtime": {
+          "runtimes/win8-aot/lib/netcore50/System.Diagnostics.Tools.dll": {}
         }
       },
       "System.Dynamic.Runtime/4.0.11": {
@@ -2654,6 +3375,15 @@
         },
         "runtime": {
           "lib/netcore50/System.ObjectModel.dll": {}
+        }
+      },
+      "System.Private.DataContractSerialization/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.aot.System.Private.DataContractSerialization": "4.1.0"
+        },
+        "compile": {
+          "ref/netcore50/_._": {}
         }
       },
       "System.Private.Uri/4.3.0": {
@@ -2807,7 +3537,7 @@
           "runtime.aot.System.Reflection.Extensions": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Reflection.Extensions.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -2841,7 +3571,7 @@
           "System.Runtime.Extensions": "4.1.0"
         },
         "compile": {
-          "ref/netstandard1.5/_._": {}
+          "ref/netstandard1.5/System.Reflection.TypeExtensions.dll": {}
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Reflection.TypeExtensions.dll": {}
@@ -2905,6 +3635,36 @@
           "runtimes/aot/lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll": {}
         }
       },
+      "System.Runtime.Serialization.Primitives/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.Serialization.Primitives.dll": {}
+        },
+        "runtime": {
+          "runtimes/win8-aot/lib/netcore50/System.Runtime.Serialization.Primitives.dll": {}
+        }
+      },
+      "System.Runtime.Serialization.Xml/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Private.DataContractSerialization": "4.1.0",
+          "System.Runtime": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Xml.ReaderWriter": "4.0.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.Serialization.Xml.dll": {}
+        },
+        "runtime": {
+          "runtimes/win8-aot/lib/netcore50/System.Runtime.Serialization.Xml.dll": {}
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2936,6 +3696,23 @@
           "lib/win8/_._": {}
         }
       },
+      "System.Text.RegularExpressions/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Text.RegularExpressions.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Text.RegularExpressions.dll": {}
+        }
+      },
       "System.Threading/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2962,6 +3739,69 @@
         },
         "runtime": {
           "lib/win8/_._": {}
+        }
+      },
+      "System.Xml.ReaderWriter/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Runtime": "4.0.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Xml.ReaderWriter.dll": {}
+        },
+        "runtime": {
+          "lib/win8/_._": {}
+        }
+      },
+      "System.Xml.XmlDocument/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XmlDocument.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Xml.XmlDocument.dll": {}
+        }
+      },
+      "System.Xml.XmlSerializer/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Reflection.Primitives": "4.0.0",
+          "System.Reflection.TypeExtensions": "4.0.0",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.RegularExpressions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10",
+          "System.Xml.XmlDocument": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XmlSerializer.dll": {}
+        },
+        "runtime": {
+          "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
       "Xamarin.Forms/2.5.0.274780": {
@@ -3257,6 +4097,47 @@
           "lib/uap10.0/Plugin.BluetoothLE.dll": {}
         }
       },
+      "reactiveui/7.4.0": {
+        "type": "package",
+        "dependencies": {
+          "reactiveui-core": "[7.4.0]"
+        }
+      },
+      "reactiveui-core/7.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5",
+          "Rx-WinRT": "2.2.5",
+          "Rx-WindowStoreApps": "2.2.5",
+          "Splat": "1.6.2",
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Diagnostics.Tools": "4.0.0",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Linq.Expressions": "4.0.10",
+          "System.ObjectModel": "4.0.10",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Runtime.Serialization.Xml": "4.1.0",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Threading.Tasks": "4.0.10"
+        },
+        "compile": {
+          "lib/UAP10/ReactiveUI.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/ReactiveUI.dll": {}
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3267,6 +4148,15 @@
         },
         "runtime": {
           "lib/netcore50/System.Collections.dll": {}
+        }
+      },
+      "runtime.any.System.Diagnostics.Tools/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Diagnostics.Tools.dll": {}
         }
       },
       "runtime.any.System.Globalization/4.3.0": {
@@ -3285,6 +4175,40 @@
         },
         "runtime": {
           "lib/netcore50/System.IO.dll": {}
+        }
+      },
+      "runtime.any.System.Private.DataContractSerialization/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Emit.ILGeneration": "4.0.0",
+          "System.Reflection.Emit.Lightweight": "4.0.0",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Reflection.Primitives": "4.0.0",
+          "System.Reflection.TypeExtensions": "4.0.0",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Text.Encoding": "4.0.10",
+          "System.Text.Encoding.Extensions": "4.0.10",
+          "System.Text.RegularExpressions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Threading.Tasks": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10",
+          "System.Xml.XmlDocument": "4.0.0",
+          "System.Xml.XmlSerializer": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/_._": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Private.DataContractSerialization.dll": {}
         }
       },
       "runtime.any.System.Reflection/4.3.0": {
@@ -3342,6 +4266,15 @@
         },
         "runtime": {
           "lib/netcore50/System.Text.Encoding.dll": {}
+        }
+      },
+      "runtime.any.System.Text.Encoding.Extensions/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Text.Encoding.Extensions.dll": {}
         }
       },
       "runtime.any.System.Threading.Tasks/4.3.0": {
@@ -3578,6 +4511,96 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Rx-Core/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Core.dll": {}
+        }
+      },
+      "Rx-Interfaces/2.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/windows8/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "Rx-Linq/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Rx-Main/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5"
+        }
+      },
+      "Rx-PlatformServices/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.PlatformServices.dll": {}
+        }
+      },
+      "Rx-WindowStoreApps/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Main": "2.2.5",
+          "Rx-WinRT": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Windows.Threading.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Windows.Threading.dll": {}
+        }
+      },
+      "Rx-WinRT/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Main": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.WindowsRuntime.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.WindowsRuntime.dll": {}
+        }
+      },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/Splat.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3626,10 +4649,22 @@
           "runtime.win.System.Diagnostics.Debug": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Diagnostics.Debug.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
+        }
+      },
+      "System.Diagnostics.Tools/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.any.System.Diagnostics.Tools": "4.3.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Diagnostics.Tools.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Diagnostics.Tools.dll": {}
         }
       },
       "System.Dynamic.Runtime/4.0.11": {
@@ -3664,7 +4699,7 @@
           "runtime.any.System.Globalization": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Globalization.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -3743,6 +4778,15 @@
         },
         "runtime": {
           "lib/netcore50/System.ObjectModel.dll": {}
+        }
+      },
+      "System.Private.DataContractSerialization/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.any.System.Private.DataContractSerialization": "4.1.0"
+        },
+        "compile": {
+          "ref/netcore50/_._": {}
         }
       },
       "System.Private.Uri/4.3.0": {
@@ -3865,7 +4909,7 @@
           "System.Runtime": "4.1.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.Reflection.Emit.ILGeneration.dll": {}
         },
         "runtime": {
           "lib/netcore50/System.Reflection.Emit.ILGeneration.dll": {}
@@ -3880,7 +4924,7 @@
           "System.Runtime": "4.1.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll": {}
         },
         "runtime": {
           "lib/netcore50/System.Reflection.Emit.Lightweight.dll": {}
@@ -3896,7 +4940,7 @@
           "runtime.any.System.Reflection.Extensions": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Reflection.Extensions.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -3930,7 +4974,7 @@
           "System.Runtime.Extensions": "4.1.0"
         },
         "compile": {
-          "ref/netstandard1.5/_._": {}
+          "ref/netstandard1.5/System.Reflection.TypeExtensions.dll": {}
         },
         "runtime": {
           "lib/netcore50/System.Reflection.TypeExtensions.dll": {}
@@ -3947,7 +4991,7 @@
           "runtime.any.System.Resources.ResourceManager": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Resources.ResourceManager.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -3976,7 +5020,7 @@
           "runtime.win.System.Runtime.Extensions": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Runtime.Extensions.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -3994,6 +5038,36 @@
           "lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll": {}
         }
       },
+      "System.Runtime.Serialization.Primitives/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.Serialization.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Runtime.Serialization.Primitives.dll": {}
+        }
+      },
+      "System.Runtime.Serialization.Xml/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Private.DataContractSerialization": "4.1.0",
+          "System.Runtime": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Xml.ReaderWriter": "4.0.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.Serialization.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Runtime.Serialization.Xml.dll": {}
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4009,6 +5083,37 @@
           "lib/win8/_._": {}
         }
       },
+      "System.Text.Encoding.Extensions/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.0.0",
+          "System.Text.Encoding": "4.0.10",
+          "runtime.any.System.Text.Encoding.Extensions": "4.3.0"
+        },
+        "compile": {
+          "ref/dotnet/System.Text.Encoding.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Text.Encoding.Extensions.dll": {}
+        }
+      },
+      "System.Text.RegularExpressions/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Text.RegularExpressions.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Text.RegularExpressions.dll": {}
+        }
+      },
       "System.Threading/4.0.11": {
         "type": "package",
         "dependencies": {
@@ -4016,7 +5121,7 @@
           "System.Threading.Tasks": "4.0.11"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Threading.dll": {}
         },
         "runtime": {
           "lib/netcore50/System.Threading.dll": {}
@@ -4035,6 +5140,69 @@
         },
         "runtime": {
           "lib/win8/_._": {}
+        }
+      },
+      "System.Xml.ReaderWriter/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Runtime": "4.0.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Xml.ReaderWriter.dll": {}
+        },
+        "runtime": {
+          "lib/win8/_._": {}
+        }
+      },
+      "System.Xml.XmlDocument/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XmlDocument.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Xml.XmlDocument.dll": {}
+        }
+      },
+      "System.Xml.XmlSerializer/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Reflection.Primitives": "4.0.0",
+          "System.Reflection.TypeExtensions": "4.0.0",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.RegularExpressions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10",
+          "System.Xml.XmlDocument": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XmlSerializer.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
       "Xamarin.Forms/2.5.0.274780": {
@@ -4330,6 +5498,47 @@
           "lib/uap10.0/Plugin.BluetoothLE.dll": {}
         }
       },
+      "reactiveui/7.4.0": {
+        "type": "package",
+        "dependencies": {
+          "reactiveui-core": "[7.4.0]"
+        }
+      },
+      "reactiveui-core/7.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5",
+          "Rx-WinRT": "2.2.5",
+          "Rx-WindowStoreApps": "2.2.5",
+          "Splat": "1.6.2",
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Diagnostics.Tools": "4.0.0",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Linq.Expressions": "4.0.10",
+          "System.ObjectModel": "4.0.10",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Runtime.Serialization.Xml": "4.1.0",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Threading.Tasks": "4.0.10"
+        },
+        "compile": {
+          "lib/UAP10/ReactiveUI.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/ReactiveUI.dll": {}
+        }
+      },
       "runtime.aot.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4344,6 +5553,15 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Collections.dll": {}
+        }
+      },
+      "runtime.aot.System.Diagnostics.Tools/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Diagnostics.Tools.dll": {}
         }
       },
       "runtime.aot.System.Globalization/4.3.0": {
@@ -4370,6 +5588,38 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.IO.dll": {}
+        }
+      },
+      "runtime.aot.System.Private.DataContractSerialization/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Reflection.Primitives": "4.0.0",
+          "System.Reflection.TypeExtensions": "4.0.0",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Text.Encoding": "4.0.10",
+          "System.Text.Encoding.Extensions": "4.0.10",
+          "System.Text.RegularExpressions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Threading.Tasks": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10",
+          "System.Xml.XmlDocument": "4.0.0",
+          "System.Xml.XmlSerializer": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/_._": {}
+        },
+        "runtime": {
+          "runtimes/win8-aot/lib/netcore50/System.Private.DataContractSerialization.dll": {}
         }
       },
       "runtime.aot.System.Reflection/4.3.0": {
@@ -4691,6 +5941,96 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Rx-Core/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Core.dll": {}
+        }
+      },
+      "Rx-Interfaces/2.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/windows8/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "Rx-Linq/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Rx-Main/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5"
+        }
+      },
+      "Rx-PlatformServices/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.PlatformServices.dll": {}
+        }
+      },
+      "Rx-WindowStoreApps/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Main": "2.2.5",
+          "Rx-WinRT": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Windows.Threading.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Windows.Threading.dll": {}
+        }
+      },
+      "Rx-WinRT/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Main": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.WindowsRuntime.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.WindowsRuntime.dll": {}
+        }
+      },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/Splat.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4743,6 +6083,18 @@
         },
         "runtime": {
           "lib/win8/_._": {}
+        }
+      },
+      "System.Diagnostics.Tools/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.aot.System.Diagnostics.Tools": "4.3.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Diagnostics.Tools.dll": {}
+        },
+        "runtime": {
+          "runtimes/win8-aot/lib/netcore50/System.Diagnostics.Tools.dll": {}
         }
       },
       "System.Dynamic.Runtime/4.0.11": {
@@ -4856,6 +6208,15 @@
         },
         "runtime": {
           "lib/netcore50/System.ObjectModel.dll": {}
+        }
+      },
+      "System.Private.DataContractSerialization/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.aot.System.Private.DataContractSerialization": "4.1.0"
+        },
+        "compile": {
+          "ref/netcore50/_._": {}
         }
       },
       "System.Private.Uri/4.3.0": {
@@ -5009,7 +6370,7 @@
           "runtime.aot.System.Reflection.Extensions": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Reflection.Extensions.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -5043,7 +6404,7 @@
           "System.Runtime.Extensions": "4.1.0"
         },
         "compile": {
-          "ref/netstandard1.5/_._": {}
+          "ref/netstandard1.5/System.Reflection.TypeExtensions.dll": {}
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Reflection.TypeExtensions.dll": {}
@@ -5107,6 +6468,36 @@
           "runtimes/aot/lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll": {}
         }
       },
+      "System.Runtime.Serialization.Primitives/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.Serialization.Primitives.dll": {}
+        },
+        "runtime": {
+          "runtimes/win8-aot/lib/netcore50/System.Runtime.Serialization.Primitives.dll": {}
+        }
+      },
+      "System.Runtime.Serialization.Xml/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Private.DataContractSerialization": "4.1.0",
+          "System.Runtime": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Xml.ReaderWriter": "4.0.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.Serialization.Xml.dll": {}
+        },
+        "runtime": {
+          "runtimes/win8-aot/lib/netcore50/System.Runtime.Serialization.Xml.dll": {}
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5138,6 +6529,23 @@
           "lib/win8/_._": {}
         }
       },
+      "System.Text.RegularExpressions/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Text.RegularExpressions.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Text.RegularExpressions.dll": {}
+        }
+      },
       "System.Threading/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5164,6 +6572,69 @@
         },
         "runtime": {
           "lib/win8/_._": {}
+        }
+      },
+      "System.Xml.ReaderWriter/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Runtime": "4.0.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Xml.ReaderWriter.dll": {}
+        },
+        "runtime": {
+          "lib/win8/_._": {}
+        }
+      },
+      "System.Xml.XmlDocument/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XmlDocument.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Xml.XmlDocument.dll": {}
+        }
+      },
+      "System.Xml.XmlSerializer/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Reflection.Primitives": "4.0.0",
+          "System.Reflection.TypeExtensions": "4.0.0",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.RegularExpressions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10",
+          "System.Xml.XmlDocument": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XmlSerializer.dll": {}
+        },
+        "runtime": {
+          "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
       "Xamarin.Forms/2.5.0.274780": {
@@ -5459,6 +6930,47 @@
           "lib/uap10.0/Plugin.BluetoothLE.dll": {}
         }
       },
+      "reactiveui/7.4.0": {
+        "type": "package",
+        "dependencies": {
+          "reactiveui-core": "[7.4.0]"
+        }
+      },
+      "reactiveui-core/7.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5",
+          "Rx-WinRT": "2.2.5",
+          "Rx-WindowStoreApps": "2.2.5",
+          "Splat": "1.6.2",
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Diagnostics.Tools": "4.0.0",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Linq.Expressions": "4.0.10",
+          "System.ObjectModel": "4.0.10",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Runtime.Serialization.Xml": "4.1.0",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Threading.Tasks": "4.0.10"
+        },
+        "compile": {
+          "lib/UAP10/ReactiveUI.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/ReactiveUI.dll": {}
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5469,6 +6981,15 @@
         },
         "runtime": {
           "lib/netcore50/System.Collections.dll": {}
+        }
+      },
+      "runtime.any.System.Diagnostics.Tools/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Diagnostics.Tools.dll": {}
         }
       },
       "runtime.any.System.Globalization/4.3.0": {
@@ -5487,6 +7008,40 @@
         },
         "runtime": {
           "lib/netcore50/System.IO.dll": {}
+        }
+      },
+      "runtime.any.System.Private.DataContractSerialization/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Emit.ILGeneration": "4.0.0",
+          "System.Reflection.Emit.Lightweight": "4.0.0",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Reflection.Primitives": "4.0.0",
+          "System.Reflection.TypeExtensions": "4.0.0",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Text.Encoding": "4.0.10",
+          "System.Text.Encoding.Extensions": "4.0.10",
+          "System.Text.RegularExpressions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Threading.Tasks": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10",
+          "System.Xml.XmlDocument": "4.0.0",
+          "System.Xml.XmlSerializer": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/_._": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Private.DataContractSerialization.dll": {}
         }
       },
       "runtime.any.System.Reflection/4.3.0": {
@@ -5544,6 +7099,15 @@
         },
         "runtime": {
           "lib/netcore50/System.Text.Encoding.dll": {}
+        }
+      },
+      "runtime.any.System.Text.Encoding.Extensions/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Text.Encoding.Extensions.dll": {}
         }
       },
       "runtime.any.System.Threading.Tasks/4.3.0": {
@@ -5780,6 +7344,96 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Rx-Core/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Core.dll": {}
+        }
+      },
+      "Rx-Interfaces/2.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/windows8/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "Rx-Linq/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Rx-Main/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5"
+        }
+      },
+      "Rx-PlatformServices/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.PlatformServices.dll": {}
+        }
+      },
+      "Rx-WindowStoreApps/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Main": "2.2.5",
+          "Rx-WinRT": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Windows.Threading.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Windows.Threading.dll": {}
+        }
+      },
+      "Rx-WinRT/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Main": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.WindowsRuntime.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.WindowsRuntime.dll": {}
+        }
+      },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/Splat.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5828,10 +7482,22 @@
           "runtime.win.System.Diagnostics.Debug": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Diagnostics.Debug.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
+        }
+      },
+      "System.Diagnostics.Tools/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.any.System.Diagnostics.Tools": "4.3.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Diagnostics.Tools.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Diagnostics.Tools.dll": {}
         }
       },
       "System.Dynamic.Runtime/4.0.11": {
@@ -5866,7 +7532,7 @@
           "runtime.any.System.Globalization": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Globalization.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -5945,6 +7611,15 @@
         },
         "runtime": {
           "lib/netcore50/System.ObjectModel.dll": {}
+        }
+      },
+      "System.Private.DataContractSerialization/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.any.System.Private.DataContractSerialization": "4.1.0"
+        },
+        "compile": {
+          "ref/netcore50/_._": {}
         }
       },
       "System.Private.Uri/4.3.0": {
@@ -6067,7 +7742,7 @@
           "System.Runtime": "4.1.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.Reflection.Emit.ILGeneration.dll": {}
         },
         "runtime": {
           "lib/netcore50/System.Reflection.Emit.ILGeneration.dll": {}
@@ -6082,7 +7757,7 @@
           "System.Runtime": "4.1.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll": {}
         },
         "runtime": {
           "lib/netcore50/System.Reflection.Emit.Lightweight.dll": {}
@@ -6098,7 +7773,7 @@
           "runtime.any.System.Reflection.Extensions": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Reflection.Extensions.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -6132,7 +7807,7 @@
           "System.Runtime.Extensions": "4.1.0"
         },
         "compile": {
-          "ref/netstandard1.5/_._": {}
+          "ref/netstandard1.5/System.Reflection.TypeExtensions.dll": {}
         },
         "runtime": {
           "lib/netcore50/System.Reflection.TypeExtensions.dll": {}
@@ -6149,7 +7824,7 @@
           "runtime.any.System.Resources.ResourceManager": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Resources.ResourceManager.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -6178,7 +7853,7 @@
           "runtime.win.System.Runtime.Extensions": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Runtime.Extensions.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -6196,6 +7871,36 @@
           "lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll": {}
         }
       },
+      "System.Runtime.Serialization.Primitives/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.Serialization.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Runtime.Serialization.Primitives.dll": {}
+        }
+      },
+      "System.Runtime.Serialization.Xml/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Private.DataContractSerialization": "4.1.0",
+          "System.Runtime": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Xml.ReaderWriter": "4.0.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.Serialization.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Runtime.Serialization.Xml.dll": {}
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -6211,6 +7916,37 @@
           "lib/win8/_._": {}
         }
       },
+      "System.Text.Encoding.Extensions/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.0.0",
+          "System.Text.Encoding": "4.0.10",
+          "runtime.any.System.Text.Encoding.Extensions": "4.3.0"
+        },
+        "compile": {
+          "ref/dotnet/System.Text.Encoding.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Text.Encoding.Extensions.dll": {}
+        }
+      },
+      "System.Text.RegularExpressions/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Text.RegularExpressions.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Text.RegularExpressions.dll": {}
+        }
+      },
       "System.Threading/4.0.11": {
         "type": "package",
         "dependencies": {
@@ -6218,7 +7954,7 @@
           "System.Threading.Tasks": "4.0.11"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Threading.dll": {}
         },
         "runtime": {
           "lib/netcore50/System.Threading.dll": {}
@@ -6237,6 +7973,69 @@
         },
         "runtime": {
           "lib/win8/_._": {}
+        }
+      },
+      "System.Xml.ReaderWriter/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Runtime": "4.0.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Xml.ReaderWriter.dll": {}
+        },
+        "runtime": {
+          "lib/win8/_._": {}
+        }
+      },
+      "System.Xml.XmlDocument/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XmlDocument.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Xml.XmlDocument.dll": {}
+        }
+      },
+      "System.Xml.XmlSerializer/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Reflection.Primitives": "4.0.0",
+          "System.Reflection.TypeExtensions": "4.0.0",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.RegularExpressions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10",
+          "System.Xml.XmlDocument": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XmlSerializer.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
       "Xamarin.Forms/2.5.0.274780": {
@@ -6532,6 +8331,47 @@
           "lib/uap10.0/Plugin.BluetoothLE.dll": {}
         }
       },
+      "reactiveui/7.4.0": {
+        "type": "package",
+        "dependencies": {
+          "reactiveui-core": "[7.4.0]"
+        }
+      },
+      "reactiveui-core/7.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5",
+          "Rx-WinRT": "2.2.5",
+          "Rx-WindowStoreApps": "2.2.5",
+          "Splat": "1.6.2",
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Diagnostics.Tools": "4.0.0",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Linq.Expressions": "4.0.10",
+          "System.ObjectModel": "4.0.10",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Runtime.Serialization.Xml": "4.1.0",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Threading.Tasks": "4.0.10"
+        },
+        "compile": {
+          "lib/UAP10/ReactiveUI.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/ReactiveUI.dll": {}
+        }
+      },
       "runtime.aot.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -6546,6 +8386,15 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Collections.dll": {}
+        }
+      },
+      "runtime.aot.System.Diagnostics.Tools/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Diagnostics.Tools.dll": {}
         }
       },
       "runtime.aot.System.Globalization/4.3.0": {
@@ -6572,6 +8421,38 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.IO.dll": {}
+        }
+      },
+      "runtime.aot.System.Private.DataContractSerialization/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Reflection.Primitives": "4.0.0",
+          "System.Reflection.TypeExtensions": "4.0.0",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Text.Encoding": "4.0.10",
+          "System.Text.Encoding.Extensions": "4.0.10",
+          "System.Text.RegularExpressions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Threading.Tasks": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10",
+          "System.Xml.XmlDocument": "4.0.0",
+          "System.Xml.XmlSerializer": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/_._": {}
+        },
+        "runtime": {
+          "runtimes/win8-aot/lib/netcore50/System.Private.DataContractSerialization.dll": {}
         }
       },
       "runtime.aot.System.Reflection/4.3.0": {
@@ -6893,6 +8774,96 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Rx-Core/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Core.dll": {}
+        }
+      },
+      "Rx-Interfaces/2.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/windows8/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "Rx-Linq/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Rx-Main/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5"
+        }
+      },
+      "Rx-PlatformServices/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.PlatformServices.dll": {}
+        }
+      },
+      "Rx-WindowStoreApps/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Main": "2.2.5",
+          "Rx-WinRT": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.Windows.Threading.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.Windows.Threading.dll": {}
+        }
+      },
+      "Rx-WinRT/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Main": "2.2.5"
+        },
+        "compile": {
+          "lib/windows8/System.Reactive.WindowsRuntime.dll": {}
+        },
+        "runtime": {
+          "lib/windows8/System.Reactive.WindowsRuntime.dll": {}
+        }
+      },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/Splat.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -6945,6 +8916,18 @@
         },
         "runtime": {
           "lib/win8/_._": {}
+        }
+      },
+      "System.Diagnostics.Tools/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.aot.System.Diagnostics.Tools": "4.3.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Diagnostics.Tools.dll": {}
+        },
+        "runtime": {
+          "runtimes/win8-aot/lib/netcore50/System.Diagnostics.Tools.dll": {}
         }
       },
       "System.Dynamic.Runtime/4.0.11": {
@@ -7058,6 +9041,15 @@
         },
         "runtime": {
           "lib/netcore50/System.ObjectModel.dll": {}
+        }
+      },
+      "System.Private.DataContractSerialization/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.aot.System.Private.DataContractSerialization": "4.1.0"
+        },
+        "compile": {
+          "ref/netcore50/_._": {}
         }
       },
       "System.Private.Uri/4.3.0": {
@@ -7211,7 +9203,7 @@
           "runtime.aot.System.Reflection.Extensions": "4.3.0"
         },
         "compile": {
-          "ref/netcore50/_._": {}
+          "ref/netcore50/System.Reflection.Extensions.dll": {}
         },
         "runtime": {
           "lib/win8/_._": {}
@@ -7245,7 +9237,7 @@
           "System.Runtime.Extensions": "4.1.0"
         },
         "compile": {
-          "ref/netstandard1.5/_._": {}
+          "ref/netstandard1.5/System.Reflection.TypeExtensions.dll": {}
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Reflection.TypeExtensions.dll": {}
@@ -7309,6 +9301,36 @@
           "runtimes/aot/lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll": {}
         }
       },
+      "System.Runtime.Serialization.Primitives/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.Serialization.Primitives.dll": {}
+        },
+        "runtime": {
+          "runtimes/win8-aot/lib/netcore50/System.Runtime.Serialization.Primitives.dll": {}
+        }
+      },
+      "System.Runtime.Serialization.Xml/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Private.DataContractSerialization": "4.1.0",
+          "System.Runtime": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.1.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Xml.ReaderWriter": "4.0.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.Serialization.Xml.dll": {}
+        },
+        "runtime": {
+          "runtimes/win8-aot/lib/netcore50/System.Runtime.Serialization.Xml.dll": {}
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -7340,6 +9362,23 @@
           "lib/win8/_._": {}
         }
       },
+      "System.Text.RegularExpressions/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Text.RegularExpressions.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Text.RegularExpressions.dll": {}
+        }
+      },
       "System.Threading/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -7366,6 +9405,69 @@
         },
         "runtime": {
           "lib/win8/_._": {}
+        }
+      },
+      "System.Xml.ReaderWriter/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Runtime": "4.0.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Xml.ReaderWriter.dll": {}
+        },
+        "runtime": {
+          "lib/win8/_._": {}
+        }
+      },
+      "System.Xml.XmlDocument/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XmlDocument.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Xml.XmlDocument.dll": {}
+        }
+      },
+      "System.Xml.XmlSerializer/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Linq": "4.0.0",
+          "System.Reflection": "4.0.10",
+          "System.Reflection.Extensions": "4.0.0",
+          "System.Reflection.Primitives": "4.0.0",
+          "System.Reflection.TypeExtensions": "4.0.0",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.RegularExpressions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10",
+          "System.Xml.XmlDocument": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XmlSerializer.dll": {}
+        },
+        "runtime": {
+          "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
       "Xamarin.Forms/2.5.0.274780": {
@@ -9842,6 +11944,94 @@
         "plugin.bluetoothle.nuspec"
       ]
     },
+    "reactiveui/7.4.0": {
+      "sha512": "ut/4fezqMH3mzkI/SUzmxnYLj8tDwi9NZ8RmLfaEwhmQ7OELBNhsVZqQrG+Hqc1yr1mfPoTW0vyIbQSicLHjuA==",
+      "type": "package",
+      "path": "reactiveui/7.4.0",
+      "files": [
+        "LICENSE",
+        "reactiveui.7.4.0.nupkg.sha512",
+        "reactiveui.nuspec"
+      ]
+    },
+    "reactiveui-core/7.4.0": {
+      "sha512": "BseZIvDK1MFYjBZ18mZvQJ5hhYz/yZ1U0cs7WG0VVvE37b6PEN9kSS6bPdg+K8N0JFj8AHespHtfup4cEOgyaw==",
+      "type": "package",
+      "path": "reactiveui-core/7.4.0",
+      "files": [
+        "lib/MonoAndroid403/ReactiveUI.dll",
+        "lib/MonoAndroid403/ReactiveUI.pdb",
+        "lib/MonoAndroid403/ReactiveUI.xml",
+        "lib/Net45/ReactiveUI.dll",
+        "lib/Net45/ReactiveUI.pdb",
+        "lib/Net45/ReactiveUI.xml",
+        "lib/Portable-Win81+Wpa81/ReactiveUI.dll",
+        "lib/Portable-Win81+Wpa81/ReactiveUI.pdb",
+        "lib/Portable-Win81+Wpa81/ReactiveUI.xml",
+        "lib/UAP10/ReactiveUI.dll",
+        "lib/UAP10/ReactiveUI.pdb",
+        "lib/UAP10/ReactiveUI.xml",
+        "lib/Xamarin.Mac20/ReactiveUI.dll",
+        "lib/Xamarin.Mac20/ReactiveUI.pdb",
+        "lib/Xamarin.Mac20/ReactiveUI.xml",
+        "lib/Xamarin.iOS10/ReactiveUI.dll",
+        "lib/Xamarin.iOS10/ReactiveUI.pdb",
+        "lib/Xamarin.iOS10/ReactiveUI.xml",
+        "lib/portable-net45+netcore45+wpa81+win8+wp8+UAP10+MonoAndroid403+MonoTouch10+Xamarin.iOS10/ReactiveUI.dll",
+        "lib/portable-net45+netcore45+wpa81+win8+wp8+UAP10+MonoAndroid403+MonoTouch10+Xamarin.iOS10/ReactiveUI.pdb",
+        "lib/portable-net45+netcore45+wpa81+win8+wp8+UAP10+MonoAndroid403+MonoTouch10+Xamarin.iOS10/ReactiveUI.xml",
+        "reactiveui-core.7.4.0.nupkg.sha512",
+        "reactiveui-core.nuspec",
+        "src/Activation.cs",
+        "src/AutoPersistHelper.cs",
+        "src/BindingTypeConverters.cs",
+        "src/CollectionDebugView.cs",
+        "src/CommandBinding.cs",
+        "src/CompatMixins.cs",
+        "src/ConsoleStub.cs",
+        "src/ContractStubs.cs",
+        "src/CreatesCommandBinding.cs",
+        "src/DisposableMixins.cs",
+        "src/ExpressionMixins.cs",
+        "src/ExpressionRewriter.cs",
+        "src/IDependencyResolver.cs",
+        "src/INPCObservableForProperty.cs",
+        "src/IROObservableForProperty.cs",
+        "src/IReactiveObject.cs",
+        "src/Interactions.cs",
+        "src/Interfaces.cs",
+        "src/LoggingMixins.cs",
+        "src/MessageBus.cs",
+        "src/ObservableAsPropertyHelper.cs",
+        "src/Observables.cs",
+        "src/ObservedChangedMixin.cs",
+        "src/OrderedComparer.cs",
+        "src/POCOObservableForProperty.cs",
+        "src/PortableLibraryStubs.cs",
+        "src/PropertyBinding.cs",
+        "src/ReactiveBinding.cs",
+        "src/ReactiveCollectionMixins.cs",
+        "src/ReactiveCommand.cs",
+        "src/ReactiveList.cs",
+        "src/ReactiveNotifyPropertyChangedMixin.cs",
+        "src/ReactiveObject.cs",
+        "src/RefcountDisposeWrapper.cs",
+        "src/Reflection.cs",
+        "src/RegisterableInterfaces.cs",
+        "src/Registrations.cs",
+        "src/RoutableViewModelMixin.cs",
+        "src/RoutingState.cs",
+        "src/RxApp.cs",
+        "src/ScheduledSubject.cs",
+        "src/SuspensionHost.cs",
+        "src/UnhandledErrorException.cs",
+        "src/VariadicTemplates.cs",
+        "src/ViewAttributes.cs",
+        "src/ViewLocator.cs",
+        "src/WaitForDispatcherScheduler.cs",
+        "src/WeakEventManager.cs"
+      ]
+    },
     "runtime.any.System.Collections/4.3.0": {
       "sha512": "23g6rqftKmovn2cLeGsuHUYm0FD7pdutb0uQMJpZ3qTvq+zHkgmt6J65VtRry4WDGYlmkMa4xDACtaQ94alNag==",
       "type": "package",
@@ -9864,6 +12054,31 @@
         "ref/netstandard/_._",
         "runtime.any.system.collections.4.3.0.nupkg.sha512",
         "runtime.any.system.collections.nuspec",
+        "runtimes/aot/lib/netcore50/_._"
+      ]
+    },
+    "runtime.any.System.Diagnostics.Tools/4.3.0": {
+      "sha512": "S/GPBmfPBB48ZghLxdDR7kDAJVAqgAuThyDJho3OLP5OS4tWD2ydyL8LKm8lhiBxce10OKe9X2zZ6DUjAqEbPg==",
+      "type": "package",
+      "path": "runtime.any.system.diagnostics.tools/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Diagnostics.Tools.dll",
+        "lib/netstandard1.3/System.Diagnostics.Tools.dll",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/netstandard/_._",
+        "runtime.any.system.diagnostics.tools.4.3.0.nupkg.sha512",
+        "runtime.any.system.diagnostics.tools.nuspec",
         "runtimes/aot/lib/netcore50/_._"
       ]
     },
@@ -9914,6 +12129,21 @@
         "ref/netstandard/_._",
         "runtime.any.system.io.4.3.0.nupkg.sha512",
         "runtime.any.system.io.nuspec",
+        "runtimes/aot/lib/netcore50/_._"
+      ]
+    },
+    "runtime.any.System.Private.DataContractSerialization/4.1.0": {
+      "sha512": "nJ5sB6Q7vbOEZ+tm/L7XISxO0Az6tkMup5rhpgPboVpUKgMnsdWiDvSlzzpK/bsiYxMIJCJ4Xrt2abt8Z1beJw==",
+      "type": "package",
+      "path": "runtime.any.system.private.datacontractserialization/4.1.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/DNXCore50/System.Private.DataContractSerialization.dll",
+        "lib/netcore50/System.Private.DataContractSerialization.dll",
+        "ref/dotnet/_._",
+        "runtime.any.system.private.datacontractserialization.4.1.0.nupkg.sha512",
+        "runtime.any.system.private.datacontractserialization.nuspec",
         "runtimes/aot/lib/netcore50/_._"
       ]
     },
@@ -10066,6 +12296,30 @@
         "runtimes/aot/lib/netcore50/_._"
       ]
     },
+    "runtime.any.System.Text.Encoding.Extensions/4.3.0": {
+      "sha512": "NLrxmLsfRrOuVqPWG+2lrQZnE53MLVeo+w9c54EV+TUo4c8rILpsDXfY8pPiOy9kHpUHHP07ugKmtsU3vVW5Jg==",
+      "type": "package",
+      "path": "runtime.any.system.text.encoding.extensions/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Text.Encoding.Extensions.dll",
+        "lib/netstandard1.3/System.Text.Encoding.Extensions.dll",
+        "lib/win8/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/netstandard/_._",
+        "runtime.any.system.text.encoding.extensions.4.3.0.nupkg.sha512",
+        "runtime.any.system.text.encoding.extensions.nuspec",
+        "runtimes/aot/lib/netcore50/_._"
+      ]
+    },
     "runtime.any.System.Threading.Tasks/4.3.0": {
       "sha512": "OhBAVBQG5kFj1S+hCEQ3TUHBAEtZ3fbEMgZMRNdN8A0Pj4x+5nTELEqL59DU0TjKVE6II3dqKw4Dklb3szT65w==",
       "type": "package",
@@ -10104,6 +12358,19 @@
         "runtimes/aot/lib/netcore50/System.Collections.dll"
       ]
     },
+    "runtime.aot.System.Diagnostics.Tools/4.3.0": {
+      "sha512": "Sry/JfiffR1IBLanHobuD+Iaf1aeNKCrmmB7ycHREnMwxDBexYaXQ0cHoxlApYze5EYKG/XXWHWFYEx3Ep2xgA==",
+      "type": "package",
+      "path": "runtime.aot.system.diagnostics.tools/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "ref/netstandard/_._",
+        "runtime.aot.system.diagnostics.tools.4.3.0.nupkg.sha512",
+        "runtime.aot.system.diagnostics.tools.nuspec",
+        "runtimes/aot/lib/netcore50/System.Diagnostics.Tools.dll"
+      ]
+    },
     "runtime.aot.System.Globalization/4.3.0": {
       "sha512": "JGVbV0rYZGFq44g2wd1pmm/CfcxiqyjwclO9WTzRcUT+SJvj097u1DoaXt/epyT5lOTkbOkEBqgl9hZlKvMf9g==",
       "type": "package",
@@ -10129,6 +12396,19 @@
         "runtime.aot.system.io.nuspec",
         "runtimes/aot/lib/netcore50/System.IO.dll",
         "runtimes/aot/lib/netstandard1.3/System.IO.dll"
+      ]
+    },
+    "runtime.aot.System.Private.DataContractSerialization/4.1.0": {
+      "sha512": "0GKgzv1P8U+1x0grF5xg9xAjjVahzAZwGNF6ff8/CeXi+1isQYi7vZ/GhiyU7zDaQnKmSOj1/tTZqhOo5P4yTA==",
+      "type": "package",
+      "path": "runtime.aot.system.private.datacontractserialization/4.1.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "ref/dotnet/_._",
+        "runtime.aot.system.private.datacontractserialization.4.1.0.nupkg.sha512",
+        "runtime.aot.system.private.datacontractserialization.nuspec",
+        "runtimes/win8-aot/lib/netcore50/System.Private.DataContractSerialization.dll"
       ]
     },
     "runtime.aot.System.Reflection/4.3.0": {
@@ -11405,6 +13685,188 @@
         "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll"
       ]
     },
+    "Rx-Core/2.2.5": {
+      "sha512": "DfWVTfW6tvRkkqpnRHKxPIvaRZyDJGADuqrE6J2nwejOQbLRWi0rNUwXkViDWz++25BGDy3iRE5OE6Dv8mJxYQ==",
+      "type": "package",
+      "path": "rx-core/2.2.5",
+      "files": [
+        "lib/net40/System.Reactive.Core.XML",
+        "lib/net40/System.Reactive.Core.dll",
+        "lib/net45/System.Reactive.Core.XML",
+        "lib/net45/System.Reactive.Core.dll",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Core.XML",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Core.dll",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Core.XML",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Core.dll",
+        "lib/portable-win81+wpa81/System.Reactive.Core.XML",
+        "lib/portable-win81+wpa81/System.Reactive.Core.dll",
+        "lib/portable-windows8+net45+wp8/System.Reactive.Core.XML",
+        "lib/portable-windows8+net45+wp8/System.Reactive.Core.dll",
+        "lib/sl5/System.Reactive.Core.XML",
+        "lib/sl5/System.Reactive.Core.dll",
+        "lib/windows8/System.Reactive.Core.XML",
+        "lib/windows8/System.Reactive.Core.dll",
+        "lib/windowsphone71/System.Reactive.Core.XML",
+        "lib/windowsphone71/System.Reactive.Core.dll",
+        "lib/windowsphone8/System.Reactive.Core.XML",
+        "lib/windowsphone8/System.Reactive.Core.dll",
+        "rx-core.2.2.5.nupkg.sha512",
+        "rx-core.nuspec"
+      ]
+    },
+    "Rx-Interfaces/2.2.5": {
+      "sha512": "FKtG2QfMIeUcfB7r3a89VoAiszX3DTvYETkpC6U0FzWpxRK/mcHyzYOsniDfag+NsDG0P1k1c8yNSefXKp3t2A==",
+      "type": "package",
+      "path": "rx-interfaces/2.2.5",
+      "files": [
+        "lib/net40/System.Reactive.Interfaces.XML",
+        "lib/net40/System.Reactive.Interfaces.dll",
+        "lib/net45/System.Reactive.Interfaces.XML",
+        "lib/net45/System.Reactive.Interfaces.dll",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Interfaces.XML",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Interfaces.dll",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Interfaces.XML",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Interfaces.dll",
+        "lib/portable-win81+wpa81/System.Reactive.Interfaces.XML",
+        "lib/portable-win81+wpa81/System.Reactive.Interfaces.dll",
+        "lib/portable-windows8+net45+wp8/System.Reactive.Interfaces.XML",
+        "lib/portable-windows8+net45+wp8/System.Reactive.Interfaces.dll",
+        "lib/sl5/System.Reactive.Interfaces.XML",
+        "lib/sl5/System.Reactive.Interfaces.dll",
+        "lib/windows8/System.Reactive.Interfaces.XML",
+        "lib/windows8/System.Reactive.Interfaces.dll",
+        "lib/windowsphone71/System.Reactive.Interfaces.XML",
+        "lib/windowsphone71/System.Reactive.Interfaces.dll",
+        "lib/windowsphone8/System.Reactive.Interfaces.XML",
+        "lib/windowsphone8/System.Reactive.Interfaces.dll",
+        "rx-interfaces.2.2.5.nupkg.sha512",
+        "rx-interfaces.nuspec"
+      ]
+    },
+    "Rx-Linq/2.2.5": {
+      "sha512": "UTeCIu3cWPExxmTzdiVq7SalqTBhUaomBTaAC9LpYPoAopjlFwA3hjVWXoLkGlDc/44wqJemJuEwFP00KphiFg==",
+      "type": "package",
+      "path": "rx-linq/2.2.5",
+      "files": [
+        "lib/net40/System.Reactive.Linq.XML",
+        "lib/net40/System.Reactive.Linq.dll",
+        "lib/net45/System.Reactive.Linq.XML",
+        "lib/net45/System.Reactive.Linq.dll",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Linq.XML",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Linq.dll",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Linq.XML",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Linq.dll",
+        "lib/portable-win81+wpa81/System.Reactive.Linq.XML",
+        "lib/portable-win81+wpa81/System.Reactive.Linq.dll",
+        "lib/portable-windows8+net45+wp8/System.Reactive.Linq.XML",
+        "lib/portable-windows8+net45+wp8/System.Reactive.Linq.dll",
+        "lib/sl5/System.Reactive.Linq.XML",
+        "lib/sl5/System.Reactive.Linq.dll",
+        "lib/windows8/System.Reactive.Linq.XML",
+        "lib/windows8/System.Reactive.Linq.dll",
+        "lib/windowsphone71/System.Reactive.Linq.XML",
+        "lib/windowsphone71/System.Reactive.Linq.dll",
+        "lib/windowsphone8/System.Reactive.Linq.XML",
+        "lib/windowsphone8/System.Reactive.Linq.dll",
+        "rx-linq.2.2.5.nupkg.sha512",
+        "rx-linq.nuspec"
+      ]
+    },
+    "Rx-Main/2.2.5": {
+      "sha512": "qdQ6qENEiLsp/LRdzZlLlodihWN8VDjwNfWa8c2ELjEHZgTdKzt1V4i61gkHVtFKZXe8Px6KupbMP3pZ+1tusQ==",
+      "type": "package",
+      "path": "rx-main/2.2.5",
+      "files": [
+        "rx-main.2.2.5.nupkg.sha512",
+        "rx-main.nuspec"
+      ]
+    },
+    "Rx-PlatformServices/2.2.5": {
+      "sha512": "pMnNEvJVjT+wuDib+W/bi5hhIYcre7dW5yxvKrJxnR4iKJ1VLA/dY2FTtjDriHGx7OeGn12lQewXlH2oHiWFPA==",
+      "type": "package",
+      "path": "rx-platformservices/2.2.5",
+      "files": [
+        "lib/net40/System.Reactive.PlatformServices.XML",
+        "lib/net40/System.Reactive.PlatformServices.dll",
+        "lib/net45/System.Reactive.PlatformServices.XML",
+        "lib/net45/System.Reactive.PlatformServices.dll",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.PlatformServices.XML",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.PlatformServices.dll",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.PlatformServices.XML",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.PlatformServices.dll",
+        "lib/portable-win81+wpa81/System.Reactive.PlatformServices.XML",
+        "lib/portable-win81+wpa81/System.Reactive.PlatformServices.dll",
+        "lib/portable-windows8+net45+wp8/System.Reactive.PlatformServices.XML",
+        "lib/portable-windows8+net45+wp8/System.Reactive.PlatformServices.dll",
+        "lib/sl5/System.Reactive.PlatformServices.XML",
+        "lib/sl5/System.Reactive.PlatformServices.dll",
+        "lib/windows8/System.Reactive.PlatformServices.XML",
+        "lib/windows8/System.Reactive.PlatformServices.dll",
+        "lib/windowsphone71/System.Reactive.PlatformServices.XML",
+        "lib/windowsphone71/System.Reactive.PlatformServices.dll",
+        "lib/windowsphone8/System.Reactive.PlatformServices.XML",
+        "lib/windowsphone8/System.Reactive.PlatformServices.dll",
+        "rx-platformservices.2.2.5.nupkg.sha512",
+        "rx-platformservices.nuspec"
+      ]
+    },
+    "Rx-WindowStoreApps/2.2.5": {
+      "sha512": "SzX1OxqGq3r8z6cVSC3Mu36oMevGvEm5DSztpI7fd/wYdMmsihp1ITraP4AyvoJcgrZ9jHALhdcxZ5bV7w99lg==",
+      "type": "package",
+      "path": "rx-windowstoreapps/2.2.5",
+      "files": [
+        "lib/windows8/System.Reactive.Windows.Threading.XML",
+        "lib/windows8/System.Reactive.Windows.Threading.dll",
+        "rx-windowstoreapps.2.2.5.nupkg.sha512",
+        "rx-windowstoreapps.nuspec"
+      ]
+    },
+    "Rx-WinRT/2.2.5": {
+      "sha512": "gk0X1s8+XZhPEeYwSI4m5rjL0OQHCssG/Efa0nr4vfon+61p4+d4n1249n5WWSZE35/NXc0cOzvIlVw7bD+mJw==",
+      "type": "package",
+      "path": "rx-winrt/2.2.5",
+      "files": [
+        "lib/portable-win81+wpa81/System.Reactive.WindowsRuntime.XML",
+        "lib/portable-win81+wpa81/System.Reactive.WindowsRuntime.dll",
+        "lib/windows8/System.Reactive.WindowsRuntime.XML",
+        "lib/windows8/System.Reactive.WindowsRuntime.dll",
+        "lib/windowsphone8/System.Reactive.WindowsRuntime.XML",
+        "lib/windowsphone8/System.Reactive.WindowsRuntime.dll",
+        "rx-winrt.2.2.5.nupkg.sha512",
+        "rx-winrt.nuspec"
+      ]
+    },
+    "Splat/1.6.2": {
+      "sha512": "DeH0MxPU+D4JchkIDPYG4vUT+hsWs9S41cFle0/4K5EJMXWurx5DzAkj2366DfK14/XKNhsu6tCl4dZXJ3CD4w==",
+      "type": "package",
+      "path": "splat/1.6.2",
+      "files": [
+        "lib/MonoMac/Splat.dll",
+        "lib/MonoMac/Splat.dll.mdb",
+        "lib/Net45/Splat.dll",
+        "lib/Net45/Splat.pdb",
+        "lib/NetCore45/Splat.dll",
+        "lib/NetCore45/Splat.pdb",
+        "lib/NetCore45/Splat.pri",
+        "lib/Portable-Win81+Wpa81/Splat.dll",
+        "lib/Portable-Win81+Wpa81/Splat.pdb",
+        "lib/Portable-Win81+Wpa81/Splat.pri",
+        "lib/Portable-net45+win+wpa81+wp80/Splat.dll",
+        "lib/Xamarin.Mac10/Splat-XamarinMac.csproj.FilesWrittenAbsolute.txt",
+        "lib/Xamarin.Mac10/Splat.dll",
+        "lib/Xamarin.Mac10/Splat.dll.mdb",
+        "lib/Xamarin.iOS10/Splat.dll",
+        "lib/Xamarin.iOS10/Splat.dll.mdb",
+        "lib/monoandroid/Splat.dll",
+        "lib/monoandroid/Splat.dll.mdb",
+        "lib/monotouch/Splat.dll",
+        "lib/monotouch/Splat.dll.mdb",
+        "lib/wp8/Splat.dll",
+        "lib/wp8/Splat.pdb",
+        "splat.1.6.2.nupkg.sha512",
+        "splat.nuspec"
+      ]
+    },
     "System.Collections/4.3.0": {
       "sha512": "3Dcj85/TBdVpL5Zr+gEEBUuFe2icOnLalmEh9hfck1PTYbbyWuZgh4fmm2ysCLTrqLQw6t3TgTyJ+VLp+Qb+Lw==",
       "type": "package",
@@ -11650,6 +14112,39 @@
         "ref/xamarinwatchos10/_._",
         "system.diagnostics.debug.4.3.0.nupkg.sha512",
         "system.diagnostics.debug.nuspec"
+      ]
+    },
+    "System.Diagnostics.Tools/4.0.0": {
+      "sha512": "uw5Qi2u5Cgtv4xv3+8DeB63iaprPcaEHfpeJqlJiLjIVy6v0La4ahJ6VW9oPbJNIjcavd24LKq0ctT9ssuQXsw==",
+      "type": "package",
+      "path": "system.diagnostics.tools/4.0.0",
+      "files": [
+        "lib/DNXCore50/System.Diagnostics.Tools.dll",
+        "lib/net45/_._",
+        "lib/netcore50/System.Diagnostics.Tools.dll",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "ref/dotnet/System.Diagnostics.Tools.dll",
+        "ref/dotnet/System.Diagnostics.Tools.xml",
+        "ref/dotnet/de/System.Diagnostics.Tools.xml",
+        "ref/dotnet/es/System.Diagnostics.Tools.xml",
+        "ref/dotnet/fr/System.Diagnostics.Tools.xml",
+        "ref/dotnet/it/System.Diagnostics.Tools.xml",
+        "ref/dotnet/ja/System.Diagnostics.Tools.xml",
+        "ref/dotnet/ko/System.Diagnostics.Tools.xml",
+        "ref/dotnet/ru/System.Diagnostics.Tools.xml",
+        "ref/dotnet/zh-hans/System.Diagnostics.Tools.xml",
+        "ref/dotnet/zh-hant/System.Diagnostics.Tools.xml",
+        "ref/net45/_._",
+        "ref/netcore50/System.Diagnostics.Tools.dll",
+        "ref/netcore50/System.Diagnostics.Tools.xml",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "runtimes/win8-aot/lib/netcore50/System.Diagnostics.Tools.dll",
+        "system.diagnostics.tools.4.0.0.nupkg.sha512",
+        "system.diagnostics.tools.nuspec"
       ]
     },
     "System.Dynamic.Runtime/4.0.11": {
@@ -12084,6 +14579,20 @@
         "ref/xamarinwatchos10/_._",
         "system.objectmodel.4.0.12.nupkg.sha512",
         "system.objectmodel.nuspec"
+      ]
+    },
+    "System.Private.DataContractSerialization/4.1.0": {
+      "sha512": "jihi0lC7TMGx8QtMuz3tRFoXdP0BHbceAdd3gvRbNnxM3W93jSRE/cocQyGf64wlC/1etjHKPwnwdu+PDJkjnA==",
+      "type": "package",
+      "path": "system.private.datacontractserialization/4.1.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "ref/dnxcore50/_._",
+        "ref/netcore50/_._",
+        "runtime.json",
+        "system.private.datacontractserialization.4.1.0.nupkg.sha512",
+        "system.private.datacontractserialization.nuspec"
       ]
     },
     "System.Private.Uri/4.3.0": {
@@ -12797,6 +15306,136 @@
         "system.runtime.interopservices.windowsruntime.nuspec"
       ]
     },
+    "System.Runtime.Serialization.Primitives/4.1.0": {
+      "sha512": "2UBnpTwpEi5dzbNJ8KhbOZ7Te1XQNov9MrtJ+dcnqogjACPNzbOiGT2uU9XgZg+sdbPvr4VMvVjFwJ85uLLCuA==",
+      "type": "package",
+      "path": "system.runtime.serialization.primitives/4.1.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/dotnet5.4/System.Runtime.Serialization.Primitives.dll",
+        "lib/net45/_._",
+        "lib/net46/System.Runtime.Serialization.Primitives.dll",
+        "lib/netcore50/System.Runtime.Serialization.Primitives.dll",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/dotnet5.1/System.Runtime.Serialization.Primitives.dll",
+        "ref/dotnet5.1/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.1/de/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.1/es/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.1/fr/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.1/it/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.1/ja/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.1/ko/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.1/ru/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.1/zh-hans/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.1/zh-hant/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.4/System.Runtime.Serialization.Primitives.dll",
+        "ref/dotnet5.4/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.4/de/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.4/es/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.4/fr/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.4/it/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.4/ja/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.4/ko/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.4/ru/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.4/zh-hans/System.Runtime.Serialization.Primitives.xml",
+        "ref/dotnet5.4/zh-hant/System.Runtime.Serialization.Primitives.xml",
+        "ref/net45/_._",
+        "ref/net46/System.Runtime.Serialization.Primitives.dll",
+        "ref/netcore50/System.Runtime.Serialization.Primitives.dll",
+        "ref/netcore50/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/de/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/es/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/fr/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/it/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/ja/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/ko/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/ru/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/zh-hans/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/zh-hant/System.Runtime.Serialization.Primitives.xml",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "runtimes/win8-aot/lib/netcore50/System.Runtime.Serialization.Primitives.dll",
+        "system.runtime.serialization.primitives.4.1.0.nupkg.sha512",
+        "system.runtime.serialization.primitives.nuspec"
+      ]
+    },
+    "System.Runtime.Serialization.Xml/4.1.0": {
+      "sha512": "7TvzeIeNvT2GLpmSy/3J1VIkT70MroNujIiBWBe0qeM6/QFPdCcF/1Zxx9Ohc/iZUPAANb1wMruCAiYY2HTTrg==",
+      "type": "package",
+      "path": "system.runtime.serialization.xml/4.1.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/DNXCore50/System.Runtime.Serialization.Xml.dll",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net46/System.Runtime.Serialization.Xml.dll",
+        "lib/netcore50/System.Runtime.Serialization.Xml.dll",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/dotnet5.1/System.Runtime.Serialization.Xml.dll",
+        "ref/dotnet5.1/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.1/de/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.1/es/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.1/fr/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.1/it/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.1/ja/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.1/ko/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.1/ru/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.1/zh-hans/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.1/zh-hant/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.4/System.Runtime.Serialization.Xml.dll",
+        "ref/dotnet5.4/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.4/de/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.4/es/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.4/fr/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.4/it/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.4/ja/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.4/ko/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.4/ru/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.4/zh-hans/System.Runtime.Serialization.Xml.xml",
+        "ref/dotnet5.4/zh-hant/System.Runtime.Serialization.Xml.xml",
+        "ref/net45/_._",
+        "ref/net46/System.Runtime.Serialization.Xml.dll",
+        "ref/netcore50/System.Runtime.Serialization.Xml.dll",
+        "ref/netcore50/System.Runtime.Serialization.Xml.xml",
+        "ref/netcore50/de/System.Runtime.Serialization.Xml.xml",
+        "ref/netcore50/es/System.Runtime.Serialization.Xml.xml",
+        "ref/netcore50/fr/System.Runtime.Serialization.Xml.xml",
+        "ref/netcore50/it/System.Runtime.Serialization.Xml.xml",
+        "ref/netcore50/ja/System.Runtime.Serialization.Xml.xml",
+        "ref/netcore50/ko/System.Runtime.Serialization.Xml.xml",
+        "ref/netcore50/ru/System.Runtime.Serialization.Xml.xml",
+        "ref/netcore50/zh-hans/System.Runtime.Serialization.Xml.xml",
+        "ref/netcore50/zh-hant/System.Runtime.Serialization.Xml.xml",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "runtimes/win8-aot/lib/netcore50/System.Runtime.Serialization.Xml.dll",
+        "system.runtime.serialization.xml.4.1.0.nupkg.sha512",
+        "system.runtime.serialization.xml.nuspec"
+      ]
+    },
     "System.Text.Encoding/4.3.0": {
       "sha512": "BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
       "type": "package",
@@ -12863,6 +15502,39 @@
         "system.text.encoding.nuspec"
       ]
     },
+    "System.Text.Encoding.Extensions/4.0.10": {
+      "sha512": "TZvlwXMxKo3bSRIcsWZLCIzIhLbvlz+mGeKYRZv/zUiSoQzGOwkYeBu6hOw2XPQgKqT0F4Rv8zqKdvmp2fWKYg==",
+      "type": "package",
+      "path": "system.text.encoding.extensions/4.0.10",
+      "files": [
+        "lib/DNXCore50/System.Text.Encoding.Extensions.dll",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/_._",
+        "lib/netcore50/System.Text.Encoding.Extensions.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/dotnet/System.Text.Encoding.Extensions.dll",
+        "ref/dotnet/System.Text.Encoding.Extensions.xml",
+        "ref/dotnet/de/System.Text.Encoding.Extensions.xml",
+        "ref/dotnet/es/System.Text.Encoding.Extensions.xml",
+        "ref/dotnet/fr/System.Text.Encoding.Extensions.xml",
+        "ref/dotnet/it/System.Text.Encoding.Extensions.xml",
+        "ref/dotnet/ja/System.Text.Encoding.Extensions.xml",
+        "ref/dotnet/ko/System.Text.Encoding.Extensions.xml",
+        "ref/dotnet/ru/System.Text.Encoding.Extensions.xml",
+        "ref/dotnet/zh-hans/System.Text.Encoding.Extensions.xml",
+        "ref/dotnet/zh-hant/System.Text.Encoding.Extensions.xml",
+        "ref/net46/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "runtimes/win8-aot/lib/netcore50/System.Text.Encoding.Extensions.dll",
+        "system.text.encoding.extensions.4.0.10.nupkg.sha512",
+        "system.text.encoding.extensions.nuspec"
+      ]
+    },
     "System.Text.Encoding.Extensions/4.3.0": {
       "sha512": "YVMK0Bt/A43RmwizJoZ22ei2nmrhobgeiYwFzC4YAN+nue8RF6djXDMog0UCn+brerQoYVyaS+ghy9P/MUVcmw==",
       "type": "package",
@@ -12927,6 +15599,37 @@
         "ref/xamarinwatchos10/_._",
         "system.text.encoding.extensions.4.3.0.nupkg.sha512",
         "system.text.encoding.extensions.nuspec"
+      ]
+    },
+    "System.Text.RegularExpressions/4.0.10": {
+      "sha512": "0vDuHXJePpfMCecWBNOabOKCvzfTbFMNcGgklt3l5+RqHV5SzmF7RUVpuet8V0rJX30ROlL66xdehw2Rdsn2DA==",
+      "type": "package",
+      "path": "system.text.regularexpressions/4.0.10",
+      "files": [
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/dotnet/System.Text.RegularExpressions.dll",
+        "lib/net46/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/dotnet/System.Text.RegularExpressions.dll",
+        "ref/dotnet/System.Text.RegularExpressions.xml",
+        "ref/dotnet/de/System.Text.RegularExpressions.xml",
+        "ref/dotnet/es/System.Text.RegularExpressions.xml",
+        "ref/dotnet/fr/System.Text.RegularExpressions.xml",
+        "ref/dotnet/it/System.Text.RegularExpressions.xml",
+        "ref/dotnet/ja/System.Text.RegularExpressions.xml",
+        "ref/dotnet/ko/System.Text.RegularExpressions.xml",
+        "ref/dotnet/ru/System.Text.RegularExpressions.xml",
+        "ref/dotnet/zh-hans/System.Text.RegularExpressions.xml",
+        "ref/dotnet/zh-hant/System.Text.RegularExpressions.xml",
+        "ref/net46/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "system.text.regularexpressions.4.0.10.nupkg.sha512",
+        "system.text.regularexpressions.nuspec"
       ]
     },
     "System.Threading/4.0.11": {
@@ -13131,6 +15834,119 @@
         "ref/xamarinwatchos10/_._",
         "system.threading.tasks.4.3.0.nupkg.sha512",
         "system.threading.tasks.nuspec"
+      ]
+    },
+    "System.Xml.ReaderWriter/4.0.0": {
+      "sha512": "9KB7w15EyBUXSXiRVegaO8tivjK405gjDB1tGXkPNvj6fN7qi/sfQCQ4QbUmRbGTrOwJdrISAtGL8bXoa1x0ow==",
+      "type": "package",
+      "path": "system.xml.readerwriter/4.0.0",
+      "files": [
+        "License.rtf",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/dotnet/System.Xml.ReaderWriter.dll",
+        "ref/dotnet/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/de/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/es/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/fr/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/it/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/ja/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/ko/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/ru/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/zh-hans/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/zh-hant/System.Xml.ReaderWriter.xml",
+        "ref/net45/_._",
+        "ref/netcore50/System.Xml.ReaderWriter.dll",
+        "ref/netcore50/System.Xml.ReaderWriter.xml",
+        "ref/netcore50/de/System.Xml.ReaderWriter.xml",
+        "ref/netcore50/es/System.Xml.ReaderWriter.xml",
+        "ref/netcore50/fr/System.Xml.ReaderWriter.xml",
+        "ref/netcore50/it/System.Xml.ReaderWriter.xml",
+        "ref/netcore50/ja/System.Xml.ReaderWriter.xml",
+        "ref/netcore50/ko/System.Xml.ReaderWriter.xml",
+        "ref/netcore50/ru/System.Xml.ReaderWriter.xml",
+        "ref/netcore50/zh-hans/System.Xml.ReaderWriter.xml",
+        "ref/netcore50/zh-hant/System.Xml.ReaderWriter.xml",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "system.xml.readerwriter.4.0.0.nupkg.sha512",
+        "system.xml.readerwriter.nuspec"
+      ]
+    },
+    "System.Xml.XmlDocument/4.0.0": {
+      "sha512": "H5qTx2+AXgaKE5wehU1ZYeYPFpp/rfFh69/937NvwCrDqbIkvJRmIFyKKpkoMI6gl9hGfuVizfIudVTMyowCXw==",
+      "type": "package",
+      "path": "system.xml.xmldocument/4.0.0",
+      "files": [
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/dotnet/System.Xml.XmlDocument.dll",
+        "lib/net46/System.Xml.XmlDocument.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/dotnet/System.Xml.XmlDocument.dll",
+        "ref/dotnet/System.Xml.XmlDocument.xml",
+        "ref/dotnet/de/System.Xml.XmlDocument.xml",
+        "ref/dotnet/es/System.Xml.XmlDocument.xml",
+        "ref/dotnet/fr/System.Xml.XmlDocument.xml",
+        "ref/dotnet/it/System.Xml.XmlDocument.xml",
+        "ref/dotnet/ja/System.Xml.XmlDocument.xml",
+        "ref/dotnet/ko/System.Xml.XmlDocument.xml",
+        "ref/dotnet/ru/System.Xml.XmlDocument.xml",
+        "ref/dotnet/zh-hans/System.Xml.XmlDocument.xml",
+        "ref/dotnet/zh-hant/System.Xml.XmlDocument.xml",
+        "ref/net46/System.Xml.XmlDocument.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "system.xml.xmldocument.4.0.0.nupkg.sha512",
+        "system.xml.xmldocument.nuspec"
+      ]
+    },
+    "System.Xml.XmlSerializer/4.0.10": {
+      "sha512": "OKhE6vruk88z/hl0lmfrMvXteTASgJUagu6PT6S10i9uLbvDR3pTwB6jVgiwa2D2qtTB+eneZbS9jljhPXhTtg==",
+      "type": "package",
+      "path": "system.xml.xmlserializer/4.0.10",
+      "files": [
+        "lib/DNXCore50/System.Xml.XmlSerializer.dll",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/_._",
+        "lib/netcore50/System.Xml.XmlSerializer.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/dotnet/System.Xml.XmlSerializer.dll",
+        "ref/dotnet/System.Xml.XmlSerializer.xml",
+        "ref/dotnet/de/System.Xml.XmlSerializer.xml",
+        "ref/dotnet/es/System.Xml.XmlSerializer.xml",
+        "ref/dotnet/fr/System.Xml.XmlSerializer.xml",
+        "ref/dotnet/it/System.Xml.XmlSerializer.xml",
+        "ref/dotnet/ja/System.Xml.XmlSerializer.xml",
+        "ref/dotnet/ko/System.Xml.XmlSerializer.xml",
+        "ref/dotnet/ru/System.Xml.XmlSerializer.xml",
+        "ref/dotnet/zh-hans/System.Xml.XmlSerializer.xml",
+        "ref/dotnet/zh-hant/System.Xml.XmlSerializer.xml",
+        "ref/net46/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "runtime.json",
+        "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll",
+        "system.xml.xmlserializer.4.0.10.nupkg.sha512",
+        "system.xml.xmlserializer.nuspec"
       ]
     },
     "Xamarin.Forms/2.5.0.274780": {
@@ -13608,7 +16424,8 @@
       "System.Collections >= 4.3.0",
       "System.Linq >= 4.3.0",
       "Xamarin.Forms >= 2.5.0.274780",
-      "myMDesktop >= 1.0.0"
+      "myMDesktop >= 1.0.0",
+      "reactiveui >= 7.4.0"
     ]
   },
   "packageFolders": {
@@ -13672,6 +16489,10 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[2.5.0.274780, )"
+          },
+          "reactiveui": {
+            "target": "Package",
+            "version": "[7.4.0, )"
           }
         },
         "imports": [
@@ -13703,6 +16524,30 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Ein Downgrade des Pakets \"System.Xml.ReaderWriter\" von 4.0.10 auf 4.0.0 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n myMDesktop.UWP -> reactiveui 7.4.0 -> reactiveui-core 7.4.0 -> System.Runtime.Serialization.Xml 4.1.0 -> System.Private.DataContractSerialization 4.1.0 -> runtime.any.System.Private.DataContractSerialization 4.1.0 -> System.Xml.ReaderWriter (>= 4.0.10) \r\n myMDesktop.UWP -> reactiveui 7.4.0 -> reactiveui-core 7.4.0 -> System.Runtime.Serialization.Xml 4.1.0 -> System.Xml.ReaderWriter (>= 4.0.0)",
+      "libraryId": "System.Xml.ReaderWriter",
+      "targetGraphs": [
+        "UAP,Version=v10.0.16299/win10-arm",
+        "UAP,Version=v10.0.16299/win10-x64",
+        "UAP,Version=v10.0.16299/win10-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Ein Downgrade des Pakets \"System.Xml.ReaderWriter\" von 4.0.10 auf 4.0.0 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n myMDesktop.UWP -> reactiveui 7.4.0 -> reactiveui-core 7.4.0 -> System.Runtime.Serialization.Xml 4.1.0 -> System.Private.DataContractSerialization 4.1.0 -> runtime.aot.System.Private.DataContractSerialization 4.1.0 -> System.Xml.ReaderWriter (>= 4.0.10) \r\n myMDesktop.UWP -> reactiveui 7.4.0 -> reactiveui-core 7.4.0 -> System.Runtime.Serialization.Xml 4.1.0 -> System.Xml.ReaderWriter (>= 4.0.0)",
+      "libraryId": "System.Xml.ReaderWriter",
+      "targetGraphs": [
+        "UAP,Version=v10.0.16299/win10-arm-aot",
+        "UAP,Version=v10.0.16299/win10-x64-aot",
+        "UAP,Version=v10.0.16299/win10-x86-aot"
+      ]
+    },
     {
       "code": "NU1605",
       "level": "Warning",
