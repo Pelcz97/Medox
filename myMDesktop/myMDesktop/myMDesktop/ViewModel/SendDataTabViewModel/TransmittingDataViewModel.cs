@@ -42,9 +42,9 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         public TransmittingDataViewModel() {
 
             FindAdapter();
-            //Debug.WriteLine("new adapter: " + BleAdapter.Status);
-            CrossBleAdapter.Current.WhenStatusChanged().Subscribe(status => { Debug.WriteLine("CrossBLEAdapterstatus : " + status); });
-            Debug.WriteLine("status : " + CrossBleAdapter.Current.Status);
+
+            BleAdapter.WhenStatusChanged().Subscribe(status => { Debug.WriteLine("BleAdapter : " + status); });
+           
             StartServer();
 
             /*MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<DoctorsLetterViewModel>>(this, "SelectedLetters", (sender, arg) => {
@@ -64,7 +64,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
 
         public async void StartServer()
         {
-            if (CrossBleAdapter.Current.Status != AdapterStatus.PoweredOn)
+            if (BleAdapter.Status != AdapterStatus.PoweredOn)
             {
                 Debug.WriteLine("Couldnt start server");
                 return;
@@ -95,7 +95,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
 
         public async void BuildServer()
         {
-            server = CrossBleAdapter.Current.CreateGattServer();
+            server = BleAdapter.CreateGattServer();
             var service = server.AddService(Guid.NewGuid(), true);
 
             var characteristic = service.AddCharacteristic(
@@ -154,7 +154,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
 
             try
             {
-                this.server = CrossBleAdapter.Current.CreateGattServer();
+                this.server = BleAdapter.CreateGattServer();
                 var service = this.server.AddService(Guid.NewGuid(), true);
 
                 var characteristic = service.AddCharacteristic(
