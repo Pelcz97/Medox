@@ -1,4 +1,5 @@
 ﻿using nexus.protocols.ble;
+using Plugin.BluetoothLE;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 

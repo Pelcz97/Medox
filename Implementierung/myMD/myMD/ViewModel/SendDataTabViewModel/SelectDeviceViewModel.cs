@@ -20,6 +20,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
     public class SelectDeviceViewModel : OverallViewModel.OverallViewModel
     {
         //public IAdapter BleAdapter { get; set; }
+        public static Guid myMDguid = new Guid("00000000-1000-1000-1000-00805F9B0000");
+        public static Guid myMDserviceGuid1 = new Guid("10000000-1000-1000-1000-100000000000");
 
         /// <summary>
         /// Liste an Geräten die in der Umgebung gefunden wurden
@@ -60,7 +62,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// </summary>
         public async void StartScan(){
 
-            await BluetoothAdapter.ScanForBroadcasts(peripheral =>
+            await BluetoothAdapter.ScanForBroadcasts(new ScanFilter().AddAdvertisedService(myMDserviceGuid1), peripheral =>
             {
                 Device.BeginInvokeOnMainThread(
                    () =>
@@ -99,8 +101,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
                         var known = new KnownAttributes();
 
                         //Guid like: xxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
-                        Guid TestService = new Guid("1234567899-1111-1111-1111-1234567899");
-                        Guid TestCharacteristic = new Guid("1234567899-2222-2222-2222-1234567899");
+                        Guid TestService = myMDguid;
+                        /*Guid TestCharacteristic = new Guid("1234567899-2222-2222-2222-1234567899");
                         Guid TestDescriptor = new Guid("1234567899-3333-3333-3333-1234567899");
 
                         // You can add descriptions for any desired
@@ -113,7 +115,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
                         // that have been adopted by the Bluetooth SIG
                         known.AddAdoptedServices();
                         known.AddAdoptedCharacteristics();
-                        known.AddAdoptedDescriptors();
+                        known.AddAdoptedDescriptors();*/
 
                         // You can also create a new KnownAttributes with all
                         // the above adopted attributes already populated:
@@ -121,10 +123,10 @@ namespace myMD.ViewModel.SendDataTabViewModel
 
                         // The resulting value of the characteristic is returned. In nearly all cases this
                         // will be the same value that was provided to the write call (e.g. `byte[]{ 1, 2, 3 }`)
-                        var value = await serverConnection.WriteCharacteristicValue(
+                        /*var value = await serverConnection.WriteCharacteristicValue(
                         TestService,
                         TestCharacteristic,
-                        new byte[] { 1, 2, 3 });
+                        new byte[] { 1, 2, 3 });*/
                     }
                     catch (GattException ex)
                     {

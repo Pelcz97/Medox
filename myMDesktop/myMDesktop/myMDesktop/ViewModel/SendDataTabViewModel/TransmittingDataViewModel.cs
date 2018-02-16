@@ -24,6 +24,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
 
         string output;
         public static Guid myMDguid = new Guid("00000000-1000-1000-1000-00805F9B0000");
+
         public string Output
         {
             get => this.output;
@@ -42,11 +43,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         public TransmittingDataViewModel() {
 
             FindAdapter();
-            
-            //BleAdapter.WhenStatusChanged().Subscribe(status => { Debug.WriteLine("BleAdapter : " + status); });
-            
-                
-            
+
             
             /*MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<DoctorsLetterViewModel>>(this, "SelectedLetters", (sender, arg) => {
                 LettersToSend = arg;
@@ -147,125 +144,6 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
                 var write = Encoding.UTF8.GetString(x.Value, 0, x.Value.Length);
                 // do something value
             });
-        }
-
-        void BuildServerPluginLike()
-        {
-            if (this.server != null)
-                return;
-
-            try
-            {
-                this.server = BleAdapter.CreateGattServer();
-                var service = this.server.AddService(Guid.NewGuid(), true);
-
-                var characteristic = service.AddCharacteristic(
-                    Guid.NewGuid(),
-                    CharacteristicProperties.Read | CharacteristicProperties.Write | CharacteristicProperties.WriteNoResponse,
-                    GattPermissions.Read | GattPermissions.Write
-                );
-                var notifyCharacteristic = service.AddCharacteristic
-                (
-                    Guid.NewGuid(),
-                    CharacteristicProperties.Notify,
-                    GattPermissions.Read | GattPermissions.Write
-                );
-
-                //var descriptor = characteristic.AddDescriptor(Guid.NewGuid(), Encoding.UTF8.GetBytes("Test Descriptor"));
-
-                notifyCharacteristic.WhenDeviceSubscriptionChanged().Subscribe(e =>
-                {
-                    var @event = e.IsSubscribed ? "Subscribed" : "Unsubcribed";
-                    this.OnEvent($"Device {e.Device.Uuid} {@event}");
-                    this.OnEvent($"Charcteristic Subcribers: {notifyCharacteristic.SubscribedDevices.Count}");
-
-                    if (this.notifyBroadcast == null)
-                    {
-                        this.OnEvent("Starting Subscriber Thread");
-                        this.notifyBroadcast = Observable
-                            .Interval(TimeSpan.FromSeconds(1))
-                            .Where(x => notifyCharacteristic.SubscribedDevices.Count > 0)
-                            .Subscribe(_ =>
-                            {
-                                try
-                                {
-                                    var dt = DateTime.Now.ToString("g");
-                                    var bytes = Encoding.UTF8.GetBytes(dt);
-                                    notifyCharacteristic
-                                        .BroadcastObserve(bytes)
-                                        .Subscribe(x =>
-                                        {
-                                            var state = x.Success ? "Successfully" : "Failed";
-                                            var data = Encoding.UTF8.GetString(x.Data, 0, x.Data.Length);
-                                            this.OnEvent($"{state} Broadcast {data} to device {x.Device.Uuid} from characteristic {x.Characteristic}");
-                                        });
-                                }
-                                catch (Exception ex)
-                                {
-                                    Debug.WriteLine("Error during broadcast: " + ex);
-                                }
-                            });
-                    }
-                });
-
-                
-                characteristic.WhenWriteReceived().Subscribe(x =>
-                {
-                    var write = Encoding.UTF8.GetString(x.Value, 0, x.Value.Length);
-                    this.OnEvent($"Characteristic Write Received - {write}");
-                });
-
-                this.server
-                    .WhenRunningChanged()
-                    .Catch<bool, ArgumentException>(ex =>
-                    {
-                        Debug.WriteLine("Error Starting GATT Server - " + ex);
-                        return Observable.Return(false);
-                    })
-                    .Subscribe(started => Device.BeginInvokeOnMainThread(() =>
-                    {
-                        if (!started)
-                        {
-                            
-                            this.OnEvent("GATT Server Stopped");
-                        }
-                        else
-                        {
-                            this.notifyBroadcast?.Dispose();
-                            this.notifyBroadcast = null;
-
-                            
-                            this.OnEvent("GATT Server Started");
-                            foreach (var s in this.server.Services)
-                            {
-                                this.OnEvent($"Service {s.Uuid} Created");
-                                foreach (var ch in s.Characteristics)
-                                {
-                                    this.OnEvent($"Characteristic {ch.Uuid} Online - Properties {ch.Properties}");
-                                }
-                            }
-                        }
-                    }));
-
-                this.server
-                    .WhenAnyCharacteristicSubscriptionChanged()
-                    .Subscribe(x =>
-                        this.OnEvent($"[WhenAnyCharacteristicSubscriptionChanged] UUID: {x.Characteristic.Uuid} - Device: {x.Device.Uuid} - Subscription: {x.IsSubscribing}")
-                    );
-
-                //descriptor.WhenReadReceived().Subscribe(x =>
-                //    this.OnEvent("Descriptor Read Received")
-                //);
-                //descriptor.WhenWriteReceived().Subscribe(x =>
-                //{
-                //    var write = Encoding.UTF8.GetString(x.Value, 0, x.Value.Length);
-                //    this.OnEvent($"Descriptor Write Received - {write}");
-                //});
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine("Error building gatt server - " + ex);
-            }
         }
 
         void OnEvent(string msg)
