@@ -24,6 +24,11 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
 
         string output;
         public static Guid myMDguid = new Guid("00000000-1000-1000-1000-00805F9B0000");
+        public static Guid myMDserviceGuid1 = new Guid("10000000-1000-1000-1000-100000000000");
+        public static Guid myMDserviceGuid2 = new Guid("20000000-2000-2000-2000-200000000000");
+        public static Guid myMDcharGuid1 = new Guid("30000000-3000-3000-3000-300000000000");
+        public static Guid myMDcharGuid2 = new Guid("40000000-4000-4000-4000-400000000000");
+
         public string Output
         {
             get => this.output;
@@ -83,9 +88,10 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
                 {
                     await this.server.Start(new AdvertisementData
                     {
-                        LocalName = "TestServer",
-                        ServiceUuids = new List<Guid> { myMDguid }
+                        /*LocalName = "TestServer",
+                        ServiceUuids = new List<Guid> { myMDguid }*/
                     });
+
                 }
             }
 
@@ -98,17 +104,17 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         public async void BuildServer()
         {
             server = BleAdapter.CreateGattServer();
-            var service = server.AddService(Guid.NewGuid(), true);
+            var service = server.AddService(myMDserviceGuid1, true);
 
             var characteristic = service.AddCharacteristic(
-                Guid.NewGuid(),
+                myMDcharGuid1,
                 CharacteristicProperties.Read | CharacteristicProperties.Write,
                 GattPermissions.Read | GattPermissions.Write
             );
 
             var notifyCharacteristic = service.AddCharacteristic
             (
-                Guid.NewGuid(),
+                myMDcharGuid2,
                 CharacteristicProperties.Indicate | CharacteristicProperties.Notify,
                 GattPermissions.Read | GattPermissions.Write
             );
@@ -148,125 +154,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
                 // do something value
             });
         }
-
-        void BuildServerPluginLike()
-        {
-            if (this.server != null)
-                return;
-
-            try
-            {
-                this.server = BleAdapter.CreateGattServer();
-                var service = this.server.AddService(Guid.NewGuid(), true);
-
-                var characteristic = service.AddCharacteristic(
-                    Guid.NewGuid(),
-                    CharacteristicProperties.Read | CharacteristicProperties.Write | CharacteristicProperties.WriteNoResponse,
-                    GattPermissions.Read | GattPermissions.Write
-                );
-                var notifyCharacteristic = service.AddCharacteristic
-                (
-                    Guid.NewGuid(),
-                    CharacteristicProperties.Notify,
-                    GattPermissions.Read | GattPermissions.Write
-                );
-
-                //var descriptor = characteristic.AddDescriptor(Guid.NewGuid(), Encoding.UTF8.GetBytes("Test Descriptor"));
-
-                notifyCharacteristic.WhenDeviceSubscriptionChanged().Subscribe(e =>
-                {
-                    var @event = e.IsSubscribed ? "Subscribed" : "Unsubcribed";
-                    this.OnEvent($"Device {e.Device.Uuid} {@event}");
-                    this.OnEvent($"Charcteristic Subcribers: {notifyCharacteristic.SubscribedDevices.Count}");
-
-                    if (this.notifyBroadcast == null)
-                    {
-                        this.OnEvent("Starting Subscriber Thread");
-                        this.notifyBroadcast = Observable
-                            .Interval(TimeSpan.FromSeconds(1))
-                            .Where(x => notifyCharacteristic.SubscribedDevices.Count > 0)
-                            .Subscribe(_ =>
-                            {
-                                try
-                                {
-                                    var dt = DateTime.Now.ToString("g");
-                                    var bytes = Encoding.UTF8.GetBytes(dt);
-                                    notifyCharacteristic
-                                        .BroadcastObserve(bytes)
-                                        .Subscribe(x =>
-                                        {
-                                            var state = x.Success ? "Successfully" : "Failed";
-                                            var data = Encoding.UTF8.GetString(x.Data, 0, x.Data.Length);
-                                            this.OnEvent($"{state} Broadcast {data} to device {x.Device.Uuid} from characteristic {x.Characteristic}");
-                                        });
-                                }
-                                catch (Exception ex)
-                                {
-                                    Debug.WriteLine("Error during broadcast: " + ex);
-                                }
-                            });
-                    }
-                });
-
-                
-                characteristic.WhenWriteReceived().Subscribe(x =>
-                {
-                    var write = Encoding.UTF8.GetString(x.Value, 0, x.Value.Length);
-                    this.OnEvent($"Characteristic Write Received - {write}");
-                });
-
-                this.server
-                    .WhenRunningChanged()
-                    .Catch<bool, ArgumentException>(ex =>
-                    {
-                        Debug.WriteLine("Error Starting GATT Server - " + ex);
-                        return Observable.Return(false);
-                    })
-                    .Subscribe(started => Device.BeginInvokeOnMainThread(() =>
-                    {
-                        if (!started)
-                        {
-                            
-                            this.OnEvent("GATT Server Stopped");
-                        }
-                        else
-                        {
-                            this.notifyBroadcast?.Dispose();
-                            this.notifyBroadcast = null;
-
-                            
-                            this.OnEvent("GATT Server Started");
-                            foreach (var s in this.server.Services)
-                            {
-                                this.OnEvent($"Service {s.Uuid} Created");
-                                foreach (var ch in s.Characteristics)
-                                {
-                                    this.OnEvent($"Characteristic {ch.Uuid} Online - Properties {ch.Properties}");
-                                }
-                            }
-                        }
-                    }));
-
-                this.server
-                    .WhenAnyCharacteristicSubscriptionChanged()
-                    .Subscribe(x =>
-                        this.OnEvent($"[WhenAnyCharacteristicSubscriptionChanged] UUID: {x.Characteristic.Uuid} - Device: {x.Device.Uuid} - Subscription: {x.IsSubscribing}")
-                    );
-
-                //descriptor.WhenReadReceived().Subscribe(x =>
-                //    this.OnEvent("Descriptor Read Received")
-                //);
-                //descriptor.WhenWriteReceived().Subscribe(x =>
-                //{
-                //    var write = Encoding.UTF8.GetString(x.Value, 0, x.Value.Length);
-                //    this.OnEvent($"Descriptor Write Received - {write}");
-                //});
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine("Error building gatt server - " + ex);
-            }
-        }
+        
 
         void OnEvent(string msg)
         {
