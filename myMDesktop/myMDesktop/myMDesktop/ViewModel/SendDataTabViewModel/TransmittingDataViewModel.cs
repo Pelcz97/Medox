@@ -42,11 +42,12 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         public TransmittingDataViewModel() {
 
             FindAdapter();
-
-            BleAdapter.WhenStatusChanged().Subscribe(status => { Debug.WriteLine("BleAdapter : " + status); });
-           
-            StartServer();
-
+            
+            //BleAdapter.WhenStatusChanged().Subscribe(status => { Debug.WriteLine("BleAdapter : " + status); });
+            
+                
+            
+            
             /*MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<DoctorsLetterViewModel>>(this, "SelectedLetters", (sender, arg) => {
                 LettersToSend = arg;
             });*/
@@ -60,6 +61,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         {
             BleAdapter = await CrossBleAdapter.AdapterScanner.FindAdapters();
             Debug.WriteLine("new adapter: " + BleAdapter.Status);
+            StartServer();
         }
 
         public async void StartServer()
