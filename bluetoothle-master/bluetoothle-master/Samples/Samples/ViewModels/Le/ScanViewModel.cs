@@ -21,7 +21,7 @@ namespace Samples.ViewModels.Le
         {
             this.Devices = new ObservableCollection<ScanResultViewModel>();
             this.AppState.WhenBackgrounding().Subscribe(_ => this.scan?.Dispose());
-
+            Debug.WriteLine("AdapterState: " + BleAdapter.Status);
             this.connect = this.BleAdapter
                 .WhenDeviceStatusChanged()
                 .ObserveOn(RxApp.MainThreadScheduler)

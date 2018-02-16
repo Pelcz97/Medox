@@ -39,9 +39,10 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         /// Initializes a new instance of the
         /// <see cref="T:myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel"/> class.
         /// </summary>
-        public TransmittingDataViewModel() { 
+        public TransmittingDataViewModel() {
 
-            
+            FindAdapter();
+            //Debug.WriteLine("new adapter: " + BleAdapter.Status);
             CrossBleAdapter.Current.WhenStatusChanged().Subscribe(status => { Debug.WriteLine("CrossBLEAdapterstatus : " + status); });
             Debug.WriteLine("status : " + CrossBleAdapter.Current.Status);
             StartServer();
@@ -53,6 +54,12 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
                  TargetDevice = arg;
                  Debug.WriteLine("SelectedDevice : " + TargetDevice.Advertisement.DeviceName);
              });*/
+        }
+
+        public async void FindAdapter()
+        {
+            BleAdapter = await CrossBleAdapter.AdapterScanner.FindAdapters();
+            Debug.WriteLine("new adapter: " + BleAdapter.Status);
         }
 
         public async void StartServer()
