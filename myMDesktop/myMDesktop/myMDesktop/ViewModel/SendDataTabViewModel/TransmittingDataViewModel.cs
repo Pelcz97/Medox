@@ -24,6 +24,10 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
 
         string output;
         public static Guid myMDguid = new Guid("00000000-1000-1000-1000-00805F9B0000");
+        public static Guid myMDserviceGuid1 = new Guid("10000000-1000-1000-1000-100000000000");
+        public static Guid myMDserviceGuid2 = new Guid("20000000-2000-2000-2000-200000000000");
+        public static Guid myMDcharGuid1 = new Guid("30000000-3000-3000-3000-300000000000");
+        public static Guid myMDcharGuid2 = new Guid("40000000-4000-4000-4000-400000000000");
 
         public string Output
         {
@@ -43,7 +47,11 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         public TransmittingDataViewModel() {
 
             FindAdapter();
-
+            
+            //BleAdapter.WhenStatusChanged().Subscribe(status => { Debug.WriteLine("BleAdapter : " + status); });
+            
+                
+            
             
             /*MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<DoctorsLetterViewModel>>(this, "SelectedLetters", (sender, arg) => {
                 LettersToSend = arg;
@@ -80,9 +88,10 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
                 {
                     await this.server.Start(new AdvertisementData
                     {
-                        LocalName = "TestServer",
-                        ServiceUuids = new List<Guid> { myMDguid }
+                        /*LocalName = "TestServer",
+                        ServiceUuids = new List<Guid> { myMDguid }*/
                     });
+
                 }
             }
 
@@ -95,17 +104,17 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         public async void BuildServer()
         {
             server = BleAdapter.CreateGattServer();
-            var service = server.AddService(Guid.NewGuid(), true);
+            var service = server.AddService(myMDserviceGuid1, true);
 
             var characteristic = service.AddCharacteristic(
-                Guid.NewGuid(),
+                myMDcharGuid1,
                 CharacteristicProperties.Read | CharacteristicProperties.Write,
                 GattPermissions.Read | GattPermissions.Write
             );
 
             var notifyCharacteristic = service.AddCharacteristic
             (
-                Guid.NewGuid(),
+                myMDcharGuid2,
                 CharacteristicProperties.Indicate | CharacteristicProperties.Notify,
                 GattPermissions.Read | GattPermissions.Write
             );
@@ -145,6 +154,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
                 // do something value
             });
         }
+        
 
         void OnEvent(string msg)
         {
