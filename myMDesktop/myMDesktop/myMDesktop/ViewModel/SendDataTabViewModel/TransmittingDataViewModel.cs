@@ -38,8 +38,6 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         private IDisposable notifyBroadcast;
         private IGattServer server { get; set; }
 
-        private IAdapter BleAdapter { get; set; }
-
         /// <summary>
         /// Initializes a new instance of the
         /// <see cref="T:myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel"/> class.
@@ -47,11 +45,6 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         public TransmittingDataViewModel() {
 
             FindAdapter();
-            
-            //BleAdapter.WhenStatusChanged().Subscribe(status => { Debug.WriteLine("BleAdapter : " + status); });
-            
-                
-            
             
             /*MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<DoctorsLetterViewModel>>(this, "SelectedLetters", (sender, arg) => {
                 LettersToSend = arg;
