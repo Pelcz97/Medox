@@ -52,7 +52,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
             ConnectedDevice = null;
 
 
-            CrossBleAdapter.Current.WhenStatusChanged().Subscribe(state =>
+            BluetoothAdapter.WhenStatusChanged().Subscribe(state =>
             {
                 Debug.WriteLine("New State: {0}", state);
                 if (state == AdapterStatus.PoweredOn)

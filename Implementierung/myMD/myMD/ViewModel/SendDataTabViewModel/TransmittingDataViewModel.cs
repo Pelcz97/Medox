@@ -6,10 +6,9 @@ using System.Diagnostics;
 using System.Text;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
-using nexus.protocols.ble.scan;
 using System.Collections.ObjectModel;
 using myMD.ViewModel.OverviewTabViewModel;
-using nexus.protocols.ble.gatt.adopted;
+using Plugin.BluetoothLE;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
@@ -19,7 +18,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class TransmittingDataViewModel : OverallViewModel.OverallViewModel
     {
-        IBlePeripheral TargetDevice { get; set; }
+        IScanResult TargetDevice { get; set; }
         ObservableCollection<DoctorsLetterViewModel> LettersToSend { get; set; }
 
         
@@ -32,9 +31,9 @@ namespace myMD.ViewModel.SendDataTabViewModel
             MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<DoctorsLetterViewModel>>(this, "SelectedLetters", (sender, arg) => {
                 LettersToSend = arg;
             });
-            MessagingCenter.Subscribe<SelectDeviceViewModel, IBlePeripheral>(this, "ConnectedDevice", (sender, arg) => {
+            MessagingCenter.Subscribe<SelectDeviceViewModel, IScanResult>(this, "ConnectedDevice", (sender, arg) => {
                 TargetDevice = arg;
-                Debug.WriteLine("SelectedDevice : " + TargetDevice.Advertisement.DeviceName);
+                Debug.WriteLine("SelectedDevice : " + TargetDevice.AdvertisementData.LocalName);
             });
         }
     }

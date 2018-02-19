@@ -28,7 +28,7 @@ namespace myMD.ViewModel.OverallViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public IAdapter BleAdapter { get; set; }
+        public static IAdapter BleAdapter { get; set; }
 
         /// <summary>
         /// Konstruktor für ein OverallViewModel
@@ -36,7 +36,6 @@ namespace myMD.ViewModel.OverallViewModel
         public OverallViewModel()
         {
 
-            //CrossBleAdapter.Current.WhenStatusChanged().Subscribe(status => { Debug.WriteLine("CrossBLEAdapterstatus : " + status); });
         }
 
 

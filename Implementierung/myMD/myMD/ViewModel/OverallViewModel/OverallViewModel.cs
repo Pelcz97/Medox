@@ -3,10 +3,8 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using myMD.Model.TransmissionModel;
 using myMD.ModelInterface.ModelFacadeInterface;
-using nexus.core;
-using nexus.protocols.ble;
 using Xamarin.Forms.Internals;
-
+using Plugin.BluetoothLE;
 
 namespace myMD.ViewModel.OverallViewModel
 {
@@ -26,6 +24,8 @@ namespace myMD.ViewModel.OverallViewModel
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public static IAdapter BluetoothAdapter { get; set; }
+
         /// <summary>
         /// Methode um ein PropertyChangedEvent zu handeln
         /// </summary>
@@ -35,7 +35,6 @@ namespace myMD.ViewModel.OverallViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        protected IBluetoothLowEnergyAdapter BluetoothAdapter => Xamarin.Forms.DependencyService.Get<IBluetoothHelper>().Adapter;
 
         /// <summary>
         /// Konstruktor für ein OverallViewModel
@@ -43,8 +42,16 @@ namespace myMD.ViewModel.OverallViewModel
         public OverallViewModel()
         {
             ModelFacade = App.Model;
+            BluetoothAdapter = CrossBleAdapter.Current;
 
-            BluetoothAdapter.CurrentState.Subscribe(state => Debug.WriteLine("New State: {0}", state));   
+            /*BluetoothAdapter.WhenStatusChanged().Subscribe(state =>
+            {
+                Debug.WriteLine("New State: {0}", state);
+                if (state == AdapterStatus.PoweredOn)
+                {
+                    StartScan();
+                }
+            });*/
         }
 
 

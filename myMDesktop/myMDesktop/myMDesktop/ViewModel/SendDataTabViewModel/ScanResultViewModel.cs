@@ -15,7 +15,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         /// <summary>
         /// Der Name des Gerätes
         /// </summary>
-        public string DeviceName { get => ScanResult.Device.Name; }
+        public string DeviceName { get => ScanResult.Device. }
 
         /// <summary>
         /// Boolean, ob man schon mit dem Gerät verbunden ist

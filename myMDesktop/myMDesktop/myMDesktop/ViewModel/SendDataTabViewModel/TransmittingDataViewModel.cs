@@ -81,8 +81,8 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
                 {
                     await this.server.Start(new AdvertisementData
                     {
-                        /*LocalName = "TestServer",
-                        ServiceUuids = new List<Guid> { myMDguid }*/
+                        LocalName = "TestServer",
+                        ServiceUuids = new List<Guid> { myMDguid }
                     });
 
                 }
