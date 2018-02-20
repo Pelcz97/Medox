@@ -9,11 +9,15 @@ namespace myMDesktop
 {
 	public partial class App : Application
 	{
-		public App ()
-		{
-			InitializeComponent();
+        public App()
+        {
+            InitializeComponent();
 
-			MainPage = new NavigationPage(new myMDesktop.View.SendDataTabPages.SendDataPage());
+            MainPage = new NavigationPage(new myMDesktop.View.SendDataTabPages.SendDataPage())
+            {
+                BarBackgroundColor = Color.FromHex("#191928")
+            };
+        
 		}
 
 		protected override void OnStart ()
