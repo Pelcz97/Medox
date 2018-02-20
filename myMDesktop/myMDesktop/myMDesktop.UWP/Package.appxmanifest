@@ -23,6 +23,9 @@
       <Extensions>
         <Extension Category="windows.backgroundTasks" StartPage="MainPage.xaml">
           <BackgroundTasks>
+            <Task Type="controlChannel" />
+            <Task Type="systemEvent" />
+            <Task Type="deviceUse" />
             <Task Type="deviceConnectionChange" />
             <Task Type="bluetooth" />
           </BackgroundTasks>

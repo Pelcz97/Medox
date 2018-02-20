@@ -6,6 +6,8 @@ using Xamarin.Forms.Internals;
 using System.Linq;
 using myMD.ViewModel.OverallViewModel;
 using Plugin.BluetoothLE;
+using Xamarin.Forms.PlatformConfiguration;
+using Windows.UI.Core;
 
 namespace myMDesktop.ViewModel.SendDataTabViewModel
 {
@@ -35,16 +37,26 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
 
         public async void StartScan()
         {
-            BleAdapter.ScanWhenAdapterReady().Subscribe(scanResult =>
-            {
-                ScanResultViewModel test = new ScanResultViewModel();
-                test.ScanResult = scanResult;
-
-                if (scanResult != null && DeviceList.All(x => x.ScanResult.Device != test.ScanResult.Device))
+            
+                BleAdapter.Scan().Subscribe(scanResult =>
                 {
-                    DeviceList.Add(test);
-                }
-            });
+                    ScanResultViewModel test = new ScanResultViewModel();
+                    test.ScanResult = scanResult;
+
+
+                    if (scanResult != null && DeviceList.All(x => x.ScanResult.Device != test.ScanResult.Device))
+                    {
+                        Debug.WriteLine("Current AdapterState: " + BleAdapter.Status);
+    
+                        Debug.WriteLine("New Device: " + scanResult.Device.Name);
+                        Xamarin.Forms.Device.BeginInvokeOnMainThread(() =>
+                        {
+                            DeviceList.Add(test);
+                        });
+                    }
+                });
+           
+            
         }
     }
 }

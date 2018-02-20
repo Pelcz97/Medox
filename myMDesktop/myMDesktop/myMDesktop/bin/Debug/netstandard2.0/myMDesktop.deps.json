@@ -14,7 +14,8 @@
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
           "Xamarin.Forms": "2.5.0.274780",
-          "reactiveui": "7.4.0"
+          "reactiveui": "7.4.0",
+          "Windows.Foundation.UniversalApiContract": "5.0.0.0"
         },
         "runtime": {
           "myMDesktop.dll": {}
@@ -363,6 +364,11 @@
           "lib/netstandard1.0/Xamarin.Forms.Platform.dll": {},
           "lib/netstandard1.0/Xamarin.Forms.Xaml.dll": {}
         }
+      },
+      "Windows.Foundation.UniversalApiContract/5.0.0.0": {
+        "runtime": {
+          "Windows.Foundation.UniversalApiContract.winmd": {}
+        }
       }
     }
   },
@@ -665,6 +671,11 @@
       "sha512": "sha512-Uh7KMin/FXdwxfCMrkpUohmjo/bw8fOKgf6rZUQmSANt4RNObL3JFe6EGUJroy/jZFtVa/iKEIB6bDH37+FmDw==",
       "path": "xamarin.forms/2.5.0.274780",
       "hashPath": "xamarin.forms.2.5.0.274780.nupkg.sha512"
+    },
+    "Windows.Foundation.UniversalApiContract/5.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

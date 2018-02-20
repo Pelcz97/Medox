@@ -35,7 +35,11 @@ namespace myMDesktop.View.SendDataTabPages
         /// <param name="e">E.</param>
         void SendDataButton_Clicked(object sender, EventArgs e)
         {
-            var page = new TransmittingDataPage();
+            var page = new TransmittingDataPage()
+            {
+                BackgroundColor = Color.FromHex("#191928")
+            };
+
             Navigation.PushAsync(page);
         }
     }

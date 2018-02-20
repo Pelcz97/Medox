@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>E37AA584C9BF6C16A0A63C2E6C809619197C0F4B365BC504F638B60CD4834CAC</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>B9B6D7B312F896E52941879720159A0B0D35AE8D9C8C65C4CF53865E6B364071</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>ec0cc741-fd3e-485c-81be-68815c480690_1.0.0.0_x64__hma5z8g0e8z20</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>ec0cc741-fd3e-485c-81be-68815c480690_hma5z8g0e8z20!App</RegisteredUserModeAppID>
     <RegisteredPackageID>ec0cc741-fd3e-485c-81be-68815c480690</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-16T22:54:09.625</Modified>
+      <Modified>2018-02-20T21:11:27.004</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\myMDesktop.UWP.exe">
       <PackagePath>entrypoint\myMDesktop.UWP.exe</PackagePath>
-      <Modified>2018-02-16T22:54:08.615</Modified>
+      <Modified>2018-02-20T21:11:26.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\plugin.bluetoothle\5.3.2\lib\uap10.0\Plugin.BluetoothLE.Abstractions.dll">
       <PackagePath>Plugin.BluetoothLE.Abstractions.dll</PackagePath>
@@ -753,7 +753,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\myMDesktop.dll">
       <PackagePath>myMDesktop.dll</PackagePath>
-      <Modified>2018-02-16T22:54:03.498</Modified>
+      <Modified>2018-02-20T21:11:21.191</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -924,11 +924,11 @@
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-16T22:54:09.168</Modified>
+      <Modified>2018-02-20T21:11:26.572</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\Core\myMDesktop.UWP.exe">
       <PackagePath>myMDesktop.UWP.exe</PackagePath>
-      <Modified>2018-02-16T22:54:09.616</Modified>
+      <Modified>2018-02-20T21:11:26.999</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

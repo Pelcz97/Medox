@@ -26,6 +26,7 @@ namespace Samples.ViewModels.Le
             {
                 CrossBleAdapter.Current = adapter;
                 await vmManager.Push<MainViewModel>();
+                
             });
             this.Scan = ReactiveCommand.Create(() =>
             {
