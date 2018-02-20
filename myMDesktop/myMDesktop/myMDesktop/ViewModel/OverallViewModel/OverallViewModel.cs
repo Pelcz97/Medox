@@ -36,7 +36,6 @@ namespace myMD.ViewModel.OverallViewModel
         public OverallViewModel()
         {
 
-            //CrossBleAdapter.Current.WhenStatusChanged().Subscribe(status => { Debug.WriteLine("CrossBLEAdapterstatus : " + status); });
         }
 
 
