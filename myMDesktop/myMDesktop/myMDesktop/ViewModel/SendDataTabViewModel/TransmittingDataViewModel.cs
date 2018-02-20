@@ -23,7 +23,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
     {
 
         string output;
-        public static Guid myMDguid = new Guid("00000000-1000-1000-1000-00805F9B0000");
+        public static Guid myMDguid = new Guid("c531ba9d-2ff3-48e9-8f15-808beb02bdf9");
         public static Guid myMDserviceGuid1 = new Guid("10000000-1000-1000-1000-100000000000");
         public static Guid myMDserviceGuid2 = new Guid("20000000-2000-2000-2000-200000000000");
         public static Guid myMDcharGuid1 = new Guid("30000000-3000-3000-3000-300000000000");
@@ -58,7 +58,6 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         public async void FindAdapter()
         {
             BleAdapter = await CrossBleAdapter.AdapterScanner.FindAdapters();
-            Debug.WriteLine("new adapter: " + BleAdapter.Status);
             StartServer();
         }
 
@@ -81,8 +80,9 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
                 {
                     await this.server.Start(new AdvertisementData
                     {
-                        /*LocalName = "TestServer",
-                        ServiceUuids = new List<Guid> { myMDguid }*/
+                        LocalName = "TestServer",
+                        ManufacturerData = null,
+                        ServiceUuids = new List<Guid> { myMDserviceGuid1 }
                     });
 
                 }
@@ -102,18 +102,12 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
             var characteristic = service.AddCharacteristic(
                 myMDcharGuid1,
                 CharacteristicProperties.Read | CharacteristicProperties.Write,
-                GattPermissions.Read | GattPermissions.Write
+                GattPermissions.Read
             );
 
-            var notifyCharacteristic = service.AddCharacteristic
-            (
-                myMDcharGuid2,
-                CharacteristicProperties.Indicate | CharacteristicProperties.Notify,
-                GattPermissions.Read | GattPermissions.Write
-            );
 
             IDisposable notifyBroadcast = null;
-            notifyCharacteristic.WhenDeviceSubscriptionChanged().Subscribe(e =>
+            characteristic.WhenDeviceSubscriptionChanged().Subscribe(e =>
             {
                 var @event = e.IsSubscribed ? "Subscribed" : "Unsubcribed";
 
@@ -121,30 +115,38 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
                 {
                     this.notifyBroadcast = Observable
                         .Interval(TimeSpan.FromSeconds(1))
-                        .Where(x => notifyCharacteristic.SubscribedDevices.Count > 0)
+                        .Where(x => characteristic.SubscribedDevices.Count > 0)
                         .Subscribe(_ =>
                         {
                             Debug.WriteLine("Sending Broadcast");
                             var dt = DateTime.Now.ToString("g");
                             var bytes = Encoding.UTF8.GetBytes(dt);
-                            notifyCharacteristic.Broadcast(bytes);
+                            characteristic.Broadcast(bytes);
                         });
                 }
             });
 
             characteristic.WhenReadReceived().Subscribe(x =>
             {
-                var write = "HELLO";
+                try {
+                    var write = "HELLO";
 
                 // you must set a reply value
                 x.Value = Encoding.UTF8.GetBytes(write);
 
-                x.Status = GattStatus.Success; // you can optionally set a status, but it defaults to Success
+                x.Status = GattStatus.Success; // you can optionally set a status, but it defaults to Success 
+                } catch (Exception ex)
+                {
+                    Debug.WriteLine(ex);
+                }
+
             });
+
             characteristic.WhenWriteReceived().Subscribe(x =>
             {
-                var write = Encoding.UTF8.GetString(x.Value, 0, x.Value.Length);
+                //var write = Encoding.UTF8.GetString(x.Value, 0, x.Value.Length);
                 // do something value
+                Debug.WriteLine("Neuer Wert empfangen.");
             });
         }
         

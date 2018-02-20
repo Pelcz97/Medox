@@ -28,7 +28,7 @@ namespace myMD.ViewModel.OverallViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public IAdapter BleAdapter { get; set; }
+        public static IAdapter BleAdapter { get; set; }
 
         /// <summary>
         /// Konstruktor für ein OverallViewModel
