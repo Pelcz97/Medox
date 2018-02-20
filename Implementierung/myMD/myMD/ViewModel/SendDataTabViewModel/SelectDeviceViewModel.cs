@@ -129,7 +129,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
             Debug.WriteLine("Gerät = " + device.Name);
             try {
                 device.Connect();
-
+                
                 if (device.IsPairingAvailable() && device.PairingStatus != PairingStatus.Paired)
                 {
                     // there is an optional argument to pass a PIN in PairRequest as well
