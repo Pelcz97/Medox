@@ -24,6 +24,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
 
         string output;
         public static Guid myMDguid = new Guid("00000000-1000-1000-1000-00805F9B0000");
+        public static Guid test = new Guid("0x66");
         public static Guid myMDserviceGuid1 = new Guid("10000000-1000-1000-1000-100000000000");
         public static Guid myMDserviceGuid2 = new Guid("20000000-2000-2000-2000-200000000000");
         public static Guid myMDcharGuid1 = new Guid("30000000-3000-3000-3000-300000000000");
@@ -82,7 +83,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
                     await this.server.Start(new AdvertisementData
                     {
                         LocalName = "TestServer",
-                        ServiceUuids = new List<Guid> { myMDguid }
+                        ServiceUuids = new List<Guid> { test }
                     });
 
                 }

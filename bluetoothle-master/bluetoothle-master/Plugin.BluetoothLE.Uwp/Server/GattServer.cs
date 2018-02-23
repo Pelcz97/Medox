@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace Plugin.BluetoothLE.Server
 
 
         public GattServer()
-        {
+        {   
             this.publisher = new BluetoothLEAdvertisementPublisher();
         }
 
@@ -65,7 +66,9 @@ namespace Plugin.BluetoothLE.Server
 
             }
             await this.StartGatt();
+            
             this.publisher.Start();
+            Debug.WriteLine("HIER: " + this.IsRunning);
         }
 
 

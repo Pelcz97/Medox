@@ -53,7 +53,7 @@ namespace Samples.ViewModels.Le
                     {
                         await this.server.Start(new AdvertisementData
                         {
-                            LocalName = "TestServer"
+                            LocalName = "TestServer"/*, ManufacturerData = new ManufacturerData(0x004c, null)*/
                         });
                         Debug.WriteLine("AfterStart Server state:" + server.IsRunning);
                     }

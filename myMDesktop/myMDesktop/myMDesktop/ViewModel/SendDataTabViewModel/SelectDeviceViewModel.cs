@@ -37,26 +37,22 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
 
         public async void StartScan()
         {
-            
-                BleAdapter.Scan().Subscribe(scanResult =>
+
+            BleAdapter.Scan().Subscribe(scanResult =>
+            {
+                ScanResultViewModel test = new ScanResultViewModel();
+                test.ScanResult = scanResult;
+                if (scanResult != null && DeviceList.All(x => x.ScanResult.Device != test.ScanResult.Device))
                 {
-                    ScanResultViewModel test = new ScanResultViewModel();
-                    test.ScanResult = scanResult;
+                    Debug.WriteLine("Current AdapterState: " + BleAdapter.Status);
 
-
-                    if (scanResult != null && DeviceList.All(x => x.ScanResult.Device != test.ScanResult.Device))
+                    Debug.WriteLine("New Device: " + scanResult.Device.Name);
+                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() =>
                     {
-                        Debug.WriteLine("Current AdapterState: " + BleAdapter.Status);
-    
-                        Debug.WriteLine("New Device: " + scanResult.Device.Name);
-                        Xamarin.Forms.Device.BeginInvokeOnMainThread(() =>
-                        {
-                            DeviceList.Add(test);
-                        });
-                    }
-                });
-           
-            
+                        DeviceList.Add(test);
+                    });
+                }
+            });
         }
     }
 }
