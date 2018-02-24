@@ -245,12 +245,6 @@
     <Reference Include="Plugin.BluetoothLE">
       <HintPath>..\packages\Plugin.BluetoothLE.4.0.0\lib\netstandard1.0\Plugin.BluetoothLE.dll</HintPath>
     </Reference>
-    <Reference Include="nexus.core">
-      <HintPath>..\packages\nexus.core.0.31.0\lib\portable45-net45+win8\nexus.core.dll</HintPath>
-    </Reference>
-    <Reference Include="ble.net">
-      <HintPath>..\packages\ble.net.1.0.0\lib\portable45-net45+win8\ble.net.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">

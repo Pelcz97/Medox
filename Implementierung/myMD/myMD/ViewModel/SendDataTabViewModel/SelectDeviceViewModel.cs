@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using System.Linq;
-using System.Threading.Tasks;
 using Plugin.BluetoothLE;
 
 namespace myMD.ViewModel.SendDataTabViewModel
@@ -85,14 +83,11 @@ namespace myMD.ViewModel.SendDataTabViewModel
             isScanning = true;
 
 
-            this.scan = CrossBleAdapter.Current.Scan(new ScanConfig { 
-                ScanType = BleScanType.Balanced, 
-                ServiceUuid = myMDserviceGuid1
-            }).Subscribe(scanResult =>
+            this.scan = CrossBleAdapter.Current.Scan().Subscribe(scanResult =>
             {
                 ScanResultViewModel test = new ScanResultViewModel();
                 test.Device = scanResult.Device;
-                if (test != null && DeviceList.All(x => x.Device != test.Device) && test.Device.Name != null)
+                if (test != null && DeviceList.All(x => x.Device != test.Device) /*&& test.Device.Name != null*/)
                 {
                     DeviceList.Add(test);
                     DeviceList.FirstOrDefault();
@@ -122,9 +117,14 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// Methode um sich mit einem anderen Gerät zu verbinden
         /// </summary>
         /// <param name="item"></param>
-        public async void ConnectToDevice(object item){
+        public void ConnectToDevice(object item){
             var ScanResultItem = (ScanResultViewModel)item;
             IDevice device = ScanResultItem.Device;
+
+            device.WhenServiceDiscovered().Subscribe(service =>
+            {
+                Debug.WriteLine(service.Uuid);
+            });
 
             Debug.WriteLine("Gerät = " + device.Name);
             try {
