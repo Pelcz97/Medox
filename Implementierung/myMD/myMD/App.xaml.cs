@@ -90,7 +90,8 @@ namespace myMD
         /// <returns>Neue Instanz des Models</returns>
         private static IModelFacade CreateModel()
         {
-            return new ModelFacade(new EntityDatabase(), new EntityFactory(), new ParserFacade(), new Bluetooth(), new XamarinDependencyService());
+            DependencyServiceWrapper.Service = new XamarinDependencyService();
+            return new ModelFacade(new EntityDatabase(), new EntityFactory(), new ParserFacade(), new Bluetooth());
         }
     }
 }
