@@ -8,5 +8,6 @@ namespace myMDesktop.Model.TransmissionModel
     [Preserve(AllMembers = true)]
     public interface IServer
     {
+        void StartServer();
     }
 }
