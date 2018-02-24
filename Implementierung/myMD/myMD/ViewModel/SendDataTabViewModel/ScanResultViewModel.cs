@@ -15,7 +15,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// Das gefundene Gerät
         /// </summary>
         public IDevice Device { get; set; }
-        public string test { get; set; }
+
         /// <summary>
         /// Der Name des Gerätes
         /// </summary>
@@ -29,11 +29,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// <summary>
         /// Guid des Gerätes
         /// </summary>
-        public Guid Uuid { get; private set; }
+        public Guid Uuid { get => this.Device.Uuid; }
 
-        /// <summary>
-        /// Localer Name des Gerätes
-        /// </summary>
-        public string LocalName { get; private set; }
+       
     }
 }

@@ -15,11 +15,11 @@ namespace myMD.ViewModel.SendDataTabViewModel
     public class SelectDeviceViewModel : OverallViewModel.OverallViewModel
     {
         //public IAdapter BleAdapter { get; set; }
-        public static Guid myMDguid = new Guid("00000000-1000-1000-1000-00805F9B0000");
+        //public static Guid myMDguid = new Guid("00000000-1000-1000-1000-00805F9B0000");
         public static Guid myMDserviceGuid1 = new Guid("10000000-1000-1000-1000-100000000000");
-        public static Guid myMDserviceGuid2 = new Guid("20000000-2000-2000-2000-200000000000");
+        //public static Guid myMDserviceGuid2 = new Guid("20000000-2000-2000-2000-200000000000");
         public static Guid myMDcharGuid1 = new Guid("30000000-3000-3000-3000-300000000000");
-        public static Guid myMDcharGuid2 = new Guid("40000000-4000-4000-4000-400000000000");
+        //public static Guid myMDcharGuid2 = new Guid("40000000-4000-4000-4000-400000000000");
 
         /// <summary>
         /// Liste an Geräten die in der Umgebung gefunden wurden
@@ -121,27 +121,31 @@ namespace myMD.ViewModel.SendDataTabViewModel
             var ScanResultItem = (ScanResultViewModel)item;
             IDevice device = ScanResultItem.Device;
 
-            device.WhenServiceDiscovered().Subscribe(service =>
+            device.WhenAnyDescriptorDiscovered().Subscribe(service =>
+            {
+                Debug.WriteLine(service.Description);
+            });
+
+            device.WhenAnyCharacteristicDiscovered().Subscribe(service =>
             {
                 Debug.WriteLine(service.Uuid);
             });
 
-            Debug.WriteLine("Gerät = " + device.Name);
-            try {
-                device.Connect();
-                
-                if (device.IsPairingAvailable() && device.PairingStatus != PairingStatus.Paired)
-                {
-                    // there is an optional argument to pass a PIN in PairRequest as well
-                    device.PairingRequest("1111").Subscribe(isSuccessful => { Debug.WriteLine("Successfully paired"); });
-                }
 
+            try {
+
+                device.Connect(new GattConnectionConfig
+                {
+                    NotifyOnConnect = true
+                });
+
+                device.WhenStatusChanged().Subscribe(connectionState => { 
+                    Debug.WriteLine("Connection State: " + connectionState);
+                });
             } 
             catch (Exception ex){
                 Debug.WriteLine(ex);
             }
-
-
         }
 
 
@@ -150,6 +154,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
         {
             if (ConnectedDevice != null)
             {
+                scan.Dispose();
+                isScanning = false;
                 MessagingCenter.Send(this, "ConnectedDevice", ConnectedDevice);
                 MessagingCenter.Unsubscribe<SelectDeviceViewModel>(this, "ConnectedDevice");
             }
