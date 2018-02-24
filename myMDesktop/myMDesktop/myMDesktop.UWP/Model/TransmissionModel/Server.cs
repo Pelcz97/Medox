@@ -1,29 +1,75 @@
 ﻿using myMDesktop.Model.TransmissionModel;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Devices.Bluetooth;
 using Windows.Devices.Bluetooth.GenericAttributeProfile;
+using Xamarin.Forms;
 
-[assembly: DefaultDependency(typeof(myMDesktop.Model.TransmissionModel.UWP.Server))]
-namespace myMDesktop.UWP.Model.TransmissionModel.UWP
+[assembly: Xamarin.Forms.Dependency(typeof(myMDesktop.UWP.Model.TransmissionModel.Server))]
+namespace myMDesktop.UWP.Model.TransmissionModel
 {
     class Server : IServer
     {
-        GattServiceProvider serviceProvider;
+        public static Guid myMDguid = new Guid("00000000-1000-1000-1000-00805F9B0000");
+        
+        public static Guid myMDserviceGuid1 = new Guid("10000000-1000-1000-1000-100000000000");
+        public static Guid myMDserviceGuid2 = new Guid("20000000-2000-2000-2000-200000000000");
+        public static Guid myMDcharGuid1 = new Guid("30000000-3000-3000-3000-300000000000");
+        public static Guid myMDcharGuid2 = new Guid("40000000-4000-4000-4000-400000000000");
+
+        public GattServiceProvider serviceProvider;
+        private GattLocalCharacteristic myMDChar1;
         private bool peripheralSupported;
 
-        private GattLocalCharacteristic myMDChar1;
-        private GattLocalCharacteristic myMDChar2;
-        private GattLocalCharacteristic myMDChar3;
         
+        //private GattLocalCharacteristic myMDChar2;
+        //private GattLocalCharacteristic myMDChar3;
 
-        Server()
+        public static readonly GattLocalCharacteristicParameters gattOperatorParameters = new GattLocalCharacteristicParameters
         {
-            peripheralSupported = await CheckPeripheralRoleSupportAsync();
+            CharacteristicProperties = GattCharacteristicProperties.Write |
+                                       GattCharacteristicProperties.WriteWithoutResponse,
+            WriteProtectionLevel = GattProtectionLevel.Plain,
+            UserDescription = "Operator Characteristic"
+        };
+
+        public Server()
+        {
+            checkPeripheralSupport();
+        }
+
+        public async void checkPeripheralSupport()
+        {
+           peripheralSupported = await CheckPeripheralRoleSupportAsync();
+        }
+
+        public async void StartServer()
+        {
+            // Server not initialized yet - initialize it and start publishing
+            if (serviceProvider == null)
+            {
+                var serviceStarted = await ServiceProviderInitAsync();
+                if (serviceStarted)
+                {
+                    Debug.WriteLine("Server started successfully.");
+                }
+                else
+                {
+                    Debug.WriteLine("Server could not start.");
+                }
+            }
+            else
+            {
+                // BT_Code: Stops advertising support for custom GATT Service 
+                serviceProvider.StopAdvertising();
+                serviceProvider = null;
+                StartServer();
+            }
         }
 
         private async Task<bool> CheckPeripheralRoleSupportAsync()
@@ -45,39 +91,27 @@ namespace myMDesktop.UWP.Model.TransmissionModel.UWP
         private async Task<bool> ServiceProviderInitAsync()
         {
             // BT_Code: Initialize and starting a custom GATT Service using GattServiceProvider.
-            GattServiceProviderResult serviceResult = await GattServiceProvider.CreateAsync(Constants.CalcServiceUuid);
+            GattServiceProviderResult serviceResult = await GattServiceProvider.CreateAsync(myMDserviceGuid1);
             if (serviceResult.Error == BluetoothError.Success)
             {
                 serviceProvider = serviceResult.ServiceProvider;
             }
             else
             {
-                rootPage.NotifyUser($"Could not create service provider: {serviceResult.Error}", NotifyType.ErrorMessage);
+                Debug.WriteLine(serviceResult.Error);
                 return false;
             }
 
-            GattLocalCharacteristicResult result = await serviceProvider.Service.CreateCharacteristicAsync(Constants.Op1CharacteristicUuid, Constants.gattOperandParameters);
+            GattLocalCharacteristicResult result = await serviceProvider.Service.CreateCharacteristicAsync(myMDcharGuid1, gattOperatorParameters);
             if (result.Error == BluetoothError.Success)
             {
                 myMDChar1 = result.Characteristic;
             }
             else
             {
-                rootPage.NotifyUser($"Could not create operand1 characteristic: {result.Error}", NotifyType.ErrorMessage);
+                Debug.WriteLine(result.Error);
                 return false;
             }
-            myMDChar1.WriteRequested += Op1Characteristic_WriteRequestedAsync;
-
-            
-            // Add presentation format - 32-bit unsigned integer, with exponent 0, the unit is unitless, with no company description
-            GattPresentationFormat intFormat = GattPresentationFormat.FromParts(
-                GattPresentationFormatTypes.UInt32,
-                PresentationFormats.Exponent,
-                Convert.ToUInt16(PresentationFormats.Units.Unitless),
-                Convert.ToByte(PresentationFormats.NamespaceId.BluetoothSigAssignedNumber),
-                PresentationFormats.Description);
-
-            Constants.gattResultParameters.PresentationFormats.Add(intFormat);
 
             
             // BT_Code: Indicate if your sever advertises as connectable and discoverable.
@@ -91,7 +125,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel.UWP
                 // of this service
                 IsDiscoverable = true
             };
-            serviceProvider.AdvertisementStatusChanged += ServiceProvider_AdvertisementStatusChanged;
+            //serviceProvider.AdvertisementStatusChanged += ServiceProvider_AdvertisementStatusChanged;
             serviceProvider.StartAdvertising(advParameters);
             return true;
         }

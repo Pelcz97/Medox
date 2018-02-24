@@ -12,6 +12,7 @@ using System.Text;
 using System.Reactive.Linq;
 using ReactiveUI;
 using System.Collections.Generic;
+using myMDesktop.Model.TransmissionModel;
 
 namespace myMDesktop.ViewModel.SendDataTabViewModel
 {
@@ -45,7 +46,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         /// </summary>
         public TransmittingDataViewModel() {
 
-            FindAdapter();
+            DependencyService.Get<IServer>().StartServer();
             
             /*MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<DoctorsLetterViewModel>>(this, "SelectedLetters", (sender, arg) => {
                 LettersToSend = arg;
