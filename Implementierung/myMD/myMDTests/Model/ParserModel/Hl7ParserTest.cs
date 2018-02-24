@@ -155,7 +155,7 @@ namespace myMDTests.Model.ParserModel
         [Test]
         public void ParseHl7FileToDatabaseTest()
         {
-            FileToDatabaseParser parser = new Hl7ToDatabaseParser(new TestHl7ParserHelper());
+            FileToDatabaseParser parser = new Hl7ToDatabaseParser();
             parser.ParseFile(Custom, db);
             Assert.AreEqual(db.Doctor, doctor);
             Assert.AreEqual(db.Letter, letter);

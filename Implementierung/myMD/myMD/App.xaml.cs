@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using myMD.Model.DatabaseModel;
+using myMD.Model.DependencyService;
 using myMD.Model.EntityFactory;
 using myMD.Model.ModelFacade;
 using myMD.Model.ParserModel;
@@ -89,6 +90,7 @@ namespace myMD
         /// <returns>Neue Instanz des Models</returns>
         private static IModelFacade CreateModel()
         {
+            DependencyServiceWrapper.Service = new XamarinDependencyService();
             return new ModelFacade(new EntityDatabase(), new EntityFactory(), new ParserFacade(), new Bluetooth());
         }
     }

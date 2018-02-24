@@ -1,4 +1,5 @@
 using myMD.Model.DatabaseModel;
+using myMD.Model.DependencyService;
 using myMD.Model.EntityFactory;
 using myMD.Model.FileHelper;
 using myMD.Model.ParserModel;
@@ -54,7 +55,7 @@ namespace myMD.Model.ModelFacade
             this.factory = factory;
             this.parser = parser;
             this.bluetooth = bluetooth;
-            this.fileHelper = DependencyService.Get<IFileHelper>();
+            this.fileHelper = DependencyServiceWrapper.Get<IFileHelper>();
             //Create new Profile, if none exists yet
             if (database.GetAllProfiles().Count == 0)
             {

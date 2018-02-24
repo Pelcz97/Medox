@@ -1,3 +1,4 @@
+using myMD.Model.DependencyService;
 using myMD.Model.FileHelper;
 using myMD.ModelInterface.DataModelInterface;
 using SQLiteNetExtensions.Attributes;
@@ -143,7 +144,7 @@ namespace myMD.Model.DataModel
             {
                 RemoveFromGroup(DatabaseGroups.First());
             }
-            DependencyService.Get<IFileHelper>().DeleteFile(Filepath);
+            DependencyServiceWrapper.Get<IFileHelper>().DeleteFile(Filepath);
         }
 
         /// <summary>

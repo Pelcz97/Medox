@@ -72,15 +72,11 @@ namespace myMDTests.Model.DataModel
         }
 
         [Test]
-        public void LetterSortedInGroupTest()
+        public void FirstLastDateTest()
         {
             Array.Sort(dates);
-            DateTime[] letterDates = new DateTime[COUNT];
-            for (int i = 0; i < COUNT; ++i)
-            {
-                letterDates[i] = group.DatabaseLetters.ElementAt(i).Date;
-            }
-            Assert.True(letterDates.SequenceEqual(dates));
+            Assert.AreEqual(dates.First(), group.Date);
+            Assert.AreEqual(dates.Last(), group.LastDate);
         }
 
         [Test]

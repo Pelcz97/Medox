@@ -10,6 +10,8 @@ using myMD.Model.DataModel;
 using myMD.ModelInterface.DataModelInterface;
 using myMDTests.Model.EntityFactory;
 using myMDTests.Model.FileHelper;
+using myMD.Model.DependencyService;
+using myMDTests.Model.DependencyService;
 
 namespace myMDTests.Model.DatabaseModel
 {
@@ -28,7 +30,8 @@ namespace myMDTests.Model.DatabaseModel
         [OneTimeSetUp]
         public void SetUpBefore()
         {
-            db = new EntityDatabase(new TestFileHelper());
+            DependencyServiceWrapper.Service = new TestDependencyService();
+            db = new EntityDatabase();
             factory = new RandomEntityFactory();
             db.Destroy();
             db.Create();
