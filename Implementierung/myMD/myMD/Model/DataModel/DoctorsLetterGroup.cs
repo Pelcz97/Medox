@@ -41,7 +41,7 @@ namespace myMD.Model.DataModel
         /// </summary>
         /// <see>myMD.Model.DataModel.Data#Date</see>
         /// <see>myMD.Model.DataModel.DoctorsLetterGroup#DatabaseLetters</see>
-        public override DateTime Date => DatabaseLetters.Any() ? DatabaseLetters.First().Date : default(DateTime);
+        public override DateTime Date => DatabaseLetters.Any() ? DatabaseLetters.Min().Date : default(DateTime);
 
         /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetterGroup#DoctorsLetters</see>
         public IList<IDoctorsLetter> DoctorsLetters
@@ -63,7 +63,7 @@ namespace myMD.Model.DataModel
         /// </summary>
         /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetterGroup#GetLastDate()</see>
         /// <see>myMD.Model.DataModel.DoctorsLetterGroup#DatabaseLetters</see>
-        public DateTime LastDate => DatabaseLetters.Any() ? DatabaseLetters.Last().Date : default(DateTime);
+        public DateTime LastDate => DatabaseLetters.Any() ? DatabaseLetters.Max().Date : default(DateTime);
 
         /// <summary>
         /// Überladung für konkrete Arztbriefe.
@@ -73,18 +73,7 @@ namespace myMD.Model.DataModel
         {
             if (!DatabaseLetters.Contains(letter))
             {
-                if (DatabaseLetters.Any())
-                {
-                    int i = 0;
-                    ///Suche nach passendem Index um die Liste sortiert zu halten
-                    for (IEnumerator<DoctorsLetter> enumerator = DatabaseLetters.GetEnumerator();
-                        enumerator.MoveNext() && letter.CompareTo(enumerator.Current) > 0; ++i) ;
-                    DatabaseLetters.Insert(i, letter);
-                }
-                else
-                {
-                    DatabaseLetters.Add(letter);
-                }
+                DatabaseLetters.Add(letter);
                 letter.AddToGroup(this);
             }
         }

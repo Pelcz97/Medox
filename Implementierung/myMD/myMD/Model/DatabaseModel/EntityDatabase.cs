@@ -135,6 +135,7 @@ namespace myMD.Model.DatabaseModel
         {
             Entity e = entity.ToEntity();
             e.Profile = profile;
+            e.ProfileID = profile.ID;
             db.Insert(e);
         }
 
