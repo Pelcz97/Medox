@@ -11,8 +11,8 @@
 namespace myMDesktop.View.SendDataTabPages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\Studium\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\View\\SendDataTabPages\\SelectDevic" +
-        "ePage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\View\\SendDataTabPages\\SelectDev" +
+        "icePage.xaml")]
     public partial class SelectDevicePage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

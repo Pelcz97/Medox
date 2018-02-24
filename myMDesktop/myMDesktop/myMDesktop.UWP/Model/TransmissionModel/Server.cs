@@ -16,26 +16,20 @@ namespace myMDesktop.UWP.Model.TransmissionModel
     class Server : IServer
     {
         public static Guid myMDguid = new Guid("00000000-1000-1000-1000-00805F9B0000");
-        
         public static Guid myMDserviceGuid1 = new Guid("10000000-1000-1000-1000-100000000000");
-        public static Guid myMDserviceGuid2 = new Guid("20000000-2000-2000-2000-200000000000");
         public static Guid myMDcharGuid1 = new Guid("30000000-3000-3000-3000-300000000000");
-        public static Guid myMDcharGuid2 = new Guid("40000000-4000-4000-4000-400000000000");
+        
 
         public GattServiceProvider serviceProvider;
-        private GattLocalCharacteristic myMDChar1;
+        private GattLocalCharacteristic myMDCharacteristic;
         private bool peripheralSupported;
-
-        
-        //private GattLocalCharacteristic myMDChar2;
-        //private GattLocalCharacteristic myMDChar3;
 
         public static readonly GattLocalCharacteristicParameters gattOperatorParameters = new GattLocalCharacteristicParameters
         {
             CharacteristicProperties = GattCharacteristicProperties.Write |
                                        GattCharacteristicProperties.WriteWithoutResponse,
             WriteProtectionLevel = GattProtectionLevel.Plain,
-            UserDescription = "Operator Characteristic"
+            UserDescription = "myMD Characteristic"
         };
 
         public Server()
@@ -48,7 +42,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
            peripheralSupported = await CheckPeripheralRoleSupportAsync();
         }
 
-        public async void StartServer()
+        public async Task StartServer()
         {
             // Server not initialized yet - initialize it and start publishing
             if (serviceProvider == null)
@@ -56,6 +50,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
                 var serviceStarted = await ServiceProviderInitAsync();
                 if (serviceStarted)
                 {
+                    //serviceProvider.StartAdvertising();
                     Debug.WriteLine("Server started successfully.");
                 }
                 else
@@ -68,7 +63,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
                 // BT_Code: Stops advertising support for custom GATT Service 
                 serviceProvider.StopAdvertising();
                 serviceProvider = null;
-                StartServer();
+                await StartServer();
             }
         }
 
@@ -92,6 +87,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
         {
             // BT_Code: Initialize and starting a custom GATT Service using GattServiceProvider.
             GattServiceProviderResult serviceResult = await GattServiceProvider.CreateAsync(myMDserviceGuid1);
+            //Debug.WriteLine("Service: " + serviceResult);
             if (serviceResult.Error == BluetoothError.Success)
             {
                 serviceProvider = serviceResult.ServiceProvider;
@@ -105,7 +101,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
             GattLocalCharacteristicResult result = await serviceProvider.Service.CreateCharacteristicAsync(myMDcharGuid1, gattOperatorParameters);
             if (result.Error == BluetoothError.Success)
             {
-                myMDChar1 = result.Characteristic;
+                myMDCharacteristic = result.Characteristic;
             }
             else
             {
@@ -126,6 +122,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
                 IsDiscoverable = true
             };
             //serviceProvider.AdvertisementStatusChanged += ServiceProvider_AdvertisementStatusChanged;
+            Debug.WriteLine("Advertisment Status: " + serviceProvider.AdvertisementStatus);
             serviceProvider.StartAdvertising(advParameters);
             return true;
         }

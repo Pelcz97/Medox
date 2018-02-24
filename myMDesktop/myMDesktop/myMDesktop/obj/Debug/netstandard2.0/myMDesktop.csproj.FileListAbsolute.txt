@@ -1,4 +1,3 @@
-D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csprojResolveAssemblyReference.cache
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csproj.CoreCompileInputs.cache
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.App.xaml.g.cs
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.MainPage.xaml.g.cs
