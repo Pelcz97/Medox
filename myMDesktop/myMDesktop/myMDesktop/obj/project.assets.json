@@ -3021,7 +3021,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Philipp Nils Karcher\\.nuget\\packages\\": {},
+    "C:\\Users\\Jan-Luca\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
@@ -3031,18 +3031,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\Studium\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj",
+      "projectUniqueName": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj",
       "projectName": "myMDesktop",
-      "projectPath": "E:\\Studium\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj",
-      "packagesPath": "C:\\Users\\Philipp Nils Karcher\\.nuget\\packages\\",
-      "outputPath": "E:\\Studium\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\obj\\",
+      "projectPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj",
+      "packagesPath": "C:\\Users\\Jan-Luca\\.nuget\\packages\\",
+      "outputPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Philipp Nils Karcher\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jan-Luca\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
