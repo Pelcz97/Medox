@@ -16436,24 +16436,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jan-Luca\\.nuget\\packages\\": {},
+    "C:\\Users\\Philipp Nils Karcher\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
+      "projectUniqueName": "E:\\Studium\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
       "projectName": "myMDesktop.UWP",
-      "projectPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
-      "packagesPath": "C:\\Users\\Jan-Luca\\.nuget\\packages\\",
-      "outputPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\obj\\",
+      "projectPath": "E:\\Studium\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
+      "packagesPath": "C:\\Users\\Philipp Nils Karcher\\.nuget\\packages\\",
+      "outputPath": "E:\\Studium\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Jan-Luca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Philipp Nils Karcher\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -16467,8 +16467,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj": {
-              "projectPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj"
+            "E:\\Studium\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj": {
+              "projectPath": "E:\\Studium\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj"
             }
           }
         }

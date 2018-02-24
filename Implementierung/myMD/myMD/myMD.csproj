@@ -80,6 +80,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\DataModel\DoctorsLetterGroupDoctorsLetter.cs" />
+    <Compile Include="Model\DependencyService\DependencyService.cs" />
+    <Compile Include="Model\DependencyService\IDependencyService.cs" />
+    <Compile Include="Model\DependencyService\XamarinDependencyService.cs" />
     <Compile Include="Model\ParserModel\FileFormat.cs" />
     <Compile Include="Model\ParserModel\FileFormatExtensions.cs" />
     <Compile Include="Model\ParserModel\FileToDatabaseParser.cs" />

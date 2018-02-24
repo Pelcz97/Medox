@@ -6,6 +6,7 @@ using MARC.Everest.RMIM.UV.CDAr2.Vocabulary;
 using MARC.Everest.RMIM.UV.NE2010.RIM;
 using MARC.Everest.Xml;
 using myMD.Model.DataModel;
+using myMD.Model.DependencyService;
 using myMD.ModelInterface.DataModelInterface;
 using System;
 using System.Collections.Generic;
@@ -40,7 +41,7 @@ namespace myMD.Model.ParserModel
         /// <summary>
         /// Konstruktor mit automatisch nach Plattform ausgewähltem Helfer.
         /// </summary>
-        public Hl7ToDatabaseParser() : this(Xamarin.Forms.DependencyService.Get<IHl7ParserHelper>()) { }
+        public Hl7ToDatabaseParser() : this(DependencyServiceWrapper.Get<IHl7ParserHelper>()) { }
 
         /// <summary>
         /// Konstrukter mit Helfer als Parameter.

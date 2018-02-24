@@ -11,17 +11,17 @@
 namespace myMDesktop.View.SendDataTabPages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\Studium\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\View\\SendDataTabPages\\SelectDevic" +
-        "ePage.xaml")]
-    public partial class SelectDevicePage : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\Studium\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\View\\SendDataTabPages\\Transmittin" +
+        "gDataPage.xaml")]
+    public partial class TransmittingDataPage : global::myMDesktop.View.AbstractPages.CustomContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.ListView DeviceList;
+        private global::Xamarin.Forms.Grid Grid;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(SelectDevicePage));
-            DeviceList = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "DeviceList");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(TransmittingDataPage));
+            Grid = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Grid>(this, "Grid");
         }
     }
 }

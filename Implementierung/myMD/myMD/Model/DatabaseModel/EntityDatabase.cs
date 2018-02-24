@@ -1,4 +1,5 @@
 using myMD.Model.DataModel;
+using myMD.Model.DependencyService;
 using myMD.Model.FileHelper;
 using myMD.ModelInterface.DataModelInterface;
 using SQLite;
@@ -36,7 +37,7 @@ namespace myMD.Model.DatabaseModel
         /// Konstruktor mit automatisch nach Plattform ausgewähltem Dateihelfer.
         /// </summary>
         /// <see>myMD.Model.DatabaseModel.EntityDatabase#EntityDatabase(myMD.Model.FileHelper.IFileHelper)</see>
-        public EntityDatabase() : this(DependencyService.Get<IFileHelper>()) { }
+        public EntityDatabase() : this(DependencyServiceWrapper.Get<IFileHelper>()) { }
 
         /// <summary>
         /// Erstellt die Datenbank, falls sie noch nicht existiert, verbindet sich mit ihr und setzt das aktive Profil auf das erste Profil in der Datenbank.
