@@ -111,7 +111,10 @@ namespace myMD.Model.DataModel
         public override int GetHashCode()
         {
             var hashCode = 2029785287;
-            hashCode = hashCode * -1521134295 + EqualityComparer<List<DoctorsLetter>>.Default.GetHashCode(DatabaseLetters);
+            foreach (DoctorsLetter letter in DatabaseLetters)
+            {
+                hashCode = hashCode * -1521134295 + EqualityComparer<DoctorsLetter>.Default.GetHashCode(letter);
+            }
             hashCode = hashCode * -1521134295 + Date.GetHashCode();
             hashCode = hashCode * -1521134295 + LastDate.GetHashCode();
             return hashCode;

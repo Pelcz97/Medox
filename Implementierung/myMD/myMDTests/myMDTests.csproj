@@ -91,6 +91,9 @@
     <Compile Include="Model\DatabaseModel\DatabaseTest.cs" />
     <Compile Include="Model\DataModel\DoctorsLetterGroupTest.cs" />
     <Compile Include="Model\DatabaseModel\EntityDatabaseTest.cs" />
+    <Compile Include="Model\DataModel\DoctorsLetterTest.cs" />
+    <Compile Include="Model\DataModel\DoctorTest.cs" />
+    <Compile Include="Model\DataModel\MedicationTest.cs" />
     <Compile Include="Model\DependencyService\TestDependencyService.cs" />
     <Compile Include="Model\EntityFactory\RandomEntityFactory.cs" />
     <Compile Include="Model\FileHelper\TestFileHelper.cs" />

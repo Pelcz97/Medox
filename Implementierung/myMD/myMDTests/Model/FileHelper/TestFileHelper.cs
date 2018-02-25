@@ -6,7 +6,7 @@ namespace myMDTests.Model.FileHelper
 {
     public class TestFileHelper : IFileHelper
     {
-        private static readonly string FOLDER = "Resources";
+        private static readonly string FOLDER = Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName, "Resources");
 
         public void DeleteFile(string filename)
         {
@@ -15,17 +15,21 @@ namespace myMDTests.Model.FileHelper
 
         public string GetLocalFilePath(string filename)
         {
-            string directory = Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName, FOLDER);
-            if (!Directory.Exists(directory))
+            if (!Directory.Exists(FOLDER))
             {
-                Directory.CreateDirectory(directory);
+                Directory.CreateDirectory(FOLDER);
             }
-            string path = Path.Combine(directory, filename);
+            string path = Path.Combine(FOLDER, filename);
             if(!File.Exists(path))
             {
-                File.Create(path);
+                File.Create(path).Close();          
             }
             return path;
+        }
+
+        public bool Exists(string filename)
+        {
+            return File.Exists(Path.Combine(FOLDER, filename));
         }
     }
 }

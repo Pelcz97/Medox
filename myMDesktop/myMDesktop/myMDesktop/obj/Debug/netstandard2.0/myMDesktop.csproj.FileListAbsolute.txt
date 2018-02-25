@@ -13,3 +13,4 @@ D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\myMDe
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.dll
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.pdb
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
+D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csprojResolveAssemblyReference.cache
