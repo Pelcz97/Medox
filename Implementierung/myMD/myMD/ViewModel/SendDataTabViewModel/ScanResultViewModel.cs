@@ -11,15 +11,20 @@ namespace myMD.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class ScanResultViewModel
     {
+        public ScanResultViewModel(IScanResult scanResult){
+            this.ScanResult = scanResult;
+        }
+        
+        public IScanResult ScanResult { get; set; }
         /// <summary>
         /// Das gefundene Gerät
         /// </summary>
-        public IDevice Device { get; set; }
+        public IDevice Device { get => this.ScanResult.Device; }
 
         /// <summary>
         /// Der Name des Gerätes
         /// </summary>
-        public string DeviceName { get => this.Device.Name; }
+        public string DeviceName { get => this.ScanResult.AdvertisementData.LocalName; }
 
         /// <summary>
         /// Boolean, ob man schon mit dem Gerät verbunden ist
