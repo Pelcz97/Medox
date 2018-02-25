@@ -53,7 +53,7 @@ namespace myMD.ModelInterface.DataModelInterface
         /// Löst die Verbindung zwischen einer Medikation und diesem Arztbrief auf.
         /// </summary>
         /// <param name="med">Zu entferndene Medikation</param>
-        void RemoveMedication(IMedication med);
+        void DisattachMedication(IMedication med);
 
         /// <summary>
         /// Konvertiert die Schnittstelle zu ihrer Implementierung
