@@ -45,7 +45,7 @@
     <CodesignKey>iPhone Developer: Wilfried Kneis (WG53F37474)</CodesignKey>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchLink>Full</MtouchLink>
     <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
@@ -55,6 +55,7 @@
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <CodesignProvision>VS: com.pse.myMD Development</CodesignProvision>
+    <BuildIpa>true</BuildIpa>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>pdbonly</DebugType>
