@@ -182,7 +182,10 @@ namespace myMD.Model.DataModel
             var hashCode = -551889408;
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Filepath);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Diagnosis);
-            hashCode = hashCode * -1521134295 + EqualityComparer<List<Medication>>.Default.GetHashCode(DatabaseMedication);
+            foreach (Medication med in DatabaseMedication)
+            {
+                hashCode = hashCode * -1521134295 + EqualityComparer<Medication>.Default.GetHashCode(med);
+            }
             hashCode = hashCode * -1521134295 + EqualityComparer<Doctor>.Default.GetHashCode(DatabaseDoctor);
             return hashCode;
         }
@@ -204,7 +207,7 @@ namespace myMD.Model.DataModel
         public void RemoveFromGroup(IDoctorsLetterGroup group) => RemoveFromGroup(group.ToDoctorsLetterGroup());
 
         /// <see>myMD.ModelInterface.DataModelInterface.IDoctorsLetter#RemoveMedication(Model.DataModelInterface.IMedication)</see>
-        public void RemoveMedication(IMedication med) => RemoveMedication(med.ToMedication());
+        public void DisattachMedication(IMedication med) => DisattachMedication(med.ToMedication());
 
         /// <summary>
         /// Da diese Klasse bereits den verlangten Rückgabetyp hab, ist keine Konvertierung nötig.

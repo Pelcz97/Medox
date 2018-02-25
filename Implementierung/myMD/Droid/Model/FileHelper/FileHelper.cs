@@ -25,7 +25,7 @@ namespace myMD.Model.FileHelper.Droid
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), filename);
             if (!File.Exists(path))
             {
-                File.Create(path);
+                File.Create(path).Close();
             }
             return path;
         }

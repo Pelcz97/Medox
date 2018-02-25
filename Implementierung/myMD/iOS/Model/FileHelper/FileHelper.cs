@@ -30,7 +30,7 @@ namespace myMD.Model.FileHelper.iOS
             string path = Path.Combine(directory, filename);
             if (!File.Exists(path))
             {
-                File.Create(path);
+                File.Create(path).Close();
             }
             return path;
         }

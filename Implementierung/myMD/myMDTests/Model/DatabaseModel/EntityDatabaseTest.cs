@@ -19,7 +19,7 @@ namespace myMDTests.Model.DatabaseModel
     public class EntityDatabaseTest
     {
         private static EntityDatabase db;
-        private static readonly int ENTITY_COUNT = 100;
+        private static readonly int ENTITY_COUNT = 10;
         private static DoctorsLetter[] letters = new DoctorsLetter[ENTITY_COUNT];
         private static DoctorsLetterGroup[] groups = new DoctorsLetterGroup[ENTITY_COUNT];
         private static Medication[] meds = new Medication[ENTITY_COUNT];
