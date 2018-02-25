@@ -8,6 +8,8 @@ using myMD.ViewModel.OverallViewModel;
 using Plugin.BluetoothLE;
 using Xamarin.Forms.PlatformConfiguration;
 using Windows.UI.Core;
+using System.Threading;
+using System.Reactive.Threading.Tasks;
 
 namespace myMDesktop.ViewModel.SendDataTabViewModel
 {
@@ -38,21 +40,62 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         public async void StartScan()
         {
 
-            BleAdapter.Scan().Subscribe(scanResult =>
+            CrossBleAdapter.Current.Scan().Subscribe(scanResult =>
             {
                 ScanResultViewModel test = new ScanResultViewModel();
                 test.ScanResult = scanResult;
-                if (scanResult != null && DeviceList.All(x => x.ScanResult.Device != test.ScanResult.Device))
-                {
-                    Debug.WriteLine("Current AdapterState: " + BleAdapter.Status);
-
-                    Debug.WriteLine("New Device: " + scanResult.Device.Name);
+                if (scanResult != null && DeviceList.All(x => x.ScanResult.Device != scanResult.Device) && scanResult.Device.Name != null)
+                { 
+                    
                     Xamarin.Forms.Device.BeginInvokeOnMainThread(() =>
                     {
                         DeviceList.Add(test);
+                        DeviceList.FirstOrDefault();
                     });
                 }
             });
         }
+
+        public async void ConnectToDevice(object item)
+        {
+            var ScanResultItem = (ScanResultViewModel)item;
+            IDevice device = ScanResultItem.ScanResult.Device;
+
+            if (ScanResultItem.ScanResult.AdvertisementData.IsConnectable)
+            {
+                Debug.WriteLine("Connectable");
+            }
+
+            ScanResultItem.ScanResult.Device.WhenAnyDescriptorDiscovered().Subscribe(service =>
+            {
+                Debug.WriteLine(service.Description);
+            });
+
+            ScanResultItem.ScanResult.Device.WhenAnyCharacteristicDiscovered().Subscribe(service =>
+            {
+                Debug.WriteLine(service.Uuid);
+            });
+
+            ScanResultItem.ScanResult.Device.WhenStatusChanged().Subscribe(connectionState => {
+                Debug.WriteLine("Connection State: " + connectionState);
+            });
+
+            try
+            {
+                // don't cleanup connection - force user to d/c
+                if (ScanResultItem.ScanResult.Device.Status == ConnectionStatus.Disconnected)
+                {
+                    using (var cancelSrc = new CancellationTokenSource())
+                    {
+                        await device.Connect().ToTask(cancelSrc.Token);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+        }
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using myMDesktop.ViewModel.SendDataTabViewModel;
 using System;
+using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
@@ -43,7 +44,7 @@ namespace myMDesktop.View.SendDataTabPages
         /// <param name="e">Event des Senders</param>
         void DeviceItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            
+            vm.ConnectToDevice(e.SelectedItem);
         }
 
         void ConfirmDevice_Clicked(object sender, System.EventArgs e)
