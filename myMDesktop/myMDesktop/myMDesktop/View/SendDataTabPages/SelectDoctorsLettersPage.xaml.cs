@@ -2,6 +2,10 @@
 using myMDesktop.ViewModel.SendDataTabViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using Plugin.FilePicker;
+using System;
+using Plugin.FilePicker.Abstractions;
+using System.Diagnostics;
 
 namespace myMDesktop.View.SendDataTabPages
 {
@@ -42,5 +46,41 @@ namespace myMDesktop.View.SendDataTabPages
             vm.SelectionConfirmed();
             await Navigation.PopModalAsync();
         }
+
+        async void PickFile_Clicked(object sender, System.EventArgs e)
+        {
+            try
+            {
+
+                FileData filedata = await CrossFilePicker.Current.PickFile();
+                // the dataarray of the file will be found in filedata.DataArray 
+                // file name will be found in filedata.FileName;
+                //etc etc.
+
+                if (filedata.FileName.EndsWith(".hl7"))
+                {
+                    //if (!vm.DoctorsLetters.Contains(filedata)
+                    //{
+                        vm.DoctorsLetters.Add(filedata);
+                    Debug.WriteLine(System.Text.Encoding.Default.GetString(filedata.DataArray));
+                    //}
+                    //else
+                    //{
+                      //  await DisplayAlert("Input Error", "Diese Datei wurde schon ausgewählt", "OK");
+                    //}
+                }
+                else
+                {
+                    await DisplayAlert("Input Error", "Sie dürfen nur .hl7 Dateien auswählen", "OK");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.StackTrace);
+            }
+        }
+
+
     }
 }

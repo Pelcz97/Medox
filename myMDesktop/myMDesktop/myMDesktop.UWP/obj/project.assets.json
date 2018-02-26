@@ -971,6 +971,17 @@
           "lib/win8/_._": {}
         }
       },
+      "Xam.Plugin.FilePicker/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/UAP10/Plugin.FilePicker.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/UAP10/Plugin.FilePicker.dll": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.274780": {
         "type": "package",
         "compile": {
@@ -997,6 +1008,7 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
+          "Xam.Plugin.FilePicker": "1.1.0",
           "Xamarin.Forms": "2.5.0.274780",
           "reactiveui": "7.4.0"
         },
@@ -2373,6 +2385,17 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugin.FilePicker/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/UAP10/Plugin.FilePicker.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/UAP10/Plugin.FilePicker.dll": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.274780": {
         "type": "package",
         "compile": {
@@ -2399,6 +2422,7 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
+          "Xam.Plugin.FilePicker": "1.1.0",
           "Xamarin.Forms": "2.5.0.274780",
           "reactiveui": "7.4.0"
         },
@@ -3806,6 +3830,17 @@
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugin.FilePicker/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/UAP10/Plugin.FilePicker.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/UAP10/Plugin.FilePicker.dll": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.274780": {
         "type": "package",
         "compile": {
@@ -3832,6 +3867,7 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
+          "Xam.Plugin.FilePicker": "1.1.0",
           "Xamarin.Forms": "2.5.0.274780",
           "reactiveui": "7.4.0"
         },
@@ -5208,6 +5244,17 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugin.FilePicker/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/UAP10/Plugin.FilePicker.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/UAP10/Plugin.FilePicker.dll": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.274780": {
         "type": "package",
         "compile": {
@@ -5234,6 +5281,7 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
+          "Xam.Plugin.FilePicker": "1.1.0",
           "Xamarin.Forms": "2.5.0.274780",
           "reactiveui": "7.4.0"
         },
@@ -6641,6 +6689,17 @@
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugin.FilePicker/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/UAP10/Plugin.FilePicker.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/UAP10/Plugin.FilePicker.dll": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.274780": {
         "type": "package",
         "compile": {
@@ -6667,6 +6726,7 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
+          "Xam.Plugin.FilePicker": "1.1.0",
           "Xamarin.Forms": "2.5.0.274780",
           "reactiveui": "7.4.0"
         },
@@ -8043,6 +8103,17 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugin.FilePicker/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/UAP10/Plugin.FilePicker.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/UAP10/Plugin.FilePicker.dll": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.274780": {
         "type": "package",
         "compile": {
@@ -8069,6 +8140,7 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
+          "Xam.Plugin.FilePicker": "1.1.0",
           "Xamarin.Forms": "2.5.0.274780",
           "reactiveui": "7.4.0"
         },
@@ -9476,6 +9548,17 @@
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugin.FilePicker/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/UAP10/Plugin.FilePicker.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/UAP10/Plugin.FilePicker.dll": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.274780": {
         "type": "package",
         "compile": {
@@ -9502,6 +9585,7 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
+          "Xam.Plugin.FilePicker": "1.1.0",
           "Xamarin.Forms": "2.5.0.274780",
           "reactiveui": "7.4.0"
         },
@@ -15956,6 +16040,56 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Xam.Plugin.FilePicker/1.1.0": {
+      "sha512": "ORzNG6dEgdBZnIdmbQCpNB4LSSTjBebwGjb1XZrgfbBGjX9muHBfZeQwOnNRvcGlm6fkylzTj2rDslDA1E/JFA==",
+      "type": "package",
+      "path": "xam.plugin.filepicker/1.1.0",
+      "files": [
+        "lib/MonoAndroid10/Plugin.FilePicker.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.FilePicker.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.FilePicker.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.FilePicker.dll",
+        "lib/MonoAndroid10/Plugin.FilePicker.pdb",
+        "lib/MonoAndroid10/Plugin.FilePicker.xml",
+        "lib/MonoTouch10/Plugin.FilePicker.Abstractions.dll",
+        "lib/MonoTouch10/Plugin.FilePicker.Abstractions.xml",
+        "lib/MonoTouch10/Plugin.FilePicker.dll",
+        "lib/MonoTouch10/Plugin.FilePicker.xml",
+        "lib/UAP10/Plugin.FilePicker.Abstractions.dll",
+        "lib/UAP10/Plugin.FilePicker.Abstractions.pdb",
+        "lib/UAP10/Plugin.FilePicker.Abstractions.xml",
+        "lib/UAP10/Plugin.FilePicker.dll",
+        "lib/UAP10/Plugin.FilePicker.pdb",
+        "lib/UAP10/Plugin.FilePicker.xml",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.pdb",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.xml",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.pdb",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.xml",
+        "lib/win8/Plugin.FilePicker.Abstractions.dll",
+        "lib/win8/Plugin.FilePicker.Abstractions.pdb",
+        "lib/win8/Plugin.FilePicker.Abstractions.xml",
+        "lib/win8/Plugin.FilePicker.dll",
+        "lib/win8/Plugin.FilePicker.pdb",
+        "lib/win8/Plugin.FilePicker.xml",
+        "lib/wp8/Plugin.FilePicker.Abstractions.dll",
+        "lib/wp8/Plugin.FilePicker.Abstractions.pdb",
+        "lib/wp8/Plugin.FilePicker.Abstractions.xml",
+        "lib/wp8/Plugin.FilePicker.dll",
+        "lib/wp8/Plugin.FilePicker.pdb",
+        "lib/wp8/Plugin.FilePicker.xml",
+        "lib/wpa81/Plugin.FilePicker.Abstractions.dll",
+        "lib/wpa81/Plugin.FilePicker.Abstractions.pdb",
+        "lib/wpa81/Plugin.FilePicker.Abstractions.xml",
+        "lib/wpa81/Plugin.FilePicker.dll",
+        "lib/wpa81/Plugin.FilePicker.pdb",
+        "lib/wpa81/Plugin.FilePicker.xml",
+        "readme.txt",
+        "xam.plugin.filepicker.1.1.0.nupkg.sha512",
+        "xam.plugin.filepicker.nuspec"
+      ]
+    },
     "Xamarin.Forms/2.5.0.274780": {
       "sha512": "Uh7KMin/FXdwxfCMrkpUohmjo/bw8fOKgf6rZUQmSANt4RNObL3JFe6EGUJroy/jZFtVa/iKEIB6bDH37+FmDw==",
       "type": "package",
@@ -16430,30 +16564,31 @@
       "Plugin.BluetoothLE >= 5.3.2",
       "System.Collections >= 4.3.0",
       "System.Linq >= 4.3.0",
+      "Xam.Plugin.FilePicker >= 1.1.0",
       "Xamarin.Forms >= 2.5.0.274780",
       "myMDesktop >= 1.0.0",
       "reactiveui >= 7.4.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jan-Luca\\.nuget\\packages\\": {},
+    "C:\\Users\\ppelc\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
+      "projectUniqueName": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
       "projectName": "myMDesktop.UWP",
-      "projectPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
-      "packagesPath": "C:\\Users\\Jan-Luca\\.nuget\\packages\\",
-      "outputPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\obj\\",
+      "projectPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
+      "packagesPath": "C:\\Users\\ppelc\\.nuget\\packages\\",
+      "outputPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Jan-Luca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ppelc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -16467,8 +16602,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj": {
-              "projectPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj"
+            "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj": {
+              "projectPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj"
             }
           }
         }
@@ -16492,6 +16627,10 @@
           "System.Linq": {
             "target": "Package",
             "version": "[4.3.0, )"
+          },
+          "Xam.Plugin.FilePicker": {
+            "target": "Package",
+            "version": "[1.1.0, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
