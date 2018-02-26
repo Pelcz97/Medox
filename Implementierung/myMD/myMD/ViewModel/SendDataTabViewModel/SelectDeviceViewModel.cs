@@ -7,6 +7,7 @@ using System.Linq;
 using Plugin.BluetoothLE;
 using System.Threading;
 using System.Reactive.Threading.Tasks;
+using System.Threading.Tasks;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
@@ -16,13 +17,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class SelectDeviceViewModel : OverallViewModel.OverallViewModel
     {
-        //public IAdapter BleAdapter { get; set; }
-        //public static Guid myMDguid = new Guid("00000000-1000-1000-1000-00805F9B0000");
-        public static Guid myMDserviceGuid1 = new Guid("10000000-1000-1000-1000-100000000000");
-        //public static Guid myMDserviceGuid2 = new Guid("20000000-2000-2000-2000-200000000000");
-        public static Guid myMDcharGuid1 = new Guid("30000000-3000-3000-3000-300000000000");
-        //public static Guid myMDcharGuid2 = new Guid("40000000-4000-4000-4000-400000000000");
-
+        
         /// <summary>
         /// Liste an Geräten die in der Umgebung gefunden wurden
         /// </summary>
@@ -38,9 +33,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// </summary>
         public IDisposable scan { get; set; }
 
-        IDisposable notifier;
 
-        public IScanResult ConnectedDevice { get; set; }
+        public IDevice ConnectedDevice { get => ModelFacade.GetConnected(); }
 
 
         /// <summary>
@@ -49,12 +43,10 @@ namespace myMD.ViewModel.SendDataTabViewModel
         public SelectDeviceViewModel()
         {
             this.DeviceList = new ObservableCollection<ScanResultViewModel>();
-            ConnectedDevice = null;
 
 
-            BluetoothAdapter.WhenStatusChanged().Subscribe(state =>
+            CrossBleAdapter.Current.WhenStatusChanged().Subscribe(state =>
             {
-                Debug.WriteLine("New State: {0}", state);
                 if (state == AdapterStatus.PoweredOn)
                 {
                     StartScan();
@@ -76,32 +68,33 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 DeviceList.Clear();
             }
 
-            CrossBleAdapter.Current.WhenStatusChanged().Subscribe(x => {
-                Debug.WriteLine(x);
-            });
-
-            isScanning = true;
-
-
-            this.scan = CrossBleAdapter.Current.Scan().Subscribe(scanResult =>
+            CrossBleAdapter.Current.WhenStatusChanged().Subscribe(state =>
             {
-                ScanResultViewModel test = new ScanResultViewModel(scanResult);
-
-                if (test != null && DeviceList.All(x => x.Device != test.Device) && scanResult.AdvertisementData.LocalName != null)
+                if (state == AdapterStatus.PoweredOn && isScanning != true)
                 {
-                    DeviceList.Add(test);
-                    DeviceList.FirstOrDefault();
+                    isScanning = true;
+
+                    this.scan = CrossBleAdapter.Current.Scan().Subscribe(scanResult =>
+                    {
+                        ScanResultViewModel test = new ScanResultViewModel(scanResult);
+
+                        if (test != null && DeviceList.All(x => x.Device != test.Device) && scanResult.AdvertisementData.LocalName != null)
+                        {
+                            DeviceList.Add(test);
+                            DeviceList.FirstOrDefault();
 
 
-                    Debug.WriteLine("Neu_LocalName " + scanResult.AdvertisementData.LocalName);
-                    Debug.WriteLine("Neu_Connectable " + scanResult.AdvertisementData.IsConnectable);
-                    Debug.WriteLine("Neu_ManuData " + scanResult.AdvertisementData.ManufacturerData);
-                    Debug.WriteLine("Neu_ServiceData " + scanResult.AdvertisementData.ServiceData);
-                    Debug.WriteLine("Neu_ServiceUUID " + scanResult.AdvertisementData.ServiceUuids);
-                    Debug.WriteLine("Neu_ServiceUUID_Count " + scanResult.AdvertisementData.ServiceUuids.Count());
+                            Debug.WriteLine("Neu_LocalName " + scanResult.AdvertisementData.LocalName);
+                            Debug.WriteLine("Neu_Connectable " + scanResult.AdvertisementData.IsConnectable);
+                            Debug.WriteLine("Neu_ManuData " + scanResult.AdvertisementData.ManufacturerData);
+                            Debug.WriteLine("Neu_ServiceData " + scanResult.AdvertisementData.ServiceData);
+                            Debug.WriteLine("Neu_ServiceUUID " + scanResult.AdvertisementData.ServiceUuids);
+                            Debug.WriteLine("Neu_ServiceUUID_Count " + scanResult.AdvertisementData.ServiceUuids.Count());
 
-                    Debug.WriteLine("Device.Name: " + test.Device.Name);
-                    Debug.WriteLine("Device.UUID: " + test.Device.Uuid);
+                            Debug.WriteLine("Device.Name: " + test.Device.Name);
+                            Debug.WriteLine("Device.UUID: " + test.Device.Uuid);
+                        }
+                    });
                 }
             });
         }
@@ -120,12 +113,13 @@ namespace myMD.ViewModel.SendDataTabViewModel
                              
 
 
+        public bool Connected { get; set; }
 
         /// <summary>
         /// Methode um sich mit einem anderen Gerät zu verbinden
         /// </summary>
         /// <param name="item"></param>
-        public async void ConnectToDevice(object item){
+        public async Task ConnectToDevice(object item){
             var ScanResultItem = (ScanResultViewModel)item;
             IDevice device = ScanResultItem.Device;
 
@@ -155,30 +149,19 @@ namespace myMD.ViewModel.SendDataTabViewModel
                     using (var cancelSrc = new CancellationTokenSource())
                     {
                         await device.Connect().ToTask(cancelSrc.Token);
+
+                        if(device.Status == ConnectionStatus.Connected){
+                            ModelFacade.SetConnected(device);
+                        }
                     }
+                } else {
+                    Debug.WriteLine(ScanResultItem.Device.Status);
                 }
             }
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
             }
-
-            /*try {
-
-                ScanResultItem.ScanResult.Device.Connect();
-
-                device.Connect(new GattConnectionConfig
-                {
-                    NotifyOnConnect = true
-                });
-
-                ScanResultItem.ScanResult.Device.WhenStatusChanged().Subscribe(connectionState => { 
-                    Debug.WriteLine("Connection State: " + connectionState);
-                });
-            } 
-            catch (Exception ex){
-                Debug.WriteLine(ex);
-            }*/
         }
 
 

@@ -5,6 +5,7 @@ using myMD.Model.TransmissionModel;
 using myMD.ModelInterface.ModelFacadeInterface;
 using Xamarin.Forms.Internals;
 using Plugin.BluetoothLE;
+using System;
 
 namespace myMD.ViewModel.OverallViewModel
 {
@@ -14,6 +15,12 @@ namespace myMD.ViewModel.OverallViewModel
     /// </summary>
     public class OverallViewModel : INotifyPropertyChanged
     {
+        
+        public static Guid myMDserviceGuid1 = new Guid("10000000-1000-1000-1000-100000000000");
+        public static Guid myMDcharGuid1 = new Guid("30000000-3000-3000-3000-300000000000");
+        public static Guid myMDFileCounterChar = new Guid("90000000-9000-9000-9000-900000000000");
+
+
         /// <summary>
         /// Attribut für die ModelFacade
         /// </summary>
@@ -23,8 +30,6 @@ namespace myMD.ViewModel.OverallViewModel
         /// Attribut für ein PropertyChangedEventHandler
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
-
-        public static IAdapter BluetoothAdapter { get; set; }
 
         /// <summary>
         /// Methode um ein PropertyChangedEvent zu handeln
@@ -42,19 +47,7 @@ namespace myMD.ViewModel.OverallViewModel
         public OverallViewModel()
         {
             ModelFacade = App.Model;
-            BluetoothAdapter = CrossBleAdapter.Current;
-
-            /*BluetoothAdapter.WhenStatusChanged().Subscribe(state =>
-            {
-                Debug.WriteLine("New State: {0}", state);
-                if (state == AdapterStatus.PoweredOn)
-                {
-                    StartScan();
-                }
-            });*/
         }
-
-
 
     }
 }

@@ -16,7 +16,7 @@
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding DoctorsLettersSendList}" 
                 SeparatorVisibility="None" 
-                ItemSelected="DoctorsLetter_Clicked"
+
                 CachingStrategy="RecycleElement">
             
                 <ListView.ItemTemplate>

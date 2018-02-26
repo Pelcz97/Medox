@@ -8,6 +8,9 @@ namespace myMD.Model.TransmissionModel
     /// </summary>
     public class Bluetooth : IBluetooth
     {
+
+        public Plugin.BluetoothLE.IDevice ConnectedDevice { get; set; }
+
         /// <summary>
         /// Methode um nach Geräten in der Nähe zu suchen
         /// </summary>
@@ -16,6 +19,8 @@ namespace myMD.Model.TransmissionModel
         {
             throw new System.NotImplementedException();
         }
+
+
 
         /// <summary>
         /// Methode um eine Datei zu senden

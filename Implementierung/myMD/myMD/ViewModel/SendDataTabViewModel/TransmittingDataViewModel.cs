@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using myMD.ViewModel.OverviewTabViewModel;
 using Plugin.BluetoothLE;
+using System.Collections.Generic;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
@@ -18,9 +19,12 @@ namespace myMD.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class TransmittingDataViewModel : OverallViewModel.OverallViewModel
     {
-        IScanResult TargetDevice { get; set; }
+        IDevice TargetDevice { get; set; }
         ObservableCollection<DoctorsLetterViewModel> LettersToSend { get; set; }
 
+        List<IGattService> services;
+
+        public int NumberOfFiles { get; set; }
         
         /// <summary>
         /// Initializes a new instance of the
@@ -28,13 +32,28 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// </summary>
         public TransmittingDataViewModel()
         {
-            MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<DoctorsLetterViewModel>>(this, "SelectedLetters", (sender, arg) => {
+            TargetDevice = ModelFacade.GetConnected();
+            services = new List<IGattService>();
+
+            /*MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<DoctorsLetterViewModel>>(this, "SelectedLetters", (sender, arg) => {
                 LettersToSend = arg;
             });
             MessagingCenter.Subscribe<SelectDeviceViewModel, IScanResult>(this, "ConnectedDevice", (sender, arg) => {
                 TargetDevice = arg;
                 Debug.WriteLine("SelectedDevice : " + TargetDevice.AdvertisementData.LocalName);
+            });*/
+
+
+
+            TargetDevice.WhenServiceDiscovered().Subscribe(service =>
+            {
+                services.Add(service);
+                Debug.WriteLine("Services: " + service);
+                if (service.Uuid == myMDcharGuid1){
+                    Debug.WriteLine("Found myMDCharGuid1");
+                }
             });
+
         }
     }
 }
