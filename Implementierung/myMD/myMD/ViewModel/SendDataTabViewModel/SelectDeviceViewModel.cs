@@ -26,12 +26,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// <summary>
         /// Boolean, ob das Gerät des Nutzers gerade die Umbegung nach Geräten durchsucht
         /// </summary>
-        private bool isScanning { get; set; }
-
-        /// <summary>
-        /// Ergebniss des Scans
-        /// </summary>
-        public IDisposable scan { get; set; }
+        private bool isScanning { get => CrossBleAdapter.Current.IsScanning; }
 
 
         public IDevice ConnectedDevice { get => ModelFacade.GetConnected(); }
@@ -44,14 +39,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         {
             this.DeviceList = new ObservableCollection<ScanResultViewModel>();
 
-
-            CrossBleAdapter.Current.WhenStatusChanged().Subscribe(state =>
-            {
-                if (state == AdapterStatus.PoweredOn)
-                {
-                    StartScan();
-                }
-            });
+            StartScan();
         }
 
         /// <summary>
@@ -64,51 +52,24 @@ namespace myMD.ViewModel.SendDataTabViewModel
         {
             if (isScanning == true)
             {
-                scan.Dispose();
+                
                 DeviceList.Clear();
             }
 
-            CrossBleAdapter.Current.WhenStatusChanged().Subscribe(state =>
+            CrossBleAdapter.Current.ScanWhenAdapterReady().Subscribe(scanResult =>
             {
-                if (state == AdapterStatus.PoweredOn && isScanning != true)
+                
+                ScanResultViewModel test = new ScanResultViewModel(scanResult);
+
+                if (DeviceList.All(x => x.Device != test.Device) && scanResult.AdvertisementData.LocalName != null)
                 {
-                    isScanning = true;
-
-                    this.scan = CrossBleAdapter.Current.Scan().Subscribe(scanResult =>
+                    Device.BeginInvokeOnMainThread(() =>
                     {
-                        ScanResultViewModel test = new ScanResultViewModel(scanResult);
-
-                        if (test != null && DeviceList.All(x => x.Device != test.Device) && scanResult.AdvertisementData.LocalName != null)
-                        {
-                            DeviceList.Add(test);
-                            DeviceList.FirstOrDefault();
-
-
-                            Debug.WriteLine("Neu_LocalName " + scanResult.AdvertisementData.LocalName);
-                            Debug.WriteLine("Neu_Connectable " + scanResult.AdvertisementData.IsConnectable);
-                            Debug.WriteLine("Neu_ManuData " + scanResult.AdvertisementData.ManufacturerData);
-                            Debug.WriteLine("Neu_ServiceData " + scanResult.AdvertisementData.ServiceData);
-                            Debug.WriteLine("Neu_ServiceUUID " + scanResult.AdvertisementData.ServiceUuids);
-                            Debug.WriteLine("Neu_ServiceUUID_Count " + scanResult.AdvertisementData.ServiceUuids.Count());
-
-                            Debug.WriteLine("Device.Name: " + test.Device.Name);
-                            Debug.WriteLine("Device.UUID: " + test.Device.Uuid);
-                        }
+                        DeviceList.Add(test);
+                        DeviceList.FirstOrDefault();
                     });
                 }
             });
-        }
-            
-        /// <summary>
-        /// Methode um einen Scan zu stoppen.
-        /// </summary>
-        public void StopScan()
-        {
-            if (isScanning)
-            {
-                this.scan.Dispose();
-            }
-            isScanning = false;
         }
                              
 
@@ -127,23 +88,13 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 Debug.WriteLine("Connectable");
             }
 
-            ScanResultItem.ScanResult.Device.WhenAnyDescriptorDiscovered().Subscribe(service =>
-            {
-                Debug.WriteLine(service.Description);
-            });
-
-            ScanResultItem.ScanResult.Device.WhenAnyCharacteristicDiscovered().Subscribe(service =>
-            {
-                Debug.WriteLine(service.Uuid);
-            });
-
             ScanResultItem.ScanResult.Device.WhenStatusChanged().Subscribe(connectionState => {
                 Debug.WriteLine("Connection State: " + connectionState);
             });
 
             try
             {
-                // don't cleanup connection - force user to d/c
+               
                 if (ScanResultItem.Device.Status == ConnectionStatus.Disconnected)
                 {
                     using (var cancelSrc = new CancellationTokenSource())
@@ -151,6 +102,10 @@ namespace myMD.ViewModel.SendDataTabViewModel
                         await device.Connect().ToTask(cancelSrc.Token);
 
                         if(device.Status == ConnectionStatus.Connected){
+                            ScanResultItem.Device.WhenAnyCharacteristicDiscovered().Subscribe(service =>
+                            {
+                                Debug.WriteLine("Tapped _ " + service);
+                            });
                             ModelFacade.SetConnected(device);
                         }
                     }
@@ -161,19 +116,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
-            }
-        }
-
-
-
-        public void TargetDeviceConfirmed()
-        {
-            if (ConnectedDevice != null)
-            {
-                scan.Dispose();
-                isScanning = false;
-                MessagingCenter.Send(this, "ConnectedDevice", ConnectedDevice);
-                MessagingCenter.Unsubscribe<SelectDeviceViewModel>(this, "ConnectedDevice");
             }
         }
     }

@@ -38,17 +38,11 @@ namespace myMD.View.SendDataTabPages
             await vm.ConnectToDevice(e.SelectedItem);
 
             if (vm.ConnectedDevice != null) {
-                await Navigation.PushAsync(new TransmittingDataPage());
+                var page = new TransmittingDataPage();
+
+                NavigationPage.SetBackButtonTitle(page, "Server wählen");
+                await Navigation.PushAsync(page);
             }
-        }
-
-        void ConfirmDevice_Clicked(object sender, System.EventArgs e)
-        {
-            var page = new TransmittingDataPage();
-
-            NavigationPage.SetBackButtonTitle(page, "Server wählen");
-            Navigation.PushAsync(page);
-            //Navigation.PopModalAsync();
         }
     }
 }

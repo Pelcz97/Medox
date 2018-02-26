@@ -3,11 +3,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
     x:Class="myMD.View.SendDataTabPages.SelectDevicePage">
-    <ContentPage.ToolbarItems>
-            <ToolbarItem Name="ConfirmDevice" Text="Fertig" 
-                        Order="Primary" Priority="1" Clicked="ConfirmDevice_Clicked"/>
-        </ContentPage.ToolbarItems>
-
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="DeviceList" 

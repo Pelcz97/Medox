@@ -22,7 +22,11 @@ namespace myMD.ViewModel.SendDataTabViewModel
         IDevice TargetDevice { get; set; }
         ObservableCollection<DoctorsLetterViewModel> LettersToSend { get; set; }
 
-        List<IGattService> services;
+        List<IGattCharacteristic> services;
+
+        IGattCharacteristic FileCounter { get; set; }
+        IGattCharacteristic ReadCharacteristic { get; set; }
+        IGattCharacteristic NotifyCharacteristic { get; set; }
 
         public int NumberOfFiles { get; set; }
         
@@ -33,27 +37,29 @@ namespace myMD.ViewModel.SendDataTabViewModel
         public TransmittingDataViewModel()
         {
             TargetDevice = ModelFacade.GetConnected();
-            services = new List<IGattService>();
-
-            /*MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<DoctorsLetterViewModel>>(this, "SelectedLetters", (sender, arg) => {
-                LettersToSend = arg;
-            });
-            MessagingCenter.Subscribe<SelectDeviceViewModel, IScanResult>(this, "ConnectedDevice", (sender, arg) => {
-                TargetDevice = arg;
-                Debug.WriteLine("SelectedDevice : " + TargetDevice.AdvertisementData.LocalName);
-            });*/
-
-
+            var test = CrossBleAdapter.Current.GetConnectedDevices();
+            services = new List<IGattCharacteristic>();
 
             TargetDevice.WhenServiceDiscovered().Subscribe(service =>
             {
-                services.Add(service);
-                Debug.WriteLine("Services: " + service);
-                if (service.Uuid == myMDcharGuid1){
-                    Debug.WriteLine("Found myMDCharGuid1");
-                }
+                var chars = service.GetKnownCharacteristics();
+                Debug.WriteLine(chars);
             });
 
-        }
+            TargetDevice.WhenAnyCharacteristicDiscovered().Subscribe(service =>
+            {
+                Debug.WriteLine(service);
+            });
+
+            TargetDevice.WhenAnyDescriptorDiscovered().Subscribe(service =>
+            {
+                Debug.WriteLine("Descriptor " + service);
+            });
+
+            if (FileCounter != null)
+            {
+                FileCounter.ReadInterval(new TimeSpan(0, 0, 0, 0, 100)).Subscribe(result => { Debug.WriteLine("Current value: " + result); });
+            }
+         }
     }
 }
