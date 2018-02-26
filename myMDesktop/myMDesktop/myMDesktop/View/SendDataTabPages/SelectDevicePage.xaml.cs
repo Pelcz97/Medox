@@ -49,7 +49,6 @@ namespace myMDesktop.View.SendDataTabPages
 
         void ConfirmDevice_Clicked(object sender, System.EventArgs e)
         {
-           
             Navigation.PopModalAsync();
         }
     }
