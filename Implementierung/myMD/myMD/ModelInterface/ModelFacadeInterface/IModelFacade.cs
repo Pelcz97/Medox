@@ -76,5 +76,8 @@ namespace myMD.ModelInterface.ModelFacadeInterface
         /// </summary>
         /// <param name="entity">Die zu aktualisierende Entität</param>
         void Update(IEntity entity);
+
+        void SetConnected(Plugin.BluetoothLE.IDevice device);
+        Plugin.BluetoothLE.IDevice GetConnected();
     }
 }

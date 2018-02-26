@@ -14,6 +14,8 @@ namespace myMD.Model.TransmissionModel
         /// <returns>Liste an Geräten</returns>
 		IList<IDevice> scanForDevices();
 
+        Plugin.BluetoothLE.IDevice ConnectedDevice { get; set; }
+
         /// <summary>
         /// Methode um eine Datei zu senden
         /// </summary>

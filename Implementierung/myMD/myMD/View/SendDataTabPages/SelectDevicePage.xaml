@@ -4,8 +4,6 @@
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
     x:Class="myMD.View.SendDataTabPages.SelectDevicePage">
     <ContentPage.ToolbarItems>
-            <ToolbarItem Name="CancelSelectDevice" Text="Abbrechen" 
-                        Order="Primary" Priority="-1" Clicked="CancelSelectDevice_Clicked"/>
             <ToolbarItem Name="ConfirmDevice" Text="Fertig" 
                         Order="Primary" Priority="1" Clicked="ConfirmDevice_Clicked"/>
         </ContentPage.ToolbarItems>

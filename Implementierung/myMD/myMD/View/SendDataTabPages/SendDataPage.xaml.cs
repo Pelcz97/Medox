@@ -34,7 +34,15 @@ namespace myMD.View.SendDataTabPages
         /// <param name="e">E.</param>
         void SendDataButton_Clicked(object sender, EventArgs e)
         {
-            var page = new TransmittingDataPage();
+            var page = new SelectDevicePage();
+
+            NavigationPage.SetBackButtonTitle(page, "Senden");
+            Navigation.PushAsync(page);
+        }
+
+        void ReceiveDataButton_Clicked(object sender, EventArgs e)
+        {
+            var page = new SelectDevicePage();
 
             NavigationPage.SetBackButtonTitle(page, "Senden");
             Navigation.PushAsync(page);

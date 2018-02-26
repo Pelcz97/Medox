@@ -10,25 +10,14 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-        <Button Clicked="SelectLettersButton_Clicked"
-                    Text="Arztbriefe wählen"
+            
+        <Button     Text="Arztbriefe wählen"
                     TextColor="White"
                     FontAttributes="Bold"
                     Grid.Row="0"
                     BackgroundColor="#00B9B4"
                     HorizontalOptions="Center"
                     VerticalOptions="EndAndExpand"
-                    HeightRequest="50"
-                    WidthRequest="400"
-                    BorderRadius="10" />
-            <Button Clicked="SelectDeviceButton_Clicked"
-                    Text="Empfänger wählen"
-                    TextColor="White"
-                    FontAttributes="Bold"
-                    Grid.Row="1"
-                    BackgroundColor="#00B9B4"
-                    HorizontalOptions="Center"
-                    VerticalOptions="CenterAndExpand"
                     HeightRequest="50"
                     WidthRequest="400"
                     BorderRadius="10" />

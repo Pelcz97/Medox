@@ -24,6 +24,7 @@ namespace myMD.View.SendDataTabPages
         public SelectDoctorsLettersPage()
         {
             InitializeComponent();
+            vm = new SelectDoctorsLettersViewModel();
             BindingContext = vm;
         }
 

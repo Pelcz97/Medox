@@ -28,29 +28,27 @@ namespace myMD.View.SendDataTabPages
         }
 
         /// <summary>
-        /// Methode, wenn der Abbrechen-Button geklickt wird.
-        /// </summary>
-        /// <param name="sender">Sender der diese Methode aufruft</param>
-        /// <param name="e">Event des Senders</param>
-        async void CancelSelectDevice_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PopModalAsync();
-        }
-
-        /// <summary>
         /// Methode, wenn ein Gerät aus der Liste ausgewählt wird.
         /// </summary>
         /// <param name="sender">Sender der diese Methode aufruft</param>
         /// <param name="e">Event des Senders</param>
-        void DeviceItemSelected(object sender, SelectedItemChangedEventArgs e)
+        async void DeviceItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            vm.ConnectToDevice(e.SelectedItem);
+            
+            await vm.ConnectToDevice(e.SelectedItem);
+
+            if (vm.ConnectedDevice != null) {
+                await Navigation.PushAsync(new TransmittingDataPage());
+            }
         }
 
         void ConfirmDevice_Clicked(object sender, System.EventArgs e)
         {
-            vm.TargetDeviceConfirmed();
-            Navigation.PopModalAsync();
+            var page = new TransmittingDataPage();
+
+            NavigationPage.SetBackButtonTitle(page, "Server wählen");
+            Navigation.PushAsync(page);
+            //Navigation.PopModalAsync();
         }
     }
 }
