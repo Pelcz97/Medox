@@ -13,6 +13,7 @@ using System.Reactive.Linq;
 using ReactiveUI;
 using System.Collections.Generic;
 using myMDesktop.Model.TransmissionModel;
+using Plugin.FilePicker.Abstractions;
 
 namespace myMDesktop.ViewModel.SendDataTabViewModel
 {
@@ -43,9 +44,10 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
 
             StartServer();
 
-            /*MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<DoctorsLetterViewModel>>(this, "SelectedLetters", (sender, arg) => {
-                LettersToSend = arg;
-            });*/
+            MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<FileData>>(this, "SelectedLetters", (sender, arg) => {
+                DependencyService.Get<IServer>().DoctorsLetters = arg;
+                Debug.WriteLine(DependencyService.Get<IServer>().DoctorsLetters.Count);
+            });
             /*MessagingCenter.Subscribe<SelectDeviceViewModel, IBlePeripheral>(this, "ConnectedDevice", (sender, arg) => {
                  TargetDevice = arg;
                  Debug.WriteLine("SelectedDevice : " + TargetDevice.Advertisement.DeviceName);

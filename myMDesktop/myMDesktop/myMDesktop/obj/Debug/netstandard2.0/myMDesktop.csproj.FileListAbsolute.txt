@@ -14,7 +14,10 @@ D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDe
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.pdb
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csprojResolveAssemblyReference.cache
-D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csprojResolveAssemblyReference.cache
+D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\myMDesktop.deps.json
+D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\myMDesktop.dll
+D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\myMDesktop.pdb
+D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
 D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csproj.CoreCompileInputs.cache
 D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.App.xaml.g.cs
 D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.MainPage.xaml.g.cs
@@ -26,7 +29,4 @@ D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0
 D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.AssemblyInfo.cs
 D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.dll
 D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.pdb
-D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\myMDesktop.deps.json
-D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\myMDesktop.dll
-D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\myMDesktop.pdb
-D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
+D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csprojResolveAssemblyReference.cache

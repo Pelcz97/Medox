@@ -31,7 +31,6 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         /// </summary>
         public SelectDeviceViewModel()
         {
-
             this.DeviceList = new ObservableCollection<ScanResultViewModel>();
             StartScan();
         }

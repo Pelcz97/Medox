@@ -27,8 +27,8 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
 
         public void SelectionConfirmed()
         {
-            //MessagingCenter.Send(this, "SelectedLetters", DoctorsLettersSendList);
-            //MessagingCenter.Unsubscribe<SelectDoctorsLettersViewModel>(this, "SelectedLetters");
+            MessagingCenter.Send(this, "SelectedLetters", DoctorsLetters);
+            MessagingCenter.Unsubscribe<SelectDoctorsLettersViewModel>(this, "SelectedLetters");
         }
     }
 }
