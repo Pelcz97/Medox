@@ -13,7 +13,6 @@ using System.Reactive.Linq;
 using ReactiveUI;
 using System.Collections.Generic;
 using myMDesktop.Model.TransmissionModel;
-using Plugin.FilePicker.Abstractions;
 
 namespace myMDesktop.ViewModel.SendDataTabViewModel
 {
@@ -23,11 +22,6 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class TransmittingDataViewModel : OverallViewModel
     {
-
-        string output;
-        public static Guid myMDguid = new Guid("00000000-1000-1000-1000-00805F9B0000");
-        public static Guid myMDserviceGuid1 = new Guid("10000000-1000-1000-1000-100000000000");
-        public static Guid myMDcharGuid1 = new Guid("30000000-3000-3000-3000-300000000000");
         
         public IServer serverTest { get; set; }
         
@@ -38,20 +32,9 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         /// </summary>
         public TransmittingDataViewModel()
         {
-
-            //serverTest = DependencyService.Get<IServer>();
-            //serverTest.StartServer();
-
+            
             StartServer();
 
-            MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<FileData>>(this, "SelectedLetters", (sender, arg) => {
-                DependencyService.Get<IServer>().DoctorsLetters = arg;
-                Debug.WriteLine(DependencyService.Get<IServer>().DoctorsLetters.Count);
-            });
-            /*MessagingCenter.Subscribe<SelectDeviceViewModel, IBlePeripheral>(this, "ConnectedDevice", (sender, arg) => {
-                 TargetDevice = arg;
-                 Debug.WriteLine("SelectedDevice : " + TargetDevice.Advertisement.DeviceName);
-             });*/
         }
 
         public async void StartServer()
