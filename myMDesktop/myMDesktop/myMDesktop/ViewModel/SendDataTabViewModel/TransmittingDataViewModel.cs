@@ -22,11 +22,6 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class TransmittingDataViewModel : OverallViewModel
     {
-
-        string output;
-        public static Guid myMDguid = new Guid("00000000-1000-1000-1000-00805F9B0000");
-        public static Guid myMDserviceGuid1 = new Guid("10000000-1000-1000-1000-100000000000");
-        public static Guid myMDcharGuid1 = new Guid("30000000-3000-3000-3000-300000000000");
         
         public IServer serverTest { get; set; }
         
@@ -37,19 +32,9 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         /// </summary>
         public TransmittingDataViewModel()
         {
-
-            //serverTest = DependencyService.Get<IServer>();
-            //serverTest.StartServer();
-
+            
             StartServer();
 
-            /*MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<DoctorsLetterViewModel>>(this, "SelectedLetters", (sender, arg) => {
-                LettersToSend = arg;
-            });*/
-            /*MessagingCenter.Subscribe<SelectDeviceViewModel, IBlePeripheral>(this, "ConnectedDevice", (sender, arg) => {
-                 TargetDevice = arg;
-                 Debug.WriteLine("SelectedDevice : " + TargetDevice.Advertisement.DeviceName);
-             });*/
         }
 
         public async void StartServer()
