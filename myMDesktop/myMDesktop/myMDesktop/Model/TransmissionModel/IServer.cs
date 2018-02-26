@@ -10,5 +10,6 @@ namespace myMDesktop.Model.TransmissionModel
     public interface IServer
     {
        Task StartServer();
+       List<int> DoctorsLetters { get; set; }
     }
 }

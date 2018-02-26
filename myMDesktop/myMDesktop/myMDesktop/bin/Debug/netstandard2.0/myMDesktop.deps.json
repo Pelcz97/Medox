@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "4ecf2a4bbf5caa41a00058aedecb3fa8fdffff39"
+    "signature": "6cacf4aa4d82f9ca8310b42ec7dbb2a56d64763d"
   },
   "compilationOptions": {},
   "targets": {
@@ -13,6 +13,7 @@
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
+          "Xam.Plugin.FilePicker": "1.1.0",
           "Xamarin.Forms": "2.5.0.274780",
           "reactiveui": "7.4.0",
           "Windows.Foundation.UniversalApiContract": "5.0.0.0"
@@ -358,6 +359,12 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "Xam.Plugin.FilePicker/1.1.0": {
+        "runtime": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.274780": {
         "runtime": {
           "lib/netstandard1.0/Xamarin.Forms.Core.dll": {},
@@ -664,6 +671,13 @@
       "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "Xam.Plugin.FilePicker/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ORzNG6dEgdBZnIdmbQCpNB4LSSTjBebwGjb1XZrgfbBGjX9muHBfZeQwOnNRvcGlm6fkylzTj2rDslDA1E/JFA==",
+      "path": "xam.plugin.filepicker/1.1.0",
+      "hashPath": "xam.plugin.filepicker.1.1.0.nupkg.sha512"
     },
     "Xamarin.Forms/2.5.0.274780": {
       "type": "package",
