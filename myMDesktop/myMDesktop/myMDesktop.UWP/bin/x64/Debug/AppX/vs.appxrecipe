@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-26T22:34:15.052</Modified>
+      <Modified>2018-02-27T23:31:35.574</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\myMDesktop.UWP.exe">
       <PackagePath>entrypoint\myMDesktop.UWP.exe</PackagePath>
-      <Modified>2018-02-26T22:34:14.100</Modified>
+      <Modified>2018-02-27T23:31:34.233</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\plugin.bluetoothle\5.3.2\lib\uap10.0\Plugin.BluetoothLE.Abstractions.dll">
       <PackagePath>Plugin.BluetoothLE.Abstractions.dll</PackagePath>
@@ -735,6 +735,14 @@
       <PackagePath>System.Reactive.WindowsRuntime.dll</PackagePath>
       <Modified>2016-11-21T13:03:18.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\xam.plugin.filepicker\1.1.0\lib\UAP10\Plugin.FilePicker.Abstractions.dll">
+      <PackagePath>Plugin.FilePicker.Abstractions.dll</PackagePath>
+      <Modified>2016-05-25T10:50:18.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\xam.plugin.filepicker\1.1.0\lib\UAP10\Plugin.FilePicker.dll">
+      <PackagePath>Plugin.FilePicker.dll</PackagePath>
+      <Modified>2016-05-25T10:50:18.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\xamarin.forms\2.5.0.274780\lib\uap10.0\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
       <Modified>2018-02-13T14:15:26.000</Modified>
@@ -753,7 +761,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\myMDesktop.dll">
       <PackagePath>myMDesktop.dll</PackagePath>
-      <Modified>2018-02-26T22:34:09.131</Modified>
+      <Modified>2018-02-27T21:08:23.153</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -924,11 +932,11 @@
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-26T22:34:14.614</Modified>
+      <Modified>2018-02-27T23:31:35.034</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x64\Debug\Core\myMDesktop.UWP.exe">
       <PackagePath>myMDesktop.UWP.exe</PackagePath>
-      <Modified>2018-02-26T22:34:15.045</Modified>
+      <Modified>2018-02-27T23:31:35.566</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

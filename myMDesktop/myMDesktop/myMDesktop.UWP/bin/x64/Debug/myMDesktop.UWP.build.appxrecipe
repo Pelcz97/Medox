@@ -550,6 +550,12 @@
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\system.reactive.windowsruntime\3.1.1\lib\uap10.0\System.Reactive.WindowsRuntime.dll">
       <PackagePath>System.Reactive.WindowsRuntime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\xam.plugin.filepicker\1.1.0\lib\UAP10\Plugin.FilePicker.Abstractions.dll">
+      <PackagePath>Plugin.FilePicker.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\xam.plugin.filepicker\1.1.0\lib\UAP10\Plugin.FilePicker.dll">
+      <PackagePath>Plugin.FilePicker.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jan-Luca\.nuget\packages\xamarin.forms\2.5.0.274780\lib\uap10.0\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
     </AppxPackagedFile>
