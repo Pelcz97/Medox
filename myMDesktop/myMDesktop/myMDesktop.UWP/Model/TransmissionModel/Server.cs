@@ -20,10 +20,9 @@ namespace myMDesktop.UWP.Model.TransmissionModel
 {
     class Server : IServer
     {
-        //public static Guid myMDguid = new Guid("99000000-1000-1000-1000-00805F9B0000");
+        
         public static Guid myMDserviceGuid1 = new Guid("88800000-8000-8000-8000-800000000000");
         public static Guid myMDcharGuid1 = new Guid("50000000-5000-5000-5000-500000000000");
-        //public static Guid myMDfileCount = new Guid("90000000-9000-9000-9000-900000000000");
         public static Guid myMDfileCount = new Guid("40000000-4000-4000-4000-400000000000");
 
 
@@ -36,10 +35,10 @@ namespace myMDesktop.UWP.Model.TransmissionModel
 
         public static readonly GattLocalCharacteristicParameters gattOperatorParameters = new GattLocalCharacteristicParameters
         {
-            CharacteristicProperties = GattCharacteristicProperties.Write |
-                                       GattCharacteristicProperties.WriteWithoutResponse,
-            WriteProtectionLevel = GattProtectionLevel.Plain,
-            UserDescription = "myMD Characteristic"
+            CharacteristicProperties = GattCharacteristicProperties.Read |
+                                       GattCharacteristicProperties.Notify,
+            ReadProtectionLevel = GattProtectionLevel.Plain,
+            UserDescription = "myMD FileReader"
         };
 
         public static readonly GattLocalCharacteristicParameters ReadChar = new GattLocalCharacteristicParameters
@@ -128,6 +127,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
                 Debug.WriteLine(result.Error);
                 return false;
             }
+            myMDCharacteristic.ReadRequested += FileReader_ReadRequestedAsync;
 
             GattLocalCharacteristicResult fileCount = await serviceProvider.Service.CreateCharacteristicAsync(myMDfileCount, ReadChar);
             if (result.Error == BluetoothError.Success)
@@ -186,6 +186,47 @@ namespace myMDesktop.UWP.Model.TransmissionModel
 
                     // Gatt code to handle the response
                     request.RespondWithValue(writer.DetachBuffer());
+                //});
+            }
+        }
+
+        private async void FileReader_ReadRequestedAsync(GattLocalCharacteristic sender, GattReadRequestedEventArgs args)
+        {
+            using (args.GetDeferral())
+            {
+                // await CoreApplication.MainView.CoreWindow.Dispatcher.RunTaskAsync(async () =>
+                //{
+                // Get the request information.  This requires device access before an app can access the device's request. 
+                GattReadRequest request = await args.GetRequestAsync();
+                if (request == null)
+                {
+                    // No access allowed to the device.  Application should indicate this to the user.
+                    Debug.WriteLine("Access to device not allowed");
+                    return;
+                }
+
+                var writer = new DataWriter();
+                writer.ByteOrder = ByteOrder.LittleEndian;
+                var array = DoctorsLetters.FirstOrDefault().DataArray;
+
+                var batchSize = 500; //534?
+                var batched = array
+                    .Select((Value, Index) => new { Value, Index })
+                    .GroupBy(p => p.Index / batchSize)
+                    .Select(g => g.Select(p => p.Value).ToList());
+
+                Debug.WriteLine(batched);
+                Debug.WriteLine(array);
+                writer.WriteBytes(array);
+
+                // Can get details about the request such as the size and offset, as well as monitor the state to see if it has been completed/cancelled externally.
+                // request.Offset
+                // request.Length
+                // request.State
+                // request.StateChanged += <Handler>
+
+                // Gatt code to handle the response
+                request.RespondWithValue(writer.DetachBuffer());
                 //});
             }
         }
