@@ -1,0 +1,9 @@
+diff a/myMDesktop/myMDesktop/myMDesktop/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs b/myMDesktop/myMDesktop/myMDesktop/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs	(rejected hunks)
+@@ -13,7 +13,6 @@
+ using ReactiveUI;
+ using System.Collections.Generic;
+ using myMDesktop.Model.TransmissionModel;
+-using Plugin.FilePicker.Abstractions;
+ 
+ namespace myMDesktop.ViewModel.SendDataTabViewModel
+ {

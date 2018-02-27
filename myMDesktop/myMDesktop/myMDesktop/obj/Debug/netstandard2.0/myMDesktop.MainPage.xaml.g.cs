@@ -11,7 +11,7 @@
 namespace myMDesktop {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\MainPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\MainPage.xaml")]
     public partial class MainPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
