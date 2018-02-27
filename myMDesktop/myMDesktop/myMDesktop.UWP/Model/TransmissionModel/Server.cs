@@ -18,9 +18,9 @@ namespace myMDesktop.UWP.Model.TransmissionModel
 {
     class Server : IServer
     {
-        public static Guid myMDguid = new Guid("99000000-1000-1000-1000-00805F9B0000");
+        //public static Guid myMDguid = new Guid("99000000-1000-1000-1000-00805F9B0000");
         public static Guid myMDserviceGuid1 = new Guid("88800000-8000-8000-8000-800000000000");
-        public static Guid myMDcharGuid1 = new Guid("30000000-3000-3000-3000-300000000000");
+        public static Guid myMDcharGuid1 = new Guid("50000000-5000-5000-5000-500000000000");
         //public static Guid myMDfileCount = new Guid("90000000-9000-9000-9000-900000000000");
         public static Guid myMDfileCount = new Guid("40000000-4000-4000-4000-400000000000");
 
@@ -67,8 +67,8 @@ namespace myMDesktop.UWP.Model.TransmissionModel
                 var serviceStarted = await ServiceProviderInitAsync();
                 if (serviceStarted)
                 {
-                    //serviceProvider.StartAdvertising();
                     
+                 
                     Debug.WriteLine("Server started successfully.");
                 }
                 else
