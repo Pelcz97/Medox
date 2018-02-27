@@ -6,6 +6,8 @@ using myMD.ModelInterface.ModelFacadeInterface;
 using Xamarin.Forms.Internals;
 using Plugin.BluetoothLE;
 using System;
+using nexus.protocols.ble;
+using myMD.Model.DependencyService;
 
 namespace myMD.ViewModel.OverallViewModel
 {
@@ -20,6 +22,7 @@ namespace myMD.ViewModel.OverallViewModel
         public static Guid myMDcharGuid1 = new Guid("30000000-3000-3000-3000-300000000000");
         public static Guid myMDFileCounterChar = new Guid("90000000-9000-9000-9000-900000000000");
 
+        protected static IBluetoothLowEnergyAdapter BluetoothAdapter { get => DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter; }
 
         /// <summary>
         /// Attribut für die ModelFacade

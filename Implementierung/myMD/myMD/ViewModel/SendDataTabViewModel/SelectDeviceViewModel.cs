@@ -102,7 +102,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
                         await device.Connect().ToTask(cancelSrc.Token);
 
                         if(device.Status == ConnectionStatus.Connected){
-                            ScanResultItem.Device.WhenAnyCharacteristicDiscovered().Subscribe(service =>
+                            ScanResultItem.Device.WhenServiceDiscovered().Subscribe(service =>
                             {
                                 Debug.WriteLine("Tapped _ " + service);
                             });
