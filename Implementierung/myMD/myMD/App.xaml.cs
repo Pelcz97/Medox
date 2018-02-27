@@ -15,9 +15,6 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
 
 namespace myMD
 {
@@ -86,9 +83,8 @@ namespace myMD
 
         protected override void OnStart()
         {
-            AppCenter.Start("ios=9689ec9a-a2df-413d-848c-9a6885c7bd58;" +
-                  "uwp={1};" +
-                  "android={2}",
+            AppCenter.Start("ios=9689ec9a-a2df-413d-848c-9a6885c7bd58;" + 
+                            "android=8b0b56f0-78d0-4071-927b-e2023ff52fae;",
                             typeof(Analytics), typeof(Crashes));
         }
 
