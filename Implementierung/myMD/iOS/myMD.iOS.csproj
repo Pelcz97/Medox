@@ -102,6 +102,12 @@
     <BuildIpa>true</BuildIpa>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ble.net, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ble.net.1.0.1\lib\portable45-net45+win8\ble.net.dll</HintPath>
+    </Reference>
+    <Reference Include="ble.net-ios, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ble.net-ios.1.0.1\lib\Xamarin.iOS10\ble.net-ios.dll</HintPath>
+    </Reference>
     <Reference Include="MARC.Everest">
       <HintPath>..\packages\Everest\MARC.Everest.dll</HintPath>
     </Reference>
@@ -113,6 +119,9 @@
     </Reference>
     <Reference Include="MARC.Everest.RMIM.UV.CDAr2">
       <HintPath>..\packages\Everest\MARC.Everest.RMIM.UV.CDAr2.dll</HintPath>
+    </Reference>
+    <Reference Include="nexus.core, Version=0.31.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\nexus.core.0.31.0\lib\portable45-net45+win8\nexus.core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
