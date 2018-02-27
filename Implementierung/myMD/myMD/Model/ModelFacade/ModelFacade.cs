@@ -9,6 +9,7 @@ using myMD.ModelInterface.ModelFacadeInterface;
 using System.Collections.Generic;
 using Xamarin.Forms;
 using myMD.ModelInterface.TransmissionModelInterface;
+using nexus.protocols.ble;
 
 namespace myMD.Model.ModelFacade
 {
@@ -64,8 +65,8 @@ namespace myMD.Model.ModelFacade
             }
         }
 
-        public void SetConnected(Plugin.BluetoothLE.IDevice device) => bluetooth.ConnectedDevice = device;
-        public Plugin.BluetoothLE.IDevice GetConnected() => bluetooth.ConnectedDevice;
+        public void SetConnectedServer(IBleGattServerConnection server) => bluetooth.ConnectedGattServer = server;
+        public IBleGattServerConnection GetConnectedServer() => bluetooth.ConnectedGattServer;
 
         /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#Activate(Model.DataModelInterface.IProfile)</see>
         public void Activate(IProfile profile) => database.Activate(profile);

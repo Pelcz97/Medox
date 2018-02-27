@@ -14,7 +14,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// </summary>
         public SendDataViewModel()
         {
-            //BluetoothAdapter.CurrentState.Subscribe();
+            Debug.WriteLine(BluetoothAdapter.CurrentState);
         }
     }
 }

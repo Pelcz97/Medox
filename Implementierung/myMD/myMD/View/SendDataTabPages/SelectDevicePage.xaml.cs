@@ -33,11 +33,10 @@ namespace myMD.View.SendDataTabPages
         /// <param name="sender">Sender der diese Methode aufruft</param>
         /// <param name="e">Event des Senders</param>
         async void DeviceItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            
+        {   
             await vm.ConnectToDevice(e.SelectedItem);
 
-            if (vm.ConnectedDevice != null) {
+            if (vm.ConnectedServer != null) {
                 var page = new TransmittingDataPage();
 
                 NavigationPage.SetBackButtonTitle(page, "Server wählen");

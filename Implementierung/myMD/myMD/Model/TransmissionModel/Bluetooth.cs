@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using myMD.ModelInterface.TransmissionModelInterface;
+using nexus.protocols.ble;
 
 namespace myMD.Model.TransmissionModel
 {
@@ -9,7 +10,7 @@ namespace myMD.Model.TransmissionModel
     public class Bluetooth : IBluetooth
     {
 
-        public Plugin.BluetoothLE.IDevice ConnectedDevice { get; set; }
+        public IBleGattServerConnection ConnectedGattServer { get; set; }
 
         /// <summary>
         /// Methode um nach Geräten in der Nähe zu suchen

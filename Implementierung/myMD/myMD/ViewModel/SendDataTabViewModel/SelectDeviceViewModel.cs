@@ -8,6 +8,10 @@ using Plugin.BluetoothLE;
 using System.Threading;
 using System.Reactive.Threading.Tasks;
 using System.Threading.Tasks;
+using nexus.protocols.ble.scan;
+using nexus.core;
+using nexus.protocols.ble.scan.advertisement;
+using nexus.protocols.ble;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
@@ -29,7 +33,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         private bool isScanning { get => CrossBleAdapter.Current.IsScanning; }
 
 
-        public IDevice ConnectedDevice { get => ModelFacade.GetConnected(); }
+        public IBleGattServerConnection ConnectedServer { get => ModelFacade.GetConnectedServer(); }
 
 
         /// <summary>
@@ -39,7 +43,19 @@ namespace myMD.ViewModel.SendDataTabViewModel
         {
             this.DeviceList = new ObservableCollection<ScanResultViewModel>();
 
-            StartScan();
+            if (BluetoothAdapter.CurrentState.Value == EnabledDisabledState.Enabled)
+            {
+                StartScan();
+            } else {
+                BluetoothAdapter.CurrentState.Subscribe(state =>
+                {
+                    Debug.WriteLine("New state, " + state);
+                    if (state == EnabledDisabledState.Enabled)
+                    {
+                        StartScan();
+                    }
+                });
+            }
         }
 
         /// <summary>
@@ -48,17 +64,32 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// Dann wird geprüft ob Bluetooth für das Gerät verfügbar ist.
         /// Danach wird der Scan gestartet und die gefundenen Geräte in die Liste <see cref="T:myMD.ViewModel.SendDataTabViewModel.SelectDeviceLetterViewModel.DeviceList"/> gespeichert.
         /// </summary>
-        public void StartScan()
+        public async void StartScan()
         {
-            if (isScanning == true)
-            {
-                
-                DeviceList.Clear();
-            }
+            Debug.WriteLine("möp");
 
-            CrossBleAdapter.Current.ScanWhenAdapterReady().Subscribe(scanResult =>
+            await BluetoothAdapter.ScanForBroadcasts(new ScanFilter()
+                    .SetIgnoreRepeatBroadcasts(true), peripheral =>
             {
-                
+                ScanResultViewModel test = new ScanResultViewModel(peripheral);
+
+                Device.BeginInvokeOnMainThread(
+                   () =>
+                   {
+                        DeviceList.Add(test);
+                        DeviceList.FirstOrDefault();
+
+                        var adv = peripheral.Advertisement;
+                        Debug.WriteLine("### " + adv.DeviceName);
+                        Debug.WriteLine("### " + adv.Services.Select(x => x.ToString()).Join(","));
+                        Debug.WriteLine("### " + adv.ManufacturerSpecificData.FirstOrDefault().CompanyName());
+                        Debug.WriteLine("### " + adv.ServiceData);
+                   });
+            });
+
+            /*CrossBleAdapter.Current.ScanWhenAdapterReady().Subscribe(scanResult =>
+            {
+
                 ScanResultViewModel test = new ScanResultViewModel(scanResult);
 
                 if (DeviceList.All(x => x.Device != test.Device) && scanResult.AdvertisementData.LocalName != null)
@@ -69,9 +100,9 @@ namespace myMD.ViewModel.SendDataTabViewModel
                         DeviceList.FirstOrDefault();
                     });
                 }
-            });
+            });*/
         }
-                             
+
 
 
         public bool Connected { get; set; }
@@ -80,15 +111,37 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// Methode um sich mit einem anderen Gerät zu verbinden
         /// </summary>
         /// <param name="item"></param>
-        public async Task ConnectToDevice(object item){
+        public async Task ConnectToDevice(object item)
+        {
             var ScanResultItem = (ScanResultViewModel)item;
-            IDevice device = ScanResultItem.Device;
 
-            if (ScanResultItem.ScanResult.AdvertisementData.IsConnectable){
+
+            var connection = await BluetoothAdapter.ConnectToDevice(
+            ScanResultItem.ScanResult,
+            TimeSpan.FromSeconds(15));
+            if (connection.IsSuccessful())
+            {
+                Debug.WriteLine("Success");
+                var gattServer = connection.GattServer;
+                ModelFacade.SetConnectedServer(gattServer);
+            }
+            else
+            {
+                Debug.WriteLine("Error connecting to device. result={0:g}", connection.ConnectionResult);
+            }
+
+
+
+            //IDevice device = ScanResultItem.Device;
+
+            /*
+            if (ScanResultItem.ScanResult.AdvertisementData.IsConnectable)
+            {
                 Debug.WriteLine("Connectable");
             }
 
-            ScanResultItem.ScanResult.Device.WhenStatusChanged().Subscribe(connectionState => {
+            ScanResultItem.ScanResult.Device.WhenStatusChanged().Subscribe(connectionState =>
+            {
                 Debug.WriteLine("Connection State: " + connectionState);
             });
 
@@ -116,7 +169,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
-            }
+            }*/
         }
     }
 }

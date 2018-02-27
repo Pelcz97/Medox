@@ -1,5 +1,6 @@
 using myMD.ModelInterface.TransmissionModelInterface;
 using System.Collections.Generic;
+using nexus.protocols.ble;
 
 namespace myMD.Model.TransmissionModel
 {
@@ -14,7 +15,7 @@ namespace myMD.Model.TransmissionModel
         /// <returns>Liste an Geräten</returns>
 		IList<IDevice> scanForDevices();
 
-        Plugin.BluetoothLE.IDevice ConnectedDevice { get; set; }
+        IBleGattServerConnection ConnectedGattServer { get; set; }
 
         /// <summary>
         /// Methode um eine Datei zu senden

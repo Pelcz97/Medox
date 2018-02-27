@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using nexus.protocols.ble.scan;
 using Plugin.BluetoothLE;
 using Xamarin.Forms.Internals;
 
@@ -11,7 +13,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class ScanResultViewModel
     {
-        public ScanResultViewModel(IScanResult scanResult){
+        /*public ScanResultViewModel(IScanResult scanResult){
             this.ScanResult = scanResult;
         }
         
@@ -24,7 +26,21 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// <summary>
         /// Der Name des Gerätes
         /// </summary>
-        public string DeviceName { get => this.ScanResult.AdvertisementData.LocalName; }
+        public string DeviceName { get => this.ScanResult.AdvertisementData.LocalName; }*/
+
+        public ScanResultViewModel(IBlePeripheral scanResult)
+        {
+            this.ScanResult = scanResult;
+        }
+
+        public IBlePeripheral ScanResult { get; set; }
+
+        public IEnumerable<Guid> services { get => this.ScanResult.Advertisement.Services; }
+
+        /// <summary>
+        /// Der Name des Gerätes
+        /// </summary>
+        public string DeviceName { get => this.ScanResult.Advertisement.DeviceName; }
 
         /// <summary>
         /// Boolean, ob man schon mit dem Gerät verbunden ist
@@ -34,7 +50,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// <summary>
         /// Guid des Gerätes
         /// </summary>
-        public Guid Uuid { get => this.Device.Uuid; }
+        public Guid Uuid { get => this.ScanResult.DeviceId; }
 
        
     }

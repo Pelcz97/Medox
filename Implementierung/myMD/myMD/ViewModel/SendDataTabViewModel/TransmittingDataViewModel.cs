@@ -10,6 +10,8 @@ using System.Collections.ObjectModel;
 using myMD.ViewModel.OverviewTabViewModel;
 using Plugin.BluetoothLE;
 using System.Collections.Generic;
+using nexus.protocols.ble;
+using nexus.protocols.ble.gatt;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
@@ -19,14 +21,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class TransmittingDataViewModel : OverallViewModel.OverallViewModel
     {
-        IDevice TargetDevice { get; set; }
+        IBleGattServerConnection ConnectedServer { get; set; }
         ObservableCollection<DoctorsLetterViewModel> LettersToSend { get; set; }
-
-        List<IGattCharacteristic> services;
-
-        IGattCharacteristic FileCounter { get; set; }
-        IGattCharacteristic ReadCharacteristic { get; set; }
-        IGattCharacteristic NotifyCharacteristic { get; set; }
 
         public int NumberOfFiles { get; set; }
         
@@ -36,30 +32,42 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// </summary>
         public TransmittingDataViewModel()
         {
-            TargetDevice = ModelFacade.GetConnected();
-            var test = CrossBleAdapter.Current.GetConnectedDevices();
-            services = new List<IGattCharacteristic>();
+            ConnectedServer = ModelFacade.GetConnectedServer();
 
-            TargetDevice.WhenServiceDiscovered().Subscribe(service =>
-            {
-                var chars = service.GetKnownCharacteristics();
-                Debug.WriteLine(chars);
-            });
+            FindCharacteristics();
 
-            TargetDevice.WhenAnyCharacteristicDiscovered().Subscribe(service =>
-            {
-                Debug.WriteLine(service);
-            });
-
-            TargetDevice.WhenAnyDescriptorDiscovered().Subscribe(service =>
-            {
-                Debug.WriteLine("Descriptor " + service);
-            });
-
-            if (FileCounter != null)
-            {
-                FileCounter.ReadInterval(new TimeSpan(0, 0, 0, 0, 100)).Subscribe(result => { Debug.WriteLine("Current value: " + result); });
-            }
          }
+
+        public async void FindCharacteristics(){
+            foreach (var guid in await ConnectedServer.ListServiceCharacteristics(myMDserviceGuid1))
+            {
+                Debug.WriteLine(guid);
+            }
+
+            try
+            {
+                var value = await ConnectedServer.ReadCharacteristicValue(myMDserviceGuid1, myMDfileCount);
+                Debug.WriteLine("Länge: " + value.Length);
+                //Debug.WriteLine("Aktueller Wert: " + System.Text.Encoding.UTF8.G
+            }
+            catch (GattException ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
+
+            try
+            {
+                var str = await ConnectedServer.ReadCharacteristicValue(myMDserviceGuid1, myMDcharGuid1);
+
+                String ergebnis = System.Text.Encoding.UTF8.GetString(str, 0, str.Length);
+                Debug.WriteLine("Länge: " + ergebnis);
+
+                //Debug.WriteLine("Aktueller Wert: " + System.Text.Encoding.UTF8.G
+            }
+            catch (GattException ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
+        }
     }
 }

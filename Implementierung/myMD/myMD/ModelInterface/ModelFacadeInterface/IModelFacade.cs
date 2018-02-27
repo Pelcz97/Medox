@@ -1,5 +1,6 @@
 using myMD.ModelInterface.DataModelInterface;
 using System.Collections.Generic;
+using nexus.protocols.ble;
 
 namespace myMD.ModelInterface.ModelFacadeInterface
 {
@@ -77,7 +78,7 @@ namespace myMD.ModelInterface.ModelFacadeInterface
         /// <param name="entity">Die zu aktualisierende Entität</param>
         void Update(IEntity entity);
 
-        void SetConnected(Plugin.BluetoothLE.IDevice device);
-        Plugin.BluetoothLE.IDevice GetConnected();
+        void SetConnectedServer(IBleGattServerConnection server);
+        IBleGattServerConnection GetConnectedServer();
     }
 }
