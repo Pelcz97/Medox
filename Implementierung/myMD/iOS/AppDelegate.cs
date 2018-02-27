@@ -1,7 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Foundation;
 using Plugin.BluetoothLE;
 using UIKit;
@@ -34,7 +39,11 @@ namespace myMD.iOS
             CrossBleAdapter.Init(BleAdapterConfiguration.DefaultBackgroudingConfig);
             LoadApplication(new App());
 
+            AppCenter.Start("9689ec9a-a2df-413d-848c-9a6885c7bd58", typeof(Analytics), typeof(Crashes));
+
             return base.FinishedLaunching(app, options);
+
+
         }
     }
 }
