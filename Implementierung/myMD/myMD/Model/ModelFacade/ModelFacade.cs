@@ -90,8 +90,8 @@ namespace myMD.Model.ModelFacade
         public IProfile CreateEmptyProfile()
         {
             IProfile profile = factory.CreateEmptyProfile();
-            database.Insert(profile);
             Activate(profile);
+            database.Insert(profile); 
             return profile;
         }
 

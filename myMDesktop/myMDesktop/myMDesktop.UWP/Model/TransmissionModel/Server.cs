@@ -12,6 +12,8 @@ using Windows.Devices.Bluetooth;
 using Windows.Devices.Bluetooth.GenericAttributeProfile;
 using Windows.Storage.Streams;
 using Xamarin.Forms;
+using Plugin.FilePicker.Abstractions;
+using System.Collections.ObjectModel;
 
 [assembly: Xamarin.Forms.Dependency(typeof(myMDesktop.UWP.Model.TransmissionModel.Server))]
 namespace myMDesktop.UWP.Model.TransmissionModel
@@ -30,7 +32,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
         private GattLocalCharacteristic myMDFileCountChar;
         private bool peripheralSupported;
 
-        public List<int> DoctorsLetters { get; set; }
+        public ObservableCollection<FileData> DoctorsLetters { get; set; }
 
         public static readonly GattLocalCharacteristicParameters gattOperatorParameters = new GattLocalCharacteristicParameters
         {
@@ -50,7 +52,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
 
         public Server()
         {
-            DoctorsLetters = new List<int>();
+            DoctorsLetters = new ObservableCollection<FileData>();
             checkPeripheralSupport();
         }
 

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using Foundation;
 using Plugin.BluetoothLE;
 using UIKit;
@@ -35,6 +34,8 @@ namespace myMD.iOS
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
+
+
         }
     }
 }
