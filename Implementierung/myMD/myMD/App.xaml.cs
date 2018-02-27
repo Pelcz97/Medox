@@ -23,6 +23,7 @@ namespace myMD
         public App()
         {
             InitializeComponent();
+
             var OverviewPage = new Xamarin.Forms.NavigationPage(new OverviewPage());
             var MedicationPage = new Xamarin.Forms.NavigationPage(new MedicationPage());
             var SendDataPage = new Xamarin.Forms.NavigationPage(new SendDataPage());

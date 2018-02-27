@@ -6,7 +6,7 @@
       <File FileName="myMDesktop/myMDesktop/ViewModel/OverallViewModel/OverallViewModel.cs" Line="38" Column="13" />
       <File FileName="myMDesktop/myMDesktop/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" Line="14" Column="24" />
       <File FileName="myMDesktop/myMDesktop/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" Line="18" Column="61" />
-      <File FileName="myMDesktop/myMDesktop/View/SendDataTabPages/SelectDoctorsLettersPage.xaml" Line="39" Column="15" />
+      <File FileName="myMDesktop/myMDesktop/View/SendDataTabPages/SelectDoctorsLettersPage.xaml" Line="43" Column="15" />
       <File FileName="myMDesktop/myMDesktop/View/SendDataTabPages/SelectDevicePage.xaml" Line="86" Column="15" />
       <File FileName="myMDesktop/myMDesktop.UWP/Model/TransmissionModel/Server.cs" Line="197" Column="1" />
     </Files>

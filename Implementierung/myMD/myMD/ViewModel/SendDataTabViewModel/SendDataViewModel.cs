@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms.Internals;
+﻿using System.Diagnostics;
+using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
@@ -6,13 +7,14 @@ namespace myMD.ViewModel.SendDataTabViewModel
     /// Die SendDataViewModel Klasse bietet den Einstiegspunkt in den SendDataTab.
     /// </summary>
     [Preserve(AllMembers = true)]
-    public class SendDataViewModel
+    public class SendDataViewModel : OverallViewModel.OverallViewModel
     {
         /// <summary>
         /// Konstruktor für ein SendDataViewModel
         /// </summary>
         public SendDataViewModel()
         {
+            //BluetoothAdapter.CurrentState.Subscribe();
         }
     }
 }
