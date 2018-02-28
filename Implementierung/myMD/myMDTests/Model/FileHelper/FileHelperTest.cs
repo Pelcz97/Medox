@@ -11,17 +11,24 @@ namespace myMDTests.Model.FileHelper
 {
     public class FileHelperTest
     {
-        private static IFileHelper helper = new TestFileHelper();
+        private static TestFileHelper helper = new TestFileHelper();
 
         private static readonly string SAMPLE = "test.hl7";
+
+        private static string Path => helper.GetLocalFilePath(SAMPLE);
 
         [Test]
         public void WriteFromBytesTest()
         {
-            string file = helper.GetLocalFilePath(SAMPLE);
-            byte[] data = File.ReadAllBytes(file);
-            string newFile = helper.WriteLocalFileFromBytes(Path.GetExtension(file), data);
+            byte[] data = File.ReadAllBytes(Path);
+            string newFile = helper.WriteLocalFileFromBytes(System.IO.Path.GetExtension(Path), data);
             Assert.AreEqual(data, File.ReadAllBytes(newFile));
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            File.Delete(helper.LastWrittenPath);
         }
     }
 }

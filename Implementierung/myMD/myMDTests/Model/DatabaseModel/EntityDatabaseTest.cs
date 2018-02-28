@@ -27,8 +27,8 @@ namespace myMDTests.Model.DatabaseModel
         private static Doctor[] doctors = new Doctor[ENTITY_COUNT];
         private static RandomEntityFactory factory;
 
-        [OneTimeSetUp]
-        public void SetUpBefore()
+        [SetUp]
+        public void SetUp()
         {
             DependencyServiceWrapper.Service = new TestDependencyService();
             db = new EntityDatabase();
@@ -37,21 +37,18 @@ namespace myMDTests.Model.DatabaseModel
             db.Create();
             for (int i = 0; i < ENTITY_COUNT; ++i)
             {
+                profiles[i] = factory.Profile();
+                db.Insert(profiles[i]);
+                db.Activate(profiles[i]);
                 letters[i] = factory.Letter();
                 db.Insert(letters[i]);
                 groups[i] = factory.Group();
                 db.Insert(groups[i]);
                 meds[i] = factory.Medication();
                 db.Insert(meds[i]);
-                profiles[i] = factory.Profile();
-                db.Insert(profiles[i]);
                 doctors[i] = factory.Doctor();
                 db.Insert(doctors[i]);
-                doctors[i].Profile = profiles[i];
-                db.Update(doctors[i]);
-                groups[i].Profile = profiles[i];
                 db.Update(groups[i]);
-                letters[i].Profile = profiles[i];
                 letters[i].DatabaseDoctor = doctors[i];
                 db.Update(letters[i]);
             }
@@ -88,6 +85,29 @@ namespace myMDTests.Model.DatabaseModel
         public void EqualTest()
         {
             Assert.True(groups[0].Equals(groups[0]));
+        }
+
+
+        [Test]
+        public void DeleteTest()
+        {
+            db.Activate(profiles[0]);
+            Assert.IsTrue(db.GetAllDoctorsLetters().Contains(letters[0]));
+            db.Delete(letters[0]);
+            Assert.IsFalse(db.GetAllDoctorsLetters().Contains(letters[0]));
+        }
+
+        [Test]
+        public void GetDoctorTest()
+        {
+            Doctor doctor = db.GetDoctor(doctors[0]) as Doctor;
+            Assert.AreEqual(doctor, doctors[0]);
+        }
+
+        [Test]
+        public void GetProfileTest()
+        {
+            Assert.AreEqual(db.GetProfile(profiles[0]) as Profile, profiles[0]);
         }
     }
 }

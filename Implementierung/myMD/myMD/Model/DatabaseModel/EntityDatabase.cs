@@ -125,7 +125,12 @@ namespace myMD.Model.DatabaseModel
         }
 
         /// <see>myMD.Model.DatabaseModel.IEntityDatabase#GetDoctor(myMD.ModelInterface.DataModelInterface.IDoctor)</see>
-        public IDoctor GetDoctor(IDoctor doctor) => db.Get<Doctor>(v => v.Name.Equals(doctor.Name));
+        public IDoctor GetDoctor(IDoctor doctor)
+        {
+            Doctor doc = db.Get<Doctor>(v => v.Name.Equals(doctor.Name));
+            doc.Profile = db.Get<Profile>(v => v.ID.Equals(doc.ProfileID));
+            return doc;
+        }
 
         /// <see>myMD.Model.DatabaseModel.IEntityDatabase#GetProfile(myMD.ModelInterface.DataModelInterface.IProfile)</see>
         public IProfile GetProfile(IProfile profile) => db.Get<Profile>(v => v.InsuranceNumber.Equals(profile.InsuranceNumber));
