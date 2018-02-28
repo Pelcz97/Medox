@@ -43,6 +43,10 @@ namespace myMD.ViewModel.SendDataTabViewModel
         {
             this.DeviceList = new ObservableCollection<ScanResultViewModel>();
 
+            if(BluetoothAdapter.AdapterCanBeEnabled){
+                BluetoothAdapter.EnableAdapter();
+            }
+
             if (BluetoothAdapter.CurrentState.Value == EnabledDisabledState.Enabled)
             {
                 StartScan();
@@ -68,7 +72,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         {
             Debug.WriteLine("möp");
 
-            await BluetoothAdapter.ScanForBroadcasts(new ScanFilter()
+            await BluetoothAdapter.ScanForBroadcasts(new ScanFilter().SetAdvertisedManufacturerCompanyId()
                     .SetIgnoreRepeatBroadcasts(true), peripheral =>
             {
                 ScanResultViewModel test = new ScanResultViewModel(peripheral);

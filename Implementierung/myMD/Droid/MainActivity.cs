@@ -8,6 +8,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android.Graphics;
+using nexus.protocols.ble;
 
 namespace myMD.Droid
 {
@@ -19,6 +20,8 @@ namespace myMD.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
+            BluetoothLowEnergyAdapter.Init(this);
+
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
@@ -28,5 +31,12 @@ namespace myMD.Droid
             Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
             Window.SetStatusBarColor(Color.Rgb(25, 25, 40));
         }
+
+        protected sealed override void OnActivityResult(Int32 requestCode, Result resultCode, Intent data)
+        {
+            BluetoothLowEnergyAdapter.OnActivityResult(requestCode, resultCode, data);
+        }
     }
+
+
 }

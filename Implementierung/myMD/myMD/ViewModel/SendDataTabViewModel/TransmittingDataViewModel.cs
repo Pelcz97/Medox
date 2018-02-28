@@ -80,5 +80,11 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 Debug.WriteLine(ex);
             }
         }
+
+        public async Task NotifyServer(){
+            try{
+                
+            }
+        }
     }
 }
