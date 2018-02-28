@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Foundation;
-using Plugin.BluetoothLE;
 using UIKit;
 using Xamarin.Forms;
 
@@ -30,7 +29,6 @@ namespace myMD.iOS
 #if DEBUG
 			Xamarin.Calabash.Start();
 #endif
-            CrossBleAdapter.Init(BleAdapterConfiguration.DefaultBackgroudingConfig);
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
