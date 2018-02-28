@@ -4,7 +4,6 @@ using System.Runtime.CompilerServices;
 using myMD.Model.TransmissionModel;
 using myMD.ModelInterface.ModelFacadeInterface;
 using Xamarin.Forms.Internals;
-using Plugin.BluetoothLE;
 using System;
 using nexus.protocols.ble;
 using myMD.Model.DependencyService;

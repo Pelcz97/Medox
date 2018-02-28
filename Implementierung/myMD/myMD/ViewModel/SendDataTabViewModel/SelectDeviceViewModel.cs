@@ -4,7 +4,6 @@ using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using System.Linq;
-using Plugin.BluetoothLE;
 using System.Threading;
 using System.Reactive.Threading.Tasks;
 using System.Threading.Tasks;
@@ -26,11 +25,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// Liste an Geräten die in der Umgebung gefunden wurden
         /// </summary>
         public ObservableCollection<ScanResultViewModel> DeviceList { get; }
-
-        /// <summary>
-        /// Boolean, ob das Gerät des Nutzers gerade die Umbegung nach Geräten durchsucht
-        /// </summary>
-        private bool isScanning { get => CrossBleAdapter.Current.IsScanning; }
 
 
         public IBleGattServerConnection ConnectedServer { get => ModelFacade.GetConnectedServer(); }

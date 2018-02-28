@@ -8,7 +8,6 @@ using System.Reactive.Linq;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using myMD.ViewModel.OverviewTabViewModel;
-using Plugin.BluetoothLE;
 using System.Collections.Generic;
 using nexus.protocols.ble;
 using nexus.protocols.ble.gatt;
@@ -84,6 +83,10 @@ namespace myMD.ViewModel.SendDataTabViewModel
         public async Task NotifyServer(){
             try{
                 
+            }
+            catch
+            {
+
             }
         }
     }
