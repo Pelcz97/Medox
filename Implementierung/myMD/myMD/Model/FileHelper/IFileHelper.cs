@@ -14,9 +14,18 @@ namespace myMD.Model.FileHelper
 		string GetLocalFilePath(string filename);
 
         /// <summary>
+        /// Erstellt eine neue Datei mit eindeutigem Namen und dem gegebenen Format aus dem gegebenen Byte Array.
+        /// </summary>
+        /// <param name="format">Format der Datei</param>
+        /// <param name="data">Daten der Datei</param>
+        /// <returns>Der vollständige Dateipfad</returns>
+        string WriteLocalFileFromBytes(string format, byte[] data);
+
+        /// <summary>
         /// Löscht die gegebene Datei im lokalen Dateisystem
         /// </summary>
         /// <param name="filename">Die zu löschende Datei</param>
         void DeleteFile(string filename);
+
     }
 }

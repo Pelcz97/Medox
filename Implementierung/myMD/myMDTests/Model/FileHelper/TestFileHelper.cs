@@ -27,6 +27,13 @@ namespace myMDTests.Model.FileHelper
             return path;
         }
 
+        public string WriteLocalFileFromBytes(string format, byte[] data)
+        {
+            string path = Path.Combine(FOLDER, Guid.NewGuid().ToString() + format);
+            File.WriteAllBytes(path, data);
+            return path;
+        }
+
         public bool Exists(string filename)
         {
             return File.Exists(Path.Combine(FOLDER, filename));

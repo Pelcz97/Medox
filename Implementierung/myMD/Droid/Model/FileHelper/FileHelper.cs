@@ -13,6 +13,8 @@ namespace myMD.Model.FileHelper.Droid
     [Preserve(AllMembers = true)]
     public class FileHelper : IFileHelper
 	{
+        private static readonly string PATH = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+
         /// <see>myMD.Model.FileHelper.IFileHelper#DeleteFile(string)</see>
         public void DeleteFile(string filename)
         {
@@ -22,7 +24,7 @@ namespace myMD.Model.FileHelper.Droid
         /// <see>myMD.Model.FileHelper.IFileHelper#GetLocalFilePath(string)</see>
         public string GetLocalFilePath(string filename)
 		{
-            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), filename);
+            string path = Path.Combine(PATH, filename);
             if (!File.Exists(path))
             {
                 File.Create(path).Close();
@@ -30,7 +32,13 @@ namespace myMD.Model.FileHelper.Droid
             return path;
         }
 
-	}
+        public string WriteLocalFileFromBytes(string format, byte[] data)
+        {
+            string path = Path.Combine(PATH, Guid.NewGuid().ToString() + format);
+            File.WriteAllBytes(path, data);
+            return path;
+        }
+    }
 
 }
 
