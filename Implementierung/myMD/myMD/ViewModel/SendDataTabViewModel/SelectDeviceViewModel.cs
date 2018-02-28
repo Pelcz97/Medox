@@ -72,7 +72,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         {
             Debug.WriteLine("möp");
 
-            await BluetoothAdapter.ScanForBroadcasts(new ScanFilter().SetAdvertisedManufacturerCompanyId()
+            await BluetoothAdapter.ScanForBroadcasts(new ScanFilter()
                     .SetIgnoreRepeatBroadcasts(true), peripheral =>
             {
                 ScanResultViewModel test = new ScanResultViewModel(peripheral);
