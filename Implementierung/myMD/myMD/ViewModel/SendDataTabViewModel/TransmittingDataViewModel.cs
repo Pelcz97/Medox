@@ -21,6 +21,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class TransmittingDataViewModel : OverallViewModel.OverallViewModel
     {
+        String resultString = "";
         IBleGattServerConnection ConnectedServer { get; set; }
         ObservableCollection<DoctorsLetterViewModel> LettersToSend { get; set; }
 
@@ -39,6 +40,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
          }
 
         public async void FindCharacteristics(){
+            
+
             foreach (var guid in await ConnectedServer.ListServiceCharacteristics(myMDserviceGuid1))
             {
                 Debug.WriteLine(guid);
@@ -55,18 +58,26 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 Debug.WriteLine(ex.ToString());
             }
 
+            await ReadFileFromServer();
+
+            Debug.WriteLine(resultString);
+        }
+
+        public async Task ReadFileFromServer(){
             try
             {
                 var str = await ConnectedServer.ReadCharacteristicValue(myMDserviceGuid1, myMDcharGuid1);
-
                 String ergebnis = System.Text.Encoding.UTF8.GetString(str, 0, str.Length);
-                Debug.WriteLine("Länge: " + ergebnis);
+                resultString += ergebnis;
 
-                //Debug.WriteLine("Aktueller Wert: " + System.Text.Encoding.UTF8.G
-            }
-            catch (GattException ex)
-            {
-                Debug.WriteLine(ex.ToString());
+                var notifier = ConnectedServer.NotifyCharacteristicValue(
+                    myMDserviceGuid1,
+                    myMDcharGuid1,
+                    async bytes => { 
+                        await ReadFileFromServer(); 
+                    });
+            } catch (GattException ex){
+                Debug.WriteLine(ex);
             }
         }
     }
