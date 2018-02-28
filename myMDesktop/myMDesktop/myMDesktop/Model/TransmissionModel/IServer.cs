@@ -12,7 +12,7 @@ namespace myMDesktop.Model.TransmissionModel
     public interface IServer
     {
         Task StartServer();
-
+        Collection<IEnumerable<byte[]>> SplittedFiles { get; set; }
         ObservableCollection<FileData> DoctorsLetters
         {
             get;

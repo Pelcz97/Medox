@@ -14,6 +14,7 @@ using ReactiveUI;
 using System.Collections.Generic;
 using myMDesktop.Model.TransmissionModel;
 using Plugin.FilePicker.Abstractions;
+using System.Linq;
 
 namespace myMDesktop.ViewModel.SendDataTabViewModel
 {
@@ -23,9 +24,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class TransmittingDataViewModel : OverallViewModel
     {
-        
-        public IServer serverTest { get; set; }
-        
+        Collection<IEnumerable<byte[]>> SplittedFiles { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the
@@ -33,23 +32,42 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         /// </summary>
         public TransmittingDataViewModel()
         {
-            
+            SplittedFiles = new Collection<IEnumerable<byte[]>>();
             StartServer();
 
             MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<FileData>>(this, "SelectedLetters", (sender, arg) => {
                 DependencyService.Get<IServer>().DoctorsLetters = arg;
+
+                foreach (FileData file in arg)
+                {
+                    SplittedFiles.Add(SplitFile(file));
+                }
+
+                DependencyService.Get<IServer>().SplittedFiles = SplittedFiles;
+
                 Debug.WriteLine(DependencyService.Get<IServer>().DoctorsLetters.Count);
             });
-            /*MessagingCenter.Subscribe<SelectDeviceViewModel, IBlePeripheral>(this, "ConnectedDevice", (sender, arg) => {
-                 TargetDevice = arg;
-                 Debug.WriteLine("SelectedDevice : " + TargetDevice.Advertisement.DeviceName);
-             });*/
+
 
         }
 
         public async void StartServer()
         {
             await DependencyService.Get<IServer>().StartServer();
+        }
+
+        public IEnumerable<byte[]> SplitFile(FileData file)
+        {
+            var array = file.DataArray;
+
+            var batchSize = 1500; //534?
+            var batched = array
+                .Select((Value, Index) => new { Value, Index })
+                .GroupBy(p => p.Index / batchSize)
+                .Select(g => g.Select(p => p.Value).ToArray());
+
+            Debug.WriteLine("Batch size " + batched.Count());
+            return batched;
         }
     }
 }

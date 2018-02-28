@@ -24,14 +24,20 @@ namespace myMDesktop.UWP.Model.TransmissionModel
         public static Guid myMDserviceGuid1 = new Guid("88800000-8000-8000-8000-800000000000");
         public static Guid myMDcharGuid1 = new Guid("50000000-5000-5000-5000-500000000000");
         public static Guid myMDfileCount = new Guid("40000000-4000-4000-4000-400000000000");
+        public static Guid myMDResponseWrite = new Guid("60000000-6000-6000-6000-600000000000");
+        public static Guid myMDreadCycleCount = new Guid("70000000-7000-7000-7000-700000000000");
 
 
         public GattServiceProvider serviceProvider;
         private GattLocalCharacteristic myMDCharacteristic;
         private GattLocalCharacteristic myMDFileCountChar;
+        private GattLocalCharacteristic myMDreadCycleCountChar;
+        private GattLocalCharacteristic myMDResponseWriteChar;
         private bool peripheralSupported;
-
+        private int numberOfReadCycles { get; set; }
         public ObservableCollection<FileData> DoctorsLetters { get; set; }
+        public Collection<IEnumerable<byte[]>> SplittedFiles { get; set; }
+
 
         public static readonly GattLocalCharacteristicParameters gattOperatorParameters = new GattLocalCharacteristicParameters
         {
@@ -49,8 +55,23 @@ namespace myMDesktop.UWP.Model.TransmissionModel
             UserDescription = "myMD FileCounter"
         };
 
+        public static readonly GattLocalCharacteristicParameters ResponseWrite = new GattLocalCharacteristicParameters
+        {
+            CharacteristicProperties = GattCharacteristicProperties.Write,
+            WriteProtectionLevel = GattProtectionLevel.Plain,
+            UserDescription = "myMD ResponseWrite"
+        };
+
+        public static readonly GattLocalCharacteristicParameters ReadCycleChar = new GattLocalCharacteristicParameters
+        {
+            CharacteristicProperties = GattCharacteristicProperties.Read,
+            ReadProtectionLevel = GattProtectionLevel.Plain,
+            UserDescription = "myMD ResponseWrite"
+        };
+
         public Server()
         {
+            SplittedFiles = new Collection<IEnumerable<byte[]>>();
             DoctorsLetters = new ObservableCollection<FileData>();
             checkPeripheralSupport();
         }
@@ -67,9 +88,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
             {
                 var serviceStarted = await ServiceProviderInitAsync();
                 if (serviceStarted)
-                {
-                    
-                 
+                { 
                     Debug.WriteLine("Server started successfully.");
                 }
                 else
@@ -78,8 +97,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
                 }
             }
             else
-            {
-                // BT_Code: Stops advertising support for custom GATT Service 
+            { 
                 serviceProvider.StopAdvertising();
                 serviceProvider = null;
                 await StartServer();
@@ -88,7 +106,6 @@ namespace myMDesktop.UWP.Model.TransmissionModel
 
         private async Task<bool> CheckPeripheralRoleSupportAsync()
         {
-            // BT_Code: New for Creator's Update - Bluetooth adapter has properties of the local BT radio.
             var localAdapter = await BluetoothAdapter.GetDefaultAsync();
 
             if (localAdapter != null)
@@ -96,17 +113,16 @@ namespace myMDesktop.UWP.Model.TransmissionModel
                 return localAdapter.IsPeripheralRoleSupported;
             }
             else
-            {
-                // Bluetooth is not turned on 
+            { 
                 return false;
             }
         }
 
         private async Task<bool> ServiceProviderInitAsync()
         {
-            // BT_Code: Initialize and starting a custom GATT Service using GattServiceProvider.
+            // Initialize and starting a custom GATT Service using GattServiceProvider.
             GattServiceProviderResult serviceResult = await GattServiceProvider.CreateAsync(myMDserviceGuid1);
-            //Debug.WriteLine("Service: " + serviceResult);
+            
             if (serviceResult.Error == BluetoothError.Success)
             {
                 serviceProvider = serviceResult.ServiceProvider;
@@ -141,19 +157,38 @@ namespace myMDesktop.UWP.Model.TransmissionModel
             }
             myMDFileCountChar.ReadRequested += FileCount_ReadRequestedAsync;
 
+            GattLocalCharacteristicResult readCycleCount = await serviceProvider.Service.CreateCharacteristicAsync(myMDreadCycleCount, ReadCycleChar);
+            if (result.Error == BluetoothError.Success)
+            {
+                myMDreadCycleCountChar = readCycleCount.Characteristic;
+            }
+            else
+            {
+                Debug.WriteLine(fileCount.Error);
+                return false;
+            }
+            myMDreadCycleCountChar.ReadRequested += CycleCount_ReadRequestedAsync;
 
-            // BT_Code: Indicate if your sever advertises as connectable and discoverable.
+            GattLocalCharacteristicResult responseWrite = await serviceProvider.Service.CreateCharacteristicAsync(myMDResponseWrite, ResponseWrite);
+            if (result.Error == BluetoothError.Success)
+            {
+                myMDResponseWriteChar = responseWrite.Characteristic;
+            }
+            else
+            {
+                Debug.WriteLine(responseWrite.Error);
+                return false;
+            }
+            myMDResponseWriteChar.WriteRequested += ResponseWrite_WriteRequestedAsync;
+
+
+            //Indicate if sever advertises as connectable and discoverable.
             GattServiceProviderAdvertisingParameters advParameters = new GattServiceProviderAdvertisingParameters
             {
-                // IsConnectable determines whether a call to publish will attempt to start advertising and 
-                // put the service UUID in the ADV packet (best effort)
                 IsConnectable = peripheralSupported,
-
-                // IsDiscoverable determines whether a remote device can query the local device for support 
-                // of this service
                 IsDiscoverable = true
             };
-            //serviceProvider.AdvertisementStatusChanged += ServiceProvider_AdvertisementStatusChanged;
+
             Debug.WriteLine("Advertisment Status: " + serviceProvider.AdvertisementStatus);
             serviceProvider.StartAdvertising(advParameters);
             return true;
@@ -176,7 +211,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
 
                     var writer = new DataWriter();
                     writer.ByteOrder = ByteOrder.LittleEndian;
-                    writer.WriteInt32(DoctorsLetters.Count);
+                    writer.WriteInt32(SplittedFiles.Count);
 
                     // Can get details about the request such as the size and offset, as well as monitor the state to see if it has been completed/cancelled externally.
                     // request.Offset
@@ -190,6 +225,31 @@ namespace myMDesktop.UWP.Model.TransmissionModel
             }
         }
 
+        private async void CycleCount_ReadRequestedAsync(GattLocalCharacteristic sender, GattReadRequestedEventArgs args)
+        {
+            using (args.GetDeferral())
+            {
+                // await CoreApplication.MainView.CoreWindow.Dispatcher.RunTaskAsync(async () =>
+                //{
+                // Get the request information.  This requires device access before an app can access the device's request. 
+                GattReadRequest request = await args.GetRequestAsync();
+                if (request == null)
+                {
+                    // No access allowed to the device.  Application should indicate this to the user.
+                    Debug.WriteLine("Access to device not allowed");
+                    return;
+                }
+
+                var writer = new DataWriter();
+                writer.ByteOrder = ByteOrder.LittleEndian;
+                writer.WriteInt32(SplittedFiles.ElementAt(CurrentFileIndex).Count());
+
+                request.RespondWithValue(writer.DetachBuffer());
+            }
+        }
+
+        int CurrentFileIndex = 0;
+        int CurrentSplitIndex = 0;
         private async void FileReader_ReadRequestedAsync(GattLocalCharacteristic sender, GattReadRequestedEventArgs args)
         {
             using (args.GetDeferral())
@@ -207,27 +267,44 @@ namespace myMDesktop.UWP.Model.TransmissionModel
 
                 var writer = new DataWriter();
                 writer.ByteOrder = ByteOrder.LittleEndian;
-                var array = DoctorsLetters.FirstOrDefault().DataArray;
+                var array = SplittedFiles.ElementAt(CurrentFileIndex).ElementAt(CurrentSplitIndex);
+                
 
-                var batchSize = 500; //534?
-                var batched = array
-                    .Select((Value, Index) => new { Value, Index })
-                    .GroupBy(p => p.Index / batchSize)
-                    .Select(g => g.Select(p => p.Value).ToList());
-
-                Debug.WriteLine(batched);
-                Debug.WriteLine(array);
+                Debug.WriteLine("Array: " + array);
+                
                 writer.WriteBytes(array);
 
-                // Can get details about the request such as the size and offset, as well as monitor the state to see if it has been completed/cancelled externally.
-                // request.Offset
-                // request.Length
-                // request.State
-                // request.StateChanged += <Handler>
-
-                // Gatt code to handle the response
+                if(CurrentSplitIndex <= SplittedFiles.ElementAt(CurrentFileIndex).Count())
+                {
+                    CurrentSplitIndex++;
+                } else
+                {
+                    if(CurrentFileIndex <= SplittedFiles.Count())
+                    {
+                        CurrentFileIndex++;
+                    }   
+                }
+                
                 request.RespondWithValue(writer.DetachBuffer());
-                //});
+               
+            }
+        }
+
+        private async void ResponseWrite_WriteRequestedAsync(GattLocalCharacteristic sender, GattWriteRequestedEventArgs args)
+        {
+            // BT_Code: Processing a write request.
+            using (args.GetDeferral())
+            {
+                // Get the request information.  This requires device access before an app can access the device's request.
+                GattWriteRequest request = await args.GetRequestAsync();
+                if (request == null)
+                {
+                    return;
+                }
+
+                var dataReader = Windows.Storage.Streams.DataReader.FromBuffer(request.Value);
+                var output = dataReader.ReadString(request.Value.Length);
+                Debug.WriteLine("Wert: " + output);
             }
         }
 

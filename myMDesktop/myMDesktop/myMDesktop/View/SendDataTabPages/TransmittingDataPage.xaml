@@ -20,8 +20,7 @@
                     HeightRequest="50"
                     WidthRequest="400"
                     BorderRadius="10" />
-            <Button Clicked="SelectDeviceButton_Clicked"
-                    Text="Empfänger wählen"
+            <Button Text="Empfänger wählen"
                     TextColor="White"
                     FontAttributes="Bold"
                     Grid.Row="1"
