@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using nexus.protocols.ble.scan;
-using Plugin.BluetoothLE;
 using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.SendDataTabViewModel

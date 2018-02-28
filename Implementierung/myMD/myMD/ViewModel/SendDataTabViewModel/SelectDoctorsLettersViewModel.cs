@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
+﻿using System.Collections.ObjectModel;
 using myMD.ModelInterface.DataModelInterface;
 using myMD.ViewModel.OverviewTabViewModel;
-using Plugin.BluetoothLE;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
@@ -26,11 +23,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// </summary>
         public SelectDoctorsLettersViewModel()
         {
-            var devices = CrossBleAdapter.Current.GetConnectedDevices();
-            foreach (var device in devices)
-            {
-                Debug.WriteLine(device.Name);
-            }
 
             this.DoctorsLettersSendList = new ObservableCollection<DoctorsLetterViewModel>();
             foreach (IDoctorsLetter letter in ModelFacade.GetAllDoctorsLetters())

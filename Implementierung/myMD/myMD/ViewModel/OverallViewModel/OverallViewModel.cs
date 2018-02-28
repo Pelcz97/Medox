@@ -1,10 +1,8 @@
 ﻿using System.ComponentModel;
-using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using myMD.Model.TransmissionModel;
 using myMD.ModelInterface.ModelFacadeInterface;
 using Xamarin.Forms.Internals;
-using Plugin.BluetoothLE;
 using System;
 using nexus.protocols.ble;
 using myMD.Model.DependencyService;
@@ -18,9 +16,11 @@ namespace myMD.ViewModel.OverallViewModel
     public class OverallViewModel : INotifyPropertyChanged
     {
         
-        public static Guid myMDserviceGuid1 = new Guid("88800000-8000-8000-8000-800000000000");
-        public static Guid myMDcharGuid1 = new Guid("50000000-5000-5000-5000-500000000000");
-        public static Guid myMDfileCount = new Guid("40000000-4000-4000-4000-400000000000");
+        public static Guid myMD_FileTransfer = new Guid("88800000-8000-8000-8000-800000000000");
+        public static Guid DataCharacteristic = new Guid("50000000-5000-5000-5000-500000000000");
+        public static Guid FileCounterCharacteristic = new Guid("40000000-4000-4000-4000-400000000000");
+        public static Guid ReadResponse = new Guid("60000000-6000-6000-6000-600000000000");
+        public static Guid myMDreadCycleCount = new Guid("70000000-7000-7000-7000-700000000000");
 
         protected IBluetoothLowEnergyAdapter BluetoothAdapter { get => DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter; }
 

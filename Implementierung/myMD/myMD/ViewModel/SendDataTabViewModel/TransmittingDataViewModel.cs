@@ -1,17 +1,12 @@
 ﻿using Xamarin.Forms.Internals;
 using System;
-using System.Windows.Input;
-using Xamarin.Forms;
 using System.Diagnostics;
-using System.Text;
-using System.Reactive.Linq;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using myMD.ViewModel.OverviewTabViewModel;
-using Plugin.BluetoothLE;
-using System.Collections.Generic;
 using nexus.protocols.ble;
 using nexus.protocols.ble.gatt;
+using System.Collections.Generic;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
@@ -21,69 +16,117 @@ namespace myMD.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class TransmittingDataViewModel : OverallViewModel.OverallViewModel
     {
-        String resultString = "";
         IBleGattServerConnection ConnectedServer { get; set; }
         ObservableCollection<DoctorsLetterViewModel> LettersToSend { get; set; }
-
+        IDisposable notify { get; set; }
         public int NumberOfFiles { get; set; }
-        
+
+        private int NumberOfReadCycles;
+        private string CurrentFile;
+
+        IList<String> FilesAsString;
+
         /// <summary>
         /// Initializes a new instance of the
         /// <see cref="T:myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel"/> class.
         /// </summary>
         public TransmittingDataViewModel()
         {
+            FilesAsString = new List<String>();
             ConnectedServer = ModelFacade.GetConnectedServer();
 
             FindCharacteristics();
+            ReadFileFromServer();
+            FilesAsString.ForEach(file => {
+                Debug.WriteLine("File: " + file);
+            });
+        }
 
-         }
+        public async void ReadFileFromServer(){
+            GetReadCycles();
+
+            for (int i = 0; i < NumberOfReadCycles; i++){
+                await ReadFromServer();
+            }
+            FilesAsString.Add(CurrentFile);
+        }
+
+        public async void GetNumberOfFiles()
+        {
+            try
+            {
+                var value = await ConnectedServer.ReadCharacteristicValue(myMD_FileTransfer, FileCounterCharacteristic);
+                NumberOfFiles = BitConverter.ToInt16(value, 0);
+
+                Debug.WriteLine("NumberOfFiles: " + NumberOfFiles);
+            }
+            catch (GattException ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
+        }
+
+        public async void GetReadCycles(){
+            try
+            {
+                var value = await ConnectedServer.ReadCharacteristicValue(myMD_FileTransfer, myMDreadCycleCount);
+                NumberOfReadCycles = BitConverter.ToInt16(value, 0);
+                Debug.WriteLine("NumberOfReadCycles: " + NumberOfReadCycles);
+            }
+            catch (GattException ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
+        }
 
         public async void FindCharacteristics(){
             
 
-            foreach (var guid in await ConnectedServer.ListServiceCharacteristics(myMDserviceGuid1))
+            foreach (var guid in await ConnectedServer.ListServiceCharacteristics(myMD_FileTransfer))
             {
                 Debug.WriteLine(guid);
             }
 
             try
             {
-                var value = await ConnectedServer.ReadCharacteristicValue(myMDserviceGuid1, myMDfileCount);
+                var value = await ConnectedServer.ReadCharacteristicValue(myMD_FileTransfer, FileCounterCharacteristic);
                 Debug.WriteLine("Länge: " + value.Length);
-                //Debug.WriteLine("Aktueller Wert: " + System.Text.Encoding.UTF8.G
             }
             catch (GattException ex)
             {
                 Debug.WriteLine(ex.ToString());
             }
 
-            await ReadFileFromServer();
-
-            Debug.WriteLine(resultString);
+            ListenForNotify();
+            await ReadFromServer();
+            notify.Dispose();
+            
         }
 
-        public async Task ReadFileFromServer(){
+        public async Task ReadFromServer(){
             try
             {
-                var str = await ConnectedServer.ReadCharacteristicValue(myMDserviceGuid1, myMDcharGuid1);
+                var str = await ConnectedServer.ReadCharacteristicValue(myMD_FileTransfer, DataCharacteristic);
                 String ergebnis = System.Text.Encoding.UTF8.GetString(str, 0, str.Length);
-                resultString += ergebnis;
+                CurrentFile += ergebnis;
 
-                var notifier = ConnectedServer.NotifyCharacteristicValue(
-                    myMDserviceGuid1,
-                    myMDcharGuid1,
-                    async bytes => { 
-                        await ReadFileFromServer(); 
-                    });
             } catch (GattException ex){
                 Debug.WriteLine(ex);
             }
         }
 
-        public async Task NotifyServer(){
-            try{
-                
+        public void ListenForNotify()
+        {
+            try
+            {
+                notify = ConnectedServer.NotifyCharacteristicValue(
+                    myMD_FileTransfer,
+                    DataCharacteristic,
+                    bytes => { Debug.WriteLine("Got notified; " + bytes);});
+            }
+            catch (GattException ex)
+            {
+                Debug.WriteLine(ex.ToString());
             }
         }
     }
