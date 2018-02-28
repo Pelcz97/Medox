@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using myMD.Model.DataModel;
 using myMDTests.Model.EntityFactory;
+using myMD.ModelInterface.DataModelInterface;
 
 namespace myMDTests.Model.DataModel
 {
@@ -9,12 +10,14 @@ namespace myMDTests.Model.DataModel
     {
         private Medication med;
         private RandomEntityFactory fac;
+        private IDoctorsLetter letter;
 
         [SetUp]
         public void SetUp()
         {
             fac = new RandomEntityFactory();
             med = fac.Medication();
+            letter = fac.ILetter();
         }
 
         [Test]
@@ -26,7 +29,9 @@ namespace myMDTests.Model.DataModel
         [Test]
         public void CopiedEqualTest()
         {
-            Assert.IsTrue(med.Equals(Copy(med)));
+            Medication copy = Copy(med);
+            Assert.IsTrue(med.Equals(copy));
+            Assert.AreEqual(med.GetHashCode(), copy.GetHashCode());
         }
 
         [Test]
@@ -41,6 +46,24 @@ namespace myMDTests.Model.DataModel
             Medication changedMed = Copy(med);
             changedMed.Name += "d";
             Assert.IsFalse(med.Equals(changedMed));
+        }
+
+        [Test]
+        public void LetterTest()
+        {
+            med.AttachToLetter(letter);
+            Assert.IsTrue(med.DoctorsLetter.Equals(letter));
+            med.DisattachFromLetter(letter);
+            Assert.IsNull(med.DoctorsLetter);
+        }
+
+        [Test]
+        public void DeleteTest()
+        {
+            med.AttachToLetter(letter);
+            Assert.IsTrue(letter.Medication.Contains(med));
+            med.Delete();
+            Assert.IsFalse(letter.Medication.Contains(med));
         }
 
         private Medication Copy(Medication med)

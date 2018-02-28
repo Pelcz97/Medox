@@ -13,6 +13,7 @@ namespace myMD.Model.FileHelper.iOS
     [Preserve(AllMembers = true)]
     public class FileHelper : IFileHelper
     {
+        private static readonly string PATH = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Library");
         /// <see>myMD.Model.FileHelper.IFileHelper#DeleteFile(string)</see>
         public void DeleteFile(string filename)
         {
@@ -22,7 +23,7 @@ namespace myMD.Model.FileHelper.iOS
         /// <see>myMD.Model.FileHelper.IFileHelper#GetLocalFilePath(string)</see>
         public string GetLocalFilePath(string filename)
 		{
-            string directory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Library", filename);
+            string directory = Path.Combine(PATH, filename);
             if (!Directory.Exists(directory))
             {
                 Directory.CreateDirectory(directory);
@@ -35,7 +36,14 @@ namespace myMD.Model.FileHelper.iOS
             return path;
         }
 
-	}
+        public string WriteLocalFileFromBytes(string format, byte[] data)
+        {
+            string path = Path.Combine(PATH, Guid.NewGuid().ToString() + format);
+            File.WriteAllBytes(path, data);
+            return path;
+        }
+
+    }
 
 }
 

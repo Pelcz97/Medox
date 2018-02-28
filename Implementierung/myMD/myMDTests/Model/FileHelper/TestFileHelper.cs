@@ -8,6 +8,8 @@ namespace myMDTests.Model.FileHelper
     {
         private static readonly string FOLDER = Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName, "Resources");
 
+        public string LastWrittenPath { get; private set; }
+
         public void DeleteFile(string filename)
         {
             File.Delete(GetLocalFilePath(filename));
@@ -24,6 +26,14 @@ namespace myMDTests.Model.FileHelper
             {
                 File.Create(path).Close();          
             }
+            return path;
+        }
+
+        public string WriteLocalFileFromBytes(string format, byte[] data)
+        {
+            string path = Path.Combine(FOLDER, Guid.NewGuid().ToString() + format);
+            File.WriteAllBytes(path, data);
+            LastWrittenPath = path;
             return path;
         }
 
