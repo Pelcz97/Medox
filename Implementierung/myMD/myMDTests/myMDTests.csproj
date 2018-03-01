@@ -106,6 +106,10 @@
     <Compile Include="Model\FileHelper\TestFileHelper.cs" />
     <Compile Include="Model\ModelFacade\ModelFacadeTest.cs" />
     <Compile Include="Model\ParserModel\EntityDatabaseStub.cs" />
+    <Compile Include="Model\ParserModel\FileToDatabaseParserTest.cs" />
+    <Compile Include="Model\ParserModel\Hl7FileUtility.cs" />
+    <Compile Include="Model\ParserModel\MockFileToDatabaseParser.cs" />
+    <Compile Include="Model\ParserModel\ParserFacadeTest.cs" />
     <Compile Include="Model\ParserModel\TestHl7ParserHelper.cs" />
     <Compile Include="Model\ParserModel\Hl7ParserTest.cs" />
     <Compile Include="Model\ParserModel\TestHl7ToDatabaseParser.cs" />

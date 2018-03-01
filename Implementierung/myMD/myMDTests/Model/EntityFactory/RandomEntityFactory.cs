@@ -55,6 +55,16 @@ namespace myMDTests.Model.EntityFactory
             };
         }
 
+        public List<Medication> Meds()
+        {
+            List<Medication> meds = new List<Medication>();
+            for(int i = 0; i < r.Next(1,10); ++i)
+            {
+                meds.Add(Medication());
+            }
+            return meds;
+        }
+
         public Profile Profile()
         {
             return new Profile() {
