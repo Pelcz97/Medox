@@ -104,6 +104,7 @@
     <Compile Include="Model\EntityFactory\RandomEntityFactory.cs" />
     <Compile Include="Model\FileHelper\FileHelperTest.cs" />
     <Compile Include="Model\FileHelper\TestFileHelper.cs" />
+    <Compile Include="Model\TransmissionModel\BluetoothStub.cs" />
     <Compile Include="Model\ModelFacade\ModelFacadeTest.cs" />
     <Compile Include="Model\ParserModel\EntityDatabaseStub.cs" />
     <Compile Include="Model\ParserModel\FileToDatabaseParserTest.cs" />
