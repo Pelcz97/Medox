@@ -4,8 +4,10 @@ using MARC.Everest.Formatters.XML.ITS1;
 using MARC.Everest.RMIM.UV.CDAr2.POCD_MT000040UV;
 using MARC.Everest.Xml;
 using myMD.Model.DataModel;
+using myMD.Model.DependencyService;
 using myMD.Model.FileHelper;
 using myMD.Model.ParserModel;
+using myMDTests.Model.DependencyService;
 using myMDTests.Model.EntityFactory;
 using myMDTests.Model.FileHelper;
 using NUnit.Framework;
@@ -23,6 +25,8 @@ namespace myMDTests.Model.ParserModel
 
         private static readonly string FAIL = "fail.fail";
 
+        private static readonly string HL7_FAIL = "fail.hl7";
+
         private static readonly RandomEntityFactory fac = new RandomEntityFactory();
 
         private static IFileHelper helper = new TestFileHelper();
@@ -33,11 +37,14 @@ namespace myMDTests.Model.ParserModel
 
         private static string Fail => FAIL;
 
+        private static string Hl7Fail => helper.GetLocalFilePath(HL7_FAIL);
+
         private static EntityDatabaseStub db = new EntityDatabaseStub();
 
         [OneTimeSetUp]
         public static void SetUp()
         {
+            DependencyServiceWrapper.Service = new TestDependencyService();
         }
 
         [Test]
@@ -101,6 +108,12 @@ namespace myMDTests.Model.ParserModel
         public void UnsupportedFileFormatTest()
         {
             Assert.Throws<NotSupportedException>(() => parser.ParseFileToDatabase(Fail, db));
+        }
+
+        [Test]
+        public void InvalidFileTest()
+        {
+            Assert.Throws<FileFormatException>(() => parser.ParseFileToDatabase(Hl7Fail, db));
         }
     }
 }
