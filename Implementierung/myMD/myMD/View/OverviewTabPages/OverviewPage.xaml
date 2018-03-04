@@ -13,7 +13,7 @@
     
     <ContentPage.Content>
             <ListView x:Name="DoctorsLettersList" 
-                HasUnevenRows="true" 
+                HasUnevenRows="true"
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding DoctorsLettersList}" 
                 SeparatorVisibility="None" 

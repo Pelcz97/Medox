@@ -35,6 +35,7 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Entry HorizontalOptions="FillAndExpand" 
+                                   AutomationID="ProfileLastNameEntryID"
                                 VerticalOptions="CenterAndExpand" 
                                 BackgroundColor="#191928" 
                                 Placeholder="Name" 
@@ -56,6 +57,7 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Entry HorizontalOptions="FillAndExpand" 
+                                    AutomationID="ProfileNameEntryID"                                  
                                 VerticalOptions="Center" 
                                 BackgroundColor="#191928" 
                                 Placeholder="Vorname" 
@@ -87,13 +89,14 @@
                         <StackLayout Orientation="Vertical" 
                             VerticalOptions="FillAndExpand"
                             HorizontalOptions="FillAndExpand">
-                            <Label Text="Versicherungsnummer" 
+                            <Label Text="Versicherungsnummer"
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
                                 TextColor="#929292" 
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
-                            <Entry HorizontalOptions="FillAndExpand" 
+                            <Entry HorizontalOptions="FillAndExpand"
+                                   AutomationID="ProfileInsuranceNumberEntryID"
                                 VerticalOptions="Center" 
                                 BackgroundColor="#191928" 
                                 Placeholder="Versicherungsnummer" 
