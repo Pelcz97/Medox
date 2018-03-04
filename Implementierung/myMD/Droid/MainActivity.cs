@@ -15,26 +15,30 @@ namespace myMD.Droid
     [Activity(Label = "myMD", Icon = "@drawable/myMDIcon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        private static Context context;
+
         protected override void OnCreate(Bundle bundle)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
-            BluetoothLowEnergyAdapter.Init(this);
-
             base.OnCreate(bundle);
-
             global::Xamarin.Forms.Forms.Init(this, bundle);
-
             LoadApplication(new App());
+            context = ApplicationContext;
             Window.ClearFlags(WindowManagerFlags.TranslucentStatus);
             Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
             Window.SetStatusBarColor(Color.Rgb(25, 25, 40));
+            BluetoothLowEnergyAdapter.Init(this);
         }
 
         protected sealed override void OnActivityResult(Int32 requestCode, Result resultCode, Intent data)
         {
             BluetoothLowEnergyAdapter.OnActivityResult(requestCode, resultCode, data);
+        }
+
+        public static Context GetContext()
+        {
+            return context;
         }
     }
 
