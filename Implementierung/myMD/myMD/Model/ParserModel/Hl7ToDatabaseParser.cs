@@ -22,6 +22,9 @@ namespace myMD.Model.ParserModel
     /// <see>myMD.Model.ParserModel.FileToDatabaseParser</see>
 	public class Hl7ToDatabaseParser : FileToDatabaseParser
     {
+
+        private static readonly string INVALID_FILE_MESSAGE = "Invalid File";
+
         /// <summary>
         /// Das Dokument aus dem beim Aufrufen der Parse-Methoden gelesen wird.
         /// Muss zuvor durch Aufruf der Init() Methode initialisiert werden.
@@ -62,8 +65,15 @@ namespace myMD.Model.ParserModel
                 ValidateConformance = false
             };
             helper.PrepareFormatter(fmtr);
-            IFormatterParseResult parseResult = fmtr.Parse(new XmlStateReader(XmlReader.Create(file)), typeof(ClinicalDocument));
-            document = parseResult.Structure as ClinicalDocument;
+            IFormatterParseResult parseResult = null;
+            try
+            { 
+                parseResult = fmtr.Parse(new XmlStateReader(XmlReader.Create(file)), typeof(ClinicalDocument));
+            } catch (XmlException e)
+            {
+                throw new FileFormatException(INVALID_FILE_MESSAGE, e);
+            }
+            document = parseResult.Structure as ClinicalDocument ?? throw new FileFormatException(INVALID_FILE_MESSAGE);
         }
 
         /// <see>myMD.Model.ParserModel.FileToDatabaseParser#ParseProfile()</see>

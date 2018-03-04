@@ -1,15 +1,12 @@
 ﻿using myMD.Model.DatabaseModel;
+using myMD.Model.DataModel;
+using myMD.ModelInterface.DataModelInterface;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using myMD.ModelInterface.DataModelInterface;
-using myMD.Model.DataModel;
 
 namespace myMDTests.Model.ParserModel
 {
-    class EntityDatabaseStub : IEntityDatabase
+    internal class EntityDatabaseStub : IEntityDatabase
     {
         public DoctorsLetter Letter { get; private set; }
 
@@ -67,19 +64,23 @@ namespace myMDTests.Model.ParserModel
             if (entity is Doctor)
             {
                 Doctor = (Doctor)entity;
-            } else if (entity is DoctorsLetter)
+            }
+            else if (entity is DoctorsLetter)
             {
                 Letter = (DoctorsLetter)entity;
-            } else if (entity is Profile)
+            }
+            else if (entity is Profile)
             {
                 Profile = (Profile)entity;
-            } else if (entity is Medication med)
+            }
+            else if (entity is Medication med)
             {
                 if (!Meds.Contains(med))
                 {
                     Meds.Add(med);
                 }
             }
+            ((Entity)entity).Profile = Profile;
         }
 
         public void Update(IEntity entity) => Insert(entity);
