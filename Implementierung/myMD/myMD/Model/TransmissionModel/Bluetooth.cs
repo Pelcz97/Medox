@@ -39,17 +39,20 @@ namespace myMD.Model.TransmissionModel
         }
 
         public async void ReadFileZero(){
-            List<byte[]> resultList = await ReadSpecificFile(0);
-            Debug.WriteLine("Liste : " + resultList);
+            //List<byte[]> resultList = await ReadSpecificFile(0);
+            int i = GetReadCycles(0);
+            Debug.WriteLine("ReadCycles: " + i);
         }
 
         public async Task<List<byte[]>> ReadSpecificFile(int FileNumber){
             List<byte[]> FileAsBytes = new List<byte[]>();
 
             int NumberOfSections = GetReadCycles(FileNumber);
+            Debug.WriteLine("NumberOfSections: " + NumberOfSections);
 
             for (int i = 0; i <= NumberOfSections; i++){
                 FileAsBytes.Add(await GetFileSection(FileNumber, i));
+                Debug.WriteLine("Progress! " + i);   
             }
 
             return FileAsBytes;
@@ -96,28 +99,36 @@ namespace myMD.Model.TransmissionModel
             try
             {
                 int number = 0;
-                ReadCycleNotify = ConnectedGattServer.NotifyCharacteristicValue(
+                var notifier = ConnectedGattServer.NotifyCharacteristicValue(
                         myMD_FileTransfer,
                         myMDReadCycleCount,
                         bytes =>
                         {
                             Debug.WriteLine("Serverantwort: " + BitConverter.ToString(bytes));
                             number = BitConverter.ToInt32(bytes, 0);
-                            
-                        });
-                return number;
+                        }) as Task<IDisposable>;
+
                 byte[] request = Encoding.UTF8.GetBytes(FileNumber.ToString());
 
-                Task.WhenAll(new Task[] {
+                Task.WaitAll(new Task[] {
                     ConnectedGattServer.WriteCharacteristicValue(
                         myMD_FileTransfer,
                         myMDReadCycleCount,
                         request)
                     });
 
+                Task.Delay(1000).Wait();
+
+                Debug.WriteLine("Ergebnis: " + number);
+                return number;
+
             }
             catch (GattException ex)
             {
+                Debug.WriteLine(ex);
+                return 0;
+            }
+            catch (AggregateException ex){
                 Debug.WriteLine(ex);
                 return 0;
             }

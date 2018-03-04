@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using myMD.Model.TransmissionModel;
 using myMD.ModelInterface.TransmissionModelInterface;
 using nexus.protocols.ble;
@@ -22,7 +23,22 @@ namespace myMDTests.Model.TransmissionModel
             throw new NotImplementedException();
         }
 
+        public int GetReadCycles(int FileNumber)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool pair(IDevice device, string pin)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task ReadFileFromServer()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ReadFileZero()
         {
             throw new NotImplementedException();
         }

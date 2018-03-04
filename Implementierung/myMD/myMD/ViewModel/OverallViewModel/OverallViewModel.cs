@@ -21,6 +21,7 @@ namespace myMD.ViewModel.OverallViewModel
         public static Guid FileCounterCharacteristic = new Guid("40000000-4000-4000-4000-400000000000");
         public static Guid ReadResponse = new Guid("60000000-6000-6000-6000-600000000000");
         public static Guid myMDReadCycleCount = new Guid("70000000-7000-7000-7000-700000000000");
+        public static Guid RequestAndRespond = new Guid("10000000-1000-1000-1000-100000000000");
 
         protected IBluetoothLowEnergyAdapter BluetoothAdapter { get => DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter; }
 

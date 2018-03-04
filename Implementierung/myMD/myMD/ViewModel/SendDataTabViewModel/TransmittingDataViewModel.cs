@@ -18,7 +18,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
     public class TransmittingDataViewModel : OverallViewModel.OverallViewModel
     {
         IBleGattServerConnection ConnectedGattServer { get; set; }
-        IDisposable notifier;
         /// <summary>
         /// Initializes a new instance of the
         /// <see cref="T:myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel"/> class.
@@ -26,41 +25,79 @@ namespace myMD.ViewModel.SendDataTabViewModel
         public TransmittingDataViewModel()
         {
             ConnectedGattServer = ModelFacade.GetConnectedServer();
-            var res = GetReadCycles(0);
-            Debug.WriteLine("Ergebnis: " + res);
-
+            //ModelFacade.GetFilesFromServer();
+            //GetReadCycles(0);
+            //Debug.WriteLine(t);
+            ReadOnly();
         }
 
-
-        public int GetReadCycles(int FileNumber)
+       /* public async void GetReadCycles(int FileNumber)
         {
-            int number = 0;
             try
             {
                 
-                notifier = ConnectedGattServer.NotifyCharacteristicValue(
+                var notifier = ConnectedGattServer.NotifyCharacteristicValue(
                         myMD_FileTransfer,
                         myMDReadCycleCount,
-
                         bytes =>
                         {
                             Debug.WriteLine("Serverantwort: " + BitConverter.ToString(bytes));
-                            number = BitConverter.ToInt32(bytes, 0);
+                            //number = BitConverter.ToInt32(bytes, 0);
                         });
+
                 byte[] request = Encoding.UTF8.GetBytes(FileNumber.ToString());
 
-                Task.WhenAll(new Task[] {
-                    ConnectedGattServer.WriteCharacteristicValue(
+                ConnectedGattServer.WriteCharacteristicValue(
                         myMD_FileTransfer,
                         myMDReadCycleCount,
-                        request)
-                    });
+                        request);
+
+                await Task.Delay(1000);
+                
 
             } catch (GattException ex){
                 Debug.WriteLine(ex);
-                return 0;
             }
-            return number;
+
+        }*/
+
+        public async void AlternativeReadWrite()
+        {
+            try
+            {
+                byte[] request = Encoding.UTF8.GetBytes("0,0");
+
+                /*var notifier = ConnectedGattServer.NotifyCharacteristicValue(
+                        myMD_FileTransfer,
+                        RequestAndRespond,
+                        bytes =>
+                        {
+                            Debug.WriteLine("Serverantwort: " + BitConverter.ToString(bytes));
+                        });*/
+
+                var read = ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, RequestAndRespond);
+
+                await Task.WhenAll(new Task[]
+                {
+
+                    ConnectedGattServer.WriteCharacteristicValue(
+                        myMD_FileTransfer, 
+                        RequestAndRespond, 
+                        request)
+                });
+
+                byte[] test = await read;
+                Debug.WriteLine("Test array: " + test.ToString());
+            }
+            catch (GattException ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
+        }
+
+        public async void ReadOnly(){
+            var read = await ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, RequestAndRespond);
+            Debug.WriteLine("Test array: " + read.ToString());
         }
     }
 }
