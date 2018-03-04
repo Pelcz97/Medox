@@ -9,12 +9,12 @@ namespace myMD.UITests
 {
     [TestFixture(Platform.Android)]
     [TestFixture(Platform.iOS)]
-    public class Tests
+    public class TestsSetup
     {
         IApp app;
         Platform platform;
 
-        public Tests(Platform platform)
+        public TestsSetup(Platform platform)
         {
             this.platform = platform;
         }

@@ -48,7 +48,7 @@ SQLiteNetExtensions;SQLite-net;SQLitePCLRaw.batteries_green;SQLitePCLRaw.batteri
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <AndroidSupportedAbis>armeabi-v7a;x86_64</AndroidSupportedAbis>
-    <AndroidLinkMode>Full</AndroidLinkMode>
+    <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ble.net, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
