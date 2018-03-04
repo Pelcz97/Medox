@@ -68,6 +68,10 @@ namespace myMD.Model.ModelFacade
         public void SetConnectedServer(IBleGattServerConnection server) => bluetooth.ConnectedGattServer = server;
         public IBleGattServerConnection GetConnectedServer() => bluetooth.ConnectedGattServer;
 
+        public void GetFilesFromServer(){
+            bluetooth.GetReadCycles(0);
+        }
+
         /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#Activate(Model.DataModelInterface.IProfile)</see>
         public void Activate(IProfile profile) => database.Activate(profile);
 
@@ -112,7 +116,7 @@ namespace myMD.Model.ModelFacade
         public IList<IMedication> GetAllMedications() => database.GetAllMedications();
 
         /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#SendLetter(Model.DataModelInterface.IDoctorsLetter)</see>
-        public void SendLetter(IDoctorsLetter letter) => bluetooth.send(parser.ParseLetterToOriginalFile(letter));
+        //public void SendLetter(IDoctorsLetter letter) => bluetooth.send(parser.ParseLetterToOriginalFile(letter));
 
         /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#Update(Model.DataModelInterface.IEntity)</see>
         public void Update(IEntity entity) => database.Update(entity);

@@ -70,7 +70,7 @@ namespace myMD.ModelInterface.ModelFacadeInterface
         /// Bereitet den gewünschten Arztbrief für die Datenübertragung vor und veranlasst diese anschließend.
         /// </summary>
         /// <param name="letter">Der zu sendende Arztbrief</param>
-		void SendLetter(IDoctorsLetter letter);
+		//void SendLetter(IDoctorsLetter letter);
 
         /// <summary>
         /// Aktualisiert die gegebene Entität.
@@ -80,5 +80,7 @@ namespace myMD.ModelInterface.ModelFacadeInterface
 
         void SetConnectedServer(IBleGattServerConnection server);
         IBleGattServerConnection GetConnectedServer();
+        void GetFilesFromServer();
+
     }
 }
