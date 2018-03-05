@@ -6,12 +6,12 @@
 	<ContentPage.Content>
         <Grid x:Name="Grid" RowSpacing="1" ColumnSpacing="1" Margin="15,0,15,15">
             <Grid.RowDefinitions>
-                <!--Durch Benutzung des *'s wird der Button immer am unteren Ende der Seite dargestellt-->
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
         <Button     Text="Arztbriefe wählen"
+                    AutomationID="TransmittingDataButtonID"
                     TextColor="White"
                     FontAttributes="Bold"
                     Grid.Row="0"
