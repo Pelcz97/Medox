@@ -34,7 +34,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
         private GattLocalCharacteristic RequestFilesNumberCharacteristic;
 
         private bool peripheralSupported;
-        private int numberOfReadCycles { get; set; }
+        
         public ObservableCollection<FileData> DoctorsLetters { get; set; }
         public Collection<IEnumerable<byte[]>> SplittedFiles { get; set; }
 
@@ -45,7 +45,25 @@ namespace myMDesktop.UWP.Model.TransmissionModel
                                         GattCharacteristicProperties.Read |
                                        GattCharacteristicProperties.Notify,
             ReadProtectionLevel = GattProtectionLevel.Plain,
+            WriteProtectionLevel = GattProtectionLevel.Plain,
             UserDescription = "Request and Respond"
+        };
+
+        public static readonly GattLocalCharacteristicParameters RequestSlicesChar = new GattLocalCharacteristicParameters
+        {
+            CharacteristicProperties = GattCharacteristicProperties.Write |
+                                        GattCharacteristicProperties.Read |
+                                       GattCharacteristicProperties.Notify,
+            ReadProtectionLevel = GattProtectionLevel.Plain,
+            WriteProtectionLevel = GattProtectionLevel.Plain,
+            UserDescription = "Number of Slices"
+        };
+
+        public static readonly GattLocalCharacteristicParameters RequestFilesChar = new GattLocalCharacteristicParameters
+        {
+            CharacteristicProperties = GattCharacteristicProperties.Read,
+            ReadProtectionLevel = GattProtectionLevel.Plain,
+            UserDescription = "Number of Files"
         };
 
         public Server()
@@ -125,6 +143,31 @@ namespace myMDesktop.UWP.Model.TransmissionModel
             RequestFileCharacteristic.WriteRequested += RequestFile_WriteRequestedAsync;
             RequestFileCharacteristic.ReadRequested += RequestFile_ReadRequestedAsync;
 
+            GattLocalCharacteristicResult requestNumberOfSlices = await serviceProvider.Service.CreateCharacteristicAsync(RequestNumberOfSlices, RequestSlicesChar);
+            if (requestNumberOfSlices.Error == BluetoothError.Success)
+            {
+                RequestSlicesNumberCharachteristic = requestNumberOfSlices.Characteristic;
+            }
+            else
+            {
+                Debug.WriteLine(requestNumberOfSlices.Error);
+                return false;
+            }
+            RequestSlicesNumberCharachteristic.WriteRequested += RequestNumberOfSlices_WriteRequestedAsync;
+            RequestSlicesNumberCharachteristic.ReadRequested += RequestNumberOfSlices_ReadRequestedAsync;
+
+            GattLocalCharacteristicResult requestNumberOfFiles = await serviceProvider.Service.CreateCharacteristicAsync(RequestNumberOfFiles, RequestFilesChar);
+            if (requestNumberOfFiles.Error == BluetoothError.Success)
+            {
+                RequestFilesNumberCharacteristic = requestNumberOfFiles.Characteristic;
+            }
+            else
+            {
+                Debug.WriteLine(requestNumberOfFiles.Error);
+                return false;
+            }
+            RequestFilesNumberCharacteristic.ReadRequested += RequestNumberOfFiles_ReadRequestedAsync;
+
             //Indicate if sever advertises as connectable and discoverable.
             GattServiceProviderAdvertisingParameters advParameters = new GattServiceProviderAdvertisingParameters
             {
@@ -155,7 +198,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
 
                 var dataReader = DataReader.FromBuffer(request.Value);
                 var output = dataReader.ReadString(request.Value.Length);
-
+                Debug.WriteLine("Requested Combination: " + output);
                 RequestFileIndex = Int32.Parse(output.Split(",")[0]);
                 RequestSplitIndex = Int32.Parse(output.Split(",")[1]);
 
@@ -180,6 +223,76 @@ namespace myMDesktop.UWP.Model.TransmissionModel
                 var array = SplittedFiles.ElementAt(RequestFileIndex).ElementAt(RequestSplitIndex);
                 Debug.WriteLine("Array inhalt: " + BitConverter.ToString(array));
                 writer.WriteBytes(array);
+                request.RespondWithValue(writer.DetachBuffer());
+            }
+        }
+
+        int RequestedFile = 0;
+        //Request Number of times to read for a specific file
+        private async void RequestNumberOfSlices_WriteRequestedAsync(GattLocalCharacteristic sender, GattWriteRequestedEventArgs args)
+        {
+            using (args.GetDeferral())
+            {
+
+                GattWriteRequest request = await args.GetRequestAsync();
+                if (request == null)
+                {
+                    Debug.WriteLine("Access to device not allowed");
+                    return;
+                }
+
+                var dataReader = DataReader.FromBuffer(request.Value);
+                var output = dataReader.ReadString(request.Value.Length);
+
+                RequestedFile = Int32.Parse(output);
+
+                Debug.WriteLine("Index der Angefragten Datei: " + output);
+            }
+        }
+
+        private async void RequestNumberOfSlices_ReadRequestedAsync(GattLocalCharacteristic sender, GattReadRequestedEventArgs args)
+        {
+            using (args.GetDeferral())
+            {
+
+                GattReadRequest request = await args.GetRequestAsync();
+                if (request == null)
+                {
+                    Debug.WriteLine("Access to device not allowed");
+                    return;
+                }
+
+                var writer = new DataWriter();
+                writer.ByteOrder = ByteOrder.LittleEndian;
+                var numberOfSlices = SplittedFiles.ElementAt(RequestedFile).Count();
+                Debug.WriteLine("Anzahl Splits: " + numberOfSlices);
+
+                writer.WriteInt64(numberOfSlices);
+
+                request.RespondWithValue(writer.DetachBuffer());
+            }
+        }
+
+        //Request how many Files are there to send
+        private async void RequestNumberOfFiles_ReadRequestedAsync(GattLocalCharacteristic sender, GattReadRequestedEventArgs args)
+        {
+            using (args.GetDeferral())
+            {
+
+                GattReadRequest request = await args.GetRequestAsync();
+                if (request == null)
+                {
+                    Debug.WriteLine("Access to device not allowed");
+                    return;
+                }
+
+                var writer = new DataWriter();
+                writer.ByteOrder = ByteOrder.LittleEndian;
+                var numberOfFiles = SplittedFiles.Count();
+                Debug.WriteLine("Anzahl Splits: " + numberOfFiles);
+
+                writer.WriteInt64(numberOfFiles);
+
                 request.RespondWithValue(writer.DetachBuffer());
             }
         }
