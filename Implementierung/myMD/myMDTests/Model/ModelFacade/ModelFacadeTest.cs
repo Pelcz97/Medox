@@ -1,7 +1,6 @@
 ﻿using myMD.ModelInterface.ModelFacadeInterface;
 using myMD.Model;
 using NUnit.Framework;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +12,9 @@ using myMD.Model.ParserModel;
 using myMDTests.Model.DependencyService;
 using myMD.Model.DependencyService;
 using myMD.ModelInterface.DataModelInterface;
+using myMDTests.Model.TransmissionModel;
+using myMDTests.Model.EntityFactory;
+using myMD.Model.DataModel;
 
 namespace myMDTests.Model.ModelFacade
 {
@@ -20,9 +22,10 @@ namespace myMDTests.Model.ModelFacade
     public class ModelFacadeTest
     {
         private IModelFacade model;
-        private IBluetooth bluetooth;
+        private BluetoothStub bluetooth;
         private EntityDatabase database;
         private IEntityFactory factory;
+        private RandomEntityFactory randFac;
         private IParserFacade parser;
         private IDependencyService service;
 
@@ -30,13 +33,14 @@ namespace myMDTests.Model.ModelFacade
         public void SetUpBefore()
         {
             DependencyServiceWrapper.Service = new TestDependencyService();
-            bluetooth = new Bluetooth();
+            bluetooth = new BluetoothStub();
             database = new EntityDatabase();
             factory = new myMD.Model.EntityFactory.EntityFactory();
             parser = new ParserFacade();
             service = new TestDependencyService();
             database.Destroy();
             database.Create();
+            randFac = new RandomEntityFactory();
         }
 
         [SetUp]
@@ -80,6 +84,23 @@ namespace myMDTests.Model.ModelFacade
             model.Update(group);
             IList<IDoctorsLetterGroup> groups = model.GetAllGroups();
             Assert.IsTrue(groups.Contains(group));
+        }
+
+        [Test]
+        public void SendTest()
+        {
+            DoctorsLetter letter = randFac.Letter();
+            model.SendLetter(letter);
+            Assert.AreEqual(letter.Filepath, bluetooth.File);
+        }
+
+        [Test]
+        public void DeleteTest()
+        {
+            IMedication med = model.CreateEmptyMedication();
+            Assert.Contains(med, model.GetAllMedications().ToList());
+            model.Delete(med);
+            Assert.IsFalse(model.GetAllMedications().Contains(med));
         }
     }
 }

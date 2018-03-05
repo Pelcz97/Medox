@@ -1,6 +1,12 @@
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Text;
+using System.Threading.Tasks;
 using myMD.ModelInterface.TransmissionModelInterface;
 using nexus.protocols.ble;
+using nexus.protocols.ble.gatt;
+using Xamarin.Forms.Internals;
 
 namespace myMD.Model.TransmissionModel
 {
@@ -9,71 +15,168 @@ namespace myMD.Model.TransmissionModel
     /// </summary>
     public class Bluetooth : IBluetooth
     {
+        public static Guid myMD_FileTransfer = new Guid("88800000-8000-8000-8000-800000000000");
+        public static Guid DataCharacteristic = new Guid("50000000-5000-5000-5000-500000000000");
+        public static Guid FileCounterCharacteristic = new Guid("40000000-4000-4000-4000-400000000000");
+        public static Guid ReadResponse = new Guid("60000000-6000-6000-6000-600000000000");
+        public static Guid myMDReadCycleCount = new Guid("70000000-7000-7000-7000-700000000000");
 
         public IBleGattServerConnection ConnectedGattServer { get; set; }
+        IDisposable ReadCycleNotify { get; set; }
+        IDisposable Notify { get; set; }
 
-        /// <summary>
-        /// Methode um nach Geräten in der Nähe zu suchen
-        /// </summary>
-        /// <returns>Liste an Geräten</returns>
-        public IList<IDevice> scanForDevices()
+        int NumberOfFiles { get; set; }
+        int NumberOfReadCycles { get; set; }
+        string CurrentFile { get; set; }
+
+        IList<String> FilesAsString;
+
+        public Bluetooth()
         {
-            throw new System.NotImplementedException();
-        }
 
-
-
-        /// <summary>
-        /// Methode um eine Datei zu senden
-        /// </summary>
-        /// <param name="filePath">Dateipfad zur Datei, die gesendet werden soll</param>
-		public void send(string filePath)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        /// <summary>
-        /// Methode um einen Sendevorgang abzubrechen
-        /// </summary>
-		public void cancelSend()
-        {
-            throw new System.NotImplementedException();
+            FilesAsString = new List<String>();
 
         }
 
-        /// <summary>
-        /// Methode um sich mit einem andern Gerät zu koppeln
-        /// </summary>
-        /// <param name="device">Das andere Gerät</param>
-        /// <param name="pin">Eine Art Passwort, um die Geräte zu verifizieren</param>
-        /// <returns></returns>
-		public bool pair(IDevice device, string pin)
-        {
-            throw new System.NotImplementedException();
-
+        public async void ReadFileZero(){
+            List<byte[]> resultList = await ReadSpecificFile(0);
+            Debug.WriteLine("Liste : " + resultList);
         }
 
-        /// <summary>
-        /// Methode um sich mit einem anderen Gerät zu verbinden
-        /// </summary>
-        /// <param name="device">Das andere Gerät</param>
-        /// <returns>true, falls die Geräte sich erfolgreich verbunden haben. Sonst false</returns>
-		public bool connect(IDevice device)
-        {
-            throw new System.NotImplementedException();
+        public async Task<List<byte[]>> ReadSpecificFile(int FileNumber){
+            List<byte[]> FileAsBytes = new List<byte[]>();
 
+            int NumberOfSections = GetReadCycles(FileNumber);
+
+            for (int i = 0; i <= NumberOfSections; i++){
+                FileAsBytes.Add(await GetFileSection(FileNumber, i));
+            }
+
+            return FileAsBytes;
         }
 
-        /// <summary>
-        /// Methode um daten zu Empfangen
-        /// </summary>
-        /// <returns></returns>
-		public string receive()
-        {
-            throw new System.NotImplementedException();
-
+        public async Task<byte[]> GetFileSection(int FileNumber, int SectionNumber){
+            try
+            {
+                byte[] request = Encoding.UTF8.GetBytes(FileNumber + "," + SectionNumber);
+                var value = await ConnectedGattServer.WriteCharacteristicValue(
+                    myMD_FileTransfer,
+                    ReadResponse,
+                    request);
+                
+                Debug.WriteLine("Empfangenes Byte[]: " + value);
+                return value;
+            }
+            catch (GattException ex)
+            {
+                Debug.WriteLine(ex.ToString());
+                return null;
+            }
         }
+
+        async Task<int> GetNumberOfFiles()
+        {
+            try
+            {
+                var value = await ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, FileCounterCharacteristic);
+                NumberOfFiles = BitConverter.ToInt32(value, 0);
+
+                Debug.WriteLine("NumberOfFiles: " + NumberOfFiles);
+                return NumberOfFiles;
+            }
+            catch (GattException ex)
+            {
+                Debug.WriteLine(ex.ToString());
+                return 0;
+            }
+        }
+
+        public int GetReadCycles(int FileNumber)
+        {
+            try
+            {
+                int number = 0;
+                ReadCycleNotify = ConnectedGattServer.NotifyCharacteristicValue(
+                        myMD_FileTransfer,
+                        myMDReadCycleCount,
+                        bytes =>
+                        {
+                            Debug.WriteLine("Serverantwort: " + BitConverter.ToString(bytes));
+                            number = BitConverter.ToInt32(bytes, 0);
+                            
+                        });
+                return number;
+                byte[] request = Encoding.UTF8.GetBytes(FileNumber.ToString());
+
+                Task.WhenAll(new Task[] {
+                    ConnectedGattServer.WriteCharacteristicValue(
+                        myMD_FileTransfer,
+                        myMDReadCycleCount,
+                        request)
+                    });
+
+            }
+            catch (GattException ex)
+            {
+                Debug.WriteLine(ex);
+                return 0;
+            }
+        }
+
+        public void ListenForNotify()
+        {
+            try
+            {
+                Notify = ConnectedGattServer.NotifyCharacteristicValue(
+                    myMD_FileTransfer,
+                    DataCharacteristic,
+                    async bytes =>
+                    {
+                        await ReadFileFromServer();
+                        await WriteValueToCharacteristic(myMD_FileTransfer, ReadResponse, new byte[] { 1 });
+                    });
+            }
+            catch (GattException ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
+        }
+
+        async Task<string> ReadCurrentSectionFromServer()
+        {
+            try
+            {
+                var str = await ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, DataCharacteristic);
+                String result = System.Text.Encoding.UTF8.GetString(str, 0, str.Length);
+                return result;
+            }
+            catch (GattException ex)
+            {
+                Debug.WriteLine(ex);
+                return null;
+            }
+        }
+
+        async Task WriteValueToCharacteristic(Guid ServiceGuid, Guid CharacteristicUuid, byte[] x)
+        {
+            try
+            {
+                var value = await ConnectedGattServer.WriteCharacteristicValue(
+                    ServiceGuid,
+                    CharacteristicUuid,
+                    x);
+            }
+            catch (GattException ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
+        }
+
+        public async Task ReadFileFromServer()
+        {
+            CurrentFile += await ReadCurrentSectionFromServer(); //Attention! can return Null, not handled yet
+        }
+
     }
-
 }
 
