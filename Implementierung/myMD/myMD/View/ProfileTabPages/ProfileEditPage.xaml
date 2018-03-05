@@ -35,7 +35,6 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Entry HorizontalOptions="FillAndExpand" 
-                                   AutomationID="ProfileLastNameEntryID"
                                 VerticalOptions="CenterAndExpand" 
                                 BackgroundColor="#191928" 
                                 Placeholder="Name" 
@@ -57,7 +56,6 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Entry HorizontalOptions="FillAndExpand" 
-                                    AutomationID="ProfileNameEntryID"                                  
                                 VerticalOptions="Center" 
                                 BackgroundColor="#191928" 
                                 Placeholder="Vorname" 
@@ -96,7 +94,6 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Entry HorizontalOptions="FillAndExpand"
-                                   AutomationID="ProfileInsuranceNumberEntryID"
                                 VerticalOptions="Center" 
                                 BackgroundColor="#191928" 
                                 Placeholder="Versicherungsnummer" 
