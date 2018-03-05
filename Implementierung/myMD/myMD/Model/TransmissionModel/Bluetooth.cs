@@ -62,6 +62,16 @@ namespace myMD.Model.TransmissionModel
             }
         }
 
+        public string ListToString(List<byte[]> list)
+        {
+            StringBuilder result = new StringBuilder();
+            foreach (byte[] file in list)
+            {
+                result.Append(Encoding.UTF8.GetString(file, 0, file.Length)));
+            }
+            return result.ToString();
+        }
+
         public async void ReadFileZero(){
             
             List<byte[]> fileAsList = await RequestAFile(14);
