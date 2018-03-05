@@ -12,6 +12,8 @@ using myMD.ModelInterface.TransmissionModelInterface;
 using nexus.protocols.ble;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text;
+using System.Diagnostics;
 
 namespace myMD.Model.ModelFacade
 {
@@ -83,8 +85,11 @@ namespace myMD.Model.ModelFacade
             }
 
             foreach (byte[] file in files){
-                var path = fileHelper.WriteLocalFileFromBytes(".hl7", file);
-                parser.ParseFileToDatabase(path, database);
+                StringBuilder result = new StringBuilder();
+                result.Append(Encoding.UTF8.GetString(file, 0, file.Count()));
+                Debug.WriteLine(result);
+                //var path = fileHelper.WriteLocalFileFromBytes(".hl7", file);
+                //parser.ParseFileToDatabase(path, database);
             }
 
         }
