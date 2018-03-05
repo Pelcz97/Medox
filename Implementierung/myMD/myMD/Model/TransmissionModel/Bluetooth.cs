@@ -20,6 +20,7 @@ namespace myMD.Model.TransmissionModel
         public static Guid FileCounterCharacteristic = new Guid("40000000-4000-4000-4000-400000000000");
         public static Guid ReadResponse = new Guid("60000000-6000-6000-6000-600000000000");
         public static Guid myMDReadCycleCount = new Guid("70000000-7000-7000-7000-700000000000");
+        public static Guid RequestAndRespond = new Guid("10000000-1000-1000-1000-100000000000");
 
         public IBleGattServerConnection ConnectedGattServer { get; set; }
         IDisposable ReadCycleNotify { get; set; }
@@ -38,10 +39,35 @@ namespace myMD.Model.TransmissionModel
 
         }
 
+        public async Task<List<byte[]>> RequestAFile(int NumberOfSlices)
+        {
+            try
+            {
+                List<byte[]> resultList = new List<byte[]>();
+
+                for (int i = 0; i < NumberOfSlices; i++)
+                {
+                    byte[] request = Encoding.UTF8.GetBytes("0," + i);
+                    var write = ConnectedGattServer.WriteCharacteristicValue(myMD_FileTransfer, RequestAndRespond, request);
+                    await Task.Delay(100);
+                    var read = ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, RequestAndRespond);
+                    resultList.Add(await read);
+                }
+                return resultList;
+            }
+            catch (GattException ex)
+            {
+                Debug.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
         public async void ReadFileZero(){
-            //List<byte[]> resultList = await ReadSpecificFile(0);
-            int i = GetReadCycles(0);
-            Debug.WriteLine("ReadCycles: " + i);
+            
+            List<byte[]> fileAsList = await RequestAFile(14);
+            foreach(byte[] file in fileAsList){
+                Debug.WriteLine(Encoding.UTF8.GetString(file, 0, file.Length));
+            }
         }
 
         public async Task<List<byte[]>> ReadSpecificFile(int FileNumber){

@@ -109,7 +109,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
         {
             var ScanResultItem = (ScanResultViewModel)item;
 
-
             var connection = await BluetoothAdapter.ConnectToDevice(
             ScanResultItem.ScanResult,
             TimeSpan.FromSeconds(15));

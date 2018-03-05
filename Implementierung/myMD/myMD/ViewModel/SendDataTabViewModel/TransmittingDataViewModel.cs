@@ -25,10 +25,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
         public TransmittingDataViewModel()
         {
             ConnectedGattServer = ModelFacade.GetConnectedServer();
-            //ModelFacade.GetFilesFromServer();
-            //GetReadCycles(0);
-            //Debug.WriteLine(t);
-            ReadOnly();
+
+            ModelFacade.GetFilesFromServer();
         }
 
        /* public async void GetReadCycles(int FileNumber)
@@ -65,39 +63,18 @@ namespace myMD.ViewModel.SendDataTabViewModel
         {
             try
             {
-                byte[] request = Encoding.UTF8.GetBytes("0,0");
-
-                /*var notifier = ConnectedGattServer.NotifyCharacteristicValue(
-                        myMD_FileTransfer,
-                        RequestAndRespond,
-                        bytes =>
-                        {
-                            Debug.WriteLine("Serverantwort: " + BitConverter.ToString(bytes));
-                        });*/
-
-                var read = ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, RequestAndRespond);
-
-                await Task.WhenAll(new Task[]
+                for (int i = 0; i <= 2; i++)
                 {
-
-                    ConnectedGattServer.WriteCharacteristicValue(
-                        myMD_FileTransfer, 
-                        RequestAndRespond, 
-                        request)
-                });
-
-                byte[] test = await read;
-                Debug.WriteLine("Test array: " + test.ToString());
+                    byte[] request = Encoding.UTF8.GetBytes("0," + i);
+                    var write = ConnectedGattServer.WriteCharacteristicValue(myMD_FileTransfer, RequestAndRespond, request);
+                    await Task.Delay(100);
+                    var read = ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, RequestAndRespond);
+                }
             }
             catch (GattException ex)
             {
                 Debug.WriteLine(ex.ToString());
             }
-        }
-
-        public async void ReadOnly(){
-            var read = await ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, RequestAndRespond);
-            Debug.WriteLine("Test array: " + read.ToString());
         }
     }
 }
