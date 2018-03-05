@@ -101,6 +101,9 @@
     <MtouchExtraArgs>-nolinkaway --linkskip=SQLiteNetExtensions --linkskip=SQLite-net --linkskip=SQLitePCLRaw.batteries_green --linkskip=SQLitePCLRaw.batteries_v2 --linkskip=SQLitePCLRaw.core --linkskip=SQLitePCLRaw.provider.sqlite3</MtouchExtraArgs>
     <BuildIpa>true</BuildIpa>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ble.net, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ble.net.1.0.1\lib\portable45-net45+win8\ble.net.dll</HintPath>
