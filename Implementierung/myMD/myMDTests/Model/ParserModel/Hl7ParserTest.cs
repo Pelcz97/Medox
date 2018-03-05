@@ -68,7 +68,7 @@ namespace myMDTests.Model.ParserModel
         public void ParseFromDocumentTest()
         {
             var parser = new TestHl7ToDatabaseParser();
-            parser.Init(Hl7FileUtility.Custom);
+            parser.Init(Hl7FileUtility.Custom(0));
             DoctorsLetter parsedLetter = parser.ParseLetter();
             Doctor parsedDoctor = parser.ParseDoctor();
             Profile parsedProfile = parser.ParseProfile();
@@ -82,7 +82,7 @@ namespace myMDTests.Model.ParserModel
             parsedLetter.Profile = Hl7FileUtility.Profile;
             parsedDoctor.Profile = Hl7FileUtility.Profile;
             Assert.AreEqual(parsedDoctor, Hl7FileUtility.Doctor);
-            Assert.AreEqual(parsedLetter, Hl7FileUtility.Letter);
+            Assert.AreEqual(parsedLetter, Hl7FileUtility.Letter[0]);
             Assert.AreEqual(parsedProfile, Hl7FileUtility.Profile);
             Assert.IsTrue(parsedMeds.SequenceEqual(Hl7FileUtility.Meds));
         }
@@ -91,9 +91,9 @@ namespace myMDTests.Model.ParserModel
         public void ParseHl7FileToDatabaseTest()
         {
             FileToDatabaseParser parser = new Hl7ToDatabaseParser();
-            parser.ParseFile(Hl7FileUtility.Custom, db);
+            parser.ParseFile(Hl7FileUtility.Custom(0), db);
             Assert.AreEqual(db.Doctor, Hl7FileUtility.Doctor);
-            Assert.AreEqual(db.Letter, Hl7FileUtility.Letter);
+            Assert.AreEqual(db.Letter, Hl7FileUtility.Letter[0]);
             Assert.AreEqual(db.Profile, Hl7FileUtility.Profile);
             Assert.IsTrue(db.Meds.SequenceEqual(Hl7FileUtility.Meds));
         }
@@ -101,7 +101,7 @@ namespace myMDTests.Model.ParserModel
         [Test]
         public void ParseLetterToFileTest()
         {
-            Assert.AreEqual(parser.ParseLetterToOriginalFile(Hl7FileUtility.Letter), Hl7FileUtility.Custom);
+            Assert.AreEqual(parser.ParseLetterToOriginalFile(Hl7FileUtility.Letter[0]), Hl7FileUtility.Custom(0));
         }
 
         [Test]

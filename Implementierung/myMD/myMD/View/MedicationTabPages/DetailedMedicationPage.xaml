@@ -28,7 +28,6 @@
                     <ViewCell>
                             
                         <Entry HorizontalOptions="FillAndExpand"
-                               AutomationID="MedicationNameID"
                                 VerticalOptions="Center" 
                                 Margin="15,0,15,0"
                                 BackgroundColor="#191928"
@@ -42,7 +41,6 @@
                     </ViewCell>
                     <ViewCell >
                         <Entry HorizontalOptions="FillAndExpand" 
-                               AutomationID="MedikationDosisID"
                                 VerticalOptions="Center" 
                                 Margin="15,0,15,0"
                                 BackgroundColor="#191928"

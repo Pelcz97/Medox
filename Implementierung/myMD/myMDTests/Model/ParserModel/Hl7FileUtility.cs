@@ -15,19 +15,21 @@ namespace myMDTests.Model.ParserModel
 {
     public static class Hl7FileUtility
     {
-        private static readonly string CUSTOM = "custom.hl7";
+        private static readonly string[] CUSTOM = { "custom.hl7", "custom2.hl7", "custom3.hl7", "custom4.hl7", "custom5.hl7", };
+
+        private static readonly int COUNT = 5;
 
         public static Doctor Doctor { get; }
 
         public static Profile Profile { get; }
 
-        public static DoctorsLetter Letter { get; }
+        public static DoctorsLetter[] Letter { get; }
 
         public static Medication[] Meds { get; }
 
         private static IFileHelper helper = new TestFileHelper();
 
-        public static string Custom => helper.GetLocalFilePath(CUSTOM);
+        public static string Custom(int i) => helper.GetLocalFilePath(CUSTOM[i]);
 
         static Hl7FileUtility()
         {
@@ -43,13 +45,47 @@ namespace myMDTests.Model.ParserModel
                 BirthDate = new DateTime(1998, 8, 6),
                 InsuranceNumber = "123456",
             };
-            Letter = new DoctorsLetter
-            {
-                Name = "Arztbesuch",
-                Date = DateTime.Today,
-                Diagnosis = "Diagnose",
-                Sensitivity = myMD.ModelInterface.DataModelInterface.Sensitivity.High,
-                Filepath = Custom,
+            Letter = new DoctorsLetter[] {
+                new DoctorsLetter
+                {
+                    Name = "Arztbesuch",
+                    Date = DateTime.Today,
+                    Diagnosis = "Diagnose",
+                    Sensitivity = myMD.ModelInterface.DataModelInterface.Sensitivity.High,
+                    Filepath = Custom(0),
+                },
+                new DoctorsLetter
+                {
+                    Name = "Armbruch",
+                    Date = DateTime.Today,
+                    Diagnosis = "Arm gebrochen",
+                    Sensitivity = myMD.ModelInterface.DataModelInterface.Sensitivity.High,
+                    Filepath = Custom(1),
+                },
+                new DoctorsLetter
+                {
+                    Name = "Routineuntersuchung",
+                    Date = DateTime.Today,
+                    Diagnosis = "Alles okay",
+                    Sensitivity = myMD.ModelInterface.DataModelInterface.Sensitivity.Low,
+                    Filepath = Custom(2),
+                },
+                new DoctorsLetter
+                {
+                    Name = "Beinbruch",
+                    Date = DateTime.Today,
+                    Diagnosis = "Bein gebrochen",
+                    Sensitivity = myMD.ModelInterface.DataModelInterface.Sensitivity.High,
+                    Filepath = Custom(3),
+                },
+                new DoctorsLetter
+                {
+                    Name = "Wundkontrolle",
+                    Date = DateTime.Today,
+                    Diagnosis = "Alles okay",
+                    Sensitivity = myMD.ModelInterface.DataModelInterface.Sensitivity.High,
+                    Filepath = Custom(4),
+                },
             };
             Meds = new Medication[]{
                 new Medication
@@ -60,7 +96,7 @@ namespace myMDTests.Model.ParserModel
                     Dosis = "500mg",
                     Frequency = 5,
                     Interval = myMD.ModelInterface.DataModelInterface.Interval.Week,
-                    Sensitivity = Letter.Sensitivity,
+                    Sensitivity = Letter[0].Sensitivity,
                 },
                 new Medication
                 {
@@ -70,7 +106,7 @@ namespace myMDTests.Model.ParserModel
                     Dosis = "4 Schachteln",
                     Frequency = 1,
                     Interval = myMD.ModelInterface.DataModelInterface.Interval.Hour,
-                    Sensitivity = Letter.Sensitivity,
+                    Sensitivity = Letter[0].Sensitivity,
                 },
                 new Medication
                 {
@@ -80,21 +116,50 @@ namespace myMDTests.Model.ParserModel
                     Dosis = "3mg",
                     Frequency = 8,
                     Interval = myMD.ModelInterface.DataModelInterface.Interval.Day,
-                    Sensitivity = Letter.Sensitivity,
+                    Sensitivity = Letter[0].Sensitivity,
+                },
+                new Medication
+                {
+                    Name = "Paracetamol",
+                    Date = DateTime.Today,
+                    EndDate = DateTime.Today.AddDays(7),
+                    Dosis = "100mg",
+                    Frequency = 5,
+                    Interval = myMD.ModelInterface.DataModelInterface.Interval.Week,
+                    Sensitivity = Letter[0].Sensitivity,
+                },
+                new Medication
+                {
+                    Name = "Diclofenac",
+                    Date = DateTime.Today,
+                    EndDate = DateTime.Today.AddDays(100),
+                    Dosis = "50mg",
+                    Frequency = 2,
+                    Interval = myMD.ModelInterface.DataModelInterface.Interval.Day,
+                    Sensitivity = Letter[0].Sensitivity,
                 },
             };
+            int i = 0;
             foreach (Medication med in Meds)
             {
-                Letter.AttachMedication(med);
+                Letter[GetLetter(i)].AttachMedication(med);
                 med.Profile = Profile;
+
             }
             Doctor.Profile = Profile;
-            Letter.Profile = Profile;
-            Letter.DatabaseDoctor = Doctor;
-            CreateDocument();
+            Letter[0].Profile = Profile;
+            Letter[0].DatabaseDoctor = Doctor;
+            CreateDocuments();
         }
 
-        public static void CreateDocument()
+        private static int GetLetter(int i)
+        {
+            if (i < 3) return 0;
+            else if (i < 4) return 1;
+            else return 3;
+        }
+
+        public static void CreateDocuments()
         {
             using (XmlIts1Formatter fmtr = new XmlIts1Formatter())
             {
@@ -107,9 +172,12 @@ namespace myMDTests.Model.ParserModel
                     // This instructs the XML ITS1 Formatter we want to use CDA datatypes
                     fmtr.GraphAides.Add(dtfmtr);
                     // Output in a nice indented manner
-                    using (XmlWriter xw = XmlWriter.Create(helper.GetLocalFilePath(CUSTOM), new XmlWriterSettings() { Indent = true }))
+                    for (int i = 0; i < COUNT; ++i)
                     {
-                        fmtr.Graph(xw, CreateCDA(Profile, Doctor, Letter));
+                        using (XmlWriter xw = XmlWriter.Create(Custom(i), new XmlWriterSettings() { Indent = true }))
+                        {
+                            fmtr.Graph(xw, CreateCDA(Profile, Doctor, Letter[i]));
+                        }
                     }
                 }
             }
