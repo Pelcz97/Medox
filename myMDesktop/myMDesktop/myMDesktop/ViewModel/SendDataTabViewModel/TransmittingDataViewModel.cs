@@ -60,7 +60,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         {
             var array = file.DataArray;
 
-            var batchSize = 1500; //534?
+            var batchSize = 500; //534?
             var batched = array
                 .Select((Value, Index) => new { Value, Index })
                 .GroupBy(p => p.Index / batchSize)
