@@ -69,7 +69,7 @@ namespace myMD.Model.ModelFacade
         public IBleGattServerConnection GetConnectedServer() => bluetooth.ConnectedGattServer;
 
         public void GetFilesFromServer(){
-            bluetooth.ReadFileZero();
+            bluetooth.ReadAllFilesOnServer();
         }
 
         /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#Activate(Model.DataModelInterface.IProfile)</see>
