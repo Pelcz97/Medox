@@ -44,8 +44,8 @@ namespace myMDesktop.UWP.Model.TransmissionModel
             CharacteristicProperties = GattCharacteristicProperties.Write |
                                         GattCharacteristicProperties.Read |
                                        GattCharacteristicProperties.Notify,
-            ReadProtectionLevel = GattProtectionLevel.Plain,
-            WriteProtectionLevel = GattProtectionLevel.Plain,
+            ReadProtectionLevel = GattProtectionLevel.AuthenticationRequired,
+            WriteProtectionLevel = GattProtectionLevel.AuthenticationRequired,
             UserDescription = "Request and Respond"
         };
 
@@ -54,15 +54,15 @@ namespace myMDesktop.UWP.Model.TransmissionModel
             CharacteristicProperties = GattCharacteristicProperties.Write |
                                         GattCharacteristicProperties.Read |
                                        GattCharacteristicProperties.Notify,
-            ReadProtectionLevel = GattProtectionLevel.Plain,
-            WriteProtectionLevel = GattProtectionLevel.Plain,
+            ReadProtectionLevel = GattProtectionLevel.AuthenticationRequired,
+            WriteProtectionLevel = GattProtectionLevel.AuthenticationRequired,
             UserDescription = "Number of Slices"
         };
 
         public static readonly GattLocalCharacteristicParameters RequestFilesChar = new GattLocalCharacteristicParameters
         {
             CharacteristicProperties = GattCharacteristicProperties.Read,
-            ReadProtectionLevel = GattProtectionLevel.Plain,
+            ReadProtectionLevel = GattProtectionLevel.AuthenticationRequired,
             UserDescription = "Number of Files"
         };
 
