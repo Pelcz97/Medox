@@ -11,7 +11,6 @@
             </Grid.RowDefinitions>
             
         <Button     Text="Arztbriefe wählen"
-                    AutomationID="TransmittingDataButtonID"
                     TextColor="White"
                     FontAttributes="Bold"
                     Grid.Row="0"
