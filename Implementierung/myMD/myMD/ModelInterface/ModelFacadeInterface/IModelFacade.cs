@@ -1,6 +1,7 @@
 using myMD.ModelInterface.DataModelInterface;
 using System.Collections.Generic;
 using nexus.protocols.ble;
+using System.Threading.Tasks;
 
 namespace myMD.ModelInterface.ModelFacadeInterface
 {
@@ -80,7 +81,7 @@ namespace myMD.ModelInterface.ModelFacadeInterface
 
         void SetConnectedServer(IBleGattServerConnection server);
         IBleGattServerConnection GetConnectedServer();
-        void GetFilesFromServer();
+        Task GetFilesFromServer();
 
     }
 }

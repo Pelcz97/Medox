@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using myMD.ModelInterface.TransmissionModelInterface;
 using nexus.protocols.ble;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace myMD.Model.ModelFacade
 {
@@ -68,9 +70,23 @@ namespace myMD.Model.ModelFacade
         public void SetConnectedServer(IBleGattServerConnection server) => bluetooth.ConnectedGattServer = server;
         public IBleGattServerConnection GetConnectedServer() => bluetooth.ConnectedGattServer;
 
-        public void GetFilesFromServer(){
-            bluetooth.ReadAllFilesOnServer();
-            //parser.ParseFileToDatabase();
+        public async Task GetFilesFromServer(){
+            List<List<byte[]>> AllFiles = await bluetooth.ReadAllFilesOnServer();
+
+            List<byte[]> files = new List<byte[]>();
+            foreach (List<byte[]> file in AllFiles){
+                var concatenated = new byte[file.Count];
+                foreach (byte[] array in file){
+                    concatenated.Concat(array);
+                }
+                files.Add(concatenated);
+            }
+
+            foreach (byte[] file in files){
+                var path = fileHelper.WriteLocalFileFromBytes(".hl7", file);
+                parser.ParseFileToDatabase(path, database);
+            }
+
         }
 
         /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#Activate(Model.DataModelInterface.IProfile)</see>

@@ -10,7 +10,8 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
-        <Button     Text="Arztbriefe wählen"
+        <Button Command="{Binding ReceiveData}"    
+                Text="Arztbriefe wählen"
                     TextColor="White"
                     FontAttributes="Bold"
                     Grid.Row="0"
