@@ -23,6 +23,11 @@ namespace myMDTests.Model.TransmissionModel
             throw new NotImplementedException();
         }
 
+        public Task<int> GetNumberOfFiles()
+        {
+            throw new NotImplementedException();
+        }
+
         public int GetReadCycles(int FileNumber)
         {
             throw new NotImplementedException();
@@ -33,12 +38,22 @@ namespace myMDTests.Model.TransmissionModel
             throw new NotImplementedException();
         }
 
+        public Task<List<List<byte[]>>> ReadAllFilesOnServer()
+        {
+            throw new NotImplementedException();
+        }
+
         public Task ReadFileFromServer()
         {
             throw new NotImplementedException();
         }
 
         public void ReadFileZero()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<byte[]>> ReadSpecificFile(int FileNumber)
         {
             throw new NotImplementedException();
         }
@@ -56,6 +71,11 @@ namespace myMDTests.Model.TransmissionModel
         public void send(string filePath)
         {
             File = filePath;
+        }
+
+        Task<int> IBluetooth.GetReadCycles(int FileNumber)
+        {
+            throw new NotImplementedException();
         }
     }
 }

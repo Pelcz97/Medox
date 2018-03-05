@@ -53,10 +53,10 @@ namespace myMDTests.Model.ParserModel
         [Test]
         public void ParseCustomFileToDatabaseTest()
         {
-            parser.ParseFileToDatabase(Hl7FileUtility.Custom, db);
+            parser.ParseFileToDatabase(Hl7FileUtility.Custom(0), db);
             Assert.AreEqual(db.Doctor, Hl7FileUtility.Doctor);
             Assert.AreEqual(db.Doctor.Profile, db.Profile);
-            Assert.AreEqual(db.Letter, Hl7FileUtility.Letter);
+            Assert.AreEqual(db.Letter, Hl7FileUtility.Letter[0]);
             Assert.AreEqual(db.Letter.Profile, db.Profile);
             Assert.IsTrue(db.Meds.SequenceEqual(Hl7FileUtility.Meds));
             Assert.IsTrue(db.Meds.SequenceEqual(db.Letter.Medication));
