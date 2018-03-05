@@ -70,6 +70,7 @@ namespace myMD.Model.ModelFacade
 
         public void GetFilesFromServer(){
             bluetooth.ReadAllFilesOnServer();
+            //parser.ParseFileToDatabase();
         }
 
         /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#Activate(Model.DataModelInterface.IProfile)</see>
