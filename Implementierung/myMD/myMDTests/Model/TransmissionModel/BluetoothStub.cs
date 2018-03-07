@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using myMD.Model.TransmissionModel;
-using myMD.ModelInterface.TransmissionModelInterface;
 using nexus.protocols.ble;
 
 namespace myMDTests.Model.TransmissionModel
@@ -18,10 +17,6 @@ namespace myMDTests.Model.TransmissionModel
             throw new NotImplementedException();
         }
 
-        public bool connect(IDevice device)
-        {
-            throw new NotImplementedException();
-        }
 
         public Task<int> GetNumberOfFiles()
         {
@@ -33,10 +28,6 @@ namespace myMDTests.Model.TransmissionModel
             throw new NotImplementedException();
         }
 
-        public bool pair(IDevice device, string pin)
-        {
-            throw new NotImplementedException();
-        }
 
         public Task<List<List<byte[]>>> ReadAllFilesOnServer()
         {
@@ -59,11 +50,6 @@ namespace myMDTests.Model.TransmissionModel
         }
 
         public string receive()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IList<IDevice> scanForDevices()
         {
             throw new NotImplementedException();
         }
