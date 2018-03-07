@@ -58,8 +58,6 @@ namespace UITest.View
             app.Tap("date_picker_day_picker");
             app.Tap("OK");
             app.Tap("Fertig");
-            Assert.AreEqual(,"February 8, 2012");
-            screen.Hallo;
         }
     }
 }
