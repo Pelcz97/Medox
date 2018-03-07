@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
-using myMD.ModelInterface.TransmissionModelInterface;
 using nexus.protocols.ble;
 using nexus.protocols.ble.gatt;
 using Xamarin.Forms.Internals;
@@ -64,7 +63,7 @@ namespace myMD.Model.TransmissionModel
             {
                 List<byte[]> FileAsBytes = new List<byte[]>();
 
-                FileAsBytes = await RequestFile(FileNumber, NumberOfSections);
+                FileAsBytes = await RequestFileSlice(FileNumber, NumberOfSections);
 
                 foreach (byte[] array in FileAsBytes)
                 {
@@ -83,7 +82,7 @@ namespace myMD.Model.TransmissionModel
         /// </summary>
         /// <returns>The AF ile.</returns>
         /// <param name="NumberOfSlices">Number of slices.</param>
-        public async Task<List<byte[]>> RequestFile(int FileNumber, int NumberOfSlices)
+        public async Task<List<byte[]>> RequestFileSlice(int FileNumber, int NumberOfSlices)
         {
             try
             {
