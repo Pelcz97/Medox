@@ -20,6 +20,31 @@ namespace myMD.ViewModel.OverviewTabViewModel
         /// <value>The doctors letters list.</value>
         public ObservableCollection<DoctorsLetterViewModel> DoctorsLettersList { get; }
 
+
+        /// <summary>
+        /// Command um ein DoctorsLetter aus der Liste zu löschen
+        /// </summary>
+        public ICommand DeleteListItem
+        {
+            get
+            {
+
+                return new Command((sender) =>
+                {
+                    DeleteListItemMethod((DetailedDoctorsLetterViewModel)sender);
+                });
+            }
+        }
+
+        /// <summary>
+        /// Methode um einen DoctorsLetter aus der Liste zu löschen
+        /// </summary>
+        /// <param name="item">DoctorsLetter der gelöscht werden soll</param>
+        public void DeleteListItemMethod(DetailedDoctorsLetterViewModel item)
+        {
+            ModelFacade.Delete(item.DoctorsLetter);
+        }
+
         /// <summary>
         /// Command, das ein Dummy Element mit den gegebenen festen Werten erstellt.
         /// Nur zu Testzwecken.
