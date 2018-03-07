@@ -6,6 +6,7 @@
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="DeviceList" 
+                AutomationId="DeviceList"
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding DeviceList}"
@@ -48,6 +49,7 @@
                                             HorizontalOptions="EndAndExpand"/>
                                             
                                             <Label Text="{Binding DeviceName}" 
+                                            AutomationId="DeviceName"
                                             TextColor="#D0001E" 
                                             FontSize="35" 
                                             FontAttributes="Bold" 

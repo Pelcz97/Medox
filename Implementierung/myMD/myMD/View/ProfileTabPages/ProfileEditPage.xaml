@@ -12,9 +12,11 @@
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="SaveChangedProfileButton" Text="Fertig" 
-        Order="Primary" Clicked="SaveChangedProfileButton_Clicked" />
+        Order="Primary" Clicked="SaveChangedProfileButton_Clicked"
+        AutomationId="SaveButton"/>
         <ToolbarItem Name="CancelButton" Text="Abbrechen" 
-        Order="Primary" Priority="-1" Clicked="CancelButton_Clicked"/>
+        Order="Primary" Priority="-1" Clicked="CancelButton_Clicked"
+        AutomationId="Cancel"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <TableView BackgroundColor="#191928" Intent="Form" 
@@ -35,6 +37,7 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Entry HorizontalOptions="FillAndExpand" 
+                                AutomationId="LastName"
                                 VerticalOptions="CenterAndExpand" 
                                 BackgroundColor="#191928" 
                                 Placeholder="Name" 
@@ -56,6 +59,7 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Entry HorizontalOptions="FillAndExpand" 
+                                AutomationId="Name"
                                 VerticalOptions="Center" 
                                 BackgroundColor="#191928" 
                                 Placeholder="Vorname" 
@@ -76,6 +80,7 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <DatePicker HorizontalOptions="StartAndExpand" 
+                                AutomationId="BirthdayPicker"
                                 VerticalOptions="Center" 
                                 IsVisible="true" 
                                 BackgroundColor="#191928" 
@@ -94,6 +99,7 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Entry HorizontalOptions="FillAndExpand"
+                                AutomationId="InsuranceNumber"
                                 VerticalOptions="Center" 
                                 BackgroundColor="#191928" 
                                 Placeholder="Versicherungsnummer" 
@@ -115,6 +121,7 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Picker x:Name="BlutgruppenPicker" 
+                                AutomationId="BloodtypePicker"
                                 Title="Blutgruppe" 
                                 HorizontalOptions="StartAndExpand" 
                                 Margin="15,0,15,0" 

@@ -12,11 +12,13 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label Text="Das Senden deiner Daten erfolgt drathlos über Bluetooth. &#10;&#10; Achte deshalb darauf, Bluetooth im Control Center zu aktivieren und in Reichweite deines Arztes zu sein."
+                   AutomationId="Hinweis"
                    Grid.Row="0"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
                    TextColor="White"/>
             <Button Clicked="SendDataButton_Clicked"
+                   AutomationId="SendDataButton"
                     Text="Arztbriefe versenden"
                     TextColor="White"
                     FontAttributes="Bold"
@@ -28,7 +30,8 @@
                     WidthRequest="400"
                     BorderRadius="10" />
             <Button Clicked="ReceiveDataButton_Clicked"
-                    Text="Arztbriefe empfangen"
+                    AutomationId="ReceiveDataButton"
+                   Text="Arztbriefe empfangen"
                     TextColor="White"
                     FontAttributes="Bold"
                     Grid.Row="1"

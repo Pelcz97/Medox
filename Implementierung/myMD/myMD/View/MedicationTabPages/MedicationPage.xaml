@@ -9,6 +9,7 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="AddMedicationButton" 
+            AutomationId="AddMedication"
             Text="Hinzufügen" 
             Order="Primary" 
             Clicked="AddMed_Clicked" />
@@ -17,6 +18,7 @@
     <ContentPage.Content>
         
             <ListView x:Name="MedicationList" 
+                      AutomationId="MedicationList"
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding MedicationsItemsList, Mode=TwoWay}"
@@ -35,7 +37,8 @@
                             HorizontalOptions="FillAndExpand"
                             BackgroundColor="#191928">
                           
-                            <Label Text="{Binding Key}" 
+                            <Label Text="{Binding Key}"
+                                   AutomationId="Key"
                                 FontSize="Medium"
                                 FontAttributes="Bold"
                                 TextColor="White" 
@@ -53,6 +56,7 @@
                             <ViewCell.ContextActions>
                                  <MenuItem  Text="Löschen" 
                                             IsDestructive="true"
+                                            AutomationId="DeleteButton"
                                             Command="{Binding Path=BindingContext.DeleteListItem, Source={x:Reference Name=MedicationPage}}"
                                             CommandParameter="{Binding .}"/>
                             </ViewCell.ContextActions>
@@ -72,7 +76,8 @@
                                             <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
 
-                                            <Label Text="{Binding MedicationStartDate, StringFormat='{0:MMMM dd, yyyy}'}" 
+                                            <Label Text="{Binding MedicationStartDate, StringFormat='{0:MMMM dd, yyyy}'}"
+                                            AutomationId="StartDate"
                                             TextColor="#4A4A4A" 
                                             FontSize="Small" 
                                             FontAttributes="Bold" 
@@ -82,6 +87,7 @@
                                             VerticalOptions="Start"/>
                                             
                                             <Label Text="{Binding MedicationDuration, StringFormat='{0:F0} Tage lang', Mode=OneWay}"
+                                            AutomationId="Duration"
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 
@@ -89,21 +95,24 @@
                                             Grid.Row="0" 
                                             HorizontalOptions="EndAndExpand"/>
                                             
-                                            <Label Text="{Binding MedicationName}" 
+                                            <Label Text="{Binding MedicationName}"
+                                            AutomationId="MedicationName"
                                             TextColor="#D0001E" 
                                             FontSize="35" 
                                             FontAttributes="Bold" 
                                             HorizontalTextAlignment="Start" 
                                             Grid.Row="1"  />
                                             
-                                            <Label Text="{Binding MedicationDosis}" 
+                                            <Label Text="{Binding MedicationDosis}"
+                                            AutomationId="Dosis"
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             FontAttributes="Bold" 
                                             HorizontalTextAlignment="Start" 
                                             Grid.Row="2" />
                                             
-                                            <Label Text="{Binding MedicationFrequency, StringFormat='{0:F0} mal täglich'}" 
+                                            <Label Text="{Binding MedicationFrequency, StringFormat='{0:F0} mal täglich'}"
+                                            AutomationId="Frequency"
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 

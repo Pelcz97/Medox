@@ -7,7 +7,8 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="EditButton" 
-        Text="Add Dummy" Order="Primary" 
+        Text="Add Dummy" Order="Primary"
+        AutomationId="EditButton"
         Command="{Binding AddDummyLetter}" Priority="-1"/>
     </ContentPage.ToolbarItems>
     

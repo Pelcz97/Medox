@@ -7,13 +7,15 @@
     Title="Neue Medikation">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="CancelButton" 
+        <ToolbarItem Name="CancelButton"
+            AutomationId="Cancel"
             Text="Abbrechen" 
             Order="Primary" 
             Priority="-1" 
             Clicked="CancelButton_Clicked" 
             IsEnabled="{Binding CancelPossible}"/>
         <ToolbarItem Name="SaveMedicationButton" 
+                     AutomationId="Save"
             Text="Fertig" 
             Order="Primary" 
             Priority="1" 
@@ -28,6 +30,7 @@
                     <ViewCell>
                             
                         <Entry HorizontalOptions="FillAndExpand"
+                               AutomationId="Name"
                                 VerticalOptions="Center" 
                                 Margin="15,0,15,0"
                                 BackgroundColor="#191928"
@@ -40,7 +43,8 @@
                         
                     </ViewCell>
                     <ViewCell >
-                        <Entry HorizontalOptions="FillAndExpand" 
+                        <Entry HorizontalOptions="FillAndExpand"
+                               AutomationId="Dosis"
                                 VerticalOptions="Center" 
                                 Margin="15,0,15,0"
                                 BackgroundColor="#191928"
@@ -62,7 +66,8 @@
                                         VerticalTextAlignment="Center" 
                                         Margin="15,0,0,0" />
 
-                                <DatePicker x:Name="StartDatePicker"  
+                                <DatePicker x:Name="StartDatePicker"
+                                            AutomationId="StartDatePicker"
                                     HorizontalOptions="EndAndExpand" 
                                     VerticalOptions="Center" 
                                     IsVisible="true" 
@@ -83,6 +88,7 @@
                                         Margin="15,0,0,0" />
 
                                 <DatePicker x:Name="EndDatePicker"
+                                            AutomationId="EndDatePicker"
                             HorizontalOptions="EndAndExpand" 
                             VerticalOptions="Center" IsVisible="true" 
                             BackgroundColor="#191928" TextColor="White"
@@ -94,6 +100,7 @@
                     <ViewCell IsEnabled="{Binding SetDatesPossible}">
                         <StackLayout Orientation="Horizontal">
                                 <Label x:Name="StepperText"
+                                       AutomationId="StepperText"
                                         TextColor="White"
                                         HorizontalTextAlignment="Start" 
                                         VerticalTextAlignment="Center" 
@@ -101,7 +108,8 @@
                                         BindingContext="{x:Reference StepperStepper}"
                                         Text="{Binding Value, StringFormat='{0:F0} mal täglich'}"/>
                                     
-                            <Stepper x:Name="StepperStepper" 
+                            <Stepper x:Name="StepperStepper"
+                                     AutomationId="Stepper"
                                     HorizontalOptions="EndAndExpand" 
                                     VerticalOptions="Center" 
                                     Margin="0,0,15,0" 

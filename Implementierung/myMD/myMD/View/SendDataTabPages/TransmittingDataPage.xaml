@@ -12,6 +12,7 @@
             
         <Button Command="{Binding ReceiveData}"    
                 Text="Arztbriefe wählen"
+                AutomationId="ReceiveData"
                     TextColor="White"
                     FontAttributes="Bold"
                     Grid.Row="0"

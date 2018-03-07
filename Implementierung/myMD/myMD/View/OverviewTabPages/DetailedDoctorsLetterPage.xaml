@@ -19,7 +19,8 @@
             <RowDefinition Height="Auto" />
           </Grid.RowDefinitions>
 
-          <Label Text="{Binding DoctorsName}" 
+          <Label Text="{Binding DoctorsName}"
+                 AutomationId="DoctorsName"
                     TextColor="#191928"
                     FontSize="Large" 
                     FontAttributes="Bold"
@@ -27,7 +28,8 @@
                     HorizontalTextAlignment="Start"
                     Grid.Row="0"/>
 
-          <Label Text="{Binding DoctorsField}" 
+          <Label Text="{Binding DoctorsField}"
+                 AutomationId="DoctorsField"
                         TextColor="#FFFFFF"
                         FontSize="45" 
                         FontAttributes="Bold"
@@ -35,7 +37,8 @@
                         HorizontalTextAlignment="Start"
                         Grid.Row="1"/>
 
-          <Button x:Name="QuitButton" 
+          <Button x:Name="QuitButton"
+                  AutomationId="QuitButton"
                         Text="✖️"
                         FontSize="Large"
                         HorizontalOptions="End" 
@@ -46,6 +49,7 @@
       </Frame>
             
       <Label Text="{Binding DoctorsLetterDate, StringFormat='{0:MMMM dd, yyyy}'}" 
+             AutomationId="DoctorsLettersDate"
                 TextColor="#FFFFFF"
                 FontSize="Medium" 
                 FontAttributes="Bold"
@@ -61,6 +65,7 @@
                 <TableSection Title="Diagnose">
                     <ViewCell>
                             <Label Text="{Binding Diagnosis}"
+                             AutomationId="Diagnosis"
                             TextColor="#FFFFFF"
                                 FontSize="Small" 
                                 FontAttributes="None"
