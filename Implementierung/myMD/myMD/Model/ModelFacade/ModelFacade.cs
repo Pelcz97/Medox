@@ -8,7 +8,6 @@ using myMD.ModelInterface.DataModelInterface;
 using myMD.ModelInterface.ModelFacadeInterface;
 using System.Collections.Generic;
 using Xamarin.Forms;
-using myMD.ModelInterface.TransmissionModelInterface;
 using nexus.protocols.ble;
 using System.Linq;
 using System.Threading.Tasks;

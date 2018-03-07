@@ -32,7 +32,6 @@
     <IOSDebugOverWiFi>false</IOSDebugOverWiFi>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <DeviceSpecificBuild>false</DeviceSpecificBuild>
-    <MtouchExtraArgs>--nolinkaway --linkskip=SQLiteNetExtensions --linkskip=SQLite-net --linkskip=SQLitePCLRaw.batteries_green --linkskip=SQLitePCLRaw.batteries_v2 --linkskip=SQLitePCLRaw.core --linkskip=SQLitePCLRaw.provider.sqlite3 </MtouchExtraArgs>
     <CodesignProvision>VS: com.pse.myMD Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
@@ -42,7 +41,7 @@
     <OutputPath>bin\iPhone\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer: Wilfried Kneis (WG53F37474)</CodesignKey>
+    <CodesignKey>iPhone Distribution: Wilfried Kneis (2DMMZ43G3J)</CodesignKey>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>Full</MtouchLink>
@@ -54,7 +53,7 @@
     <MtouchFastDev>true</MtouchFastDev>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <CodesignProvision>VS: com.pse.myMD Development</CodesignProvision>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <BuildIpa>true</BuildIpa>
     <MtouchUseLlvm>true</MtouchUseLlvm>
     <MtouchExtraArgs>-nolinkaway --linkskip=SQLiteNetExtensions --linkskip=SQLite-net --linkskip=SQLitePCLRaw.batteries_green --linkskip=SQLitePCLRaw.batteries_v2 --linkskip=SQLitePCLRaw.core --linkskip=SQLitePCLRaw.provider.sqlite3</MtouchExtraArgs>
@@ -67,7 +66,7 @@
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer: Wilfried Kneis (WG53F37474)</CodesignKey>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>Full</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
@@ -82,7 +81,7 @@
     <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer: Wilfried Kneis (WG53F37474)</CodesignKey>
+    <CodesignKey>iPhone Distribution: Wilfried Kneis (2DMMZ43G3J)</CodesignKey>
     <DeviceSpecificBuild>false</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>false</MtouchNoSymbolStrip>
@@ -94,12 +93,12 @@
     <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
-    <CodesignProvision>VS: com.pse.myMD Development</CodesignProvision>
-    <IOSDebugOverWiFi>false</IOSDebugOverWiFi>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <MtouchExtraArgs>-nolinkaway --linkskip=SQLiteNetExtensions --linkskip=SQLite-net --linkskip=SQLitePCLRaw.batteries_green --linkskip=SQLitePCLRaw.batteries_v2 --linkskip=SQLitePCLRaw.core --linkskip=SQLitePCLRaw.provider.sqlite3</MtouchExtraArgs>
     <BuildIpa>true</BuildIpa>
+    <IpaIncludeArtwork>true</IpaIncludeArtwork>
+    <MtouchExtraArgs>--nolinkaway --linkskip=SQLiteNetExtensions --linkskip=SQLite-net --linkskip=SQLitePCLRaw.batteries_green --linkskip=SQLitePCLRaw.batteries_v2 --linkskip=SQLitePCLRaw.core --linkskip=SQLitePCLRaw.provider.sqlite3</MtouchExtraArgs>
+    <CodesignProvision>pse</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
