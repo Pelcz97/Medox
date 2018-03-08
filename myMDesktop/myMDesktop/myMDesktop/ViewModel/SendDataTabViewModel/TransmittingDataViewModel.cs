@@ -36,16 +36,15 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
             StartServer();
 
             MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<FileData>>(this, "SelectedLetters", (sender, arg) => {
-                DependencyService.Get<IServer>().DoctorsLetters = arg;
 
+                SplittedFiles.Clear();
                 foreach (FileData file in arg)
                 {
                     SplittedFiles.Add(SplitFile(file));
                 }
 
+                DependencyService.Get<IServer>().SplittedFiles.Clear();
                 DependencyService.Get<IServer>().SplittedFiles = SplittedFiles;
-
-                Debug.WriteLine(DependencyService.Get<IServer>().DoctorsLetters.Count);
             });
 
 

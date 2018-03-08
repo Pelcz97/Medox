@@ -19,8 +19,7 @@ using System.Collections.ObjectModel;
 namespace myMDesktop.UWP.Model.TransmissionModel
 {
     class Server : IServer
-    {
-        
+    {   
         public static Guid myMDserviceGuid1 = new Guid("88800000-8000-8000-8000-800000000000");
 
         public static Guid RequestFile = new Guid("10000000-1000-1000-1000-100000000000");
@@ -34,8 +33,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
         private GattLocalCharacteristic RequestFilesNumberCharacteristic;
 
         private bool peripheralSupported;
-        
-        public ObservableCollection<FileData> DoctorsLetters { get; set; }
+
         public Collection<IEnumerable<byte[]>> SplittedFiles { get; set; }
 
 
@@ -69,7 +67,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
         public Server()
         {
             SplittedFiles = new Collection<IEnumerable<byte[]>>();
-            DoctorsLetters = new ObservableCollection<FileData>();
+           
             checkPeripheralSupport();
         }
 
@@ -289,7 +287,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
                 var writer = new DataWriter();
                 writer.ByteOrder = ByteOrder.LittleEndian;
                 var numberOfFiles = SplittedFiles.Count();
-                Debug.WriteLine("Anzahl Splits: " + numberOfFiles);
+                Debug.WriteLine("Dateianzahl: " + numberOfFiles);
 
                 writer.WriteInt64(numberOfFiles);
 

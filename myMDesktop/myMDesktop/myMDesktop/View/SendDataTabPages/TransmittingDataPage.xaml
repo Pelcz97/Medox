@@ -20,16 +20,6 @@
                     HeightRequest="50"
                     WidthRequest="400"
                     BorderRadius="10" />
-            <Button Text="Empfänger wählen"
-                    TextColor="White"
-                    FontAttributes="Bold"
-                    Grid.Row="1"
-                    BackgroundColor="#00B9B4"
-                    HorizontalOptions="Center"
-                    VerticalOptions="CenterAndExpand"
-                    HeightRequest="50"
-                    WidthRequest="400"
-                    BorderRadius="10" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
