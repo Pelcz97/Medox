@@ -13,10 +13,6 @@ namespace myMDesktop.Model.TransmissionModel
     {
         Task StartServer();
         Collection<IEnumerable<byte[]>> SplittedFiles { get; set; }
-        ObservableCollection<FileData> DoctorsLetters
-        {
-            get;
-            set;
-        }
+       
     }
 }
