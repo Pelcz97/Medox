@@ -8,14 +8,40 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            
-        <Button Command="{Binding ReceiveData}"    
-                Text="Arztbriefe wählen"
-                AutomationId="ReceiveData"
+
+
+            <Button Clicked="SelectDevice_Clicked"
+                    Text="Geräte suchen"
                     TextColor="White"
                     FontAttributes="Bold"
                     Grid.Row="0"
+                    BackgroundColor="#00B9B4"
+                    HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand"
+                    HeightRequest="50"
+                    WidthRequest="400"
+                    BorderRadius="10" />
+            
+            <Button Text="{Binding NumberOfFiles, StringFormat='{0:F0} Dateien verfügbar'}"
+                    Command="{Binding RefreshNumberOfFiles}"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Grid.Row="1"
+                    BackgroundColor="#00B9B4"
+                    HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand"
+                    HeightRequest="50"
+                    WidthRequest="400"
+                    BorderRadius="10" />
+            
+            <Button Command="{Binding ReceiveData}" 
+                    IsEnabled="{Binding ReadingDataPossible}"
+                    Text="{Binding NumberOfFiles, StringFormat='{0:F0} Arztbriefe laden'}"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Grid.Row="2"
                     BackgroundColor="#00B9B4"
                     HorizontalOptions="Center"
                     VerticalOptions="EndAndExpand"

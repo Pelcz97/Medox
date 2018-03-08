@@ -28,6 +28,13 @@ namespace myMD.View.SendDataTabPages
             BindingContext = vm;
         }
 
-       
+        async void SelectDevice_Clicked(object sender, System.EventArgs e)
+        {
+            var view = new NavigationPage(new SelectDevicePage());
+            view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
+            view.BarTextColor = Color.White;
+
+            await Navigation.PushModalAsync(view);
+        }
     }
 }

@@ -28,21 +28,13 @@ namespace myMD.View.SendDataTabPages
         }
 
         /// <summary>
-        /// Methode, wenn der Button "Zu sendende Daten wählen" geklickt wird.
+        /// Methode, wenn der Button "Daten empfangen" geklickt wird.
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="e">E.</param>
-        void SendDataButton_Clicked(object sender, EventArgs e)
-        {
-            var page = new SelectDevicePage();
-
-            NavigationPage.SetBackButtonTitle(page, "Senden");
-            Navigation.PushAsync(page);
-        }
-
         void ReceiveDataButton_Clicked(object sender, EventArgs e)
         {
-            var page = new SelectDevicePage();
+            var page = new TransmittingDataPage();
 
             NavigationPage.SetBackButtonTitle(page, "Senden");
             Navigation.PushAsync(page);

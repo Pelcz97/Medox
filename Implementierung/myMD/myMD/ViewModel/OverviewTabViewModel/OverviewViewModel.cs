@@ -5,6 +5,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using myMD.Model.DataModel;
 using myMD.ModelInterface.DataModelInterface;
+using MvvmHelpers;
+using System.Linq;
 
 namespace myMD.ViewModel.OverviewTabViewModel
 {
@@ -20,6 +22,15 @@ namespace myMD.ViewModel.OverviewTabViewModel
         /// <value>The doctors letters list.</value>
         public ObservableCollection<DoctorsLetterViewModel> DoctorsLettersList { get; }
 
+        public ObservableCollection<Grouping<string, DoctorsLetterViewModel>> DoctorsLettersItemsList { get; set; }
+
+        /// <summary>
+        /// Der Schlüssel der MedicationsItemsList, anhand dessen der 
+        /// GroupHeader festgelegt wird
+        /// </summary>
+        /// <value>The key.</value>
+        public string Key { get => DoctorsLettersItemsList.FirstOrDefault().Key; }
+
 
         /// <summary>
         /// Command um ein DoctorsLetter aus der Liste zu löschen
@@ -31,99 +42,10 @@ namespace myMD.ViewModel.OverviewTabViewModel
 
                 return new Command((sender) =>
                 {
-                    DeleteListItemMethod((DetailedDoctorsLetterViewModel)sender);
+                    DeleteListItemMethod((DoctorsLetterViewModel)sender);
                 });
             }
         }
-
-        /// <summary>
-        /// Methode um einen DoctorsLetter aus der Liste zu löschen
-        /// </summary>
-        /// <param name="item">DoctorsLetter der gelöscht werden soll</param>
-        public void DeleteListItemMethod(DetailedDoctorsLetterViewModel item)
-        {
-            ModelFacade.Delete(item.DoctorsLetter);
-        }
-
-        /// <summary>
-        /// Command, das ein Dummy Element mit den gegebenen festen Werten erstellt.
-        /// Nur zu Testzwecken.
-        /// </summary>
-        /// <value>The add dummy letter.</value>
-        public ICommand AddDummyLetter { 
-            get { 
-                return new Command(() => {
-                    var dummyLetter = new DoctorsLetter();
-                    var dummyDoc = new Doctor();
-                    dummyDoc.Name = "Dr. Harald Helfgott";
-                    dummyDoc.Field = "Podologe";
-                    dummyLetter.Date = DateTime.Now.Date;
-                    dummyLetter.DatabaseDoctor = dummyDoc;
-                    dummyLetter.Diagnosis = "Lorem ipsum dolor sit amet, consetetur " +
-                        "sadipscing elitr, sed diam nonumy eirmod tempor invidunt " +
-                        "ut labore et dolore magna aliquyam erat, sed diam voluptua. " +
-                        "At vero eos et accusam et justo duo dolores et ea rebum. " +
-                        "Stet clita kasd gubergren, no sea takimata sanctus est Lorem " +
-                        "ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur " +
-                        "sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut " +
-                        "labore et dolore magna aliquyam erat, sed diam voluptua. " +
-                        "At vero eos et accusam et justo duo dolores et ea rebum. " +
-                        "Stet clita kasd gubergren, no sea takimata sanctus est Lorem " +
-                        "ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur " +
-                        "sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut " +
-                        "labore et dolore magna aliquyam erat, sed diam voluptua. " +
-                        "At vero eos et accusam et justo duo dolores et ea rebum. " +
-                        "Stet clita kasd gubergren, no sea takimata sanctus est " +
-                        "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur " +
-                        "sadipscing elitr, sed diam nonumy eirmod tempor invidunt " +
-                        "ut labore et dolore magna aliquyam erat, sed diam voluptua. " +
-                        "At vero eos et accusam et justo duo dolores et ea rebum. " +
-                        "Stet clita kasd gubergren, no sea takimata sanctus est Lorem " +
-                        "ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur " +
-                        "sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut " +
-                        "labore et dolore magna aliquyam erat, sed diam voluptua. " +
-                        "At vero eos et accusam et justo duo dolores et ea rebum. " +
-                        "Stet clita kasd gubergren, no sea takimata sanctus est Lorem " +
-                        "ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur " +
-                        "sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut " +
-                        "labore et dolore magna aliquyam erat, sed diam voluptua. " +
-                        "At vero eos et accusam et justo duo dolores et ea rebum. " +
-                        "Stet clita kasd gubergren, no sea takimata sanctus est " +
-                        "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur " +
-                        "sadipscing elitr, sed diam nonumy eirmod tempor invidunt " +
-                        "ut labore et dolore magna aliquyam erat, sed diam voluptua. " +
-                        "At vero eos et accusam et justo duo dolores et ea rebum. " +
-                        "Stet clita kasd gubergren, no sea takimata sanctus est Lorem " +
-                        "ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur " +
-                        "sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut " +
-                        "labore et dolore magna aliquyam erat, sed diam voluptua. " +
-                        "At vero eos et accusam et justo duo dolores et ea rebum. " +
-                        "Stet clita kasd gubergren, no sea takimata sanctus est Lorem " +
-                        "ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur " +
-                        "sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut " +
-                        "labore et dolore magna aliquyam erat, sed diam voluptua. " +
-                        "At vero eos et accusam et justo duo dolores et ea rebum. " +
-                        "Stet clita kasd gubergren, no sea takimata sanctus est " +
-                        "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur " +
-                        "sadipscing elitr, sed diam nonumy eirmod tempor invidunt " +
-                        "ut labore et dolore magna aliquyam erat, sed diam voluptua. " +
-                        "At vero eos et accusam et justo duo dolores et ea rebum. " +
-                        "Stet clita kasd gubergren, no sea takimata sanctus est Lorem " +
-                        "ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur " +
-                        "sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut " +
-                        "labore et dolore magna aliquyam erat, sed diam voluptua. " +
-                        "At vero eos et accusam et justo duo dolores et ea rebum. " +
-                        "Stet clita kasd gubergren, no sea takimata sanctus est Lorem " +
-                        "ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur " +
-                        "sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut " +
-                        "labore et dolore magna aliquyam erat, sed diam voluptua. " +
-                        "At vero eos et accusam et justo duo dolores et ea rebum. " +
-                        "Stet clita kasd gubergren, no sea takimata sanctus est " +
-                        "Lorem ipsum dolor sit amet.";
-                    
-                    var dummyItem = new DoctorsLetterViewModel(dummyLetter);
-                    DoctorsLettersList.Add(dummyItem); 
-                }); } }
 
         /// <summary>
         /// Erzeugt ein OverviewViewModel. Zunächst wird die DoctorsLettersList als neue leere Liste initialisiert, 
@@ -131,10 +53,48 @@ namespace myMD.ViewModel.OverviewTabViewModel
         /// </summary>
         public OverviewViewModel()
         {
-            this.DoctorsLettersList = new ObservableCollection<DoctorsLetterViewModel>();
+            DoctorsLettersList = new ObservableCollection<DoctorsLetterViewModel>();
+            DoctorsLettersItemsList = new ObservableCollection<Grouping<string, DoctorsLetterViewModel>>();
+            GroupList();
+
+
+        }
+
+        public void GroupList()
+        {
+
             foreach (IDoctorsLetter letter in ModelFacade.GetAllDoctorsLetters())
             {
                 DoctorsLettersList.Add(new DoctorsLetterViewModel(letter));
+            }
+
+            var sorted = from letterItem in DoctorsLettersList
+                orderby letterItem.DoctorsLetter.Date.Year descending, 
+                        letterItem.DoctorsLetter.Date.Month descending, 
+                        letterItem.DoctorsLetter.Date.Day descending
+            group letterItem by letterItem.DoctorsLetter.Date.ToString("Y") into letterItemGroup
+            select new Grouping<string, DoctorsLetterViewModel>(letterItemGroup.Key, letterItemGroup);
+
+            DoctorsLettersItemsList = new ObservableCollection<Grouping<string, DoctorsLetterViewModel>>(sorted);
+            OnPropertyChanged("DoctorsLettersItemsList");
+        }
+
+        public void DeleteListItemMethod(DoctorsLetterViewModel item)
+        {
+            ModelFacade.Delete(item.DoctorsLetter);
+            foreach (Grouping<string, DoctorsLetterViewModel> groups in DoctorsLettersItemsList.ToList())
+            {
+                foreach (var obj in groups.ToList())
+                {
+                    if (obj == item)
+                    {
+                        groups.Remove(obj);
+                        if (groups.Count == 0)
+                        {
+                            DoctorsLettersItemsList.Remove(groups);
+                        }
+                    }
+                }
             }
         }
     }

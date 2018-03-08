@@ -82,6 +82,7 @@ namespace myMD.ModelInterface.ModelFacadeInterface
         void SetConnectedServer(IBleGattServerConnection server);
         IBleGattServerConnection GetConnectedServer();
         Task GetFilesFromServer();
+        Task<int> NumberOfFilesOnServer();
 
     }
 }

@@ -4,20 +4,13 @@
     x:Class="myMD.View.OverviewTabPages.OverviewPage"
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
     Title="Übersicht">
-
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Name="EditButton" 
-        Text="Add Dummy" Order="Primary"
-        AutomationId="EditButton"
-        Command="{Binding AddDummyLetter}" Priority="-1"/>
-    </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
             <ListView x:Name="DoctorsLettersList" 
                 AutomationId="DoctorsLetterList"
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
-                ItemsSource="{Binding DoctorsLettersList}" 
+                ItemsSource="{Binding DoctorsLettersItemsList}" 
                 SeparatorVisibility="None" 
                 ItemSelected="DoctorsLetter_Clicked"
                 CachingStrategy="RecycleElement">

@@ -48,10 +48,6 @@
       <Project>{10a2ae91-c660-4c80-9387-bca14960cc9a}</Project>
       <Name>myMD.Droid</Name>
     </ProjectReference>
-    <ProjectReference Include="..\iOS\myMD.iOS.csproj">
-      <Project>{2b8fb966-6953-46a5-87d5-4c0cee8d58bd}</Project>
-      <Name>myMD.iOS</Name>
-    </ProjectReference>
     <ProjectReference Include="..\myMD\myMD.csproj">
       <Project>{e9779bca-0732-45a1-b1d0-90e723458840}</Project>
       <Name>myMD</Name>
