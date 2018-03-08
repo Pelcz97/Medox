@@ -7,12 +7,14 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="EditButton" 
-        Text="Add Dummy" Order="Primary" 
+        Text="Add Dummy" Order="Primary"
+        AutomationId="EditButton"
         Command="{Binding AddDummyLetter}" Priority="-1"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
             <ListView x:Name="DoctorsLettersList" 
+                AutomationId="DoctorsLetterList"
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding DoctorsLettersList}" 
@@ -25,7 +27,10 @@
                         <ViewCell>
                             <ViewCell.ContextActions>
                                  <MenuItem  Text="Löschen" 
-                                            IsDestructive="True" />
+                                            AutomationId="Löschen"
+                                            IsDestructive="True"
+                                            Command="{Binding Path=BindingContext.DeleteListItem, Source={x:Reference Name=DoctorsLettersList}}"
+                                            CommandParameter="{Binding .}"/>
                             </ViewCell.ContextActions>
                             <ViewCell.View>
                                 <Frame x:Name="WhiteFrame" CornerRadius="15" 
@@ -33,7 +38,6 @@
                                         Margin="10,3,10,3"
                                         HorizontalOptions="FillAndExpand" 
                                         VerticalOptions="FillAndExpand" 
-
                                         HasShadow="true">
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -45,7 +49,8 @@
                                                 <ColumnDefinition Width="Auto"/> 
                                         </Grid.ColumnDefinitions>
 
-                                            <Label Text="{Binding DoctorsName}" 
+                                            <Label Text="{Binding DoctorsName}"
+                                            AutomationId="DoctorsName"
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             FontAttributes="Bold"
@@ -55,6 +60,7 @@
                                             HorizontalTextAlignment="Start" />
                                         
                                             <Label Text="{Binding DoctorsLetterDate, StringFormat='{0:MMMM dd, yyyy}'}" 
+                                            AutomationId="DoctorsLetterDate"
                                             TextColor="#4A4A4A" 
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 
@@ -64,6 +70,7 @@
                                             HorizontalOptions="EndAndExpand"/>
                                         
                                             <Label Text="{Binding DoctorsField}" 
+                                            AutomationId="DoctorsField"
                                             TextColor="#00B9B4" 
                                             FontSize="35" 
                                             FontAttributes="Bold" 

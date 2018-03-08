@@ -6,12 +6,15 @@
     Title="Arztbriefe wählen">
     <ContentPage.ToolbarItems>
             <ToolbarItem Name="CancelSelectDoctorsLetters" Text="Abbrechen" 
+                   AutomationId="CancelButton"
                         Order="Primary" Priority="-1" Clicked="CancelSelectDoctorsLetters_Clicked"/>
         <ToolbarItem Name="ConfirmSelectDoctorsLetters" Text="Fertig" 
+                   AutomationId="CornfimButton"
                         Order="Primary" Priority="1" Clicked="ConfirmSelectDoctorsLetters_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
             <ListView x:Name="DoctorsLettersSendList" 
+                   AutomationId="SendList"
                 HasUnevenRows="true" 
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding DoctorsLettersSendList}" 
@@ -41,6 +44,7 @@
                                         </Grid.ColumnDefinitions>
 
                                             <Label Text="{Binding DoctorsName}" 
+                                            AutomationId="DoctorsName"
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             FontAttributes="Bold"
@@ -50,6 +54,7 @@
                                             HorizontalTextAlignment="Start" />
                                         
                                             <Label Text="{Binding DoctorsLetterDate, StringFormat='{0:MMMM dd, yyyy}'}" 
+                                            AutomationId="Date"
                                             TextColor="#4A4A4A" 
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 
@@ -59,6 +64,7 @@
                                             HorizontalOptions="EndAndExpand"/>
                                         
                                             <Label Text="{Binding DoctorsField}" 
+                                            AutomationId="Field"
                                             TextColor="#00B9B4" 
                                             FontSize="35" 
                                             FontAttributes="Bold" 

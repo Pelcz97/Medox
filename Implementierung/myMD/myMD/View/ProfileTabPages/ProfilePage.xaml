@@ -7,7 +7,7 @@
     <ContentPage.ToolbarItems>
         <!--TODO: clicked event hinzufügen, um Bearbeitung zu toggeln
     EntryElemente DataBinden-->
-        <ToolbarItem Name="EditButton" Text="Bearbeiten" Order="Primary" Clicked="EditProfileButton" />
+        <ToolbarItem Name="EditButton" Text="Bearbeiten" Order="Primary" Clicked="EditProfileButton" AutomationId="EditButton" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <TableView BackgroundColor="#191928" Intent="Form" 
@@ -28,6 +28,7 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Label Text="{Binding LastName, Mode=TwoWay}"
+                                AutomationId="LastName"
                                 HorizontalOptions="StartAndExpand" 
                                 VerticalOptions="Center" 
                                 BackgroundColor="#191928" 
@@ -47,6 +48,7 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                           <Label Text="{Binding Name}"
+                                AutomationId="Name"
                               HorizontalOptions="StartAndExpand"
                               VerticalOptions="Center"
                               BackgroundColor="#191928"
@@ -66,6 +68,7 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                           <Label Text="{Binding Birthdate, StringFormat='{0:MMMM dd, yyyy}'}"
+                                AutomationId="Birthday"
                                  HorizontalOptions="StartAndExpand"
                                  VerticalOptions="Center"
                                  BackgroundColor="#191928"
@@ -85,6 +88,7 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                           <Label Text="{Binding InsuranceNumber}"
+                                AutomationId="InsuranceNumber"
                                  HorizontalOptions="StartAndExpand"
                                  VerticalOptions="Center"
                                  BackgroundColor="#191928"
@@ -104,6 +108,7 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                           <Label Text="{Binding BloodTypeName}"
+                                AutomationId="Bloodtype"
                                  HorizontalOptions="StartAndExpand"
                                  VerticalOptions="Center"
                                  BackgroundColor="#191928"

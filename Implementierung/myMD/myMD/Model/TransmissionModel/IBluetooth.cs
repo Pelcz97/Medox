@@ -1,4 +1,3 @@
-using myMD.ModelInterface.TransmissionModelInterface;
 using System.Collections.Generic;
 using nexus.protocols.ble;
 using System.Threading.Tasks;
