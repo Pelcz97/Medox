@@ -37,7 +37,7 @@ namespace myMD.View.SendDataTabPages
             var page = new TransmittingDataPage();
 
             NavigationPage.SetBackButtonTitle(page, "Senden");
-            Navigation.PushModalAsync(page);
+            Navigation.PushAsync(page);
         }
     }
 }

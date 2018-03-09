@@ -49,8 +49,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
             } else {
                 BluetoothAdapter.CurrentState.Subscribe(state =>
                 {
-                    
-                    Debug.WriteLine("New state, " + state);
                     if (state == EnabledDisabledState.Enabled)
                     {
                         StartScan();
@@ -61,13 +59,9 @@ namespace myMD.ViewModel.SendDataTabViewModel
 
         /// <summary>
         /// Methode um einen Scan zu starten.
-        /// Dazu wird erst überprüft, ob gerade gescannt wird. Ist dies der Fall wird der aktive Scan abgebrochen.
-        /// Dann wird geprüft ob Bluetooth für das Gerät verfügbar ist.
-        /// Danach wird der Scan gestartet und die gefundenen Geräte in die Liste <see cref="T:myMD.ViewModel.SendDataTabViewModel.SelectDeviceLetterViewModel.DeviceList"/> gespeichert.
         /// </summary>
         public async void StartScan()
         {
-            DeviceList.Clear();
 
             await BluetoothAdapter.ScanForBroadcasts(new ScanFilter()
                     .AddAdvertisedService(myMD_FileTransfer), peripheral =>
@@ -116,7 +110,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 {
                     if (state == ConnectionState.Disconnected)
                     {
-                        ConfirmingDevicePossible = false;
+                        ConnectedServer = null;
                         OnPropertyChanged("ConfirmingDevicePossible");
                         Debug.WriteLine("Connection Lost");
                     }
