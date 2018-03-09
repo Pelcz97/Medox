@@ -57,10 +57,29 @@ namespace myMDesktop.View.SendDataTabPages
 
                 if (filedata.FileName.EndsWith(".hl7"))
                 {
-                    
-                    vm.DoctorsLetters.Add(filedata);
-                    Debug.WriteLine(System.Text.Encoding.Default.GetString(filedata.DataArray));
+                    if (vm.DoctorsLetters.Count != 0)
+                    {
+
+                        foreach (FileData letter in vm.DoctorsLetters)
+                        {
+                            if (letter.FileName != filedata.FileName)
+                            {
+                                vm.DoctorsLetters.Add(filedata);
+                                Debug.WriteLine(System.Text.Encoding.Default.GetString(filedata.DataArray));
+                            }
+                            else
+                            {
+                                await DisplayAlert("InputError", "Diese Datei wurde bereits ausgewählt", "OK");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        vm.DoctorsLetters.Add(filedata);
+                        Debug.WriteLine(System.Text.Encoding.Default.GetString(filedata.DataArray));
+                    }
                 }
+                
                 else
                 {
                     await DisplayAlert("Input Error", "Sie dürfen nur .hl7 Dateien auswählen", "OK");
