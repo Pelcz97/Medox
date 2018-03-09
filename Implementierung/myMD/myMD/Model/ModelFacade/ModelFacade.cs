@@ -95,8 +95,8 @@ namespace myMD.Model.ModelFacade
                 StringBuilder result = new StringBuilder();
                 result.Append(Encoding.UTF8.GetString(file, 0, file.Count()));
                 Debug.WriteLine(result);
-                var path = fileHelper.WriteLocalFileFromBytes(".hl7", file);
-                parser.ParseFileToDatabase(path, database);
+                //var path = fileHelper.WriteLocalFileFromBytes(".hl7", file);
+                //parser.ParseFileToDatabase(path, database);
             }
         }
 
