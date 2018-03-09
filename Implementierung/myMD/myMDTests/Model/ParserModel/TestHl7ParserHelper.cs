@@ -13,7 +13,7 @@ namespace myMDTests.Model.ParserModel
     /// Implementierung der IHl7ParserHelper Schnittstelle für Android-Anwendungen
     /// </summary>
     /// <see>myMD.Model.ParserModel.IParserHelper</see>
-    public class TestHl7ParserHelper : IHl7ParserHelper
+    public class TestHl7ParserHelper
     {
         /// <summary>
         /// Das Hinzufügen der ClinicalDocumentDatatypeFormatter Instanz zu dem Formatierer erfordert die ICloneable Schnittstelle, die ClinicalDocumentDatatypeFormatter implementiert.

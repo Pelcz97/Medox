@@ -5,8 +5,8 @@ namespace myMD.ModelInterface.DataModelInterface
     /// </summary>
 	public enum Sensitivity
     {
-        Low,
-        Normal,
-        High
+        Low = 'N',
+        Normal = 'R',
+        High = 'V'
     }
 }

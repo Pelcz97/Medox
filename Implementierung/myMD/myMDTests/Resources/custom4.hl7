@@ -2,7 +2,7 @@
 <ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" classCode="DOCCLIN" moodCode="EVN" xmlns="urn:hl7-org:v3">
   <realmCode code="UV" />
   <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
-  <effectiveTime value="20180307000000.000+0100" />
+  <effectiveTime value="20180309000000.000+0100" />
   <confidentialityCode code="V" codeSystem="2.16.840.1.113883.5.25" displayName="very restricted" />
   <languageCode code="en-US" />
   <recordTarget typeCode="RCT" contextControlCode="OP">
@@ -13,12 +13,12 @@
           <family>Karcher</family>
           <given>Philipp</given>
         </name>
-        <birthTime value="19980806" />
+        <birthTime value="19980806000000.000+0200" />
       </patient>
     </patientRole>
   </recordTarget>
   <author typeCode="AUT" contextControlCode="AP">
-    <time value="20180307000000.000+0100" />
+    <time value="20180309000000.000+0100" />
     <assignedAuthor classCode="ASSIGNED">
       <id root="1.2.3.4.5.6.1" extension="" />
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
@@ -35,9 +35,66 @@
     <structuredBody classCode="DOCBODY" moodCode="EVN">
       <component typeCode="COMP" contextConductionInd="true">
         <section classCode="DOCSECT" moodCode="EVN">
-          <title language="de-DE">Beinbruch</title>
-          <text representation="TXT">Bein gebrochen</text>
+          <title language="de-DE">Arztbesuch</title>
+          <text representation="TXT">Diagnose</text>
           <confidentialityCode code="V" codeSystem="2.16.840.1.113883.5.25" displayName="very restricted" />
+          <entry typeCode="DRIV" contextConductionInd="true">
+            <substanceAdministration classCode="SBADM">
+              <effectiveTime xsi:type="PIVL_TS">
+                <phase>
+                  <low value="20180309000000.000+0100" />
+                  <high value="20180323000000.000+0100" />
+                </phase>
+                <period unit="w" value="0.2" />
+              </effectiveTime>
+              <doseQuantity unit="mg" value="500" />
+              <consumable typeCode="CSM">
+                <manufacturedProduct classCode="">
+                  <manufacturedLabeledDrug classCode="MMAT">
+                    <name use="L">Heroin</name>
+                  </manufacturedLabeledDrug>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode="DRIV" contextConductionInd="true">
+            <substanceAdministration classCode="SBADM">
+              <effectiveTime xsi:type="PIVL_TS">
+                <phase>
+                  <low value="20180309000000.000+0100" />
+                  <high value="20180316000000.000+0100" />
+                </phase>
+                <period unit="h" value="1" />
+              </effectiveTime>
+              <doseQuantity unit=" Schachteln" value="4" />
+              <consumable typeCode="CSM">
+                <manufacturedProduct classCode="">
+                  <manufacturedLabeledDrug classCode="MMAT">
+                    <name use="L">Aspirin</name>
+                  </manufacturedLabeledDrug>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode="DRIV" contextConductionInd="true">
+            <substanceAdministration classCode="SBADM">
+              <effectiveTime xsi:type="PIVL_TS">
+                <phase>
+                  <low value="20180309000000.000+0100" />
+                  <high value="20180617000000.000+0200" />
+                </phase>
+                <period unit="d" value="0.125" />
+              </effectiveTime>
+              <doseQuantity unit="mg" value="3" />
+              <consumable typeCode="CSM">
+                <manufacturedProduct classCode="">
+                  <manufacturedLabeledDrug classCode="MMAT">
+                    <name use="L">Ibuprofen</name>
+                  </manufacturedLabeledDrug>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
         </section>
       </component>
     </structuredBody>
