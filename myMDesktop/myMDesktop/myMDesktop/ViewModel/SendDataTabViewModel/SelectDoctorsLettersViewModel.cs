@@ -30,5 +30,6 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
             MessagingCenter.Send(this, "SelectedLetters", DoctorsLetters);
             MessagingCenter.Unsubscribe<SelectDoctorsLettersViewModel>(this, "SelectedLetters");
         }
+
     }
 }

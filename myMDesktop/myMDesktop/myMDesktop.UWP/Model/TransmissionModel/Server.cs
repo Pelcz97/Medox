@@ -219,7 +219,7 @@ namespace myMDesktop.UWP.Model.TransmissionModel
                 var writer = new DataWriter();
                 writer.ByteOrder = ByteOrder.LittleEndian;
                 var array = SplittedFiles.ElementAt(RequestFileIndex).ElementAt(RequestSplitIndex);
-                Debug.WriteLine("Array inhalt: " + BitConverter.ToString(array));
+                //Debug.WriteLine("Array inhalt: " + BitConverter.ToString(array));
                 writer.WriteBytes(array);
                 request.RespondWithValue(writer.DetachBuffer());
             }

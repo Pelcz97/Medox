@@ -44,7 +44,7 @@
                     </ViewCell>
                     <ViewCell >
                         <Entry HorizontalOptions="FillAndExpand"
-                               AutomationId="Dosis"
+                               AutomationId="EditDosis"
                                 VerticalOptions="Center" 
                                 Margin="15,0,15,0"
                                 BackgroundColor="#191928"

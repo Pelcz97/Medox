@@ -28,7 +28,7 @@ namespace UITest
             string dir = fi.Directory.Parent.Parent.Parent.FullName;
 
             // PathToAPK is a property or an instance variable in the test class
-            string PathToAPK = Path.Combine(dir, "Droid", "bin", "Release", "myMD.apk");
+            string PathToAPK = Path.Combine(dir, "Droid", "bin", "Release", "com.team3.myMD.apk");
             app = ConfigureApp.Android.ApkFile(PathToAPK).StartApp();
         }
 
@@ -38,11 +38,6 @@ namespace UITest
             app.Screenshot("First screen.");
         }
 
-        [Test]
-        public void Repl()
-        {
-            app.Repl();
-        }
     }
 }
 
