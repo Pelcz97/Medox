@@ -54,6 +54,10 @@ namespace myMDesktop.View.SendDataTabPages
             {
 
                 FileData filedata = await CrossFilePicker.Current.PickFile();
+                if (filedata == null)
+                {
+                    return;
+                }
                 InsertFiletoVM(filedata);
 
             }
@@ -88,7 +92,7 @@ namespace myMDesktop.View.SendDataTabPages
                 else
                 {
                     vm.DoctorsLetters.Add(filedata);
-                    Debug.WriteLine(System.Text.Encoding.Default.GetString(filedata.DataArray));
+                    Debug.WriteLine(System.Text.Encoding.UTF8.GetString(filedata.DataArray));
                 }
             }
 
