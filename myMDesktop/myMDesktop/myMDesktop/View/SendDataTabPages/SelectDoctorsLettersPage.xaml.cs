@@ -54,36 +54,7 @@ namespace myMDesktop.View.SendDataTabPages
             {
 
                 FileData filedata = await CrossFilePicker.Current.PickFile();
-
-                if (filedata.FileName.EndsWith(".hl7"))
-                {
-                    if (vm.DoctorsLetters.Count != 0)
-                    {
-
-                        foreach (FileData letter in vm.DoctorsLetters)
-                        {
-                            if (letter.FileName != filedata.FileName)
-                            {
-                                vm.DoctorsLetters.Add(filedata);
-                                Debug.WriteLine(System.Text.Encoding.Default.GetString(filedata.DataArray));
-                            }
-                            else
-                            {
-                                await DisplayAlert("InputError", "Diese Datei wurde bereits ausgewählt", "OK");
-                            }
-                        }
-                    }
-                    else
-                    {
-                        vm.DoctorsLetters.Add(filedata);
-                        Debug.WriteLine(System.Text.Encoding.Default.GetString(filedata.DataArray));
-                    }
-                }
-                
-                else
-                {
-                    await DisplayAlert("Input Error", "Sie dürfen nur .hl7 Dateien auswählen", "OK");
-                }
+                InsertFiletoVM(filedata);
 
             }
             catch (Exception ex)
@@ -92,6 +63,45 @@ namespace myMDesktop.View.SendDataTabPages
             }
         }
 
+        public async void InsertFiletoVM(FileData filedata)
+        {
+            bool worked = false;
+            if (filedata.FileName.EndsWith(".hl7"))
+            {
+                if (vm.DoctorsLetters.Count != 0)
+                {
 
+                    foreach (FileData letter in vm.DoctorsLetters)
+                    {
+                        if (letter.FileName != filedata.FileName)
+                        {
+                            worked = true;
+                        }
+                        else
+                        {
+                            await DisplayAlert("InputError", "Diese Datei wurde bereits ausgewählt", "OK");
+                            worked = false;
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    vm.DoctorsLetters.Add(filedata);
+                    Debug.WriteLine(System.Text.Encoding.Default.GetString(filedata.DataArray));
+                }
+            }
+
+            else
+            {
+                await DisplayAlert("Input Error", "Sie dürfen nur .hl7 Dateien auswählen", "OK");
+            }
+
+            if (worked)
+            {
+                vm.DoctorsLetters.Add(filedata);
+                Debug.WriteLine(System.Text.Encoding.Default.GetString(filedata.DataArray));
+            }
+        }
     }
 }
