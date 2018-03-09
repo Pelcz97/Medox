@@ -42,8 +42,7 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
                 {
                     SplittedFiles.Add(SplitFile(file));
                 }
-
-                DependencyService.Get<IServer>().SplittedFiles.Clear();
+                
                 DependencyService.Get<IServer>().SplittedFiles = SplittedFiles;
             });
 
@@ -65,7 +64,6 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
                 .GroupBy(p => p.Index / batchSize)
                 .Select(g => g.Select(p => p.Value).ToArray());
 
-            Debug.WriteLine("Batch size " + batched.Count());
             return batched;
         }
     }

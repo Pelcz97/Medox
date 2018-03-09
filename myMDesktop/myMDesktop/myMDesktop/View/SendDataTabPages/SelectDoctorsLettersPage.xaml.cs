@@ -28,6 +28,7 @@ namespace myMDesktop.View.SendDataTabPages
             InitializeComponent();
             vm = new SelectDoctorsLettersViewModel();
             BindingContext = vm;
+            vm.DoctorsLetters.Clear();
         }
 
         /// <summary>
@@ -53,21 +54,12 @@ namespace myMDesktop.View.SendDataTabPages
             {
 
                 FileData filedata = await CrossFilePicker.Current.PickFile();
-                // the dataarray of the file will be found in filedata.DataArray 
-                // file name will be found in filedata.FileName;
-                //etc etc.
 
                 if (filedata.FileName.EndsWith(".hl7"))
                 {
-                    //if (!vm.DoctorsLetters.Contains(filedata)
-                    //{
-                        vm.DoctorsLetters.Add(filedata);
+                    
+                    vm.DoctorsLetters.Add(filedata);
                     Debug.WriteLine(System.Text.Encoding.Default.GetString(filedata.DataArray));
-                    //}
-                    //else
-                    //{
-                      //  await DisplayAlert("Input Error", "Diese Datei wurde schon ausgewählt", "OK");
-                    //}
                 }
                 else
                 {
