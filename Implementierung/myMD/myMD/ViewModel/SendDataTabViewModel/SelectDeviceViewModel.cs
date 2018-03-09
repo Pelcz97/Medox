@@ -67,8 +67,9 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// </summary>
         public async void StartScan()
         {
+            DeviceList.Clear();
+
             await BluetoothAdapter.ScanForBroadcasts(new ScanFilter()
-                    .SetIgnoreRepeatBroadcasts(true)
                     .AddAdvertisedService(myMD_FileTransfer), peripheral =>
             {
                 ScanResultViewModel test = new ScanResultViewModel(peripheral);
@@ -76,12 +77,14 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 Device.BeginInvokeOnMainThread(
                    () =>
                    {
-                        DeviceList.Add(test);
-                        DeviceList.FirstOrDefault();
+                       if (DeviceList.All(x => x.ScanResult != test.ScanResult))
+                       {
+                           DeviceList.Add(test);
+                           DeviceList.FirstOrDefault();
 
-                        var adv = peripheral.Advertisement;
-                        Debug.WriteLine("### " + adv.DeviceName);
-                        OnPropertyChanged("DeviceList");
+                           var adv = peripheral.Advertisement;
+                           Debug.WriteLine("### " + adv.DeviceName);
+                       }
                    });
             });
         }
