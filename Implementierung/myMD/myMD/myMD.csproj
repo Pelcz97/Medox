@@ -88,7 +88,6 @@
     <Compile Include="Model\ParserModel\FileFormatExtensions.cs" />
     <Compile Include="Model\ParserModel\FileToDatabaseParser.cs" />
     <Compile Include="Model\ParserModel\Hl7ToDatabaseParser.cs" />
-    <Compile Include="Model\ParserModel\IHl7ParserHelper.cs" />
     <Compile Include="Model\TransmissionModel\IBluetoothHelper.cs" />
     <Compile Include="myMDPage.xaml.cs">
       <DependentUpon>myMDPage.xaml</DependentUpon>
@@ -177,21 +176,6 @@
   <ItemGroup>
     <Reference Include="ble.net, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ble.net.1.0.1\lib\portable45-net45+win8\ble.net.dll</HintPath>
-    </Reference>
-    <Reference Include="MARC.Everest">
-      <HintPath>..\packages\Everest\MARC.Everest.dll</HintPath>
-    </Reference>
-    <Reference Include="MARC.Everest.Formatters.XML.Datatypes.R1">
-      <HintPath>..\packages\Everest\MARC.Everest.Formatters.XML.Datatypes.R1.dll</HintPath>
-    </Reference>
-    <Reference Include="MARC.Everest.Formatters.XML.ITS1">
-      <HintPath>..\packages\Everest\MARC.Everest.Formatters.XML.ITS1.dll</HintPath>
-    </Reference>
-    <Reference Include="MARC.Everest.RMIM.UV.CDAr2">
-      <HintPath>..\packages\Everest\MARC.Everest.RMIM.UV.CDAr2.dll</HintPath>
-    </Reference>
-    <Reference Include="MARC.Everest.RMIM.UV.NE2010">
-      <HintPath>..\packages\Everest\MARC.Everest.RMIM.UV.NE2010.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AppCenter.1.5.0\lib\portable-net45+win8+wpa81+wp8\Microsoft.AppCenter.dll</HintPath>

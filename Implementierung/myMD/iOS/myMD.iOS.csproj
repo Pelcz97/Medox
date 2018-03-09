@@ -110,18 +110,6 @@
     <Reference Include="ble.net-ios, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ble.net-ios.1.0.1\lib\Xamarin.iOS10\ble.net-ios.dll</HintPath>
     </Reference>
-    <Reference Include="MARC.Everest">
-      <HintPath>..\packages\Everest\MARC.Everest.dll</HintPath>
-    </Reference>
-    <Reference Include="MARC.Everest.Formatters.XML.Datatypes.R1">
-      <HintPath>..\packages\Everest\MARC.Everest.Formatters.XML.Datatypes.R1.dll</HintPath>
-    </Reference>
-    <Reference Include="MARC.Everest.Formatters.XML.ITS1">
-      <HintPath>..\packages\Everest\MARC.Everest.Formatters.XML.ITS1.dll</HintPath>
-    </Reference>
-    <Reference Include="MARC.Everest.RMIM.UV.CDAr2">
-      <HintPath>..\packages\Everest\MARC.Everest.RMIM.UV.CDAr2.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AppCenter, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AppCenter.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
     </Reference>
@@ -255,7 +243,6 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="CustomContentPageRenderer.cs" />
     <Compile Include="Model\FileHelper\FileHelper.cs" />
-    <Compile Include="Model\ParserModel\Hl7ParserHelper.cs" />
     <Compile Include="Model\TransmissionModel\BluetoothHelper.cs" />
   </ItemGroup>
   <ItemGroup>

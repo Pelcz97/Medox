@@ -127,13 +127,28 @@ namespace myMD.Model.DatabaseModel
         /// <see>myMD.Model.DatabaseModel.IEntityDatabase#GetDoctor(myMD.ModelInterface.DataModelInterface.IDoctor)</see>
         public IDoctor GetDoctor(IDoctor doctor)
         {
-            Doctor doc = db.Get<Doctor>(v => v.Name.Equals(doctor.Name));
-            doc.Profile = db.Get<Profile>(v => v.ID.Equals(doc.ProfileID));
+            IEnumerable<Doctor> docs = db.GetAllWithChildren<Doctor>().Where(v => v.Name.Equals(doctor.Name));
+            Doctor doc = null;
+            if (docs.Any())
+            {
+                doc = docs.First();
+                doc.Profile = db.Get<Profile>(v => v.ID.Equals(doc.ProfileID));
+            }       
             return doc;
         }
 
         /// <see>myMD.Model.DatabaseModel.IEntityDatabase#GetProfile(myMD.ModelInterface.DataModelInterface.IProfile)</see>
-        public IProfile GetProfile(IProfile profile) => db.Get<Profile>(v => v.InsuranceNumber.Equals(profile.InsuranceNumber));
+        public IProfile GetProfile(IProfile profile)
+        {
+            IEnumerable<IProfile> profiles =  GetAllProfiles().Where(v => v.InsuranceNumber.Equals(profile.InsuranceNumber));
+            if(profiles.Any())
+            {
+                return profiles.First();
+            } else
+            {
+                return null;
+            }
+        }
 
         /// <see>myMD.Model.DatabaseModel.IEntityDatabase#Insert(ModelInterface.DataModelInterface.IEntity)</see>
         public void Insert(IEntity entity)

@@ -16571,18 +16571,23 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\ppelc\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+=======
+    "C:\\Users\\Jan-Luca\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
+>>>>>>> 3b2c21f7b3602a3698098eeb70cfe57f1d463e26
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
+      "projectUniqueName": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
       "projectName": "myMDesktop.UWP",
-      "projectPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
-      "packagesPath": "C:\\Users\\ppelc\\.nuget\\packages\\",
-      "outputPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\obj\\",
+      "projectPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
+      "packagesPath": "C:\\Users\\Jan-Luca\\.nuget\\packages\\",
+      "outputPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -16590,7 +16595,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\ppelc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jan-Luca\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -16604,8 +16609,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj": {
-              "projectPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj"
+            "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj": {
+              "projectPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj"
             }
           }
         }
