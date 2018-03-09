@@ -3,6 +3,7 @@ using myMD.View.AbstractPages;
 using Xamarin.Forms;
 using myMD.ViewModel.SendDataTabViewModel;
 using Xamarin.Forms.Internals;
+using System.Diagnostics;
 
 namespace myMD.View.SendDataTabPages
 {
@@ -25,6 +26,7 @@ namespace myMD.View.SendDataTabPages
             InitializeComponent();
             vm = new SelectDeviceViewModel();
             this.BindingContext = vm;
+
         }
 
         /// <summary>
@@ -32,16 +34,22 @@ namespace myMD.View.SendDataTabPages
         /// </summary>
         /// <param name="sender">Sender der diese Methode aufruft</param>
         /// <param name="e">Event des Senders</param>
-        async void DeviceItemSelected(object sender, SelectedItemChangedEventArgs e)
+        void DeviceItemSelected(object sender, SelectedItemChangedEventArgs e)
         {   
-            await vm.ConnectToDevice(e.SelectedItem);
+            vm.ConnectToDevice(e.SelectedItem);
+        }
 
-            if (vm.ConnectedServer != null) {
-                var page = new TransmittingDataPage();
 
-                NavigationPage.SetBackButtonTitle(page, "Server wählen");
-                await Navigation.PushAsync(page);
-            }
+        async void CancelSelectDevice_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
+
+
+        async void ConfirmSelectedDevice_Clicked(object sender, System.EventArgs e)
+        {
+            vm.SetConnectedServer();
+            await Navigation.PopModalAsync();
         }
     }
 }

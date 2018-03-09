@@ -20,32 +20,32 @@ namespace myMD.Model.ModelFacade
     /// Fassade zum Einstieg ins Model. Enthält Schnittstellen zu den anderen Paketen im Model an die beim Methodenaufruf delegiert wird.
     /// </summary>
     /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade</see>
-	public class ModelFacade : IModelFacade
+    public class ModelFacade : IModelFacade
     {
         /// <summary>
         /// Die verwendete Datenübertragungsmöglichkeit
         /// </summary>
-		private IBluetooth bluetooth;
+        private IBluetooth bluetooth;
 
         /// <summary>
         /// Die verwendete Datenbank
         /// </summary>
-		private IEntityDatabase database;
+        private IEntityDatabase database;
 
         /// <summary>
         /// Die verwendete Fabrik
         /// </summary>
-		private IEntityFactory factory;
+        private IEntityFactory factory;
 
         /// <summary>
         /// Der verwendete Dateihelfer
         /// </summary>
-		private IFileHelper fileHelper;
+        private IFileHelper fileHelper;
 
         /// <summary>
         /// Der verwendete Parser
         /// </summary>
-		private IParserFacade parser;
+        private IParserFacade parser;
 
         /// <summary>
         /// Konstruktor in dem die Schnittstellen, von dem die Klasse abhänig ist injiziert werden können.
@@ -71,6 +71,14 @@ namespace myMD.Model.ModelFacade
         public void SetConnectedServer(IBleGattServerConnection server) => bluetooth.ConnectedGattServer = server;
         public IBleGattServerConnection GetConnectedServer() => bluetooth.ConnectedGattServer;
 
+        public async Task<int> NumberOfFilesOnServer(){
+            if (bluetooth.ConnectedGattServer != null){
+                return await bluetooth.GetNumberOfFiles();
+            } else {
+                return 0;
+            }
+        }
+
         public async Task GetFilesFromServer(){
             List<List<byte[]>> AllFiles = await bluetooth.ReadAllFilesOnServer();
 
@@ -90,7 +98,6 @@ namespace myMD.Model.ModelFacade
                 //var path = fileHelper.WriteLocalFileFromBytes(".hl7", file);
                 //parser.ParseFileToDatabase(path, database);
             }
-
         }
 
         /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#Activate(Model.DataModelInterface.IProfile)</see>

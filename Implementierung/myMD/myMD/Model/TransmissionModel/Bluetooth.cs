@@ -115,12 +115,17 @@ namespace myMD.Model.TransmissionModel
         {
             try
             {
-                /// The server answers a Read-Request with the number of files he's currently holding
-                var read = ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, RequestNumberOfFiles);
+                if (ConnectedGattServer != null)
+                {
+                    /// The server answers a Read-Request with the number of files he's currently holding
+                    var read = ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, RequestNumberOfFiles);
 
-                Debug.WriteLine(BitConverter.ToInt32(await read, 0));
+                    Debug.WriteLine(BitConverter.ToInt32(await read, 0));
 
-                return BitConverter.ToInt32(await read, 0);
+                    return BitConverter.ToInt32(await read, 0);
+                } else {
+                    return 0;
+                }
             }
             catch (GattException ex)
             {

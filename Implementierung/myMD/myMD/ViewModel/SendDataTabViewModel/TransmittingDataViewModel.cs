@@ -19,7 +19,14 @@ namespace myMD.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class TransmittingDataViewModel : OverallViewModel.OverallViewModel
     {
-        IBleGattServerConnection ConnectedGattServer { get; set; }
+        IBleGattServerConnection ConnectedGattServer { get {
+                return ModelFacade.GetConnectedServer();
+            } 
+        }
+
+        public bool ReadingDataPossible { get; set; }
+
+
 
         public ICommand ReceiveData
         {
@@ -27,10 +34,35 @@ namespace myMD.ViewModel.SendDataTabViewModel
             {
                 return new Command(async (sender) =>
                 {
+                    ReadingDataPossible = false;
+                    OnPropertyChanged("ReadingDataPossible");
                     await ModelFacade.GetFilesFromServer();
+                    ReadingDataPossible = true;
+                    OnPropertyChanged("ReadingDataPossible");
                 });
             }
         }
+
+        public ICommand RefreshNumberOfFiles
+        {
+            get
+            {
+                return new Command(async (sender) =>
+                {
+                    NumberOfFiles = await ModelFacade.NumberOfFilesOnServer();
+                    OnPropertyChanged("NumberOfFiles");
+                    if (NumberOfFiles > 0){
+                        ReadingDataPossible = true;
+                        OnPropertyChanged("ReadingDataPossible");
+                    } else {
+                        ReadingDataPossible = false;
+                        OnPropertyChanged("ReadingDataPossible");
+                    }
+                });
+            }
+        }
+
+        public int NumberOfFiles { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the
@@ -38,7 +70,25 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// </summary>
         public TransmittingDataViewModel()
         {
-            ConnectedGattServer = ModelFacade.GetConnectedServer();
+            ReadingDataPossible = false;
+            MessagingCenter.Subscribe<SelectDeviceViewModel>(this, "SetServer", sender => {
+                GetNumberOfFiles();
+            });
+        }
+
+        private async void GetNumberOfFiles(){
+            NumberOfFiles = await ModelFacade.NumberOfFilesOnServer();
+            OnPropertyChanged("NumberOfFiles");
+            if (NumberOfFiles > 0)
+            {
+                ReadingDataPossible = true;
+                OnPropertyChanged("ReadingDataPossible");
+            }
+            else
+            {
+                ReadingDataPossible = false;
+                OnPropertyChanged("ReadingDataPossible");
+            }
         }
 
     }

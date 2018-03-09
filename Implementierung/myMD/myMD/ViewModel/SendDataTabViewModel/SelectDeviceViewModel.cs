@@ -23,8 +23,10 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// Liste an Geräten die in der Umgebung gefunden wurden
         /// </summary>
         public ObservableCollection<ScanResultViewModel> DeviceList { get; }
-        public IBleGattServerConnection ConnectedServer { get => ModelFacade.GetConnectedServer(); }
+        public IBleGattServerConnection ConnectedServer { get; set; }
 
+        public bool ConfirmingDevicePossible { get; set; }
+        public bool CancelSelectDevicePossible { get; set; }
 
         /// <summary>
         /// Konstruktor für ein SelectDeviceViewModel
@@ -32,6 +34,10 @@ namespace myMD.ViewModel.SendDataTabViewModel
         public SelectDeviceViewModel()
         {
             this.DeviceList = new ObservableCollection<ScanResultViewModel>();
+            ConfirmingDevicePossible = false;
+            OnPropertyChanged("SavingPossible");
+            CancelSelectDevicePossible = true;
+            OnPropertyChanged("CancelSelectDevicePossible");
 
             if(BluetoothAdapter.AdapterCanBeEnabled){
                 BluetoothAdapter.EnableAdapter();
@@ -43,6 +49,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
             } else {
                 BluetoothAdapter.CurrentState.Subscribe(state =>
                 {
+                    
                     Debug.WriteLine("New state, " + state);
                     if (state == EnabledDisabledState.Enabled)
                     {
@@ -60,10 +67,9 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// </summary>
         public async void StartScan()
         {
-            Debug.WriteLine("möp");
-
             await BluetoothAdapter.ScanForBroadcasts(new ScanFilter()
-                    .SetIgnoreRepeatBroadcasts(true), peripheral =>
+                    .SetIgnoreRepeatBroadcasts(true)
+                    .AddAdvertisedService(myMD_FileTransfer), peripheral =>
             {
                 ScanResultViewModel test = new ScanResultViewModel(peripheral);
 
@@ -75,94 +81,57 @@ namespace myMD.ViewModel.SendDataTabViewModel
 
                         var adv = peripheral.Advertisement;
                         Debug.WriteLine("### " + adv.DeviceName);
-                        Debug.WriteLine("### " + adv.Services.Select(x => x.ToString()).Join(","));
-                        Debug.WriteLine("### " + adv.ManufacturerSpecificData.FirstOrDefault().CompanyName());
-                        Debug.WriteLine("### " + adv.ServiceData);
+                        OnPropertyChanged("DeviceList");
                    });
             });
-
-            /*CrossBleAdapter.Current.ScanWhenAdapterReady().Subscribe(scanResult =>
-            {
-
-                ScanResultViewModel test = new ScanResultViewModel(scanResult);
-
-                if (DeviceList.All(x => x.Device != test.Device) && scanResult.AdvertisementData.LocalName != null)
-                {
-                    Device.BeginInvokeOnMainThread(() =>
-                    {
-                        DeviceList.Add(test);
-                        DeviceList.FirstOrDefault();
-                    });
-                }
-            });*/
         }
-
-
-
-        public bool Connected { get; set; }
 
         /// <summary>
         /// Methode um sich mit einem anderen Gerät zu verbinden
         /// </summary>
         /// <param name="item"></param>
-        public async Task ConnectToDevice(object item)
+        public async void ConnectToDevice(object item)
         {
+            if(ConnectedServer != null){
+                ConnectedServer.Dispose();
+                ConnectedServer = null;
+            }
             var ScanResultItem = (ScanResultViewModel)item;
 
             var connection = await BluetoothAdapter.ConnectToDevice(
             ScanResultItem.ScanResult,
             TimeSpan.FromSeconds(15));
+            
             if (connection.IsSuccessful())
             {
-                Debug.WriteLine("Success");
                 var gattServer = connection.GattServer;
-                ModelFacade.SetConnectedServer(gattServer);
+                ConnectedServer = gattServer;
+                ConfirmingDevicePossible = true;
+                OnPropertyChanged("ConfirmingDevicePossible");
+
+                gattServer.Subscribe(state =>
+                {
+                    if (state == ConnectionState.Disconnected)
+                    {
+                        ConfirmingDevicePossible = false;
+                        OnPropertyChanged("ConfirmingDevicePossible");
+                        Debug.WriteLine("Connection Lost");
+                    }
+                });
             }
             else
             {
+                ConnectedServer = null;
+                ConfirmingDevicePossible = false;
+                OnPropertyChanged("ConfirmingDevicePossible");
                 Debug.WriteLine("Error connecting to device. result={0:g}", connection.ConnectionResult);
             }
+        }
 
-
-
-            //IDevice device = ScanResultItem.Device;
-
-            /*
-            if (ScanResultItem.ScanResult.AdvertisementData.IsConnectable)
-            {
-                Debug.WriteLine("Connectable");
-            }
-
-            ScanResultItem.ScanResult.Device.WhenStatusChanged().Subscribe(connectionState =>
-            {
-                Debug.WriteLine("Connection State: " + connectionState);
-            });
-
-            try
-            {
-               
-                if (ScanResultItem.Device.Status == ConnectionStatus.Disconnected)
-                {
-                    using (var cancelSrc = new CancellationTokenSource())
-                    {
-                        await device.Connect().ToTask(cancelSrc.Token);
-
-                        if(device.Status == ConnectionStatus.Connected){
-                            ScanResultItem.Device.WhenServiceDiscovered().Subscribe(service =>
-                            {
-                                Debug.WriteLine("Tapped _ " + service);
-                            });
-                            ModelFacade.SetConnected(device);
-                        }
-                    }
-                } else {
-                    Debug.WriteLine(ScanResultItem.Device.Status);
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-            }*/
+        public void SetConnectedServer(){
+            ModelFacade.SetConnectedServer(ConnectedServer);
+            MessagingCenter.Send(this, "SetServer");
+            MessagingCenter.Unsubscribe<SelectDeviceViewModel>(this, "SavedMedication");
         }
     }
 }

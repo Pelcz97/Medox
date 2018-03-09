@@ -17,18 +17,7 @@
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
                    TextColor="White"/>
-            <Button Clicked="SendDataButton_Clicked"
-                   AutomationId="SendDataButton"
-                    Text="Arztbriefe versenden"
-                    TextColor="White"
-                    FontAttributes="Bold"
-                    Grid.Row="1"
-                    BackgroundColor="#00B9B4"
-                    HorizontalOptions="Center"
-                    VerticalOptions="EndAndExpand"
-                    HeightRequest="50"
-                    WidthRequest="400"
-                    BorderRadius="10" />
+            
             <Button Clicked="ReceiveDataButton_Clicked"
                     AutomationId="ReceiveDataButton"
                    Text="Arztbriefe empfangen"

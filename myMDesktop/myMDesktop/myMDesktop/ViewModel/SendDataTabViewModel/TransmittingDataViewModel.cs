@@ -36,16 +36,14 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
             StartServer();
 
             MessagingCenter.Subscribe<SelectDoctorsLettersViewModel, ObservableCollection<FileData>>(this, "SelectedLetters", (sender, arg) => {
-                DependencyService.Get<IServer>().DoctorsLetters = arg;
 
+                SplittedFiles.Clear();
                 foreach (FileData file in arg)
                 {
                     SplittedFiles.Add(SplitFile(file));
                 }
-
+                
                 DependencyService.Get<IServer>().SplittedFiles = SplittedFiles;
-
-                Debug.WriteLine(DependencyService.Get<IServer>().DoctorsLetters.Count);
             });
 
 
@@ -66,7 +64,6 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
                 .GroupBy(p => p.Index / batchSize)
                 .Select(g => g.Select(p => p.Value).ToArray());
 
-            Debug.WriteLine("Batch size " + batched.Count());
             return batched;
         }
     }
