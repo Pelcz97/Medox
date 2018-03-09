@@ -20,13 +20,14 @@ namespace myMD.ViewModel.SendDataTabViewModel
     public class TransmittingDataViewModel : OverallViewModel.OverallViewModel
     {
         IBleGattServerConnection ConnectedGattServer { get {
-                return ModelFacade.GetConnectedServer();
+                var server = ModelFacade.GetConnectedServer();
+                ReadingDataPossible = server != null;
+                OnPropertyChanged("ReadingDataPossible");
+                return server;
             } 
         }
 
         public bool ReadingDataPossible { get; set; }
-
-
 
         public ICommand ReceiveData
         {
@@ -71,6 +72,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         public TransmittingDataViewModel()
         {
             ReadingDataPossible = false;
+
             MessagingCenter.Subscribe<SelectDeviceViewModel>(this, "SetServer", sender => {
                 GetNumberOfFiles();
             });

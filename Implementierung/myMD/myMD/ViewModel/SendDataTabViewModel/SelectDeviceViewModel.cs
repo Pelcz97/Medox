@@ -49,8 +49,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
             } else {
                 BluetoothAdapter.CurrentState.Subscribe(state =>
                 {
-                    
-                    Debug.WriteLine("New state, " + state);
                     if (state == EnabledDisabledState.Enabled)
                     {
                         StartScan();
@@ -61,14 +59,11 @@ namespace myMD.ViewModel.SendDataTabViewModel
 
         /// <summary>
         /// Methode um einen Scan zu starten.
-        /// Dazu wird erst überprüft, ob gerade gescannt wird. Ist dies der Fall wird der aktive Scan abgebrochen.
-        /// Dann wird geprüft ob Bluetooth für das Gerät verfügbar ist.
-        /// Danach wird der Scan gestartet und die gefundenen Geräte in die Liste <see cref="T:myMD.ViewModel.SendDataTabViewModel.SelectDeviceLetterViewModel.DeviceList"/> gespeichert.
         /// </summary>
         public async void StartScan()
         {
+
             await BluetoothAdapter.ScanForBroadcasts(new ScanFilter()
-                    .SetIgnoreRepeatBroadcasts(true)
                     .AddAdvertisedService(myMD_FileTransfer), peripheral =>
             {
                 ScanResultViewModel test = new ScanResultViewModel(peripheral);
@@ -76,12 +71,14 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 Device.BeginInvokeOnMainThread(
                    () =>
                    {
-                        DeviceList.Add(test);
-                        DeviceList.FirstOrDefault();
+                       if (DeviceList.All(x => x.ScanResult != test.ScanResult))
+                       {
+                           DeviceList.Add(test);
+                           DeviceList.FirstOrDefault();
 
-                        var adv = peripheral.Advertisement;
-                        Debug.WriteLine("### " + adv.DeviceName);
-                        OnPropertyChanged("DeviceList");
+                           var adv = peripheral.Advertisement;
+                           Debug.WriteLine("### " + adv.DeviceName);
+                       }
                    });
             });
         }
@@ -113,7 +110,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 {
                     if (state == ConnectionState.Disconnected)
                     {
-                        ConfirmingDevicePossible = false;
+                        ConnectedServer = null;
                         OnPropertyChanged("ConfirmingDevicePossible");
                         Debug.WriteLine("Connection Lost");
                     }
