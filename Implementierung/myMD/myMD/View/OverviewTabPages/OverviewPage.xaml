@@ -13,7 +13,30 @@
                 ItemsSource="{Binding DoctorsLettersItemsList}" 
                 SeparatorVisibility="None" 
                 ItemSelected="DoctorsLetter_Clicked"
-                CachingStrategy="RecycleElement">
+                CachingStrategy="RecycleElement"
+                IsGroupingEnabled = "true"
+                GroupDisplayBinding = "{Binding Key}">
+            
+                <ListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                     <ViewCell>
+                        <StackLayout VerticalOptions="FillAndExpand" 
+                            HorizontalOptions="FillAndExpand"
+                            BackgroundColor="#191928">
+                          
+                            <Label Text="{Binding Key}"
+                                   AutomationId="Key"
+                                FontSize="Medium"
+                                FontAttributes="Bold"
+                                TextColor="White" 
+                                VerticalOptions="EndAndExpand" 
+                                HorizontalOptions="StartAndExpand" 
+                                Margin="15,20,15,10"/>
+                          
+                        </StackLayout>
+                      </ViewCell>
+                    </DataTemplate>
+                  </ListView.GroupHeaderTemplate>
             
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -32,25 +55,22 @@
                                         HorizontalOptions="FillAndExpand" 
                                         VerticalOptions="FillAndExpand" 
                                         HasShadow="true">
-                                    <Grid>
+
+                                <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto" />
                                             <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*"/>
-                                                <ColumnDefinition Width="Auto"/> 
-                                        </Grid.ColumnDefinitions>
-
+                                    
                                             <Label Text="{Binding DoctorsName}"
                                             AutomationId="DoctorsName"
                                             TextColor="#191928" 
                                             FontSize="Small" 
                                             FontAttributes="Bold"
-                                            Grid.Column="0" 
-                                            Grid.RowSpan="2"   
-                                            Grid.Row="0" 
-                                            HorizontalTextAlignment="Start" />
+                                            HorizontalTextAlignment="Start"
+                                            VerticalOptions="StartAndExpand"
+                                            Grid.Row="0"/>
                                         
                                             <Label Text="{Binding DoctorsLetterDate, StringFormat='{0:MMMM dd, yyyy}'}" 
                                             AutomationId="DoctorsLetterDate"
@@ -58,18 +78,17 @@
                                             FontSize="Small" 
                                             HorizontalTextAlignment="End" 
                                             FontAttributes="Bold" 
-                                            Grid.Column="1" 
-                                            Grid.Row="0" 
-                                            HorizontalOptions="EndAndExpand"/>
+                                            HorizontalOptions="EndAndExpand"
+                                            VerticalOptions="Start"
+                                            Grid.Row="0"/>
                                         
                                             <Label Text="{Binding DoctorsField}" 
                                             AutomationId="DoctorsField"
                                             TextColor="#00B9B4" 
                                             FontSize="35" 
                                             FontAttributes="Bold" 
-                                            HorizontalTextAlignment="Start" 
-                                            Grid.ColumnSpan="2" 
-                                            Grid.Row="1" />
+                                            HorizontalTextAlignment="Start"
+                                            Grid.Row="1"/>
                                     </Grid>
                                 </Frame>
                             </ViewCell.View>

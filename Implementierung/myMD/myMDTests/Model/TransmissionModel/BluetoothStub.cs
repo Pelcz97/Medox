@@ -29,7 +29,7 @@ namespace myMDTests.Model.TransmissionModel
         }
 
 
-        public Task<List<List<byte[]>>> ReadAllFilesOnServer()
+        public Task<List<byte[]>> ReadAllFilesOnServer()
         {
             throw new NotImplementedException();
         }
@@ -60,6 +60,11 @@ namespace myMDTests.Model.TransmissionModel
         }
 
         Task<int> IBluetooth.GetReadCycles(int FileNumber)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<List<byte[]>> IBluetooth.ReadAllFilesOnServer()
         {
             throw new NotImplementedException();
         }

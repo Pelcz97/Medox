@@ -79,9 +79,28 @@ namespace myMD.ModelInterface.ModelFacadeInterface
         /// <param name="entity">Die zu aktualisierende Entität</param>
         void Update(IEntity entity);
 
+        /// <summary>
+        /// Setzt den Verbundenen GATT-Server.
+        /// </summary>
+        /// <param name="server">Server.</param>
         void SetConnectedServer(IBleGattServerConnection server);
+
+        /// <summary>
+        /// ?bergibt den aktuell verbundenen GATT-Server.
+        /// </summary>
+        /// <returns>The connected server.</returns>
         IBleGattServerConnection GetConnectedServer();
+
+        /// <summary>
+        /// Auslesen aller vom Server angebotenen Dateien.
+        /// </summary>
+        /// <returns>The files from server.</returns>
         Task GetFilesFromServer();
+
+        /// <summary>
+        /// Anzahl der vom Server angebotenen Dateien.
+        /// </summary>
+        /// <returns>The of files on server.</returns>
         Task<int> NumberOfFilesOnServer();
 
     }

@@ -3,6 +3,7 @@ using myMD.Model.DataModel;
 using myMD.ModelInterface.DataModelInterface;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace myMD.Model.ParserModel
 {
@@ -22,6 +23,11 @@ namespace myMD.Model.ParserModel
         {
             Init(filename);
             //Werfe Ausnahme falls kein passendes Profil existiert
+            var pr = ParseProfile();
+            Debug.WriteLine("LastName: " + pr.LastName);
+            Debug.WriteLine("Name: " + pr.Name);
+            Debug.WriteLine("InsuranceNumber: " + pr.InsuranceNumber);
+
             IProfile iProfile = db.GetProfile(ParseProfile()) ?? throw new InvalidOperationException("No matching Profile found");
             Profile profile = iProfile.ToProfile();
             Doctor eqDoc = ParseDoctor();

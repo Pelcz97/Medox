@@ -11,7 +11,7 @@ namespace myMD.Model.TransmissionModel
 	{
         IBleGattServerConnection ConnectedGattServer { get; set; }
 
-        Task<List<List<byte[]>>> ReadAllFilesOnServer();
+        Task<List<byte[]>> ReadAllFilesOnServer();
         Task<List<byte[]>> ReadSpecificFile(int FileNumber);
         Task<int> GetReadCycles(int FileNumber);
         Task<int> GetNumberOfFiles();

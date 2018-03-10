@@ -104,7 +104,6 @@
     <Compile Include="Model\EntityFactory\RandomEntityFactory.cs" />
     <Compile Include="Model\FileHelper\FileHelperTest.cs" />
     <Compile Include="Model\FileHelper\TestFileHelper.cs" />
-    <Compile Include="Model\TransmissionModel\BluetoothStub.cs" />
     <Compile Include="Model\ModelFacade\ModelFacadeTest.cs" />
     <Compile Include="Model\ParserModel\EntityDatabaseStub.cs" />
     <Compile Include="Model\ParserModel\FileToDatabaseParserTest.cs" />
@@ -114,6 +113,8 @@
     <Compile Include="Model\ParserModel\TestHl7ParserHelper.cs" />
     <Compile Include="Model\ParserModel\Hl7ParserTest.cs" />
     <Compile Include="Model\ParserModel\TestHl7ToDatabaseParser.cs" />
+    <Compile Include="Model\TransmissionModel\BluetoothTest.cs" />
+    <Compile Include="Model\TransmissionModel\BluetoothStub.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -129,7 +130,7 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Neuer Ordner\" />
+    <Folder Include="Model\TransmissionModel\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
