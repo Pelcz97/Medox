@@ -29,7 +29,7 @@ namespace myMDTests.Model.TransmissionModel
         }
 
 
-        public Task<List<List<byte[]>>> ReadAllFilesOnServer()
+        public Task<List<byte[]>> ReadAllFilesOnServer()
         {
             throw new NotImplementedException();
         }
