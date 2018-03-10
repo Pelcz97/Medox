@@ -80,18 +80,13 @@ namespace myMD.Model.ModelFacade
             }
         }
 
-
-
+        ///<see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#GetFilesFromServer()</see>
         public async Task GetFilesFromServer(){
 
             List<byte[]> files = await bluetooth.ReadAllFilesOnServer();
 
             foreach (byte[] file in files){
-                
-                Debug.WriteLine("array: " + Encoding.UTF8.GetString(file, 0, file.Length));
-                Debug.WriteLine("string: " + Encoding.UTF8.GetString(file, 0, file.Length));
                 var path = fileHelper.WriteLocalFileFromBytes(".hl7", Encoding.UTF8.GetString(file, 0, file.Length));
-
                 parser.ParseFileToDatabase(path, database);
             }
         }
