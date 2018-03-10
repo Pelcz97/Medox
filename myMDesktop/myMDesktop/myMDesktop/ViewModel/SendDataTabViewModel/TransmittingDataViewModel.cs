@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using myMDesktop.Model.TransmissionModel;
 using Plugin.FilePicker.Abstractions;
 using System.Linq;
+using System.IO;
 
 namespace myMDesktop.ViewModel.SendDataTabViewModel
 {
@@ -57,14 +58,27 @@ namespace myMDesktop.ViewModel.SendDataTabViewModel
         public IEnumerable<byte[]> SplitFile(FileData file)
         {
             var array = file.DataArray;
-
-            var batchSize = 500; //534?
+            Debug.WriteLine(BitConverter.ToString(array));
+            
+            var batchSize = 180; //534?
             var batched = array
                 .Select((Value, Index) => new { Value, Index })
                 .GroupBy(p => p.Index / batchSize)
                 .Select(g => g.Select(p => p.Value).ToArray());
 
+            Debug.WriteLine("Batched: " + batched.Count());
+            
             return batched;
+        }
+
+        private string ListToString(List<byte[]> list)
+        {
+            StringBuilder result = new StringBuilder();
+            foreach (byte[] file in list)
+            {
+                result.Append(Encoding.UTF8.GetString(file, 0, file.Length));
+            }
+            return result.ToString();
         }
     }
 }
