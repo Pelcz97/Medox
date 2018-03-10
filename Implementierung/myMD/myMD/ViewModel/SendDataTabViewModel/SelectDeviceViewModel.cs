@@ -102,6 +102,9 @@ namespace myMD.ViewModel.SendDataTabViewModel
             if (connection.IsSuccessful())
             {
                 var gattServer = connection.GattServer;
+
+                
+
                 ConnectedServer = gattServer;
                 ConfirmingDevicePossible = true;
                 OnPropertyChanged("ConfirmingDevicePossible");

@@ -67,7 +67,7 @@ namespace myMD.Model.TransmissionModel
 
                 foreach (byte[] array in FileAsBytes)
                 {
-                    Debug.WriteLine("File: " + BitConverter.ToString(array));
+                    Debug.WriteLine(BitConverter.ToString(array));
                 }
 
                 return FileAsBytes;

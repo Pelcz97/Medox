@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using nexus.protocols.ble;
 using System.Linq;
+using System.IO;
 using System.Threading.Tasks;
 using System.Text;
 using System.Diagnostics;
@@ -79,11 +80,22 @@ namespace myMD.Model.ModelFacade
             }
         }
 
+        private string ListToString(List<byte[]> list)
+        {
+            StringBuilder result = new StringBuilder();
+            foreach (byte[] file in list)
+            {
+                result.Append(Encoding.UTF8.GetString(file, 0, file.Length));
+            }
+            return result.ToString();
+        }
+
         public async Task GetFilesFromServer(){
             List<List<byte[]>> AllFiles = await bluetooth.ReadAllFilesOnServer();
 
             List<byte[]> files = new List<byte[]>();
             foreach (List<byte[]> file in AllFiles){
+                Debug.WriteLine("File: " + ListToString(file));
                 var concatenated = new byte[file.Count];
                 foreach (byte[] array in file){
                     concatenated.Concat(array);
@@ -92,10 +104,15 @@ namespace myMD.Model.ModelFacade
             }
 
             foreach (byte[] file in files){
+                byte[] newArray = file.Except(new byte[] { 0x00 }).ToArray();
+                Debug.WriteLine("Altes Array: " + file.Length);
+                Debug.WriteLine("Neues Array: " + newArray.Length);
                 StringBuilder result = new StringBuilder();
                 result.Append(Encoding.UTF8.GetString(file, 0, file.Count()));
                 Debug.WriteLine(result);
-                var path = fileHelper.WriteLocalFileFromBytes(".hl7", file);
+
+                var path = fileHelper.WriteLocalFileFromBytes(".hl7", result.ToString());
+
                 parser.ParseFileToDatabase(path, database);
             }
         }
