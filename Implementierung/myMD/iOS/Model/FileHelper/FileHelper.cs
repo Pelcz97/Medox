@@ -34,7 +34,6 @@ namespace myMD.Model.FileHelper.iOS
             if (!Directory.Exists(directory))
             {
                 Directory.CreateDirectory(directory);
-
             }
 
             string path = Path.Combine(directory, filename);

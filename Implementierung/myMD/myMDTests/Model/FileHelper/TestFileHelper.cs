@@ -41,5 +41,13 @@ namespace myMDTests.Model.FileHelper
         {
             return File.Exists(Path.Combine(FOLDER, filename));
         }
+
+        public string WriteLocalFileFromBytes(string format, string data)
+        {
+            string path = Path.Combine(FOLDER, Guid.NewGuid().ToString() + format);
+            File.WriteAllText(path, data);
+            LastWrittenPath = path;
+            return path;
+        }
     }
 }
