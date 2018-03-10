@@ -28,7 +28,7 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                             <Label Text="{Binding LastName, Mode=TwoWay}"
-                                AutomationId="LastName"
+                                AutomationId="LastNameLabel"
                                 HorizontalOptions="StartAndExpand" 
                                 VerticalOptions="Center" 
                                 BackgroundColor="#191928" 
@@ -48,7 +48,7 @@
                                 Margin="15,5,0,0" 
                                 FontSize="Small" />
                           <Label Text="{Binding Name}"
-                                AutomationId="Name"
+                                AutomationId="NameLabel"
                               HorizontalOptions="StartAndExpand"
                               VerticalOptions="Center"
                               BackgroundColor="#191928"
