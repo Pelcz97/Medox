@@ -23,6 +23,17 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 var server = ModelFacade.GetConnectedServer();
                 ReadingDataPossible = server != null;
                 OnPropertyChanged("ReadingDataPossible");
+
+                server.Subscribe(state =>
+                {
+                    if (state == ConnectionState.Disconnected)
+                    {
+                        ReadingDataPossible = false;
+                        OnPropertyChanged("ReadingDataPossible");
+                        Debug.WriteLine("Connection Lost");
+                    }
+                });
+
                 return server;
             } 
         }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using nexus.protocols.ble;
@@ -22,10 +23,28 @@ namespace myMD.Model.TransmissionModel
         public IBleGattServerConnection ConnectedGattServer { get; set; }
 
         /// <summary>
+        /// Formats all files.
+        /// </summary>
+        /// <returns>The all files.</returns>
+        /// <param name="files">Files.</param>
+        public List<byte[]> FormatAllFiles(List<List<byte[]>> files){
+            
+            List<byte[]> result = new List<byte[]>();
+
+            foreach (List<byte[]> file in files)
+            {
+                result.Add(ListToArray(file));
+            }
+
+            return result;
+        }
+
+
+        /// <summary>
         /// Reads all files on server.
         /// </summary>
         /// <returns>The all files on server.</returns>
-        public async Task<List<List<byte[]>>> ReadAllFilesOnServer(){
+        public async Task<List<byte[]>> ReadAllFilesOnServer(){
             
             int NumberOfFiles = await GetNumberOfFiles();
             Debug.WriteLine("Number of Files: " + NumberOfFiles);
@@ -41,7 +60,7 @@ namespace myMD.Model.TransmissionModel
                     }
                 }
 
-                return ListOfFiles;
+                return FormatAllFiles(ListOfFiles);
 
             } else {
                 Debug.WriteLine("Server seems to be empty or something went wrong.");
@@ -166,6 +185,13 @@ namespace myMD.Model.TransmissionModel
                 Debug.WriteLine(ex.ToString());
                 return 0;
             }
+        }
+
+
+        private byte[] ListToArray(List<byte[]> list){
+            
+            var result = list.SelectMany(i => i).ToArray();
+            return result;
         }
     }
 }

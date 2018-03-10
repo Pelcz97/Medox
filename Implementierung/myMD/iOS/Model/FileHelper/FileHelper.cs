@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -36,10 +37,11 @@ namespace myMD.Model.FileHelper.iOS
             return path;
         }
 
-        public string WriteLocalFileFromBytes(string format, byte[] data)
+        public string WriteLocalFileFromBytes(string format, string data)
         {
             string path = Path.Combine(PATH, Guid.NewGuid().ToString() + format);
-            File.WriteAllBytes(path, data);
+            File.WriteAllText(path, data);
+            Debug.WriteLine("Read: " + File.ReadAllText(path));
             return path;
         }
 
