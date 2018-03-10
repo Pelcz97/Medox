@@ -16571,8 +16571,14 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
+    "C:\\Users\\ppelc\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+=======
     "C:\\Users\\Jan-Luca\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
+>>>>>>> 3b2c21f7b3602a3698098eeb70cfe57f1d463e26
   },
   "project": {
     "version": "1.0.0",
@@ -16585,7 +16591,8 @@
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\"
       ],
       "configFilePaths": [
         "C:\\Users\\Jan-Luca\\AppData\\Roaming\\NuGet\\NuGet.Config",

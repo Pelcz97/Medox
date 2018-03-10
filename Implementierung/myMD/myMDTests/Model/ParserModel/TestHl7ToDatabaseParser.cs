@@ -6,9 +6,6 @@ namespace myMDTests.Model.ParserModel
 {
     internal class TestHl7ToDatabaseParser : Hl7ToDatabaseParser
     {
-        public TestHl7ToDatabaseParser() : base(new TestHl7ParserHelper())
-        {
-        }
 
         new public IList<Medication> ParseMedications() => base.ParseMedications();
 

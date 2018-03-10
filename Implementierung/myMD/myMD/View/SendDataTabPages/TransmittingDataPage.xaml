@@ -13,6 +13,7 @@
 
 
             <Button Clicked="SelectDevice_Clicked"
+                    IsEnabled="{Binding SearchingPossible}"
                     Text="Geräte suchen"
                     TextColor="White"
                     FontAttributes="Bold"

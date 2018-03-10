@@ -84,7 +84,7 @@ namespace myMDTests.Model.ParserModel
             Assert.AreEqual(parsedDoctor, Hl7FileUtility.Doctor);
             Assert.AreEqual(parsedLetter, Hl7FileUtility.Letter[0]);
             Assert.AreEqual(parsedProfile, Hl7FileUtility.Profile);
-            Assert.IsTrue(parsedMeds.SequenceEqual(Hl7FileUtility.Meds));
+            Assert.IsTrue(parsedMeds.SequenceEqual(Hl7FileUtility.Meds.Take(3)));
         }
 
         [Test]
@@ -95,7 +95,7 @@ namespace myMDTests.Model.ParserModel
             Assert.AreEqual(db.Doctor, Hl7FileUtility.Doctor);
             Assert.AreEqual(db.Letter, Hl7FileUtility.Letter[0]);
             Assert.AreEqual(db.Profile, Hl7FileUtility.Profile);
-            Assert.IsTrue(db.Meds.SequenceEqual(Hl7FileUtility.Meds));
+            Assert.IsTrue(db.Meds.SequenceEqual(Hl7FileUtility.Meds.Take(3)));
         }
 
         [Test]

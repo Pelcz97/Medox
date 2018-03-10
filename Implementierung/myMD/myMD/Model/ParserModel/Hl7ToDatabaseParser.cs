@@ -1,17 +1,12 @@
-using MARC.Everest.Connectors;
-using MARC.Everest.DataTypes;
-using MARC.Everest.Formatters.XML.ITS1;
-using MARC.Everest.RMIM.UV.CDAr2.POCD_MT000040UV;
-using MARC.Everest.RMIM.UV.CDAr2.Vocabulary;
-using MARC.Everest.RMIM.UV.NE2010.RIM;
-using MARC.Everest.Xml;
 using myMD.Model.DataModel;
 using myMD.Model.DependencyService;
 using myMD.ModelInterface.DataModelInterface;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace myMD.Model.ParserModel
 {
@@ -29,28 +24,12 @@ namespace myMD.Model.ParserModel
         /// Das Dokument aus dem beim Aufrufen der Parse-Methoden gelesen wird.
         /// Muss zuvor durch Aufruf der Init() Methode initialisiert werden.
         /// </summary>
-        private ClinicalDocument document;
+        private XDocument document;
 
         /// <summary>
         /// Der Dateipfad zu dem Dokument aus dem gerade gelesen wird.
         /// </summary>
         private string file;
-
-        /// <summary>
-        /// Helfer zum ausführen plattformsepzifischer Operationen
-        /// </summary>
-        private IHl7ParserHelper helper;
-
-        /// <summary>
-        /// Konstruktor mit automatisch nach Plattform ausgewähltem Helfer.
-        /// </summary>
-        public Hl7ToDatabaseParser() : this(DependencyServiceWrapper.Get<IHl7ParserHelper>()) { }
-
-        /// <summary>
-        /// Konstrukter mit Helfer als Parameter.
-        /// </summary>
-        /// <param name="helper">Der Helfer der zum Ausführen plattformspezifischer Operationen verwendet werden soll</param>
-        public Hl7ToDatabaseParser(IHl7ParserHelper helper) => this.helper = helper;
 
         /// <summary>
         /// Initialisiert document, in dem es aus dem gegebenen Dateipfad liest.
@@ -59,34 +38,26 @@ namespace myMD.Model.ParserModel
         protected override void Init(string file)
         {
             this.file = file;
-            XmlStateReader xr = new XmlStateReader(XmlReader.Create(file));
-            XmlIts1Formatter fmtr = new XmlIts1Formatter()
-            {
-                ValidateConformance = false
-            };
-            helper.PrepareFormatter(fmtr);
-            IFormatterParseResult parseResult = null;
             try
-            { 
-                parseResult = fmtr.Parse(new XmlStateReader(XmlReader.Create(file)), typeof(ClinicalDocument));
+            {
+                document = XDocument.Load(file);
             } catch (XmlException e)
             {
                 throw new FileFormatException(INVALID_FILE_MESSAGE, e);
             }
-            document = parseResult.Structure as ClinicalDocument ?? throw new FileFormatException(INVALID_FILE_MESSAGE);
         }
 
         /// <see>myMD.Model.ParserModel.FileToDatabaseParser#ParseProfile()</see>
         protected override Doctor ParseDoctor()
         {
             //Der Arzt ist der Autor des Dokuments
-            Person author = document.Author.First().AssignedAuthor.AssignedAuthorChoice as Person;
+            IEnumerable<XElement> names = SingleByName(document.Descendants(), "assignedPerson").Elements();
             return new Doctor
             {
                 //Suche den legalen Namen des Arztes
-                Name = author.Name.Find(v => v.Use.Items.Any(w => w.Code.Equals(EntityNameUse.Legal))).ToString(),
+                Name = SingleByName(SingleByAttributeName(names, "use", "L").Elements(), "family").Value,
                 //Suche zugeordneten Namen des Arztes
-                Field = author.Name.Find(v => v.Use.Items.Any(w => w.Code.Equals(EntityNameUse.Assigned))).ToString(),
+                Field = SingleByName(SingleByAttributeName(names, "use", "ASGN").Elements(), "family").Value,
             };
         }
 
@@ -94,15 +65,14 @@ namespace myMD.Model.ParserModel
         protected override DoctorsLetter ParseLetter()
         {
             //Suche Hauptsektion des Dokuments
-            Section letter = document.Component.GetBodyChoiceIfStructuredBody().Component.First().Section;
-            x_BasicConfidentialityKind sensitivity = letter.ConfidentialityCode.Code;
+            XElement letter = SingleByName(document.Descendants(), "section");
             return new DoctorsLetter
             {
                 Filepath = file,
-                Name = letter.Title,
-                Diagnosis = System.Text.Encoding.UTF8.GetString(letter.Text.Data, 0, letter.Text.Data.Length),
-                Date = document.EffectiveTime.DateValue,
-                Sensitivity = (Sensitivity)sensitivity,
+                Name = SingleByName(letter.Elements(), "title").Value,
+                Diagnosis = SingleByName(letter.Elements(), "text").Value,
+                Date = ParseDate(AttributeByName(SingleByName(document.Descendants(), "effectiveTime"), "value").Value),
+                Sensitivity = (Sensitivity)SingleByName(letter.Elements(), "confidentialityCode").FirstAttribute.Value[0],
             };
         }
 
@@ -111,12 +81,12 @@ namespace myMD.Model.ParserModel
         {
             IList<Medication> meds = new List<Medication>();
             //Suche nach Einträgen über Medikationen
-            List<Entry> entries = document.Component.GetBodyChoiceIfStructuredBody().Component.First().Section.Entry.FindAll(v => v.ClinicalStatement.IsPOCD_MT000040UVSubstanceAdministration());
-            x_BasicConfidentialityKind sensitivity = document.Component.GetBodyChoiceIfStructuredBody().Component.First().Section.ConfidentialityCode.Code;
-            foreach (Entry entry in entries)
+            IEnumerable<XElement> entries = FilterByName(document.Descendants(), "substanceAdministration");
+            Sensitivity sensitivity = (Sensitivity)SingleByName(SingleByName(document.Descendants(), "section").Elements(), "confidentialityCode").FirstAttribute.Value[0];
+            foreach (XElement entry in entries)
             {
                 //Parse jeden dieser Einträge in eine Medikation
-                meds.Add(ParseMedication(entry.GetClinicalStatementIfSubstanceAdministration(), (Sensitivity) sensitivity));
+                meds.Add(ParseMedication(entry, sensitivity));
             }
             return meds;
         }
@@ -127,16 +97,22 @@ namespace myMD.Model.ParserModel
         /// <param name="med">Die zu parsenden Informationen über die Medikation</param>
         /// <param name="sensitivity">Die Sensitivitätsstufe der Medikation</param>
         /// <returns>Medikation mit den Informationen aus med</returns>
-        private Medication ParseMedication(SubstanceAdministration med, Sensitivity sensitivity)
+        private Medication ParseMedication(XElement med, Sensitivity sensitivity)
         {
+            XElement dose = SingleByName(med.Elements(), "doseQuantity");
+            XElement time = SingleByName(med.Elements(), "effectiveTime");
+            XElement phase = SingleByName(time.Elements(), "phase");
+            XElement period = SingleByName(time.Elements(), "period");
             Medication target = new Medication()
             {
-                Dosis = String.Concat(med.DoseQuantity.Value.ToInt().ToString(), med.DoseQuantity.Value.Unit),
-                Name = med.Consumable.ManufacturedProduct.GetManufacturedDrugOrOtherMaterialIfManufacturedLabeledDrug().Name.Part.First(),
+                Dosis = String.Concat(AttributeByName(dose, "value").Value.ToString(), AttributeByName(dose, "unit").Value),
+                Name = SingleByName(med.Descendants(), "name").Value,
                 Sensitivity = sensitivity,
+                Date = ParseDate(AttributeByName(SingleByName(phase.Elements(), "low"), "value").Value),
+                EndDate = ParseDate(AttributeByName(SingleByName(phase.Elements(), "high"), "value").Value),
+                Frequency = (int) (1.0/Convert.ToDouble(AttributeByName(period, "value").Value, CultureInfo.InvariantCulture)),
+                Interval = (Interval) AttributeByName(period, "unit").Value[0],
             };
-            //Führe plattformspezifische Operationen aus
-            helper.FinalizeMedication(med, target);
             return target;
         }
 
@@ -144,18 +120,48 @@ namespace myMD.Model.ParserModel
         protected override Profile ParseProfile()
         {
             //Die Informationen der Profile Klasse sind Informationen über einen Patient.
-            Patient patient = document.RecordTarget.First().PatientRole.Patient;
+            XElement patient = SingleByName(document.Descendants(), "patient");
             //Suche nach dem zusammengesetzten legalen Namen
-            List<ENXP> part = patient.Name.Find(v => v.Use.Items.Any(w => w.Code.Equals(EntityNameUse.Legal))).Part;
+            XElement name = SingleByAttributeName(FilterByName(patient.Elements(), "name"), "use", "L");
             return new Profile
             {
-                BirthDate = patient.BirthTime.DateValue.Date,
+                BirthDate = ParseDate(AttributeByName(SingleByName(patient.Elements(), "birthTime"), "value").Value),
                 //Suche den Familiennamen
-                Name = part.Find(v => v.Type.Equals(EntityNamePartType.Given)).Value,
+                Name = SingleByName(name.Elements(), "given").Value,
                 //Suche den Vornamen
-                LastName = part.Find(v => v.Type.Equals(EntityNamePartType.Family)).Value,
-                InsuranceNumber = patient.Id.Extension,
+                LastName = SingleByName(name.Elements(), "family").Value,
+                InsuranceNumber = AttributeByName(SingleByName(patient.Elements(), "id"), "extension").Value,
             };
+        }
+
+        private IEnumerable<XElement> FilterByAttributeName(IEnumerable<XElement> collection, string name, string value) 
+        {
+            return collection.Where(v => v.Attributes().First(w => w.Name.LocalName.Equals(name)).Value.Equals(value));
+        }
+
+        private XElement SingleByAttributeName(IEnumerable<XElement> collection, string name, string value) 
+        {
+            return collection.FirstOrDefault(v => v.Attributes().First(w => w.Name.LocalName.Equals(name)).Value.Equals(value));
+        }
+
+        private IEnumerable<XElement> FilterByName(IEnumerable<XElement> collection, string name) 
+        {
+            return collection.Where(v => v.Name.LocalName.Equals(name));
+        }
+
+        private XElement SingleByName(IEnumerable<XElement> collection, string name) 
+        {
+            return collection.FirstOrDefault(v => v.Name.LocalName.Equals(name));
+        }
+
+        private XAttribute AttributeByName(XElement element, string name)
+        {
+            return element.Attributes().FirstOrDefault(v => v.Name.LocalName.Equals(name));
+        }
+
+        private DateTime ParseDate(string date)
+        {
+            return new DateTime(Int32.Parse(date.Substring(0, 4)), Int32.Parse(date.Substring(4, 2)), Int32.Parse(date.Substring(6, 2)));
         }
     }
 }

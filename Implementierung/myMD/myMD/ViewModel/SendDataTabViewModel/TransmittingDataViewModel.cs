@@ -28,6 +28,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         }
 
         public bool ReadingDataPossible { get; set; }
+        public bool SearchingPossible { get; set; }
 
         public ICommand ReceiveData
         {
@@ -35,10 +36,19 @@ namespace myMD.ViewModel.SendDataTabViewModel
             {
                 return new Command(async (sender) =>
                 {
+                    SearchingPossible = false;
                     ReadingDataPossible = false;
+                    OnPropertyChanged("SearchingPossible");
                     OnPropertyChanged("ReadingDataPossible");
-                    await ModelFacade.GetFilesFromServer();
+                    try{
+                        await ModelFacade.GetFilesFromServer();
+                    } catch (GattException ex){
+                        Debug.WriteLine("Fucked up. " + ex);
+                    }
+
+                    SearchingPossible = true;
                     ReadingDataPossible = true;
+                    OnPropertyChanged("SearchingPossible");
                     OnPropertyChanged("ReadingDataPossible");
                 });
             }
@@ -72,6 +82,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         public TransmittingDataViewModel()
         {
             ReadingDataPossible = false;
+            SearchingPossible = true;
 
             MessagingCenter.Subscribe<SelectDeviceViewModel>(this, "SetServer", sender => {
                 GetNumberOfFiles();

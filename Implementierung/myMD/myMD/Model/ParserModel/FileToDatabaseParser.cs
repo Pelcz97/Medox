@@ -22,7 +22,8 @@ namespace myMD.Model.ParserModel
         {
             Init(filename);
             //Werfe Ausnahme falls kein passendes Profil existiert
-            Profile profile = db.GetProfile(ParseProfile()).ToProfile() ?? throw new InvalidOperationException("No matching Profile found");
+            IProfile iProfile = db.GetProfile(ParseProfile()) ?? throw new InvalidOperationException("No matching Profile found");
+            Profile profile = iProfile.ToProfile();
             Doctor eqDoc = ParseDoctor();
             IDoctor doc = db.GetDoctor(eqDoc);
             Doctor doctor;

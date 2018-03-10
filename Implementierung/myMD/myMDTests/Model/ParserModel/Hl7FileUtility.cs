@@ -5,6 +5,7 @@ using MARC.Everest.RMIM.UV.CDAr2.POCD_MT000040UV;
 using MARC.Everest.RMIM.UV.CDAr2.Vocabulary;
 using myMD.Model.DataModel;
 using myMD.Model.FileHelper;
+using myMD.ModelInterface.DataModelInterface;
 using myMDTests.Model.FileHelper;
 using System;
 using System.Collections.Generic;
@@ -83,7 +84,7 @@ namespace myMDTests.Model.ParserModel
                     Name = "Wundkontrolle",
                     Date = DateTime.Today,
                     Diagnosis = "Alles okay",
-                    Sensitivity = myMD.ModelInterface.DataModelInterface.Sensitivity.High,
+                    Sensitivity = myMD.ModelInterface.DataModelInterface.Sensitivity.Normal,
                     Filepath = Custom(4),
                 },
             };
@@ -144,7 +145,7 @@ namespace myMDTests.Model.ParserModel
             {
                 Letter[GetLetter(i)].AttachMedication(med);
                 med.Profile = Profile;
-
+                ++i;
             }
             Doctor.Profile = Profile;
             Letter[0].Profile = Profile;
@@ -161,6 +162,8 @@ namespace myMDTests.Model.ParserModel
 
         public static void CreateDocuments()
         {
+            ClinicalDocument p = new ClinicalDocument();
+            p.Validate();
             using (XmlIts1Formatter fmtr = new XmlIts1Formatter())
             {
                 fmtr.Settings = SettingsType.DefaultUniprocessor;
@@ -174,9 +177,11 @@ namespace myMDTests.Model.ParserModel
                     // Output in a nice indented manner
                     for (int i = 0; i < COUNT; ++i)
                     {
+                        var letters = Letter;
+                        var letter = letters[i];
                         using (XmlWriter xw = XmlWriter.Create(Custom(i), new XmlWriterSettings() { Indent = true }))
                         {
-                            fmtr.Graph(xw, CreateCDA(Profile, Doctor, Letter[i]));
+                            fmtr.Graph(xw, CreateCDA(Profile, Doctor, Letter[0]));
                         }
                     }
                 }
@@ -191,7 +196,7 @@ namespace myMDTests.Model.ParserModel
                 TypeId = new II("2.16.840.1.113883.1.3", "POCD_HD000040"), // This value is static and identifies the HL7 type
                 RealmCode = SET<CS<BindingRealm>>.CreateSET(BindingRealm.UniversalRealmOrContextUsedInEveryInstance), // This is UV some profiles require US
                 EffectiveTime = new TS(letter.Date),
-                ConfidentialityCode = (x_BasicConfidentialityKind)letter.Sensitivity,
+                ConfidentialityCode = ParseSensitivity(letter.Sensitivity),
                 LanguageCode = "en-US", // Language of the CDA
             };
             RecordTarget patient = new RecordTarget
@@ -203,7 +208,7 @@ namespace myMDTests.Model.ParserModel
                     Patient = new Patient()
                     {
                         Name = SET<PN>.CreateSET(PN.FromFamilyGiven(EntityNameUse.Legal, profile.LastName, profile.Name)), // PAtient name
-                        BirthTime = new TS(profile.BirthDate, DatePrecision.Day) // Day of birth
+                        BirthTime = new TS(profile.BirthDate, DatePrecision.Full) // Day of birth
                     }
                 }
             };
@@ -230,7 +235,7 @@ namespace myMDTests.Model.ParserModel
                     Data = Encoding.ASCII.GetBytes(letter.Diagnosis)
                 },
                 Title = letter.Name,
-                ConfidentialityCode = (x_BasicConfidentialityKind)letter.Sensitivity,
+                ConfidentialityCode = ParseSensitivity(letter.Sensitivity),
                 Entry = new List<Entry>()
             };
             foreach (Medication med in letter.DatabaseMedication)
@@ -247,6 +252,17 @@ namespace myMDTests.Model.ParserModel
             }
             doc.Component.GetBodyChoiceIfStructuredBody().Component.Add(new Component3(ActRelationshipHasComponent.HasComponent, true, section));
             return doc;
+        }
+
+        private static x_BasicConfidentialityKind ParseSensitivity(Sensitivity sensitvity)
+        {
+            switch(sensitvity)
+            {
+                case Sensitivity.High: return x_BasicConfidentialityKind.VeryRestricted;
+                case Sensitivity.Low: return x_BasicConfidentialityKind.Normal;
+                case Sensitivity.Normal: return x_BasicConfidentialityKind.Restricted;
+                default: return default(x_BasicConfidentialityKind);
+            }
         }
     }
 }
