@@ -25,12 +25,14 @@ namespace myMDesktop.UWP.Model.TransmissionModel
         public static Guid RequestFile = new Guid("10000000-1000-1000-1000-100000000000");
         public static Guid RequestNumberOfSlices = new Guid("20000000-2000-2000-2000-200000000000");
         public static Guid RequestNumberOfFiles = new Guid("30000000-3000-3000-3000-300000000000");
+        public static Guid Test = new Guid("40000000-4000-4000-4000-400000000000");
 
         public GattServiceProvider serviceProvider;
         
         private GattLocalCharacteristic RequestFileCharacteristic;
         private GattLocalCharacteristic RequestSlicesNumberCharachteristic;
         private GattLocalCharacteristic RequestFilesNumberCharacteristic;
+        private GattLocalCharacteristic TestCharacteristic;
 
         private bool peripheralSupported;
 
@@ -62,6 +64,16 @@ namespace myMDesktop.UWP.Model.TransmissionModel
             CharacteristicProperties = GattCharacteristicProperties.Read,
             ReadProtectionLevel = GattProtectionLevel.Plain,
             UserDescription = "Number of Files"
+        };
+
+        public static readonly GattLocalCharacteristicParameters TestChar = new GattLocalCharacteristicParameters
+        {
+            CharacteristicProperties = GattCharacteristicProperties.Write |
+                                        GattCharacteristicProperties.Read |
+                                       GattCharacteristicProperties.Notify,
+            ReadProtectionLevel = GattProtectionLevel.Plain,
+            WriteProtectionLevel = GattProtectionLevel.Plain,
+            UserDescription = "Test Characteristic"
         };
 
         public Server()
@@ -166,6 +178,19 @@ namespace myMDesktop.UWP.Model.TransmissionModel
             }
             RequestFilesNumberCharacteristic.ReadRequested += RequestNumberOfFiles_ReadRequestedAsync;
 
+            GattLocalCharacteristicResult test = await serviceProvider.Service.CreateCharacteristicAsync(Test, TestChar);
+            if (test.Error == BluetoothError.Success)
+            {
+                TestCharacteristic = test.Characteristic;
+            }
+            else
+            {
+                Debug.WriteLine(test.Error);
+                return false;
+            }
+            TestCharacteristic.WriteRequested += Test_WriteRequestedAsync;
+            TestCharacteristic.ReadRequested += Test_ReadRequestedAsync;
+
             //Indicate if sever advertises as connectable and discoverable.
             GattServiceProviderAdvertisingParameters advParameters = new GattServiceProviderAdvertisingParameters
             {
@@ -216,12 +241,20 @@ namespace myMDesktop.UWP.Model.TransmissionModel
                     return;
                 }
 
+                Debug.WriteLine("#1");
                 var writer = new DataWriter();
                 writer.ByteOrder = ByteOrder.LittleEndian;
+                Debug.WriteLine("#2");
                 var array = SplittedFiles.ElementAt(RequestFileIndex).ElementAt(RequestSplitIndex);
-                //Debug.WriteLine("Array inhalt: " + BitConverter.ToString(array));
+                Debug.WriteLine("#3");
+                Debug.WriteLine("Array as bytes: " + BitConverter.ToString(array));
+                Debug.WriteLine("Array inhalt: " + Encoding.UTF8.GetString(array, 0, array.Length) + "#End");
+                Debug.WriteLine("#4");
                 writer.WriteBytes(array);
+                Debug.WriteLine("#5");
                 request.RespondWithValue(writer.DetachBuffer());
+                Debug.WriteLine("#6");
+                await Task.Delay(1000);
             }
         }
 
@@ -289,14 +322,69 @@ namespace myMDesktop.UWP.Model.TransmissionModel
                 var numberOfFiles = SplittedFiles.Count();
                 Debug.WriteLine("Dateianzahl: " + numberOfFiles);
 
+                /*foreach (IEnumerable<byte[]> part in SplittedFiles)
+                {
+                    foreach (byte[] ar in part)
+                    {
+                        Debug.WriteLine(Encoding.UTF8.GetString(ar, 0, ar.Length));
+                    }
+                }*/
+
                 writer.WriteInt64(numberOfFiles);
 
                 request.RespondWithValue(writer.DetachBuffer());
             }
         }
 
+        private string ListToString(List<byte[]> list)
+        {
+            StringBuilder result = new StringBuilder();
+            foreach (byte[] file in list)
+            {
+                result.Append(Encoding.UTF8.GetString(file, 0, file.Length));
+            }
+            return result.ToString();
+        }
+
+        private async void Test_WriteRequestedAsync(GattLocalCharacteristic sender, GattWriteRequestedEventArgs args)
+        {
+            using (args.GetDeferral())
+            {
+
+                GattWriteRequest request = await args.GetRequestAsync();
+                if (request == null)
+                {
+                    Debug.WriteLine("Access to device not allowed");
+                    return;
+                }
+
+                var dataReader = DataReader.FromBuffer(request.Value);
+                var output = dataReader.ReadString(request.Value.Length);
+
+                Debug.WriteLine("Index der Angefragten Datei: " + output);
+            }
+        }
+
+        private async void Test_ReadRequestedAsync(GattLocalCharacteristic sender, GattReadRequestedEventArgs args)
+        {
+            using (args.GetDeferral())
+            {
+
+                GattReadRequest request = await args.GetRequestAsync();
+                if (request == null)
+                {
+                    Debug.WriteLine("Access to device not allowed");
+                    return;
+                }
+
+                var writer = new DataWriter();
+                writer.ByteOrder = ByteOrder.LittleEndian;
+                Debug.WriteLine("Ausgabe.");
+                writer.WriteInt16(1);
+
+                request.RespondWithValue(writer.DetachBuffer());
+            }
+        }
 
     }
-
-    
 }
