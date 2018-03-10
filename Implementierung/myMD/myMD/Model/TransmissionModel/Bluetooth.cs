@@ -188,7 +188,7 @@ namespace myMD.Model.TransmissionModel
         }
 
 
-        private byte[] ListToArray(List<byte[]> list){
+        public byte[] ListToArray(List<byte[]> list){
             
             var result = list.SelectMany(i => i).ToArray();
             return result;

@@ -29,24 +29,25 @@ namespace myMDTests.Model.FileHelper
             return path;
         }
 
-        public string WriteLocalFileFromBytes(string format, string data)
+        /*public string WriteLocalFileFromBytes(string format, byte[] data)
         {
             string path = Path.Combine(FOLDER, Guid.NewGuid().ToString() + format);
-            File.WriteAllText(path, data);
+            File.WriteAllBytes(path, data);
+            LastWrittenPath = path;
             return path;
+        }*/
+
+        public bool Exists(string filename)
+        {
+            return File.Exists(Path.Combine(FOLDER, filename));
         }
 
-        public string WriteLocalFileFromText(string format, string data)
+        public string WriteLocalFileFromBytes(string format, string data)
         {
             string path = Path.Combine(FOLDER, Guid.NewGuid().ToString() + format);
             File.WriteAllText(path, data);
             LastWrittenPath = path;
             return path;
-        }
-
-        public bool Exists(string filename)
-        {
-            return File.Exists(Path.Combine(FOLDER, filename));
         }
     }
 }

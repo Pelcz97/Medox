@@ -63,5 +63,10 @@ namespace myMDTests.Model.TransmissionModel
         {
             throw new NotImplementedException();
         }
+
+        Task<List<byte[]>> IBluetooth.ReadAllFilesOnServer()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
