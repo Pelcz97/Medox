@@ -114,6 +114,9 @@
     <Compile Include="Model\ParserModel\TestHl7ParserHelper.cs" />
     <Compile Include="Model\ParserModel\Hl7ParserTest.cs" />
     <Compile Include="Model\ParserModel\TestHl7ToDatabaseParser.cs" />
+    <Compile Include="ViewModel\OverviewTab\DetailedDoctorsLetter.cs" />
+    <Compile Include="ViewModel\OverviewTab\DoctorsLetters.cs" />
+    <Compile Include="ViewModel\OverviewTab\OverviewPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -128,9 +131,7 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Neuer Ordner\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
