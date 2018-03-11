@@ -18,7 +18,7 @@ namespace myMD.Model.FileHelper.Droid
         /// <see>myMD.Model.FileHelper.IFileHelper#DeleteFile(string)</see>
         public void DeleteFile(string filename)
         {
-            File.Delete(GetLocalFilePath(filename));
+            File.Delete(filename);
         }
 
         /// <see>myMD.Model.FileHelper.IFileHelper#GetLocalFilePath(string)</see>
@@ -32,7 +32,7 @@ namespace myMD.Model.FileHelper.Droid
             return path;
         }
 
-        public string WriteLocalFileFromBytes(string format, string data)
+        public string WriteLocalFileFromString(string format, string data)
         {
             string path = Path.Combine(PATH, Guid.NewGuid().ToString() + format);
             File.WriteAllText(path, data);

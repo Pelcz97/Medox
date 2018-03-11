@@ -12,7 +12,7 @@ namespace myMDTests.Model.FileHelper
 
         public void DeleteFile(string filename)
         {
-            File.Delete(GetLocalFilePath(filename));
+            File.Delete(filename);
         }
 
         public string GetLocalFilePath(string filename)
