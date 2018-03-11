@@ -31,7 +31,7 @@ namespace myMDTests.Model.FileHelper
 
         public bool Exists(string filename)
         {
-            return File.Exists(Path.Combine(FOLDER, filename));
+            return File.Exists(filename);
         }
 
         public string WriteLocalFileFromString(string format, string data)
