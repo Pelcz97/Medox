@@ -21,7 +21,7 @@ namespace myMDTests.Model.FileHelper
         public void WriteFromBytesTest()
         {
             string data = File.ReadAllText(Path);
-            string newFile = helper.WriteLocalFileFromBytes(System.IO.Path.GetExtension(Path), data);
+            string newFile = helper.WriteLocalFileFromString(System.IO.Path.GetExtension(Path), data);
             Assert.AreEqual(data, File.ReadAllBytes(newFile));
         }
 
