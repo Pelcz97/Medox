@@ -15,7 +15,8 @@ namespace myMD.Model.FileHelper.iOS
     [Xamarin.Forms.Internals.Preserve(AllMembers = true)]
     public class FileHelper : IFileHelper
     {
-        private static readonly string PATH = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Library");
+        private static readonly string DOCS = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        private static readonly string PATH = Path.Combine(DOCS, "..", "Library");
         /// <see>myMD.Model.FileHelper.IFileHelper#DeleteFile(string)</see>
         public void DeleteFile(string filename)
         {
@@ -25,20 +26,15 @@ namespace myMD.Model.FileHelper.iOS
         /// <see>myMD.Model.FileHelper.IFileHelper#GetLocalFilePath(string)</see>
         public string GetLocalFilePath(string filename)
 		{
-            string directory = Path.Combine(PATH, filename);
-
-            if (!Directory.Exists(directory))
+            if (!Directory.Exists(PATH))
             {
-                Directory.CreateDirectory(directory);
+                Directory.CreateDirectory(PATH);
             }
-
-            string path = Path.Combine(directory, filename);
-
+            string path = Path.Combine(PATH, filename);
             if (!File.Exists(path))
             {
                 File.Create(path).Close();
             }
-
             return path;
         }
 
