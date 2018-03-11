@@ -20,7 +20,7 @@ namespace myMD.Model.FileHelper.iOS
         /// <see>myMD.Model.FileHelper.IFileHelper#DeleteFile(string)</see>
         public void DeleteFile(string filename)
         {
-            File.Delete(filename);
+            File.Delete(GetLocalFilePath(filename));
         }
 
         /// <see>myMD.Model.FileHelper.IFileHelper#GetLocalFilePath(string)</see>
@@ -40,9 +40,10 @@ namespace myMD.Model.FileHelper.iOS
 
         public string WriteLocalFileFromString(string format, string data)
         {
-            string path = Path.Combine(PATH, Guid.NewGuid().ToString() + format);
+            string filename = Guid.NewGuid().ToString() + format;
+            string path = GetLocalFilePath(filename);
             File.WriteAllText(path, data);
-            return path;
+            return filename;
         }
 
     }

@@ -22,7 +22,7 @@ namespace myMDTests.Model.FileHelper
         {
             string data = File.ReadAllText(Path);
             string newFile = helper.WriteLocalFileFromString(System.IO.Path.GetExtension(Path), data);
-            Assert.AreEqual(data, File.ReadAllBytes(newFile));
+            Assert.AreEqual(data, File.ReadAllBytes(helper.GetLocalFilePath(newFile)));
         }
 
         [TearDown]

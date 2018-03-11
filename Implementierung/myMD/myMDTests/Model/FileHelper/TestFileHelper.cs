@@ -12,7 +12,7 @@ namespace myMDTests.Model.FileHelper
 
         public void DeleteFile(string filename)
         {
-            File.Delete(filename);
+            File.Delete(GetLocalFilePath(filename));
         }
 
         public string GetLocalFilePath(string filename)
@@ -31,15 +31,16 @@ namespace myMDTests.Model.FileHelper
 
         public bool Exists(string filename)
         {
-            return File.Exists(filename);
+            return File.Exists(Path.Combine(FOLDER, filename));
         }
 
         public string WriteLocalFileFromString(string format, string data)
         {
-            string path = Path.Combine(FOLDER, Guid.NewGuid().ToString() + format);
+            string filename = Guid.NewGuid().ToString() + format;
+            string path = GetLocalFilePath(filename);
             File.WriteAllText(path, data);
             LastWrittenPath = path;
-            return path;
+            return filename;
         }
     }
 }

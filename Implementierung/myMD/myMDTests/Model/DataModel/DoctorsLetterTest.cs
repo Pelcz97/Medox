@@ -85,7 +85,7 @@ namespace myMDTests.Model.DataModel
             {
                 letter.AddToGroup(group);
             }
-            letter.Filepath = Path;
+            letter.Filepath = PATH;
             letter.Delete();
             Assert.IsFalse(letter.Medication.Any());
             Assert.IsFalse(letter.Groups.Any());
