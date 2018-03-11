@@ -35,7 +35,7 @@
     <structuredBody classCode="DOCBODY" moodCode="EVN">
       <component typeCode="COMP" contextConductionInd="true">
         <section classCode="DOCSECT" moodCode="EVN">
-          <title language="en-US">Arztbesuch</title>
+          <title language="de-DE">Arztbesuch</title>
           <text representation="TXT">Diagnose</text>
           <confidentialityCode code="V" codeSystem="2.16.840.1.113883.5.25" displayName="very restricted" />
           <entry typeCode="DRIV" contextConductionInd="true">

@@ -71,6 +71,46 @@ namespace UITest.View
         }
 
         [Test]
+        public void DeleteMedication()
+        {
+            app.SwipeRightToLeft();
+            app.Tap("Hinzufügen");
+            app.EnterText("Name", "Aspirin");
+            app.EnterText("EditDosis", "400mg");
+            app.Tap("+");
+            app.Tap("+");
+            app.Tap("+");
+            app.Tap("StartDatePicker_Container");
+            app.Tap("date_picker_header_year");
+            app.Tap("2012");
+            app.Tap("date_picker_header_date");
+            app.Tap("prev");
+            app.Tap("date_picker_day_picker");
+            app.Tap("OK");
+            app.Tap("EndDatePicker_Container");
+            app.Tap("date_picker_header_year");
+            app.Tap("2020");
+            app.Tap("date_picker_header_date");
+            app.Tap("next");
+            app.Tap("next");
+            app.Tap("date_picker_day_picker");
+            app.Tap("OK");
+            app.Tap("Fertig");
+            app.TouchAndHold("Dosis");
+            app.Tap("Löschen");
+            AppResult[] result = app.Query("Dosis");
+            Assert.IsEmpty(result);
+            result = app.Query("Frequency");
+            Assert.IsEmpty(result);
+            result = app.Query("MedicationName");
+            Assert.IsEmpty(result);
+            result = app.Query("StartDate");
+            Assert.IsEmpty(result);
+            result = app.Query("Duration");
+            Assert.IsEmpty(result);
+        }
+
+        [Test]
         public void EditMedication()
         {
             app.SwipeRightToLeft();
