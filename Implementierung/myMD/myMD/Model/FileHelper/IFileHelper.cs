@@ -19,7 +19,7 @@ namespace myMD.Model.FileHelper
         /// <param name="format">Format der Datei</param>
         /// <param name="data">Daten der Datei</param>
         /// <returns>Der vollständige Dateipfad</returns>
-        string WriteLocalFileFromBytes(string format, string data);
+        string WriteLocalFileFromString(string format, string data);
 
         /// <summary>
         /// Löscht die gegebene Datei im lokalen Dateisystem

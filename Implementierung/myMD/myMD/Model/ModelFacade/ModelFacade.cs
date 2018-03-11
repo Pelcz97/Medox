@@ -86,7 +86,7 @@ namespace myMD.Model.ModelFacade
             List<byte[]> files = await bluetooth.ReadAllFilesOnServer();
 
             foreach (byte[] file in files){
-                var path = fileHelper.WriteLocalFileFromBytes(".hl7", Encoding.UTF8.GetString(file, 0, file.Length));
+                var path = fileHelper.WriteLocalFileFromString(".hl7", Encoding.UTF8.GetString(file, 0, file.Length));
                 parser.ParseFileToDatabase(path, database);
             }
         }

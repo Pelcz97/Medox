@@ -49,23 +49,25 @@ namespace myMD.Model.TransmissionModel
             int NumberOfFiles = await GetNumberOfFiles();
             Debug.WriteLine("Number of Files: " + NumberOfFiles);
 
-            if(NumberOfFiles != 0){
+            if (NumberOfFiles != 0)
+            {
                 List<List<byte[]>> ListOfFiles = new List<List<byte[]>>();
 
-                for (int i = 0; i < NumberOfFiles; i++){
+                for (int i = 0; i < NumberOfFiles; i++)
+                {
                     var file = await ReadSpecificFile(i);
 
-                    if(file != null){
+                    if (file != null)
+                    {
                         ListOfFiles.Add(file);
                     }
                 }
 
                 return FormatAllFiles(ListOfFiles);
 
-            } else {
-                Debug.WriteLine("Server seems to be empty or something went wrong.");
-                return null;
             }
+            Debug.WriteLine("Server seems to be empty or something went wrong.");
+            return null;
         }
 
         /// <summary>
@@ -90,10 +92,9 @@ namespace myMD.Model.TransmissionModel
                 }
 
                 return FileAsBytes;
-            } else {
-                Debug.WriteLine("The file you're looking for seems to be empty or not existend.");
-                return null;
             }
+            Debug.WriteLine("The file you're looking for seems to be empty or not existend.");
+            return null;
         }
 
         /// <summary>
@@ -110,11 +111,13 @@ namespace myMD.Model.TransmissionModel
                 for (int i = 0; i < NumberOfSlices; i++)
                 {
                     byte[] request = Encoding.UTF8.GetBytes(FileNumber + "," + i);
-                    var write = ConnectedGattServer.WriteCharacteristicValue(myMD_FileTransfer, RequestAndRespond, request);
+                    //var write = ConnectedGattServer.WriteCharacteristicValue(myMD_FileTransfer, RequestAndRespond, request);
+                    var write = WriteToCharacteristic(myMD_FileTransfer, RequestAndRespond, request);
 
                     await Task.Delay(100);
 
-                    var read = ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, RequestAndRespond);
+                    //var read = ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, RequestAndRespond);
+                    var read = ReadFromCharacteristic(myMD_FileTransfer, RequestAndRespond);
                     resultList.Add(await read);
                 }
                 return resultList;
@@ -134,22 +137,21 @@ namespace myMD.Model.TransmissionModel
         {
             try
             {
-                if (ConnectedGattServer != null)
+                /// The server answers a Read-Request with the number of files he's currently holding
+                var read = await ReadFromCharacteristic(myMD_FileTransfer, RequestNumberOfFiles);
+                //var read = ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, RequestNumberOfFiles);
+
+                if (read != null)
                 {
-                    /// The server answers a Read-Request with the number of files he's currently holding
-                    var read = ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, RequestNumberOfFiles);
-
-                    Debug.WriteLine(BitConverter.ToInt32(await read, 0));
-
-                    return BitConverter.ToInt32(await read, 0);
-                } else {
-                    return 0;
+                    
+                    return BitConverter.ToInt32(read, 0);
                 }
+                return 5;
             }
             catch (GattException ex)
             {
                 Debug.WriteLine(ex.ToString());
-                return 0;
+                return 5;
             }
         }
 
@@ -167,17 +169,18 @@ namespace myMD.Model.TransmissionModel
                 byte[] request = Encoding.UTF8.GetBytes(FileNumber.ToString());
 
                 //Write the Number in the characteristic
-                var value = ConnectedGattServer.WriteCharacteristicValue(
+                /*var value = ConnectedGattServer.WriteCharacteristicValue(
                     myMD_FileTransfer,
                     RequestNumberOfSlices,
-                    request);
+                    request);*/
+                var value = WriteToCharacteristic(myMD_FileTransfer, RequestNumberOfSlices, request);
 
                 await Task.Delay(100);
 
                 /// When a Read-Request is now send, the server will respond with 
                 /// the Number of times one has to read to receive all the parts of the wanted file
-                var read = ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, RequestNumberOfSlices);
-
+                //var read = ConnectedGattServer.ReadCharacteristicValue(myMD_FileTransfer, RequestNumberOfSlices);
+                var read = ReadFromCharacteristic(myMD_FileTransfer, RequestNumberOfSlices);
                 return BitConverter.ToInt32(await read, 0);
             }
             catch (GattException ex)
@@ -187,6 +190,23 @@ namespace myMD.Model.TransmissionModel
             }
         }
 
+        public Task<byte[]> ReadFromCharacteristic(Guid service, Guid characteristic){
+            if (ConnectedGattServer != null)
+            {
+                var read = ConnectedGattServer.ReadCharacteristicValue(service, characteristic);
+                return read;
+            }
+            return null;
+        }
+
+        public Task<byte[]> WriteToCharacteristic(Guid service, Guid characteristic, byte[] value){
+            if (ConnectedGattServer != null)
+            {
+                var message = ConnectedGattServer.WriteCharacteristicValue(service, characteristic, value);
+                return message;
+            }
+            return null;
+        }
 
         public byte[] ListToArray(List<byte[]> list){
             

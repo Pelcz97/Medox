@@ -1,7 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using myMD.Model.TransmissionModel;
 using NUnit.Framework;
+using Moq;
+using nexus.protocols.ble;
+using System.Diagnostics;
+using nexus.protocols.ble.gatt;
+using System.Text;
 
 namespace myMDTests.Model.TransmissionModel
 {
@@ -13,8 +19,13 @@ namespace myMDTests.Model.TransmissionModel
         private byte[] simpleNumberArray1 = new byte[3] { 1, 2, 3 };
         private byte[] simpleNumberArray2 = new byte[3] { 4, 5, 6 };
         private byte[] simpleNumberArray3 = new byte[3] { 7, 8, 9 };
-        private byte[] simpleNumberArrayCombined = new byte[9] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        private byte[] singleNumberArray1 = new byte[1] { 1 };
 
+        private byte[] oneAsByteArray = new byte[1] { Convert.ToByte(1) };
+
+        private byte[] simpleNumberArrayCombined = new byte[9] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        private Guid guid1 = new Guid();
+        private Guid guid2 = new Guid();
 
         [Test]
         public void ListToArrayTest(){
@@ -26,6 +37,45 @@ namespace myMDTests.Model.TransmissionModel
 
             byte[] result = test.ListToArray(testList);
             Assert.AreEqual(result, simpleNumberArrayCombined);
-        }    
+        }  
+
+        [Test]
+        public void EmptyListToArrayTest(){
+            List<byte[]> testList = new List<byte[]>();
+            byte[] result = test.ListToArray(testList);
+
+            Assert.AreEqual(result.Length, 0);
+        }
+
+        [Test]
+        public async Task GetNumberOfFilesTest()
+        {
+            
+            var mockBluetooth = new Mock<IBluetooth>();
+
+            //mockBluetooth.Setup(x => x.WriteToCharacteristic(guid1, guid2, singleNumberArray1)).ReturnsAsync(singleNumberArray1);
+            mockBluetooth.Setup(x => x.ReadFromCharacteristic(guid1, guid2)).ReturnsAsync(oneAsByteArray);
+
+            var result = await mockBluetooth.Object.GetNumberOfFiles();
+
+            Debug.WriteLine(result);
+
+            Assert.AreEqual(result, 0);
+
+        }
+
+        [Test]
+        public async Task GetReadCyclesTest()
+        {
+
+            var mockBluetooth = new Mock<IBluetooth>();
+
+            mockBluetooth.Setup(x => x.WriteToCharacteristic(guid1, guid2, singleNumberArray1)).ReturnsAsync(oneAsByteArray);
+            mockBluetooth.Setup(x => x.ReadFromCharacteristic(guid1, guid2)).ReturnsAsync(oneAsByteArray);
+
+            var result = mockBluetooth.Object.GetReadCycles(1);
+            Assert.AreEqual(await result, 0);
+        }
+
     }
 }

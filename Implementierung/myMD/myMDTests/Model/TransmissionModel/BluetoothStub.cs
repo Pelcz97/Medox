@@ -29,7 +29,7 @@ namespace myMDTests.Model.TransmissionModel
         }
 
 
-        public Task<List<byte[]>> ReadAllFilesOnServer()
+        public Task<List<List<byte[]>>> ReadAllFilesOnServer()
         {
             throw new NotImplementedException();
         }
@@ -40,6 +40,11 @@ namespace myMDTests.Model.TransmissionModel
         }
 
         public void ReadFileZero()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<byte[]> ReadFromCharacteristic(Guid service, Guid characteristic)
         {
             throw new NotImplementedException();
         }
@@ -57,6 +62,11 @@ namespace myMDTests.Model.TransmissionModel
         public void send(string filePath)
         {
             File = filePath;
+        }
+
+        public Task<byte[]> WriteToCharacteristic(Guid service, Guid characteristic, byte[] value)
+        {
+            throw new NotImplementedException();
         }
 
         Task<int> IBluetooth.GetReadCycles(int FileNumber)

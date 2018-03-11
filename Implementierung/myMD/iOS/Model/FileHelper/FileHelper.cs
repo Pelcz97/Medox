@@ -47,7 +47,7 @@ namespace myMD.Model.FileHelper.iOS
             return path;
         }
 
-        public string WriteLocalFileFromBytes(string format, string data)
+        public string WriteLocalFileFromString(string format, string data)
         {
             string path = Path.Combine(PATH, Guid.NewGuid().ToString() + format);
             File.WriteAllText(path, data);
