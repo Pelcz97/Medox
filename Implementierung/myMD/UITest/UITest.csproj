@@ -57,6 +57,7 @@
     <Compile Include="View\OverviewUITests.cs" />
     <Compile Include="AppInitializer.cs" />
     <Compile Include="View\ProfilUITests.cs" />
+    <Compile Include="View\SendDataUITests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Droid\myMD.Droid.csproj">

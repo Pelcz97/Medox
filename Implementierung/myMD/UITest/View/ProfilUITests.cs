@@ -54,6 +54,7 @@ namespace UITest
             app.Tap("BloodtypePicker");
             app.Tap("text1");
             app.Tap("Fertig");
+            app.Flash("Profil");
             AppResult[] result = app.Query("LastNameLabel");
             Assert.AreEqual(result[0].Text, "Pelcz");
             result = app.Query("NameLabel");
