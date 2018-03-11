@@ -135,48 +135,48 @@
 \chapter{Einleitung}
 \chapter{Testvorbereitung}
 \section{Zu testende Komponenten}
+Da sich unser System aus drei Subsystemen (Model, ViewModel, View) zusammensetzt, sollten alle 3 Subsysteme getestet werden. Jedoch lässt sich die \textbf{View} nicht automatisch testen, da sie nur die Benutzeroberfläche und ihre Logik enthält. Außerdem ist sie sehr stark mit dem \textbf{ViewModel} verknüpft und . Deshalb haben wir uns entschieden, dass wir das Model
 
 \section{Testvorgaben aus dem Pflichtenheft}
-Im folgenden werden alle Systemtests aus dem Pflichtenheft mit ihren Ergebnissen aufgeführt. Da manche Tests (vorallem Datenübertragungs- und Übersicht-Tests) eine Bluetoothübertragung benötigen konnten diese nicht vollständig automatisch durchgeführt werden. Denn das emulierte Testhandy bietet keine Möglichkeit einer Bluetoothdatenübertragung. Diese Tests wurden manuell getestet. Außerdem bietet Xamarin.Forms keine Möglichkeit UITests (Systemtests) für ein UWP an. Deshalb wurden die alle Tests, die die Desktop-Anwendung betreffen, auch manuell durchgeführt. Da wir uns bei der Implementierung an den, im Pflichtenheft vorgegebenen, Tests entlanggehangelt haben, laufen diese Tests fehlerfrei. Außerdem empfanden wir im Nachhinein\newline \newline
+Im folgenden werden alle Systemtests aus dem Pflichtenheft mit ihren Ergebnissen aufgeführt. Da manche Tests (vorallem Datenübertragungs- und Übersicht-Tests) eine Bluetoothübertragung benötigen konnten diese nicht vollständig automatisch durchgeführt werden. Denn das emulierte Testhandy bietet keine Möglichkeit einer Bluetoothdatenübertragung. Diese Tests wurden manuell getestet. Außerdem bietet Xamarin.Forms keine Möglichkeit UITests (Systemtests) für ein UWP an. Deshalb wurden die alle Tests, die die Desktop-Anwendung betreffen, auch manuell durchgeführt. Da wir uns bei der Implementierung an den, im Pflichtenheft vorgegebenen, Tests entlanggehangelt haben, laufen diese Tests fehlerfrei.\newline \newline
 \textit{Legende:} \newline
 A[BT0000]  $\widehat{=}$ Test \dq{}BT000\dq{} wurde automatisch durchgeführt \newline
 M[BT0000]  $\widehat{=}$ Test \dq{}BT000\dq{} wurde manuell durchgeführt \newline
-E[BT0000]  $\widehat{=}$ Die Funktion, die den Test \dq{}BT000\dq{} benötigt wurde entfernt oder modifiziert
-I[BT0000]  $\widehat{=}$ Die Funktion, die den Test \dq{}BT000\dq{} benötigt wurde noch nicht implementiert
+E[BT0000]  $\widehat{=}$ Die Funktion, die den Test \dq{}BT000\dq{} benötigt wurde entfernt, nicht implementiert oder modifiziert
 \subsection{Basis Testfälle (BT)}
 \subsubsection{Patientenseitige Datenübertragung}
 \begin{tabular}{lll}
 M[BT1010] & \multicolumn{2}{p{12cm}}  {\gls{Desktop Anwendung} sendet eine Datei an die myMD \gls{App}.} \\
-{[BT1020]} & \multicolumn{2}{p{12cm}}  {Die Übertragung wird vom \gls{Nutzer} unterbrochen.} \\
-{[BT1030]} & \multicolumn{2}{p{12cm}}  {\gls{Desktop Anwendung} sendet eine unzulässige Datei (nicht unterstütztes Dateiformat).} \\
-{[BT1040]} & \multicolumn{2}{p{12cm}}  {Die Übertragung wird durch äußere Umstände abgebrochen.} \\
+{E[BT1020]} & \multicolumn{2}{p{12cm}}  {Die Übertragung wird vom \gls{Nutzer} unterbrochen.} \\
+{M[BT1030]} & \multicolumn{2}{p{12cm}}  {\gls{Desktop Anwendung} sendet eine unzulässige Datei (nicht unterstütztes Dateiformat).} \\
+{M[BT1040]} & \multicolumn{2}{p{12cm}}  {Die Übertragung wird durch äußere Umstände abgebrochen.} \\
 
 \end{tabular}
 
 \subsubsection{Darstellung}
 \begin{tabular}{lll}
-[BT2010] & \multicolumn{2}{p{12cm}}  {Ein neuer \gls{Arztbrief} wird in eine leere Übersicht geladen.} \\
-{[BT2020]} & \multicolumn{2}{p{12cm}}  {Ein neuer \gls{Arztbrief} wird in bereits gefüllte Übersicht geladen.} \\
-{[BT2030]} & \multicolumn{2}{p{12cm}}  {Ein digitaler \gls{Arztbrief} wird angetippt/geöffnet.} \\
-{[BT2040]} & \multicolumn{2}{p{12cm}}  {Ein digitaler \gls{Arztbrief} wird geschlossen.} \\
-{[BT2050]} & \multicolumn{2}{p{12cm}}  {Ein digitaler \gls{Arztbrief} wird gelöscht.} \\
+M[BT2010] & \multicolumn{2}{p{12cm}}  {Ein neuer \gls{Arztbrief} wird in eine leere Übersicht geladen.} \\
+{M[BT2020]} & \multicolumn{2}{p{12cm}}  {Ein neuer \gls{Arztbrief} wird in bereits gefüllte Übersicht geladen.} \\
+{M[BT2030]} & \multicolumn{2}{p{12cm}}  {Ein digitaler \gls{Arztbrief} wird angetippt/geöffnet.} \\
+{M[BT2040]} & \multicolumn{2}{p{12cm}}  {Ein digitaler \gls{Arztbrief} wird geschlossen.} \\
+{M[BT2050]} & \multicolumn{2}{p{12cm}}  {Ein digitaler \gls{Arztbrief} wird gelöscht.} \\
 
 \end{tabular}
 
 \subsubsection{Einstellungen}
 \begin{tabular}{lll}
-{[BT3010]} & \multicolumn{2}{p{12cm}}  {Das Nutzerprofil wird bearbeitet.} \\
+{A[BT3010]} & \multicolumn{2}{p{12cm}}  {Das Nutzerprofil wird bearbeitet.} \\
 \end{tabular}
 
 \subsubsection{\gls{Desktop Anwendung}}
 \begin{tabular}{lll}
-{[BT4010]} & \multicolumn{2}{p{12cm}}  {Unzulässige Datei wird zum Senden ausgewählt.} \\
-{[BT4020]} & \multicolumn{2}{p{12cm}}  {Kompatible Datei wird zum Senden ausgewählt.} \\
-{[BT4030]} & \multicolumn{2}{p{12cm}}  {Senden wird erfolgreich abgeschlossen.} \\
-{[BT4040]} & \multicolumn{2}{p{12cm}}  {Senden wird durch äußere Einflüsse unterbrochen.} \\
-{[BT4050]} & \multicolumn{2}{p{12cm}}  {Senden wird durch \gls{Nutzer} unterbrochen.} \\
-{[BT4060]} & \multicolumn{2}{p{12cm}}  {Geräte in der Nähe werden gesucht.} \\
-{[BT4070]} & \multicolumn{2}{p{12cm}}  {Nutzergerät wird als Empfänger gewählt.} \\
+{M[BT4010]} & \multicolumn{2}{p{12cm}}  {Unzulässige Datei wird zum Senden ausgewählt.} \\
+{M[BT4020]} & \multicolumn{2}{p{12cm}}  {Kompatible Datei wird zum Senden ausgewählt.} \\
+{M[BT4030]} & \multicolumn{2}{p{12cm}}  {Senden wird erfolgreich abgeschlossen.} \\
+{M[BT4040]} & \multicolumn{2}{p{12cm}}  {Senden wird durch äußere Einflüsse unterbrochen.} \\
+{M[BT4050]} & \multicolumn{2}{p{12cm}}  {Senden wird durch \gls{Nutzer} unterbrochen.} \\
+{E[BT4060]} & \multicolumn{2}{p{12cm}}  {Geräte in der Nähe werden gesucht.} \\
+{E[BT4070]} & \multicolumn{2}{p{12cm}}  {Nutzergerät wird als Empfänger gewählt.} \\
 
 
 
@@ -185,67 +185,66 @@ M[BT1010] & \multicolumn{2}{p{12cm}}  {\gls{Desktop Anwendung} sendet eine Datei
 \subsection{Erweiterte Testfälle (ET)}
 \subsubsection{Patientenseitige Datenübertragung}
 \begin{tabular}{lll}
-[ET1010] & \multicolumn{2}{p{12cm}}  {myMD \gls{App} sendet eine Datei an die \gls{Desktop Anwendung}.} \\
-{[ET1020]} & \multicolumn{2}{p{12cm}}  {myMD \gls{App} sendet mehrere Dateien an die \gls{Desktop Anwendung}.} \\
-{[ET1030]} & \multicolumn{2}{p{12cm}}  {\gls{Desktop Anwendung} sendet mehrere Datei an die myMD \gls{App}.} \\
-{[ET1040]} & \multicolumn{2}{p{12cm}}  {Die Übertragung mehrerer Daten wird durch äußere Umstände abgebrochen.} \\
-{[ET1050]} & \multicolumn{2}{p{12cm}}  {Die Übertragung mehrerer Daten wird durch den \gls{Nutzer} abgebrochen.} \\
-{[ET1060]} & \multicolumn{2}{p{12cm}}  {Sensible Daten werden von der myMD \gls{App} an die \gls{Desktop Anwendung} gesendet.} \\
-{[ET1070]} & \multicolumn{2}{p{12cm}}  {Die Verbindung wird über NFC hergetellt.} \\
-{[ET1080]} & \multicolumn{2}{p{12cm}}  {Ein Profil wird auf ein anderes Gerät übertragen.} \\
+E[ET1010] & \multicolumn{2}{p{12cm}}  {myMD \gls{App} sendet eine Datei an die \gls{Desktop Anwendung}.} \\
+{E[ET1020]} & \multicolumn{2}{p{12cm}}  {myMD \gls{App} sendet mehrere Dateien an die \gls{Desktop Anwendung}.} \\
+{M[ET1030]} & \multicolumn{2}{p{12cm}}  {\gls{Desktop Anwendung} sendet mehrere Datei an die myMD \gls{App}.} \\
+{M[ET1040]} & \multicolumn{2}{p{12cm}}  {Die Übertragung mehrerer Daten wird durch äußere Umstände abgebrochen.} \\
+{M[ET1050]} & \multicolumn{2}{p{12cm}}  {Die Übertragung mehrerer Daten wird durch den \gls{Nutzer} abgebrochen.} \\
+{E[ET1060]} & \multicolumn{2}{p{12cm}}  {Sensible Daten werden von der myMD \gls{App} an die \gls{Desktop Anwendung} gesendet.} \\
+{E[ET1070]} & \multicolumn{2}{p{12cm}}  {Die Verbindung wird über NFC hergetellt.} \\
+{E[ET1080]} & \multicolumn{2}{p{12cm}}  {Ein Profil wird auf ein anderes Gerät übertragen.} \\
 
 \end{tabular}
 
 \subsubsection{Darstellung}
 \begin{tabular}{lll}
-[ET2010] & \multicolumn{2}{p{12cm}}  {\gls{Medikament} wird hinzugefügt.} \\
-{[ET2020]} & \multicolumn{2}{p{12cm}}  {\gls{Medikament} wird editiert.} \\
-{[ET2030]} & \multicolumn{2}{p{12cm}}  {\gls{Medikament} wird gelöscht.} \\
-{[ET2040]} & \multicolumn{2}{p{12cm}}  {Laborwerte werden hinzugefügt.} \\
-{[ET2050]} & \multicolumn{2}{p{12cm}}  {Laborwerte werden gelöscht.} \\{[ET2060]} & \multicolumn{2}{p{12cm}}  {Bilddatei wird hinzugefügt und dargestellt.} \\
-{[ET2070]} & \multicolumn{2}{p{12cm}}  {Bilddatei wird mit einem \gls{Arztbrief} verknüpft.} \\
-{[ET2080]} & \multicolumn{2}{p{12cm}}  {Verknüpfung zwischen \gls{Arztbrief} und Bilddatei wird getrennt.} \\
-{[ET2090]} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Bilddatei originalgetreu ist.} \\
-{[ET2100]} & \multicolumn{2}{p{12cm}}  {Mehrere \glspl{Arztbrief} gruppieren.} \\
-{[ET2110]} & \multicolumn{2}{p{12cm}}  {Einzelne \glspl{Arztbrief} aus bestehender Gruppe entfernen.} \\
-{[ET2120]} & \multicolumn{2}{p{12cm}}  {Nach eigenen Gruppen sortieren.} \\
-{[ET2130]} & \multicolumn{2}{p{12cm}}  {Überprüfen, ob Suchfunktion fehlerfrei funktioniert.} \\
+A[ET2010] & \multicolumn{2}{p{12cm}}  {\gls{Medikament} wird hinzugefügt.} \\
+{A[ET2020]} & \multicolumn{2}{p{12cm}}  {\gls{Medikament} wird editiert.} \\
+{A[ET2030]} & \multicolumn{2}{p{12cm}}  {\gls{Medikament} wird gelöscht.} \\
+{E[ET2040]} & \multicolumn{2}{p{12cm}}  {Laborwerte werden hinzugefügt.} \\
+{E[ET2050]} & \multicolumn{2}{p{12cm}}  {Laborwerte werden gelöscht.} \\{E[ET2060]} & \multicolumn{2}{p{12cm}}  {Bilddatei wird hinzugefügt und dargestellt.} \\
+{E[ET2070]} & \multicolumn{2}{p{12cm}}  {Bilddatei wird mit einem \gls{Arztbrief} verknüpft.} \\
+{E[ET2080]} & \multicolumn{2}{p{12cm}}  {Verknüpfung zwischen \gls{Arztbrief} und Bilddatei wird getrennt.} \\
+{E[ET2090]} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Bilddatei originalgetreu ist.} \\
+{E[ET2100]} & \multicolumn{2}{p{12cm}}  {Mehrere \glspl{Arztbrief} gruppieren.} \\
+{E[ET2110]} & \multicolumn{2}{p{12cm}}  {Einzelne \glspl{Arztbrief} aus bestehender Gruppe entfernen.} \\
+{E[ET2120]} & \multicolumn{2}{p{12cm}}  {Nach eigenen Gruppen sortieren.} \\
+{E[ET2130]} & \multicolumn{2}{p{12cm}}  {Überprüfen, ob Suchfunktion fehlerfrei funktioniert.} \\
 
 
 \end{tabular}
 
 \subsubsection{Einstellungen}
 \begin{tabular}{lll}
-[ET3010] & \multicolumn{2}{p{12cm}}  {Neues Nutzerprofil wird angelegt.} \\
-{[ET3020]} & \multicolumn{2}{p{12cm}}  {Ein weiteres Nutzerprofil wird angelegt.} \\
-{[ET3030]} & \multicolumn{2}{p{12cm}}  {Ein Nutzerprofil wird gelöscht.} \\
-{[ET3040]} & \multicolumn{2}{p{12cm}}  {Wechsel zwischen mehreren Nutzerprofilen.} \\
-{[ET3050]} & \multicolumn{2}{p{12cm}}  {Einzelnen \gls{Arztbrief} als sensibel markieren.} \\
-{[ET3060]} & \multicolumn{2}{p{12cm}}  {Sensibiltäts-Markierung eines einzelnen Arztbriefes aufheben.} \\
-{[ET3070]} & \multicolumn{2}{p{12cm}}  {Gruppe von Arztbriefen als sensibel markieren.} \\
-{[ET3080]} & \multicolumn{2}{p{12cm}}  {Sensibiltäts-Markierung einer Gruppe von Arztbriefen aufheben.} \\
-{[ET3090]} & \multicolumn{2}{p{12cm}}  {Regelmäßiger Arzttermin wird hinzugefügt.} \\
-{[ET3100]} & \multicolumn{2}{p{12cm}}  {Regelmäßiger Arzttermin wird gelöscht.} \\
+A[ET3010] & \multicolumn{2}{p{12cm}}  {Neues Nutzerprofil wird angelegt.} \\
+{E[ET3020]} & \multicolumn{2}{p{12cm}}  {Ein weiteres Nutzerprofil wird angelegt.} \\
+{E[ET3030]} & \multicolumn{2}{p{12cm}}  {Ein Nutzerprofil wird gelöscht.} \\
+{E[ET3040]} & \multicolumn{2}{p{12cm}}  {Wechsel zwischen mehreren Nutzerprofilen.} \\
+{E[ET3050]} & \multicolumn{2}{p{12cm}}  {Einzelnen \gls{Arztbrief} als sensibel markieren.} \\
+{E[ET3060]} & \multicolumn{2}{p{12cm}}  {Sensibiltäts-Markierung eines einzelnen Arztbriefes aufheben.} \\
+{E[ET3070]} & \multicolumn{2}{p{12cm}}  {Gruppe von Arztbriefen als sensibel markieren.} \\
+{E[ET3080]} & \multicolumn{2}{p{12cm}}  {Sensibiltäts-Markierung einer Gruppe von Arztbriefen aufheben.} \\
+{E[ET3090]} & \multicolumn{2}{p{12cm}}  {Regelmäßiger Arzttermin wird hinzugefügt.} \\
+{E[ET3100]} & \multicolumn{2}{p{12cm}}  {Regelmäßiger Arzttermin wird gelöscht.} \\
 
 \end{tabular}
 
 \subsubsection{\gls{Desktop Anwendung}}
 \begin{tabular}{lll}
-{[ET4010]} & \multicolumn{2}{p{12cm}}  {Datei mit falscher Versichertennummer wird gesendet.} \\
+{E[ET4010]} & \multicolumn{2}{p{12cm}}  {Datei mit falscher Versichertennummer wird gesendet.} \\
 
 
 \end{tabular}
 \chapter{Automatische Tests}
+
 \section{Unit Tests}
-\section{Integrations Tests}
+\section{UITests}
 \chapter{Manuelle Tests}
 \section{Datenübertragung}
 \chapter{Verbleibende Bugs}
 \chapter{Anhang}
 \section{Statistiken}
-\section{Glossar}
-\section{UI-Testprotokolle}
- 
+
 \printnoidxglossaries
 
 % Abbildungsverzeichnis

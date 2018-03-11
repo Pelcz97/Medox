@@ -45,7 +45,7 @@ namespace UITest.View
             app.Flash("0 Dateien verfügbar");
             result = app.Query("Geräte suchen");
             Assert.IsNotNull(result[0]);
-            Assert.IsFalse(result[0].Enabled);
+            Assert.IsTrue(result[0].Enabled);
             result = app.Query("0 Dateien verfügbar");
             Assert.IsNotNull(result[0]);
             Assert.IsTrue(result[0].Enabled);

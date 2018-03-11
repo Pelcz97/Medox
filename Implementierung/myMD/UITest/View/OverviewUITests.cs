@@ -87,6 +87,7 @@ namespace UITest
             app.Flash("Bloodtype");
             app.Flash("Bearbeiten");
             app.Tap("Bearbeiten");
+            app.Query("Profil bearbeiten");
             app.Flash("Profil bearbeiten");
             app.Flash("Abbrechen");
             app.Flash("Fertig");

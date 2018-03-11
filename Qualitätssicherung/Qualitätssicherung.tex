@@ -135,6 +135,7 @@
 \chapter{Einleitung}
 \chapter{Testvorbereitung}
 \section{Zu testende Komponenten}
+Da sich unser System aus drei Subsystemen (\textbf{Model}, \textbf{ViewModel}, \textbf{View}) zusammensetzt, sollten alle drei Subsysteme getestet werden. Jedoch lässt sich die \textbf{View} nicht automatisch testen, da sie nur die Benutzeroberfläche und ihre Logik enthält. Außerdem ist sie sehr stark mit dem \textbf{ViewModel} verknüpft. Deshalb haben wir uns entschieden, das \textbf{ViewModel} und die \textbf{View} zusammen zu testen. Dadurch ergeben sich die UnitTests für das \textbf{Model} und die UITests für das \textbf{ViewModel} und die \textbf{View}.
 
 \section{Testvorgaben aus dem Pflichtenheft}
 Im folgenden werden alle Systemtests aus dem Pflichtenheft mit ihren Ergebnissen aufgeführt. Da manche Tests (vorallem Datenübertragungs- und Übersicht-Tests) eine Bluetoothübertragung benötigen konnten diese nicht vollständig automatisch durchgeführt werden. Denn das emulierte Testhandy bietet keine Möglichkeit einer Bluetoothdatenübertragung. Diese Tests wurden manuell getestet. Außerdem bietet Xamarin.Forms keine Möglichkeit UITests (Systemtests) für ein UWP an. Deshalb wurden die alle Tests, die die Desktop-Anwendung betreffen, auch manuell durchgeführt. Da wir uns bei der Implementierung an den, im Pflichtenheft vorgegebenen, Tests entlanggehangelt haben, laufen diese Tests fehlerfrei.\newline \newline
@@ -235,16 +236,15 @@ A[ET3010] & \multicolumn{2}{p{12cm}}  {Neues Nutzerprofil wird angelegt.} \\
 
 \end{tabular}
 \chapter{Automatische Tests}
+
 \section{Unit Tests}
-\section{Integrations Tests}
+\section{UITests}
 \chapter{Manuelle Tests}
 \section{Datenübertragung}
 \chapter{Verbleibende Bugs}
 \chapter{Anhang}
 \section{Statistiken}
-\section{Glossar}
-\section{UI-Testprotokolle}
- 
+
 \printnoidxglossaries
 
 % Abbildungsverzeichnis
