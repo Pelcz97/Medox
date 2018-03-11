@@ -30,7 +30,7 @@ namespace myMDTests.Model.ParserModel
 
         private static IFileHelper helper = new TestFileHelper();
 
-        public static string Custom(int i) => helper.GetLocalFilePath(CUSTOM[i]);
+        public static string Custom(int i) => CUSTOM[i];
 
         static Hl7FileUtility()
         {
@@ -179,7 +179,7 @@ namespace myMDTests.Model.ParserModel
                     {
                         var letters = Letter;
                         var letter = letters[i];
-                        using (XmlWriter xw = XmlWriter.Create(Custom(i), new XmlWriterSettings() { Indent = true }))
+                        using (XmlWriter xw = XmlWriter.Create(helper.GetLocalFilePath(Custom(i)), new XmlWriterSettings() { Indent = true }))
                         {
                             fmtr.Graph(xw, CreateCDA(Profile, Doctor, Letter[0]));
                         }
