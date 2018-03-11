@@ -19,8 +19,9 @@ namespace myMD.Model.FileHelper.iOS
         /// <see>myMD.Model.FileHelper.IFileHelper#DeleteFile(string)</see>
         public void DeleteFile(string filename)
         {
-            Debug.WriteLine(File.Exists(filename));
-            File.Delete(filename);
+            if(File.Exists(filename)){
+                File.Delete(filename);
+            }
         }
 
         /// <see>myMD.Model.FileHelper.IFileHelper#GetLocalFilePath(string)</see>
@@ -42,6 +43,8 @@ namespace myMD.Model.FileHelper.iOS
         {
             string path = Path.Combine(PATH, Guid.NewGuid().ToString() + format);
             File.WriteAllText(path, data);
+            Debug.WriteLine(File.Exists(path));
+            Debug.WriteLine("write path:" + path);
             return path;
         }
 

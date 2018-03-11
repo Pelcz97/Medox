@@ -94,7 +94,9 @@ namespace myMD.Model.ModelFacade
 
             foreach (byte[] file in files){
                 var path = fileHelper.WriteLocalFileFromString(".hl7", Encoding.UTF8.GetString(file, 0, file.Length));
+                Debug.WriteLine("Path should be: " + path);
                 parser.ParseFileToDatabase(path, database);
+                
             }
         }
 
