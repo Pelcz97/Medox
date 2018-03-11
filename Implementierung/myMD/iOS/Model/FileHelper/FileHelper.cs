@@ -1,7 +1,6 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using Foundation;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
@@ -12,13 +11,14 @@ namespace myMD.Model.FileHelper.iOS
     /// Implementierung der IFileHelper Schnittstelle für iOS-Anwendungen
     /// </summary>
     /// <see>myMD.Model.FileHelper.IFileHelper</see>
-    [Xamarin.Forms.Internals.Preserve(AllMembers = true)]
+    [Preserve(AllMembers = true)]
     public class FileHelper : IFileHelper
     {
         private static readonly string PATH = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Library");
         /// <see>myMD.Model.FileHelper.IFileHelper#DeleteFile(string)</see>
         public void DeleteFile(string filename)
         {
+            Debug.WriteLine(File.Exists(filename));
             File.Delete(filename);
         }
 

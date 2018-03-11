@@ -55,6 +55,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
                         await ModelFacade.GetFilesFromServer();
                     } catch (GattException ex){
                         Debug.WriteLine("Fucked up. " + ex);
+                    } catch (InvalidOperationException invalidOperationEx) {
+                        Debug.WriteLine("Falsche oder beschädigte Datei. " + invalidOperationEx);
                     }
 
                     SearchingPossible = true;

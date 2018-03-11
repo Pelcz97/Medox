@@ -44,7 +44,7 @@ namespace myMDTests.Model.TransmissionModel
             List<byte[]> testList = new List<byte[]>();
             byte[] result = test.ListToArray(testList);
 
-            Assert.AreEqual(result.Length, 0);
+            Assert.AreEqual(result.Length, 1);
         }
 
         [Test]
@@ -60,7 +60,7 @@ namespace myMDTests.Model.TransmissionModel
 
             Debug.WriteLine(result);
 
-            Assert.AreEqual(result, 0);
+            Assert.AreEqual(result, 1);
 
         }
 
@@ -74,7 +74,7 @@ namespace myMDTests.Model.TransmissionModel
             mockBluetooth.Setup(x => x.ReadFromCharacteristic(guid1, guid2)).ReturnsAsync(oneAsByteArray);
 
             var result = mockBluetooth.Object.GetReadCycles(1);
-            Assert.AreEqual(await result, 0);
+            Assert.AreEqual(await result, 1);
         }
 
     }
