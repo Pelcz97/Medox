@@ -69,9 +69,6 @@ namespace UITest
             app.Flash("EndDatePicker");
             app.Tap("Abbrechen");
             app.SwipeRightToLeft();
-            app.SwipeLeftToRight();
-            app.Flash("Medikation");
-            app.SwipeRightToLeft();
             app.Flash("Senden");
             app.Flash("Hinweis");
             app.Flash("ReceiveDataButton");
