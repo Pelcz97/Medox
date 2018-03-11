@@ -26,6 +26,7 @@
                     BorderRadius="10" />
             
             <Button Text="{Binding NumberOfFiles, StringFormat='{0:F0} Dateien verfügbar'}"
+                    IsEnabled="{Binding ReadingNumberOfFilesPossible}"
                     Command="{Binding RefreshNumberOfFiles}"
                     TextColor="White"
                     FontAttributes="Bold"

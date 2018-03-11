@@ -20,7 +20,8 @@
             
             <Button Clicked="ReceiveDataButton_Clicked"
                     AutomationId="ReceiveDataButton"
-                   Text="Arztbriefe empfangen"
+                    IsEnabled="{Binding ReceiveLettersButton_Enabled}"
+                    Text="Arztbriefe empfangen"
                     TextColor="White"
                     FontAttributes="Bold"
                     Grid.Row="1"
