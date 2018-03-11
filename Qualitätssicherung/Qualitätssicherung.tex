@@ -235,9 +235,72 @@ A[ET3010] & \multicolumn{2}{p{12cm}}  {Neues Nutzerprofil wird angelegt.} \\
 
 
 \end{tabular}
+
 \chapter{Automatische Tests}
 
 \section{Unit Tests}
+\subsection{DatabaseModel}
+\subsubsection{EntityDatabase}
+\begin{tabular}{lll}
+{GetDataFromProfileTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Daten eines Profils korrekt gespeichert werden.} \\
+{DLetterGroupDLetter} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob Arztbriefe korrekt gruppiert werden können.} \\
+{EqualTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob zwei Arztbriefgruppen gleich sind.} \\
+{DeleteTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob ein Arztbrief korrekt gelöscht wird.} \\
+{GetDoctorTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, der Arzt innerhalb eines Arztbriefes korrekt zurückgegeben wird.} \\
+{GetProfilTest} &
+\multicolumn{2}{p{12cm}}  {Überprüfung, ein Profil aus der Datenbank korrekt \newline zurückgegeben wird.} \\
+\end{tabular}
+\subsubsection{Database}
+\begin{tabular}{lll}
+{MedLetterTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Medikation mit einem Arztbrief verknüpft werden kann} \\
+{GroupTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob Arztbriefe mit verknüpften Medikationen gruppiert werden können.} \\
+\end{tabular}
+
+\subsection{DataModel}
+\subsubsection{MedicationTest}
+\begin{tabular}{lll}
+{SameEqualTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Überprüfung der Gleichheit zweier Medikamente korrekt ist.} \\
+{CopiedEqualTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Überprüfung der Gleichheit einer dublizierten Medikation korrekt ist.} \\
+{NullEqualtest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob der Vergleich einer Medikation mit \textit{null} korrekt ist.} \\
+{NotEqualTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Überprüfung zweier ungleicher Medikamente auf Gleichheit korrekt ist.} \\
+{LetterTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Medikation korrekt mit einem Arztbrief verknüpft wird.} \\
+{DeleteTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Medikation, die mit einem Arztbrief verknüpft ist, korrekt gelöscht wird.} \\
+\end{tabular}
+\subsubsection{DoctorTest}
+\begin{tabular}{lll}
+{SameEqualTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Überprüfung der Gleichheit zweier Ärzte korrekt ist.} \\
+{CopiedEqualTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Überprüfung der Gleichheit von dublizierten Ärzte korrekt ist.} \\
+{NullEqualtest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob der Vergleich eines Arztes mit \textit{null} korrekt ist.} \\
+{NotEqualTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Überprüfung zweier ungleicher Ärzte auf Gleichheit korrekt ist.} \\
+{IDoctorToDoctor} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob ein \textit{IDoctor}-Objekt korrekt zu einem \textit{Doctor}-Objekt konvertiert wird.} \\
+\end{tabular}
+\subsubsection{DoctorTest}
+\begin{tabular}{lll}
+{SameEqualTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Überprüfung der Gleichheit zweier Ärzte korrekt ist.} \\
+{CopiedEqualTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Überprüfung der Gleichheit von dublizierten Ärzten korrekt ist.} \\
+{NullEqualtest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob der Vergleich eines Arztes mit \textit{null} korrekt ist.} \\
+{NotEqualTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Überprüfung zweier ungleicher Ärzte auf Gleichheit korrekt ist.} \\
+{IDoctorToDoctor} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob ein \textit{IDoctor}-Objekt korrekt zu einem \textit{Doctor}-Objekt konvertiert wird.} \\
+\end{tabular}
+\subsubsection{DoctorsLetterTest}
+\begin{tabular}{lll}
+{SameEqualTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Überprüfung der Gleichheit zweier Arztbriefe korrekt ist.} \\
+{CopiedEqualTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Überprüfung der Gleichheit von dublizierten Arztbriefen korrekt ist.} \\
+{NullEqualtest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob der Vergleich eines Arztbriefes mit \textit{null} korrekt ist.} \\
+{NotEqualTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Überprüfung zweier ungleicher Arztbriefe auf Gleichheit korrekt ist.} \\
+{DeleteTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob Arztbrief korrekt gelöscht wird.} \\
+{MedicationTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob Arztbrief verknüpfte Medikationen korrekt behandelt.} \\
+{GroupTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob sich Arztbriefe korrekt gruppieren lassen.} \\
+\end{tabular}
+\subsubsection{DoctorsLetterGroupTest}
+\begin{tabular}{lll}
+{DateTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Gruppe von Arztbriefen, richtige Daten behält.} \\
+{AddTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Gruppe von Arztbriefen korrekt zu der Datenbank hinzugefügt wird.} \\
+{CompareLetterTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Überprüfung zweier gleicher Arztbriefgruppen korrekt funktioniert.} \\
+{FirstLastDateTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die das früheste und das späteste Datum einer Arztbriefgruppe korrekt erkannt wird.} \\
+{DeleteTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Arztbriefgruppe korrekt gelöscht wird.} \\
+
+\end{tabular}
 \section{UITests}
 \chapter{Manuelle Tests}
 \section{Datenübertragung}

@@ -52,13 +52,7 @@ namespace myMDTests.Model.DatabaseModel
             db.InsertAll(letters);
         }
 
-        [SetUp]
-        public void SetUp()
-        {          
-            
-        }
-
-        //[Test]
+        [Test]
         public void MedLetterTest()
         {
             letters[0].AttachMedication(meds[0]);
@@ -67,7 +61,7 @@ namespace myMDTests.Model.DatabaseModel
             Assert.AreEqual(med.DatabaseDoctorsLetter.ID, meds[0].DatabaseDoctorsLetter.ID);
         }
 
-        //[Test]
+        [Test]
         public void GroupTest()
         {
             groups[0].Add(letters[0]);
