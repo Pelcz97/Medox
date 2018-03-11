@@ -146,12 +146,12 @@ namespace myMD.Model.TransmissionModel
                     
                     return BitConverter.ToInt32(read, 0);
                 }
-                return 5;
+                return 0;
             }
             catch (GattException ex)
             {
                 Debug.WriteLine(ex.ToString());
-                return 5;
+                return 0;
             }
         }
 

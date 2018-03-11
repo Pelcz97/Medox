@@ -26,9 +26,6 @@ namespace myMD.Model.FileHelper.iOS
         public string GetLocalFilePath(string filename)
 		{
             string directory = Path.Combine(PATH, filename);
-            Debug.WriteLine("PATH: " + PATH);
-            Debug.WriteLine("filename: " + filename);
-            Debug.WriteLine("Dir: " + directory);
 
             if (!Directory.Exists(directory))
             {
@@ -36,7 +33,6 @@ namespace myMD.Model.FileHelper.iOS
             }
 
             string path = Path.Combine(directory, filename);
-            Debug.WriteLine("Path: " + path);
 
             if (!File.Exists(path))
             {
@@ -50,7 +46,6 @@ namespace myMD.Model.FileHelper.iOS
         {
             string path = Path.Combine(PATH, Guid.NewGuid().ToString() + format);
             File.WriteAllText(path, data);
-            Debug.WriteLine("Path on write: " + path);
             return path;
         }
 
