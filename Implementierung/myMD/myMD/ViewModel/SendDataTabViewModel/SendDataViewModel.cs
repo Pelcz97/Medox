@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using myMD.Model.DependencyService;
+using myMD.Model.TransmissionModel;
 using nexus.protocols.ble;
 using Xamarin.Forms.Internals;
 
@@ -20,17 +22,17 @@ namespace myMD.ViewModel.SendDataTabViewModel
         {
             UpdateButton();
 
-            if (BluetoothAdapter.CurrentState.Value != EnabledDisabledState.Enabled)
+            if (DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter.CurrentState.Value != EnabledDisabledState.Enabled)
             {
-                BluetoothAdapter.CurrentState.Subscribe(state => {
+                DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter.CurrentState.Subscribe(state => {
                     UpdateButton();
                 });
             }
         }
 
         private void UpdateButton(){
-            ReceiveLettersButton_Enabled = (BluetoothAdapter != null
-                                            && BluetoothAdapter.CurrentState.Value == EnabledDisabledState.Enabled);
+            ReceiveLettersButton_Enabled = (DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter != null
+                                            && DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter.CurrentState.Value == EnabledDisabledState.Enabled);
             OnPropertyChanged("ReceiveLettersButton_Enabled");
         }
     }

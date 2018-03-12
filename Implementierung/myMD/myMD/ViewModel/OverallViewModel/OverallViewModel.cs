@@ -6,7 +6,6 @@ using Xamarin.Forms.Internals;
 using System;
 using nexus.protocols.ble;
 using myMD.Model.DependencyService;
-using Acr.UserDialogs;
 
 namespace myMD.ViewModel.OverallViewModel
 {
@@ -19,7 +18,7 @@ namespace myMD.ViewModel.OverallViewModel
         
         public static Guid myMD_FileTransfer = new Guid("88800000-8000-8000-8000-800000000000");
 
-        protected IBluetoothLowEnergyAdapter BluetoothAdapter { get => DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter; }
+        //protected IBluetoothLowEnergyAdapter BluetoothAdapter { get => DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter; }
 
         /// <summary>
         /// Attribut für die ModelFacade
