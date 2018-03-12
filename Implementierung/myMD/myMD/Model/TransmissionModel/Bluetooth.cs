@@ -19,10 +19,10 @@ namespace myMD.Model.TransmissionModel
         /// <summary>
         /// Guids of the services and characteristics myMD is looking for on a server
         /// </summary>
-        public static Guid myMD_FileTransfer = new Guid("88800000-8000-8000-8000-800000000000");
-        public static Guid RequestAndRespond = new Guid("10000000-1000-1000-1000-100000000000");
-        public static Guid RequestNumberOfSlices = new Guid("20000000-2000-2000-2000-200000000000");
-        public static Guid RequestNumberOfFiles = new Guid("30000000-3000-3000-3000-300000000000");
+        private static Guid myMD_FileTransfer = new Guid("88800000-8000-8000-8000-800000000000");
+        private static Guid RequestAndRespond = new Guid("10000000-1000-1000-1000-100000000000");
+        private static Guid RequestNumberOfSlices = new Guid("20000000-2000-2000-2000-200000000000");
+        private static Guid RequestNumberOfFiles = new Guid("30000000-3000-3000-3000-300000000000");
 
         /// <summary>
         /// The connected device hosting the files

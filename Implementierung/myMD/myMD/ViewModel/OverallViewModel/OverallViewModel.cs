@@ -16,9 +16,7 @@ namespace myMD.ViewModel.OverallViewModel
     public class OverallViewModel : INotifyPropertyChanged
     {
         
-        public static Guid myMD_FileTransfer = new Guid("88800000-8000-8000-8000-800000000000");
-
-        //protected IBluetoothLowEnergyAdapter BluetoothAdapter { get => DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter; }
+        protected static Guid myMD_FileTransfer = new Guid("88800000-8000-8000-8000-800000000000");
 
         /// <summary>
         /// Attribut für die ModelFacade
