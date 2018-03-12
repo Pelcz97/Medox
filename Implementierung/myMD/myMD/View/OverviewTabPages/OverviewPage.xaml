@@ -60,25 +60,23 @@
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto" />
                                             <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
                                     
                                             <Label Text="{Binding DoctorsName}"
                                             AutomationId="DoctorsName"
                                             TextColor="#191928" 
-                                            FontSize="Small" 
+                                            FontSize="Small"
                                             FontAttributes="Bold"
                                             HorizontalTextAlignment="Start"
-                                            VerticalOptions="StartAndExpand"
                                             Grid.Row="0"/>
                                         
                                             <Label Text="{Binding DoctorsLetterDate, StringFormat='{0:MMMM dd, yyyy}'}" 
                                             AutomationId="DoctorsLetterDate"
                                             TextColor="#4A4A4A" 
                                             FontSize="Small" 
-                                            HorizontalTextAlignment="End" 
                                             FontAttributes="Bold" 
-                                            HorizontalOptions="EndAndExpand"
+                                            HorizontalTextAlignment="End" 
+                                            HorizontalOptions="End"
                                             VerticalOptions="Start"
                                             Grid.Row="0"/>
                                         
