@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Acr.UserDialogs;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
@@ -19,6 +20,12 @@ namespace myMD.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class TransmittingDataViewModel : OverallViewModel.OverallViewModel
     {
+        IUserDialogs userDialogs;
+
+        public bool ReadingDataPossible { get; set; }
+        public bool SearchingPossible { get; set; }
+        public bool ReadingNumberOfFilesPossible { get; set; }
+
         IBleGattServerConnection ConnectedGattServer { get {
                 var server = ModelFacade.GetConnectedServer();
                 ReadingDataPossible = server != null;
@@ -38,8 +45,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
             } 
         }
 
-        public bool ReadingDataPossible { get; set; }
-        public bool SearchingPossible { get; set; }
+
 
         public ICommand ReceiveData
         {
@@ -49,18 +55,36 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 {
                     SearchingPossible = false;
                     ReadingDataPossible = false;
+                    ReadingNumberOfFilesPossible = false;
                     OnPropertyChanged("SearchingPossible");
                     OnPropertyChanged("ReadingDataPossible");
+                    OnPropertyChanged("ReadingNumberOfFilesPossible");
                     try{
                         await ModelFacade.GetFilesFromServer();
                     } catch (GattException ex){
                         Debug.WriteLine("Fucked up. " + ex);
+                    } catch (InvalidOperationException invalidOperationEx) {
+                        Debug.WriteLine("Falsche oder beschädigte Datei. " + invalidOperationEx);
+
+
+                        userDialogs.Toast(new ToastConfig("Test Message")
+                        //.SetBackgroundColor(bgColor)
+                        //.SetMessageTextColor(msgColor)
+                        .SetDuration(TimeSpan.FromSeconds(20))
+                                          //.SetIcon(icon)
+                                         );
+                        
                     }
 
                     SearchingPossible = true;
                     ReadingDataPossible = true;
+                    ReadingNumberOfFilesPossible = true;
                     OnPropertyChanged("SearchingPossible");
                     OnPropertyChanged("ReadingDataPossible");
+                    OnPropertyChanged("ReadingNumberOfFilesPossible");
+
+                    MessagingCenter.Send(this, "UpdateDoctorsLettersList");
+                    MessagingCenter.Unsubscribe<TransmittingDataViewModel>(this, "UpdateDoctorsLettersList");
                 });
             }
         }
@@ -92,6 +116,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// </summary>
         public TransmittingDataViewModel()
         {
+            userDialogs = UserDialogs.Instance;
+
             ReadingDataPossible = false;
             SearchingPossible = true;
 

@@ -17,7 +17,6 @@ namespace myMDTests.Model.TransmissionModel
             throw new NotImplementedException();
         }
 
-
         public Task<int> GetNumberOfFiles()
         {
             throw new NotImplementedException();
@@ -28,6 +27,10 @@ namespace myMDTests.Model.TransmissionModel
             throw new NotImplementedException();
         }
 
+        public byte[] ListToArray(List<byte[]> list)
+        {
+            throw new NotImplementedException();
+        }
 
         public Task<List<List<byte[]>>> ReadAllFilesOnServer()
         {
@@ -35,11 +38,6 @@ namespace myMDTests.Model.TransmissionModel
         }
 
         public Task ReadFileFromServer()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ReadFileZero()
         {
             throw new NotImplementedException();
         }
@@ -52,16 +50,6 @@ namespace myMDTests.Model.TransmissionModel
         public Task<List<byte[]>> ReadSpecificFile(int FileNumber)
         {
             throw new NotImplementedException();
-        }
-
-        public string receive()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void send(string filePath)
-        {
-            File = filePath;
         }
 
         public Task<byte[]> WriteToCharacteristic(Guid service, Guid characteristic, byte[] value)

@@ -46,36 +46,5 @@ namespace myMDTests.Model.TransmissionModel
 
             Assert.AreEqual(result.Length, 0);
         }
-
-        [Test]
-        public async Task GetNumberOfFilesTest()
-        {
-            
-            var mockBluetooth = new Mock<IBluetooth>();
-
-            //mockBluetooth.Setup(x => x.WriteToCharacteristic(guid1, guid2, singleNumberArray1)).ReturnsAsync(singleNumberArray1);
-            mockBluetooth.Setup(x => x.ReadFromCharacteristic(guid1, guid2)).ReturnsAsync(oneAsByteArray);
-
-            var result = await mockBluetooth.Object.GetNumberOfFiles();
-
-            Debug.WriteLine(result);
-
-            Assert.AreEqual(result, 0);
-
-        }
-
-        [Test]
-        public async Task GetReadCyclesTest()
-        {
-
-            var mockBluetooth = new Mock<IBluetooth>();
-
-            mockBluetooth.Setup(x => x.WriteToCharacteristic(guid1, guid2, singleNumberArray1)).ReturnsAsync(oneAsByteArray);
-            mockBluetooth.Setup(x => x.ReadFromCharacteristic(guid1, guid2)).ReturnsAsync(oneAsByteArray);
-
-            var result = mockBluetooth.Object.GetReadCycles(1);
-            Assert.AreEqual(await result, 0);
-        }
-
     }
 }

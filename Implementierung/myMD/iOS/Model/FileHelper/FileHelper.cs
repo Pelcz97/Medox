@@ -20,7 +20,10 @@ namespace myMD.Model.FileHelper.iOS
         /// <see>myMD.Model.FileHelper.IFileHelper#DeleteFile(string)</see>
         public void DeleteFile(string filename)
         {
-            File.Delete(GetLocalFilePath(filename));
+            if (File.Exists(filename))
+            {
+                File.Delete(GetLocalFilePath(filename));
+            }
         }
 
         /// <see>myMD.Model.FileHelper.IFileHelper#GetLocalFilePath(string)</see>

@@ -121,8 +121,6 @@ namespace myMD.ViewModel.MedicationTabViewModel
             MedicationsList.Clear();
             GroupList();
         }
-
-
     }
 }
 
