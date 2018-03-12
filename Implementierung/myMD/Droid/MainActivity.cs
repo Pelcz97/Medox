@@ -28,7 +28,16 @@ namespace myMD.Droid
             Window.ClearFlags(WindowManagerFlags.TranslucentStatus);
             Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
             Window.SetStatusBarColor(Color.Rgb(25, 25, 40));
-            BluetoothLowEnergyAdapter.Init(this);
+
+
+            try
+            {
+                BluetoothLowEnergyAdapter.Init(this);
+            }
+            catch (Exception)
+            {
+                
+            }
         }
 
         protected sealed override void OnActivityResult(Int32 requestCode, Result resultCode, Intent data)
