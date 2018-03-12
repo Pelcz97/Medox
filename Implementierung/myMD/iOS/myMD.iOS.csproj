@@ -131,9 +131,6 @@
     <Reference Include="nexus.core, Version=0.31.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\nexus.core.0.31.0\lib\portable45-net45+win8\nexus.core.dll</HintPath>
     </Reference>
-    <Reference Include="Splat, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Splat.2.0.0\lib\Xamarin.iOS10\Splat.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />

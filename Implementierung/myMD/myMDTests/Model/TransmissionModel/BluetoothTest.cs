@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using myMD.Model.TransmissionModel;
 using NUnit.Framework;
-using Moq;
 using nexus.protocols.ble;
 using System.Diagnostics;
 using nexus.protocols.ble.gatt;
