@@ -86,7 +86,7 @@ namespace myMDTests.Model.ModelFacade
             Assert.IsTrue(groups.Contains(group));
         }
 
-        [Test]
+        //[Test]
         public void SendTest()
         {
             DoctorsLetter letter = randFac.Letter();

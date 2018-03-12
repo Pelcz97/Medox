@@ -133,6 +133,15 @@
 \addtocontents{toc}{\protect\enlargethispage{10cm}}
 
 \chapter{Einleitung}
+\dq{}myMD\dq{} ist eine mobile Anwendung, die es Patienten erlaubt, ihre Arztbriefe digital über Bluetooth von ihren Ärzten zu erhalten, um dann in der Applikation die darin enthaltenen Informationen, wie die Diagnose oder verschrieben Medikationen, einsehen zu können. \newline
+\newline
+Die App wurde dabei mit Xamarin.Forms in C\# und XAML für Android- und iOS-Geräte entwickelt. 
+\newline
+\newline
+Aufbauend auf den Tests, die im Pflichtenheft aufgestellt wurden, haben wir in der Phase der Qualitätssicherung unsere App auf Fehler überprüft. Dazu haben wir viele Unit-KomponentenTests geschrieben, aber auch manche Funktionen, für die Unit-Tests ungeeignet sind, manuell getestet.
+\newline
+\newline
+In diesem Dokument werden diese Tests aufgeführt und kurz beschrieben. Außerdem werden auch nennenswerte Fehler und ihre Lösung kurz beschrieben.
 \chapter{Testvorbereitung}
 \section{Zu testende Komponenten}
 Da sich unser System aus drei Subsystemen (\textbf{Model}, \textbf{ViewModel}, \textbf{View}) zusammensetzt, sollten alle drei Subsysteme getestet werden. Jedoch lässt sich die \textbf{View} nicht automatisch testen, da sie nur die Benutzeroberfläche und ihre Logik enthält. Außerdem ist sie sehr stark mit dem \textbf{ViewModel} verknüpft. Deshalb haben wir uns entschieden, das \textbf{ViewModel} und die \textbf{View} zusammen zu testen. Dadurch ergeben sich die UnitTests für das \textbf{Model} und die UITests für das \textbf{ViewModel} und die \textbf{View}.
@@ -299,12 +308,73 @@ A[ET3010] & \multicolumn{2}{p{12cm}}  {Neues Nutzerprofil wird angelegt.} \\
 {CompareLetterTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Überprüfung zweier gleicher Arztbriefgruppen korrekt funktioniert.} \\
 {FirstLastDateTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die das früheste und das späteste Datum einer Arztbriefgruppe korrekt erkannt wird.} \\
 {DeleteTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Arztbriefgruppe korrekt gelöscht wird.} \\
-
+\end{tabular}
+\subsection{FileHelper}
+\begin{tabular}{lll}
+{WriteFromBytesTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Datei korrekt in die Datenbank geschrieben wird.} \\
+\end{tabular}
+\subsection{ModelFacadeTest}
+\begin{tabular}{lll}
+{ProfileTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob ein Profil korrekt aktiviert wird.} \\
+{MedicationTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob alle Medikationen von der Fassade zurückgegeben werden.} \\
+{GroupTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob alle Gruppen von Arztbriefen zurückgegeben werden.} \\
+{UpdateTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Fassade die Gruppen von Arztbriefen korrekt aktualisiert.} \\
+{DeleteTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Fassade eine Medikation korrekt löscht.} \\
+\end{tabular}
+\subsection{Parser}
+\subsubsection{ParserFacadeTest}
+\begin{tabular}{lll}
+{ParseLetterToFile} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Datei korrekt in das ursprüngliche Dateiformat geschrieben wird.} \\
+{ParseFileToDB} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Datei korrekt in die Datenbank geparsed wird.} \\
+{ParseInvalidFile} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob der Parser eine fehlerhafte Datei korrekt behandelt.} \\
+\end{tabular}
+\subsubsection{HL7ParserTest}
+\begin{tabular}{lll}
+{ParseFromDocument} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine .hl7 Datei korrekt in die Datenbank geschrieben wird.} \\
+{ParseSample} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Datei korrekt geparsed wird.} \\
+{ParseHL7File} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine .hl7 Datei korrekt in die Datenbank geschrieben wird.} \\
+{ParseLetterToFile} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine .hl7 Datei korrekt in das ursprüngliche Dateiformat geschrieben wird.} \\
+{UnsupportedFile} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob der Parser eine nichtunterstützte Datei korrekt behandelt.} \\
+{InvalidFile} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob der Parser eine fehlerhafte Datei korrekt behandelt.} \\
+\end{tabular}
+\subsubsection{FileToDatabaseParser}
+\begin{tabular}{lll}
+{ParseFileTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Datei korrekt in die Datenbank geschrieben wird.} \\
+\end{tabular}
+\subsection{TransmissionModel}
+\begin{tabular}{lll}
+{ListToArrayTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine Liste an Byte-Arrays korrekt zu einer Datei zusammengesetzt wird.} \\
+{EmptyListToArrayTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob eine leere Liste an Byte-Arrays korrekt zu einer Datei zusammengesetzt wird.} \\
+{GetNumberOfFilesTest} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Anzahl der zu empfangenen Dateien korrekt ausgelesen wird.} \\
+{GetReadCycles} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Anzahl der Lesezyklen zu einer Datei korrekt ausgelesen wird.} \\
 \end{tabular}
 \section{UITests}
+Die folgenden Tests werden mit Hilfe der UITests von Xamarin.Forms realisiert. Da diese auf einem emuliertem Handy, auf dem die ausführbare Datei der App läuft, getestet werden, können von diesen Tests keine Codeüberdeckung o.Ä. ermittelt werden.
+\subsection{OverviewUITest}
+\begin{tabular}{lll}
+{AppLaunches} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die App korrekt startet.} \\
+{EveryElement} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob jedes Element der View vorhanden ist.} \\
+\end{tabular}
+\subsection{MedicationUITest}
+\begin{tabular}{lll}
+{CreateNewMed} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die View/ViewModel das erstellen einer neuen Medikation korrekt durchführt.} \\
+{DeleteMed} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die View/ViewModel eine Medikation korrekt löscht.} \\
+{EditMed} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die View/ViewModel eine Medikation korrekt editiert.} \\
+\end{tabular}
+\subsection{SendDataUITests}
+\begin{tabular}{lll}
+{AllButtonsThere} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob alle Elemente des SendenTabs existieren.} \\
+\end{tabular}
+\subsection{ProfilUITests}
+\begin{tabular}{lll}
+{CreateNewProfil} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob ein neues Profil korrekt erstellt wird.} \\
+{EditProfil} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob ein Profil korrekt editiert wird.} \\
+\end{tabular}
 \chapter{Manuelle Tests}
 \section{Datenübertragung}
+\section{DesktopAnwendung}
 \chapter{Verbleibende Bugs}
+\chapter{Interessante Bugs und ihre Lösung}
 \chapter{Anhang}
 \section{Statistiken}
 
