@@ -21,9 +21,9 @@ namespace myMD.ViewModel.SendDataTabViewModel
         public SendDataViewModel()
         {
             ReceiveLettersButton_Enabled = true;
-            //UpdateButton();
+            /*UpdateButton();
 
-            /*if (DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter.CurrentState.Value != EnabledDisabledState.Enabled)
+            if (DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter.CurrentState.Value != EnabledDisabledState.Enabled)
             {
                 DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter.CurrentState.Subscribe(state => {
                     UpdateButton();
@@ -31,10 +31,12 @@ namespace myMD.ViewModel.SendDataTabViewModel
             }*/
         }
 
+        
         private void UpdateButton(){
             ReceiveLettersButton_Enabled = (DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter != null
                                             && DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter.CurrentState.Value == EnabledDisabledState.Enabled);
             OnPropertyChanged("ReceiveLettersButton_Enabled");
         }
+        
     }
 }
