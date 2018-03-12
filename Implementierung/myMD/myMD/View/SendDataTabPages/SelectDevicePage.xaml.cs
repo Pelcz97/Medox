@@ -37,6 +37,7 @@ namespace myMD.View.SendDataTabPages
         void DeviceItemSelected(object sender, SelectedItemChangedEventArgs e)
         {   
             vm.ConnectToDevice(e.SelectedItem);
+            ((ListView)sender).SelectedItem = null;
         }
 
 

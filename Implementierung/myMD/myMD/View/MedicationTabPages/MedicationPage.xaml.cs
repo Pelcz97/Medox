@@ -54,6 +54,7 @@ namespace myMD.View.MedicationTabPages
             view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             view.BarTextColor = Color.White;
             Navigation.PushModalAsync(view);
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }
