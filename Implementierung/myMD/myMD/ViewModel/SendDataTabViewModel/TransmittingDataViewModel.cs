@@ -10,7 +10,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
-using Acr.UserDialogs;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
@@ -20,8 +19,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class TransmittingDataViewModel : OverallViewModel.OverallViewModel
     {
-        IUserDialogs userDialogs;
-
+        
         public bool ReadingDataPossible { get; set; }
         public bool SearchingPossible { get; set; }
         public bool ReadingNumberOfFilesPossible { get; set; }
@@ -65,15 +63,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
                         Debug.WriteLine("Fucked up. " + ex);
                     } catch (InvalidOperationException invalidOperationEx) {
                         Debug.WriteLine("Falsche oder beschädigte Datei. " + invalidOperationEx);
-
-
-                        userDialogs.Toast(new ToastConfig("Test Message")
-                        //.SetBackgroundColor(bgColor)
-                        //.SetMessageTextColor(msgColor)
-                        .SetDuration(TimeSpan.FromSeconds(20))
-                                          //.SetIcon(icon)
-                                         );
-                        
                     }
 
                     SearchingPossible = true;
@@ -116,8 +105,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// </summary>
         public TransmittingDataViewModel()
         {
-            userDialogs = UserDialogs.Instance;
-
             ReadingDataPossible = false;
             SearchingPossible = true;
 
