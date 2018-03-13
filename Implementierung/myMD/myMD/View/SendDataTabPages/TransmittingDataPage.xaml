@@ -38,7 +38,7 @@
                     WidthRequest="400"
                     BorderRadius="10" />
             
-            <Button Command="{Binding ReceiveData}" 
+            <Button Clicked="LoadLetters_Clicked"
                     IsEnabled="{Binding ReadingDataPossible}"
                     Text="{Binding NumberOfFiles, StringFormat='{0:F0} Arztbriefe laden'}"
                     TextColor="White"
@@ -49,7 +49,7 @@
                     VerticalOptions="EndAndExpand"
                     HeightRequest="50"
                     WidthRequest="400"
-                    BorderRadius="10" />
+                    BorderRadius="10"/>
             </Grid>
 	</ContentPage.Content>
 </local:CustomContentPage>
