@@ -9,7 +9,6 @@ using Android.Widget;
 using Android.OS;
 using Android.Graphics;
 using nexus.protocols.ble;
-using Acr.UserDialogs;
 using Xamarin.Forms;
 
 namespace myMD.Droid
@@ -30,8 +29,6 @@ namespace myMD.Droid
             Window.ClearFlags(WindowManagerFlags.TranslucentStatus);
             Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
             Window.SetStatusBarColor(Android.Graphics.Color.Rgb(25, 25, 40));
-
-            UserDialogs.Init(() => (Activity)Forms.Context);
 
             try
             {
