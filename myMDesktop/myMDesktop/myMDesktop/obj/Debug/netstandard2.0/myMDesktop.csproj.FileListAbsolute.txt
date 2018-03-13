@@ -30,3 +30,4 @@ D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0
 D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.pdb
 D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csprojResolveAssemblyReference.cache
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csprojResolveAssemblyReference.cache
+D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csproj.CopyComplete

@@ -371,7 +371,7 @@ Die folgenden Tests werden mit Hilfe der UITests von Xamarin.Forms realisiert. D
 {EditProfil} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob ein Profil korrekt editiert wird.} \\
 \end{tabular}
 \chapter{Manuelle Tests}
-\section{Testszenarien (TS)}
+\section{Testszenarien}
 Anhand der im Pflichtenheft erörterten Testszenarien haben wir die Testszenarien, dessen Funktionen wir auch umgesetzt haben,erfolgreich durchgeführt.
 \subsection{Typischer Arztbesuch}
 Der \gls{Nutzer} geht wegen einer Beschwerde zum Arzt und lässt sich untersuchen. Sobald die Untersuchung fertig ist, verlangt der \gls{Nutzer}, dass der Arzt ihm die eben aufgenommenen Daten für die myMD \gls{App} zur Verfügung stellt. Der Arzt öffnet dann die \gls{Desktop Anwendung} und schickt dem Patienten den \gls{Arztbrief} auf die myMD \gls{App}. Der \gls{Nutzer} schaut sich dann kurz den neuen Eintrag in der Übersicht an, schließt die App und geht nach Hause. \newline
@@ -398,8 +398,8 @@ Der \gls{Nutzer} ist daheim und schaut sich in der myMD \gls{App} seine Übersic
 
 \end{tabular}
 
-\section{Datenübertragung}
-\section{DesktopAnwendung}
+\section{Desktop-Anwendung}
+Das automatische Testen der Desktop-Anwendung hat sich als sehr schwierig herausgestellt, da die Unterstützung von Unit-Tests einer UWP-Anwendung nur sehr dürftig ausfällt. Die oben beschriebenen UITests, die für die App benutzt wurden, werden für eine UWP-Anwendung sogar überhaupt nicht angeboten. Um dennoch eine möglichst fehlerfreie Funktionsweise der Anwendung gewährleisten zu können, wurde diese ausgiebig manuell getestet. Da zugleich der Funktionsumfang der Desktop-Anwendung nur gering ausfällt, war dies eine legitime Vorgehensweise.
 \chapter{Verbleibende Bugs}
 \begin{tabular}{p{12cm} |l| }
 Beschreibung & Priorität \\
