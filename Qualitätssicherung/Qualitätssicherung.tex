@@ -371,11 +371,57 @@ Die folgenden Tests werden mit Hilfe der UITests von Xamarin.Forms realisiert. D
 {EditProfil} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob ein Profil korrekt editiert wird.} \\
 \end{tabular}
 \chapter{Manuelle Tests}
+\section{Testszenarien (TS)}
+Anhand der im Pflichtenheft erörterten Testszenarien haben wir die Testszenarien, dessen Funktionen wir auch umgesetzt haben,erfolgreich durchgeführt.
+\subsection{Typischer Arztbesuch}
+Der \gls{Nutzer} geht wegen einer Beschwerde zum Arzt und lässt sich untersuchen. Sobald die Untersuchung fertig ist, verlangt der \gls{Nutzer}, dass der Arzt ihm die eben aufgenommenen Daten für die myMD \gls{App} zur Verfügung stellt. Der Arzt öffnet dann die \gls{Desktop Anwendung} und schickt dem Patienten den \gls{Arztbrief} auf die myMD \gls{App}. Der \gls{Nutzer} schaut sich dann kurz den neuen Eintrag in der Übersicht an, schließt die App und geht nach Hause. \newline
+
+\begin{tabular}{lll}
+[BT4060] & \multicolumn{2}{p{12cm}}  {Geräte in der Nähe werden gesucht.} \\
+{[BT4070]} & \multicolumn{2}{p{12cm}}  {Das Mobilgerät des Nutzers wird als Empfänger ausgewählt.} \\
+{[BT4030]} & \multicolumn{2}{p{12cm}}  {Senden wird erfolgreich abgeschlossen.} \\
+{[BT2020]} & \multicolumn{2}{p{12cm}}  {Der neue \gls{Arztbrief} wird in bereits gefüllte Übersicht geladen.} \\
+{[BT2030]} & \multicolumn{2}{p{12cm}}  {Der neue \gls{Arztbrief} wird geöffnet.} \\
+{[BT2040]} & \multicolumn{2}{p{12cm}}  {Der neue \gls{Arztbrief} wird geschlossen.} \\
+
+
+\end{tabular}
+
+\subsection{Krankenhistorie wird überprüft}
+Der \gls{Nutzer} ist daheim und schaut sich in der myMD \gls{App} seine Übersicht an. Er klickt auf einige \glspl{Arztbrief} und liest sich durch, was darin steht. Dann bemerkt er, dass er die verschriebenen Medikamente zu seinem gebrochenen Fuß  in den \gls{Tab} \textit{\gls{Medikament}e} hinzufügen sollte. Versehentlich gibt er zuerst eine falsche Menge an, korrigiert diese aber und schließt daraufhin die App.\newline
+
+\begin{tabular}{lll}
+[BT2030] & \multicolumn{2}{p{12cm}}  {Ein \gls{Arztbrief} wird geöffnet.} \\
+{[BT2040]} & \multicolumn{2}{p{12cm}}  {Ein \gls{Arztbrief} wird geschlossen.} \\
+{[ET2010]} & \multicolumn{2}{p{12cm}}  {\gls{Medikament} wird hinzugefügt.} \\
+{[ET2020]} & \multicolumn{2}{p{12cm}}  {\gls{Medikament} wird editiert.} \\
+
+\end{tabular}
+
 \section{Datenübertragung}
 \section{DesktopAnwendung}
 \chapter{Verbleibende Bugs}
+\begin{tabular}{p{12cm} |l| }
+Beschreibung & Priorität \\
+Der Server auf der Desktop-Anwendung wird nicht gestoppt. & Mittel \\
+Durch den physischen Zurück-Button lassen sich leere Medikamente erstellen. & Mittel \\
+Server ist manchmal nicht entdeckbar, falls er über eine längere Zeit (>15 Minuten) läuft. & Hoch \\
+Durch schnelles Klicken lassen sich manche Pages mehrmals öffnen. & Niedrig \\
+Die App stürzt ab, wenn man mit einem Gerät ohne Bluetooth (z.B. Emulator) nach Geräten sucht. & Hoch \\
+Die App schließt sich unerwartet, wenn man während dem Geräte suchen das Bluetooth deaktiviert. & Mittel
+
+\end{tabular}
 \chapter{Interessante Bugs und ihre Lösung}
-Beschreibung: 
+\textbf{Beschreibung:} Beim ersten Start der App ist die App abgestürzt. Dies lag daran, dass die App ein aktives Profil benötigt um eine Entität (hier: ein neues leeres Profil) der Datenbank hinzuzufügen. Da zum ersten Start jedoch noch kein Profil existierte stürzte die App ab.
+\textbf{Lösung:} Das neue Profil wird zuerst erstellt aktiviert bevor es in die Datenbank eingefügt wird. \newline \newline
+\textbf{Beschreibung:} Das Löschen einer Datei war nicht möglich, da einem die Zugriffsrechte auf die Datei verweigert wurden. \newline
+\textbf{Lösung:} Es wurde nichtmehr der komplette Dateipfad, sondern der lokale Teilpfad gespeichert. \newline \newline
+\textbf{Beschreibung:} Die App ist beim Öffnen des \textit{SendDataTabs} abgestürzt, da wir im Konstruktor auf den \textit{BluetoothAdapter} zugegriffen haben. Jedoch war zu diesem Zeitpunkt der Kontext noch nicht verfügbar. \newline
+\textbf{Lösung:} Der Adapter wird nichtmehr im Konstruktor eines \textit{ViewModels} aufgerufen, sondern immer nur durch einen \textit{ButtonClick} \newline \newline
+\textbf{Beschreibung: }Die App lässt sich nichtmehr kompilieren, da der Linker sich über zu große Dateien beschwert. Die zu große Datei war das \textit{Everest-Framework}, welches wir zum Parsen der empfangenen Datei nutzten. Da dieses Framework viele generische Datentypen nutzte und auch anbot, wuchs die Dateigröße beim compilieren enorm.\newline
+\textbf{Lösung: }Das \textit{Everest-Framework} wurde aus dem Projekt geschmissen und wir schrieben unseren eigenen Parser. \newline \newline
+\textbf{Beschreibung:} Es ließ sich auf dem Handy kein \textit{GATT-Server} zur Datenübertragung erstellen. Dies lag daran, dass das Handy den \textit{Bluetooth-State} als \dq{}UNKNOWN\dq{} erkannte, obwohl dieser \dq{}POWERED-ON\dq{} sein sollte. Dies war ein Bug aus dem Bluetooth-Framework, welches wir für die Datenübertragung nutzten. \newline
+\textbf{Lösung:} Der \textit{GATT-Server} wird nun auf der Desktop-Anwendung gestartet und die App ließt die benötigten Dateien aus der Dektop-Anwendung.
 \chapter{Anhang}
 \section{Nutzerstudie}
 Diese Nutzerstudie soll uns Informationen über die Nutzerfreundlichkeit geben. Dabei wurde jedem Tester gesagt welche Aktion er ausführen soll und wir dokumentierten den Erfolg über diese Aktionen.
