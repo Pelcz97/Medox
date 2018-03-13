@@ -33,7 +33,7 @@ namespace myMD
             OverviewPage.SetValue(Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty, Color.White);
             OverviewPage.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             OverviewPage.BarTextColor = Color.FromHex("FFFFFF");
-
+            
             MedicationPage.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersLargeTitles(true);
             MedicationPage.SetValue(Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty, Color.White);
             MedicationPage.BarBackgroundColor = Color.FromRgb(25, 25, 40);
@@ -58,6 +58,11 @@ namespace myMD
             tabs.Children.Add(MedicationPage);
             tabs.Children.Add(SendDataPage);
             tabs.Children.Add(ProfilePage);
+
+            tabs.Children[0].Icon = "overviewTab.png";
+            tabs.Children[1].Icon = "medicationTab.png";
+            tabs.Children[2].Icon = "receiveTab.png";
+            tabs.Children[3].Icon = "profileTab.png";
 
             tabs.Children[0].Title = "Übersicht";
             tabs.Children[1].Title = "Medikation";
