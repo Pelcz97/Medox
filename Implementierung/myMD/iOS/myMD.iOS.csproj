@@ -242,10 +242,18 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Spotlight-40%403x Kopie.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\icons8-pill.png" />
-    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\icons8-pill%402x.png" />
-    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\icons8-pill%403x.png" />
+    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\icons8-pill.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\icons8-pill%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\icons8-pill%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
