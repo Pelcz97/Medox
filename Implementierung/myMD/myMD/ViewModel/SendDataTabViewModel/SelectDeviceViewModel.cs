@@ -64,7 +64,6 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// </summary>
         public async void StartScan()
         {
-
             await DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter.ScanForBroadcasts(new ScanFilter()
                     .AddAdvertisedService(myMD_FileTransfer), peripheral =>
             {

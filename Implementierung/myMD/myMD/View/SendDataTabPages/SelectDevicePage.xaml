@@ -2,7 +2,8 @@
 <local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
-    x:Class="myMD.View.SendDataTabPages.SelectDevicePage">
+    x:Class="myMD.View.SendDataTabPages.SelectDevicePage"
+    Title="Gerät wählen">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="CancelButton"
@@ -31,60 +32,24 @@
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
-                                <Frame x:Name="Label" 
-                                    CornerRadius="15" 
-                                    BackgroundColor="#FFFFFF"
-                                    Margin="10,3,10,3"
-                                    HorizontalOptions="CenterAndExpand" 
-                                    VerticalOptions="CenterAndExpand" 
-                                    HeightRequest="80" 
-                                    WidthRequest="400">
+                                <Frame x:Name="WhiteFrame" 
+                                        CornerRadius="15" 
+                                        BackgroundColor="#FFFFFF" 
+                                        Margin="10,3,10,3"
+                                        HorizontalOptions="FillAndExpand" 
+                                        VerticalOptions="FillAndExpand" 
+                                        HasShadow="true">
                                     <Grid>
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="17" />
-                                            <RowDefinition Height="35" />
-                                            <RowDefinition Height="17" />
+                                            <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
-
-                                            <Label Text="PH1" 
-                                            TextColor="#4A4A4A" 
-                                            FontSize="Small" 
-                                            FontAttributes="Bold" 
-                                            Grid.Row="0" 
-                                            HorizontalTextAlignment="Start" 
-                                            VerticalTextAlignment="Start" 
-                                            VerticalOptions="Start"/>
-                                            
-                                            <Label Text="PH2" 
-                                            TextColor="#191928" 
-                                            FontSize="Small" 
-                                            HorizontalTextAlignment="End" 
-                                            FontAttributes="Bold" 
-                                            Grid.Row="0" 
-                                            HorizontalOptions="EndAndExpand"/>
-                                            
                                             <Label Text="{Binding DeviceName}" 
                                             AutomationId="DeviceName"
-                                            TextColor="#D0001E" 
-                                            FontSize="35" 
+                                            TextColor="#191928" 
+                                            FontSize="Large" 
                                             FontAttributes="Bold" 
                                             HorizontalTextAlignment="Start" 
-                                            Grid.Row="1" />
-                                            
-                                            <Label Text="PH3" 
-                                            TextColor="#191928" 
-                                            FontSize="Small" 
-                                            FontAttributes="Bold" 
-                                            HorizontalTextAlignment="Start" 
-                                            Grid.Row="2" />
-                                            
-                                            <Label Text="PH4" 
-                                            TextColor="#191928" 
-                                            FontSize="Small" 
-                                            HorizontalTextAlignment="End" 
-                                            FontAttributes="Bold" 
-                                            Grid.Row="2" 
-                                            HorizontalOptions="EndAndExpand"/>
+                                            Grid.Row="0" />
                                     </Grid>
                                 </Frame>
                             </ViewCell.View>

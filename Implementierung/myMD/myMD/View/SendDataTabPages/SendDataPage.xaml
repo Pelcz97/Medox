@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="myMD.View.SendDataTabPages.SendDataPage"
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
-    Title="Senden">
+    Title="Empfangen">
     <ContentPage.Content>
         <Grid x:Name="Grid" RowSpacing="1" ColumnSpacing="1" Margin="15,0,15,15">
             <Grid.RowDefinitions>
@@ -11,7 +11,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Label Text="Das Senden deiner Daten erfolgt drathlos über Bluetooth. &#10;&#10; Achte deshalb darauf, Bluetooth im Control Center zu aktivieren und in Reichweite deines Arztes zu sein."
+            <Label Text="Die Übertragung deiner Arztbriefe erfolgt drathlos über Bluetooth. &#10;&#10; Achte deshalb darauf, Bluetooth im Control Center zu aktivieren und in Reichweite deines Arztes zu sein."
                    AutomationId="Hinweis"
                    Grid.Row="0"
                    HorizontalTextAlignment="Center"

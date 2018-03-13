@@ -49,7 +49,8 @@
                                             CommandParameter="{Binding .}"/>
                             </ViewCell.ContextActions>
                             <ViewCell.View>
-                                <Frame x:Name="WhiteFrame" CornerRadius="15" 
+                                <Frame x:Name="WhiteFrame" 
+                                        CornerRadius="15" 
                                         BackgroundColor="#FFFFFF" 
                                         Margin="10,3,10,3"
                                         HorizontalOptions="FillAndExpand" 
