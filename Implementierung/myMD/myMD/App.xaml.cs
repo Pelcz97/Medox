@@ -15,9 +15,11 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using Xamarin.Forms.Xaml;
 
 namespace myMD
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class App : Application
     {
         public App()

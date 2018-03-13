@@ -33,8 +33,8 @@
     <resources>
         <image name="medicationTab.png" width="30" height="30"/>
         <image name="TabBarIcon" width="32" height="32"/>
-        <image name="profileTab.png" width="30" height="30"/>
-        <image name="overviewTab.png" width="30" height="30"/>
-        <image name="receiveTab.png" width="30" height="30"/>
+        <image name="profileTab.png" width="28" height="28"/>
+        <image name="overviewTab.png" width="27" height="27"/>
+        <image name="receiveTab.png" width="28" height="28"/>
     </resources>
 </document>
