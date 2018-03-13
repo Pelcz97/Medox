@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Acr.UserDialogs;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
@@ -19,7 +20,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class TransmittingDataViewModel : OverallViewModel.OverallViewModel
     {
-        
+        IUserDialogs message;
+
         public bool ReadingDataPossible { get; set; }
         public bool SearchingPossible { get; set; }
         public bool ReadingNumberOfFilesPossible { get; set; }
@@ -72,6 +74,10 @@ namespace myMD.ViewModel.SendDataTabViewModel
                     OnPropertyChanged("ReadingDataPossible");
                     OnPropertyChanged("ReadingNumberOfFilesPossible");
 
+                    string alert = "Die Übertragung wurde abgeschlossen. Die neuen Arztbriefe befinden sich nun in der Übersicht.";
+
+                    message.Toast(new ToastConfig(alert).SetPosition(ToastPosition.Top));
+
                     MessagingCenter.Send(this, "UpdateDoctorsLettersList");
                     MessagingCenter.Unsubscribe<TransmittingDataViewModel>(this, "UpdateDoctorsLettersList");
                 });
@@ -107,6 +113,8 @@ namespace myMD.ViewModel.SendDataTabViewModel
         {
             ReadingDataPossible = false;
             SearchingPossible = true;
+
+            message = UserDialogs.Instance;
 
             MessagingCenter.Subscribe<SelectDeviceViewModel>(this, "SetServer", sender => {
                 GetNumberOfFiles();
