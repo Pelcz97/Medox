@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+
 
 using Xamarin.Forms;
 
@@ -22,7 +25,8 @@ namespace myMDesktop
 
 		protected override void OnStart ()
 		{
-			// Handle when your app starts
+            AppCenter.Start("uwp=ae142cce-a75a-4de6-bbff-30ba30e78c28;",
+                  typeof(Analytics));
 		}
 
 		protected override void OnSleep ()
