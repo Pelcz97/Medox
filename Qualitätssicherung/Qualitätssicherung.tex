@@ -133,7 +133,7 @@
 \addtocontents{toc}{\protect\enlargethispage{10cm}}
 
 \chapter{Einleitung}
-\dq{}myMD\dq{} ist eine mobile Anwendung, die es Patienten erlaubt, ihre Arztbriefe digital und drahtlos von ihren Ärzten zu erhalten, um dann in der Applikation die darin enthaltenen Informationen, wie die Diagnose oder verschrieben Medikationen, einsehen zu können. \newline
+\dq{}myMD\dq{} ist eine mobile Anwendung, die es Patienten erlaubt, ihre Arztbriefe digital über Bluetooth von ihren Ärzten zu erhalten, um dann in der Applikation die darin enthaltenen Informationen, wie die Diagnose oder verschrieben Medikationen, einsehen zu können. \newline
 \newline
 Die App wurde dabei mit Xamarin.Forms in C\# und XAML für Android- und iOS-Geräte entwickelt. 
 \newline
@@ -349,7 +349,7 @@ A[ET3010] & \multicolumn{2}{p{12cm}}  {Neues Nutzerprofil wird angelegt.} \\
 {GetReadCycles} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die Anzahl der Lesezyklen zu einer Datei korrekt ausgelesen wird.} \\
 \end{tabular}
 \section{UITests}
-Die folgenden Tests werden mithilfe von UITests von Xamarin.Forms realisiert. Da diese auf einem emulierten Handy, auf dem die ausführbare Datei der App läuft, getestet werden, können von diesen Tests keine Codeüberdeckung oder vergleichbare Codemetriken ermittelt werden.
+Die folgenden Tests werden mit Hilfe der UITests von Xamarin.Forms realisiert. Da diese auf einem emuliertem Handy, auf dem die ausführbare Datei der App läuft, getestet werden, können von diesen Tests keine Codeüberdeckung o.Ä. ermittelt werden.
 \subsection{OverviewUITest}
 \begin{tabular}{lll}
 {AppLaunches} & \multicolumn{2}{p{12cm}}  {Überprüfung, ob die App korrekt startet.} \\
@@ -402,13 +402,13 @@ Der \gls{Nutzer} ist daheim und schaut sich in der myMD \gls{App} seine Übersic
 Das automatische Testen der Desktop-Anwendung hat sich als sehr schwierig herausgestellt, da die Unterstützung von Unit-Tests einer UWP-Anwendung nur sehr dürftig ausfällt. Die oben beschriebenen UITests, die für die App benutzt wurden, werden für eine UWP-Anwendung sogar überhaupt nicht angeboten. Um dennoch eine möglichst fehlerfreie Funktionsweise der Anwendung gewährleisten zu können, wurde diese ausgiebig manuell getestet. Da zugleich der Funktionsumfang der Desktop-Anwendung nur gering ausfällt, war dies eine legitime Vorgehensweise.
 \chapter{Verbleibende Bugs}
 \begin{tabular}{p{12cm} |l| }
-Beschreibung & Priorität \\
+\textbf{Beschreibung} & \textbf{Priorität} \\
 Der Server auf der Desktop-Anwendung wird nicht gestoppt. & Mittel \\
 Durch den physischen Zurück-Button lassen sich leere Medikamente erstellen. & Mittel \\
 Server ist manchmal nicht entdeckbar, falls er über eine längere Zeit (>15 Minuten) läuft. & Hoch \\
 Durch schnelles Klicken lassen sich manche Pages mehrmals öffnen. & Niedrig \\
 Die App stürzt ab, wenn man mit einem Gerät ohne Bluetooth (z.B. Emulator) nach Geräten sucht. & Hoch \\
-Die App schließt sich unerwartet, wenn man während dem Geräte suchen das Bluetooth deaktiviert. & Mittel
+Die App schließt sich unerwartet, wenn man während dem Geräte suchen das Bluetooth deaktiviert.Leider konnten wir diesen Bug noch nicht reproduzieren. & Mittel
 
 \end{tabular}
 \chapter{Interessante Bugs und ihre Lösung}
@@ -421,7 +421,9 @@ Die App schließt sich unerwartet, wenn man während dem Geräte suchen das Blue
 \textbf{Beschreibung: }Die App lässt sich nichtmehr kompilieren, da der Linker sich über zu große Dateien beschwert. Die zu große Datei war das \textit{Everest-Framework}, welches wir zum Parsen der empfangenen Datei nutzten. Da dieses Framework viele generische Datentypen nutzte und auch anbot, wuchs die Dateigröße beim compilieren enorm.\newline
 \textbf{Lösung: }Das \textit{Everest-Framework} wurde aus dem Projekt geschmissen und wir schrieben unseren eigenen Parser. \newline \newline
 \textbf{Beschreibung:} Es ließ sich auf dem Handy kein \textit{GATT-Server} zur Datenübertragung erstellen. Dies lag daran, dass das Handy den \textit{Bluetooth-State} als \dq{}UNKNOWN\dq{} erkannte, obwohl dieser \dq{}POWERED-ON\dq{} sein sollte. Dies war ein Bug aus dem Bluetooth-Framework, welches wir für die Datenübertragung nutzten. \newline
-\textbf{Lösung:} Der \textit{GATT-Server} wird nun auf der Desktop-Anwendung gestartet und die App ließt die benötigten Dateien aus der Dektop-Anwendung.
+\textbf{Lösung:} Der \textit{GATT-Server} wird nun auf der Desktop-Anwendung gestartet und die App ließt die benötigten Dateien aus der Dektop-Anwendung. \newline \newline
+\textbf{Beschreibung: }Wir wollten gefundene Geräte nur einmal in der Liste darstellen und haben dafür das Attribut ListRepeatedBroadcast auf false gesetzt. Dadurch wurde ein Gerät aber für diese ServerSession nur noch einmal angezeigt. Dies war ein Problem, falls man längere Sessions geführt hat oder erneut nach verfügbaren Geräten gesucht hat \newline
+\textbf{Lösung:} Wir haben das oben genannte Attribut auf true gesetzt und unsere eigene Logik für das mehrmalige Aufzählen von dem gleichen Gerät implementiert.
 \chapter{Anhang}
 \section{Nutzerstudie}
 Diese Nutzerstudie soll uns Informationen über die Nutzerfreundlichkeit geben. Dabei wurde jedem Tester gesagt welche Aktion er ausführen soll und wir dokumentierten den Erfolg über diese Aktionen.
@@ -435,7 +437,7 @@ Alter: 22 \newline
 Beruf: Azubi, Kauffrau für Büromanagement \newline
 Betriebssystem des Testgerätes: Android \newline \newline
  \begin{tabular}{ |l|l| p{6cm} }
-  Auszuführende Aktion & Ergebnis & Kommentar \\
+  \textbf{Auszuführende Aktion} & \textbf{Ergebnis} & \textbf{Kommentar} \\
 App starten & X & \\
 Namen im Profil festlegen & X & Es wurde mehrfach auf das Label des Namens getippt, statt auf den Bearbeiten-Button \\
 Versicherungsnummer im Profil festlegen & X & \\
@@ -457,7 +459,7 @@ Geräte suchen & X & \\
 Beruf: Koch \newline
 Betriebssystem des Testgerätes: Android \newline \newline
  \begin{tabular}{ |l|l| p{6cm} }
-  Auszuführende Aktion & Ergebnis & Kommentar \\
+  \textbf{Auszuführende Aktion} & \textbf{Ergebnis} & \textbf{Kommentar} \\
 App starten & X & \\
 Namen im Profil festlegen & F & Weitere Verwirrung mit dem Bearbeiten-Button \\
 Versicherungsnummer im Profil festlegen & X & \\
@@ -479,7 +481,7 @@ Geräte suchen & X & \\
 Beruf: Student, Wissentschaftskommunikation \newline
 Betriebssystem des Testgerätes: iOS \newline \newline
  \begin{tabular}{ |l|l| p{6cm} }
-  Auszuführende Aktion & Ergebnis & Kommentar \\
+  \textbf{Auszuführende Aktion} & \textbf{Ergebnis} & \textbf{Kommentar} \\
 App starten & X & \\
 Namen im Profil festlegen & F & Weitere Verwirrung mit dem Bearbeiten-Button \\
 Versicherungsnummer im Profil festlegen & X & \\
@@ -504,7 +506,7 @@ Dateiauswahl bestätigen & F & Fertig-Button wurde nicht gefunden \\
 Beruf: Hausfrau \newline
 Betriebssystem des Testgerätes: iOS \newline \newline
  \begin{tabular}{ |l|l| p{6cm} }
-  Auszuführende Aktion & Ergebnis & Kommentar \\
+  \textbf{Auszuführende Aktion} & \textbf{Ergebnis} & \textbf{Kommentar} \\
 App starten & X & \\
 Namen im Profil festlegen & F & Weitere Verwirrung mit dem Bearbeiten-Button \\
 Versicherungsnummer im Profil festlegen & X & \\

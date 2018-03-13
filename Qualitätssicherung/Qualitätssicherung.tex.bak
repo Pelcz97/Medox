@@ -402,13 +402,13 @@ Der \gls{Nutzer} ist daheim und schaut sich in der myMD \gls{App} seine Übersic
 Das automatische Testen der Desktop-Anwendung hat sich als sehr schwierig herausgestellt, da die Unterstützung von Unit-Tests einer UWP-Anwendung nur sehr dürftig ausfällt. Die oben beschriebenen UITests, die für die App benutzt wurden, werden für eine UWP-Anwendung sogar überhaupt nicht angeboten. Um dennoch eine möglichst fehlerfreie Funktionsweise der Anwendung gewährleisten zu können, wurde diese ausgiebig manuell getestet. Da zugleich der Funktionsumfang der Desktop-Anwendung nur gering ausfällt, war dies eine legitime Vorgehensweise.
 \chapter{Verbleibende Bugs}
 \begin{tabular}{p{12cm} |l| }
-Beschreibung & Priorität \\
+\textbf{Beschreibung} & \textbf{Priorität} \\
 Der Server auf der Desktop-Anwendung wird nicht gestoppt. & Mittel \\
 Durch den physischen Zurück-Button lassen sich leere Medikamente erstellen. & Mittel \\
 Server ist manchmal nicht entdeckbar, falls er über eine längere Zeit (>15 Minuten) läuft. & Hoch \\
 Durch schnelles Klicken lassen sich manche Pages mehrmals öffnen. & Niedrig \\
 Die App stürzt ab, wenn man mit einem Gerät ohne Bluetooth (z.B. Emulator) nach Geräten sucht. & Hoch \\
-Die App schließt sich unerwartet, wenn man während dem Geräte suchen das Bluetooth deaktiviert. & Mittel
+Die App schließt sich unerwartet, wenn man während dem Geräte suchen das Bluetooth deaktiviert.Leider konnten wir diesen Bug noch nicht reproduzieren. & Mittel
 
 \end{tabular}
 \chapter{Interessante Bugs und ihre Lösung}
@@ -435,7 +435,7 @@ Alter: 22 \newline
 Beruf: Azubi, Kauffrau für Büromanagement \newline
 Betriebssystem des Testgerätes: Android \newline \newline
  \begin{tabular}{ |l|l| p{6cm} }
-  Auszuführende Aktion & Ergebnis & Kommentar \\
+  \textbf{Auszuführende Aktion} & \textbf{Ergebnis} & \textbf{Kommentar} \\
 App starten & X & \\
 Namen im Profil festlegen & X & Es wurde mehrfach auf das Label des Namens getippt, statt auf den Bearbeiten-Button \\
 Versicherungsnummer im Profil festlegen & X & \\
@@ -457,7 +457,7 @@ Geräte suchen & X & \\
 Beruf: Koch \newline
 Betriebssystem des Testgerätes: Android \newline \newline
  \begin{tabular}{ |l|l| p{6cm} }
-  Auszuführende Aktion & Ergebnis & Kommentar \\
+  \textbf{Auszuführende Aktion} & \textbf{Ergebnis} & \textbf{Kommentar} \\
 App starten & X & \\
 Namen im Profil festlegen & F & Weitere Verwirrung mit dem Bearbeiten-Button \\
 Versicherungsnummer im Profil festlegen & X & \\
@@ -479,7 +479,7 @@ Geräte suchen & X & \\
 Beruf: Student, Wissentschaftskommunikation \newline
 Betriebssystem des Testgerätes: iOS \newline \newline
  \begin{tabular}{ |l|l| p{6cm} }
-  Auszuführende Aktion & Ergebnis & Kommentar \\
+  \textbf{Auszuführende Aktion} & \textbf{Ergebnis} & \textbf{Kommentar} \\
 App starten & X & \\
 Namen im Profil festlegen & F & Weitere Verwirrung mit dem Bearbeiten-Button \\
 Versicherungsnummer im Profil festlegen & X & \\
@@ -504,7 +504,7 @@ Dateiauswahl bestätigen & F & Fertig-Button wurde nicht gefunden \\
 Beruf: Hausfrau \newline
 Betriebssystem des Testgerätes: iOS \newline \newline
  \begin{tabular}{ |l|l| p{6cm} }
-  Auszuführende Aktion & Ergebnis & Kommentar \\
+  \textbf{Auszuführende Aktion} & Ergebnis & Kommentar \\
 App starten & X & \\
 Namen im Profil festlegen & F & Weitere Verwirrung mit dem Bearbeiten-Button \\
 Versicherungsnummer im Profil festlegen & X & \\
@@ -526,7 +526,13 @@ Datei auswählen & X & \\
 Dateiauswahl bestätigen & F & Fertig-Button wurde nicht gefunden \\
  \end{tabular}
 \end{figure}
+\begin{figure}
+
 \section{Statistiken}
+Hier werden noch die CodeMetriken unseres Codes angegeben. Leider ist aber die Lines of Code Angabe fehlerhaft. Hier müsste eigentlich ein Wert von ca. 8000 zutreffender sein (Das Tool Supercharger gibt diesen Wert zurück). \\
+\includegraphics[scale=0.8]{graphics/Codemetrik_App}
+\caption{Berechnete Codemetriken von VisualStudio}
+\end{figure}
 
 \printnoidxglossaries
 
