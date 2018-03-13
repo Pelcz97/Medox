@@ -14,7 +14,7 @@ namespace myMDTests.Model.DataModel
     public class DoctorsLetterTest
     {
         private static readonly int COUNT = 5;
-        private static readonly string PATH = "letter";
+        private static readonly string PATH = "letter.hl7";
         private DoctorsLetter letter;
         private RandomEntityFactory fac;
         private IDoctorsLetterGroup[] groups;
@@ -85,7 +85,7 @@ namespace myMDTests.Model.DataModel
             {
                 letter.AddToGroup(group);
             }
-            letter.Filepath = Path;
+            letter.Filepath = PATH;
             letter.Delete();
             Assert.IsFalse(letter.Medication.Any());
             Assert.IsFalse(letter.Groups.Any());

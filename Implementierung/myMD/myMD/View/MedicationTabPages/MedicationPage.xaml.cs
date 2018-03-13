@@ -50,10 +50,17 @@ namespace myMD.View.MedicationTabPages
         /// <param name="e">Event des Senders</param>
         void MedicationItem_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
+            var selectedItem = ((ListView)sender).SelectedItem;
+            if (selectedItem == null)
+            {
+                return;
+            }
+
             var view = new NavigationPage(new DetailedMedicationPage(e.SelectedItem));
             view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             view.BarTextColor = Color.White;
             Navigation.PushModalAsync(view);
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }

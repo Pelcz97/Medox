@@ -15,44 +15,38 @@ namespace myMD.Model.FileHelper.iOS
     [Xamarin.Forms.Internals.Preserve(AllMembers = true)]
     public class FileHelper : IFileHelper
     {
-        private static readonly string PATH = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Library");
+        private static readonly string DOCS = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        private static readonly string PATH = Path.Combine(DOCS, "..", "Library");
         /// <see>myMD.Model.FileHelper.IFileHelper#DeleteFile(string)</see>
         public void DeleteFile(string filename)
         {
-            File.SetAttributes(GetLocalFilePath(filename), FileAttributes.Normal);
-            File.Delete(GetLocalFilePath(filename));
+            if (File.Exists(filename))
+            {
+                File.Delete(GetLocalFilePath(filename));
+            }
         }
 
         /// <see>myMD.Model.FileHelper.IFileHelper#GetLocalFilePath(string)</see>
         public string GetLocalFilePath(string filename)
 		{
-            string directory = Path.Combine(PATH, filename);
-            Debug.WriteLine("PATH: " + PATH);
-            Debug.WriteLine("filename: " + filename);
-            Debug.WriteLine("Dir: " + directory);
-
-            if (!Directory.Exists(directory))
+            if (!Directory.Exists(PATH))
             {
-                Directory.CreateDirectory(directory);
+                Directory.CreateDirectory(PATH);
             }
-
-            string path = Path.Combine(directory, filename);
-            Debug.WriteLine("Path: " + path);
-
+            string path = Path.Combine(PATH, filename);
             if (!File.Exists(path))
             {
                 File.Create(path).Close();
             }
-
             return path;
         }
 
         public string WriteLocalFileFromString(string format, string data)
         {
-            string path = Path.Combine(PATH, Guid.NewGuid().ToString() + format);
+            string filename = Guid.NewGuid().ToString() + format;
+            string path = GetLocalFilePath(filename);
             File.WriteAllText(path, data);
-            Debug.WriteLine("Path on write: " + path);
-            return path;
+            return filename;
         }
 
     }

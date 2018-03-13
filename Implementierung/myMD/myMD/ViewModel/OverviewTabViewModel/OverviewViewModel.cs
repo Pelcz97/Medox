@@ -7,6 +7,7 @@ using myMD.Model.DataModel;
 using myMD.ModelInterface.DataModelInterface;
 using MvvmHelpers;
 using System.Linq;
+using myMD.ViewModel.SendDataTabViewModel;
 
 namespace myMD.ViewModel.OverviewTabViewModel
 {
@@ -57,10 +58,13 @@ namespace myMD.ViewModel.OverviewTabViewModel
             DoctorsLettersItemsList = new ObservableCollection<Grouping<string, DoctorsLetterViewModel>>();
             GroupList();
 
+            MessagingCenter.Subscribe<TransmittingDataViewModel>(this, "UpdateDoctorsLettersList", sender => {
+                Reload();
+            });
 
         }
 
-        public void GroupList()
+        void GroupList()
         {
 
             foreach (IDoctorsLetter letter in ModelFacade.GetAllDoctorsLetters())
@@ -79,7 +83,7 @@ namespace myMD.ViewModel.OverviewTabViewModel
             OnPropertyChanged("DoctorsLettersItemsList");
         }
 
-        public void DeleteListItemMethod(DoctorsLetterViewModel item)
+        void DeleteListItemMethod(DoctorsLetterViewModel item)
         {
             ModelFacade.Delete(item.DoctorsLetter);
             foreach (Grouping<string, DoctorsLetterViewModel> groups in DoctorsLettersItemsList.ToList())
@@ -96,6 +100,12 @@ namespace myMD.ViewModel.OverviewTabViewModel
                     }
                 }
             }
+        }
+
+        void Reload()
+        {
+            DoctorsLettersList.Clear();
+            GroupList();
         }
     }
 }

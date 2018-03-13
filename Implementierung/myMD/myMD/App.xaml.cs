@@ -61,7 +61,7 @@ namespace myMD
 
             tabs.Children[0].Title = "Übersicht";
             tabs.Children[1].Title = "Medikation";
-            tabs.Children[2].Title = "Senden";
+            tabs.Children[2].Title = "Empfangen";
             tabs.Children[3].Title = "Profil";
 
             MainPage = tabs;

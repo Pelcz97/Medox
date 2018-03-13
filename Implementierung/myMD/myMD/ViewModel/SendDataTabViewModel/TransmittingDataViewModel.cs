@@ -19,6 +19,11 @@ namespace myMD.ViewModel.SendDataTabViewModel
     [Preserve(AllMembers = true)]
     public class TransmittingDataViewModel : OverallViewModel.OverallViewModel
     {
+        
+        public bool ReadingDataPossible { get; set; }
+        public bool SearchingPossible { get; set; }
+        public bool ReadingNumberOfFilesPossible { get; set; }
+
         IBleGattServerConnection ConnectedGattServer { get {
                 var server = ModelFacade.GetConnectedServer();
                 ReadingDataPossible = server != null;
@@ -38,8 +43,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
             } 
         }
 
-        public bool ReadingDataPossible { get; set; }
-        public bool SearchingPossible { get; set; }
+
 
         public ICommand ReceiveData
         {
@@ -49,18 +53,27 @@ namespace myMD.ViewModel.SendDataTabViewModel
                 {
                     SearchingPossible = false;
                     ReadingDataPossible = false;
+                    ReadingNumberOfFilesPossible = false;
                     OnPropertyChanged("SearchingPossible");
                     OnPropertyChanged("ReadingDataPossible");
+                    OnPropertyChanged("ReadingNumberOfFilesPossible");
                     try{
                         await ModelFacade.GetFilesFromServer();
                     } catch (GattException ex){
                         Debug.WriteLine("Fucked up. " + ex);
+                    } catch (InvalidOperationException invalidOperationEx) {
+                        Debug.WriteLine("Falsche oder beschädigte Datei. " + invalidOperationEx);
                     }
 
                     SearchingPossible = true;
                     ReadingDataPossible = true;
+                    ReadingNumberOfFilesPossible = true;
                     OnPropertyChanged("SearchingPossible");
                     OnPropertyChanged("ReadingDataPossible");
+                    OnPropertyChanged("ReadingNumberOfFilesPossible");
+
+                    MessagingCenter.Send(this, "UpdateDoctorsLettersList");
+                    MessagingCenter.Unsubscribe<TransmittingDataViewModel>(this, "UpdateDoctorsLettersList");
                 });
             }
         }

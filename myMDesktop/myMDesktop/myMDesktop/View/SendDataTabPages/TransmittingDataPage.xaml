@@ -1,16 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="myMDesktop.View.SendDataTabPages.TransmittingDataPage">
     <ContentPage.Content>
         <Grid x:Name="Grid" RowSpacing="1" ColumnSpacing="1" Margin="15,0,15,15">
             <Grid.RowDefinitions>
-                <!--Durch Benutzung des *'s wird der Button immer am unteren Ende der Seite dargestellt-->
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Button Clicked="SelectLettersButton_Clicked"
-                    Text="Arztbriefe wählen"
+                    Text="Zur Dateiauswahl"
                     TextColor="White"
                     FontAttributes="Bold"
                     Grid.Row="0"

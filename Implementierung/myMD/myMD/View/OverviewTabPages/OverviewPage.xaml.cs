@@ -40,8 +40,10 @@ namespace myMD.View.OverviewTabPages
                 return;
             
             var view = new DetailedDoctorsLetterPage(e.SelectedItem);
+
             Navigation.PushModalAsync(view);
             ((ListView)sender).SelectedItem = null;
+
         }
 
     }

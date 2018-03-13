@@ -1,5 +1,6 @@
 using myMD.Model.DataModel;
 using myMD.Model.DependencyService;
+using myMD.Model.FileHelper;
 using myMD.ModelInterface.DataModelInterface;
 using System;
 using System.Collections.Generic;
@@ -40,7 +41,7 @@ namespace myMD.Model.ParserModel
             this.file = file;
             try
             {
-                document = XDocument.Load(file);
+                document = XDocument.Load(DependencyServiceWrapper.Get<IFileHelper>().GetLocalFilePath(file));
             } catch (XmlException e)
             {
                 throw new FileFormatException(INVALID_FILE_MESSAGE, e);

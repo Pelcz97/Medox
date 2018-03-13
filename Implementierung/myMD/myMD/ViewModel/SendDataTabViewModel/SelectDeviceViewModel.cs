@@ -9,6 +9,8 @@ using nexus.protocols.ble.scan;
 using nexus.core;
 using nexus.protocols.ble.scan.advertisement;
 using nexus.protocols.ble;
+using myMD.Model.TransmissionModel;
+using myMD.Model.DependencyService;
 
 namespace myMD.ViewModel.SendDataTabViewModel
 {
@@ -39,15 +41,15 @@ namespace myMD.ViewModel.SendDataTabViewModel
             CancelSelectDevicePossible = true;
             OnPropertyChanged("CancelSelectDevicePossible");
 
-            if(BluetoothAdapter.AdapterCanBeEnabled){
-                BluetoothAdapter.EnableAdapter();
+            if(DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter.AdapterCanBeEnabled){
+                DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter.EnableAdapter();
             }
 
-            if (BluetoothAdapter.CurrentState.Value == EnabledDisabledState.Enabled)
+            if (DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter.CurrentState.Value == EnabledDisabledState.Enabled)
             {
                 StartScan();
             } else {
-                BluetoothAdapter.CurrentState.Subscribe(state =>
+                DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter.CurrentState.Subscribe(state =>
                 {
                     if (state == EnabledDisabledState.Enabled)
                     {
@@ -62,8 +64,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         /// </summary>
         public async void StartScan()
         {
-
-            await BluetoothAdapter.ScanForBroadcasts(new ScanFilter()
+            await DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter.ScanForBroadcasts(new ScanFilter()
                     .AddAdvertisedService(myMD_FileTransfer), peripheral =>
             {
                 ScanResultViewModel test = new ScanResultViewModel(peripheral);
@@ -95,7 +96,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
             }
             var ScanResultItem = (ScanResultViewModel)item;
 
-            var connection = await BluetoothAdapter.ConnectToDevice(
+            var connection = await DependencyServiceWrapper.Get<IBluetoothHelper>().Adapter.ConnectToDevice(
             ScanResultItem.ScanResult,
             TimeSpan.FromSeconds(15));
             

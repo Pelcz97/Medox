@@ -36,7 +36,13 @@ namespace myMD.View.SendDataTabPages
         /// <param name="e">Event des Senders</param>
         void DeviceItemSelected(object sender, SelectedItemChangedEventArgs e)
         {   
+            var selectedItem = ((ListView)sender).SelectedItem;
+            if (selectedItem == null)
+            {
+                return;
+            }
             vm.ConnectToDevice(e.SelectedItem);
+            ((ListView)sender).SelectedItem = null;
         }
 
 

@@ -36,10 +36,11 @@ namespace myMDTests.Model.FileHelper
 
         public string WriteLocalFileFromString(string format, string data)
         {
-            string path = Path.Combine(FOLDER, Guid.NewGuid().ToString() + format);
+            string filename = Guid.NewGuid().ToString() + format;
+            string path = GetLocalFilePath(filename);
             File.WriteAllText(path, data);
             LastWrittenPath = path;
-            return path;
+            return filename;
         }
     }
 }

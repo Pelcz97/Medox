@@ -69,16 +69,23 @@ namespace myMD.Model.ModelFacade
             }
         }
 
+        /// <summary>
+        /// Sets the connected server.
+        /// </summary>
+        /// <param name="server">Server.</param>
         public void SetConnectedServer(IBleGattServerConnection server) => bluetooth.ConnectedGattServer = server;
+
+        /// <summary>
+        /// Gets the connected server.
+        /// </summary>
+        /// <returns>The connected server.</returns>
         public IBleGattServerConnection GetConnectedServer() => bluetooth.ConnectedGattServer;
 
-        public async Task<int> NumberOfFilesOnServer(){
-            if (bluetooth.ConnectedGattServer != null){
-                return await bluetooth.GetNumberOfFiles();
-            } else {
-                return 0;
-            }
-        }
+        /// <summary>
+        /// Numbers the of files on server.
+        /// </summary>
+        /// <returns>The of files on server.</returns>
+        public async Task<int> NumberOfFilesOnServer() => await bluetooth.GetNumberOfFiles();
 
         ///<see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#GetFilesFromServer()</see>
         public async Task GetFilesFromServer(){
@@ -87,7 +94,9 @@ namespace myMD.Model.ModelFacade
 
             foreach (byte[] file in files){
                 var path = fileHelper.WriteLocalFileFromString(".hl7", Encoding.UTF8.GetString(file, 0, file.Length));
+                Debug.WriteLine("Path should be: " + path);
                 parser.ParseFileToDatabase(path, database);
+                
             }
         }
 

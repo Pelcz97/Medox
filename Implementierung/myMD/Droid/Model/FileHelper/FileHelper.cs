@@ -32,11 +32,12 @@ namespace myMD.Model.FileHelper.Droid
             return path;
         }
 
-        public string WriteLocalFileFromBytes(string format, string data)
+        public string WriteLocalFileFromString(string format, string data)
         {
-            string path = Path.Combine(PATH, Guid.NewGuid().ToString() + format);
+            string filename = Guid.NewGuid().ToString() + format;
+            string path = GetLocalFilePath(filename);
             File.WriteAllText(path, data);
-            return path;
+            return filename;
         }
     }
 
