@@ -61,10 +61,13 @@ namespace myMD
             tabs.Children.Add(SendDataPage);
             tabs.Children.Add(ProfilePage);
 
-            tabs.Children[0].Icon = "overviewTab.png";
-            tabs.Children[1].Icon = "medicationTab.png";
-            tabs.Children[2].Icon = "receiveTab.png";
-            tabs.Children[3].Icon = "profileTab.png";
+            if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.iOS)
+            {
+                tabs.Children[0].Icon = "overviewTab.png";
+                tabs.Children[1].Icon = "medicationTab.png";
+                tabs.Children[2].Icon = "receiveTab.png";
+                tabs.Children[3].Icon = "profileTab.png";
+            }
 
             tabs.Children[0].Title = "Übersicht";
             tabs.Children[1].Title = "Medikation";
