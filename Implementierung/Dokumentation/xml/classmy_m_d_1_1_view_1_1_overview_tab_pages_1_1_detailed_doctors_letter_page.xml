@@ -88,36 +88,36 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="40">
+      <node id="42">
         <label>CustomContentPage</label>
         <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
-        <childnode refid="41" relation="public-inheritance">
+        <childnode refid="43" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="41">
+      <node id="43">
         <label>ContentPage</label>
       </node>
-      <node id="39">
+      <node id="41">
         <label>myMD.View.OverviewTabPages.DetailedDoctorsLetterPage</label>
         <link refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_detailed_doctors_letter_page"/>
-        <childnode refid="40" relation="public-inheritance">
+        <childnode refid="42" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="43">
+      <node id="45">
         <label>CustomContentPage</label>
         <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
-        <childnode refid="44" relation="public-inheritance">
+        <childnode refid="46" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="44">
+      <node id="46">
         <label>ContentPage</label>
       </node>
-      <node id="42">
+      <node id="44">
         <label>myMD.View.OverviewTabPages.DetailedDoctorsLetterPage</label>
         <link refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_detailed_doctors_letter_page"/>
-        <childnode refid="43" relation="public-inheritance">
+        <childnode refid="45" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

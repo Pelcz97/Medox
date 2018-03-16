@@ -145,43 +145,43 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="227">
+      <node id="229">
         <label>IData</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
-        <childnode refid="228" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="226">
-        <label>myMD.ModelInterface.DataModelInterface.IMedication</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication"/>
-        <childnode refid="227" relation="public-inheritance">
+        <childnode refid="230" relation="public-inheritance">
         </childnode>
       </node>
       <node id="228">
+        <label>myMD.ModelInterface.DataModelInterface.IMedication</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication"/>
+        <childnode refid="229" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="230">
         <label>IEntity</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
       </node>
-      <node id="229">
+      <node id="231">
         <label>myMD.Model.DataModel.Medication</label>
         <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication"/>
-        <childnode refid="226" relation="public-inheritance">
+        <childnode refid="228" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="231">
+      <node id="233">
         <label>IData</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
-        <childnode refid="232" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="230">
-        <label>myMD.ModelInterface.DataModelInterface.IMedication</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication"/>
-        <childnode refid="231" relation="public-inheritance">
+        <childnode refid="234" relation="public-inheritance">
         </childnode>
       </node>
       <node id="232">
+        <label>myMD.ModelInterface.DataModelInterface.IMedication</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication"/>
+        <childnode refid="233" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="234">
         <label>IEntity</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
       </node>

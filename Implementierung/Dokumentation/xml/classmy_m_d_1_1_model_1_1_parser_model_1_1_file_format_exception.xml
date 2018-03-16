@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_exception" kind="class" language="C#" prot="public">
+    <compoundname>myMD::Model::ParserModel::FileFormatException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">FormatException</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_exception_1a5ad7bd35a878267b9dae290629dad3e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.Model.ParserModel.FileFormatException.FileFormatException</definition>
+        <argsstring>(string message, Exception innerException)</argsstring>
+        <name>FileFormatException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>Exception</type>
+          <declname>innerException</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileFormatException.cs" line="11" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileFormatException.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_exception_1ac7022d90216c1a33d6ed39bf952b8592" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.Model.ParserModel.FileFormatException.FileFormatException</definition>
+        <argsstring>(string message)</argsstring>
+        <name>FileFormatException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileFormatException.cs" line="13" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileFormatException.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="154">
+        <label>myMD.Model.ParserModel.FileFormatException</label>
+        <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_exception"/>
+        <childnode refid="155" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="155">
+        <label>FormatException</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="156">
+        <label>myMD.Model.ParserModel.FileFormatException</label>
+        <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_exception"/>
+        <childnode refid="157" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="157">
+        <label>FormatException</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileFormatException.cs" line="10" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileFormatException.cs" bodystart="9" bodyend="14"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_exception_1a5ad7bd35a878267b9dae290629dad3e7" prot="public" virt="non-virtual"><scope>myMD::Model::ParserModel::FileFormatException</scope><name>FileFormatException</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_exception_1ac7022d90216c1a33d6ed39bf952b8592" prot="public" virt="non-virtual"><scope>myMD::Model::ParserModel::FileFormatException</scope><name>FileFormatException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

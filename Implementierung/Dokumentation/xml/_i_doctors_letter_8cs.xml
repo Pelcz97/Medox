@@ -30,7 +30,7 @@
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RemoveFromGroup(<ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group" kindref="compound">IDoctorsLetterGroup</ref><sp/>group);</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RemoveMedication(<ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kindref="compound">IMedication</ref><sp/>med);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DisattachMedication(<ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kindref="compound">IMedication</ref><sp/>med);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter" kindref="compound">DoctorsLetter</ref><sp/>ToDoctorsLetter();</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>

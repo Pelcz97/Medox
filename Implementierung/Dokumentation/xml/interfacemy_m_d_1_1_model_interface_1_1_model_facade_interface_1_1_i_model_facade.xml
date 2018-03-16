@@ -28,7 +28,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="17" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="19" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ae4b53eee1d4ef8aa929b21761db164f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group" kindref="compound">IDoctorsLetterGroup</ref></type>
@@ -43,7 +43,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="23" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="25" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a2b58006403e6d1fdc0b8764e6d908f48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kindref="compound">IMedication</ref></type>
@@ -58,7 +58,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="29" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="31" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a1a7a58c40cd157ebbf36809da4f03deb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref></type>
@@ -73,7 +73,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="36" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="38" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a4a1500102cde56c6cfd27002f11c71b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -99,7 +99,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="42" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="44" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1aeac1c3e24d92639576aba45cf48329db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref></type>
@@ -114,7 +114,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="48" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="50" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a1d1426bea42bcc857cc7f8075c1af9d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref> &gt;</type>
@@ -129,7 +129,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="54" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="56" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a3c0555857b11400df12c8be746223eab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group" kindref="compound">IDoctorsLetterGroup</ref> &gt;</type>
@@ -144,7 +144,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="60" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="62" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ac7cc1ff2f542e09632a8d6bdb2bca17d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kindref="compound">IMedication</ref> &gt;</type>
@@ -159,33 +159,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="66" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a13e12d0dc6ab4ddf5036a8492ba85e40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void myMD.ModelInterface.ModelFacadeInterface.IModelFacade.SendLetter</definition>
-        <argsstring>(IDoctorsLetter letter)</argsstring>
-        <name>SendLetter</name>
-        <reimplementedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a89d84c76209109caac581c4d80ebc8e4">SendLetter</reimplementedby>
-        <param>
-          <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref></type>
-          <declname>letter</declname>
-        </param>
-        <briefdescription>
-<para>Bereitet den gewünschten Arztbrief für die Datenübertragung vor und veranlasst diese anschließend. </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>letter</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Der zu sendende Arztbrief</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="72" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="68" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ad3fe364e44e55623a6e4a3a8920da8dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -198,9 +172,17 @@
           <declname>entity</declname>
         </param>
         <briefdescription>
-<para>Aktualisiert die gegebene Entität. </para>        </briefdescription>
+<para>Bereitet den gewünschten Arztbrief für die Datenübertragung vor und veranlasst diese anschließend. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>letter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Der zu sendende Arztbrief</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para><para>Aktualisiert die gegebene Entität. </para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>entity</parametername>
 </parameternamelist>
@@ -211,7 +193,78 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="78" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a1ec4e01f0fbaf30e4d3039d916584c11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ModelInterface.ModelFacadeInterface.IModelFacade.SetConnectedServer</definition>
+        <argsstring>(IBleGattServerConnection server)</argsstring>
+        <name>SetConnectedServer</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a10a59347496c0c5ce10ad3d941d6b008">SetConnectedServer</reimplementedby>
+        <param>
+          <type>IBleGattServerConnection</type>
+          <declname>server</declname>
+        </param>
+        <briefdescription>
+<para>Setzt den Verbundenen GATT-Server. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>server</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Server.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1af40e4526eeacdecb87b3e4537b0b7eff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IBleGattServerConnection</type>
+        <definition>IBleGattServerConnection myMD.ModelInterface.ModelFacadeInterface.IModelFacade.GetConnectedServer</definition>
+        <argsstring>()</argsstring>
+        <name>GetConnectedServer</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ade71d0eaf0c011b2b1149829b3dd7098">GetConnectedServer</reimplementedby>
+        <briefdescription>
+<para>?bergibt den aktuell verbundenen GATT-Server. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The connected server.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a837bb41711d2173ea25967242046d03c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Task</type>
+        <definition>Task myMD.ModelInterface.ModelFacadeInterface.IModelFacade.GetFilesFromServer</definition>
+        <argsstring>()</argsstring>
+        <name>GetFilesFromServer</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1aac7aa4d319269018e437fbde2d08f27a">GetFilesFromServer</reimplementedby>
+        <briefdescription>
+<para>Auslesen aller vom Server angebotenen Dateien. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The files from server.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1aa76259391d3803e7d898a29cc989c050" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Task&lt; int &gt;</type>
+        <definition>Task&lt;int&gt; myMD.ModelInterface.ModelFacadeInterface.IModelFacade.NumberOfFilesOnServer</definition>
+        <argsstring>()</argsstring>
+        <name>NumberOfFilesOnServer</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a5ec0de8d76615157b7c093798de43590">NumberOfFilesOnServer</reimplementedby>
+        <briefdescription>
+<para>Anzahl der vom Server angebotenen Dateien. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The of files on server.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="104" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -219,18 +272,18 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="234">
+      <node id="236">
         <label>myMD.Model.ModelFacade.ModelFacade</label>
         <link refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade"/>
-        <childnode refid="233" relation="public-inheritance">
+        <childnode refid="235" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="233">
+      <node id="235">
         <label>myMD.ModelInterface.ModelFacadeInterface.IModelFacade</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
       </node>
     </inheritancegraph>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="12" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" bodystart="11" bodyend="79"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" line="14" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/ModelFacadeInterface/IModelFacade.cs" bodystart="13" bodyend="106"/>
     <listofallmembers>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a0dd627e2af597fb44b8c8b6820834938" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::ModelFacadeInterface::IModelFacade</scope><name>Activate</name></member>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ae4b53eee1d4ef8aa929b21761db164f6" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::ModelFacadeInterface::IModelFacade</scope><name>CreateEmptyGroup</name></member>
@@ -241,7 +294,10 @@
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a1d1426bea42bcc857cc7f8075c1af9d1" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::ModelFacadeInterface::IModelFacade</scope><name>GetAllDoctorsLetters</name></member>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a3c0555857b11400df12c8be746223eab" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::ModelFacadeInterface::IModelFacade</scope><name>GetAllGroups</name></member>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ac7cc1ff2f542e09632a8d6bdb2bca17d" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::ModelFacadeInterface::IModelFacade</scope><name>GetAllMedications</name></member>
-      <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a13e12d0dc6ab4ddf5036a8492ba85e40" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::ModelFacadeInterface::IModelFacade</scope><name>SendLetter</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1af40e4526eeacdecb87b3e4537b0b7eff" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::ModelFacadeInterface::IModelFacade</scope><name>GetConnectedServer</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a837bb41711d2173ea25967242046d03c" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::ModelFacadeInterface::IModelFacade</scope><name>GetFilesFromServer</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1aa76259391d3803e7d898a29cc989c050" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::ModelFacadeInterface::IModelFacade</scope><name>NumberOfFilesOnServer</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a1ec4e01f0fbaf30e4d3039d916584c11" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::ModelFacadeInterface::IModelFacade</scope><name>SetConnectedServer</name></member>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ad3fe364e44e55623a6e4a3a8920da8dd" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::ModelFacadeInterface::IModelFacade</scope><name>Update</name></member>
     </listofallmembers>
   </compounddef>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacemy_m_d_1_1_model_1_1_dependency_service" kind="namespace" language="C#">
+    <compoundname>myMD::Model::DependencyService</compoundname>
+    <innerclass refid="classmy_m_d_1_1_model_1_1_dependency_service_1_1_dependency_service_wrapper" prot="public">myMD::Model::DependencyService::DependencyServiceWrapper</innerclass>
+    <innerclass refid="interfacemy_m_d_1_1_model_1_1_dependency_service_1_1_i_dependency_service" prot="public">myMD::Model::DependencyService::IDependencyService</innerclass>
+    <innerclass refid="classmy_m_d_1_1_model_1_1_dependency_service_1_1_xamarin_dependency_service" prot="public">myMD::Model::DependencyService::XamarinDependencyService</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService/DependencyService.cs" line="2" column="1"/>
+  </compounddef>
+</doxygen>

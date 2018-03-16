@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_helper" kind="interface" language="C#" prot="public">
+    <compoundname>myMD::Model::TransmissionModel::IBluetoothHelper</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_helper_1afcdf2bd392d481cff915fdfc1e873d54" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>IBluetoothLowEnergyAdapter</type>
+        <definition>IBluetoothLowEnergyAdapter myMD.Model.TransmissionModel.IBluetoothHelper.Adapter</definition>
+        <argsstring></argsstring>
+        <name>Adapter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetoothHelper.cs" line="7" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetoothHelper.cs" bodystart="7" bodyend="7"/>
+        <referencedby refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a39d908572f42325912210144d3614d66" compoundref="_select_device_view_model_8cs" startline="36" endline="60">myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel.SelectDeviceViewModel</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetoothHelper.cs" line="6" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/IBluetoothHelper.cs" bodystart="5" bodyend="8"/>
+    <listofallmembers>
+      <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_helper_1afcdf2bd392d481cff915fdfc1e873d54" prot="public" virt="non-virtual"><scope>myMD::Model::TransmissionModel::IBluetoothHelper</scope><name>Adapter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -3,32 +3,84 @@
   <compounddef id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model" kind="class" language="C#" prot="public">
     <compoundname>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</compoundname>
     <basecompoundref refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model" prot="public" virt="non-virtual">myMD.ViewModel.OverallViewModel.OverallViewModel</basecompoundref>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1afea82c22a42901685bc89e40469fe76d" prot="private" static="no" mutable="no">
-        <type>IGattServer</type>
-        <definition>IGattServer myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.server</definition>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1ade15b9cbbab522230750f0589142dcce" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.ReadingDataPossible</definition>
         <argsstring></argsstring>
-        <name>server</name>
+        <name>ReadingDataPossible</name>
         <briefdescription>
-<para>Der Bluetooth GATT-Server, der die zu sendenden Arztbriefe einem Klient bereitstellen soll. </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="23" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="23" bodyend="-1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="23" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="23" bodyend="23"/>
       </memberdef>
-      <memberdef kind="variable" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1af59cdf3c02ddf2b2c792a4d0c139c9c4" prot="private" static="no" mutable="no">
-        <type>IDisposable</type>
-        <definition>IDisposable myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.notifyBroadcast</definition>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a303ab750ac74c934f8c02b392702a2fa" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.SearchingPossible</definition>
         <argsstring></argsstring>
-        <name>notifyBroadcast</name>
+        <name>SearchingPossible</name>
         <briefdescription>
-<para>The notify broadcast. </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="28" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="28" bodyend="-1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="24" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1af15db4a7f5f76480197d7c6ee36f5fc2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.ReadingNumberOfFilesPossible</definition>
+        <argsstring></argsstring>
+        <name>ReadingNumberOfFilesPossible</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="25" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a2d4078c77643aa58c23847b5b4b42666" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>IBleGattServerConnection</type>
+        <definition>IBleGattServerConnection myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.ConnectedGattServer</definition>
+        <argsstring></argsstring>
+        <name>ConnectedGattServer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="27" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="27" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a65eb7fa5e755ed75f94d498122df50b7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>ICommand</type>
+        <definition>ICommand myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.RefreshNumberOfFiles</definition>
+        <argsstring></argsstring>
+        <name>RefreshNumberOfFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="50" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="51" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1ab2d1beaf9cb1e986d607af394ab3f6a7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.NumberOfFiles</definition>
+        <argsstring></argsstring>
+        <name>NumberOfFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="69" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="69" bodyend="69"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -43,33 +95,35 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="34" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="34" bodyend="38"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="75" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="75" bodyend="83"/>
       </memberdef>
-      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a5de8914eeb10e78166ef2a0c6bc65af4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a03cc497c03b91bb106256b8fcd46bfbb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.ReceiveData</definition>
+        <argsstring>()</argsstring>
+        <name>ReceiveData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="100" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="100" bodyend="130"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1af66a0e4c0841c1e26f5e1b34a82b8997" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>async void</type>
-        <definition>async void myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.ServerSettings</definition>
+        <definition>async void myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.GetNumberOfFiles</definition>
         <argsstring>()</argsstring>
-        <name>ServerSettings</name>
+        <name>GetNumberOfFiles</name>
         <briefdescription>
-<para>Methode zur Verwaltung des Servers: Zu Testzwecken wird zunächst der Adapter Status ausgegeben. Anschliessend wird versucht, einen Server zu erstellen, zu Starten und mit einem Namen anderen Geräten in der Nähe sichtbar zu machen. </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="46" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="46" bodyend="75"/>
-      </memberdef>
-      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1acd2a4a33751f02b1f16bb8c666b98f34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel.BuildServer</definition>
-        <argsstring>()</argsstring>
-        <name>BuildServer</name>
-        <briefdescription>
-<para>Explizite Zusammensetzung des Servers. Hier werden die einzelnen Charakteristiken erstellt, die notwendig sind, um Daten schreiben und lesen zu können sowie eine Benachrichtigung an Klienten versenden zu können. Die hier angegeben Charakteristiken dienen Testzwecken, da ein grundlegendes Problem mit dem Server besteht. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="84" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="84" bodyend="136"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="85" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="85" bodyend="98"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -77,57 +131,61 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="431">
+      <node id="439">
         <label>INotifyPropertyChanged</label>
       </node>
-      <node id="429">
+      <node id="437">
         <label>myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model"/>
-        <childnode refid="430" relation="public-inheritance">
+        <childnode refid="438" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="430">
+      <node id="438">
         <label>OverallViewModel::OverallViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
-        <childnode refid="431" relation="public-inheritance">
+        <childnode refid="439" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="434">
+      <node id="442">
         <label>INotifyPropertyChanged</label>
       </node>
-      <node id="432">
+      <node id="440">
         <label>myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model"/>
-        <childnode refid="433" relation="public-inheritance">
+        <childnode refid="441" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="433">
+      <node id="441">
         <label>OverallViewModel::OverallViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
-        <childnode refid="434" relation="public-inheritance">
+        <childnode refid="442" relation="public-inheritance">
         </childnode>
-        <childnode refid="435" relation="usage">
+        <childnode refid="443" relation="usage">
           <edgelabel>ModelFacade</edgelabel>
         </childnode>
       </node>
-      <node id="435">
+      <node id="443">
         <label>myMD.ModelInterface.ModelFacadeInterface.IModelFacade</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
       </node>
     </collaborationgraph>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="19" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="18" bodyend="137"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" line="21" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/TransmittingDataViewModel.cs" bodystart="20" bodyend="132"/>
     <listofallmembers>
-      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1acff4179c3cbf2cd35046729e99cd6921" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>BleAdapter</name></member>
-      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1acd2a4a33751f02b1f16bb8c666b98f34" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>BuildServer</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a2d4078c77643aa58c23847b5b4b42666" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>ConnectedGattServer</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1af66a0e4c0841c1e26f5e1b34a82b8997" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>GetNumberOfFiles</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1ab1b0e7b2ed9ae07614caa1e45b942e3f" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>ModelFacade</name></member>
-      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1af59cdf3c02ddf2b2c792a4d0c139c9c4" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>notifyBroadcast</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a40cabfa5e7d2f08979a9ba5c3c8eead8" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>myMD_FileTransfer</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1ab2d1beaf9cb1e986d607af394ab3f6a7" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>NumberOfFiles</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a0333c153387ba2d38fb31eeb0419bfcf" prot="public" virt="virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>OnPropertyChanged</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>OverallViewModel</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1918d3d8d384486e278426327b16256f" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>PropertyChanged</name></member>
-      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1afea82c22a42901685bc89e40469fe76d" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>server</name></member>
-      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a5de8914eeb10e78166ef2a0c6bc65af4" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>ServerSettings</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1ade15b9cbbab522230750f0589142dcce" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>ReadingDataPossible</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1af15db4a7f5f76480197d7c6ee36f5fc2" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>ReadingNumberOfFilesPossible</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a03cc497c03b91bb106256b8fcd46bfbb" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>ReceiveData</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a65eb7fa5e755ed75f94d498122df50b7" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>RefreshNumberOfFiles</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a303ab750ac74c934f8c02b392702a2fa" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>SearchingPossible</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a010f4e5a18f39b8df0e14fe18c13c1a3" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</scope><name>TransmittingDataViewModel</name></member>
     </listofallmembers>
   </compounddef>

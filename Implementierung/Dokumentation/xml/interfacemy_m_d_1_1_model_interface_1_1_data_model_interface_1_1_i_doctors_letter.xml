@@ -17,6 +17,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" bodystart="16" bodyend="16"/>
+        <referencedby refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model_1aa879528b83398ced704ca2be3b63bb3d" compoundref="_detailed_doctors_letter_view_model_8cs" startline="35" endline="39">myMD.ViewModel.OverviewTabViewModel.DetailedDoctorsLetterViewModel.DetailedDoctorsLetterViewModel</referencedby>
       </memberdef>
       <memberdef kind="property" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a88aa05eef80dff9858cd227e7c94092a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor" kindref="compound">IDoctor</ref></type>
@@ -137,12 +138,12 @@
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" line="50" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1afe6898d6da722e0f947685fd58ddefc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a53d5966f64387b16a88bb0b4983b414f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void myMD.ModelInterface.DataModelInterface.IDoctorsLetter.RemoveMedication</definition>
+        <definition>void myMD.ModelInterface.DataModelInterface.IDoctorsLetter.DisattachMedication</definition>
         <argsstring>(IMedication med)</argsstring>
-        <name>RemoveMedication</name>
-        <reimplementedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1a8c3cf949ff6547d0a97746c013b25dfa">RemoveMedication</reimplementedby>
+        <name>DisattachMedication</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1a0099afde0cbf0dd925b5265715be127f">DisattachMedication</reimplementedby>
         <param>
           <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kindref="compound">IMedication</ref></type>
           <declname>med</declname>
@@ -184,34 +185,16 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="188">
-        <label>IData</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
-        <childnode refid="189" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="190">
-        <label>myMD.Model.DataModel.DoctorsLetter</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter"/>
-        <childnode refid="187" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="187">
-        <label>myMD.ModelInterface.DataModelInterface.IDoctorsLetter</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter"/>
-        <childnode refid="188" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="189">
-        <label>IEntity</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="192">
         <label>IData</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
         <childnode refid="193" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="194">
+        <label>myMD.Model.DataModel.DoctorsLetter</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter"/>
+        <childnode refid="191" relation="public-inheritance">
         </childnode>
       </node>
       <node id="191">
@@ -224,6 +207,24 @@
         <label>IEntity</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="196">
+        <label>IData</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
+        <childnode refid="197" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="195">
+        <label>myMD.ModelInterface.DataModelInterface.IDoctorsLetter</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter"/>
+        <childnode refid="196" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="197">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
     </collaborationgraph>
     <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" line="12" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface/IDoctorsLetter.cs" bodystart="11" bodyend="63"/>
     <listofallmembers>
@@ -231,12 +232,12 @@
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1aa7cee10d449b38af82d941a777d14968" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>AttachMedication</name></member>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_1a9d008b7dcd815aa50c08de56f5cbb902" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>Date</name></member>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a91b4ca8424fc3876b9fce440fa62b9c5" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>Diagnosis</name></member>
+      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a53d5966f64387b16a88bb0b4983b414f" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>DisattachMedication</name></member>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a88aa05eef80dff9858cd227e7c94092a" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>Doctor</name></member>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a1b061be65bc92eb5941fca68f0ad3e7e" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>Groups</name></member>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a2366808fa2ae97044f3e4856f43d253b" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>Medication</name></member>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_1a8160d8399f68f5db325a517c3114f7ae" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>Name</name></member>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a2aed655d5306cd3d1970627843203adc" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>RemoveFromGroup</name></member>
-      <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1afe6898d6da722e0f947685fd58ddefc0" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>RemoveMedication</name></member>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_1a8ff35b1b7aeffdb14c900e6c807b1e4e" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>Sensitivity</name></member>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a1dd9226ef2d2b35616beea4ca52aa5e1" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>ToDoctorsLetter</name></member>
       <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_1acc62ca98aadef285f342145264d23570" prot="public" virt="non-virtual"><scope>myMD::ModelInterface::DataModelInterface::IDoctorsLetter</scope><name>ToEntity</name></member>

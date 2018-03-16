@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_a3a28c973183a57445a64e551875eee9" kind="dir">
+    <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService</compoundname>
+    <innerfile refid="_dependency_service_8cs">DependencyService.cs</innerfile>
+    <innerfile refid="_i_dependency_service_8cs">IDependencyService.cs</innerfile>
+    <innerfile refid="_xamarin_dependency_service_8cs">XamarinDependencyService.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService/"/>
+  </compounddef>
+</doxygen>

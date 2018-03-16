@@ -7,8 +7,7 @@
 
 
 
-Klassendiagramm für my\+M\+D.\+View\+Model.\+Overview\+Tab\+View\+Model.\+Overview\+View\+Model\+:
-\nopagebreak
+Klassendiagramm für my\+M\+D.\+View\+Model.\+Overview\+Tab\+View\+Model.\+Overview\+View\+Model\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,8 +16,7 @@ Klassendiagramm für my\+M\+D.\+View\+Model.\+Overview\+Tab\+View\+Model.\+Overv
 \end{figure}
 
 
-Zusammengehörigkeiten von my\+M\+D.\+View\+Model.\+Overview\+Tab\+View\+Model.\+Overview\+View\+Model\+:
-\nopagebreak
+Zusammengehörigkeiten von my\+M\+D.\+View\+Model.\+Overview\+Tab\+View\+Model.\+Overview\+View\+Model\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -35,8 +33,12 @@ Zusammengehörigkeiten von my\+M\+D.\+View\+Model.\+Overview\+Tab\+View\+Model.\
 \item 
 Observable\+Collection$<$ \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model}{Doctors\+Letter\+View\+Model}} $>$ \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_ab0450e3df5b99c435084ad74c2ea65d0}{Doctors\+Letters\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Die Liste der vorhandenen Arztbriefe. \end{DoxyCompactList}\item 
-I\+Command \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_a82f6eaa58ba38f2761d5f6e3d9ac9518}{Add\+Dummy\+Letter}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Command, das ein Dummy Element mit den gegebenen festen Werten erstellt. Nur zu Testzwecken. \end{DoxyCompactList}\end{DoxyCompactItemize}
+Observable\+Collection$<$ Grouping$<$ string, \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model}{Doctors\+Letter\+View\+Model}} $>$ $>$ \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_a01ae80c786f5f25f3305977fd9f6e380}{Doctors\+Letters\+Items\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_a2ce7b1e7da886e5fccb312edaa49b0be}{Key}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Der Schlüssel der Medications\+Items\+List, anhand dessen der Group\+Header festgelegt wird \end{DoxyCompactList}\item 
+I\+Command \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_aace971b1b9ab483527d1ae8eccde8399}{Delete\+List\+Item}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command um ein Doctors\+Letter aus der Liste zu löschen \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Weitere Geerbte Elemente}
 
 
@@ -59,17 +61,23 @@ Erzeugt ein \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_overview_tab_view_mo
 
 
 \subsection{Dokumentation der Propertys}
-\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_a82f6eaa58ba38f2761d5f6e3d9ac9518}\label{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_a82f6eaa58ba38f2761d5f6e3d9ac9518}} 
-\index{my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model}!Add\+Dummy\+Letter@{Add\+Dummy\+Letter}}
-\index{Add\+Dummy\+Letter@{Add\+Dummy\+Letter}!my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model}}
-\subsubsection{\texorpdfstring{Add\+Dummy\+Letter}{AddDummyLetter}}
-{\footnotesize\ttfamily I\+Command my\+M\+D.\+View\+Model.\+Overview\+Tab\+View\+Model.\+Overview\+View\+Model.\+Add\+Dummy\+Letter\hspace{0.3cm}{\ttfamily [get]}}
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_aace971b1b9ab483527d1ae8eccde8399}\label{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_aace971b1b9ab483527d1ae8eccde8399}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model}!Delete\+List\+Item@{Delete\+List\+Item}}
+\index{Delete\+List\+Item@{Delete\+List\+Item}!my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model}}
+\subsubsection{\texorpdfstring{Delete\+List\+Item}{DeleteListItem}}
+{\footnotesize\ttfamily I\+Command my\+M\+D.\+View\+Model.\+Overview\+Tab\+View\+Model.\+Overview\+View\+Model.\+Delete\+List\+Item\hspace{0.3cm}{\ttfamily [get]}}
 
 
 
-Command, das ein Dummy Element mit den gegebenen festen Werten erstellt. Nur zu Testzwecken. 
+Command um ein Doctors\+Letter aus der Liste zu löschen 
 
-The add dummy letter.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_ab0450e3df5b99c435084ad74c2ea65d0}\label{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_ab0450e3df5b99c435084ad74c2ea65d0}} 
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_a01ae80c786f5f25f3305977fd9f6e380}\label{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_a01ae80c786f5f25f3305977fd9f6e380}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model}!Doctors\+Letters\+Items\+List@{Doctors\+Letters\+Items\+List}}
+\index{Doctors\+Letters\+Items\+List@{Doctors\+Letters\+Items\+List}!my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model}}
+\subsubsection{\texorpdfstring{Doctors\+Letters\+Items\+List}{DoctorsLettersItemsList}}
+{\footnotesize\ttfamily Observable\+Collection$<$Grouping$<$string, \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model}{Doctors\+Letter\+View\+Model}}$>$ $>$ my\+M\+D.\+View\+Model.\+Overview\+Tab\+View\+Model.\+Overview\+View\+Model.\+Doctors\+Letters\+Items\+List\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_ab0450e3df5b99c435084ad74c2ea65d0}\label{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_ab0450e3df5b99c435084ad74c2ea65d0}} 
 \index{my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model}!Doctors\+Letters\+List@{Doctors\+Letters\+List}}
 \index{Doctors\+Letters\+List@{Doctors\+Letters\+List}!my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model}}
 \subsubsection{\texorpdfstring{Doctors\+Letters\+List}{DoctorsLettersList}}
@@ -79,7 +87,17 @@ The add dummy letter.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_overview_
 
 Die Liste der vorhandenen Arztbriefe. 
 
-The doctors letters list.
+The doctors letters list.\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_a2ce7b1e7da886e5fccb312edaa49b0be}\label{classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_a2ce7b1e7da886e5fccb312edaa49b0be}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model}!Key@{Key}}
+\index{Key@{Key}!my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Overview\+Tab\+View\+Model\+::\+Overview\+View\+Model}}
+\subsubsection{\texorpdfstring{Key}{Key}}
+{\footnotesize\ttfamily string my\+M\+D.\+View\+Model.\+Overview\+Tab\+View\+Model.\+Overview\+View\+Model.\+Key\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Der Schlüssel der Medications\+Items\+List, anhand dessen der Group\+Header festgelegt wird 
+
+The key.
 
 Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
 \item 

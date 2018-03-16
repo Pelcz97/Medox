@@ -20,7 +20,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" line="25" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" bodystart="25" bodyend="25"/>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1ab74ea0d94ef90f0c2c6653f2be46c4f9" compoundref="_entity_database_8cs" startline="97" endline="100">myMD.Model.DatabaseModel.EntityDatabase.GetAllDataFromProfile&lt; E &gt;</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1ab74ea0d94ef90f0c2c6653f2be46c4f9" compoundref="_entity_database_8cs" startline="98" endline="101">myMD.Model.DatabaseModel.EntityDatabase.GetAllDataFromProfile&lt; E &gt;</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a300d53e2e23b82c4bbf56813d2ff5285" compoundref="_entity_database_8cs" startline="128" endline="138">myMD.Model.DatabaseModel.EntityDatabase.GetDoctor</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a498caa3b7e7a7745f7066620ac9a14ae" compoundref="_entity_database_8cs" startline="154" endline="160">myMD.Model.DatabaseModel.EntityDatabase.Insert</referencedby>
         <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1abe00d7d8a12deadbb57953f0cc57346c" compoundref="_entity_8cs" startline="55" endline="61">myMD.Model.DataModel.Entity.Equals</referencedby>
         <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1af26a4f9cf5ac6b8ee14e629e0a36a004" compoundref="_profile_8cs" startline="43" endline="52">myMD.Model.DataModel.Profile.Equals</referencedby>
       </memberdef>
@@ -38,8 +40,6 @@
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" line="28" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" bodystart="28" bodyend="28"/>
         <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1abe00d7d8a12deadbb57953f0cc57346c" compoundref="_entity_8cs" startline="55" endline="61">myMD.Model.DataModel.Entity.Equals</referencedby>
         <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile_1af26a4f9cf5ac6b8ee14e629e0a36a004" compoundref="_profile_8cs" startline="43" endline="52">myMD.Model.DataModel.Profile.Equals</referencedby>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a7a6690eb5f9d3c15ac4805c1695f2116" compoundref="_hl7_to_database_parser_8cs" startline="69" endline="80">myMD.Model.ParserModel.Hl7ToDatabaseParser.ParseDoctor</referencedby>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5d6231cd8b2598bf1683778b0500c7fd" compoundref="_hl7_to_database_parser_8cs" startline="133" endline="148">myMD.Model.ParserModel.Hl7ToDatabaseParser.ParseProfile</referencedby>
       </memberdef>
       <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a3df9a6eed5a26b09bbf075615db46b9c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile" kindref="compound">Profile</ref></type>
@@ -53,9 +53,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" line="36" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" bodystart="36" bodyend="36"/>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a498caa3b7e7a7745f7066620ac9a14ae" compoundref="_entity_database_8cs" startline="133" endline="138">myMD.Model.DatabaseModel.EntityDatabase.Insert</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a300d53e2e23b82c4bbf56813d2ff5285" compoundref="_entity_database_8cs" startline="128" endline="138">myMD.Model.DatabaseModel.EntityDatabase.GetDoctor</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a498caa3b7e7a7745f7066620ac9a14ae" compoundref="_entity_database_8cs" startline="154" endline="160">myMD.Model.DatabaseModel.EntityDatabase.Insert</referencedby>
         <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1abe00d7d8a12deadbb57953f0cc57346c" compoundref="_entity_8cs" startline="55" endline="61">myMD.Model.DataModel.Entity.Equals</referencedby>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" compoundref="_file_to_database_parser_8cs" startline="21" endline="50">myMD.Model.ParserModel.FileToDatabaseParser.ParseFile</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" compoundref="_file_to_database_parser_8cs" startline="22" endline="52">myMD.Model.ParserModel.FileToDatabaseParser.ParseFile</referencedby>
       </memberdef>
       <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a54eef4f2993b1ed6467ee8a7d4b1a4b7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
@@ -69,6 +70,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" line="42" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" bodystart="42" bodyend="42"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a498caa3b7e7a7745f7066620ac9a14ae" compoundref="_entity_database_8cs" startline="154" endline="160">myMD.Model.DatabaseModel.EntityDatabase.Insert</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -87,7 +89,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" line="49" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Entity.cs" bodystart="49" bodyend="49"/>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a00616354127860a0d20d1a353a931cf4" compoundref="_entity_database_8cs" startline="69" endline="74">myMD.Model.DatabaseModel.EntityDatabase.Delete</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a00616354127860a0d20d1a353a931cf4" compoundref="_entity_database_8cs" startline="70" endline="75">myMD.Model.DatabaseModel.EntityDatabase.Delete</referencedby>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1abe00d7d8a12deadbb57953f0cc57346c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -162,71 +164,71 @@
     <detaileddescription>
 <para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity" kindref="compound">myMD.ModelInterface.DataModelInterface.IEntity</ref></para>    </detaileddescription>
     <inheritancegraph>
-      <node id="138">
+      <node id="136">
         <label>IEquatable&lt; Entity &gt;</label>
       </node>
-      <node id="136">
+      <node id="134">
         <label>myMD.Model.DataModel.Entity</label>
         <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
-        <childnode refid="137" relation="public-inheritance">
+        <childnode refid="135" relation="public-inheritance">
         </childnode>
-        <childnode refid="138" relation="public-inheritance">
+        <childnode refid="136" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="140">
+      <node id="138">
         <label>myMD.Model.DataModel.DoctorsLetter</label>
         <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter"/>
-        <childnode refid="139" relation="public-inheritance">
+        <childnode refid="137" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="139">
+        <label>myMD.Model.DataModel.DoctorsLetterGroup</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group"/>
+        <childnode refid="137" relation="public-inheritance">
         </childnode>
       </node>
       <node id="141">
-        <label>myMD.Model.DataModel.DoctorsLetterGroup</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group"/>
-        <childnode refid="139" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="143">
         <label>myMD.Model.DataModel.Doctor</label>
         <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctor"/>
-        <childnode refid="136" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="144">
-        <label>myMD.Model.DataModel.Profile</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile"/>
-        <childnode refid="136" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="137">
-        <label>IEntity</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
-      </node>
-      <node id="139">
-        <label>myMD.Model.DataModel.Data</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
-        <childnode refid="136" relation="public-inheritance">
+        <childnode refid="134" relation="public-inheritance">
         </childnode>
       </node>
       <node id="142">
+        <label>myMD.Model.DataModel.Profile</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile"/>
+        <childnode refid="134" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="135">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+      <node id="137">
+        <label>myMD.Model.DataModel.Data</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
+        <childnode refid="134" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="140">
         <label>myMD.Model.DataModel.Medication</label>
         <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication"/>
-        <childnode refid="139" relation="public-inheritance">
+        <childnode refid="137" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="147">
+      <node id="145">
         <label>IEquatable&lt; Entity &gt;</label>
       </node>
-      <node id="145">
+      <node id="143">
         <label>myMD.Model.DataModel.Entity</label>
         <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
-        <childnode refid="146" relation="public-inheritance">
+        <childnode refid="144" relation="public-inheritance">
         </childnode>
-        <childnode refid="147" relation="public-inheritance">
+        <childnode refid="145" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="146">
+      <node id="144">
         <label>IEntity</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
       </node>

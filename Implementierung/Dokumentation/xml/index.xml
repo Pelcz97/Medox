@@ -9,12 +9,20 @@
     <member refid="classmy_m_d_1_1_app_1a5c59e1bc50df85676c836d47df7708bd" kind="function"><name>CreateModel</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth" kind="class"><name>myMD::Model::TransmissionModel::Bluetooth</name>
-    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1a551c99750193ce8a6fc03c92864d24e8" kind="function"><name>scanForDevices</name></member>
-    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1a5be7341663a848cdc5bd2209c11890ad" kind="function"><name>send</name></member>
-    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1aaf2c47cc102234818e414fe362ea14a7" kind="function"><name>cancelSend</name></member>
-    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1a4955c9878fb425d4c20f344ecd16c2d1" kind="function"><name>pair</name></member>
-    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1add794d082480db984a9d49630d1e5bba" kind="function"><name>connect</name></member>
-    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1aedbb2bbfe638eb5e83497c7b4e74d99d" kind="function"><name>receive</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1ac8b984ee2476c23492b2fc16f905736e" kind="variable"><name>myMD_FileTransfer</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1a531e7f9c959ea2e64960509cfcbb372f" kind="variable"><name>RequestAndRespond</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1ae7e68f457ba294c0b2e1ccbcce594e4f" kind="variable"><name>RequestNumberOfSlices</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1ad4d56b8f729499cd19ea8a3f5b429736" kind="variable"><name>RequestNumberOfFiles</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1a56d67f9ccd4eb6d019dad692143b2258" kind="property"><name>ConnectedGattServer</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1a2404f386014bffe1a1e692ace53d076d" kind="function"><name>FormatAllFiles</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1afe39e1c7625dceedf9b5266eb731b4f9" kind="function"><name>ReadAllFilesOnServer</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1a37c0907154206af6e7d5498706be071f" kind="function"><name>ReadSpecificFile</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1af2e338e902c585f6786e289fa1f5154a" kind="function"><name>RequestFileSlice</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1a277d879fffd698383319e8a7ccbd8a76" kind="function"><name>GetNumberOfFiles</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1a9a37ecff2e6e2d6ab0de6f40b35e62d5" kind="function"><name>GetReadCycles</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1a7a690e7dd2fae436c3ad119ddd023e70" kind="function"><name>ListToArray</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1a8be282dab1e5a2356add22d6063de4b5" kind="function"><name>ReadFromCharacteristic</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth_1aef9aea6b7d673d20e7ec4eac0237a86f" kind="function"><name>WriteToCharacteristic</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page" kind="class"><name>myMD::View::AbstractPages::CustomContentPage</name>
     <member refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page_1a3cb9c69e49e16c30e2e5377790702769" kind="function"><name>CustomContentPage</name></member>
@@ -26,6 +34,10 @@
     <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a8d82ac369678f7098eda396bb8d615e1" kind="function"><name>Equals</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a878089e14b27cb78f0e3d83d7c1151f1" kind="function"><name>Equals</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1ab1a32ffb44374a5740fb1b464edffdc7" kind="function"><name>GetHashCode</name></member>
+  </compound>
+  <compound refid="classmy_m_d_1_1_model_1_1_dependency_service_1_1_dependency_service_wrapper" kind="class"><name>myMD::Model::DependencyService::DependencyServiceWrapper</name>
+    <member refid="classmy_m_d_1_1_model_1_1_dependency_service_1_1_dependency_service_wrapper_1aa793ca3dc71b54173e7cb34e079eee2d" kind="property"><name>Service</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_dependency_service_1_1_dependency_service_wrapper_1a68ea80f64fd423c37a8ef1961a8c24ec" kind="function"><name>Get&lt; T &gt;</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_detailed_doctors_letter_page" kind="class"><name>myMD::View::OverviewTabPages::DetailedDoctorsLetterPage</name>
     <member refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_detailed_doctors_letter_page_1a813f0b4f7f3a55f71a71dd9203123521" kind="variable"><name>vm</name></member>
@@ -41,6 +53,7 @@
     <member refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1aa8cd8227e2ec0e2007a7905ea19ddbde" kind="variable"><name>vm</name></member>
     <member refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1ad79a81b82b91b290f8e80534849eab79" kind="function"><name>DetailedMedicationPage</name></member>
     <member refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1a85fb3c6227ab81ef9b263263d76726b9" kind="function"><name>DetailedMedicationPage</name></member>
+    <member refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1ac5b60cfc6f750fe83431e6b3fa850f6b" kind="function"><name>OnBackButtonPressed</name></member>
     <member refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1a0f734144086235a8f70146e131dadb9f" kind="function"><name>CancelButton_Clicked</name></member>
     <member refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1ac5dfce8d2830c45bf07de93faf6bf3ba" kind="function"><name>SaveMedication_Clicked</name></member>
   </compound>
@@ -49,12 +62,6 @@
     <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model_1a769d397e08d7ea770c0e24123624d287" kind="function"><name>DetailedMedicineViewModel</name></member>
     <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model_1a481a7dd27905ec3a70ca7e5bb0c4f5d4" kind="function"><name>CancelMedication</name></member>
     <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model_1ae30844bb875a0f1c59a450e9fd4ecebd" kind="function"><name>SaveNewMedication</name></member>
-  </compound>
-  <compound refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device" kind="class"><name>myMD::Model::TransmissionModel::Device</name>
-    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1a929ac575030efc1810879551f92f6a61" kind="function"><name>connected</name></member>
-    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1ad3410ee962b5a3253e4ef99651b80c44" kind="function"><name>getName</name></member>
-    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1a84a4d532edd011e5eabd0b6939b1e91c" kind="function"><name>getUuid</name></member>
-    <member refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device_1af8485fc857a036d58e8b1ba38e7d098a" kind="function"><name>paired</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctor" kind="class"><name>myMD::Model::DataModel::Doctor</name>
     <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctor_1a3b6536909d8d0b090c2ca48a03d5d55b" kind="property"><name>Field</name></member>
@@ -85,7 +92,7 @@
     <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1adee9755c7174c4044cd210240cadfa54" kind="function"><name>GetHashCode</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1a9c51e568a91e9acd4a6dc4b486fa5db3" kind="function"><name>RemoveFromGroup</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1ab6811f3ef403a2d0210a37d0a55cd30a" kind="function"><name>RemoveFromGroup</name></member>
-    <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1a8c3cf949ff6547d0a97746c013b25dfa" kind="function"><name>RemoveMedication</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1a0099afde0cbf0dd925b5265715be127f" kind="function"><name>DisattachMedication</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1ace614eda4288a8c1e281f6c9b798e9db" kind="function"><name>ToDoctorsLetter</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group" kind="class"><name>myMD::Model::DataModel::DoctorsLetterGroup</name>
@@ -155,6 +162,10 @@
     <member refid="classmy_m_d_1_1_model_1_1_entity_factory_1_1_entity_factory_1a600515af5e312dbafa6dff80dfe5f25e" kind="function"><name>CreateEmptyMedication</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_entity_factory_1_1_entity_factory_1ac48b89bd93d6f39965d805b5f6af5f35" kind="function"><name>CreateEmptyProfile</name></member>
   </compound>
+  <compound refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_exception" kind="class"><name>myMD::Model::ParserModel::FileFormatException</name>
+    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_exception_1a5ad7bd35a878267b9dae290629dad3e7" kind="function"><name>FileFormatException</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_exception_1ac7022d90216c1a33d6ed39bf952b8592" kind="function"><name>FileFormatException</name></member>
+  </compound>
   <compound refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_extensions" kind="class"><name>myMD::Model::ParserModel::FileFormatExtensions</name>
     <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_extensions_1aa92e36d890cead3acd1063a79711f739" kind="function"><name>GetFileToDatabaseParser</name></member>
   </compound>
@@ -167,35 +178,39 @@
     <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a9b95fdb381daef0799df52ccc28d8a80" kind="function"><name>ParseProfile</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser" kind="class"><name>myMD::Model::ParserModel::Hl7ToDatabaseParser</name>
-    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1aaf9a9a96ffea1490d1770900e3c09020" kind="variable"><name>document</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1af72fbc51005aa4504c3e08ed84641adc" kind="variable"><name>INVALID_FILE_MESSAGE</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1ab4a4913082091f6d9192530052a386a5" kind="variable"><name>document</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a13abb8364acdb14c417f562bb95d1972" kind="variable"><name>file</name></member>
-    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1aca6b2c01a8680364bf64c4dec2110fe3" kind="variable"><name>helper</name></member>
-    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1af4d3b95667a81c3436fac34f1d54ce45" kind="function"><name>Hl7ToDatabaseParser</name></member>
-    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1ab842988577d11395c53a233a6c03ba4c" kind="function"><name>Hl7ToDatabaseParser</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5c2d04fd614ecab8c9bc7f5ae7636a00" kind="function"><name>Init</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a7a6690eb5f9d3c15ac4805c1695f2116" kind="function"><name>ParseDoctor</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a7422f68b4596b2a59b052c3e13629747" kind="function"><name>ParseLetter</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5188e31e41b2778e36ca853cb346c7b2" kind="function"><name>ParseMedications</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5d6231cd8b2598bf1683778b0500c7fd" kind="function"><name>ParseProfile</name></member>
-    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1aa4bc605fa97d0efa4597d1c43773f1cf" kind="function"><name>ParseMedication</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a202df89abd7d915555786eef608ebfe3" kind="function"><name>ParseMedication</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a2a17136bdd8d7265763529358d54c178" kind="function"><name>FilterByAttributeName</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a00d2dcf5f5f23347038b5f1f64a09a9e" kind="function"><name>SingleByAttributeName</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5c819860505747feec5a0ba98c6ba3c7" kind="function"><name>FilterByName</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a095991b743311cbb184494386dcd283c" kind="function"><name>SingleByName</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1ad391571819baf98ec8d520af6bcf3e4f" kind="function"><name>AttributeByName</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1accdc75310b676180a8e8df22c4c79816" kind="function"><name>ParseDate</name></member>
   </compound>
   <compound refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth" kind="interface"><name>myMD::Model::TransmissionModel::IBluetooth</name>
-    <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1adfa691c5290cab1d92390f585cc9abdb" kind="function"><name>scanForDevices</name></member>
-    <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1a3ae2f74750177a849765df54ea32f788" kind="function"><name>send</name></member>
-    <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1ad17c0199f5a72b2964b5b38b565ad6fc" kind="function"><name>cancelSend</name></member>
-    <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1a8bb41d3ca3ff3264de397bccd555e8b8" kind="function"><name>pair</name></member>
-    <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1a02d846b9c9b31d1ea1d35780928c3ba4" kind="function"><name>connect</name></member>
-    <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1aa835ad437ee703e3ae74f43e09c28fbc" kind="function"><name>receive</name></member>
+    <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1a803c3867d855403d8adb458753ab2315" kind="property"><name>ConnectedGattServer</name></member>
+    <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1a1a929cee5eff377bd3a2c51fa802e597" kind="function"><name>ReadAllFilesOnServer</name></member>
+    <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1ad1db5899a69c45439ad3aca8c7410c9e" kind="function"><name>ReadSpecificFile</name></member>
+    <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1a4101fa321005412173aa2676f29a4239" kind="function"><name>GetReadCycles</name></member>
+    <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1a969f7d364636d505afc12ba4871c4b02" kind="function"><name>GetNumberOfFiles</name></member>
+    <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_1a6e595ebbbd481bd57f2af7d8efa8a77f" kind="function"><name>ListToArray</name></member>
+  </compound>
+  <compound refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_helper" kind="interface"><name>myMD::Model::TransmissionModel::IBluetoothHelper</name>
+    <member refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_helper_1afcdf2bd392d481cff915fdfc1e873d54" kind="property"><name>Adapter</name></member>
   </compound>
   <compound refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data" kind="interface"><name>myMD::ModelInterface::DataModelInterface::IData</name>
     <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_1a9d008b7dcd815aa50c08de56f5cbb902" kind="property"><name>Date</name></member>
     <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data_1a8ff35b1b7aeffdb14c900e6c807b1e4e" kind="property"><name>Sensitivity</name></member>
   </compound>
-  <compound refid="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device" kind="interface"><name>myMD::ModelInterface::TransmissionModelInterface::IDevice</name>
-    <member refid="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device_1ab43328062cfb240bc8b942f77635aa86" kind="function"><name>connected</name></member>
-    <member refid="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device_1a0642c516236dc1a58f6199a47f174427" kind="function"><name>getName</name></member>
-    <member refid="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device_1a59013bc25e4ab2ef413e940d6e7c735f" kind="function"><name>getUuid</name></member>
-    <member refid="interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device_1a2979ec84b80f8ac2efcfc29797e1daa2" kind="function"><name>paired</name></member>
+  <compound refid="interfacemy_m_d_1_1_model_1_1_dependency_service_1_1_i_dependency_service" kind="interface"><name>myMD::Model::DependencyService::IDependencyService</name>
+    <member refid="interfacemy_m_d_1_1_model_1_1_dependency_service_1_1_i_dependency_service_1a2e088bfff9d0695a3a761faeeaba481e" kind="function"><name>Get&lt; T &gt;</name></member>
   </compound>
   <compound refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor" kind="interface"><name>myMD::ModelInterface::DataModelInterface::IDoctor</name>
     <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor_1a1e7c8df1b5a836bc218eaf926c6c2a9f" kind="property"><name>Field</name></member>
@@ -209,7 +224,7 @@
     <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a0b54c2a3e8d4c927078896b3a4b38834" kind="function"><name>AddToGroup</name></member>
     <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1aa7cee10d449b38af82d941a777d14968" kind="function"><name>AttachMedication</name></member>
     <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a2aed655d5306cd3d1970627843203adc" kind="function"><name>RemoveFromGroup</name></member>
-    <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1afe6898d6da722e0f947685fd58ddefc0" kind="function"><name>RemoveMedication</name></member>
+    <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a53d5966f64387b16a88bb0b4983b414f" kind="function"><name>DisattachMedication</name></member>
     <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_1a1dd9226ef2d2b35616beea4ca52aa5e1" kind="function"><name>ToDoctorsLetter</name></member>
   </compound>
   <compound refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group" kind="interface"><name>myMD::ModelInterface::DataModelInterface::IDoctorsLetterGroup</name>
@@ -244,11 +259,8 @@
   </compound>
   <compound refid="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper" kind="interface"><name>myMD::Model::FileHelper::IFileHelper</name>
     <member refid="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_1a8420370ca7817b74f4c0fd1ec300c0a2" kind="function"><name>GetLocalFilePath</name></member>
+    <member refid="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_1ab01e0757301271adeeb53e4e90e8b44d" kind="function"><name>WriteLocalFileFromString</name></member>
     <member refid="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_1a2f9976f7f5304c4d8fcd13de9ae84215" kind="function"><name>DeleteFile</name></member>
-  </compound>
-  <compound refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper" kind="interface"><name>myMD::Model::ParserModel::IHl7ParserHelper</name>
-    <member refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper_1ab4114a84678d1b0ce5df7fdc00119dc4" kind="function"><name>PrepareFormatter</name></member>
-    <member refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper_1acb71b41f4c50af3442b036e79ac53da1" kind="function"><name>FinalizeMedication</name></member>
   </compound>
   <compound refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kind="interface"><name>myMD::ModelInterface::DataModelInterface::IMedication</name>
     <member refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication_1af7601032a7c83c189809efe368352689" kind="property"><name>Date</name></member>
@@ -270,8 +282,11 @@
     <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a1d1426bea42bcc857cc7f8075c1af9d1" kind="function"><name>GetAllDoctorsLetters</name></member>
     <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a3c0555857b11400df12c8be746223eab" kind="function"><name>GetAllGroups</name></member>
     <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ac7cc1ff2f542e09632a8d6bdb2bca17d" kind="function"><name>GetAllMedications</name></member>
-    <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a13e12d0dc6ab4ddf5036a8492ba85e40" kind="function"><name>SendLetter</name></member>
     <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1ad3fe364e44e55623a6e4a3a8920da8dd" kind="function"><name>Update</name></member>
+    <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a1ec4e01f0fbaf30e4d3039d916584c11" kind="function"><name>SetConnectedServer</name></member>
+    <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1af40e4526eeacdecb87b3e4537b0b7eff" kind="function"><name>GetConnectedServer</name></member>
+    <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1a837bb41711d2173ea25967242046d03c" kind="function"><name>GetFilesFromServer</name></member>
+    <member refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_1aa76259391d3803e7d898a29cc989c050" kind="function"><name>NumberOfFilesOnServer</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_int_enum_converter" kind="class"><name>myMD::ViewModel::ProfileTabViewModel::IntEnumConverter</name>
     <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_int_enum_converter_1a73bbd4493664686f44c7411cbb4ac98a" kind="function"><name>Convert</name></member>
@@ -350,6 +365,10 @@
     <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1aa8c7a767fab9828415e6922142effc6b" kind="variable"><name>fileHelper</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a7ff3cb1e1b5efdf3c7499ab0ec6954b9" kind="variable"><name>parser</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1af4409668a62959fbf5ae1f89d065a4bb" kind="function"><name>ModelFacade</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a10a59347496c0c5ce10ad3d941d6b008" kind="function"><name>SetConnectedServer</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ade71d0eaf0c011b2b1149829b3dd7098" kind="function"><name>GetConnectedServer</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a5ec0de8d76615157b7c093798de43590" kind="function"><name>NumberOfFilesOnServer</name></member>
+    <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1aac7aa4d319269018e437fbde2d08f27a" kind="function"><name>GetFilesFromServer</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1aa391999b0bfdc15cedfc8a6ad2921f19" kind="function"><name>Activate</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ad7c7e2889846cf195ccdd4e61a804116" kind="function"><name>CreateEmptyGroup</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a5394beb3ee9308666dd7e16c00c943d7" kind="function"><name>CreateEmptyMedication</name></member>
@@ -359,15 +378,14 @@
     <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a09beb7d7b91b7f39f2e3c4e4a1c68eee" kind="function"><name>GetAllDoctorsLetters</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ab56e35aaf429925902258902c84ec70f" kind="function"><name>GetAllGroups</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1aef10eb7295b8eee4b938e5639f54b78d" kind="function"><name>GetAllMedications</name></member>
-    <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a89d84c76209109caac581c4d80ebc8e4" kind="function"><name>SendLetter</name></member>
     <member refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a25149455d25ce5c187c1f8f50c9735ba" kind="function"><name>Update</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1my_m_d_page" kind="class"><name>myMD::myMDPage</name>
     <member refid="classmy_m_d_1_1my_m_d_page_1a116c2084cfab3cc170d6f0c0d32e92c7" kind="function"><name>myMDPage</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model" kind="class"><name>myMD::ViewModel::OverallViewModel::OverallViewModel</name>
+    <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a40cabfa5e7d2f08979a9ba5c3c8eead8" kind="variable"><name>myMD_FileTransfer</name></member>
     <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1ab1b0e7b2ed9ae07614caa1e45b942e3f" kind="variable"><name>ModelFacade</name></member>
-    <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1acff4179c3cbf2cd35046729e99cd6921" kind="variable"><name>BleAdapter</name></member>
     <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1918d3d8d384486e278426327b16256f" kind="event"><name>PropertyChanged</name></member>
     <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a0333c153387ba2d38fb31eeb0419bfcf" kind="function"><name>OnPropertyChanged</name></member>
     <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" kind="function"><name>OverallViewModel</name></member>
@@ -379,8 +397,13 @@
   </compound>
   <compound refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model" kind="class"><name>myMD::ViewModel::OverviewTabViewModel::OverviewViewModel</name>
     <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_1ab0450e3df5b99c435084ad74c2ea65d0" kind="property"><name>DoctorsLettersList</name></member>
-    <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_1a82f6eaa58ba38f2761d5f6e3d9ac9518" kind="property"><name>AddDummyLetter</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_1a01ae80c786f5f25f3305977fd9f6e380" kind="property"><name>DoctorsLettersItemsList</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_1a2ce7b1e7da886e5fccb312edaa49b0be" kind="property"><name>Key</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_1aace971b1b9ab483527d1ae8eccde8399" kind="property"><name>DeleteListItem</name></member>
     <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_1a8099d87e6d22edcd5119a845cd16d96b" kind="function"><name>OverviewViewModel</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_1a06665eae0ce8b2c4393b60e403fcd280" kind="function"><name>GroupList</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_1a121505d6ecbe76a6c750283a75a3c764" kind="function"><name>DeleteListItemMethod</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model_1a876fd1e62a1fe78e8b3eebcbe19722d1" kind="function"><name>Reload</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade" kind="class"><name>myMD::Model::ParserModel::ParserFacade</name>
     <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade_1a52bf8be888d38b6433f60edc1e4b1fff" kind="function"><name>ParseFileToDatabase</name></member>
@@ -429,46 +452,50 @@
     <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_view_model_1a04299f633337b126a3590387020677a5" kind="function"><name>ReloadProfile</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model" kind="class"><name>myMD::ViewModel::SendDataTabViewModel::ScanResultViewModel</name>
-    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a46290df9ba85d55980f02b4569ac8649" kind="property"><name>Device</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a4dca1edb74b6b85465047896f464eb98" kind="property"><name>ScanResult</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1aa2d370aaf242496dcf429de8983dd6c3" kind="property"><name>services</name></member>
     <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a5fa7aaa6ca6d8d48917014cf1f99c091" kind="property"><name>DeviceName</name></member>
     <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a24eabbd36d43371c325d58b12c64c19f" kind="property"><name>IsConnected</name></member>
     <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a85f6973e1fc06fbbf200988d583fdb01" kind="property"><name>Uuid</name></member>
-    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1ad98e9265244511282e9a84855021ab3e" kind="property"><name>LocalName</name></member>
-    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a4004cd5c0830db3d00d8ecbedd2f0489" kind="variable"><name>connected</name></member>
-    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1add9345bb651a383905a0037ff8f0b9b8" kind="variable"><name>uuid</name></member>
-    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a8e5ccc98ea6447cd4ecd0890e9c1174b" kind="variable"><name>localName</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a9e78899bcb0d00b169ab62b5fcc115d7" kind="function"><name>ScanResultViewModel</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page" kind="class"><name>myMD::View::SendDataTabPages::SelectDevicePage</name>
     <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1a9e40785167162563a1dc08a387eb2edc" kind="variable"><name>vm</name></member>
     <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1a64f3adab09e13f5a8739a275f64215f9" kind="function"><name>SelectDevicePage</name></member>
-    <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1a7724df6fda5fca6dbdb27c1848dddd3a" kind="function"><name>CancelSelectDevice_Clicked</name></member>
     <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1a25692c7f172d5bf2daf35706ed8c8a50" kind="function"><name>DeviceItemSelected</name></member>
+    <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1a8311c6d43150e8fb5c391c0805e04fdc" kind="function"><name>CancelSelectDevice_Clicked</name></member>
+    <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1aa81844afad82df454e40368ee7cec81d" kind="function"><name>ConfirmSelectedDevice_Clicked</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model" kind="class"><name>myMD::ViewModel::SendDataTabViewModel::SelectDeviceViewModel</name>
     <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a2c0271b0ca7d8b38d3297d023fcbb74d" kind="property"><name>DeviceList</name></member>
-    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a6ec857b28f362381f5808378e4f6fb1a" kind="property"><name>isScanning</name></member>
-    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a863852899d8408a5decf7f9e724163f9" kind="property"><name>scan</name></member>
-    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a4cc73a2d15f2489105da96da595750b0" kind="property"><name>ScanForDevices_Clicked</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a52bb13e2b6ce00c547142eb91e4d3ee8" kind="property"><name>ConnectedServer</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1aa467f01d3cfb1aee4e7709bafa37aa5f" kind="property"><name>ConfirmingDevicePossible</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a29af90bec0cd2a1d3a62ccd3c5639727" kind="property"><name>CancelSelectDevicePossible</name></member>
     <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a39d908572f42325912210144d3614d66" kind="function"><name>SelectDeviceViewModel</name></member>
-    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1aa20931acf9e9c3580019a5025d2f1abb" kind="function"><name>StartScan</name></member>
-    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1adfca7bb7ef30bb64e2247bcdff75f654" kind="function"><name>StopScan</name></member>
-    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a04c544486f732bddac2d5feded4193a1" kind="function"><name>ConnectToDevice</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a9c836594d494df1bfc2483c5ae4514b0" kind="function"><name>StartScan</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a07fe293eff7f20b4535164182933621a" kind="function"><name>ConnectToDevice</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a836cbee87fa86a563de42d4b68da3783" kind="function"><name>SetConnectedServer</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_doctors_letters_page" kind="class"><name>myMD::View::SendDataTabPages::SelectDoctorsLettersPage</name>
     <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_doctors_letters_page_1a77d659f3e73475deec2abf7684f8af82" kind="variable"><name>vm</name></member>
     <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_doctors_letters_page_1a8ae482a882150437ce322f4796d6c98e" kind="function"><name>SelectDoctorsLettersPage</name></member>
     <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_doctors_letters_page_1afdaa4405f8a80063f5e12ecd91bc91ff" kind="function"><name>CancelSelectDoctorsLetters_Clicked</name></member>
+    <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_doctors_letters_page_1a156a4b806e75459e08d4a108da23f221" kind="function"><name>ConfirmSelectDoctorsLetters_Clicked</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_doctors_letters_view_model" kind="class"><name>myMD::ViewModel::SendDataTabViewModel::SelectDoctorsLettersViewModel</name>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_doctors_letters_view_model_1aedf4441145d130f6902a509a97b3a7d8" kind="property"><name>DoctorsLettersSendList</name></member>
     <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_doctors_letters_view_model_1a87c5e4323853a8ec4a634b011d26ae97" kind="function"><name>SelectDoctorsLettersViewModel</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_doctors_letters_view_model_1afcbd35ecf142d8dfcaa307ab79344c92" kind="function"><name>SelectionConfirmed</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page" kind="class"><name>myMD::View::SendDataTabPages::SendDataPage</name>
     <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page_1abd95fa5c07a2d6961b4d99486fb880ff" kind="variable"><name>vm</name></member>
     <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page_1a7fbb8405720e4cc1c28ed4315fccde8e" kind="function"><name>SendDataPage</name></member>
-    <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page_1a68ff1b348c9c47528854c9add3fb062d" kind="function"><name>SendDataButton_Clicked</name></member>
+    <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page_1a58028cb85e52db76c9fb3dea8209d089" kind="function"><name>ReceiveDataButton_Clicked</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model" kind="class"><name>myMD::ViewModel::SendDataTabViewModel::SendDataViewModel</name>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model_1a0e92b77382f44a685bf8004a02fb91ce" kind="property"><name>ReceiveLettersButton_Enabled</name></member>
     <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model_1abdf1a8159aac4d3f726a307fc37ca6b6" kind="function"><name>SendDataViewModel</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model_1a5ff4f343793fb46a4937a6727db52e2b" kind="function"><name>UpdateButton</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_string_extensions" kind="class"><name>myMD::ViewModel::ProfileTabViewModel::StringExtensions</name>
     <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_string_extensions_1af1a9d8e7951b1b8fee360195e5c81fa1" kind="function"><name>FormatPlusAndMinus</name></member>
@@ -476,29 +503,28 @@
   <compound refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_transmitting_data_page" kind="class"><name>myMD::View::SendDataTabPages::TransmittingDataPage</name>
     <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_transmitting_data_page_1ad2e4d50f7c4f3d3a13dfcc0cfefc8296" kind="variable"><name>vm</name></member>
     <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_transmitting_data_page_1ac1fa89a1f86e8f1b72e0a07ab569a525" kind="function"><name>TransmittingDataPage</name></member>
-    <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_transmitting_data_page_1abe7d80460f8b561dfecadfd4fbdd849f" kind="function"><name>SelectLettersButton_Clicked</name></member>
-    <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_transmitting_data_page_1a5412e851cb3b9c6f53c66edbae50292d" kind="function"><name>SelectDeviceButton_Clicked</name></member>
+    <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_transmitting_data_page_1ae3027eaa5ebf068472126fb280658a26" kind="function"><name>SelectDevice_Clicked</name></member>
+    <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_transmitting_data_page_1a52cf242fbf275d28df9b5e69146027bb" kind="function"><name>LoadLetters_Clicked</name></member>
   </compound>
   <compound refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model" kind="class"><name>myMD::ViewModel::SendDataTabViewModel::TransmittingDataViewModel</name>
-    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1afea82c22a42901685bc89e40469fe76d" kind="variable"><name>server</name></member>
-    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1af59cdf3c02ddf2b2c792a4d0c139c9c4" kind="variable"><name>notifyBroadcast</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1ade15b9cbbab522230750f0589142dcce" kind="property"><name>ReadingDataPossible</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a303ab750ac74c934f8c02b392702a2fa" kind="property"><name>SearchingPossible</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1af15db4a7f5f76480197d7c6ee36f5fc2" kind="property"><name>ReadingNumberOfFilesPossible</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a2d4078c77643aa58c23847b5b4b42666" kind="property"><name>ConnectedGattServer</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a65eb7fa5e755ed75f94d498122df50b7" kind="property"><name>RefreshNumberOfFiles</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1ab2d1beaf9cb1e986d607af394ab3f6a7" kind="property"><name>NumberOfFiles</name></member>
     <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a010f4e5a18f39b8df0e14fe18c13c1a3" kind="function"><name>TransmittingDataViewModel</name></member>
-    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a5de8914eeb10e78166ef2a0c6bc65af4" kind="function"><name>ServerSettings</name></member>
-    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1acd2a4a33751f02b1f16bb8c666b98f34" kind="function"><name>BuildServer</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1a03cc497c03b91bb106256b8fcd46bfbb" kind="function"><name>ReceiveData</name></member>
+    <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model_1af66a0e4c0841c1e26f5e1b34a82b8997" kind="function"><name>GetNumberOfFiles</name></member>
   </compound>
-  <compound refid="namespace_m_a_r_c_1_1_everest_1_1_connectors" kind="namespace"><name>MARC::Everest::Connectors</name>
+  <compound refid="classmy_m_d_1_1_model_1_1_dependency_service_1_1_xamarin_dependency_service" kind="class"><name>myMD::Model::DependencyService::XamarinDependencyService</name>
+    <member refid="classmy_m_d_1_1_model_1_1_dependency_service_1_1_xamarin_dependency_service_1a45858cd78923d949421471c9cc4d30be" kind="function"><name>Get&lt; T &gt;</name></member>
   </compound>
-  <compound refid="namespace_m_a_r_c_1_1_everest_1_1_data_types" kind="namespace"><name>MARC::Everest::DataTypes</name>
+  <compound refid="namespace_microsoft_1_1_app_center" kind="namespace"><name>Microsoft::AppCenter</name>
   </compound>
-  <compound refid="namespace_m_a_r_c_1_1_everest_1_1_formatters_1_1_x_m_l_1_1_i_t_s1" kind="namespace"><name>MARC::Everest::Formatters::XML::ITS1</name>
+  <compound refid="namespace_microsoft_1_1_app_center_1_1_analytics" kind="namespace"><name>Microsoft::AppCenter::Analytics</name>
   </compound>
-  <compound refid="namespace_m_a_r_c_1_1_everest_1_1_r_m_i_m_1_1_u_v_1_1_c_d_ar2_1_1_p_o_c_d___m_t000040_u_v" kind="namespace"><name>MARC::Everest::RMIM::UV::CDAr2::POCD_MT000040UV</name>
-  </compound>
-  <compound refid="namespace_m_a_r_c_1_1_everest_1_1_r_m_i_m_1_1_u_v_1_1_c_d_ar2_1_1_vocabulary" kind="namespace"><name>MARC::Everest::RMIM::UV::CDAr2::Vocabulary</name>
-  </compound>
-  <compound refid="namespace_m_a_r_c_1_1_everest_1_1_r_m_i_m_1_1_u_v_1_1_n_e2010_1_1_r_i_m" kind="namespace"><name>MARC::Everest::RMIM::UV::NE2010::RIM</name>
-  </compound>
-  <compound refid="namespace_m_a_r_c_1_1_everest_1_1_xml" kind="namespace"><name>MARC::Everest::Xml</name>
+  <compound refid="namespace_microsoft_1_1_app_center_1_1_crashes" kind="namespace"><name>Microsoft::AppCenter::Crashes</name>
   </compound>
   <compound refid="namespace_mvvm_helpers" kind="namespace"><name>MvvmHelpers</name>
   </compound>
@@ -509,6 +535,8 @@
   <compound refid="namespacemy_m_d_1_1_model_1_1_database_model" kind="namespace"><name>myMD::Model::DatabaseModel</name>
   </compound>
   <compound refid="namespacemy_m_d_1_1_model_1_1_data_model" kind="namespace"><name>myMD::Model::DataModel</name>
+  </compound>
+  <compound refid="namespacemy_m_d_1_1_model_1_1_dependency_service" kind="namespace"><name>myMD::Model::DependencyService</name>
   </compound>
   <compound refid="namespacemy_m_d_1_1_model_1_1_entity_factory" kind="namespace"><name>myMD::Model::EntityFactory</name>
   </compound>
@@ -548,8 +576,6 @@
   </compound>
   <compound refid="namespacemy_m_d_1_1_model_interface_1_1_model_facade_interface" kind="namespace"><name>myMD::ModelInterface::ModelFacadeInterface</name>
   </compound>
-  <compound refid="namespacemy_m_d_1_1_model_interface_1_1_transmission_model_interface" kind="namespace"><name>myMD::ModelInterface::TransmissionModelInterface</name>
-  </compound>
   <compound refid="namespacemy_m_d_1_1_view" kind="namespace"><name>myMD::View</name>
   </compound>
   <compound refid="namespacemy_m_d_1_1_view_1_1_abstract_pages" kind="namespace"><name>myMD::View::AbstractPages</name>
@@ -574,9 +600,15 @@
   </compound>
   <compound refid="namespacemy_m_d_1_1_view_model_1_1_send_data_tab_view_model" kind="namespace"><name>myMD::ViewModel::SendDataTabViewModel</name>
   </compound>
-  <compound refid="namespace_plugin_1_1_bluetooth_l_e" kind="namespace"><name>Plugin::BluetoothLE</name>
+  <compound refid="namespacenexus_1_1core" kind="namespace"><name>nexus::core</name>
   </compound>
-  <compound refid="namespace_plugin_1_1_bluetooth_l_e_1_1_server" kind="namespace"><name>Plugin::BluetoothLE::Server</name>
+  <compound refid="namespacenexus_1_1protocols_1_1ble" kind="namespace"><name>nexus::protocols::ble</name>
+  </compound>
+  <compound refid="namespacenexus_1_1protocols_1_1ble_1_1gatt" kind="namespace"><name>nexus::protocols::ble::gatt</name>
+  </compound>
+  <compound refid="namespacenexus_1_1protocols_1_1ble_1_1scan" kind="namespace"><name>nexus::protocols::ble::scan</name>
+  </compound>
+  <compound refid="namespacenexus_1_1protocols_1_1ble_1_1scan_1_1advertisement" kind="namespace"><name>nexus::protocols::ble::scan::advertisement</name>
   </compound>
   <compound refid="namespace_s_q_lite" kind="namespace"><name>SQLite</name>
   </compound>
@@ -602,8 +634,6 @@
   </compound>
   <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
   </compound>
-  <compound refid="namespace_system_1_1_reactive_1_1_linq" kind="namespace"><name>System::Reactive::Linq</name>
-  </compound>
   <compound refid="namespace_system_1_1_runtime_1_1_compiler_services" kind="namespace"><name>System::Runtime::CompilerServices</name>
   </compound>
   <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
@@ -616,11 +646,15 @@
   </compound>
   <compound refid="namespace_system_1_1_xml" kind="namespace"><name>System::Xml</name>
   </compound>
+  <compound refid="namespace_system_1_1_xml_1_1_linq" kind="namespace"><name>System::Xml::Linq</name>
+  </compound>
   <compound refid="namespace_xamarin_1_1_forms" kind="namespace"><name>Xamarin::Forms</name>
   </compound>
   <compound refid="namespace_xamarin_1_1_forms_1_1_internals" kind="namespace"><name>Xamarin::Forms::Internals</name>
   </compound>
   <compound refid="namespace_xamarin_1_1_forms_1_1_platform_configuration_1_1i_o_s_specific" kind="namespace"><name>Xamarin::Forms::PlatformConfiguration::iOSSpecific</name>
+  </compound>
+  <compound refid="namespace_xamarin_1_1_forms_1_1_xaml" kind="namespace"><name>Xamarin::Forms::Xaml</name>
   </compound>
   <compound refid="_app_8xaml" kind="file"><name>App.xaml</name>
   </compound>
@@ -646,6 +680,12 @@
   </compound>
   <compound refid="_profile_8cs" kind="file"><name>Profile.cs</name>
   </compound>
+  <compound refid="_dependency_service_8cs" kind="file"><name>DependencyService.cs</name>
+  </compound>
+  <compound refid="_i_dependency_service_8cs" kind="file"><name>IDependencyService.cs</name>
+  </compound>
+  <compound refid="_xamarin_dependency_service_8cs" kind="file"><name>XamarinDependencyService.cs</name>
+  </compound>
   <compound refid="_entity_factory_8cs" kind="file"><name>EntityFactory.cs</name>
   </compound>
   <compound refid="_i_entity_factory_8cs" kind="file"><name>IEntityFactory.cs</name>
@@ -656,13 +696,13 @@
   </compound>
   <compound refid="_file_format_8cs" kind="file"><name>FileFormat.cs</name>
   </compound>
+  <compound refid="_file_format_exception_8cs" kind="file"><name>FileFormatException.cs</name>
+  </compound>
   <compound refid="_file_format_extensions_8cs" kind="file"><name>FileFormatExtensions.cs</name>
   </compound>
   <compound refid="_file_to_database_parser_8cs" kind="file"><name>FileToDatabaseParser.cs</name>
   </compound>
   <compound refid="_hl7_to_database_parser_8cs" kind="file"><name>Hl7ToDatabaseParser.cs</name>
-  </compound>
-  <compound refid="_i_hl7_parser_helper_8cs" kind="file"><name>IHl7ParserHelper.cs</name>
   </compound>
   <compound refid="_i_parser_facade_8cs" kind="file"><name>IParserFacade.cs</name>
   </compound>
@@ -672,9 +712,9 @@
   </compound>
   <compound refid="_bluetooth_8cs" kind="file"><name>Bluetooth.cs</name>
   </compound>
-  <compound refid="_device_8cs" kind="file"><name>Device.cs</name>
-  </compound>
   <compound refid="_i_bluetooth_8cs" kind="file"><name>IBluetooth.cs</name>
+  </compound>
+  <compound refid="_i_bluetooth_helper_8cs" kind="file"><name>IBluetoothHelper.cs</name>
   </compound>
   <compound refid="_blood_type_8cs" kind="file"><name>BloodType.cs</name>
   </compound>
@@ -697,8 +737,6 @@
   <compound refid="_sensitivity_8cs" kind="file"><name>Sensitivity.cs</name>
   </compound>
   <compound refid="_i_model_facade_8cs" kind="file"><name>IModelFacade.cs</name>
-  </compound>
-  <compound refid="_i_device_8cs" kind="file"><name>IDevice.cs</name>
   </compound>
   <compound refid="my_m_d_page_8xaml" kind="file"><name>myMDPage.xaml</name>
   </compound>
@@ -790,6 +828,8 @@
   </compound>
   <compound refid="dir_1fa1482ed01b82fdb2f0bf1688db8db3" kind="dir"><name>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/DataModelInterface</name>
   </compound>
+  <compound refid="dir_a3a28c973183a57445a64e551875eee9" kind="dir"><name>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService</name>
+  </compound>
   <compound refid="dir_bd4553aa7f9f7984a91633a919df8c89" kind="dir"><name>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/EntityFactory</name>
   </compound>
   <compound refid="dir_49aec9f1ae05b5b573662876ec753127" kind="dir"><name>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper</name>
@@ -827,8 +867,6 @@
   <compound refid="dir_95ffadfd840002c2ab3a623a831ab376" kind="dir"><name>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel</name>
   </compound>
   <compound refid="dir_8a477c2c067ccd13f13e6514ada13644" kind="dir"><name>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel</name>
-  </compound>
-  <compound refid="dir_44d6842eda1a4f5da2dc84ff691814a2" kind="dir"><name>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ModelInterface/TransmissionModelInterface</name>
   </compound>
   <compound refid="dir_d50f4de6b59645dbcb9737ea63e813d7" kind="dir"><name>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View</name>
   </compound>

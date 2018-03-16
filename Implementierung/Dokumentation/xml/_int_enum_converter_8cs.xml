@@ -4,7 +4,6 @@
     <compoundname>IntEnumConverter.cs</compoundname>
     <innerclass refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_int_enum_converter" prot="public">myMD::ViewModel::ProfileTabViewModel::IntEnumConverter</innerclass>
     <innernamespace refid="namespacemy_m_d_1_1_view_model_1_1_profile_tab_view_model">myMD::ViewModel::ProfileTabViewModel</innernamespace>
-    <innernamespace refid="namespace_system_1_1_globalization">System::Globalization</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

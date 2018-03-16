@@ -23,17 +23,6 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="297">
-        <label>TabbedPage</label>
-      </node>
-      <node id="296">
-        <label>myMD.myMDPage</label>
-        <link refid="classmy_m_d_1_1my_m_d_page"/>
-        <childnode refid="297" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="299">
         <label>TabbedPage</label>
       </node>
@@ -41,6 +30,17 @@
         <label>myMD.myMDPage</label>
         <link refid="classmy_m_d_1_1my_m_d_page"/>
         <childnode refid="299" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="301">
+        <label>TabbedPage</label>
+      </node>
+      <node id="300">
+        <label>myMD.myMDPage</label>
+        <link refid="classmy_m_d_1_1my_m_d_page"/>
+        <childnode refid="301" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

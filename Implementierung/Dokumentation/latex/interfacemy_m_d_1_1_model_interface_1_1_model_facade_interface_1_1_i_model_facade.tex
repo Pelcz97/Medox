@@ -7,8 +7,7 @@ Dies ist die Haupteinstiegsstelle für andere Subsysteme in das \mbox{\hyperlink{
 
 
 
-Klassendiagramm fÃ¼r my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade\+:
-\nopagebreak
+Klassendiagramm fÃ¼r my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -36,10 +35,16 @@ I\+List$<$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_i
 \begin{DoxyCompactList}\small\item\em Fordert alle Arztbriefgruppen des aktiven Profils an und gibt diese zurück. \end{DoxyCompactList}\item 
 I\+List$<$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}} $>$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ac7cc1ff2f542e09632a8d6bdb2bca17d}{Get\+All\+Medications}} ()
 \begin{DoxyCompactList}\small\item\em Fordert alle Medikationen des aktiven Profils an und gibt diese zurück. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a13e12d0dc6ab4ddf5036a8492ba85e40}{Send\+Letter}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}} letter)
-\begin{DoxyCompactList}\small\item\em Bereitet den gewünschten Arztbrief für die Datenübertragung vor und veranlasst diese anschließend. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ad3fe364e44e55623a6e4a3a8920da8dd}{Update}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}} entity)
-\begin{DoxyCompactList}\small\item\em Aktualisiert die gegebene Entität. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Bereitet den gewünschten Arztbrief für die Datenübertragung vor und veranlasst diese anschließend. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a1ec4e01f0fbaf30e4d3039d916584c11}{Set\+Connected\+Server}} (I\+Ble\+Gatt\+Server\+Connection server)
+\begin{DoxyCompactList}\small\item\em Setzt den Verbundenen G\+A\+T\+T-\/\+Server. \end{DoxyCompactList}\item 
+I\+Ble\+Gatt\+Server\+Connection \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_af40e4526eeacdecb87b3e4537b0b7eff}{Get\+Connected\+Server}} ()
+\begin{DoxyCompactList}\small\item\em ?bergibt den aktuell verbundenen G\+A\+T\+T-\/\+Server. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a837bb41711d2173ea25967242046d03c}{Get\+Files\+From\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Auslesen aller vom Server angebotenen Dateien. \end{DoxyCompactList}\item 
+Task$<$ int $>$ \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_aa76259391d3803e7d898a29cc989c050}{Number\+Of\+Files\+On\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Anzahl der vom Server angebotenen Dateien. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{AusfÃ¼hrliche Beschreibung}
@@ -205,11 +210,81 @@ Liste aller Medikationen des aktiven Profils
 
 Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_aef10eb7295b8eee4b938e5639f54b78d}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
 
-\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a13e12d0dc6ab4ddf5036a8492ba85e40}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a13e12d0dc6ab4ddf5036a8492ba85e40}} 
-\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Send\+Letter@{Send\+Letter}}
-\index{Send\+Letter@{Send\+Letter}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
-\subsubsection{\texorpdfstring{Send\+Letter()}{SendLetter()}}
-{\footnotesize\ttfamily void my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Send\+Letter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{I\+Doctors\+Letter}}}]{letter }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_af40e4526eeacdecb87b3e4537b0b7eff}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_af40e4526eeacdecb87b3e4537b0b7eff}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Get\+Connected\+Server@{Get\+Connected\+Server}}
+\index{Get\+Connected\+Server@{Get\+Connected\+Server}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Get\+Connected\+Server()}{GetConnectedServer()}}
+{\footnotesize\ttfamily I\+Ble\+Gatt\+Server\+Connection my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Get\+Connected\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+?bergibt den aktuell verbundenen G\+A\+T\+T-\/\+Server. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+The connected server.
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_ade71d0eaf0c011b2b1149829b3dd7098}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a837bb41711d2173ea25967242046d03c}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a837bb41711d2173ea25967242046d03c}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Get\+Files\+From\+Server@{Get\+Files\+From\+Server}}
+\index{Get\+Files\+From\+Server@{Get\+Files\+From\+Server}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Get\+Files\+From\+Server()}{GetFilesFromServer()}}
+{\footnotesize\ttfamily Task my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Get\+Files\+From\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Auslesen aller vom Server angebotenen Dateien. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+The files from server.
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_aac7aa4d319269018e437fbde2d08f27a}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_aa76259391d3803e7d898a29cc989c050}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_aa76259391d3803e7d898a29cc989c050}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Number\+Of\+Files\+On\+Server@{Number\+Of\+Files\+On\+Server}}
+\index{Number\+Of\+Files\+On\+Server@{Number\+Of\+Files\+On\+Server}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Number\+Of\+Files\+On\+Server()}{NumberOfFilesOnServer()}}
+{\footnotesize\ttfamily Task$<$int$>$ my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Number\+Of\+Files\+On\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Anzahl der vom Server angebotenen Dateien. 
+
+\begin{DoxyReturn}{RÃ¼ckgabe}
+The of files on server.
+\end{DoxyReturn}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_a5ec0de8d76615157b7c093798de43590}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a1ec4e01f0fbaf30e4d3039d916584c11}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_a1ec4e01f0fbaf30e4d3039d916584c11}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Set\+Connected\+Server@{Set\+Connected\+Server}}
+\index{Set\+Connected\+Server@{Set\+Connected\+Server}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Set\+Connected\+Server()}{SetConnectedServer()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Set\+Connected\+Server (\begin{DoxyParamCaption}\item[{I\+Ble\+Gatt\+Server\+Connection}]{server }\end{DoxyParamCaption})}
+
+
+
+Setzt den Verbundenen G\+A\+T\+T-\/\+Server. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em server} & Server.\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_a10a59347496c0c5ce10ad3d941d6b008}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
+
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ad3fe364e44e55623a6e4a3a8920da8dd}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ad3fe364e44e55623a6e4a3a8920da8dd}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Update@{Update}}
+\index{Update@{Update}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}}}]{entity }\end{DoxyParamCaption})}
 
 
 
@@ -220,16 +295,6 @@ Bereitet den gewünschten Arztbrief für die Datenübertragung vor und veranlasst d
 {\em letter} & Der zu sendende Arztbrief\\
 \hline
 \end{DoxyParams}
-
-
-Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_a89d84c76209109caac581c4d80ebc8e4}{my\+M\+D.\+Model.\+Model\+Facade.\+Model\+Facade}}.
-
-\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ad3fe364e44e55623a6e4a3a8920da8dd}\label{interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade_ad3fe364e44e55623a6e4a3a8920da8dd}} 
-\index{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}!Update@{Update}}
-\index{Update@{Update}!my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade@{my\+M\+D\+::\+Model\+Interface\+::\+Model\+Facade\+Interface\+::\+I\+Model\+Facade}}
-\subsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily void my\+M\+D.\+Model\+Interface.\+Model\+Facade\+Interface.\+I\+Model\+Facade.\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity}{I\+Entity}}}]{entity }\end{DoxyParamCaption})}
-
 
 
 Aktualisiert die gegebene Entität. 

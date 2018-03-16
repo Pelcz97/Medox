@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="18" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="18" bodyend="-1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="19" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="19" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -30,46 +30,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="23" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="23" bodyend="28"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="24" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="24" bodyend="30"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
-      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1a7724df6fda5fca6dbdb27c1848dddd3a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>async void</type>
-        <definition>async void myMD.View.SendDataTabPages.SelectDevicePage.CancelSelectDevice_Clicked</definition>
-        <argsstring>(object sender, EventArgs e)</argsstring>
-        <name>CancelSelectDevice_Clicked</name>
-        <param>
-          <type>object</type>
-          <declname>sender</declname>
-        </param>
-        <param>
-          <type>EventArgs</type>
-          <declname>e</declname>
-        </param>
-        <briefdescription>
-<para>Methode, wenn der Abbrechen-Button geklickt wird. </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>sender</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Sender der diese Methode aufruft</para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>e</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Event des Senders</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="35" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="35" bodyend="39"/>
-      </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1a25692c7f172d5bf2daf35706ed8c8a50" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void myMD.View.SendDataTabPages.SelectDevicePage.DeviceItemSelected</definition>
@@ -104,7 +68,49 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="46" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="46" bodyend="49"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="37" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="37" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1a8311c6d43150e8fb5c391c0805e04fdc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async void</type>
+        <definition>async void myMD.View.SendDataTabPages.SelectDevicePage.CancelSelectDevice_Clicked</definition>
+        <argsstring>(object sender, System.EventArgs e)</argsstring>
+        <name>CancelSelectDevice_Clicked</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="49" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1aa81844afad82df454e40368ee7cec81d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async void</type>
+        <definition>async void myMD.View.SendDataTabPages.SelectDevicePage.ConfirmSelectedDevice_Clicked</definition>
+        <argsstring>(object sender, System.EventArgs e)</argsstring>
+        <name>ConfirmSelectedDevice_Clicked</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="55" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="55" bodyend="59"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -112,23 +118,6 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="388">
-        <label>CustomContentPage</label>
-        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
-        <childnode refid="389" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="389">
-        <label>ContentPage</label>
-      </node>
-      <node id="387">
-        <label>myMD.View.SendDataTabPages.SelectDevicePage</label>
-        <link refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page"/>
-        <childnode refid="388" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="391">
         <label>CustomContentPage</label>
         <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
@@ -144,10 +133,28 @@
         <childnode refid="391" relation="public-inheritance">
         </childnode>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="394">
+        <label>CustomContentPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
+        <childnode refid="395" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="395">
+        <label>ContentPage</label>
+      </node>
+      <node id="393">
+        <label>myMD.View.SendDataTabPages.SelectDevicePage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page"/>
+        <childnode refid="394" relation="public-inheritance">
+        </childnode>
+      </node>
     </collaborationgraph>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="14" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="13" bodyend="50"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" line="15" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SelectDevicePage.xaml.cs" bodystart="14" bodyend="60"/>
     <listofallmembers>
-      <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1a7724df6fda5fca6dbdb27c1848dddd3a" prot="private" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SelectDevicePage</scope><name>CancelSelectDevice_Clicked</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1a8311c6d43150e8fb5c391c0805e04fdc" prot="private" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SelectDevicePage</scope><name>CancelSelectDevice_Clicked</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1aa81844afad82df454e40368ee7cec81d" prot="private" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SelectDevicePage</scope><name>ConfirmSelectedDevice_Clicked</name></member>
       <member refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page_1a3cb9c69e49e16c30e2e5377790702769" prot="public" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SelectDevicePage</scope><name>CustomContentPage</name></member>
       <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1a25692c7f172d5bf2daf35706ed8c8a50" prot="private" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SelectDevicePage</scope><name>DeviceItemSelected</name></member>
       <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_select_device_page_1a64f3adab09e13f5a8739a275f64215f9" prot="public" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SelectDevicePage</scope><name>SelectDevicePage</name></member>

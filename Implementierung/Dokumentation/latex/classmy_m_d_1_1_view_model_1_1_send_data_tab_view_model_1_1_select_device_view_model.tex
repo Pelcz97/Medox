@@ -7,8 +7,7 @@ Diese Klasse übernimmt die Auswahl des Gerätes an das die Arztbriefe gesendet 
 
 
 
-Klassendiagramm für my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model\+:
-\nopagebreak
+Klassendiagramm für my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,8 +16,7 @@ Klassendiagramm für my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Sel
 \end{figure}
 
 
-Zusammengehörigkeiten von my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model\+:
-\nopagebreak
+Zusammengehörigkeiten von my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,21 +28,23 @@ Zusammengehörigkeiten von my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model
 \item 
 \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a39d908572f42325912210144d3614d66}{Select\+Device\+View\+Model}} ()
 \begin{DoxyCompactList}\small\item\em Konstruktor für ein \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model}{Select\+Device\+View\+Model}} \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_aa20931acf9e9c3580019a5025d2f1abb}{Start\+Scan}} ()
-\begin{DoxyCompactList}\small\item\em Methode um einen Scan zu starten. Dazu wird erst überprüft, ob gerade gescannt wird. Ist dies der Fall wird der aktive Scan abgebrochen. Dann wird geprüft ob Bluetooth für das Gerät verfügbar ist. Danach wird der Scan gestartet und die gefundenen Geräte in die Liste T\+:my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+Letter\+View\+Model.\+Device\+List gespeichert. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_adfca7bb7ef30bb64e2247bcdff75f654}{Stop\+Scan}} ()
-\begin{DoxyCompactList}\small\item\em Methode um einen Scan zu stoppen. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a04c544486f732bddac2d5feded4193a1}{Connect\+To\+Device}} (object item)
-\begin{DoxyCompactList}\small\item\em Methode um sich mit einem anderen Gerät zu verbinden \end{DoxyCompactList}\end{DoxyCompactItemize}
+async void \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a9c836594d494df1bfc2483c5ae4514b0}{Start\+Scan}} ()
+\begin{DoxyCompactList}\small\item\em Methode um einen Scan zu starten. \end{DoxyCompactList}\item 
+async void \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a07fe293eff7f20b4535164182933621a}{Connect\+To\+Device}} (object item)
+\begin{DoxyCompactList}\small\item\em Methode um sich mit einem anderen Gerät zu verbinden \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a836cbee87fa86a563de42d4b68da3783}{Set\+Connected\+Server}} ()
+\end{DoxyCompactItemize}
 \subsection*{Propertys}
 \begin{DoxyCompactItemize}
 \item 
 Observable\+Collection$<$ \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model}{Scan\+Result\+View\+Model}} $>$ \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a2c0271b0ca7d8b38d3297d023fcbb74d}{Device\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Liste an Geräten die in der Umgebung gefunden wurden \end{DoxyCompactList}\item 
-I\+Disposable \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a863852899d8408a5decf7f9e724163f9}{scan}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Ergebniss des Scans \end{DoxyCompactList}\item 
-I\+Command \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a4cc73a2d15f2489105da96da595750b0}{Scan\+For\+Devices\+\_\+\+Clicked}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\begin{DoxyCompactList}\small\item\em I\+Command um das Antippen des Scan-\/\+Buttons zu handeln \end{DoxyCompactList}\end{DoxyCompactItemize}
+I\+Ble\+Gatt\+Server\+Connection \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a52bb13e2b6ce00c547142eb91e4d3ee8}{Connected\+Server}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_aa467f01d3cfb1aee4e7709bafa37aa5f}{Confirming\+Device\+Possible}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a29af90bec0cd2a1d3a62ccd3c5639727}{Cancel\+Select\+Device\+Possible}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
 \subsection*{Weitere Geerbte Elemente}
 
 
@@ -67,11 +67,11 @@ Konstruktor für ein \mbox{\hyperlink{classmy_m_d_1_1_view_model_1_1_send_data_t
 
 
 \subsection{Dokumentation der Elementfunktionen}
-\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a04c544486f732bddac2d5feded4193a1}\label{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a04c544486f732bddac2d5feded4193a1}} 
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a07fe293eff7f20b4535164182933621a}\label{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a07fe293eff7f20b4535164182933621a}} 
 \index{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}!Connect\+To\+Device@{Connect\+To\+Device}}
 \index{Connect\+To\+Device@{Connect\+To\+Device}!my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}}
 \subsubsection{\texorpdfstring{Connect\+To\+Device()}{ConnectToDevice()}}
-{\footnotesize\ttfamily void my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model.\+Connect\+To\+Device (\begin{DoxyParamCaption}\item[{object}]{item }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily async void my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model.\+Connect\+To\+Device (\begin{DoxyParamCaption}\item[{object}]{item }\end{DoxyParamCaption})}
 
 
 
@@ -82,29 +82,43 @@ Methode um sich mit einem anderen Gerät zu verbinden
 {\em item} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_aa20931acf9e9c3580019a5025d2f1abb}\label{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_aa20931acf9e9c3580019a5025d2f1abb}} 
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a836cbee87fa86a563de42d4b68da3783}\label{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a836cbee87fa86a563de42d4b68da3783}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}!Set\+Connected\+Server@{Set\+Connected\+Server}}
+\index{Set\+Connected\+Server@{Set\+Connected\+Server}!my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}}
+\subsubsection{\texorpdfstring{Set\+Connected\+Server()}{SetConnectedServer()}}
+{\footnotesize\ttfamily void my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model.\+Set\+Connected\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a9c836594d494df1bfc2483c5ae4514b0}\label{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a9c836594d494df1bfc2483c5ae4514b0}} 
 \index{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}!Start\+Scan@{Start\+Scan}}
 \index{Start\+Scan@{Start\+Scan}!my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}}
 \subsubsection{\texorpdfstring{Start\+Scan()}{StartScan()}}
-{\footnotesize\ttfamily void my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model.\+Start\+Scan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily async void my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model.\+Start\+Scan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Methode um einen Scan zu starten. Dazu wird erst überprüft, ob gerade gescannt wird. Ist dies der Fall wird der aktive Scan abgebrochen. Dann wird geprüft ob Bluetooth für das Gerät verfügbar ist. Danach wird der Scan gestartet und die gefundenen Geräte in die Liste T\+:my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+Letter\+View\+Model.\+Device\+List gespeichert. 
-
-\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_adfca7bb7ef30bb64e2247bcdff75f654}\label{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_adfca7bb7ef30bb64e2247bcdff75f654}} 
-\index{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}!Stop\+Scan@{Stop\+Scan}}
-\index{Stop\+Scan@{Stop\+Scan}!my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}}
-\subsubsection{\texorpdfstring{Stop\+Scan()}{StopScan()}}
-{\footnotesize\ttfamily void my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model.\+Stop\+Scan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Methode um einen Scan zu stoppen. 
+Methode um einen Scan zu starten. 
 
 
 
 \subsection{Dokumentation der Propertys}
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a29af90bec0cd2a1d3a62ccd3c5639727}\label{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a29af90bec0cd2a1d3a62ccd3c5639727}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}!Cancel\+Select\+Device\+Possible@{Cancel\+Select\+Device\+Possible}}
+\index{Cancel\+Select\+Device\+Possible@{Cancel\+Select\+Device\+Possible}!my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}}
+\subsubsection{\texorpdfstring{Cancel\+Select\+Device\+Possible}{CancelSelectDevicePossible}}
+{\footnotesize\ttfamily bool my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model.\+Cancel\+Select\+Device\+Possible\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_aa467f01d3cfb1aee4e7709bafa37aa5f}\label{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_aa467f01d3cfb1aee4e7709bafa37aa5f}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}!Confirming\+Device\+Possible@{Confirming\+Device\+Possible}}
+\index{Confirming\+Device\+Possible@{Confirming\+Device\+Possible}!my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}}
+\subsubsection{\texorpdfstring{Confirming\+Device\+Possible}{ConfirmingDevicePossible}}
+{\footnotesize\ttfamily bool my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model.\+Confirming\+Device\+Possible\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a52bb13e2b6ce00c547142eb91e4d3ee8}\label{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a52bb13e2b6ce00c547142eb91e4d3ee8}} 
+\index{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}!Connected\+Server@{Connected\+Server}}
+\index{Connected\+Server@{Connected\+Server}!my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}}
+\subsubsection{\texorpdfstring{Connected\+Server}{ConnectedServer}}
+{\footnotesize\ttfamily I\+Ble\+Gatt\+Server\+Connection my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model.\+Connected\+Server\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
 \mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a2c0271b0ca7d8b38d3297d023fcbb74d}\label{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a2c0271b0ca7d8b38d3297d023fcbb74d}} 
 \index{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}!Device\+List@{Device\+List}}
 \index{Device\+List@{Device\+List}!my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}}
@@ -114,26 +128,6 @@ Methode um einen Scan zu stoppen.
 
 
 Liste an Geräten die in der Umgebung gefunden wurden 
-
-\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a863852899d8408a5decf7f9e724163f9}\label{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a863852899d8408a5decf7f9e724163f9}} 
-\index{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}!scan@{scan}}
-\index{scan@{scan}!my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}}
-\subsubsection{\texorpdfstring{scan}{scan}}
-{\footnotesize\ttfamily I\+Disposable my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model.\+scan\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
-
-
-
-Ergebniss des Scans 
-
-\mbox{\Hypertarget{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a4cc73a2d15f2489105da96da595750b0}\label{classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_a4cc73a2d15f2489105da96da595750b0}} 
-\index{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}!Scan\+For\+Devices\+\_\+\+Clicked@{Scan\+For\+Devices\+\_\+\+Clicked}}
-\index{Scan\+For\+Devices\+\_\+\+Clicked@{Scan\+For\+Devices\+\_\+\+Clicked}!my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model@{my\+M\+D\+::\+View\+Model\+::\+Send\+Data\+Tab\+View\+Model\+::\+Select\+Device\+View\+Model}}
-\subsubsection{\texorpdfstring{Scan\+For\+Devices\+\_\+\+Clicked}{ScanForDevices\_Clicked}}
-{\footnotesize\ttfamily I\+Command my\+M\+D.\+View\+Model.\+Send\+Data\+Tab\+View\+Model.\+Select\+Device\+View\+Model.\+Scan\+For\+Devices\+\_\+\+Clicked\hspace{0.3cm}{\ttfamily [get]}}
-
-
-
-I\+Command um das Antippen des Scan-\/\+Buttons zu handeln 
 
 
 

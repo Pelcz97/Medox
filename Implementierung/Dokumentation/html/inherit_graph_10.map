@@ -1,4 +1,3 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node1" href="$interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth.html" title="Schnittstelle zur Bluetoothuebertragung " alt="" coords="5,5,224,47"/>
-<area shape="rect" id="node2" href="$classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth.html" title="Klasse um alle Bluetoothvorgänge zu kapseln " alt="" coords="272,5,491,47"/>
+<area shape="rect" id="node1" href="$classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser.html" title="Diese Klasse enthält die Logik um Arztbriefe in ihr ursprüngliches Dateiformat zu parsen. " alt="" coords="5,5,219,47"/>
 </map>

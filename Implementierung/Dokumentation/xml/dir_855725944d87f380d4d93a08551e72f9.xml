@@ -4,6 +4,7 @@
     <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model</compoundname>
     <innerdir refid="dir_fb806de235ee71be4d75dc6bca8cac7c">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel</innerdir>
     <innerdir refid="dir_6448c94e58ffac0fc3497d11a282aa0c">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel</innerdir>
+    <innerdir refid="dir_a3a28c973183a57445a64e551875eee9">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService</innerdir>
     <innerdir refid="dir_bd4553aa7f9f7984a91633a919df8c89">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/EntityFactory</innerdir>
     <innerdir refid="dir_49aec9f1ae05b5b573662876ec753127">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper</innerdir>
     <innerdir refid="dir_2bfbc843a2f89cc4acb3bb9bcf159267">D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ModelFacade</innerdir>

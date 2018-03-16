@@ -7,8 +7,7 @@ Schnittstelle für die Abstraktion eines Arztbriefes, die die \mbox{\hyperlink{in
 
 
 
-Klassendiagramm fÃ¼r my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter\+:
-\nopagebreak
+Klassendiagramm fÃ¼r my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,8 +16,7 @@ Klassendiagramm fÃ¼r my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+D
 \end{figure}
 
 
-ZusammengehÃ¶rigkeiten von my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter\+:
-\nopagebreak
+ZusammengehÃ¶rigkeiten von my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -34,7 +32,7 @@ void \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interfa
 \begin{DoxyCompactList}\small\item\em Verbindet eine Medikation mit diesem Arztbrief. Ist die Medikation bereits mit dem Arztbrief verbunden, so passiert nichts. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a2aed655d5306cd3d1970627843203adc}{Remove\+From\+Group}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group}{I\+Doctors\+Letter\+Group}} group)
 \begin{DoxyCompactList}\small\item\em Entfernt diesen Arztbrief aus einer Arztbriefgruppe. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_afe6898d6da722e0f947685fd58ddefc0}{Remove\+Medication}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}} med)
+void \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a53d5966f64387b16a88bb0b4983b414f}{Disattach\+Medication}} (\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}} med)
 \begin{DoxyCompactList}\small\item\em Löst die Verbindung zwischen einer Medikation und diesem Arztbrief auf. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter}{Doctors\+Letter}} \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a1dd9226ef2d2b35616beea4ca52aa5e1}{To\+Doctors\+Letter}} ()
 \begin{DoxyCompactList}\small\item\em Konvertiert die Schnittstelle zu ihrer Implementierung \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -95,6 +93,25 @@ Verbindet eine Medikation mit diesem Arztbrief. Ist die Medikation bereits mit d
 
 Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_a5e19e600b296475000f4ba1e5e49c026}{my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter}}.
 
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a53d5966f64387b16a88bb0b4983b414f}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a53d5966f64387b16a88bb0b4983b414f}} 
+\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}!Disattach\+Medication@{Disattach\+Medication}}
+\index{Disattach\+Medication@{Disattach\+Medication}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}}
+\subsubsection{\texorpdfstring{Disattach\+Medication()}{DisattachMedication()}}
+{\footnotesize\ttfamily void my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter.\+Disattach\+Medication (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}}}]{med }\end{DoxyParamCaption})}
+
+
+
+Löst die Verbindung zwischen einer Medikation und diesem Arztbrief auf. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em med} & Zu entferndene Medikation\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_a0099afde0cbf0dd925b5265715be127f}{my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter}}.
+
 \mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a2aed655d5306cd3d1970627843203adc}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a2aed655d5306cd3d1970627843203adc}} 
 \index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}!Remove\+From\+Group@{Remove\+From\+Group}}
 \index{Remove\+From\+Group@{Remove\+From\+Group}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}}
@@ -113,25 +130,6 @@ Entfernt diesen Arztbrief aus einer Arztbriefgruppe.
 
 
 Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_ab6811f3ef403a2d0210a37d0a55cd30a}{my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter}}.
-
-\mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_afe6898d6da722e0f947685fd58ddefc0}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_afe6898d6da722e0f947685fd58ddefc0}} 
-\index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}!Remove\+Medication@{Remove\+Medication}}
-\index{Remove\+Medication@{Remove\+Medication}!my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}}
-\subsubsection{\texorpdfstring{Remove\+Medication()}{RemoveMedication()}}
-{\footnotesize\ttfamily void my\+M\+D.\+Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter.\+Remove\+Medication (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication}{I\+Medication}}}]{med }\end{DoxyParamCaption})}
-
-
-
-Löst die Verbindung zwischen einer Medikation und diesem Arztbrief auf. 
-
-
-\begin{DoxyParams}{Parameter}
-{\em med} & Zu entferndene Medikation\\
-\hline
-\end{DoxyParams}
-
-
-Implementiert in \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_a8c3cf949ff6547d0a97746c013b25dfa}{my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter}}.
 
 \mbox{\Hypertarget{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a1dd9226ef2d2b35616beea4ca52aa5e1}\label{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_a1dd9226ef2d2b35616beea4ca52aa5e1}} 
 \index{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter@{my\+M\+D\+::\+Model\+Interface\+::\+Data\+Model\+Interface\+::\+I\+Doctors\+Letter}!To\+Doctors\+Letter@{To\+Doctors\+Letter}}

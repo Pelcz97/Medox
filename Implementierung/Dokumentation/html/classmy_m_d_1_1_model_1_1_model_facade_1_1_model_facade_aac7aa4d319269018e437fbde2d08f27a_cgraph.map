@@ -1,0 +1,5 @@
+<map id="myMD.Model.ModelFacade.ModelFacade.GetFilesFromServer" name="myMD.Model.ModelFacade.ModelFacade.GetFilesFromServer">
+<area shape="rect" id="node2" href="$interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth.html#a1a929cee5eff377bd3a2c51fa802e597" title="Reads all files on server. " alt="" coords="275,5,493,47"/>
+<area shape="rect" id="node3" href="$interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper.html#ab01e0757301271adeeb53e4e90e8b44d" title="Erstellt eine neue Datei mit eindeutigem Namen und dem gegebenen Format aus dem gegebenen Byte Array..." alt="" coords="279,71,489,112"/>
+<area shape="rect" id="node4" href="$interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade.html#a0371197714d5ec08d9ad332ac62265db" title="Parse die Informationen in der gegebenen Datei in die gegebene Datenbank. " alt="" coords="273,136,495,177"/>
+</map>

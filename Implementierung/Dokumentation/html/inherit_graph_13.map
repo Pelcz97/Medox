@@ -1,3 +1,4 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node2" href="$classmy_m_d_1_1my_m_d_page.html" title="myMD.myMDPage" alt="" coords="148,5,280,32"/>
+<area shape="rect" id="node1" href="$interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade.html" title="Dies ist die Haupteinstiegsstelle für andere Subsysteme in das Model. Als Ein&#45; und Ausgabeparameter we..." alt="" coords="5,5,204,47"/>
+<area shape="rect" id="node2" href="$classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade.html" title="Fassade zum Einstieg ins Model. Enthält Schnittstellen zu den anderen Paketen im Model an die beim Met..." alt="" coords="252,5,472,47"/>
 </map>

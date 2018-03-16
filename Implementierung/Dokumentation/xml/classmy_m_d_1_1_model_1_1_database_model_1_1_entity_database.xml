@@ -16,7 +16,7 @@
 <para><ref refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database" kindref="compound">myMD.Model.DatabaseModel.IEntityDatabase</ref></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="22" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="22" bodyend="-1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="23" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="23" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -31,7 +31,7 @@
 <para><ref refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database" kindref="compound">myMD.Model.DatabaseModel.IEntityDatabase</ref></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="28" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="28" bodyend="-1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="29" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1acf2e58167aded950efc71b8596d555a8" prot="private" static="no" mutable="no">
         <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile" kindref="compound">Profile</ref></type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="33" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="33" bodyend="-1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="34" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="34" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -59,7 +59,7 @@
 <para><ref refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1ae18ad05226407ef24896def4c7a67a46" kindref="member">myMD.Model.DatabaseModel.EntityDatabase::EntityDatabase</ref>(<ref refid="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper" kindref="compound">myMD.Model.FileHelper.IFileHelper</ref>)</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="39" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="39" bodyend="39"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="40" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="40" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a7a6a4c8cedc57ea3dc0a714ddd55deb6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -84,7 +84,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="45" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="45" bodyend="50"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="46" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="46" bodyend="51"/>
         <references refid="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_1a8420370ca7817b74f4c0fd1ec300c0a2">myMD.Model.FileHelper.IFileHelper.GetLocalFilePath</references>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1aeca102593fba9b3985762b2140237b9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="53" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="54" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1ac5c6e4205ea78006664c2e34dc39a799" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="58" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="58" bodyend="66"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="59" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="59" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a00616354127860a0d20d1a353a931cf4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="69" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="69" bodyend="74"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="70" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="70" bodyend="75"/>
         <references refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_1acc62ca98aadef285f342145264d23570">myMD.ModelInterface.DataModelInterface.IEntity.ToEntity</references>
         <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1afe40113ddeb60fd81f4bbcc6d0e696b6" compoundref="_entity_8cs" startline="49" endline="49">myMD.Model.DataModel.Entity.Delete</references>
       </memberdef>
@@ -149,7 +149,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="79" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="79" bodyend="87"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="80" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="80" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1afc59027838e67173bbd42744c85b19eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref></type>
@@ -163,7 +163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="90" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="91" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1ab74ea0d94ef90f0c2c6653f2be46c4f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>IList&lt; E &gt;</type>
@@ -185,7 +185,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="97" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="97" bodyend="100"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="98" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="98" bodyend="101"/>
         <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1ac2f81922151a57358d5d8f12dbab6d89" compoundref="_entity_8cs" startline="25" endline="25">myMD.Model.DataModel.Entity.ID</references>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1ad47a77a171fddb2c0286be95166dca21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -200,7 +200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="103" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="103" bodyend="106"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="104" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="104" bodyend="107"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1af56d0d06d5339c63b856e1f8d9705935" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref> &gt;</type>
@@ -214,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="109" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="109" bodyend="112"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="110" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="110" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a2517548d0dbacc9f776f2b8400f11754" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication" kindref="compound">IMedication</ref> &gt;</type>
@@ -228,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="115" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="115" bodyend="118"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="116" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="116" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1acd77d4cb145a47a7d5d04f4ecfc2079d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref> &gt;</type>
@@ -242,9 +242,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="121" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="121" bodyend="124"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="122" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="122" bodyend="125"/>
       </memberdef>
-      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a300d53e2e23b82c4bbf56813d2ff5285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a300d53e2e23b82c4bbf56813d2ff5285" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor" kindref="compound">IDoctor</ref></type>
         <definition>IDoctor myMD.Model.DatabaseModel.EntityDatabase.GetDoctor</definition>
         <argsstring>(IDoctor doctor)</argsstring>
@@ -260,9 +260,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="127" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="128" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="128" bodyend="138"/>
+        <references refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_1a8160d8399f68f5db325a517c3114f7ae" compoundref="_i_entity_8cs" startline="14" endline="14">myMD.ModelInterface.DataModelInterface.IEntity.Name</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a3df9a6eed5a26b09bbf075615db46b9c" compoundref="_entity_8cs" startline="36" endline="36">myMD.Model.DataModel.Entity.Profile</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1ac2f81922151a57358d5d8f12dbab6d89" compoundref="_entity_8cs" startline="25" endline="25">myMD.Model.DataModel.Entity.ID</references>
       </memberdef>
-      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a0bd750b2731c7f4c1a7890c1c58141e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a0bd750b2731c7f4c1a7890c1c58141e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref></type>
         <definition>IProfile myMD.Model.DatabaseModel.EntityDatabase.GetProfile</definition>
         <argsstring>(IProfile profile)</argsstring>
@@ -278,7 +281,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="130" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="141" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="141" bodyend="151"/>
+        <references refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1a2561117d433086f373455cedc9ede7f5" compoundref="_i_profile_8cs" startline="25" endline="25">myMD.ModelInterface.DataModelInterface.IProfile.InsuranceNumber</references>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a498caa3b7e7a7745f7066620ac9a14ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -296,9 +300,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="133" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="133" bodyend="138"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="154" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="154" bodyend="160"/>
         <references refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity_1acc62ca98aadef285f342145264d23570">myMD.ModelInterface.DataModelInterface.IEntity.ToEntity</references>
         <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a3df9a6eed5a26b09bbf075615db46b9c" compoundref="_entity_8cs" startline="36" endline="36">myMD.Model.DataModel.Entity.Profile</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a54eef4f2993b1ed6467ee8a7d4b1a4b7" compoundref="_entity_8cs" startline="42" endline="42">myMD.Model.DataModel.Entity.ProfileID</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1ac2f81922151a57358d5d8f12dbab6d89" compoundref="_entity_8cs" startline="25" endline="25">myMD.Model.DataModel.Entity.ID</references>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a193a4912949f792f9907fad34802ff19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -316,7 +322,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="141" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="163" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -324,6 +330,18 @@
     <detaileddescription>
 <para><ref refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database" kindref="compound">myMD.Model.DatabaseModel.IEntityDatabase</ref></para>    </detaileddescription>
     <inheritancegraph>
+      <node id="146">
+        <label>myMD.Model.DatabaseModel.EntityDatabase</label>
+        <link refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database"/>
+        <childnode refid="147" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>IEntityDatabase</label>
+        <link refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="148">
         <label>myMD.Model.DatabaseModel.EntityDatabase</label>
         <link refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database"/>
@@ -334,20 +352,8 @@
         <label>IEntityDatabase</label>
         <link refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database"/>
       </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="150">
-        <label>myMD.Model.DatabaseModel.EntityDatabase</label>
-        <link refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database"/>
-        <childnode refid="151" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="151">
-        <label>IEntityDatabase</label>
-        <link refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database"/>
-      </node>
     </collaborationgraph>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="17" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="16" bodyend="142"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" line="18" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/EntityDatabase.cs" bodystart="17" bodyend="164"/>
     <listofallmembers>
       <member refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1aeca102593fba9b3985762b2140237b9a" prot="public" virt="non-virtual"><scope>myMD::Model::DatabaseModel::EntityDatabase</scope><name>Activate</name></member>
       <member refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1ac5c6e4205ea78006664c2e34dc39a799" prot="public" virt="non-virtual"><scope>myMD::Model::DatabaseModel::EntityDatabase</scope><name>Create</name></member>

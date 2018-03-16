@@ -1,6 +1,7 @@
 var searchData=
 [
   ['ominus',['OMinus',['../namespacemy_m_d_1_1_model_interface_1_1_data_model_interface.html#a5da1f31200b9d5cbc5d0704b8da3d17cafbf9dc822b8fc0fca4bcf70e2e97fae0',1,'myMD::ModelInterface::DataModelInterface']]],
+  ['onbackbuttonpressed',['OnBackButtonPressed',['../classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page.html#ac5b60cfc6f750fe83431e6b3fa850f6b',1,'myMD::View::MedicationTabPages::DetailedMedicationPage']]],
   ['onpropertychanged',['OnPropertyChanged',['../classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model.html#a0333c153387ba2d38fb31eeb0419bfcf',1,'myMD::ViewModel::OverallViewModel::OverallViewModel']]],
   ['onresume',['OnResume',['../classmy_m_d_1_1_app.html#a91bca8ea68e636005ac155569744ba2d',1,'myMD::App']]],
   ['onsleep',['OnSleep',['../classmy_m_d_1_1_app.html#a064df001dcc1f30d31c9608d4f14d393',1,'myMD::App']]],

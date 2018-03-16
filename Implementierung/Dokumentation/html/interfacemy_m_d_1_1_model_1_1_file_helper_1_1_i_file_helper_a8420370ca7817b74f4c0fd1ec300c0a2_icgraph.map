@@ -1,3 +1,4 @@
 <map id="myMD.Model.FileHelper.IFileHelper.GetLocalFilePath" name="myMD.Model.FileHelper.IFileHelper.GetLocalFilePath">
 <area shape="rect" id="node2" href="$classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database.html#a7a6a4c8cedc57ea3dc0a714ddd55deb6" title="Erstellt die Datenbank, falls sie noch nicht existiert, verbindet sich mit ihr und setzt das aktive P..." alt="" coords="243,5,447,47"/>
+<area shape="rect" id="node3" href="$classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser.html#a5c2d04fd614ecab8c9bc7f5ae7636a00" title="Initialisiert document, in dem es aus dem gegebenen Dateipfad liest. " alt="" coords="245,71,444,112"/>
 </map>

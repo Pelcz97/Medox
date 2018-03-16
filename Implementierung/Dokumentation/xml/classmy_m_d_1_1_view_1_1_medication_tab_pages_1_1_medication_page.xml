@@ -104,7 +104,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/MedicationPage.xaml.cs" line="51" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/MedicationPage.xaml.cs" bodystart="51" bodyend="57"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/MedicationPage.xaml.cs" line="51" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/MedicationPage.xaml.cs" bodystart="51" bodyend="64"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -112,40 +112,40 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="272">
+      <node id="274">
         <label>CustomContentPage</label>
         <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
-        <childnode refid="273" relation="public-inheritance">
+        <childnode refid="275" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="273">
+      <node id="275">
         <label>ContentPage</label>
       </node>
-      <node id="271">
+      <node id="273">
         <label>myMD.View.MedicationTabPages.MedicationPage</label>
         <link refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_medication_page"/>
-        <childnode refid="272" relation="public-inheritance">
+        <childnode refid="274" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="275">
+      <node id="277">
         <label>CustomContentPage</label>
         <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
-        <childnode refid="276" relation="public-inheritance">
+        <childnode refid="278" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="276">
+      <node id="278">
         <label>ContentPage</label>
       </node>
-      <node id="274">
+      <node id="276">
         <label>myMD.View.MedicationTabPages.MedicationPage</label>
         <link refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_medication_page"/>
-        <childnode refid="275" relation="public-inheritance">
+        <childnode refid="277" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/MedicationPage.xaml.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/MedicationPage.xaml.cs" bodystart="15" bodyend="58"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/MedicationPage.xaml.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/MedicationPage.xaml.cs" bodystart="15" bodyend="65"/>
     <listofallmembers>
       <member refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_medication_page_1a8f462e0f3c47fc90db5745284f1186e8" prot="public" virt="non-virtual"><scope>myMD::View::MedicationTabPages::MedicationPage</scope><name>AddMed_Clicked</name></member>
       <member refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page_1a3cb9c69e49e16c30e2e5377790702769" prot="public" virt="non-virtual"><scope>myMD::View::MedicationTabPages::MedicationPage</scope><name>CustomContentPage</name></member>
