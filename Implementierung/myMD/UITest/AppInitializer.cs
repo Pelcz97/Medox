@@ -4,7 +4,7 @@ using System.Linq;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 
-namespace myMD.UITests
+namespace UITest
 {
     public class AppInitializer
     {
@@ -12,10 +12,15 @@ namespace myMD.UITests
         {
             if (platform == Platform.Android)
             {
-                return ConfigureApp.Android.StartApp();
+                return ConfigureApp
+                    .Android
+                    .StartApp();
             }
 
-            return ConfigureApp.iOS.StartApp();
+            return ConfigureApp
+                .iOS
+                .StartApp();
         }
     }
 }
+
