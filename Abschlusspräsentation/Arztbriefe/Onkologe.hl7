@@ -38,64 +38,67 @@
           <title language="de-DE">Routineuntersuchung</title>
           <text representation="TXT">Hauptdiagnose: Symptomatische Cholezystolithiasis (K 80.20)
 	
-	Nebendiagnosen
-	Z.n. Nabelherniotomie nach Spitzy 2012
-	Adipositas
+Nebendiagnosen
+Z.n. Nabelherniotomie nach Spitzy 2012
+Adipositas
+
+Therapie: Laparoskopische Cholezystektomie
 	
-	Therapie: Laparoskopische Cholezystektomie
-	
-	Diagnose:
-         - Morbus Hodgkin (03/93)
-           Lokalisation: Lymphknoten mehrerer Regionen (ICD-O 2: C77.8)
-           Klassifikation nach Ann Arbor: 3B
-         - Explorative Laparatomie zum Hodgkin-Staging (03/93)
-         - Mantelfeldbestrahlung (03/93)
-         - COPP (06/93)
-        Begleiterkrankungen:
-         - insulinpflichtiger Diabetes mellitus (ICD-9 250.-) (gebessert)
+Diagnose:
+- Morbus Hodgkin (03/93)
+Lokalisation: Lymphknoten mehrerer Regionen (ICD-O 2: C77.8)
+Klassifikation nach Ann Arbor: 3B
+- Explorative Laparatomie zum Hodgkin-Staging (03/93)
+- Mantelfeldbestrahlung (03/93)
+- COPP (06/93)
+
+Begleiterkrankungen:
+- insulinpflichtiger Diabetes mellitus (ICD-9 250.-) (gebessert)
 
 
-        Folgende wichtige Befunde wurden während des
-        stationären Aufenthaltes erhoben:
-        BSG (1-Stunden-Wert): 50 mm/h
-        Körpertemperatur: 39 °C
-        Becken-Übersichtsaufnahme: o.B.
-	Tumorcharakteristika und Verschlüsselung:
-        Tumorlokalisation:
-         - Lymphknoten mehrerer Regionen (ICD-O 2: C77.8) ,
-           Hauptlokalisation
-         - Ln.Lumbales, Ln.Retroperitoneales (ICD-O 2: C77.29)
-         - Lymphknoten des Kopfes und Halses (ICD-O 2: C77.0)
-        Histologie:
-         - Morbus Hodgkin, NODULÄR-SKLEROSIERENDE FORM, (M-
-           9656/3)
- 
+Folgende wichtige Befunde wurden während des
+stationären Aufenthaltes erhoben:
+BSG (1-Stunden-Wert): 50 mm/h
+Körpertemperatur: 39 °C
+Becken-Übersichtsaufnahme: o.B.
+Tumorcharakteristika und Verschlüsselung:
+Tumorlokalisation:
+- Lymphknoten mehrerer Regionen (ICD-O 2: C77.8), 
+
+Hauptlokalisation
+- Ln.Lumbales, Ln.Retroperitoneales (ICD-O 2: C77.29)
+- Lymphknoten des Kopfes und Halses (ICD-O 2: C77.0)
+
+Histologie:
+  - Morbus Hodgkin, NODULÄR-SKLEROSIERENDE FORM, (M-
+    9656/3)
 
 
-        Klassifikation nach Ann Arbor: Stadium 3 Kategorie B
-        (mit Gewichtsverlust, Fieber,Nachtschweiss),
-	Extralymphatische Organe Organ nicht befallen, klinische Befunde, 
-	Milz Organbefall, mikroskopisch bestaetigt,
-	Knochen Organ nicht befallen, mikroskopisch untersucht,        
-	Knochenmark Organ nicht befallen, mikroskopisch untersucht, 
-	Lunge Organ nicht befallen, mikroskopisch untersucht, 
-	Leber Organ nicht befallen, mikroskopisch untersucht, 
-	Gehirn Organ nicht befallen, mikroskopisch untersucht, 
-	Pleura Organ nicht befallen, mikroskopisch untersucht, 
-	Peritoneum Organ nicht befallen, mikroskopisch untersucht, 
-	Haut Organ nicht befallen, mikroskopisch untersucht, 
-	Andere Organe Organ nicht befallen, mikroskopisch untersucht
 
-        Besonderheiten des Verlaufes waren:
-        Die Aufnahme des Patienten erfolgte zur Erstbehandlung. Anlaß der
-        aktuellen Betreuung war die Tumorsymptomatik. 
+Klassifikation nach Ann Arbor: Stadium 3 Kategorie B
+(mit Gewichtsverlust, Fieber,Nachtschweiss),
+Extralymphatische Organe Organ nicht befallen, klinische Befunde, 
+Milz Organbefall, mikroskopisch bestaetigt,
+Knochen Organ nicht befallen, mikroskopisch untersucht,        
+Knochenmark Organ nicht befallen, mikroskopisch untersucht, 
+Lunge Organ nicht befallen, mikroskopisch untersucht, 
+Leber Organ nicht befallen, mikroskopisch untersucht, 
+Gehirn Organ nicht befallen, mikroskopisch untersucht, 
+Pleura Organ nicht befallen, mikroskopisch untersucht, 
+Peritoneum Organ nicht befallen, mikroskopisch untersucht, 
+Haut Organ nicht befallen, mikroskopisch untersucht, 
+Andere Organe Organ nicht befallen, mikroskopisch untersucht
 
-        Beurteilung des Tumorgeschehens:
-        Leistungszustand nach ECOG: 0, normale, uneingeschränkte Aktivität
-        wie vor der Erkrankung
-        Information über Tumorerkrankung:
-        Die Angehörigen des Patienten sind aufgeklärt
-        Der Patient ist voll aufgeklärt</text>
+Besonderheiten des Verlaufes waren:
+Die Aufnahme des Patienten erfolgte zur Erstbehandlung. Anlaß der
+aktuellen Betreuung war die Tumorsymptomatik. 
+
+Beurteilung des Tumorgeschehens:
+Leistungszustand nach ECOG: 0, normale, uneingeschränkte Aktivität
+wie vor der Erkrankung
+Information über Tumorerkrankung:
+Die Angehörigen des Patienten sind aufgeklärt
+Der Patient ist voll aufgeklärt</text>
           <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" displayName="normal" />
         </section>
       </component>
