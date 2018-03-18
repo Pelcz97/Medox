@@ -2,6 +2,32 @@
   "version": 3,
   "targets": {
     "UAP,Version=v10.0.16299": {
+      "Microsoft.AppCenter/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+          "Newtonsoft.Json": "6.0.1",
+          "sqlite-net-pcl": "1.3.1"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.AppCenter.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.AppCenter.dll": {}
+        }
+      },
+      "Microsoft.AppCenter.Analytics/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AppCenter": "1.5.0"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.AppCenter.Analytics.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.AppCenter.Analytics.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -243,7 +269,16 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Plugin.BluetoothLE/5.3.2": {
+      "Newtonsoft.Json/6.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcore45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Plugin.BluetoothLE/5.3.4": {
         "type": "package",
         "dependencies": {
           "System.Reactive": "[3.1.1, 4.0.0)"
@@ -407,6 +442,80 @@
         },
         "runtime": {
           "lib/NetCore45/Splat.dll": {}
+        }
+      },
+      "sqlite-net-pcl/1.3.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.bundle_green": "1.1.2"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.2",
+          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.2",
+          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.2"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.2": {
+        "type": "package",
+        "build": {
+          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win10-arm/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win10-arm"
+          },
+          "runtimes/win10-x64/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win10-x64"
+          },
+          "runtimes/win10-x86/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win10-x86"
+          }
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.core": "1.1.2"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -982,7 +1091,7 @@
           "lib/UAP10/Plugin.FilePicker.dll": {}
         }
       },
-      "Xamarin.Forms/2.5.0.274780": {
+      "Xamarin.Forms/2.5.0.280555": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -1005,6 +1114,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microsoft.AppCenter": "1.5.0",
+          "Microsoft.AppCenter.Analytics": "1.5.0",
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
@@ -1021,6 +1132,32 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-arm": {
+      "Microsoft.AppCenter/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+          "Newtonsoft.Json": "6.0.1",
+          "sqlite-net-pcl": "1.3.1"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.AppCenter.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.AppCenter.dll": {}
+        }
+      },
+      "Microsoft.AppCenter.Analytics/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AppCenter": "1.5.0"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.AppCenter.Analytics.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.AppCenter.Analytics.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -1263,7 +1400,16 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Plugin.BluetoothLE/5.3.2": {
+      "Newtonsoft.Json/6.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcore45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Plugin.BluetoothLE/5.3.4": {
         "type": "package",
         "dependencies": {
           "System.Reactive": "[3.1.1, 4.0.0)"
@@ -1779,6 +1925,69 @@
         },
         "runtime": {
           "lib/NetCore45/Splat.dll": {}
+        }
+      },
+      "sqlite-net-pcl/1.3.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.bundle_green": "1.1.2"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.2",
+          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.2",
+          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.2"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.2": {
+        "type": "package",
+        "native": {
+          "runtimes/win10-arm/native/e_sqlite3.dll": {}
+        },
+        "build": {
+          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.core": "1.1.2"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -2396,7 +2605,7 @@
           "lib/UAP10/Plugin.FilePicker.dll": {}
         }
       },
-      "Xamarin.Forms/2.5.0.274780": {
+      "Xamarin.Forms/2.5.0.280555": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -2419,6 +2628,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microsoft.AppCenter": "1.5.0",
+          "Microsoft.AppCenter.Analytics": "1.5.0",
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
@@ -2435,6 +2646,32 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-arm-aot": {
+      "Microsoft.AppCenter/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+          "Newtonsoft.Json": "6.0.1",
+          "sqlite-net-pcl": "1.3.1"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.AppCenter.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.AppCenter.dll": {}
+        }
+      },
+      "Microsoft.AppCenter.Analytics/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AppCenter": "1.5.0"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.AppCenter.Analytics.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.AppCenter.Analytics.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -2677,7 +2914,16 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Plugin.BluetoothLE/5.3.2": {
+      "Newtonsoft.Json/6.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcore45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Plugin.BluetoothLE/5.3.4": {
         "type": "package",
         "dependencies": {
           "System.Reactive": "[3.1.1, 4.0.0)"
@@ -3224,6 +3470,69 @@
           "lib/NetCore45/Splat.dll": {}
         }
       },
+      "sqlite-net-pcl/1.3.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.bundle_green": "1.1.2"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.2",
+          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.2",
+          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.2"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.2": {
+        "type": "package",
+        "native": {
+          "runtimes/win10-arm/native/e_sqlite3.dll": {}
+        },
+        "build": {
+          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.core": "1.1.2"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3841,7 +4150,7 @@
           "lib/UAP10/Plugin.FilePicker.dll": {}
         }
       },
-      "Xamarin.Forms/2.5.0.274780": {
+      "Xamarin.Forms/2.5.0.280555": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -3864,6 +4173,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microsoft.AppCenter": "1.5.0",
+          "Microsoft.AppCenter.Analytics": "1.5.0",
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
@@ -3880,6 +4191,32 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x64": {
+      "Microsoft.AppCenter/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+          "Newtonsoft.Json": "6.0.1",
+          "sqlite-net-pcl": "1.3.1"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.AppCenter.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.AppCenter.dll": {}
+        }
+      },
+      "Microsoft.AppCenter.Analytics/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AppCenter": "1.5.0"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.AppCenter.Analytics.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.AppCenter.Analytics.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -4122,7 +4459,16 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Plugin.BluetoothLE/5.3.2": {
+      "Newtonsoft.Json/6.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcore45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Plugin.BluetoothLE/5.3.4": {
         "type": "package",
         "dependencies": {
           "System.Reactive": "[3.1.1, 4.0.0)"
@@ -4638,6 +4984,69 @@
         },
         "runtime": {
           "lib/NetCore45/Splat.dll": {}
+        }
+      },
+      "sqlite-net-pcl/1.3.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.bundle_green": "1.1.2"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.2",
+          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.2",
+          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.2"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.2": {
+        "type": "package",
+        "native": {
+          "runtimes/win10-x64/native/e_sqlite3.dll": {}
+        },
+        "build": {
+          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.core": "1.1.2"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -5255,7 +5664,7 @@
           "lib/UAP10/Plugin.FilePicker.dll": {}
         }
       },
-      "Xamarin.Forms/2.5.0.274780": {
+      "Xamarin.Forms/2.5.0.280555": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -5278,6 +5687,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microsoft.AppCenter": "1.5.0",
+          "Microsoft.AppCenter.Analytics": "1.5.0",
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
@@ -5294,6 +5705,32 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x64-aot": {
+      "Microsoft.AppCenter/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+          "Newtonsoft.Json": "6.0.1",
+          "sqlite-net-pcl": "1.3.1"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.AppCenter.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.AppCenter.dll": {}
+        }
+      },
+      "Microsoft.AppCenter.Analytics/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AppCenter": "1.5.0"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.AppCenter.Analytics.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.AppCenter.Analytics.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -5536,7 +5973,16 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Plugin.BluetoothLE/5.3.2": {
+      "Newtonsoft.Json/6.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcore45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Plugin.BluetoothLE/5.3.4": {
         "type": "package",
         "dependencies": {
           "System.Reactive": "[3.1.1, 4.0.0)"
@@ -6083,6 +6529,69 @@
           "lib/NetCore45/Splat.dll": {}
         }
       },
+      "sqlite-net-pcl/1.3.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.bundle_green": "1.1.2"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.2",
+          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.2",
+          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.2"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.2": {
+        "type": "package",
+        "native": {
+          "runtimes/win10-x64/native/e_sqlite3.dll": {}
+        },
+        "build": {
+          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.core": "1.1.2"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -6700,7 +7209,7 @@
           "lib/UAP10/Plugin.FilePicker.dll": {}
         }
       },
-      "Xamarin.Forms/2.5.0.274780": {
+      "Xamarin.Forms/2.5.0.280555": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -6723,6 +7232,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microsoft.AppCenter": "1.5.0",
+          "Microsoft.AppCenter.Analytics": "1.5.0",
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
@@ -6739,6 +7250,32 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x86": {
+      "Microsoft.AppCenter/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+          "Newtonsoft.Json": "6.0.1",
+          "sqlite-net-pcl": "1.3.1"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.AppCenter.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.AppCenter.dll": {}
+        }
+      },
+      "Microsoft.AppCenter.Analytics/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AppCenter": "1.5.0"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.AppCenter.Analytics.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.AppCenter.Analytics.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -6981,7 +7518,16 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Plugin.BluetoothLE/5.3.2": {
+      "Newtonsoft.Json/6.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcore45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Plugin.BluetoothLE/5.3.4": {
         "type": "package",
         "dependencies": {
           "System.Reactive": "[3.1.1, 4.0.0)"
@@ -7497,6 +8043,69 @@
         },
         "runtime": {
           "lib/NetCore45/Splat.dll": {}
+        }
+      },
+      "sqlite-net-pcl/1.3.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.bundle_green": "1.1.2"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.2",
+          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.2",
+          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.2"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.2": {
+        "type": "package",
+        "native": {
+          "runtimes/win10-x86/native/e_sqlite3.dll": {}
+        },
+        "build": {
+          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.core": "1.1.2"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -8114,7 +8723,7 @@
           "lib/UAP10/Plugin.FilePicker.dll": {}
         }
       },
-      "Xamarin.Forms/2.5.0.274780": {
+      "Xamarin.Forms/2.5.0.280555": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -8137,6 +8746,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microsoft.AppCenter": "1.5.0",
+          "Microsoft.AppCenter.Analytics": "1.5.0",
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
@@ -8153,6 +8764,32 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x86-aot": {
+      "Microsoft.AppCenter/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+          "Newtonsoft.Json": "6.0.1",
+          "sqlite-net-pcl": "1.3.1"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.AppCenter.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.AppCenter.dll": {}
+        }
+      },
+      "Microsoft.AppCenter.Analytics/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AppCenter": "1.5.0"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.AppCenter.Analytics.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.AppCenter.Analytics.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -8395,7 +9032,16 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Plugin.BluetoothLE/5.3.2": {
+      "Newtonsoft.Json/6.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcore45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Plugin.BluetoothLE/5.3.4": {
         "type": "package",
         "dependencies": {
           "System.Reactive": "[3.1.1, 4.0.0)"
@@ -8940,6 +9586,69 @@
         },
         "runtime": {
           "lib/NetCore45/Splat.dll": {}
+        }
+      },
+      "sqlite-net-pcl/1.3.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.bundle_green": "1.1.2"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.2",
+          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.2",
+          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.2"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.2": {
+        "type": "package",
+        "native": {
+          "runtimes/win10-x86/native/e_sqlite3.dll": {}
+        },
+        "build": {
+          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.core": "1.1.2"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -9559,7 +10268,7 @@
           "lib/UAP10/Plugin.FilePicker.dll": {}
         }
       },
-      "Xamarin.Forms/2.5.0.274780": {
+      "Xamarin.Forms/2.5.0.280555": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -9582,6 +10291,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microsoft.AppCenter": "1.5.0",
+          "Microsoft.AppCenter.Analytics": "1.5.0",
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
           "System.Linq": "4.3.0",
@@ -9599,6 +10310,38 @@
     }
   },
   "libraries": {
+    "Microsoft.AppCenter/1.5.0": {
+      "sha512": "b5zwK2qn1AddEwOHDpJHJK1umZDlq4/GmeMLqe9ez6tmyjkLu1umb/MhV85v3dvSyrKylAk7LoLuwd2QsEAjMA==",
+      "type": "package",
+      "path": "microsoft.appcenter/1.5.0",
+      "files": [
+        "lib/MonoAndroid403/Microsoft.AppCenter.Android.Bindings.dll",
+        "lib/MonoAndroid403/Microsoft.AppCenter.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll",
+        "lib/netstandard1.0/Microsoft.AppCenter.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.dll",
+        "lib/uap10.0/Microsoft.AppCenter.dll",
+        "microsoft.appcenter.1.5.0.nupkg.sha512",
+        "microsoft.appcenter.nuspec"
+      ]
+    },
+    "Microsoft.AppCenter.Analytics/1.5.0": {
+      "sha512": "J4VNZj9PO+V0XiPAsGXoTEcco+ge5QarMrv/E8fRvYGpXjnPcQDVMSrfSj+qZ9W3C/s0xKsvoh1jogR5lC4g/g==",
+      "type": "package",
+      "path": "microsoft.appcenter.analytics/1.5.0",
+      "files": [
+        "lib/MonoAndroid403/Microsoft.AppCenter.Analytics.Android.Bindings.dll",
+        "lib/MonoAndroid403/Microsoft.AppCenter.Analytics.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll",
+        "lib/netstandard1.0/Microsoft.AppCenter.Analytics.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Analytics.dll",
+        "lib/uap10.0/Microsoft.AppCenter.Analytics.dll",
+        "microsoft.appcenter.analytics.1.5.0.nupkg.sha512",
+        "microsoft.appcenter.analytics.nuspec"
+      ]
+    },
     "Microsoft.Net.Native.Compiler/2.0.3": {
       "sha512": "EekTfKp3VRWglAN6MLVInKCt7Mf6tDhhilCkpYwpDTE7fey9dM+eJc8xr6TeKRHq+0hWJ6B4fFuChF2a75uCPQ==",
       "type": "package",
@@ -12001,15 +12744,38 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Plugin.BluetoothLE/5.3.2": {
-      "sha512": "n47Qkv6Bm/Bku9+uEsi7zG9jnAQZ6fh/NbquZtAfppZn6pNK3uVgKCKlnGDr4R5s8kF6Rgt/XEKut4RSXFNYtA==",
+    "Newtonsoft.Json/6.0.1": {
+      "sha512": "tZ4TnfiXc3CUDZSZxXWcFOq5nDHxYY05qSDfZEJ654YOYzrPPOBgvSwJzr4jkTxeK5uoXmFG93Fq1lWDeLSmmA==",
       "type": "package",
-      "path": "plugin.bluetoothle/5.3.2",
+      "path": "newtonsoft.json/6.0.1",
+      "files": [
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netcore45/Newtonsoft.Json.dll",
+        "lib/netcore45/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+monotouch+monoandroid/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+monotouch+monoandroid/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8/Newtonsoft.Json.xml",
+        "newtonsoft.json.6.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "Plugin.BluetoothLE/5.3.4": {
+      "sha512": "MekLJOBmKW7lUCq8sfjafpZC5xOo76kyJXB0Qmv1QrZz46Rmc+m3Iz3O7hC4Q/lCkrcpodm+z+Ea4HAXjUc17w==",
+      "type": "package",
+      "path": "plugin.bluetoothle/5.3.4",
       "files": [
         "lib/MonoAndroid10/Plugin.BluetoothLE.Abstractions.dll",
         "lib/MonoAndroid10/Plugin.BluetoothLE.Abstractions.pdb",
         "lib/MonoAndroid10/Plugin.BluetoothLE.dll",
-        "lib/MonoAndroid10/Plugin.BluetoothLE.dll.mdb",
         "lib/MonoAndroid10/Plugin.BluetoothLE.pdb",
         "lib/Xamarin.Mac20/Plugin.BluetoothLE.Abstractions.dll",
         "lib/Xamarin.Mac20/Plugin.BluetoothLE.Abstractions.pdb",
@@ -12031,7 +12797,7 @@
         "lib/uap10.0/Plugin.BluetoothLE.dll",
         "lib/uap10.0/Plugin.BluetoothLE.pdb",
         "lib/uap10.0/Plugin.BluetoothLE.pri",
-        "plugin.bluetoothle.5.3.2.nupkg.sha512",
+        "plugin.bluetoothle.5.3.4.nupkg.sha512",
         "plugin.bluetoothle.nuspec"
       ]
     },
@@ -13956,6 +14722,113 @@
         "lib/wp8/Splat.pdb",
         "splat.1.6.2.nupkg.sha512",
         "splat.nuspec"
+      ]
+    },
+    "sqlite-net-pcl/1.3.1": {
+      "sha512": "YVqyIbWN4J1f7kYIJt3sHtnXw51MifWAsVSiMxDpexfzJuBR2QUmiqxxMlaV5IpFl9Nwgm9QICaNNSyNiEmGvA==",
+      "type": "package",
+      "path": "sqlite-net-pcl/1.3.1",
+      "files": [
+        "lib/netstandard1.1/SQLite-net.dll",
+        "lib/netstandard1.1/SQLite-net.dll.mdb",
+        "lib/netstandard1.1/SQLite-net.xml",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.dll.mdb",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.xml",
+        "sqlite-net-pcl.1.3.1.nupkg.sha512",
+        "sqlite-net-pcl.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.bundle_green/1.1.2": {
+      "sha512": "i7ZcVmz1CY9/Un9GrnZWtbou9va7ho54Bx9V7H59CxERCq9IJ10164rY8sg2uLGtiJY3AhWdtrA045QTlETmhA==",
+      "type": "package",
+      "path": "sqlitepclraw.bundle_green/1.1.2",
+      "files": [
+        "build/wp8/SQLitePCLRaw.bundle_green.targets",
+        "build/wp80/arm/SQLitePCLRaw.batteries_green.dll",
+        "build/wp80/arm/SQLitePCLRaw.batteries_v2.dll",
+        "build/wp80/x86/SQLitePCLRaw.batteries_green.dll",
+        "build/wp80/x86/SQLitePCLRaw.batteries_v2.dll",
+        "lib/MonoAndroid/SQLitePCLRaw.batteries_green.dll",
+        "lib/MonoAndroid/SQLitePCLRaw.batteries_v2.dll",
+        "lib/Xamarin.Mac20/SQLitePCLRaw.batteries_green.dll",
+        "lib/Xamarin.Mac20/SQLitePCLRaw.batteries_v2.dll",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net35/SQLitePCLRaw.batteries_green.dll",
+        "lib/net35/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net40/SQLitePCLRaw.batteries_green.dll",
+        "lib/net40/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net45/SQLitePCLRaw.batteries_green.dll",
+        "lib/net45/SQLitePCLRaw.batteries_v2.dll",
+        "lib/netcoreapp/SQLitePCLRaw.batteries_green.dll",
+        "lib/netcoreapp/SQLitePCLRaw.batteries_v2.dll",
+        "lib/netstandard1.1/SQLitePCLRaw.batteries_green.dll",
+        "lib/netstandard1.1/SQLitePCLRaw.batteries_v2.dll",
+        "lib/portable-net40+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll",
+        "lib/portable-net40+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/uap10.0/SQLitePCLRaw.batteries_green.dll",
+        "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/win8/SQLitePCLRaw.batteries_green.dll",
+        "lib/win8/SQLitePCLRaw.batteries_v2.dll",
+        "lib/win81/SQLitePCLRaw.batteries_green.dll",
+        "lib/win81/SQLitePCLRaw.batteries_v2.dll",
+        "lib/wp8/_._",
+        "lib/wpa81/SQLitePCLRaw.batteries_green.dll",
+        "lib/wpa81/SQLitePCLRaw.batteries_v2.dll",
+        "sqlitepclraw.bundle_green.1.1.2.nupkg.sha512",
+        "sqlitepclraw.bundle_green.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.core/1.1.2": {
+      "sha512": "Hll9I6i6c9h+8gW250qGssQh/4l7AQEhSzK0TXSVju5utgXV6ruupaiGr/3MFdwGIDH8QyVxXz22/esZ8A6CMw==",
+      "type": "package",
+      "path": "sqlitepclraw.core/1.1.2",
+      "files": [
+        "lib/MonoAndroid/SQLitePCLRaw.core.dll",
+        "lib/Xamarin.Mac20/SQLitePCLRaw.core.dll",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/net35/SQLitePCLRaw.core.dll",
+        "lib/net40/SQLitePCLRaw.core.dll",
+        "lib/net45/SQLitePCLRaw.core.dll",
+        "lib/netstandard1.0/SQLitePCLRaw.core.dll",
+        "lib/netstandard1.1/SQLitePCLRaw.core.dll",
+        "lib/portable-net40+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/uap10.0/SQLitePCLRaw.core.dll",
+        "lib/win8/SQLitePCLRaw.core.dll",
+        "lib/win81/SQLitePCLRaw.core.dll",
+        "lib/wpa81/SQLitePCLRaw.core.dll",
+        "sqlitepclraw.core.1.1.2.nupkg.sha512",
+        "sqlitepclraw.core.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.2": {
+      "sha512": "GTgZvXEE3hY0YVJNskdz6oUwN1k1kcaItobjPrUO2DVnRHolOMPuoR6F43VCeR3S7zioSOI5sqaSqwX6kkL0mQ==",
+      "type": "package",
+      "path": "sqlitepclraw.lib.e_sqlite3.v140/1.1.2",
+      "files": [
+        "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets",
+        "runtimes/win10-arm/native/e_sqlite3.dll",
+        "runtimes/win10-x64/native/e_sqlite3.dll",
+        "runtimes/win10-x86/native/e_sqlite3.dll",
+        "sqlitepclraw.lib.e_sqlite3.v140.1.1.2.nupkg.sha512",
+        "sqlitepclraw.lib.e_sqlite3.v140.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.2": {
+      "sha512": "OGlBhALVrK1CQjUpzisIkSy243a/zCWyfV//b31/OYEK6Z3IjTp6yUuGfifMUzAI8EbiLAI4fPUa2YYthaIU1A==",
+      "type": "package",
+      "path": "sqlitepclraw.provider.e_sqlite3.uwp10/1.1.2",
+      "files": [
+        "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll",
+        "sqlitepclraw.provider.e_sqlite3.uwp10.1.1.2.nupkg.sha512",
+        "sqlitepclraw.provider.e_sqlite3.uwp10.nuspec"
       ]
     },
     "System.Collections/4.3.0": {
@@ -16090,10 +16963,10 @@
         "xam.plugin.filepicker.nuspec"
       ]
     },
-    "Xamarin.Forms/2.5.0.274780": {
-      "sha512": "Uh7KMin/FXdwxfCMrkpUohmjo/bw8fOKgf6rZUQmSANt4RNObL3JFe6EGUJroy/jZFtVa/iKEIB6bDH37+FmDw==",
+    "Xamarin.Forms/2.5.0.280555": {
+      "sha512": "JVmozDJQNKEVhN4NG5EiG2IBua0+xK9b+t1L/VUN9HeIXkc8BubZM6UnnE1CftlGt0U2+JGTQSL79uxpx0KCpQ==",
       "type": "package",
-      "path": "xamarin.forms/2.5.0.274780",
+      "path": "xamarin.forms/2.5.0.280555",
       "files": [
         "build/netstandard1.0/Mono.Cecil.Mdb.dll",
         "build/netstandard1.0/Mono.Cecil.Pdb.dll",
@@ -16115,286 +16988,6 @@
         "build/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.DefaultItems.targets",
         "build/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Xaml.dll",
         "build/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.targets",
-        "content/Xamarin.Forms.toolbox.xml",
-        "content/icons/mac/cell-EntryCell-16.png",
-        "content/icons/mac/cell-EntryCell-16@2x.png",
-        "content/icons/mac/cell-EntryCell-16~dark.png",
-        "content/icons/mac/cell-EntryCell-16~dark@2x.png",
-        "content/icons/mac/cell-EntryCell-16~dark~sel.png",
-        "content/icons/mac/cell-EntryCell-16~dark~sel@2x.png",
-        "content/icons/mac/cell-EntryCell-16~sel.png",
-        "content/icons/mac/cell-EntryCell-16~sel@2x.png",
-        "content/icons/mac/cell-ImageCell-16.png",
-        "content/icons/mac/cell-ImageCell-16@2x.png",
-        "content/icons/mac/cell-ImageCell-16~dark.png",
-        "content/icons/mac/cell-ImageCell-16~dark@2x.png",
-        "content/icons/mac/cell-ImageCell-16~dark~sel.png",
-        "content/icons/mac/cell-ImageCell-16~dark~sel@2x.png",
-        "content/icons/mac/cell-ImageCell-16~sel.png",
-        "content/icons/mac/cell-ImageCell-16~sel@2x.png",
-        "content/icons/mac/cell-SwitchCell-16.png",
-        "content/icons/mac/cell-SwitchCell-16@2x.png",
-        "content/icons/mac/cell-SwitchCell-16~dark.png",
-        "content/icons/mac/cell-SwitchCell-16~dark@2x.png",
-        "content/icons/mac/cell-SwitchCell-16~dark~sel.png",
-        "content/icons/mac/cell-SwitchCell-16~dark~sel@2x.png",
-        "content/icons/mac/cell-SwitchCell-16~sel.png",
-        "content/icons/mac/cell-SwitchCell-16~sel@2x.png",
-        "content/icons/mac/cell-TextCell-16.png",
-        "content/icons/mac/cell-TextCell-16@2x.png",
-        "content/icons/mac/cell-TextCell-16~dark.png",
-        "content/icons/mac/cell-TextCell-16~dark@2x.png",
-        "content/icons/mac/cell-TextCell-16~dark~sel.png",
-        "content/icons/mac/cell-TextCell-16~dark~sel@2x.png",
-        "content/icons/mac/cell-TextCell-16~sel.png",
-        "content/icons/mac/cell-TextCell-16~sel@2x.png",
-        "content/icons/mac/cell-ViewCell-16.png",
-        "content/icons/mac/cell-ViewCell-16@2x.png",
-        "content/icons/mac/cell-ViewCell-16~dark.png",
-        "content/icons/mac/cell-ViewCell-16~dark@2x.png",
-        "content/icons/mac/cell-ViewCell-16~dark~sel.png",
-        "content/icons/mac/cell-ViewCell-16~dark~sel@2x.png",
-        "content/icons/mac/cell-ViewCell-16~sel.png",
-        "content/icons/mac/cell-ViewCell-16~sel@2x.png",
-        "content/icons/mac/layout-AbsoluteLayout-16.png",
-        "content/icons/mac/layout-AbsoluteLayout-16@2x.png",
-        "content/icons/mac/layout-AbsoluteLayout-16~dark.png",
-        "content/icons/mac/layout-AbsoluteLayout-16~dark@2x.png",
-        "content/icons/mac/layout-AbsoluteLayout-16~dark~sel.png",
-        "content/icons/mac/layout-AbsoluteLayout-16~dark~sel@2x.png",
-        "content/icons/mac/layout-AbsoluteLayout-16~sel.png",
-        "content/icons/mac/layout-AbsoluteLayout-16~sel@2x.png",
-        "content/icons/mac/layout-ContentView-16.png",
-        "content/icons/mac/layout-ContentView-16@2x.png",
-        "content/icons/mac/layout-ContentView-16~dark.png",
-        "content/icons/mac/layout-ContentView-16~dark@2x.png",
-        "content/icons/mac/layout-ContentView-16~dark~sel.png",
-        "content/icons/mac/layout-ContentView-16~dark~sel@2x.png",
-        "content/icons/mac/layout-ContentView-16~sel.png",
-        "content/icons/mac/layout-ContentView-16~sel@2x.png",
-        "content/icons/mac/layout-Frame-16.png",
-        "content/icons/mac/layout-Frame-16@2x.png",
-        "content/icons/mac/layout-Frame-16~dark.png",
-        "content/icons/mac/layout-Frame-16~dark@2x.png",
-        "content/icons/mac/layout-Frame-16~dark~sel.png",
-        "content/icons/mac/layout-Frame-16~dark~sel@2x.png",
-        "content/icons/mac/layout-Frame-16~sel.png",
-        "content/icons/mac/layout-Frame-16~sel@2x.png",
-        "content/icons/mac/layout-Grid-16.png",
-        "content/icons/mac/layout-Grid-16@2x.png",
-        "content/icons/mac/layout-Grid-16~dark.png",
-        "content/icons/mac/layout-Grid-16~dark@2x.png",
-        "content/icons/mac/layout-Grid-16~dark~sel.png",
-        "content/icons/mac/layout-Grid-16~dark~sel@2x.png",
-        "content/icons/mac/layout-Grid-16~sel.png",
-        "content/icons/mac/layout-Grid-16~sel@2x.png",
-        "content/icons/mac/layout-RelativeLayout-16.png",
-        "content/icons/mac/layout-RelativeLayout-16@2x.png",
-        "content/icons/mac/layout-RelativeLayout-16~dark.png",
-        "content/icons/mac/layout-RelativeLayout-16~dark@2x.png",
-        "content/icons/mac/layout-RelativeLayout-16~dark~sel.png",
-        "content/icons/mac/layout-RelativeLayout-16~dark~sel@2x.png",
-        "content/icons/mac/layout-RelativeLayout-16~sel.png",
-        "content/icons/mac/layout-RelativeLayout-16~sel@2x.png",
-        "content/icons/mac/layout-ScrollView-16.png",
-        "content/icons/mac/layout-ScrollView-16@2x.png",
-        "content/icons/mac/layout-ScrollView-16~dark.png",
-        "content/icons/mac/layout-ScrollView-16~dark@2x.png",
-        "content/icons/mac/layout-ScrollView-16~dark~sel.png",
-        "content/icons/mac/layout-ScrollView-16~dark~sel@2x.png",
-        "content/icons/mac/layout-ScrollView-16~sel.png",
-        "content/icons/mac/layout-ScrollView-16~sel@2x.png",
-        "content/icons/mac/layout-StackLayout-16.png",
-        "content/icons/mac/layout-StackLayout-16@2x.png",
-        "content/icons/mac/layout-StackLayout-16~dark.png",
-        "content/icons/mac/layout-StackLayout-16~dark@2x.png",
-        "content/icons/mac/layout-StackLayout-16~dark~sel.png",
-        "content/icons/mac/layout-StackLayout-16~dark~sel@2x.png",
-        "content/icons/mac/layout-StackLayout-16~sel.png",
-        "content/icons/mac/layout-StackLayout-16~sel@2x.png",
-        "content/icons/mac/view-ActivityIndicator-16.png",
-        "content/icons/mac/view-ActivityIndicator-16@2x.png",
-        "content/icons/mac/view-ActivityIndicator-16~dark.png",
-        "content/icons/mac/view-ActivityIndicator-16~dark@2x.png",
-        "content/icons/mac/view-ActivityIndicator-16~dark~sel.png",
-        "content/icons/mac/view-ActivityIndicator-16~dark~sel@2x.png",
-        "content/icons/mac/view-ActivityIndicator-16~sel.png",
-        "content/icons/mac/view-ActivityIndicator-16~sel@2x.png",
-        "content/icons/mac/view-BoxView-16.png",
-        "content/icons/mac/view-BoxView-16@2x.png",
-        "content/icons/mac/view-BoxView-16~dark.png",
-        "content/icons/mac/view-BoxView-16~dark@2x.png",
-        "content/icons/mac/view-BoxView-16~dark~sel.png",
-        "content/icons/mac/view-BoxView-16~dark~sel@2x.png",
-        "content/icons/mac/view-BoxView-16~sel.png",
-        "content/icons/mac/view-BoxView-16~sel@2x.png",
-        "content/icons/mac/view-Button-16.png",
-        "content/icons/mac/view-Button-16@2x.png",
-        "content/icons/mac/view-Button-16~dark.png",
-        "content/icons/mac/view-Button-16~dark@2x.png",
-        "content/icons/mac/view-Button-16~dark~sel.png",
-        "content/icons/mac/view-Button-16~dark~sel@2x.png",
-        "content/icons/mac/view-Button-16~sel.png",
-        "content/icons/mac/view-Button-16~sel@2x.png",
-        "content/icons/mac/view-DatePicker-16.png",
-        "content/icons/mac/view-DatePicker-16@2x.png",
-        "content/icons/mac/view-DatePicker-16~dark.png",
-        "content/icons/mac/view-DatePicker-16~dark@2x.png",
-        "content/icons/mac/view-DatePicker-16~dark~sel.png",
-        "content/icons/mac/view-DatePicker-16~dark~sel@2x.png",
-        "content/icons/mac/view-DatePicker-16~sel.png",
-        "content/icons/mac/view-DatePicker-16~sel@2x.png",
-        "content/icons/mac/view-Editor-16.png",
-        "content/icons/mac/view-Editor-16@2x.png",
-        "content/icons/mac/view-Editor-16~dark.png",
-        "content/icons/mac/view-Editor-16~dark@2x.png",
-        "content/icons/mac/view-Editor-16~dark~sel.png",
-        "content/icons/mac/view-Editor-16~dark~sel@2x.png",
-        "content/icons/mac/view-Editor-16~sel.png",
-        "content/icons/mac/view-Editor-16~sel@2x.png",
-        "content/icons/mac/view-Entry-16.png",
-        "content/icons/mac/view-Entry-16@2x.png",
-        "content/icons/mac/view-Entry-16~dark.png",
-        "content/icons/mac/view-Entry-16~dark@2x.png",
-        "content/icons/mac/view-Entry-16~dark~sel.png",
-        "content/icons/mac/view-Entry-16~dark~sel@2x.png",
-        "content/icons/mac/view-Entry-16~sel.png",
-        "content/icons/mac/view-Entry-16~sel@2x.png",
-        "content/icons/mac/view-Image-16.png",
-        "content/icons/mac/view-Image-16@2x.png",
-        "content/icons/mac/view-Image-16~dark.png",
-        "content/icons/mac/view-Image-16~dark@2x.png",
-        "content/icons/mac/view-Image-16~dark~sel.png",
-        "content/icons/mac/view-Image-16~dark~sel@2x.png",
-        "content/icons/mac/view-Image-16~sel.png",
-        "content/icons/mac/view-Image-16~sel@2x.png",
-        "content/icons/mac/view-Label-16-1.png",
-        "content/icons/mac/view-Label-16-2.png",
-        "content/icons/mac/view-Label-16-3.png",
-        "content/icons/mac/view-Label-16.png",
-        "content/icons/mac/view-Label-16@2x-1.png",
-        "content/icons/mac/view-Label-16@2x-2.png",
-        "content/icons/mac/view-Label-16@2x-3.png",
-        "content/icons/mac/view-Label-16@2x.png",
-        "content/icons/mac/view-ListView-16.png",
-        "content/icons/mac/view-ListView-16@2x.png",
-        "content/icons/mac/view-ListView-16~dark.png",
-        "content/icons/mac/view-ListView-16~dark@2x.png",
-        "content/icons/mac/view-ListView-16~dark~sel.png",
-        "content/icons/mac/view-ListView-16~dark~sel@2x.png",
-        "content/icons/mac/view-ListView-16~sel.png",
-        "content/icons/mac/view-ListView-16~sel@2x.png",
-        "content/icons/mac/view-Map-16.png",
-        "content/icons/mac/view-Map-16@2x.png",
-        "content/icons/mac/view-Map-16~dark.png",
-        "content/icons/mac/view-Map-16~dark@2x.png",
-        "content/icons/mac/view-Map-16~dark~sel.png",
-        "content/icons/mac/view-Map-16~dark~sel@2x.png",
-        "content/icons/mac/view-Map-16~sel.png",
-        "content/icons/mac/view-Map-16~sel@2x.png",
-        "content/icons/mac/view-Picker-16.png",
-        "content/icons/mac/view-Picker-16@2x.png",
-        "content/icons/mac/view-Picker-16~dark.png",
-        "content/icons/mac/view-Picker-16~dark@2x.png",
-        "content/icons/mac/view-Picker-16~dark~sel.png",
-        "content/icons/mac/view-Picker-16~dark~sel@2x.png",
-        "content/icons/mac/view-Picker-16~sel.png",
-        "content/icons/mac/view-Picker-16~sel@2x.png",
-        "content/icons/mac/view-ProgressBar-16.png",
-        "content/icons/mac/view-ProgressBar-16@2x.png",
-        "content/icons/mac/view-ProgressBar-16~dark.png",
-        "content/icons/mac/view-ProgressBar-16~dark@2x.png",
-        "content/icons/mac/view-ProgressBar-16~dark~sel.png",
-        "content/icons/mac/view-ProgressBar-16~dark~sel@2x.png",
-        "content/icons/mac/view-ProgressBar-16~sel.png",
-        "content/icons/mac/view-ProgressBar-16~sel@2x.png",
-        "content/icons/mac/view-SearchBar-16.png",
-        "content/icons/mac/view-SearchBar-16@2x.png",
-        "content/icons/mac/view-SearchBar-16~dark.png",
-        "content/icons/mac/view-SearchBar-16~dark@2x.png",
-        "content/icons/mac/view-SearchBar-16~dark~sel.png",
-        "content/icons/mac/view-SearchBar-16~dark~sel@2x.png",
-        "content/icons/mac/view-SearchBar-16~sel.png",
-        "content/icons/mac/view-SearchBar-16~sel@2x.png",
-        "content/icons/mac/view-Slider-16.png",
-        "content/icons/mac/view-Slider-16@2x.png",
-        "content/icons/mac/view-Slider-16~dark.png",
-        "content/icons/mac/view-Slider-16~dark@2x.png",
-        "content/icons/mac/view-Slider-16~dark~sel.png",
-        "content/icons/mac/view-Slider-16~dark~sel@2x.png",
-        "content/icons/mac/view-Slider-16~sel.png",
-        "content/icons/mac/view-Slider-16~sel@2x.png",
-        "content/icons/mac/view-Stepper-16.png",
-        "content/icons/mac/view-Stepper-16@2x.png",
-        "content/icons/mac/view-Stepper-16~dark.png",
-        "content/icons/mac/view-Stepper-16~dark@2x.png",
-        "content/icons/mac/view-Stepper-16~dark~sel.png",
-        "content/icons/mac/view-Stepper-16~dark~sel@2x.png",
-        "content/icons/mac/view-Stepper-16~sel.png",
-        "content/icons/mac/view-Stepper-16~sel@2x.png",
-        "content/icons/mac/view-Switch-16.png",
-        "content/icons/mac/view-Switch-16@2x.png",
-        "content/icons/mac/view-Switch-16~dark.png",
-        "content/icons/mac/view-Switch-16~dark@2x.png",
-        "content/icons/mac/view-Switch-16~dark~sel.png",
-        "content/icons/mac/view-Switch-16~dark~sel@2x.png",
-        "content/icons/mac/view-Switch-16~sel.png",
-        "content/icons/mac/view-Switch-16~sel@2x.png",
-        "content/icons/mac/view-TableView-16.png",
-        "content/icons/mac/view-TableView-16@2x.png",
-        "content/icons/mac/view-TableView-16~dark.png",
-        "content/icons/mac/view-TableView-16~dark@2x.png",
-        "content/icons/mac/view-TableView-16~dark~sel.png",
-        "content/icons/mac/view-TableView-16~dark~sel@2x.png",
-        "content/icons/mac/view-TableView-16~sel.png",
-        "content/icons/mac/view-TableView-16~sel@2x.png",
-        "content/icons/mac/view-TimePicker-16.png",
-        "content/icons/mac/view-TimePicker-16@2x.png",
-        "content/icons/mac/view-TimePicker-16~dark.png",
-        "content/icons/mac/view-TimePicker-16~dark@2x.png",
-        "content/icons/mac/view-TimePicker-16~dark~sel.png",
-        "content/icons/mac/view-TimePicker-16~dark~sel@2x.png",
-        "content/icons/mac/view-TimePicker-16~sel.png",
-        "content/icons/mac/view-TimePicker-16~sel@2x.png",
-        "content/icons/mac/view-WebView-16.png",
-        "content/icons/mac/view-WebView-16@2x.png",
-        "content/icons/mac/view-WebView-16~dark.png",
-        "content/icons/mac/view-WebView-16~dark@2x.png",
-        "content/icons/mac/view-WebView-16~dark~sel.png",
-        "content/icons/mac/view-WebView-16~dark~sel@2x.png",
-        "content/icons/mac/view-WebView-16~sel.png",
-        "content/icons/mac/view-WebView-16~sel@2x.png",
-        "content/icons/win/BoxView-16.png",
-        "content/icons/win/cell-EntryCell-16.png",
-        "content/icons/win/cell-ImageCell-16.png",
-        "content/icons/win/cell-SwitchCell-16.png",
-        "content/icons/win/cell-TextCell-16.png",
-        "content/icons/win/cell-ViewCell-16.png",
-        "content/icons/win/layout-AbsoluteLayout-16.png",
-        "content/icons/win/layout-ContentView-16.png",
-        "content/icons/win/layout-Frame-16.png",
-        "content/icons/win/layout-Grid-16.png",
-        "content/icons/win/layout-RelativeLayout-16.png",
-        "content/icons/win/layout-ScrollView-16.png",
-        "content/icons/win/layout-StackLayout-16.png",
-        "content/icons/win/view-ActivityIndicator-16.png",
-        "content/icons/win/view-Button-16.png",
-        "content/icons/win/view-DatePicker-16.png",
-        "content/icons/win/view-Editor-16.png",
-        "content/icons/win/view-Entry-16.png",
-        "content/icons/win/view-Image-16.png",
-        "content/icons/win/view-Label-16.png",
-        "content/icons/win/view-ListView-16.png",
-        "content/icons/win/view-Map-16.png",
-        "content/icons/win/view-Picker-16.png",
-        "content/icons/win/view-ProgressBar-16.png",
-        "content/icons/win/view-SearchBar-16.png",
-        "content/icons/win/view-Slider-16.png",
-        "content/icons/win/view-Stepper-16.png",
-        "content/icons/win/view-Switch-16.png",
-        "content/icons/win/view-TableView-16.png",
-        "content/icons/win/view-TimePicker-16.png",
-        "content/icons/win/view-WebView-16.png",
         "lib/MonoAndroid10/Design/Xamarin.Forms.Core.Design.dll",
         "lib/MonoAndroid10/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/MonoAndroid10/FormsViewGroup.dll",
@@ -16548,7 +17141,7 @@
         "lib/wpa81/Xamarin.Forms.Platform.dll",
         "lib/wpa81/Xamarin.Forms.Xaml.dll",
         "lib/wpa81/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.2.5.0.274780.nupkg.sha512",
+        "xamarin.forms.2.5.0.280555.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -16560,37 +17153,36 @@
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.16299": [
+      "Microsoft.AppCenter.Analytics >= 1.5.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.7",
-      "Plugin.BluetoothLE >= 5.3.2",
+      "Plugin.BluetoothLE >= 5.3.4",
       "System.Collections >= 4.3.0",
       "System.Linq >= 4.3.0",
       "Xam.Plugin.FilePicker >= 1.1.0",
-      "Xamarin.Forms >= 2.5.0.274780",
+      "Xamarin.Forms >= 2.5.0.280555",
       "myMDesktop >= 1.0.0",
       "reactiveui >= 7.4.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ppelc\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+    "C:\\Users\\Jan-Luca\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
+      "projectUniqueName": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
       "projectName": "myMDesktop.UWP",
-      "projectPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
-      "packagesPath": "C:\\Users\\ppelc\\.nuget\\packages\\",
-      "outputPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\obj\\",
+      "projectPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
+      "packagesPath": "C:\\Users\\Jan-Luca\\.nuget\\packages\\",
+      "outputPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\"
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\ppelc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jan-Luca\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -16604,8 +17196,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj": {
-              "projectPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj"
+            "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj": {
+              "projectPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj"
             }
           }
         }
@@ -16614,13 +17206,17 @@
     "frameworks": {
       "uap10.0.16299": {
         "dependencies": {
+          "Microsoft.AppCenter.Analytics": {
+            "target": "Package",
+            "version": "[1.5.0, )"
+          },
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.0.7, )"
           },
           "Plugin.BluetoothLE": {
             "target": "Package",
-            "version": "[5.3.2, )"
+            "version": "[5.3.4, )"
           },
           "System.Collections": {
             "target": "Package",
@@ -16636,7 +17232,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[2.5.0.274780, )"
+            "version": "[2.5.0.280555, )"
           },
           "reactiveui": {
             "target": "Package",
@@ -16700,7 +17296,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Ein Downgrade des Pakets \"System.Reflection.TypeExtensions\" von 4.3.0 auf 4.1.0 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.2 -> System.Reactive 3.1.1 -> System.Reactive.Windows.Threading 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Dynamic.Runtime 4.0.11 -> System.Linq.Expressions 4.1.0 -> System.Reflection.Extensions 4.0.1 -> runtime.aot.System.Reflection.Extensions 4.3.0 -> System.Reflection.TypeExtensions (>= 4.3.0) \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.2 -> System.Reactive 3.1.1 -> System.Reactive.Windows.Threading 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Dynamic.Runtime 4.0.11 -> System.Reflection.TypeExtensions (>= 4.1.0)",
+      "message": "Ein Downgrade des Pakets \"System.Reflection.TypeExtensions\" von 4.3.0 auf 4.1.0 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.4 -> System.Reactive 3.1.1 -> System.Reactive.Windows.Threading 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Dynamic.Runtime 4.0.11 -> System.Linq.Expressions 4.1.0 -> System.Reflection.Extensions 4.0.1 -> runtime.aot.System.Reflection.Extensions 4.3.0 -> System.Reflection.TypeExtensions (>= 4.3.0) \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.4 -> System.Reactive 3.1.1 -> System.Reactive.Windows.Threading 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Dynamic.Runtime 4.0.11 -> System.Reflection.TypeExtensions (>= 4.1.0)",
       "libraryId": "System.Reflection.TypeExtensions",
       "targetGraphs": [
         "UAP,Version=v10.0.16299/win10-arm-aot",
@@ -16712,7 +17308,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Ein Downgrade des Pakets \"System.Reflection.TypeExtensions\" von 4.3.0 auf 4.1.0 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.2 -> System.Reactive 3.1.1 -> System.Reactive.PlatformServices 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Dynamic.Runtime 4.0.11 -> System.Linq.Expressions 4.1.0 -> System.Reflection.Extensions 4.0.1 -> runtime.aot.System.Reflection.Extensions 4.3.0 -> System.Reflection.TypeExtensions (>= 4.3.0) \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.2 -> System.Reactive 3.1.1 -> System.Reactive.PlatformServices 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Dynamic.Runtime 4.0.11 -> System.Reflection.TypeExtensions (>= 4.1.0)",
+      "message": "Ein Downgrade des Pakets \"System.Reflection.TypeExtensions\" von 4.3.0 auf 4.1.0 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.4 -> System.Reactive 3.1.1 -> System.Reactive.PlatformServices 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Dynamic.Runtime 4.0.11 -> System.Linq.Expressions 4.1.0 -> System.Reflection.Extensions 4.0.1 -> runtime.aot.System.Reflection.Extensions 4.3.0 -> System.Reflection.TypeExtensions (>= 4.3.0) \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.4 -> System.Reactive 3.1.1 -> System.Reactive.PlatformServices 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Dynamic.Runtime 4.0.11 -> System.Reflection.TypeExtensions (>= 4.1.0)",
       "libraryId": "System.Reflection.TypeExtensions",
       "targetGraphs": [
         "UAP,Version=v10.0.16299/win10-arm-aot",
@@ -16724,7 +17320,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Ein Downgrade des Pakets \"System.Reflection.TypeExtensions\" von 4.3.0 auf 4.1.0 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.2 -> System.Reactive 3.1.1 -> System.Reactive.WindowsRuntime 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Dynamic.Runtime 4.0.11 -> System.Linq.Expressions 4.1.0 -> System.Reflection.Extensions 4.0.1 -> runtime.aot.System.Reflection.Extensions 4.3.0 -> System.Reflection.TypeExtensions (>= 4.3.0) \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.2 -> System.Reactive 3.1.1 -> System.Reactive.WindowsRuntime 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Dynamic.Runtime 4.0.11 -> System.Reflection.TypeExtensions (>= 4.1.0)",
+      "message": "Ein Downgrade des Pakets \"System.Reflection.TypeExtensions\" von 4.3.0 auf 4.1.0 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.4 -> System.Reactive 3.1.1 -> System.Reactive.WindowsRuntime 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Dynamic.Runtime 4.0.11 -> System.Linq.Expressions 4.1.0 -> System.Reflection.Extensions 4.0.1 -> runtime.aot.System.Reflection.Extensions 4.3.0 -> System.Reflection.TypeExtensions (>= 4.3.0) \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.4 -> System.Reactive 3.1.1 -> System.Reactive.WindowsRuntime 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Dynamic.Runtime 4.0.11 -> System.Reflection.TypeExtensions (>= 4.1.0)",
       "libraryId": "System.Reflection.TypeExtensions",
       "targetGraphs": [
         "UAP,Version=v10.0.16299/win10-arm-aot",
@@ -16736,7 +17332,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Ein Downgrade des Pakets \"System.Diagnostics.Contracts\" von 4.3.0 auf 4.0.1 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.2 -> System.Reactive 3.1.1 -> System.Reactive.Windows.Threading 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Reactive.Interfaces 3.1.1 -> NETStandard.Library 1.6.0 -> System.Reflection.Extensions 4.0.1 -> runtime.aot.System.Reflection.Extensions 4.3.0 -> System.Reflection.TypeExtensions 4.3.0 -> System.Diagnostics.Contracts (>= 4.3.0) \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.2 -> System.Reactive 3.1.1 -> System.Reactive.Windows.Threading 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Diagnostics.Contracts (>= 4.0.1)",
+      "message": "Ein Downgrade des Pakets \"System.Diagnostics.Contracts\" von 4.3.0 auf 4.0.1 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.4 -> System.Reactive 3.1.1 -> System.Reactive.Windows.Threading 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Reactive.Interfaces 3.1.1 -> NETStandard.Library 1.6.0 -> System.Reflection.Extensions 4.0.1 -> runtime.aot.System.Reflection.Extensions 4.3.0 -> System.Reflection.TypeExtensions 4.3.0 -> System.Diagnostics.Contracts (>= 4.3.0) \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.4 -> System.Reactive 3.1.1 -> System.Reactive.Windows.Threading 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Diagnostics.Contracts (>= 4.0.1)",
       "libraryId": "System.Diagnostics.Contracts",
       "targetGraphs": [
         "UAP,Version=v10.0.16299/win10-arm-aot",
@@ -16748,7 +17344,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Ein Downgrade des Pakets \"System.Diagnostics.Contracts\" von 4.3.0 auf 4.0.1 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.2 -> System.Reactive 3.1.1 -> System.Reactive.PlatformServices 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Reactive.Interfaces 3.1.1 -> NETStandard.Library 1.6.0 -> System.Reflection.Extensions 4.0.1 -> runtime.aot.System.Reflection.Extensions 4.3.0 -> System.Reflection.TypeExtensions 4.3.0 -> System.Diagnostics.Contracts (>= 4.3.0) \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.2 -> System.Reactive 3.1.1 -> System.Reactive.PlatformServices 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Diagnostics.Contracts (>= 4.0.1)",
+      "message": "Ein Downgrade des Pakets \"System.Diagnostics.Contracts\" von 4.3.0 auf 4.0.1 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.4 -> System.Reactive 3.1.1 -> System.Reactive.PlatformServices 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Reactive.Interfaces 3.1.1 -> NETStandard.Library 1.6.0 -> System.Reflection.Extensions 4.0.1 -> runtime.aot.System.Reflection.Extensions 4.3.0 -> System.Reflection.TypeExtensions 4.3.0 -> System.Diagnostics.Contracts (>= 4.3.0) \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.4 -> System.Reactive 3.1.1 -> System.Reactive.PlatformServices 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Diagnostics.Contracts (>= 4.0.1)",
       "libraryId": "System.Diagnostics.Contracts",
       "targetGraphs": [
         "UAP,Version=v10.0.16299/win10-arm-aot",
@@ -16760,7 +17356,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Ein Downgrade des Pakets \"System.Diagnostics.Contracts\" von 4.3.0 auf 4.0.1 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.2 -> System.Reactive 3.1.1 -> System.Reactive.WindowsRuntime 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Reactive.Interfaces 3.1.1 -> NETStandard.Library 1.6.0 -> System.Reflection.Extensions 4.0.1 -> runtime.aot.System.Reflection.Extensions 4.3.0 -> System.Reflection.TypeExtensions 4.3.0 -> System.Diagnostics.Contracts (>= 4.3.0) \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.2 -> System.Reactive 3.1.1 -> System.Reactive.WindowsRuntime 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Diagnostics.Contracts (>= 4.0.1)",
+      "message": "Ein Downgrade des Pakets \"System.Diagnostics.Contracts\" von 4.3.0 auf 4.0.1 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.4 -> System.Reactive 3.1.1 -> System.Reactive.WindowsRuntime 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Reactive.Interfaces 3.1.1 -> NETStandard.Library 1.6.0 -> System.Reflection.Extensions 4.0.1 -> runtime.aot.System.Reflection.Extensions 4.3.0 -> System.Reflection.TypeExtensions 4.3.0 -> System.Diagnostics.Contracts (>= 4.3.0) \r\n myMDesktop.UWP -> Plugin.BluetoothLE 5.3.4 -> System.Reactive 3.1.1 -> System.Reactive.WindowsRuntime 3.1.1 -> System.Reactive.Linq 3.1.1 -> System.Reactive.Core 3.1.1 -> System.Diagnostics.Contracts (>= 4.0.1)",
       "libraryId": "System.Diagnostics.Contracts",
       "targetGraphs": [
         "UAP,Version=v10.0.16299/win10-arm-aot",

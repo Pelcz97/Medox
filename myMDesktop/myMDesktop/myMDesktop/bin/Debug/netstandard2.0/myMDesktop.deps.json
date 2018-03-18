@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "6cacf4aa4d82f9ca8310b42ec7dbb2a56d64763d"
+    "signature": "c86702bb15e3b5ee2dfed7687580c0f4607680e6"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,6 +9,8 @@
     ".NETStandard,Version=v2.0/": {
       "myMDesktop/1.0.0": {
         "dependencies": {
+          "Microsoft.AppCenter": "1.5.0",
+          "Microsoft.AppCenter.Analytics": "1.5.0",
           "NETStandard.Library": "2.0.1",
           "Plugin.BluetoothLE": "5.3.2",
           "System.Collections": "4.3.0",
@@ -20,6 +22,19 @@
         },
         "runtime": {
           "myMDesktop.dll": {}
+        }
+      },
+      "Microsoft.AppCenter/1.5.0": {
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.AppCenter.dll": {}
+        }
+      },
+      "Microsoft.AppCenter.Analytics/1.5.0": {
+        "dependencies": {
+          "Microsoft.AppCenter": "1.5.0"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.AppCenter.Analytics.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -384,6 +399,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AppCenter/1.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b5zwK2qn1AddEwOHDpJHJK1umZDlq4/GmeMLqe9ez6tmyjkLu1umb/MhV85v3dvSyrKylAk7LoLuwd2QsEAjMA==",
+      "path": "microsoft.appcenter/1.5.0",
+      "hashPath": "microsoft.appcenter.1.5.0.nupkg.sha512"
+    },
+    "Microsoft.AppCenter.Analytics/1.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J4VNZj9PO+V0XiPAsGXoTEcco+ge5QarMrv/E8fRvYGpXjnPcQDVMSrfSj+qZ9W3C/s0xKsvoh1jogR5lC4g/g==",
+      "path": "microsoft.appcenter.analytics/1.5.0",
+      "hashPath": "microsoft.appcenter.analytics.1.5.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",

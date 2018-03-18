@@ -2,6 +2,27 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "Microsoft.AppCenter/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/Microsoft.AppCenter.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.AppCenter.dll": {}
+        }
+      },
+      "Microsoft.AppCenter.Analytics/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AppCenter": "1.5.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/Microsoft.AppCenter.Analytics.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.AppCenter.Analytics.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -553,6 +574,38 @@
     }
   },
   "libraries": {
+    "Microsoft.AppCenter/1.5.0": {
+      "sha512": "b5zwK2qn1AddEwOHDpJHJK1umZDlq4/GmeMLqe9ez6tmyjkLu1umb/MhV85v3dvSyrKylAk7LoLuwd2QsEAjMA==",
+      "type": "package",
+      "path": "microsoft.appcenter/1.5.0",
+      "files": [
+        "lib/MonoAndroid403/Microsoft.AppCenter.Android.Bindings.dll",
+        "lib/MonoAndroid403/Microsoft.AppCenter.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll",
+        "lib/netstandard1.0/Microsoft.AppCenter.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.dll",
+        "lib/uap10.0/Microsoft.AppCenter.dll",
+        "microsoft.appcenter.1.5.0.nupkg.sha512",
+        "microsoft.appcenter.nuspec"
+      ]
+    },
+    "Microsoft.AppCenter.Analytics/1.5.0": {
+      "sha512": "J4VNZj9PO+V0XiPAsGXoTEcco+ge5QarMrv/E8fRvYGpXjnPcQDVMSrfSj+qZ9W3C/s0xKsvoh1jogR5lC4g/g==",
+      "type": "package",
+      "path": "microsoft.appcenter.analytics/1.5.0",
+      "files": [
+        "lib/MonoAndroid403/Microsoft.AppCenter.Analytics.Android.Bindings.dll",
+        "lib/MonoAndroid403/Microsoft.AppCenter.Analytics.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll",
+        "lib/netstandard1.0/Microsoft.AppCenter.Analytics.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Analytics.dll",
+        "lib/uap10.0/Microsoft.AppCenter.Analytics.dll",
+        "microsoft.appcenter.analytics.1.5.0.nupkg.sha512",
+        "microsoft.appcenter.analytics.nuspec"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -3073,6 +3126,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Microsoft.AppCenter >= 1.5.0",
+      "Microsoft.AppCenter.Analytics >= 1.5.0",
       "NETStandard.Library >= 2.0.1",
       "Plugin.BluetoothLE >= 5.3.2",
       "System.Collections >= 4.3.0",
@@ -3083,25 +3138,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ppelc\\.nuget\\packages\\": {},
+    "C:\\Users\\Jan-Luca\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj",
+      "projectUniqueName": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj",
       "projectName": "myMDesktop",
-      "projectPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj",
-      "packagesPath": "C:\\Users\\ppelc\\.nuget\\packages\\",
-      "outputPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\obj\\",
+      "projectPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj",
+      "packagesPath": "C:\\Users\\Jan-Luca\\.nuget\\packages\\",
+      "outputPath": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ppelc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jan-Luca\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -3126,6 +3184,14 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "Microsoft.AppCenter": {
+            "target": "Package",
+            "version": "[1.5.0, )"
+          },
+          "Microsoft.AppCenter.Analytics": {
+            "target": "Package",
+            "version": "[1.5.0, )"
+          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
@@ -3166,6 +3232,12 @@
     }
   },
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem beim Lesen der Cachedatei \"D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\obj\\myMDesktop.csproj.nuget.cache\": Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1701",
       "level": "Warning",
