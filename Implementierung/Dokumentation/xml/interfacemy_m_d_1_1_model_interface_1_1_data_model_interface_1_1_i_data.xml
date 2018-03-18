@@ -40,73 +40,73 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="176">
+      <node id="180">
         <label>myMD.ModelInterface.DataModelInterface.IMedication</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication"/>
-        <childnode refid="168" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="171">
-        <label>myMD.Model.DataModel.DoctorsLetter</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter"/>
-        <childnode refid="170" relation="public-inheritance">
-        </childnode>
-        <childnode refid="174" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="172">
-        <label>myMD.Model.DataModel.DoctorsLetterGroup</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group"/>
-        <childnode refid="170" relation="public-inheritance">
-        </childnode>
-        <childnode refid="175" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="174">
-        <label>myMD.ModelInterface.DataModelInterface.IDoctorsLetter</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter"/>
-        <childnode refid="168" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="168">
-        <label>myMD.ModelInterface.DataModelInterface.IData</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
-        <childnode refid="169" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="169">
-        <label>IEntity</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
-      </node>
-      <node id="170">
-        <label>myMD.Model.DataModel.Data</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
-        <childnode refid="168" relation="public-inheritance">
+        <childnode refid="172" relation="public-inheritance">
         </childnode>
       </node>
       <node id="175">
-        <label>myMD.ModelInterface.DataModelInterface.IDoctorsLetterGroup</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group"/>
-        <childnode refid="168" relation="public-inheritance">
+        <label>myMD.Model.DataModel.DoctorsLetter</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter"/>
+        <childnode refid="174" relation="public-inheritance">
+        </childnode>
+        <childnode refid="178" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="176">
+        <label>myMD.Model.DataModel.DoctorsLetterGroup</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group"/>
+        <childnode refid="174" relation="public-inheritance">
+        </childnode>
+        <childnode refid="179" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="178">
+        <label>myMD.ModelInterface.DataModelInterface.IDoctorsLetter</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter"/>
+        <childnode refid="172" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="172">
+        <label>myMD.ModelInterface.DataModelInterface.IData</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
+        <childnode refid="173" relation="public-inheritance">
         </childnode>
       </node>
       <node id="173">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+      <node id="174">
+        <label>myMD.Model.DataModel.Data</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
+        <childnode refid="172" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="179">
+        <label>myMD.ModelInterface.DataModelInterface.IDoctorsLetterGroup</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group"/>
+        <childnode refid="172" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="177">
         <label>myMD.Model.DataModel.Medication</label>
         <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication"/>
-        <childnode refid="170" relation="public-inheritance">
+        <childnode refid="174" relation="public-inheritance">
         </childnode>
-        <childnode refid="176" relation="public-inheritance">
+        <childnode refid="180" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="177">
+      <node id="181">
         <label>myMD.ModelInterface.DataModelInterface.IData</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
-        <childnode refid="178" relation="public-inheritance">
+        <childnode refid="182" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="178">
+      <node id="182">
         <label>IEntity</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
       </node>

@@ -36,5 +36,11 @@ namespace myMD.View.SendDataTabPages
 
             await Navigation.PushModalAsync(view);
         }
+
+        async void LoadLetters_Clicked(object sender, System.EventArgs e)
+        {
+            await vm.ReceiveData();
+            await DisplayAlert("Übertragung abgeschlossen", "Die neuen Arztbriefe befinden sich nun in der Übersicht.", "Okay");
+        }
     }
 }

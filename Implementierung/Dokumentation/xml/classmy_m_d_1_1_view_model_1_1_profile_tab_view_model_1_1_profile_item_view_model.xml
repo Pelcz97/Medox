@@ -136,54 +136,54 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="363">
+      <node id="366">
         <label>INotifyPropertyChanged</label>
       </node>
-      <node id="365">
+      <node id="368">
         <label>myMD.ViewModel.ProfileTabViewModel.ProfileViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_view_model"/>
-        <childnode refid="361" relation="public-inheritance">
+        <childnode refid="364" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="362">
+      <node id="365">
         <label>OverallViewModel::OverallViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
-        <childnode refid="363" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="361">
-        <label>myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model"/>
-        <childnode refid="362" relation="public-inheritance">
+        <childnode refid="366" relation="public-inheritance">
         </childnode>
       </node>
       <node id="364">
+        <label>myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model"/>
+        <childnode refid="365" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="367">
         <label>myMD.ViewModel.ProfileTabViewModel.ProfileEditViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_edit_view_model"/>
-        <childnode refid="361" relation="public-inheritance">
+        <childnode refid="364" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="368">
+      <node id="371">
         <label>INotifyPropertyChanged</label>
       </node>
-      <node id="367">
+      <node id="370">
         <label>OverallViewModel::OverallViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
-        <childnode refid="368" relation="public-inheritance">
+        <childnode refid="371" relation="public-inheritance">
         </childnode>
-        <childnode refid="369" relation="usage">
+        <childnode refid="372" relation="usage">
           <edgelabel>ModelFacade</edgelabel>
         </childnode>
       </node>
-      <node id="366">
+      <node id="369">
         <label>myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model"/>
-        <childnode refid="367" relation="public-inheritance">
+        <childnode refid="370" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="369">
+      <node id="372">
         <label>myMD.ModelInterface.ModelFacadeInterface.IModelFacade</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
       </node>
@@ -191,13 +191,13 @@
     <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" line="15" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/ProfileTabViewModel/ProfileItemViewModel.cs" bodystart="14" bodyend="86"/>
     <listofallmembers>
       <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1ae34d809cc99f6592154df455ad3b7ef9" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>Birthdate</name></member>
-      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1acff4179c3cbf2cd35046729e99cd6921" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>BleAdapter</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1a9c67eb1da84c7d284d533b89a0737859" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>BloodType</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1a8f900454a817a4b4400ede47e418a512" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>BloodTypeName</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1af9b06e26394989f3cb500fe452a25ce8" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>BloodTypeNames</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1ac303c5083bf4ad4b307798a4c4e8af6e" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>InsuranceNumber</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1abf7ee39f67915e326cbaa633368b9846" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>LastName</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1ab1b0e7b2ed9ae07614caa1e45b942e3f" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>ModelFacade</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a40cabfa5e7d2f08979a9ba5c3c8eead8" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>myMD_FileTransfer</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model_1aa16bc16413aef57a6b63caedf7b5632a" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>Name</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a0333c153387ba2d38fb31eeb0419bfcf" prot="public" virt="virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>OnPropertyChanged</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" prot="public" virt="non-virtual"><scope>myMD::ViewModel::ProfileTabViewModel::ProfileItemViewModel</scope><name>OverallViewModel</name></member>

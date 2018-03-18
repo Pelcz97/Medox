@@ -3,12 +3,12 @@
   <compounddef id="namespacemy_m_d_1_1_model_1_1_transmission_model" kind="namespace" language="C#">
     <compoundname>myMD::Model::TransmissionModel</compoundname>
     <innerclass refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth" prot="public">myMD::Model::TransmissionModel::Bluetooth</innerclass>
-    <innerclass refid="classmy_m_d_1_1_model_1_1_transmission_model_1_1_device" prot="public">myMD::Model::TransmissionModel::Device</innerclass>
     <innerclass refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth" prot="public">myMD::Model::TransmissionModel::IBluetooth</innerclass>
+    <innerclass refid="interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_helper" prot="public">myMD::Model::TransmissionModel::IBluetoothHelper</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/Bluetooth.cs" line="5" column="1"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel/Bluetooth.cs" line="12" column="1"/>
   </compounddef>
 </doxygen>

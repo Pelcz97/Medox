@@ -7,6 +7,8 @@
 *.gz
 *.toc
 *.lock
+!myMD_Abschlusspräsentation.pdf
+!myMD_Abschlusspräsentation2.pdf
 !Kit_Logo.pdf
 !MyMD_Anmerkungen_Viola_Pelcz.pdf
 !Entwurfsdokument Bsp enCourage.pdf

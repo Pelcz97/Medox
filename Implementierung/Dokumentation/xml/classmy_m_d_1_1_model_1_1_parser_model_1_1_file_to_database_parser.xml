@@ -46,14 +46,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="21" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" bodystart="21" bodyend="50"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="22" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" bodystart="22" bodyend="52"/>
         <references refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a3b62f2bec78aba18c58ce62580898f3a">myMD.Model.DatabaseModel.IEntityDatabase.GetProfile</references>
         <references refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile_1aa525d1f3b15f7a82011022dbc8edbdd1">myMD.ModelInterface.DataModelInterface.IProfile.ToProfile</references>
         <references refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1ab7da53690d9a658c2e30326524b42fef">myMD.Model.DatabaseModel.IEntityDatabase.GetDoctor</references>
         <references refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1aa9b390a965a4ebc813c0beefbbd87d26">myMD.Model.DatabaseModel.IEntityDatabase.Insert</references>
         <references refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor_1aedadc4e156829d4734a47f5613eb7af2">myMD.ModelInterface.DataModelInterface.IDoctor.ToDoctor</references>
         <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity_1a3df9a6eed5a26b09bbf075615db46b9c" compoundref="_entity_8cs" startline="36" endline="36">myMD.Model.DataModel.Entity.Profile</references>
-        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1ace793853564df796217d90fc8a56f01b" compoundref="_doctors_letter_8cs" startline="36" endline="36">myMD.Model.DataModel.DoctorsLetter.DatabaseDoctor</references>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1ace793853564df796217d90fc8a56f01b" compoundref="_doctors_letter_8cs" startline="37" endline="37">myMD.Model.DataModel.DoctorsLetter.DatabaseDoctor</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -81,7 +81,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="56" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="58" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a9fcc201f726f6c9e93cdb011a0b1dfae" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>abstract <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctor" kindref="compound">Doctor</ref></type>
@@ -96,7 +96,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="62" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="64" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a3ac888cb3cc241cc42e1b9ad7f4547ff" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>abstract <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter" kindref="compound">DoctorsLetter</ref></type>
@@ -111,7 +111,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="68" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="70" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a73c15f8034e8d5a907b39ca8daa6a854" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>abstract IList&lt; <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication" kindref="compound">Medication</ref> &gt;</type>
@@ -126,7 +126,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="74" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="76" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a9b95fdb381daef0799df52ccc28d8a80" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>abstract <ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile" kindref="compound">Profile</ref></type>
@@ -141,7 +141,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="80" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="82" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -149,18 +149,18 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="159">
+      <node id="161">
         <label>myMD.Model.ParserModel.Hl7ToDatabaseParser</label>
         <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser"/>
-        <childnode refid="158" relation="public-inheritance">
+        <childnode refid="160" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="158">
+      <node id="160">
         <label>myMD.Model.ParserModel.FileToDatabaseParser</label>
         <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser"/>
       </node>
     </inheritancegraph>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="14" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" bodystart="13" bodyend="81"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" line="15" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/FileToDatabaseParser.cs" bodystart="14" bodyend="83"/>
     <listofallmembers>
       <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1afa4317cee37448666f91ad019c4d118e" prot="protected" virt="pure-virtual"><scope>myMD::Model::ParserModel::FileToDatabaseParser</scope><name>Init</name></member>
       <member refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a9fcc201f726f6c9e93cdb011a0b1dfae" prot="protected" virt="pure-virtual"><scope>myMD::Model::ParserModel::FileToDatabaseParser</scope><name>ParseDoctor</name></member>

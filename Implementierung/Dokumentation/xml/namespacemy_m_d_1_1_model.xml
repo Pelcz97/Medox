@@ -4,6 +4,7 @@
     <compoundname>myMD::Model</compoundname>
     <innernamespace refid="namespacemy_m_d_1_1_model_1_1_database_model">myMD::Model::DatabaseModel</innernamespace>
     <innernamespace refid="namespacemy_m_d_1_1_model_1_1_data_model">myMD::Model::DataModel</innernamespace>
+    <innernamespace refid="namespacemy_m_d_1_1_model_1_1_dependency_service">myMD::Model::DependencyService</innernamespace>
     <innernamespace refid="namespacemy_m_d_1_1_model_1_1_entity_factory">myMD::Model::EntityFactory</innernamespace>
     <innernamespace refid="namespacemy_m_d_1_1_model_1_1_file_helper">myMD::Model::FileHelper</innernamespace>
     <innernamespace refid="namespacemy_m_d_1_1_model_1_1_model_facade">myMD::Model::ModelFacade</innernamespace>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" line="17" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" bodystart="17" bodyend="-1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" line="18" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" bodystart="18" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" line="22" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" bodystart="22" bodyend="27"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" line="23" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" bodystart="23" bodyend="28"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -68,7 +68,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" line="35" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" bodystart="35" bodyend="44"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" line="36" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" bodystart="36" bodyend="47"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -76,23 +76,6 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="317">
-        <label>myMD.View.OverviewTabPages.OverviewPage</label>
-        <link refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page"/>
-        <childnode refid="318" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="318">
-        <label>CustomContentPage</label>
-        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
-        <childnode refid="319" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="319">
-        <label>ContentPage</label>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="320">
         <label>myMD.View.OverviewTabPages.OverviewPage</label>
         <link refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page"/>
@@ -108,8 +91,25 @@
       <node id="322">
         <label>ContentPage</label>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="323">
+        <label>myMD.View.OverviewTabPages.OverviewPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page"/>
+        <childnode refid="324" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="324">
+        <label>CustomContentPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
+        <childnode refid="325" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="325">
+        <label>ContentPage</label>
+      </node>
     </collaborationgraph>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" line="13" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" bodystart="12" bodyend="46"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" line="14" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/OverviewTabPages/OverviewPage.xaml.cs" bodystart="13" bodyend="49"/>
     <listofallmembers>
       <member refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page_1a3cb9c69e49e16c30e2e5377790702769" prot="public" virt="non-virtual"><scope>myMD::View::OverviewTabPages::OverviewPage</scope><name>CustomContentPage</name></member>
       <member refid="classmy_m_d_1_1_view_1_1_overview_tab_pages_1_1_overview_page_1aa67d1ce336d67d89832cc6d5c51113fa" prot="private" virt="non-virtual"><scope>myMD::View::OverviewTabPages::OverviewPage</scope><name>DoctorsLetter_Clicked</name></member>

@@ -1,4 +1,3 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node1" href="$interfacemy_m_d_1_1_model_interface_1_1_transmission_model_interface_1_1_i_device.html" title="Schnittstelle, die ein anderes Gerät implementieren muss " alt="" coords="5,5,235,47"/>
-<area shape="rect" id="node2" href="$classmy_m_d_1_1_model_1_1_transmission_model_1_1_device.html" title="Klasse zur Modelierung eines anderen Gerätes " alt="" coords="283,5,501,47"/>
+<area shape="rect" id="node1" href="$interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_helper.html" title="myMD.Model.TransmissionModel.\lIBluetoothHelper" alt="" coords="5,5,224,47"/>
 </map>

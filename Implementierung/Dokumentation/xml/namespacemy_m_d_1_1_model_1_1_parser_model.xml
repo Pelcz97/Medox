@@ -2,10 +2,10 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="namespacemy_m_d_1_1_model_1_1_parser_model" kind="namespace" language="C#">
     <compoundname>myMD::Model::ParserModel</compoundname>
+    <innerclass refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_exception" prot="public">myMD::Model::ParserModel::FileFormatException</innerclass>
     <innerclass refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_format_extensions" prot="public">myMD::Model::ParserModel::FileFormatExtensions</innerclass>
     <innerclass refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser" prot="public">myMD::Model::ParserModel::FileToDatabaseParser</innerclass>
     <innerclass refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser" prot="public">myMD::Model::ParserModel::Hl7ToDatabaseParser</innerclass>
-    <innerclass refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper" prot="public">myMD::Model::ParserModel::IHl7ParserHelper</innerclass>
     <innerclass refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade" prot="public">myMD::Model::ParserModel::IParserFacade</innerclass>
     <innerclass refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser" prot="public">myMD::Model::ParserModel::LetterToOriginalFileParser</innerclass>
     <innerclass refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade" prot="public">myMD::Model::ParserModel::ParserFacade</innerclass>

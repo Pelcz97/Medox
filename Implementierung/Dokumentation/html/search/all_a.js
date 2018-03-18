@@ -5,6 +5,6 @@ var searchData=
   ['letterid',['LetterId',['../classmy_m_d_1_1_model_1_1_data_model_1_1_medication.html#ad912f439eb0ba72cff231ecfc0adbcba',1,'myMD::Model::DataModel::Medication']]],
   ['lettertooriginalfileparser',['LetterToOriginalFileParser',['../classmy_m_d_1_1_model_1_1_parser_model_1_1_letter_to_original_file_parser.html',1,'myMD::Model::ParserModel']]],
   ['lettertooriginalfileparser_2ecs',['LetterToOriginalFileParser.cs',['../_letter_to_original_file_parser_8cs.html',1,'']]],
-  ['localname',['LocalName',['../classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model.html#ad98e9265244511282e9a84855021ab3e',1,'myMD::ViewModel::SendDataTabViewModel::ScanResultViewModel']]],
+  ['listtoarray',['ListToArray',['../classmy_m_d_1_1_model_1_1_transmission_model_1_1_bluetooth.html#a7a690e7dd2fae436c3ad119ddd023e70',1,'myMD.Model.TransmissionModel.Bluetooth.ListToArray()'],['../interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth.html#a6e595ebbbd481bd57f2af7d8efa8a77f',1,'myMD.Model.TransmissionModel.IBluetooth.ListToArray()']]],
   ['low',['Low',['../namespacemy_m_d_1_1_model_interface_1_1_data_model_interface.html#a3d0df45e579e37eccbab219eb94860daa28d0edd045e05cf5af64e35ae0c4c6ef',1,'myMD::ModelInterface::DataModelInterface']]]
 ];

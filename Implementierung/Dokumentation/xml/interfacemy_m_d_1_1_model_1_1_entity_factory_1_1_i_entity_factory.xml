@@ -18,7 +18,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/EntityFactory/IEntityFactory.cs" line="15" column="1"/>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a5394beb3ee9308666dd7e16c00c943d7" compoundref="_model_facade_8cs" startline="77" endline="82">myMD.Model.ModelFacade.ModelFacade.CreateEmptyMedication</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a5394beb3ee9308666dd7e16c00c943d7" compoundref="_model_facade_8cs" startline="115" endline="120">myMD.Model.ModelFacade.ModelFacade.CreateEmptyMedication</referencedby>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory_1afca4ecdc59f292073c7a40d258057484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group" kindref="compound">IDoctorsLetterGroup</ref></type>
@@ -34,7 +34,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/EntityFactory/IEntityFactory.cs" line="21" column="1"/>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ad7c7e2889846cf195ccdd4e61a804116" compoundref="_model_facade_8cs" startline="69" endline="74">myMD.Model.ModelFacade.ModelFacade.CreateEmptyGroup</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ad7c7e2889846cf195ccdd4e61a804116" compoundref="_model_facade_8cs" startline="107" endline="112">myMD.Model.ModelFacade.ModelFacade.CreateEmptyGroup</referencedby>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory_1add734631a85e6021f04c4185f66e351d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref></type>
@@ -50,7 +50,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/EntityFactory/IEntityFactory.cs" line="27" column="1"/>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ac41f7ff0d2279e786a2477f91df72e4a" compoundref="_model_facade_8cs" startline="85" endline="91">myMD.Model.ModelFacade.ModelFacade.CreateEmptyProfile</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ac41f7ff0d2279e786a2477f91df72e4a" compoundref="_model_facade_8cs" startline="123" endline="129">myMD.Model.ModelFacade.ModelFacade.CreateEmptyProfile</referencedby>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory_1af4555786de34d8a68afce2709fb6b9e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref></type>
@@ -73,13 +73,13 @@
     <detaileddescription>
 <para><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface" kindref="compound">myMD.ModelInterface.DataModelInterface</ref></para>    </detaileddescription>
     <inheritancegraph>
-      <node id="220">
+      <node id="224">
         <label>myMD.Model.EntityFactory.EntityFactory</label>
         <link refid="classmy_m_d_1_1_model_1_1_entity_factory_1_1_entity_factory"/>
-        <childnode refid="219" relation="public-inheritance">
+        <childnode refid="223" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="219">
+      <node id="223">
         <label>myMD.Model.EntityFactory.IEntityFactory</label>
         <link refid="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory"/>
       </node>

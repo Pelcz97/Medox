@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_i_dependency_service_8cs" kind="file" language="C#">
+    <compoundname>IDependencyService.cs</compoundname>
+    <innerclass refid="interfacemy_m_d_1_1_model_1_1_dependency_service_1_1_i_dependency_service" prot="public">myMD::Model::DependencyService::IDependencyService</innerclass>
+    <innernamespace refid="namespacemy_m_d_1_1_model_1_1_dependency_service">myMD::Model::DependencyService</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemy_m_d" kindref="compound">myMD</ref>.Model.DependencyService</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="interfacemy_m_d_1_1_model_1_1_dependency_service_1_1_i_dependency_service" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interfacemy_m_d_1_1_model_1_1_dependency_service_1_1_i_dependency_service" kindref="compound">IDependencyService</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>Get&lt;T&gt;()<sp/>where<sp/>T<sp/>:<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService/IDependencyService.cs"/>
+  </compounddef>
+</doxygen>

@@ -46,7 +46,7 @@
                                             <Label Text="{Binding DeviceName}" 
                                             AutomationId="DeviceName"
                                             TextColor="#191928" 
-                                            FontSize="Large" 
+                                            FontSize="35" 
                                             FontAttributes="Bold" 
                                             HorizontalTextAlignment="Start" 
                                             Grid.Row="0" />

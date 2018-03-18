@@ -3139,6 +3139,7 @@
   },
   "packageFolders": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "C:\\Users\\Jan-Luca\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
@@ -3146,6 +3147,11 @@
     "/Users/janlucaVettel1/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
 >>>>>>> 1080167a1e769b0fdd2cde7ba205a2e77b1b53b4
+=======
+    "C:\\Users\\ppelc\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+>>>>>>> bcbaaa78a8a562c484e795cc3043b05a379f1868
   },
   "project": {
     "version": "1.0.0",
@@ -3153,6 +3159,7 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "projectUniqueName": "D:\\Dokumente\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj",
       "projectName": "myMDesktop",
@@ -3166,11 +3173,20 @@
       "packagesPath": "/Users/janlucaVettel1/.nuget/packages/",
       "outputPath": "/Users/janlucaVettel1/Documents/Uni/PSE/myMDesktop/myMDesktop/myMDesktop/obj",
 >>>>>>> 1080167a1e769b0fdd2cde7ba205a2e77b1b53b4
+=======
+      "projectUniqueName": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj",
+      "projectName": "myMDesktop",
+      "projectPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj",
+      "packagesPath": "C:\\Users\\ppelc\\.nuget\\packages\\",
+      "outputPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\obj\\",
+>>>>>>> bcbaaa78a8a562c484e795cc3043b05a379f1868
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
 <<<<<<< HEAD
         "C:\\Users\\Jan-Luca\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
@@ -3178,11 +3194,17 @@
 =======
         "/Users/janlucaVettel1/.config/NuGet/NuGet.Config"
 >>>>>>> 1080167a1e769b0fdd2cde7ba205a2e77b1b53b4
+=======
+        "C:\\Users\\ppelc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+>>>>>>> bcbaaa78a8a562c484e795cc3043b05a379f1868
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3210,32 +3232,32 @@
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.1",
+            "version": "[2.0.1, )",
             "autoReferenced": true
           },
           "Plugin.BluetoothLE": {
             "target": "Package",
-            "version": "5.3.2"
-          },
-          "reactiveui": {
-            "target": "Package",
-            "version": "7.4.0"
+            "version": "[5.3.2, )"
           },
           "System.Collections": {
             "target": "Package",
-            "version": "4.3.0"
+            "version": "[4.3.0, )"
           },
           "System.Linq": {
             "target": "Package",
-            "version": "4.3.0"
+            "version": "[4.3.0, )"
           },
           "Xam.Plugin.FilePicker": {
             "target": "Package",
-            "version": "1.1.0"
+            "version": "[1.1.0, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "2.5.0.274780"
+            "version": "[2.5.0.274780, )"
+          },
+          "reactiveui": {
+            "target": "Package",
+            "version": "[7.4.0, )"
           }
         },
         "imports": [
@@ -3251,7 +3273,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'reactiveui-core 7.4.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Das Paket \"reactiveui-core 7.4.0\" wurde nicht mit dem Projektzielframework \".NETStandard,Version=v2.0\", sondern mit \".NETFramework,Version=v4.6.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "reactiveui-core",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"
@@ -3261,7 +3283,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Rx-Core 2.2.5' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Das Paket \"Rx-Core 2.2.5\" wurde nicht mit dem Projektzielframework \".NETStandard,Version=v2.0\", sondern mit \".NETFramework,Version=v4.6.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "Rx-Core",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"
@@ -3271,7 +3293,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Rx-Interfaces 2.2.5' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Das Paket \"Rx-Interfaces 2.2.5\" wurde nicht mit dem Projektzielframework \".NETStandard,Version=v2.0\", sondern mit \".NETFramework,Version=v4.6.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "Rx-Interfaces",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"
@@ -3281,7 +3303,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Rx-Linq 2.2.5' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Das Paket \"Rx-Linq 2.2.5\" wurde nicht mit dem Projektzielframework \".NETStandard,Version=v2.0\", sondern mit \".NETFramework,Version=v4.6.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "Rx-Linq",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"
@@ -3291,7 +3313,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Rx-PlatformServices 2.2.5' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Das Paket \"Rx-PlatformServices 2.2.5\" wurde nicht mit dem Projektzielframework \".NETStandard,Version=v2.0\", sondern mit \".NETFramework,Version=v4.6.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "Rx-PlatformServices",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"
@@ -3301,7 +3323,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Splat 1.4.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Das Paket \"Splat 1.4.0\" wurde nicht mit dem Projektzielframework \".NETStandard,Version=v2.0\", sondern mit \".NETFramework,Version=v4.6.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "Splat",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"
@@ -3311,7 +3333,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Xam.Plugin.FilePicker 1.1.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Das Paket \"Xam.Plugin.FilePicker 1.1.0\" wurde nicht mit dem Projektzielframework \".NETStandard,Version=v2.0\", sondern mit \".NETFramework,Version=v4.6.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "Xam.Plugin.FilePicker",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"

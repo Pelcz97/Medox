@@ -20,7 +20,7 @@
           </Grid.RowDefinitions>
 
           <Label Text="{Binding DoctorsName}"
-                 AutomationId="DoctorsName"
+                    AutomationId="DoctorsName"
                     TextColor="#191928"
                     FontSize="Large" 
                     FontAttributes="Bold"
@@ -29,7 +29,7 @@
                     Grid.Row="0"/>
 
           <Label Text="{Binding DoctorsField}"
-                 AutomationId="DoctorsField"
+                        AutomationId="DoctorsField"
                         TextColor="#FFFFFF"
                         FontSize="45" 
                         FontAttributes="Bold"
@@ -38,7 +38,7 @@
                         Grid.Row="1"/>
 
           <Button x:Name="QuitButton"
-                  AutomationId="QuitButton"
+                        AutomationId="QuitButton"
                         Text="✖️"
                         FontSize="Large"
                         HorizontalOptions="End" 
@@ -49,7 +49,7 @@
       </Frame>
             
       <Label Text="{Binding DoctorsLetterDate, StringFormat='{0:MMMM dd, yyyy}'}" 
-             AutomationId="DoctorsLettersDate"
+                AutomationId="DoctorsLettersDate"
                 TextColor="#FFFFFF"
                 FontSize="Medium" 
                 FontAttributes="Bold"
@@ -57,21 +57,26 @@
                 HorizontalTextAlignment="End" 
                 Margin="15,0,15,5"/>
             
-            <TableView BackgroundColor="#191928" Intent="Form" 
-            VerticalOptions="FillAndExpand" 
-            HorizontalOptions="FillAndExpand"
-            HasUnevenRows="true">
+            <TableView x:Name="list" BackgroundColor="#191928" 
+                        Intent="Form" 
+                        VerticalOptions="FillAndExpand" 
+                        HorizontalOptions="FillAndExpand"
+                        HasUnevenRows="true">
             <TableRoot>
                 <TableSection Title="Diagnose">
                     <ViewCell>
+                            <StackLayout>
                             <Label Text="{Binding Diagnosis}"
-                             AutomationId="Diagnosis"
-                            TextColor="#FFFFFF"
+                                AutomationId="Diagnosis"
+                                TextColor="#FFFFFF"
                                 FontSize="Small" 
                                 FontAttributes="None"
-                            VerticalTextAlignment="Center" 
-                            HorizontalTextAlignment="Start" 
-                            Margin="15,3,15,3"/>
+                                VerticalTextAlignment="Center" 
+                                HorizontalTextAlignment="Start"
+                                VerticalOptions="StartAndExpand"
+                                HorizontalOptions="StartAndExpand"
+                                Margin="15,3,15,3"/>
+                                </StackLayout>
                             </ViewCell>
                         </TableSection>
                 </TableRoot>

@@ -4,7 +4,6 @@
     <compoundname>myMD::ModelInterface</compoundname>
     <innernamespace refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface">myMD::ModelInterface::DataModelInterface</innernamespace>
     <innernamespace refid="namespacemy_m_d_1_1_model_interface_1_1_model_facade_interface">myMD::ModelInterface::ModelFacadeInterface</innernamespace>
-    <innernamespace refid="namespacemy_m_d_1_1_model_interface_1_1_transmission_model_interface">myMD::ModelInterface::TransmissionModelInterface</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

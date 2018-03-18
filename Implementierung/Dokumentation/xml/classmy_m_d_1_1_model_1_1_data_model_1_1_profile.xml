@@ -153,73 +153,73 @@
     <detaileddescription>
 <para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">myMD.ModelInterface.DataModelInterface.IProfile</ref></para><para><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity" kindref="compound">myMD.Model.DataModel.Entity</ref></para>    </detaileddescription>
     <inheritancegraph>
-      <node id="337">
+      <node id="340">
         <label>IEquatable&lt; Entity &gt;</label>
       </node>
-      <node id="335">
+      <node id="338">
         <label>Entity</label>
         <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
-        <childnode refid="336" relation="public-inheritance">
+        <childnode refid="339" relation="public-inheritance">
         </childnode>
-        <childnode refid="337" relation="public-inheritance">
+        <childnode refid="340" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="339">
+      <node id="342">
         <label>IEquatable&lt; Profile &gt;</label>
       </node>
-      <node id="334">
+      <node id="337">
         <label>myMD.Model.DataModel.Profile</label>
         <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile"/>
-        <childnode refid="335" relation="public-inheritance">
-        </childnode>
         <childnode refid="338" relation="public-inheritance">
         </childnode>
+        <childnode refid="341" relation="public-inheritance">
+        </childnode>
+        <childnode refid="342" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="341">
+        <label>IProfile</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile"/>
         <childnode refid="339" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="338">
-        <label>IProfile</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile"/>
-        <childnode refid="336" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="336">
+      <node id="339">
         <label>IEntity</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="343">
+      <node id="346">
         <label>IEquatable&lt; Entity &gt;</label>
       </node>
-      <node id="341">
+      <node id="344">
         <label>Entity</label>
         <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
-        <childnode refid="342" relation="public-inheritance">
+        <childnode refid="345" relation="public-inheritance">
         </childnode>
-        <childnode refid="343" relation="public-inheritance">
+        <childnode refid="346" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="345">
+      <node id="348">
         <label>IEquatable&lt; Profile &gt;</label>
       </node>
-      <node id="340">
+      <node id="343">
         <label>myMD.Model.DataModel.Profile</label>
         <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_profile"/>
-        <childnode refid="341" relation="public-inheritance">
-        </childnode>
         <childnode refid="344" relation="public-inheritance">
         </childnode>
+        <childnode refid="347" relation="public-inheritance">
+        </childnode>
+        <childnode refid="348" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="347">
+        <label>IProfile</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile"/>
         <childnode refid="345" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="344">
-        <label>IProfile</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile"/>
-        <childnode refid="342" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="342">
+      <node id="345">
         <label>IEntity</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
       </node>

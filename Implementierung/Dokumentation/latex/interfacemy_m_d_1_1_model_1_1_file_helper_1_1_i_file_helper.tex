@@ -10,6 +10,8 @@ Schnittstelle zum Zugriff auf das lokale Dateisystem. Sollte plattformspezifisch
 \item 
 string \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_a8420370ca7817b74f4c0fd1ec300c0a2}{Get\+Local\+File\+Path}} (string filename)
 \begin{DoxyCompactList}\small\item\em Erstellt die gegebene Datei im lokalen Dateisystem, falls sie noch nicht existiert \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_ab01e0757301271adeeb53e4e90e8b44d}{Write\+Local\+File\+From\+String}} (string format, string data)
+\begin{DoxyCompactList}\small\item\em Erstellt eine neue Datei mit eindeutigem Namen und dem gegebenen Format aus dem gegebenen Byte Array. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_a2f9976f7f5304c4d8fcd13de9ae84215}{Delete\+File}} (string filename)
 \begin{DoxyCompactList}\small\item\em Löscht die gegebene Datei im lokalen Dateisystem \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -59,6 +61,34 @@ Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_a8420370ca7817b74f4c0fd1ec300c0a2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_ab01e0757301271adeeb53e4e90e8b44d}\label{interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_ab01e0757301271adeeb53e4e90e8b44d}} 
+\index{my\+M\+D\+::\+Model\+::\+File\+Helper\+::\+I\+File\+Helper@{my\+M\+D\+::\+Model\+::\+File\+Helper\+::\+I\+File\+Helper}!Write\+Local\+File\+From\+String@{Write\+Local\+File\+From\+String}}
+\index{Write\+Local\+File\+From\+String@{Write\+Local\+File\+From\+String}!my\+M\+D\+::\+Model\+::\+File\+Helper\+::\+I\+File\+Helper@{my\+M\+D\+::\+Model\+::\+File\+Helper\+::\+I\+File\+Helper}}
+\subsubsection{\texorpdfstring{Write\+Local\+File\+From\+String()}{WriteLocalFileFromString()}}
+{\footnotesize\ttfamily string my\+M\+D.\+Model.\+File\+Helper.\+I\+File\+Helper.\+Write\+Local\+File\+From\+String (\begin{DoxyParamCaption}\item[{string}]{format,  }\item[{string}]{data }\end{DoxyParamCaption})}
+
+
+
+Erstellt eine neue Datei mit eindeutigem Namen und dem gegebenen Format aus dem gegebenen Byte Array. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em format} & Format der Datei\\
+\hline
+{\em data} & Daten der Datei\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{RÃ¼ckgabe}
+Der vollständige Dateipfad
+\end{DoxyReturn}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_ab01e0757301271adeeb53e4e90e8b44d_icgraph}
 \end{center}
 \end{figure}
 

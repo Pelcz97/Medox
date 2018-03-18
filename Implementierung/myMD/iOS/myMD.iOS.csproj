@@ -227,8 +227,22 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Spotlight-40%403x Kopie.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\icons8-pill.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\icons8-pill%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\icons8-pill%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\TabBarIcon.imageset\" />
+  </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
   </ItemGroup>
@@ -249,14 +263,12 @@
     <ITunesArtwork Include="iTunesArtwork%402x" />
     <ITunesArtwork Include="iTunesArtwork" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <BundleResource Include="Resources\myMDIcon.png" />
     <BundleResource Include="Resources\medicationTab.png" />
+    <BundleResource Include="Resources\profileTab.png" />
     <BundleResource Include="Resources\overviewTab.png" />
-    <BundleResource Include="Resources\medicationTab2.png" />
-    <BundleResource Include="Resources\U - 3 Lab.png" />
-    <BundleResource Include="Resources\senddataTab.png" />
-    <BundleResource Include="Resources\U - 5 profil.png" />
+    <BundleResource Include="Resources\receiveTab.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />

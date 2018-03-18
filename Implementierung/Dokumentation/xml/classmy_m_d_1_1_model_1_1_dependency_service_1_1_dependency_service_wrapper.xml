@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_model_1_1_dependency_service_1_1_dependency_service_wrapper" kind="class" language="C#" prot="public">
+    <compoundname>myMD::Model::DependencyService::DependencyServiceWrapper</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_dependency_service_1_1_dependency_service_wrapper_1aa793ca3dc71b54173e7cb34e079eee2d" prot="public" static="yes" readable="no" writable="no" gettable="no" privategettable="yes" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="interfacemy_m_d_1_1_model_1_1_dependency_service_1_1_i_dependency_service" kindref="compound">IDependencyService</ref></type>
+        <definition>IDependencyService myMD.Model.DependencyService.DependencyServiceWrapper.Service</definition>
+        <argsstring></argsstring>
+        <name>Service</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService/DependencyService.cs" line="5" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService/DependencyService.cs" bodystart="5" bodyend="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_dependency_service_1_1_dependency_service_wrapper_1a68ea80f64fd423c37a8ef1961a8c24ec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>static T myMD.Model.DependencyService.DependencyServiceWrapper.Get&lt; T &gt;</definition>
+        <argsstring>()</argsstring>
+        <name>Get&lt; T &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService/DependencyService.cs" line="7" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService/DependencyService.cs" line="4" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService/DependencyService.cs" bodystart="3" bodyend="8"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_model_1_1_dependency_service_1_1_dependency_service_wrapper_1a68ea80f64fd423c37a8ef1961a8c24ec" prot="public" virt="non-virtual"><scope>myMD::Model::DependencyService::DependencyServiceWrapper</scope><name>Get&lt; T &gt;</name></member>
+      <member refid="classmy_m_d_1_1_model_1_1_dependency_service_1_1_dependency_service_wrapper_1aa793ca3dc71b54173e7cb34e079eee2d" prot="public" virt="non-virtual"><scope>myMD::Model::DependencyService::DependencyServiceWrapper</scope><name>Service</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

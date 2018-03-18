@@ -128,17 +128,6 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="237">
-        <label>IValueConverter</label>
-      </node>
-      <node id="236">
-        <label>myMD.ViewModel.ProfileTabViewModel.IntEnumConverter</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_int_enum_converter"/>
-        <childnode refid="237" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="239">
         <label>IValueConverter</label>
       </node>
@@ -146,6 +135,17 @@
         <label>myMD.ViewModel.ProfileTabViewModel.IntEnumConverter</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_int_enum_converter"/>
         <childnode refid="239" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="241">
+        <label>IValueConverter</label>
+      </node>
+      <node id="240">
+        <label>myMD.ViewModel.ProfileTabViewModel.IntEnumConverter</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_int_enum_converter"/>
+        <childnode refid="241" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

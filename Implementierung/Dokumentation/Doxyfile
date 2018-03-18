@@ -883,7 +883,10 @@ EXCLUDE                = D:\Studium\WS17-18\PSE\Implementierung\myMD\myMD\bin \
                          D:\Studium\WS17-18\PSE\Implementierung\myMD\myMD\obj \
                          D:\Studium\WS17-18\PSE\Implementierung\myMD\myMD\packages \
                          D:\Studium\WS17-18\PSE\Implementierung\myMD\myMD\Properties \
-                         D:\Studium\WS17-18\PSE\Implementierung\myMD\myMD\Resources
+                         D:\Studium\WS17-18\PSE\Implementierung\myMD\myMD\Resources \
+                         D:\Studium\WS17-18\PSE\Implementierung\myMD\myMDTests \
+                         D:\Studium\WS17-18\PSE\Implementierung\myMD\TestResults \
+                         D:\Studium\WS17-18\PSE\Implementierung\myMD\UITests
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
 # directories that are symbolic links (a Unix file system feature) are excluded

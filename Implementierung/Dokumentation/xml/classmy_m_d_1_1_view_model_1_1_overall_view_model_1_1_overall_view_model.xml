@@ -10,7 +10,24 @@
     <derivedcompoundref refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model" prot="public" virt="non-virtual">myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel</derivedcompoundref>
     <derivedcompoundref refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model" prot="public" virt="non-virtual">myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel</derivedcompoundref>
     <derivedcompoundref refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_doctors_letters_view_model" prot="public" virt="non-virtual">myMD.ViewModel.SendDataTabViewModel.SelectDoctorsLettersViewModel</derivedcompoundref>
+    <derivedcompoundref refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model" prot="public" virt="non-virtual">myMD.ViewModel.SendDataTabViewModel.SendDataViewModel</derivedcompoundref>
     <derivedcompoundref refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model" prot="public" virt="non-virtual">myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel</derivedcompoundref>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a40cabfa5e7d2f08979a9ba5c3c8eead8" prot="protected" static="yes" mutable="no">
+        <type>Guid</type>
+        <definition>Guid myMD.ViewModel.OverallViewModel.OverallViewModel.myMD_FileTransfer</definition>
+        <argsstring></argsstring>
+        <name>myMD_FileTransfer</name>
+        <initializer>= new Guid(&quot;88800000-8000-8000-8000-800000000000&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" line="19" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1ab1b0e7b2ed9ae07614caa1e45b942e3f" prot="protected" static="no" mutable="no">
         <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade" kindref="compound">IModelFacade</ref></type>
@@ -23,21 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" line="19" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" bodystart="19" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1acff4179c3cbf2cd35046729e99cd6921" prot="protected" static="no" mutable="no">
-        <type>IAdapter</type>
-        <definition>IAdapter myMD.ViewModel.OverallViewModel.OverallViewModel.BleAdapter</definition>
-        <argsstring></argsstring>
-        <name>BleAdapter</name>
-        <initializer>=&gt; CrossBleAdapter.Current</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" line="44" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" bodystart="44" bodyend="-1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" line="24" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" bodystart="24" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="event">
@@ -52,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" line="24" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" bodystart="24" bodyend="-1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" line="29" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" bodystart="29" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -81,7 +84,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" line="30" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" bodystart="30" bodyend="33"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" line="35" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" bodystart="35" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -94,8 +97,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" line="38" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" bodystart="38" bodyend="42"/>
-        <references refid="classmy_m_d_1_1_app_1ab2df3a78e1379092a4298dc2c50e95bc" compoundref="_app_8xaml_8cs" startline="68" endline="68">myMD.App.Model</references>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" line="44" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" bodystart="44" bodyend="47"/>
+        <references refid="classmy_m_d_1_1_app_1ab2df3a78e1379092a4298dc2c50e95bc" compoundref="_app_8xaml_8cs" startline="83" endline="83">myMD.App.Model</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -103,110 +106,116 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="311">
-        <label>myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model"/>
-        <childnode refid="300" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="312">
-        <label>myMD.ViewModel.SendDataTabViewModel.SelectDoctorsLettersViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_doctors_letters_view_model"/>
-        <childnode refid="300" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="301">
-        <label>INotifyPropertyChanged</label>
-      </node>
-      <node id="302">
-        <label>myMD.ViewModel.MedicationTabViewModel.MedicationViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model"/>
-        <childnode refid="300" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="306">
-        <label>myMD.ViewModel.OverviewTabViewModel.DetailedDoctorsLetterViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model"/>
-        <childnode refid="305" relation="public-inheritance">
+      <node id="315">
+        <label>myMD.ViewModel.SendDataTabViewModel.SendDataViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model"/>
+        <childnode refid="302" relation="public-inheritance">
         </childnode>
       </node>
       <node id="313">
-        <label>myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model"/>
-        <childnode refid="300" relation="public-inheritance">
+        <label>myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model"/>
+        <childnode refid="302" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="304">
-        <label>myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model"/>
-        <childnode refid="303" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="310">
-        <label>myMD.ViewModel.ProfileTabViewModel.ProfileViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_view_model"/>
-        <childnode refid="308" relation="public-inheritance">
+      <node id="314">
+        <label>myMD.ViewModel.SendDataTabViewModel.SelectDoctorsLettersViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_doctors_letters_view_model"/>
+        <childnode refid="302" relation="public-inheritance">
         </childnode>
       </node>
       <node id="303">
-        <label>myMD.ViewModel.MedicationTabViewModel.MedicineViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model"/>
-        <childnode refid="300" relation="public-inheritance">
-        </childnode>
+        <label>INotifyPropertyChanged</label>
       </node>
-      <node id="300">
-        <label>myMD.ViewModel.OverallViewModel.OverallViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
-        <childnode refid="301" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="305">
-        <label>myMD.ViewModel.OverviewTabViewModel.DoctorsLetterViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model"/>
-        <childnode refid="300" relation="public-inheritance">
+      <node id="304">
+        <label>myMD.ViewModel.MedicationTabViewModel.MedicationViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model"/>
+        <childnode refid="302" relation="public-inheritance">
         </childnode>
       </node>
       <node id="308">
-        <label>myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model"/>
-        <childnode refid="300" relation="public-inheritance">
+        <label>myMD.ViewModel.OverviewTabViewModel.DetailedDoctorsLetterViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model"/>
+        <childnode refid="307" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="309">
-        <label>myMD.ViewModel.ProfileTabViewModel.ProfileEditViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_edit_view_model"/>
-        <childnode refid="308" relation="public-inheritance">
+      <node id="316">
+        <label>myMD.ViewModel.SendDataTabViewModel.TransmittingDataViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model"/>
+        <childnode refid="302" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="306">
+        <label>myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model"/>
+        <childnode refid="305" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="312">
+        <label>myMD.ViewModel.ProfileTabViewModel.ProfileViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_view_model"/>
+        <childnode refid="310" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="305">
+        <label>myMD.ViewModel.MedicationTabViewModel.MedicineViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model"/>
+        <childnode refid="302" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="302">
+        <label>myMD.ViewModel.OverallViewModel.OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="303" relation="public-inheritance">
         </childnode>
       </node>
       <node id="307">
+        <label>myMD.ViewModel.OverviewTabViewModel.DoctorsLetterViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_doctors_letter_view_model"/>
+        <childnode refid="302" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="310">
+        <label>myMD.ViewModel.ProfileTabViewModel.ProfileItemViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model"/>
+        <childnode refid="302" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="311">
+        <label>myMD.ViewModel.ProfileTabViewModel.ProfileEditViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_edit_view_model"/>
+        <childnode refid="310" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="309">
         <label>myMD.ViewModel.OverviewTabViewModel.OverviewViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model"/>
-        <childnode refid="300" relation="public-inheritance">
+        <childnode refid="302" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="315">
+      <node id="318">
         <label>INotifyPropertyChanged</label>
       </node>
-      <node id="314">
+      <node id="317">
         <label>myMD.ViewModel.OverallViewModel.OverallViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
-        <childnode refid="315" relation="public-inheritance">
+        <childnode refid="318" relation="public-inheritance">
         </childnode>
-        <childnode refid="316" relation="usage">
+        <childnode refid="319" relation="usage">
           <edgelabel>ModelFacade</edgelabel>
         </childnode>
       </node>
-      <node id="316">
+      <node id="319">
         <label>myMD.ModelInterface.ModelFacadeInterface.IModelFacade</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
       </node>
     </collaborationgraph>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" line="15" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" bodystart="14" bodyend="47"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" line="17" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/OverallViewModel/OverallViewModel.cs" bodystart="16" bodyend="49"/>
     <listofallmembers>
-      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1acff4179c3cbf2cd35046729e99cd6921" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::OverallViewModel::OverallViewModel</scope><name>BleAdapter</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1ab1b0e7b2ed9ae07614caa1e45b942e3f" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::OverallViewModel::OverallViewModel</scope><name>ModelFacade</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a40cabfa5e7d2f08979a9ba5c3c8eead8" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::OverallViewModel::OverallViewModel</scope><name>myMD_FileTransfer</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a0333c153387ba2d38fb31eeb0419bfcf" prot="public" virt="virtual"><scope>myMD::ViewModel::OverallViewModel::OverallViewModel</scope><name>OnPropertyChanged</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverallViewModel::OverallViewModel</scope><name>OverallViewModel</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1918d3d8d384486e278426327b16256f" prot="public" virt="non-virtual"><scope>myMD::ViewModel::OverallViewModel::OverallViewModel</scope><name>PropertyChanged</name></member>

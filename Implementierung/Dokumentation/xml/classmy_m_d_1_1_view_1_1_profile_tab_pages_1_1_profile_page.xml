@@ -74,23 +74,6 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="371">
-        <label>CustomContentPage</label>
-        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
-        <childnode refid="372" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="372">
-        <label>ContentPage</label>
-      </node>
-      <node id="370">
-        <label>myMD.View.ProfileTabPages.ProfilePage</label>
-        <link refid="classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_page"/>
-        <childnode refid="371" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="374">
         <label>CustomContentPage</label>
         <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
@@ -104,6 +87,23 @@
         <label>myMD.View.ProfileTabPages.ProfilePage</label>
         <link refid="classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_page"/>
         <childnode refid="374" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="377">
+        <label>CustomContentPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
+        <childnode refid="378" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="378">
+        <label>ContentPage</label>
+      </node>
+      <node id="376">
+        <label>myMD.View.ProfileTabPages.ProfilePage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_profile_tab_pages_1_1_profile_page"/>
+        <childnode refid="377" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

@@ -3,10 +3,10 @@
   <compounddef id="dir_bf3fac227bc490848f1000ac879dd051" kind="dir">
     <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel</compoundname>
     <innerfile refid="_file_format_8cs">FileFormat.cs</innerfile>
+    <innerfile refid="_file_format_exception_8cs">FileFormatException.cs</innerfile>
     <innerfile refid="_file_format_extensions_8cs">FileFormatExtensions.cs</innerfile>
     <innerfile refid="_file_to_database_parser_8cs">FileToDatabaseParser.cs</innerfile>
     <innerfile refid="_hl7_to_database_parser_8cs">Hl7ToDatabaseParser.cs</innerfile>
-    <innerfile refid="_i_hl7_parser_helper_8cs">IHl7ParserHelper.cs</innerfile>
     <innerfile refid="_i_parser_facade_8cs">IParserFacade.cs</innerfile>
     <innerfile refid="_letter_to_original_file_parser_8cs">LetterToOriginalFileParser.cs</innerfile>
     <innerfile refid="_parser_facade_8cs">ParserFacade.cs</innerfile>

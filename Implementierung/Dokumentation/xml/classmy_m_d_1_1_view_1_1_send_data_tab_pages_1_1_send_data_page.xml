@@ -34,11 +34,11 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
-      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page_1a68ff1b348c9c47528854c9add3fb062d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page_1a58028cb85e52db76c9fb3dea8209d089" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void myMD.View.SendDataTabPages.SendDataPage.SendDataButton_Clicked</definition>
+        <definition>void myMD.View.SendDataTabPages.SendDataPage.ReceiveDataButton_Clicked</definition>
         <argsstring>(object sender, EventArgs e)</argsstring>
-        <name>SendDataButton_Clicked</name>
+        <name>ReceiveDataButton_Clicked</name>
         <param>
           <type>object</type>
           <declname>sender</declname>
@@ -48,7 +48,7 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Methode, wenn der Button &quot;Zu sendende Daten wählen&quot; geklickt wird. </para>        </briefdescription>
+<para>Methode, wenn der Button &quot;Daten empfangen&quot; geklickt wird. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -76,23 +76,6 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="413">
-        <label>myMD.View.SendDataTabPages.SendDataPage</label>
-        <link refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page"/>
-        <childnode refid="414" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="414">
-        <label>CustomContentPage</label>
-        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
-        <childnode refid="415" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="415">
-        <label>ContentPage</label>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="416">
         <label>myMD.View.SendDataTabPages.SendDataPage</label>
         <link refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page"/>
@@ -108,11 +91,28 @@
       <node id="418">
         <label>ContentPage</label>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="419">
+        <label>myMD.View.SendDataTabPages.SendDataPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page"/>
+        <childnode refid="420" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="420">
+        <label>CustomContentPage</label>
+        <link refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page"/>
+        <childnode refid="421" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="421">
+        <label>ContentPage</label>
+      </node>
     </collaborationgraph>
     <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SendDataPage.xaml.cs" line="14" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/SendDataTabPages/SendDataPage.xaml.cs" bodystart="13" bodyend="42"/>
     <listofallmembers>
       <member refid="classmy_m_d_1_1_view_1_1_abstract_pages_1_1_custom_content_page_1a3cb9c69e49e16c30e2e5377790702769" prot="public" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SendDataPage</scope><name>CustomContentPage</name></member>
-      <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page_1a68ff1b348c9c47528854c9add3fb062d" prot="private" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SendDataPage</scope><name>SendDataButton_Clicked</name></member>
+      <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page_1a58028cb85e52db76c9fb3dea8209d089" prot="private" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SendDataPage</scope><name>ReceiveDataButton_Clicked</name></member>
       <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page_1a7fbb8405720e4cc1c28ed4315fccde8e" prot="public" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SendDataPage</scope><name>SendDataPage</name></member>
       <member refid="classmy_m_d_1_1_view_1_1_send_data_tab_pages_1_1_send_data_page_1abd95fa5c07a2d6961b4d99486fb880ff" prot="private" virt="non-virtual"><scope>myMD::View::SendDataTabPages::SendDataPage</scope><name>vm</name></member>
     </listofallmembers>

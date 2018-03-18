@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using myMD.ModelInterface.DataModelInterface;
 using Xamarin.Forms.Internals;
 
@@ -57,6 +58,7 @@ namespace myMD.ViewModel.OverviewTabViewModel
         {
             var letter = (DoctorsLetterViewModel)item;
             DoctorsLetter = letter.DoctorsLetter;
+            Debug.WriteLine(letter.DoctorsLetter.Diagnosis);
         }
     }
 }

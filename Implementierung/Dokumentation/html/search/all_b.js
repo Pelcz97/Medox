@@ -4,6 +4,7 @@ var searchData=
   ['databasemodel',['DatabaseModel',['../namespacemy_m_d_1_1_model_1_1_database_model.html',1,'myMD::Model']]],
   ['datamodel',['DataModel',['../namespacemy_m_d_1_1_model_1_1_data_model.html',1,'myMD::Model']]],
   ['datamodelinterface',['DataModelInterface',['../namespacemy_m_d_1_1_model_interface_1_1_data_model_interface.html',1,'myMD::ModelInterface']]],
+  ['dependencyservice',['DependencyService',['../namespacemy_m_d_1_1_model_1_1_dependency_service.html',1,'myMD::Model']]],
   ['entityfactory',['EntityFactory',['../namespacemy_m_d_1_1_model_1_1_entity_factory.html',1,'myMD::Model']]],
   ['filehelper',['FileHelper',['../namespacemy_m_d_1_1_model_1_1_file_helper.html',1,'myMD::Model']]],
   ['maxstartdate',['MaxStartDate',['../classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model.html#a45ae8e7eacf145d650cd97602a93018b',1,'myMD::ViewModel::MedicationTabViewModel::MedicineViewModel']]],
@@ -35,6 +36,7 @@ var searchData=
   ['modelinterface',['ModelInterface',['../namespacemy_m_d_1_1_model_interface.html',1,'myMD']]],
   ['month',['Month',['../namespacemy_m_d_1_1_model_interface_1_1_data_model_interface.html#ad48afcd64f57a7b985ed525a6c054782a7cbb885aa1164b390a0bc050a64e1812',1,'myMD::ModelInterface::DataModelInterface']]],
   ['mymd',['myMD',['../namespacemy_m_d.html',1,'']]],
+  ['mymd_5ffiletransfer',['myMD_FileTransfer',['../classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model.html#a40cabfa5e7d2f08979a9ba5c3c8eead8',1,'myMD::ViewModel::OverallViewModel::OverallViewModel']]],
   ['mymdpage',['myMDPage',['../classmy_m_d_1_1my_m_d_page.html',1,'myMD.myMDPage'],['../classmy_m_d_1_1my_m_d_page.html#a116c2084cfab3cc170d6f0c0d32e92c7',1,'myMD.myMDPage.myMDPage()']]],
   ['mymdpage_2examl',['myMDPage.xaml',['../my_m_d_page_8xaml.html',1,'']]],
   ['mymdpage_2examl_2ecs',['myMDPage.xaml.cs',['../my_m_d_page_8xaml_8cs.html',1,'']]],
@@ -47,7 +49,6 @@ var searchData=
   ['senddatatabpages',['SendDataTabPages',['../namespacemy_m_d_1_1_view_1_1_send_data_tab_pages.html',1,'myMD::View']]],
   ['senddatatabviewmodel',['SendDataTabViewModel',['../namespacemy_m_d_1_1_view_model_1_1_send_data_tab_view_model.html',1,'myMD::ViewModel']]],
   ['transmissionmodel',['TransmissionModel',['../namespacemy_m_d_1_1_model_1_1_transmission_model.html',1,'myMD::Model']]],
-  ['transmissionmodelinterface',['TransmissionModelInterface',['../namespacemy_m_d_1_1_model_interface_1_1_transmission_model_interface.html',1,'myMD::ModelInterface']]],
   ['view',['View',['../namespacemy_m_d_1_1_view.html',1,'myMD']]],
   ['viewmodel',['ViewModel',['../namespacemy_m_d_1_1_view_model.html',1,'myMD']]]
 ];

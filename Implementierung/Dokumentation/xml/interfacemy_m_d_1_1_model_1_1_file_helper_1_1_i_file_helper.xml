@@ -28,7 +28,46 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper/IFileHelper.cs" line="14" column="1"/>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a7a6a4c8cedc57ea3dc0a714ddd55deb6" compoundref="_entity_database_8cs" startline="45" endline="50">myMD.Model.DatabaseModel.EntityDatabase.EntityDatabase</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database_1a7a6a4c8cedc57ea3dc0a714ddd55deb6" compoundref="_entity_database_8cs" startline="46" endline="51">myMD.Model.DatabaseModel.EntityDatabase.EntityDatabase</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser_1a5c2d04fd614ecab8c9bc7f5ae7636a00" compoundref="_hl7_to_database_parser_8cs" startline="39" endline="49">myMD.Model.ParserModel.Hl7ToDatabaseParser.Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_1ab01e0757301271adeeb53e4e90e8b44d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string myMD.Model.FileHelper.IFileHelper.WriteLocalFileFromString</definition>
+        <argsstring>(string format, string data)</argsstring>
+        <name>WriteLocalFileFromString</name>
+        <param>
+          <type>string</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Erstellt eine neue Datei mit eindeutigem Namen und dem gegebenen Format aus dem gegebenen Byte Array. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Format der Datei</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Daten der Datei</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Der vollständige Dateipfad</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper/IFileHelper.cs" line="22" column="1"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1aac7aa4d319269018e437fbde2d08f27a" compoundref="_model_facade_8cs" startline="91" endline="101">myMD.Model.ModelFacade.ModelFacade.GetFilesFromServer</referencedby>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_1a2f9976f7f5304c4d8fcd13de9ae84215" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -53,17 +92,18 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper/IFileHelper.cs" line="20" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper/IFileHelper.cs" line="28" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Schnittstelle zum Zugriff auf das lokale Dateisystem. Sollte plattformspezifisch implementiert werden. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper/IFileHelper.cs" line="8" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper/IFileHelper.cs" bodystart="7" bodyend="21"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper/IFileHelper.cs" line="8" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/FileHelper/IFileHelper.cs" bodystart="7" bodyend="30"/>
     <listofallmembers>
       <member refid="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_1a2f9976f7f5304c4d8fcd13de9ae84215" prot="public" virt="non-virtual"><scope>myMD::Model::FileHelper::IFileHelper</scope><name>DeleteFile</name></member>
       <member refid="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_1a8420370ca7817b74f4c0fd1ec300c0a2" prot="public" virt="non-virtual"><scope>myMD::Model::FileHelper::IFileHelper</scope><name>GetLocalFilePath</name></member>
+      <member refid="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_1ab01e0757301271adeeb53e4e90e8b44d" prot="public" virt="non-virtual"><scope>myMD::Model::FileHelper::IFileHelper</scope><name>WriteLocalFileFromString</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

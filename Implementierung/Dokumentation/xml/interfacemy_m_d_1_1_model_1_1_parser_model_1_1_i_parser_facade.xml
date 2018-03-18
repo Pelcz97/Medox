@@ -48,6 +48,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/ParserModel/IParserFacade.cs" line="18" column="1"/>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1aac7aa4d319269018e437fbde2d08f27a" compoundref="_model_facade_8cs" startline="91" endline="101">myMD.Model.ModelFacade.ModelFacade.GetFilesFromServer</referencedby>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade_1a24348ea7e27f5d9cde94925fe1967ca3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -82,14 +83,14 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="240">
+      <node id="242">
         <label>myMD.Model.ParserModel.IParserFacade</label>
         <link refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade"/>
       </node>
-      <node id="241">
+      <node id="243">
         <label>myMD.Model.ParserModel.ParserFacade</label>
         <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade"/>
-        <childnode refid="240" relation="public-inheritance">
+        <childnode refid="242" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

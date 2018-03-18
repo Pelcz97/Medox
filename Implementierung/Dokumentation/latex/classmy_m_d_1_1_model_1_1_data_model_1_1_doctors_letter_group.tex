@@ -7,8 +7,7 @@ Diese Klasse implementiert die I\+Doctors\+Letter\+Group Schnittstelle und erwei
 
 
 
-Klassendiagramm fÃ¼r my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group\+:
-\nopagebreak
+Klassendiagramm fÃ¼r my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,8 +16,7 @@ Klassendiagramm fÃ¼r my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group\+:
 \end{figure}
 
 
-ZusammengehÃ¶rigkeiten von my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group\+:
-\nopagebreak
+ZusammengehÃ¶rigkeiten von my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -51,9 +49,9 @@ void \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_gr
 \subsection*{Ã–ffentliche Attribute}
 \begin{DoxyCompactItemize}
 \item 
-override Date\+Time \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_ae207f655bf1148e8c3659f548c6357d5}{Date}} =$>$ Database\+Letters.\+Any() ? Database\+Letters.\+First().Date \+: default(Date\+Time)
+override Date\+Time \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_ae207f655bf1148e8c3659f548c6357d5}{Date}} =$>$ Database\+Letters.\+Any() ? Database\+Letters.\+Min().Date \+: default(Date\+Time)
 \begin{DoxyCompactList}\small\item\em Das Datum einer Arztbriefgruppe ist das Datum des ältesten in ihr enthaltenen Arztbriefs. Da die Arztbriefe in Database\+Letters nach ihrem Datum sortiert sind, muss diese Information nicht explizit gespeichert werden. \end{DoxyCompactList}\item 
-Date\+Time \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_a1cdddb43e27875389f8e46b4197f534d}{Last\+Date}} =$>$ Database\+Letters.\+Any() ? Database\+Letters.\+Last().\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_ae207f655bf1148e8c3659f548c6357d5}{Date}} \+: default(Date\+Time)
+Date\+Time \mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_a1cdddb43e27875389f8e46b4197f534d}{Last\+Date}} =$>$ Database\+Letters.\+Any() ? Database\+Letters.\+Max().\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_ae207f655bf1148e8c3659f548c6357d5}{Date}} \+: default(Date\+Time)
 \begin{DoxyCompactList}\small\item\em Das letzte Datum einer Arztbriefgruppe ist das Datum des neuesten in ihr enthaltenen Arztbriefs. Da die Arztbriefe in Database\+Letters nach ihrem Datum sortiert sind, muss diese Information nicht explizit gespeichert werden. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Propertys}
 \begin{DoxyCompactItemize}
@@ -95,16 +93,14 @@ Initialisiert nötige Listen.
 
 Überladung für konkrete Arztbriefe. 
 
-\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_a3f0e6a7254b875a556f618b4ca0ccf13}{my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group\+::\+Add}}(\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter}})Suche nach passendem Index um die Liste sortiert zu halten Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:
-\nopagebreak
+\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_a3f0e6a7254b875a556f618b4ca0ccf13}{my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group\+::\+Add}}(\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter}})Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_a3f0e6a7254b875a556f618b4ca0ccf13_cgraph}
 \end{center}
 \end{figure}
-Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:
-\nopagebreak
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -179,16 +175,14 @@ System.\+Object\+::\+Get\+Hash\+Code()
 
 Überladung für konkrete Arztbriefe. 
 
-\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_a6f8d85902c8b838114e5faab419a76a4}{my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group\+::\+Remove}}(\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter}})Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:
-\nopagebreak
+\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_a6f8d85902c8b838114e5faab419a76a4}{my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group\+::\+Remove}}(\mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter}{Model\+Interface.\+Data\+Model\+Interface.\+I\+Doctors\+Letter}})Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_a6f8d85902c8b838114e5faab419a76a4_cgraph}
 \end{center}
 \end{figure}
-Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:
-\nopagebreak
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -230,7 +224,7 @@ Implementiert \mbox{\hyperlink{interfacemy_m_d_1_1_model_interface_1_1_data_mode
 \index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}!Date@{Date}}
 \index{Date@{Date}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}}
 \subsubsection{\texorpdfstring{Date}{Date}}
-{\footnotesize\ttfamily override Date\+Time my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group.\+Date =$>$ Database\+Letters.\+Any() ? Database\+Letters.\+First().Date \+: default(Date\+Time)}
+{\footnotesize\ttfamily override Date\+Time my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group.\+Date =$>$ Database\+Letters.\+Any() ? Database\+Letters.\+Min().Date \+: default(Date\+Time)}
 
 
 
@@ -242,7 +236,7 @@ Das Datum einer Arztbriefgruppe ist das Datum des ältesten in ihr enthaltenen Ar
 \index{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}!Last\+Date@{Last\+Date}}
 \index{Last\+Date@{Last\+Date}!my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group@{my\+M\+D\+::\+Model\+::\+Data\+Model\+::\+Doctors\+Letter\+Group}}
 \subsubsection{\texorpdfstring{Last\+Date}{LastDate}}
-{\footnotesize\ttfamily Date\+Time my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group.\+Last\+Date =$>$ Database\+Letters.\+Any() ? Database\+Letters.\+Last().\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_ae207f655bf1148e8c3659f548c6357d5}{Date}} \+: default(Date\+Time)}
+{\footnotesize\ttfamily Date\+Time my\+M\+D.\+Model.\+Data\+Model.\+Doctors\+Letter\+Group.\+Last\+Date =$>$ Database\+Letters.\+Any() ? Database\+Letters.\+Max().\mbox{\hyperlink{classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_ae207f655bf1148e8c3659f548c6357d5}{Date}} \+: default(Date\+Time)}
 
 
 

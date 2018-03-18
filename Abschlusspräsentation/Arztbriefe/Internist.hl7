@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" classCode="DOCCLIN" moodCode="EVN" xmlns="urn:hl7-org:v3">
+  <realmCode code="UV" />
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+  <effectiveTime value="20180302000000.000+0100" />
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" displayName="normal" />
+  <languageCode code="en-US" />
+  <recordTarget typeCode="RCT" contextControlCode="OP">
+    <patientRole classCode="PAT">
+      <patient classCode="PSN" determinerCode="INSTANCE">
+        <id root="1.2.3.4.5.6" extension="123456" />
+        <name use="L">
+          <family>Vettel</family>
+          <given>Jan-Luca</given>
+        </name>
+        <birthTime value="19980529" />
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author typeCode="AUT" contextControlCode="AP">
+    <time value="20180309000000.000+0100" />
+    <assignedAuthor classCode="ASSIGNED">
+      <id root="1.2.3.4.5.6.1" extension="" />
+      <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+        <name use="L">
+          <family>Dr. John M. Dorian</family>
+        </name>
+        <name use="ASGN">
+          <family>Internistin</family>
+        </name>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <component typeCode="COMP" contextConductionInd="true">
+    <structuredBody classCode="DOCBODY" moodCode="EVN">
+      <component typeCode="COMP" contextConductionInd="true">
+        <section classCode="DOCSECT" moodCode="EVN">
+          <title language="de-DE">Routineuntersuchung</title>
+          <text representation="TXT">
+Diagnose: V.a. Sigmadivertikulitis, Subileus
+
+Anamnese:
+Zur Vorgeschichte sind eine Appendektomie im Alter von 9 Jahren sowie ein allergisches Asthma bronchiale bei Sensibilisierung gegen Frühblütler erwähnenswert.
+Herr K. stellte sich wegen seit dem Vormittag zunehmenden Schmerzen im linken Unterbauch in meiner Sprechstunde vor. Darüber hinaus klagte er über Inappetenz und Obstipation. Er habe in den letzten 3 Tagen nur einmal etwas Stuhlgang gehabt. Fieber und Nachtschweiß werden verneint. Er habe noch nie Probleme mit dem Darm gehabt, normalerweise täglich normalen Stuhlgang. Beschwerden beim Wasserlassen habe er nicht.
+
+Körperlicher Untersuchungsbefund:
+51-jähriger, 176 cm großer und 75 kg schwerer Patient in gutem AZ und EZ. RR 130/80, Puls r.m., 68/min. Reizlose Narbe im rechten Unterbauch nach Appendektomie. Lebhafte, z.T. plätschernde Darmgeräusche im linken Unterbauch. Deutlicher Druckschmerz mit Abwehrreaktion bei tiefer Palpation im linken Unterbauch. Nierenlager frei. Temperatur rektal 38,7°C. Bei der Untersuchung des Abdomens sonst kein pathologischer Befund.
+
+Epikrise:
+Bei dem Patienten besteht aufgrund der angegebenen Schmerzsymptomatik und dem körperlichen Untersuchungsbefund der dringende V.a. eine Sigmadivertikulitis mit Subileus. Differentialdiagnostisch sollte mittels Sonographie und Urindiagnostik eine Erkrankung der ableitenden Harnwege ausgeschlossen werden. Wir haben Herrn K. zur weiteren Diagnostik und Therapie in das Kreiskrankenhaus eingewiesen. Wenn sich der Verdacht bestätigt, kann dort eine antibiotische Behandlung unter Nahrungskarenz und klinischer Kontrolle durchgeführt werden.</text>
+          <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" displayName="normal" />
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

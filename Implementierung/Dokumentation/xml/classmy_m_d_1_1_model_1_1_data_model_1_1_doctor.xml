@@ -91,73 +91,73 @@
     <detaileddescription>
 <para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor" kindref="compound">myMD.ModelInterface.DataModelInterface.IDoctor</ref></para><para><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity" kindref="compound">myMD.Model.DataModel.Entity</ref></para>    </detaileddescription>
     <inheritancegraph>
-      <node id="77">
+      <node id="75">
         <label>IDoctor</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor"/>
-        <childnode refid="75" relation="public-inheritance">
+        <childnode refid="73" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="78">
+      <node id="76">
         <label>IEquatable&lt; Doctor &gt;</label>
       </node>
-      <node id="76">
+      <node id="74">
         <label>IEquatable&lt; Entity &gt;</label>
       </node>
-      <node id="74">
+      <node id="72">
         <label>Entity</label>
         <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
+        <childnode refid="73" relation="public-inheritance">
+        </childnode>
+        <childnode refid="74" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>myMD.Model.DataModel.Doctor</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctor"/>
+        <childnode refid="72" relation="public-inheritance">
+        </childnode>
         <childnode refid="75" relation="public-inheritance">
         </childnode>
         <childnode refid="76" relation="public-inheritance">
         </childnode>
       </node>
       <node id="73">
-        <label>myMD.Model.DataModel.Doctor</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctor"/>
-        <childnode refid="74" relation="public-inheritance">
-        </childnode>
-        <childnode refid="77" relation="public-inheritance">
-        </childnode>
-        <childnode refid="78" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="75">
         <label>IEntity</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="83">
+      <node id="81">
         <label>IDoctor</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor"/>
-        <childnode refid="81" relation="public-inheritance">
+        <childnode refid="79" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="84">
+      <node id="82">
         <label>IEquatable&lt; Doctor &gt;</label>
       </node>
-      <node id="82">
+      <node id="80">
         <label>IEquatable&lt; Entity &gt;</label>
       </node>
-      <node id="80">
+      <node id="78">
         <label>Entity</label>
         <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
+        <childnode refid="79" relation="public-inheritance">
+        </childnode>
+        <childnode refid="80" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>myMD.Model.DataModel.Doctor</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctor"/>
+        <childnode refid="78" relation="public-inheritance">
+        </childnode>
         <childnode refid="81" relation="public-inheritance">
         </childnode>
         <childnode refid="82" relation="public-inheritance">
         </childnode>
       </node>
       <node id="79">
-        <label>myMD.Model.DataModel.Doctor</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctor"/>
-        <childnode refid="80" relation="public-inheritance">
-        </childnode>
-        <childnode refid="83" relation="public-inheritance">
-        </childnode>
-        <childnode refid="84" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="81">
         <label>IEntity</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
       </node>

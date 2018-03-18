@@ -121,8 +121,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="50" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" bodystart="50" bodyend="57"/>
-        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1ac99038390540105ef11fdcfe51c75ee8" compoundref="_doctors_letter_8cs" startline="120" endline="127">myMD.Model.DataModel.DoctorsLetter.AttachMedication</references>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1ac99038390540105ef11fdcfe51c75ee8" compoundref="_doctors_letter_8cs" startline="120" endline="127">myMD.Model.DataModel.DoctorsLetter.AttachMedication</referencedby>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1ac99038390540105ef11fdcfe51c75ee8" compoundref="_doctors_letter_8cs" startline="121" endline="128">myMD.Model.DataModel.DoctorsLetter.AttachMedication</references>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1ac99038390540105ef11fdcfe51c75ee8" compoundref="_doctors_letter_8cs" startline="121" endline="128">myMD.Model.DataModel.DoctorsLetter.AttachMedication</referencedby>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1a8b2802c0448d4791f9aa748b0ddedcca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -172,8 +172,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" line="75" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Medication.cs" bodystart="75" bodyend="82"/>
-        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1af09111c1b74969bafa37a88321b2fdd0" compoundref="_doctors_letter_8cs" startline="153" endline="160">myMD.Model.DataModel.DoctorsLetter.DisattachMedication</references>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1af09111c1b74969bafa37a88321b2fdd0" compoundref="_doctors_letter_8cs" startline="153" endline="160">myMD.Model.DataModel.DoctorsLetter.DisattachMedication</referencedby>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1af09111c1b74969bafa37a88321b2fdd0" compoundref="_doctors_letter_8cs" startline="154" endline="161">myMD.Model.DataModel.DoctorsLetter.DisattachMedication</references>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1af09111c1b74969bafa37a88321b2fdd0" compoundref="_doctors_letter_8cs" startline="154" endline="161">myMD.Model.DataModel.DoctorsLetter.DisattachMedication</referencedby>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_medication_1abc72524ce8f43e2c1e79ac82ed4efc2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -263,134 +263,134 @@
     <detaileddescription>
 <para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">myMD.ModelInterface.DataModelInterface.IDoctorsLetter</ref></para><para>myMD.Model.DataModelInterface.Data</para>    </detaileddescription>
     <inheritancegraph>
-      <node id="255">
+      <node id="257">
         <label>IData</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
-        <childnode refid="253" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="254">
-        <label>IEquatable&lt; Entity &gt;</label>
-      </node>
-      <node id="257">
-        <label>IEquatable&lt; Data &gt;</label>
-      </node>
-      <node id="258">
-        <label>IMedication</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication"/>
         <childnode refid="255" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="252">
-        <label>Entity</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
-        <childnode refid="253" relation="public-inheritance">
-        </childnode>
-        <childnode refid="254" relation="public-inheritance">
+      <node id="256">
+        <label>IEquatable&lt; Entity &gt;</label>
+      </node>
+      <node id="259">
+        <label>IEquatable&lt; Data &gt;</label>
+      </node>
+      <node id="260">
+        <label>IMedication</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication"/>
+        <childnode refid="257" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="251">
-        <label>Data</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
-        <childnode refid="252" relation="public-inheritance">
-        </childnode>
-        <childnode refid="253" relation="public-inheritance">
-        </childnode>
+      <node id="254">
+        <label>Entity</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
         <childnode refid="255" relation="public-inheritance">
         </childnode>
         <childnode refid="256" relation="public-inheritance">
         </childnode>
-        <childnode refid="257" relation="public-inheritance">
-        </childnode>
       </node>
       <node id="253">
-        <label>IEntity</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
-      </node>
-      <node id="256">
-        <label>IComparable&lt; Data &gt;</label>
-      </node>
-      <node id="259">
-        <label>IEquatable&lt; Medication &gt;</label>
-      </node>
-      <node id="250">
-        <label>myMD.Model.DataModel.Medication</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication"/>
-        <childnode refid="251" relation="public-inheritance">
+        <label>Data</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
+        <childnode refid="254" relation="public-inheritance">
+        </childnode>
+        <childnode refid="255" relation="public-inheritance">
+        </childnode>
+        <childnode refid="257" relation="public-inheritance">
         </childnode>
         <childnode refid="258" relation="public-inheritance">
         </childnode>
         <childnode refid="259" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="255">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+      <node id="258">
+        <label>IComparable&lt; Data &gt;</label>
+      </node>
+      <node id="261">
+        <label>IEquatable&lt; Medication &gt;</label>
+      </node>
+      <node id="252">
+        <label>myMD.Model.DataModel.Medication</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication"/>
+        <childnode refid="253" relation="public-inheritance">
+        </childnode>
+        <childnode refid="260" relation="public-inheritance">
+        </childnode>
+        <childnode refid="261" relation="public-inheritance">
+        </childnode>
+      </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="265">
+      <node id="267">
         <label>IData</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
-        <childnode refid="263" relation="public-inheritance">
+        <childnode refid="265" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="266">
+        <label>IEquatable&lt; Entity &gt;</label>
+      </node>
+      <node id="269">
+        <label>IEquatable&lt; Data &gt;</label>
+      </node>
+      <node id="270">
+        <label>IMedication</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication"/>
+        <childnode refid="267" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="272">
+        <label>myMD.ModelInterface.DataModelInterface.IDoctorsLetter</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter"/>
+        <childnode refid="267" relation="public-inheritance">
         </childnode>
       </node>
       <node id="264">
-        <label>IEquatable&lt; Entity &gt;</label>
-      </node>
-      <node id="267">
-        <label>IEquatable&lt; Data &gt;</label>
-      </node>
-      <node id="268">
-        <label>IMedication</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_medication"/>
-        <childnode refid="265" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="270">
-        <label>myMD.ModelInterface.DataModelInterface.IDoctorsLetter</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter"/>
-        <childnode refid="265" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="262">
         <label>Entity</label>
         <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
-        <childnode refid="263" relation="public-inheritance">
-        </childnode>
-        <childnode refid="264" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="261">
-        <label>Data</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
-        <childnode refid="262" relation="public-inheritance">
-        </childnode>
-        <childnode refid="263" relation="public-inheritance">
-        </childnode>
         <childnode refid="265" relation="public-inheritance">
         </childnode>
         <childnode refid="266" relation="public-inheritance">
         </childnode>
-        <childnode refid="267" relation="public-inheritance">
-        </childnode>
       </node>
       <node id="263">
-        <label>IEntity</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
-      </node>
-      <node id="266">
-        <label>IComparable&lt; Data &gt;</label>
-      </node>
-      <node id="269">
-        <label>IEquatable&lt; Medication &gt;</label>
-      </node>
-      <node id="260">
-        <label>myMD.Model.DataModel.Medication</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication"/>
-        <childnode refid="261" relation="public-inheritance">
+        <label>Data</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
+        <childnode refid="264" relation="public-inheritance">
+        </childnode>
+        <childnode refid="265" relation="public-inheritance">
+        </childnode>
+        <childnode refid="267" relation="public-inheritance">
         </childnode>
         <childnode refid="268" relation="public-inheritance">
         </childnode>
         <childnode refid="269" relation="public-inheritance">
         </childnode>
-        <childnode refid="270" relation="usage">
+      </node>
+      <node id="265">
+        <label>IEntity</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
+      </node>
+      <node id="268">
+        <label>IComparable&lt; Data &gt;</label>
+      </node>
+      <node id="271">
+        <label>IEquatable&lt; Medication &gt;</label>
+      </node>
+      <node id="262">
+        <label>myMD.Model.DataModel.Medication</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_medication"/>
+        <childnode refid="263" relation="public-inheritance">
+        </childnode>
+        <childnode refid="270" relation="public-inheritance">
+        </childnode>
+        <childnode refid="271" relation="public-inheritance">
+        </childnode>
+        <childnode refid="272" relation="usage">
           <edgelabel>DoctorsLetter</edgelabel>
         </childnode>
       </node>

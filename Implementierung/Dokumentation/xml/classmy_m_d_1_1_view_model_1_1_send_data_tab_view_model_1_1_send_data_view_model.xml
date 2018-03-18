@@ -2,6 +2,22 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model" kind="class" language="C#" prot="public">
     <compoundname>myMD::ViewModel::SendDataTabViewModel::SendDataViewModel</compoundname>
+    <basecompoundref refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model" prot="public" virt="non-virtual">myMD.ViewModel.OverallViewModel.OverallViewModel</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model_1a0e92b77382f44a685bf8004a02fb91ce" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool myMD.ViewModel.SendDataTabViewModel.SendDataViewModel.ReceiveLettersButton_Enabled</definition>
+        <argsstring></argsstring>
+        <name>ReceiveLettersButton_Enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model_1abdf1a8159aac4d3f726a307fc37ca6b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -14,16 +30,79 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" line="14" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" bodystart="14" bodyend="16"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" line="21" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" bodystart="21" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model_1a5ff4f343793fb46a4937a6727db52e2b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void myMD.ViewModel.SendDataTabViewModel.SendDataViewModel.UpdateButton</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" line="35" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" bodystart="35" bodyend="39"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Die <ref refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model" kindref="compound">SendDataViewModel</ref> Klasse bietet den Einstiegspunkt in den SendDataTab. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" line="10" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" bodystart="9" bodyend="17"/>
+    <inheritancegraph>
+      <node id="422">
+        <label>myMD.ViewModel.SendDataTabViewModel.SendDataViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model"/>
+        <childnode refid="423" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="424">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="423">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="424" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="425">
+        <label>myMD.ViewModel.SendDataTabViewModel.SendDataViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model"/>
+        <childnode refid="426" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="427">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="426">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="427" relation="public-inheritance">
+        </childnode>
+        <childnode refid="428" relation="usage">
+          <edgelabel>ModelFacade</edgelabel>
+        </childnode>
+      </node>
+      <node id="428">
+        <label>myMD.ModelInterface.ModelFacadeInterface.IModelFacade</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" line="15" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SendDataViewModel.cs" bodystart="14" bodyend="41"/>
     <listofallmembers>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1ab1b0e7b2ed9ae07614caa1e45b942e3f" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SendDataViewModel</scope><name>ModelFacade</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a40cabfa5e7d2f08979a9ba5c3c8eead8" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SendDataViewModel</scope><name>myMD_FileTransfer</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a0333c153387ba2d38fb31eeb0419bfcf" prot="public" virt="virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SendDataViewModel</scope><name>OnPropertyChanged</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SendDataViewModel</scope><name>OverallViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1918d3d8d384486e278426327b16256f" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SendDataViewModel</scope><name>PropertyChanged</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model_1a0e92b77382f44a685bf8004a02fb91ce" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SendDataViewModel</scope><name>ReceiveLettersButton_Enabled</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model_1abdf1a8159aac4d3f726a307fc37ca6b6" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SendDataViewModel</scope><name>SendDataViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model_1a5ff4f343793fb46a4937a6727db52e2b" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::SendDataViewModel</scope><name>UpdateButton</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

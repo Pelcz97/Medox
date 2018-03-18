@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['onbackbuttonpressed',['OnBackButtonPressed',['../classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page.html#ac5b60cfc6f750fe83431e6b3fa850f6b',1,'myMD::View::MedicationTabPages::DetailedMedicationPage']]],
   ['onpropertychanged',['OnPropertyChanged',['../classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model.html#a0333c153387ba2d38fb31eeb0419bfcf',1,'myMD::ViewModel::OverallViewModel::OverallViewModel']]],
   ['onresume',['OnResume',['../classmy_m_d_1_1_app.html#a91bca8ea68e636005ac155569744ba2d',1,'myMD::App']]],
   ['onsleep',['OnSleep',['../classmy_m_d_1_1_app.html#a064df001dcc1f30d31c9608d4f14d393',1,'myMD::App']]],

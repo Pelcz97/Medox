@@ -56,6 +56,7 @@ T:myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel class. </para>
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/DetailedMedicineViewModel.cs" line="49" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/DetailedMedicineViewModel.cs" bodystart="49" bodyend="52"/>
+        <referencedby refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1ac5b60cfc6f750fe83431e6b3fa850f6b" compoundref="_detailed_medication_page_8xaml_8cs" startline="48" endline="57">myMD.View.MedicationTabPages.DetailedMedicationPage.OnBackButtonPressed</referencedby>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model_1ae30844bb875a0f1c59a450e9fd4ecebd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -76,61 +77,60 @@ T:myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel class. </para>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="63">
+      <node id="65">
         <label>INotifyPropertyChanged</label>
       </node>
-      <node id="61">
+      <node id="63">
         <label>MedicineViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model"/>
-        <childnode refid="62" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="60">
-        <label>myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model"/>
-        <childnode refid="61" relation="public-inheritance">
+        <childnode refid="64" relation="public-inheritance">
         </childnode>
       </node>
       <node id="62">
+        <label>myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model"/>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="64">
         <label>OverallViewModel::OverallViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
-        <childnode refid="63" relation="public-inheritance">
+        <childnode refid="65" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="67">
+      <node id="69">
         <label>INotifyPropertyChanged</label>
       </node>
-      <node id="65">
+      <node id="67">
         <label>MedicineViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model"/>
-        <childnode refid="66" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="64">
-        <label>myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model"/>
-        <childnode refid="65" relation="public-inheritance">
+        <childnode refid="68" relation="public-inheritance">
         </childnode>
       </node>
       <node id="66">
-        <label>OverallViewModel::OverallViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <label>myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model"/>
         <childnode refid="67" relation="public-inheritance">
-        </childnode>
-        <childnode refid="68" relation="usage">
-          <edgelabel>ModelFacade</edgelabel>
         </childnode>
       </node>
       <node id="68">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+        <childnode refid="70" relation="usage">
+          <edgelabel>ModelFacade</edgelabel>
+        </childnode>
+      </node>
+      <node id="70">
         <label>myMD.ModelInterface.ModelFacadeInterface.IModelFacade</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
       </node>
     </collaborationgraph>
     <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/DetailedMedicineViewModel.cs" line="11" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/DetailedMedicineViewModel.cs" bodystart="10" bodyend="63"/>
     <listofallmembers>
-      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1acff4179c3cbf2cd35046729e99cd6921" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::DetailedMedicineViewModel</scope><name>BleAdapter</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model_1a481a7dd27905ec3a70ca7e5bb0c4f5d4" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::DetailedMedicineViewModel</scope><name>CancelMedication</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1ae2bbbd81c983dbab025a3ed6a858c535" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::DetailedMedicineViewModel</scope><name>CancelPossible</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model_1a72a7e47668456e870fe1345d67c92f17" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::DetailedMedicineViewModel</scope><name>DetailedMedicineViewModel</name></member>
@@ -148,6 +148,7 @@ T:myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel class. </para>
       <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a31722e22ef4ffb25f9fc2f9629408ed4" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::DetailedMedicineViewModel</scope><name>MedicineViewModel</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1aee4be6017890f4b46f9adf50f0327322" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::DetailedMedicineViewModel</scope><name>MinEndDate</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1ab1b0e7b2ed9ae07614caa1e45b942e3f" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::DetailedMedicineViewModel</scope><name>ModelFacade</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a40cabfa5e7d2f08979a9ba5c3c8eead8" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::DetailedMedicineViewModel</scope><name>myMD_FileTransfer</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a93c6d3fe1297957deadbd1dc0d29475a" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::DetailedMedicineViewModel</scope><name>NameSort</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a0333c153387ba2d38fb31eeb0419bfcf" prot="public" virt="virtual"><scope>myMD::ViewModel::MedicationTabViewModel::DetailedMedicineViewModel</scope><name>OnPropertyChanged</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::DetailedMedicineViewModel</scope><name>OverallViewModel</name></member>

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classmy_m_d_1_1_model_1_1_dependency_service_1_1_xamarin_dependency_service" kind="class" language="C#" prot="public">
+    <compoundname>myMD::Model::DependencyService::XamarinDependencyService</compoundname>
+    <basecompoundref refid="interfacemy_m_d_1_1_model_1_1_dependency_service_1_1_i_dependency_service" prot="public" virt="non-virtual">myMD.Model.DependencyService.IDependencyService</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_dependency_service_1_1_xamarin_dependency_service_1a45858cd78923d949421471c9cc4d30be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T myMD.Model.DependencyService.XamarinDependencyService.Get&lt; T &gt;</definition>
+        <argsstring>()</argsstring>
+        <name>Get&lt; T &gt;</name>
+        <reimplements refid="interfacemy_m_d_1_1_model_1_1_dependency_service_1_1_i_dependency_service_1a2e088bfff9d0695a3a761faeeaba481e">Get&lt; T &gt;</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService/XamarinDependencyService.cs" line="8" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="444">
+        <label>myMD.Model.DependencyService.XamarinDependencyService</label>
+        <link refid="classmy_m_d_1_1_model_1_1_dependency_service_1_1_xamarin_dependency_service"/>
+        <childnode refid="445" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="445">
+        <label>IDependencyService</label>
+        <link refid="interfacemy_m_d_1_1_model_1_1_dependency_service_1_1_i_dependency_service"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="446">
+        <label>myMD.Model.DependencyService.XamarinDependencyService</label>
+        <link refid="classmy_m_d_1_1_model_1_1_dependency_service_1_1_xamarin_dependency_service"/>
+        <childnode refid="447" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="447">
+        <label>IDependencyService</label>
+        <link refid="interfacemy_m_d_1_1_model_1_1_dependency_service_1_1_i_dependency_service"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService/XamarinDependencyService.cs" line="7" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService/XamarinDependencyService.cs" bodystart="6" bodyend="9"/>
+    <listofallmembers>
+      <member refid="classmy_m_d_1_1_model_1_1_dependency_service_1_1_xamarin_dependency_service_1a45858cd78923d949421471c9cc4d30be" prot="public" virt="non-virtual"><scope>myMD::Model::DependencyService::XamarinDependencyService</scope><name>Get&lt; T &gt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

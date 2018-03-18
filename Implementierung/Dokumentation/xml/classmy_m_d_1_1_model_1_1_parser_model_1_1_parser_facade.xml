@@ -51,25 +51,25 @@
     <detaileddescription>
 <para><ref refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade" kindref="compound">myMD.Model.ParserModel.IParserFacade</ref></para>    </detaileddescription>
     <inheritancegraph>
-      <node id="330">
+      <node id="333">
         <label>myMD.Model.ParserModel.ParserFacade</label>
         <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade"/>
-        <childnode refid="331" relation="public-inheritance">
+        <childnode refid="334" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="331">
+      <node id="334">
         <label>IParserFacade</label>
         <link refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="332">
+      <node id="335">
         <label>myMD.Model.ParserModel.ParserFacade</label>
         <link refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade"/>
-        <childnode refid="333" relation="public-inheritance">
+        <childnode refid="336" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="333">
+      <node id="336">
         <label>IParserFacade</label>
         <link refid="interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_parser_facade"/>
       </node>

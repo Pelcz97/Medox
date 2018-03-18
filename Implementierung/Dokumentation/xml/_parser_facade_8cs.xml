@@ -4,7 +4,6 @@
     <compoundname>ParserFacade.cs</compoundname>
     <innerclass refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_parser_facade" prot="public">myMD::Model::ParserModel::ParserFacade</innerclass>
     <innernamespace refid="namespacemy_m_d_1_1_model_1_1_parser_model">myMD::Model::ParserModel</innernamespace>
-    <innernamespace refid="namespace_system_1_1_i_o">System::IO</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

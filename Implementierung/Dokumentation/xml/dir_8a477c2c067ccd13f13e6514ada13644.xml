@@ -3,8 +3,8 @@
   <compounddef id="dir_8a477c2c067ccd13f13e6514ada13644" kind="dir">
     <compoundname>D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/TransmissionModel</compoundname>
     <innerfile refid="_bluetooth_8cs">Bluetooth.cs</innerfile>
-    <innerfile refid="_device_8cs">Device.cs</innerfile>
     <innerfile refid="_i_bluetooth_8cs">IBluetooth.cs</innerfile>
+    <innerfile refid="_i_bluetooth_helper_8cs">IBluetoothHelper.cs</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

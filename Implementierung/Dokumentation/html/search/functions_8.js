@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['init',['Init',['../classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser.html#afa4317cee37448666f91ad019c4d118e',1,'myMD.Model.ParserModel.FileToDatabaseParser.Init()'],['../classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser.html#a5c2d04fd614ecab8c9bc7f5ae7636a00',1,'myMD.Model.ParserModel.Hl7ToDatabaseParser.Init()']]],
-  ['insert',['Insert',['../classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database.html#a498caa3b7e7a7745f7066620ac9a14ae',1,'myMD.Model.DatabaseModel.EntityDatabase.Insert()'],['../interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database.html#aa9b390a965a4ebc813c0beefbbd87d26',1,'myMD.Model.DatabaseModel.IEntityDatabase.Insert()']]]
+  ['medicationpage',['MedicationPage',['../classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_medication_page.html#a99467ba42e4ccde63fea9ba2dd04f7cc',1,'myMD::View::MedicationTabPages::MedicationPage']]],
+  ['medicationviewmodel',['MedicationViewModel',['../classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model.html#adea7437f11fade137b07865f0143d663',1,'myMD::ViewModel::MedicationTabViewModel::MedicationViewModel']]],
+  ['medicineviewmodel',['MedicineViewModel',['../classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model.html#ae443badf863a9a10f8db6065c7c2268f',1,'myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.MedicineViewModel(IMedication medication)'],['../classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model.html#a31722e22ef4ffb25f9fc2f9629408ed4',1,'myMD.ViewModel.MedicationTabViewModel.MedicineViewModel.MedicineViewModel()']]],
+  ['modelfacade',['ModelFacade',['../classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade.html#af4409668a62959fbf5ae1f89d065a4bb',1,'myMD::Model::ModelFacade::ModelFacade']]],
+  ['mymdpage',['myMDPage',['../classmy_m_d_1_1my_m_d_page.html#a116c2084cfab3cc170d6f0c0d32e92c7',1,'myMD::myMDPage']]]
 ];

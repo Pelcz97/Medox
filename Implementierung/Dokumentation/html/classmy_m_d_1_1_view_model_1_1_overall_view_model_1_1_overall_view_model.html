@@ -71,6 +71,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Öffentliche Methoden</a> &#124;
 <a href="#pro-attribs">Geschützte Attribute</a> &#124;
+<a href="#pro-static-attribs">Statische, geschützte Attribute</a> &#124;
 <a href="#events">Ereignisse</a> &#124;
 <a href="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model-members.html">Aufstellung aller Elemente</a>  </div>
   <div class="headertitle">
@@ -92,7 +93,8 @@ Klassendiagramm für myMD.ViewModel.OverallViewModel.OverallViewModel:</div>
 <area shape="rect" id="node9" href="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_item_view_model.html" title="ViewModel zur Darstellung eines einzelnen Profils " alt="" coords="477,267,691,308"/>
 <area shape="rect" id="node12" href="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model.html" title="Diese Klasse übernimmt die Auswahl des Gerätes an das die Arztbriefe gesendet werden sollen..." alt="" coords="471,332,697,373"/>
 <area shape="rect" id="node13" href="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_doctors_letters_view_model.html" title="Die SelectDoctorsLetterViewModel Klasse bearbeitet die Auswahl der DoctorsLetter die zum Senden freig..." alt="" coords="479,398,689,454"/>
-<area shape="rect" id="node14" href="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model.html" title="Transmitting data view model. " alt="" coords="459,479,709,520"/>
+<area shape="rect" id="node14" href="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_send_data_view_model.html" title="Die SendDataViewModel Klasse bietet den Einstiegspunkt in den SendDataTab. " alt="" coords="479,479,689,520"/>
+<area shape="rect" id="node15" href="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_transmitting_data_view_model.html" title="Transmitting data view model. " alt="" coords="459,544,709,585"/>
 <area shape="rect" id="node5" href="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model.html" title="ViewModel einer DetailedMedicine " alt="" coords="757,67,1029,108"/>
 <area shape="rect" id="node7" href="classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_detailed_doctors_letter_view_model.html" title="ViewModel zur Modelierung eines DetailedDoctorsLetter " alt="" coords="786,133,1001,189"/>
 <area shape="rect" id="node10" href="classmy_m_d_1_1_view_model_1_1_profile_tab_view_model_1_1_profile_edit_view_model.html" title="ViewModel zur Editierung eines einzelnen Profils " alt="" coords="788,240,999,281"/>
@@ -122,8 +124,11 @@ Geschützte Attribute</h2></td></tr>
 <tr class="memitem:ab1b0e7b2ed9ae07614caa1e45b942e3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade.html">IModelFacade</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model.html#ab1b0e7b2ed9ae07614caa1e45b942e3f">ModelFacade</a></td></tr>
 <tr class="memdesc:ab1b0e7b2ed9ae07614caa1e45b942e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attribut für die ModelFacade  <a href="#ab1b0e7b2ed9ae07614caa1e45b942e3f">Mehr ...</a><br /></td></tr>
 <tr class="separator:ab1b0e7b2ed9ae07614caa1e45b942e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acff4179c3cbf2cd35046729e99cd6921"><td class="memItemLeft" align="right" valign="top">IAdapter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model.html#acff4179c3cbf2cd35046729e99cd6921">BleAdapter</a> =&gt; CrossBleAdapter.Current</td></tr>
-<tr class="separator:acff4179c3cbf2cd35046729e99cd6921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Statische, geschützte Attribute</h2></td></tr>
+<tr class="memitem:a40cabfa5e7d2f08979a9ba5c3c8eead8"><td class="memItemLeft" align="right" valign="top">static Guid&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model.html#a40cabfa5e7d2f08979a9ba5c3c8eead8">myMD_FileTransfer</a> = new Guid(&quot;88800000-8000-8000-8000-800000000000&quot;)</td></tr>
+<tr class="separator:a40cabfa5e7d2f08979a9ba5c3c8eead8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="events"></a>
 Ereignisse</h2></td></tr>
@@ -189,28 +194,6 @@ Ereignisse</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Dokumentation der Datenelemente</h2>
-<a id="acff4179c3cbf2cd35046729e99cd6921"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acff4179c3cbf2cd35046729e99cd6921">&#9670;&nbsp;</a></span>BleAdapter</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">IAdapter myMD.ViewModel.OverallViewModel.OverallViewModel.BleAdapter =&gt; CrossBleAdapter.Current</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ab1b0e7b2ed9ae07614caa1e45b942e3f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab1b0e7b2ed9ae07614caa1e45b942e3f">&#9670;&nbsp;</a></span>ModelFacade</h2>
 
@@ -232,6 +215,28 @@ Ereignisse</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Attribut für die ModelFacade </p>
+
+</div>
+</div>
+<a id="a40cabfa5e7d2f08979a9ba5c3c8eead8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40cabfa5e7d2f08979a9ba5c3c8eead8">&#9670;&nbsp;</a></span>myMD_FileTransfer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Guid myMD.ViewModel.OverallViewModel.OverallViewModel.myMD_FileTransfer = new Guid(&quot;88800000-8000-8000-8000-800000000000&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

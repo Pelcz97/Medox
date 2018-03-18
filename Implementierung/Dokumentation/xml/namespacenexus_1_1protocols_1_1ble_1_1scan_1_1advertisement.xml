@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacenexus_1_1protocols_1_1ble_1_1scan_1_1advertisement" kind="namespace" language="Unknown">
+    <compoundname>nexus::protocols::ble::scan::advertisement</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/SelectDeviceViewModel.cs" line="10" column="1"/>
+  </compounddef>
+</doxygen>

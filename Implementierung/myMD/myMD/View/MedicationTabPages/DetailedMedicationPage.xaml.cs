@@ -44,6 +44,18 @@ namespace myMD.View.MedicationTabPages
             BindingContext = vm;
         }
 
+        override
+        protected bool OnBackButtonPressed()
+        {
+            if (vm.CancelPossible)
+            {
+                vm.CancelMedication();
+                return false;
+            }
+            DisplayAlert("Änderung nicht gespeichert", "Sie müssen ihre Änderungen zuerst speichern.", "Okay");
+            return true;
+        }
+
         /// <summary>
         /// Methode, wenn der Abbrechen-Button geklickt wird.
         /// </summary>

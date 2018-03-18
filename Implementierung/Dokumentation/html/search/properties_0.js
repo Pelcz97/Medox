@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['adddummyletter',['AddDummyLetter',['../classmy_m_d_1_1_view_model_1_1_overview_tab_view_model_1_1_overview_view_model.html#a82f6eaa58ba38f2761d5f6e3d9ac9518',1,'myMD::ViewModel::OverviewTabViewModel::OverviewViewModel']]]
+  ['adapter',['Adapter',['../interfacemy_m_d_1_1_model_1_1_transmission_model_1_1_i_bluetooth_helper.html#afcdf2bd392d481cff915fdfc1e873d54',1,'myMD::Model::TransmissionModel::IBluetoothHelper']]]
 ];

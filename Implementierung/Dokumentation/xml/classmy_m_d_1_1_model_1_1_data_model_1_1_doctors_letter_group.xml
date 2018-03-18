@@ -18,7 +18,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="36" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" bodystart="36" bodyend="36"/>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1ad7eeafc0adeb80130ab7f4a9a8da8fbb" compoundref="_doctors_letter_group_8cs" startline="108" endline="112">myMD.Model.DataModel.DoctorsLetterGroup.Equals</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1ad7eeafc0adeb80130ab7f4a9a8da8fbb" compoundref="_doctors_letter_group_8cs" startline="97" endline="101">myMD.Model.DataModel.DoctorsLetterGroup.Equals</referencedby>
       </memberdef>
       <memberdef kind="property" id="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1abdbc2d5c70c3f186564b018d3b007b6b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>IList&lt; <ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">IDoctorsLetter</ref> &gt;</type>
@@ -40,7 +40,7 @@
         <definition>override DateTime myMD.Model.DataModel.DoctorsLetterGroup.Date</definition>
         <argsstring></argsstring>
         <name>Date</name>
-        <initializer>=&gt; DatabaseLetters.Any() ? DatabaseLetters.First().Date : default(DateTime)</initializer>
+        <initializer>=&gt; DatabaseLetters.Any() ? DatabaseLetters.Min().Date : default(DateTime)</initializer>
         <briefdescription>
 <para>Das Datum einer Arztbriefgruppe ist das Datum des ältesten in ihr enthaltenen Arztbriefs. Da die Arztbriefe in DatabaseLetters nach ihrem Datum sortiert sind, muss diese Information nicht explizit gespeichert werden. </para>        </briefdescription>
         <detaileddescription>
@@ -54,7 +54,7 @@
         <definition>DateTime myMD.Model.DataModel.DoctorsLetterGroup.LastDate</definition>
         <argsstring></argsstring>
         <name>LastDate</name>
-        <initializer>=&gt; DatabaseLetters.Any() ? DatabaseLetters.Last().<ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1ae207f655bf1148e8c3659f548c6357d5" kindref="member">Date</ref> : default(DateTime)</initializer>
+        <initializer>=&gt; DatabaseLetters.Any() ? DatabaseLetters.Max().<ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1ae207f655bf1148e8c3659f548c6357d5" kindref="member">Date</ref> : default(DateTime)</initializer>
         <briefdescription>
 <para>Das letzte Datum einer Arztbriefgruppe ist das Datum des neuesten in ihr enthaltenen Arztbriefs. Da die Arztbriefe in DatabaseLetters nach ihrem Datum sortiert sind, muss diese Information nicht explizit gespeichert werden. </para>        </briefdescription>
         <detaileddescription>
@@ -92,11 +92,10 @@
         <detaileddescription>
 <para><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1a3f0e6a7254b875a556f618b4ca0ccf13" kindref="member">myMD.Model.DataModel.DoctorsLetterGroup::Add</ref>(<ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">ModelInterface.DataModelInterface.IDoctorsLetter</ref>)</para>        </detaileddescription>
         <inbodydescription>
-<para>Suche nach passendem Index um die Liste sortiert zu halten </para>        </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="72" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" bodystart="72" bodyend="90"/>
-        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a14a3510dbebdbb2e3cb3b37071fc9c2e" compoundref="_data_8cs" startline="28" endline="31">myMD.Model.DataModel.Data.CompareTo</references>
-        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1af6f50eed1ac640893bb1149319b51f87" compoundref="_doctors_letter_8cs" startline="104" endline="111">myMD.Model.DataModel.DoctorsLetter.AddToGroup</references>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1af6f50eed1ac640893bb1149319b51f87" compoundref="_doctors_letter_8cs" startline="104" endline="111">myMD.Model.DataModel.DoctorsLetter.AddToGroup</referencedby>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="72" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" bodystart="72" bodyend="79"/>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1af6f50eed1ac640893bb1149319b51f87" compoundref="_doctors_letter_8cs" startline="105" endline="112">myMD.Model.DataModel.DoctorsLetter.AddToGroup</references>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1af6f50eed1ac640893bb1149319b51f87" compoundref="_doctors_letter_8cs" startline="105" endline="112">myMD.Model.DataModel.DoctorsLetter.AddToGroup</referencedby>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1a06085b5f32f7923e804bfa1ecdbbe5f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -114,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="93" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="82" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1a03d95deed0cfec8721713fd565daf81e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -128,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="96" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" bodystart="96" bodyend="102"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="85" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" bodystart="85" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1ad7eeafc0adeb80130ab7f4a9a8da8fbb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -145,7 +144,7 @@
 <para>System.IEquatable&lt;T&gt;::Equals(T)</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="108" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" bodystart="108" bodyend="112"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="97" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" bodystart="97" bodyend="101"/>
         <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1a6ea81811a3fa600bb05c9d4eff39e4b7" compoundref="_doctors_letter_group_8cs" startline="36" endline="36">myMD.Model.DataModel.DoctorsLetterGroup.DatabaseLetters</references>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1a05bb4dd331063ca135f43bb20e62d980" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -163,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="115" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" bodystart="115" bodyend="119"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="104" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" bodystart="104" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1a5c5cfe2d649c4ea2c2d09e003d30e8e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override int</type>
@@ -176,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="122" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" bodystart="122" bodyend="129"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="111" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" bodystart="111" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1a6f8d85902c8b838114e5faab419a76a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -193,9 +192,9 @@
 <para><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1a6f8d85902c8b838114e5faab419a76a4" kindref="member">myMD.Model.DataModel.DoctorsLetterGroup::Remove</ref>(<ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">ModelInterface.DataModelInterface.IDoctorsLetter</ref>)</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="135" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" bodystart="135" bodyend="142"/>
-        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1a9c51e568a91e9acd4a6dc4b486fa5db3" compoundref="_doctors_letter_8cs" startline="193" endline="200">myMD.Model.DataModel.DoctorsLetter.RemoveFromGroup</references>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1a9c51e568a91e9acd4a6dc4b486fa5db3" compoundref="_doctors_letter_8cs" startline="193" endline="200">myMD.Model.DataModel.DoctorsLetter.RemoveFromGroup</referencedby>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="127" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" bodystart="127" bodyend="134"/>
+        <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1a9c51e568a91e9acd4a6dc4b486fa5db3" compoundref="_doctors_letter_8cs" startline="197" endline="204">myMD.Model.DataModel.DoctorsLetter.RemoveFromGroup</references>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_1a9c51e568a91e9acd4a6dc4b486fa5db3" compoundref="_doctors_letter_8cs" startline="197" endline="204">myMD.Model.DataModel.DoctorsLetter.RemoveFromGroup</referencedby>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1a76722662366b356397e11a2467c19c67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -213,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="145" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="137" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1a484d8fc0d69e01285924622f8a945095" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group" kindref="compound">DoctorsLetterGroup</ref></type>
@@ -227,7 +226,7 @@
 <para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group_1a2ac524fda5f57ce7b220c0bb17aac11c" kindref="member">myMD.ModelInterface.DataModelInterface.IDoctorsLetterGroup::ToDoctorsLetterGroup()</ref></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="151" column="1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="143" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -235,130 +234,130 @@
     <detaileddescription>
 <para><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter" kindref="compound">myMD.ModelInterface.DataModelInterface.IDoctorsLetter</ref></para><para>myMD.Model.DataModelInterface.Data</para>    </detaileddescription>
     <inheritancegraph>
-      <node id="114">
+      <node id="112">
         <label>IDoctorsLetterGroup</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group"/>
-        <childnode refid="111" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="111">
-        <label>IData</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
         <childnode refid="109" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="110">
-        <label>IEquatable&lt; Entity &gt;</label>
-      </node>
-      <node id="113">
-        <label>IEquatable&lt; Data &gt;</label>
-      </node>
-      <node id="115">
-        <label>IEquatable&lt; DoctorsLetterGroup &gt;</label>
-      </node>
-      <node id="106">
-        <label>myMD.Model.DataModel.DoctorsLetterGroup</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group"/>
+      <node id="109">
+        <label>IData</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
         <childnode refid="107" relation="public-inheritance">
-        </childnode>
-        <childnode refid="114" relation="public-inheritance">
-        </childnode>
-        <childnode refid="115" relation="public-inheritance">
         </childnode>
       </node>
       <node id="108">
-        <label>Entity</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
-        <childnode refid="109" relation="public-inheritance">
-        </childnode>
-        <childnode refid="110" relation="public-inheritance">
-        </childnode>
+        <label>IEquatable&lt; Entity &gt;</label>
       </node>
-      <node id="107">
-        <label>Data</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
-        <childnode refid="108" relation="public-inheritance">
-        </childnode>
-        <childnode refid="109" relation="public-inheritance">
-        </childnode>
-        <childnode refid="111" relation="public-inheritance">
+      <node id="111">
+        <label>IEquatable&lt; Data &gt;</label>
+      </node>
+      <node id="113">
+        <label>IEquatable&lt; DoctorsLetterGroup &gt;</label>
+      </node>
+      <node id="104">
+        <label>myMD.Model.DataModel.DoctorsLetterGroup</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group"/>
+        <childnode refid="105" relation="public-inheritance">
         </childnode>
         <childnode refid="112" relation="public-inheritance">
         </childnode>
         <childnode refid="113" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="109">
+      <node id="106">
+        <label>Entity</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
+        <childnode refid="107" relation="public-inheritance">
+        </childnode>
+        <childnode refid="108" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>Data</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+        <childnode refid="107" relation="public-inheritance">
+        </childnode>
+        <childnode refid="109" relation="public-inheritance">
+        </childnode>
+        <childnode refid="110" relation="public-inheritance">
+        </childnode>
+        <childnode refid="111" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="107">
         <label>IEntity</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
       </node>
-      <node id="112">
+      <node id="110">
         <label>IComparable&lt; Data &gt;</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="124">
+      <node id="122">
         <label>IDoctorsLetterGroup</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctors_letter_group"/>
-        <childnode refid="121" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="121">
-        <label>IData</label>
-        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
         <childnode refid="119" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="120">
-        <label>IEquatable&lt; Entity &gt;</label>
-      </node>
-      <node id="123">
-        <label>IEquatable&lt; Data &gt;</label>
-      </node>
-      <node id="125">
-        <label>IEquatable&lt; DoctorsLetterGroup &gt;</label>
-      </node>
-      <node id="116">
-        <label>myMD.Model.DataModel.DoctorsLetterGroup</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group"/>
+      <node id="119">
+        <label>IData</label>
+        <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_data"/>
         <childnode refid="117" relation="public-inheritance">
-        </childnode>
-        <childnode refid="124" relation="public-inheritance">
-        </childnode>
-        <childnode refid="125" relation="public-inheritance">
         </childnode>
       </node>
       <node id="118">
-        <label>Entity</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
-        <childnode refid="119" relation="public-inheritance">
-        </childnode>
-        <childnode refid="120" relation="public-inheritance">
-        </childnode>
+        <label>IEquatable&lt; Entity &gt;</label>
       </node>
-      <node id="117">
-        <label>Data</label>
-        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
-        <childnode refid="118" relation="public-inheritance">
-        </childnode>
-        <childnode refid="119" relation="public-inheritance">
-        </childnode>
-        <childnode refid="121" relation="public-inheritance">
+      <node id="121">
+        <label>IEquatable&lt; Data &gt;</label>
+      </node>
+      <node id="123">
+        <label>IEquatable&lt; DoctorsLetterGroup &gt;</label>
+      </node>
+      <node id="114">
+        <label>myMD.Model.DataModel.DoctorsLetterGroup</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group"/>
+        <childnode refid="115" relation="public-inheritance">
         </childnode>
         <childnode refid="122" relation="public-inheritance">
         </childnode>
         <childnode refid="123" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="119">
+      <node id="116">
+        <label>Entity</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_entity"/>
+        <childnode refid="117" relation="public-inheritance">
+        </childnode>
+        <childnode refid="118" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="115">
+        <label>Data</label>
+        <link refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data"/>
+        <childnode refid="116" relation="public-inheritance">
+        </childnode>
+        <childnode refid="117" relation="public-inheritance">
+        </childnode>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
+        <childnode refid="120" relation="public-inheritance">
+        </childnode>
+        <childnode refid="121" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="117">
         <label>IEntity</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_entity"/>
       </node>
-      <node id="122">
+      <node id="120">
         <label>IComparable&lt; Data &gt;</label>
       </node>
     </collaborationgraph>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="18" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" bodystart="17" bodyend="152"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" line="18" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/DoctorsLetterGroup.cs" bodystart="17" bodyend="144"/>
     <listofallmembers>
       <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1a3f0e6a7254b875a556f618b4ca0ccf13" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::DoctorsLetterGroup</scope><name>Add</name></member>
       <member refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1a06085b5f32f7923e804bfa1ecdbbe5f9" prot="public" virt="non-virtual"><scope>myMD::Model::DataModel::DoctorsLetterGroup</scope><name>Add</name></member>

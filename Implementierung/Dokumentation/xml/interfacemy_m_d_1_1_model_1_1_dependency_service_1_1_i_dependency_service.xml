@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interfacemy_m_d_1_1_model_1_1_dependency_service_1_1_i_dependency_service" kind="interface" language="C#" prot="public">
+    <compoundname>myMD::Model::DependencyService::IDependencyService</compoundname>
+    <derivedcompoundref refid="classmy_m_d_1_1_model_1_1_dependency_service_1_1_xamarin_dependency_service" prot="public" virt="non-virtual">myMD.Model.DependencyService.XamarinDependencyService</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_dependency_service_1_1_i_dependency_service_1a2e088bfff9d0695a3a761faeeaba481e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T myMD.Model.DependencyService.IDependencyService.Get&lt; T &gt;</definition>
+        <argsstring>()</argsstring>
+        <name>Get&lt; T &gt;</name>
+        <reimplementedby refid="classmy_m_d_1_1_model_1_1_dependency_service_1_1_xamarin_dependency_service_1a45858cd78923d949421471c9cc4d30be">Get&lt; T &gt;</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService/IDependencyService.cs" line="5" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="184">
+        <label>myMD.Model.DependencyService.XamarinDependencyService</label>
+        <link refid="classmy_m_d_1_1_model_1_1_dependency_service_1_1_xamarin_dependency_service"/>
+        <childnode refid="183" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="183">
+        <label>myMD.Model.DependencyService.IDependencyService</label>
+        <link refid="interfacemy_m_d_1_1_model_1_1_dependency_service_1_1_i_dependency_service"/>
+      </node>
+    </inheritancegraph>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService/IDependencyService.cs" line="4" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DependencyService/IDependencyService.cs" bodystart="3" bodyend="6"/>
+    <listofallmembers>
+      <member refid="interfacemy_m_d_1_1_model_1_1_dependency_service_1_1_i_dependency_service_1a2e088bfff9d0695a3a761faeeaba481e" prot="public" virt="non-virtual"><scope>myMD::Model::DependencyService::IDependencyService</scope><name>Get&lt; T &gt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

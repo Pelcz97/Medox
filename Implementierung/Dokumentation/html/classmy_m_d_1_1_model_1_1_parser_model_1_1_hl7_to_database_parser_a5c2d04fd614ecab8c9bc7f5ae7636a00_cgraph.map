@@ -1,3 +1,3 @@
 <map id="myMD.Model.ParserModel.Hl7ToDatabaseParser.Init" name="myMD.Model.ParserModel.Hl7ToDatabaseParser.Init">
-<area shape="rect" id="node2" href="$interfacemy_m_d_1_1_model_1_1_parser_model_1_1_i_hl7_parser_helper.html#ab4114a84678d1b0ce5df7fdc00119dc4" title="Führt nötige Operationen aus um den gegebenen Xml&#45;Formatierer benutzen zu können. ..." alt="" coords="252,5,455,47"/>
+<area shape="rect" id="node2" href="$interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper.html#a8420370ca7817b74f4c0fd1ec300c0a2" title="Erstellt die gegebene Datei im lokalen Dateisystem, falls sie noch nicht existiert ..." alt="" coords="252,5,441,47"/>
 </map>

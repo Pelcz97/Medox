@@ -84,6 +84,9 @@ $(function() {
 <tr class="memitem:a8420370ca7817b74f4c0fd1ec300c0a2"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper.html#a8420370ca7817b74f4c0fd1ec300c0a2">GetLocalFilePath</a> (string filename)</td></tr>
 <tr class="memdesc:a8420370ca7817b74f4c0fd1ec300c0a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erstellt die gegebene Datei im lokalen Dateisystem, falls sie noch nicht existiert  <a href="#a8420370ca7817b74f4c0fd1ec300c0a2">Mehr ...</a><br /></td></tr>
 <tr class="separator:a8420370ca7817b74f4c0fd1ec300c0a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab01e0757301271adeeb53e4e90e8b44d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper.html#ab01e0757301271adeeb53e4e90e8b44d">WriteLocalFileFromString</a> (string format, string data)</td></tr>
+<tr class="memdesc:ab01e0757301271adeeb53e4e90e8b44d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erstellt eine neue Datei mit eindeutigem Namen und dem gegebenen Format aus dem gegebenen Byte Array.  <a href="#ab01e0757301271adeeb53e4e90e8b44d">Mehr ...</a><br /></td></tr>
+<tr class="separator:ab01e0757301271adeeb53e4e90e8b44d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f9976f7f5304c4d8fcd13de9ae84215"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper.html#a2f9976f7f5304c4d8fcd13de9ae84215">DeleteFile</a> (string filename)</td></tr>
 <tr class="memdesc:a2f9976f7f5304c4d8fcd13de9ae84215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Löscht die gegebene Datei im lokalen Dateisystem  <a href="#a2f9976f7f5304c4d8fcd13de9ae84215">Mehr ...</a><br /></td></tr>
 <tr class="separator:a2f9976f7f5304c4d8fcd13de9ae84215"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +150,53 @@ Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
 <div class="center"><img src="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_a8420370ca7817b74f4c0fd1ec300c0a2_icgraph.png" border="0" usemap="#interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_a8420370ca7817b74f4c0fd1ec300c0a2_icgraph" alt=""/></div>
 <map name="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_a8420370ca7817b74f4c0fd1ec300c0a2_icgraph" id="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_a8420370ca7817b74f4c0fd1ec300c0a2_icgraph">
 <area shape="rect" id="node2" href="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database.html#a7a6a4c8cedc57ea3dc0a714ddd55deb6" title="Erstellt die Datenbank, falls sie noch nicht existiert, verbindet sich mit ihr und setzt das aktive P..." alt="" coords="243,5,447,47"/>
+<area shape="rect" id="node3" href="classmy_m_d_1_1_model_1_1_parser_model_1_1_hl7_to_database_parser.html#a5c2d04fd614ecab8c9bc7f5ae7636a00" title="Initialisiert document, in dem es aus dem gegebenen Dateipfad liest. " alt="" coords="245,71,444,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab01e0757301271adeeb53e4e90e8b44d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab01e0757301271adeeb53e4e90e8b44d">&#9670;&nbsp;</a></span>WriteLocalFileFromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string myMD.Model.FileHelper.IFileHelper.WriteLocalFileFromString </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Erstellt eine neue Datei mit eindeutigem Namen und dem gegebenen Format aus dem gegebenen Byte Array. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>Format der Datei</td></tr>
+    <tr><td class="paramname">data</td><td>Daten der Datei</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>RÃ¼ckgabe</dt><dd>Der vollständige Dateipfad</dd></dl>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_ab01e0757301271adeeb53e4e90e8b44d_icgraph.png" border="0" usemap="#interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_ab01e0757301271adeeb53e4e90e8b44d_icgraph" alt=""/></div>
+<map name="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_ab01e0757301271adeeb53e4e90e8b44d_icgraph" id="interfacemy_m_d_1_1_model_1_1_file_helper_1_1_i_file_helper_ab01e0757301271adeeb53e4e90e8b44d_icgraph">
+<area shape="rect" id="node2" href="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade.html#aac7aa4d319269018e437fbde2d08f27a" title="Auslesen aller vom Server angebotenen Dateien. " alt="" coords="264,5,484,47"/>
 </map>
 </div>
 

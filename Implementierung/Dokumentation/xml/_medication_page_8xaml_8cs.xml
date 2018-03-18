@@ -4,7 +4,6 @@
     <compoundname>MedicationPage.xaml.cs</compoundname>
     <innerclass refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_medication_page" prot="public">myMD::View::MedicationTabPages::MedicationPage</innerclass>
     <innernamespace refid="namespacemy_m_d_1_1_view_1_1_medication_tab_pages">myMD::View::MedicationTabPages</innernamespace>
-    <innernamespace refid="namespace_system_1_1_diagnostics">System::Diagnostics</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -43,13 +42,20 @@
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MedicationItem_ItemSelected(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>sender,<sp/>SelectedItemChangedEventArgs<sp/>e)</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>view<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>NavigationPage(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page" kindref="compound">DetailedMedicationPage</ref>(e.SelectedItem));</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>view.BarBackgroundColor<sp/>=<sp/>Color.FromRgb(25,<sp/>25,<sp/>40);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>view.BarTextColor<sp/>=<sp/>Color.White;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Navigation.PushModalAsync(view);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>selectedItem<sp/>=<sp/>((ListView)sender).SelectedItem;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(selectedItem<sp/>==<sp/>null)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>view<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>NavigationPage(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>DetailedMedicationPage(e.SelectedItem));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>view.BarBackgroundColor<sp/>=<sp/>Color.FromRgb(25,<sp/>25,<sp/>40);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>view.BarTextColor<sp/>=<sp/>Color.White;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Navigation.PushModalAsync(view);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((ListView)sender).SelectedItem<sp/>=<sp/>null;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/View/MedicationTabPages/MedicationPage.xaml.cs"/>
   </compounddef>

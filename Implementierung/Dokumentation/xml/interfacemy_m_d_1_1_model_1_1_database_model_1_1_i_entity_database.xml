@@ -130,7 +130,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="52" column="1"/>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1af4409668a62959fbf5ae1f89d065a4bb" compoundref="_model_facade_8cs" startline="51" endline="63">myMD.Model.ModelFacade.ModelFacade.ModelFacade</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1af4409668a62959fbf5ae1f89d065a4bb" compoundref="_model_facade_8cs" startline="58" endline="70">myMD.Model.ModelFacade.ModelFacade.ModelFacade</referencedby>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1ab7da53690d9a658c2e30326524b42fef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_doctor" kindref="compound">IDoctor</ref></type>
@@ -158,7 +158,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="59" column="1"/>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" compoundref="_file_to_database_parser_8cs" startline="21" endline="50">myMD.Model.ParserModel.FileToDatabaseParser.ParseFile</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" compoundref="_file_to_database_parser_8cs" startline="22" endline="52">myMD.Model.ParserModel.FileToDatabaseParser.ParseFile</referencedby>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a3b62f2bec78aba18c58ce62580898f3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interfacemy_m_d_1_1_model_interface_1_1_data_model_interface_1_1_i_profile" kindref="compound">IProfile</ref></type>
@@ -186,7 +186,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="66" column="1"/>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" compoundref="_file_to_database_parser_8cs" startline="21" endline="50">myMD.Model.ParserModel.FileToDatabaseParser.ParseFile</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" compoundref="_file_to_database_parser_8cs" startline="22" endline="52">myMD.Model.ParserModel.FileToDatabaseParser.ParseFile</referencedby>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1aa9b390a965a4ebc813c0beefbbd87d26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -213,10 +213,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DatabaseModel/IEntityDatabase.cs" line="72" column="1"/>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ad7c7e2889846cf195ccdd4e61a804116" compoundref="_model_facade_8cs" startline="69" endline="74">myMD.Model.ModelFacade.ModelFacade.CreateEmptyGroup</referencedby>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a5394beb3ee9308666dd7e16c00c943d7" compoundref="_model_facade_8cs" startline="77" endline="82">myMD.Model.ModelFacade.ModelFacade.CreateEmptyMedication</referencedby>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ac41f7ff0d2279e786a2477f91df72e4a" compoundref="_model_facade_8cs" startline="85" endline="91">myMD.Model.ModelFacade.ModelFacade.CreateEmptyProfile</referencedby>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" compoundref="_file_to_database_parser_8cs" startline="21" endline="50">myMD.Model.ParserModel.FileToDatabaseParser.ParseFile</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ad7c7e2889846cf195ccdd4e61a804116" compoundref="_model_facade_8cs" startline="107" endline="112">myMD.Model.ModelFacade.ModelFacade.CreateEmptyGroup</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1a5394beb3ee9308666dd7e16c00c943d7" compoundref="_model_facade_8cs" startline="115" endline="120">myMD.Model.ModelFacade.ModelFacade.CreateEmptyMedication</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_model_facade_1_1_model_facade_1ac41f7ff0d2279e786a2477f91df72e4a" compoundref="_model_facade_8cs" startline="123" endline="129">myMD.Model.ModelFacade.ModelFacade.CreateEmptyProfile</referencedby>
+        <referencedby refid="classmy_m_d_1_1_model_1_1_parser_model_1_1_file_to_database_parser_1a5657cfa5ac9ebf00394691de2f9cabe4" compoundref="_file_to_database_parser_8cs" startline="22" endline="52">myMD.Model.ParserModel.FileToDatabaseParser.ParseFile</referencedby>
       </memberdef>
       <memberdef kind="function" id="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database_1a61821f96fe74626966cdb12ca9691de1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -250,14 +250,14 @@
     <detaileddescription>
 <para><ref refid="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface" kindref="compound">myMD.ModelInterface.DataModelInterface</ref></para>    </detaileddescription>
     <inheritancegraph>
-      <node id="216">
+      <node id="220">
         <label>myMD.Model.DatabaseModel.IEntityDatabase</label>
         <link refid="interfacemy_m_d_1_1_model_1_1_database_model_1_1_i_entity_database"/>
       </node>
-      <node id="217">
+      <node id="221">
         <label>myMD.Model.DatabaseModel.EntityDatabase</label>
         <link refid="classmy_m_d_1_1_model_1_1_database_model_1_1_entity_database"/>
-        <childnode refid="216" relation="public-inheritance">
+        <childnode refid="220" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

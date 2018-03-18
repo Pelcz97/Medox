@@ -59,7 +59,6 @@
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Data.cs" line="28" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/Model/DataModel/Data.cs" bodystart="28" bodyend="31"/>
         <references refid="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a5a21826433266e6cf63ef2ffbac2383c" compoundref="_data_8cs" startline="19" endline="19">myMD.Model.DataModel.Data.Date</references>
-        <referencedby refid="classmy_m_d_1_1_model_1_1_data_model_1_1_doctors_letter_group_1a3f0e6a7254b875a556f618b4ca0ccf13" compoundref="_doctors_letter_group_8cs" startline="72" endline="90">myMD.Model.DataModel.DoctorsLetterGroup.Add</referencedby>
       </memberdef>
       <memberdef kind="function" id="classmy_m_d_1_1_model_1_1_data_model_1_1_data_1a8d82ac369678f7098eda396bb8d615e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>

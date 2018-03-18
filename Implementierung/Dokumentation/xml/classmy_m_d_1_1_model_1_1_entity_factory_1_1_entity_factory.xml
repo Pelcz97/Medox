@@ -66,6 +66,18 @@
     <detaileddescription>
 <para><ref refid="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory" kindref="compound">myMD.Model.EntityFactory.IEntityFactory</ref></para><para><ref refid="namespacemy_m_d_1_1_model_1_1_data_model" kindref="compound">myMD.Model.DataModel</ref></para>    </detaileddescription>
     <inheritancegraph>
+      <node id="150">
+        <label>myMD.Model.EntityFactory.EntityFactory</label>
+        <link refid="classmy_m_d_1_1_model_1_1_entity_factory_1_1_entity_factory"/>
+        <childnode refid="151" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="151">
+        <label>IEntityFactory</label>
+        <link refid="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="152">
         <label>myMD.Model.EntityFactory.EntityFactory</label>
         <link refid="classmy_m_d_1_1_model_1_1_entity_factory_1_1_entity_factory"/>
@@ -73,18 +85,6 @@
         </childnode>
       </node>
       <node id="153">
-        <label>IEntityFactory</label>
-        <link refid="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="154">
-        <label>myMD.Model.EntityFactory.EntityFactory</label>
-        <link refid="classmy_m_d_1_1_model_1_1_entity_factory_1_1_entity_factory"/>
-        <childnode refid="155" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="155">
         <label>IEntityFactory</label>
         <link refid="interfacemy_m_d_1_1_model_1_1_entity_factory_1_1_i_entity_factory"/>
       </node>

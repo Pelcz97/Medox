@@ -18,7 +18,7 @@
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="20" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="20" bodyend="20"/>
         <referencedby refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model_1a769d397e08d7ea770c0e24123624d287" compoundref="_detailed_medicine_view_model_8cs" startline="34" endline="42">myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel.DetailedMedicineViewModel</referencedby>
-        <referencedby refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a420091b8fd48e45dddd1d25ca9cc7672" compoundref="_medication_view_model_8cs" startline="101" endline="120">myMD.ViewModel.MedicationTabViewModel.MedicationViewModel.DeleteListItemMethod</referencedby>
+        <referencedby refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medication_view_model_1a420091b8fd48e45dddd1d25ca9cc7672" compoundref="_medication_view_model_8cs" startline="101" endline="114">myMD.ViewModel.MedicationTabViewModel.MedicationViewModel.DeleteListItemMethod</referencedby>
       </memberdef>
       <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a9ada30bb9027a311c3934cef06431310" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>bool</type>
@@ -45,6 +45,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="34" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="34" bodyend="34"/>
+        <referencedby refid="classmy_m_d_1_1_view_1_1_medication_tab_pages_1_1_detailed_medication_page_1ac5b60cfc6f750fe83431e6b3fa850f6b" compoundref="_detailed_medication_page_8xaml_8cs" startline="48" endline="57">myMD.View.MedicationTabPages.DetailedMedicationPage.OnBackButtonPressed</referencedby>
       </memberdef>
       <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a6d05471333a112926288d1c19073e52a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -237,55 +238,54 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="286">
+      <node id="288">
         <label>INotifyPropertyChanged</label>
       </node>
-      <node id="287">
+      <node id="289">
         <label>myMD.ViewModel.MedicationTabViewModel.DetailedMedicineViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_detailed_medicine_view_model"/>
-        <childnode refid="284" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="285">
-        <label>OverallViewModel::OverallViewModel</label>
-        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
         <childnode refid="286" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="284">
+      <node id="287">
+        <label>OverallViewModel::OverallViewModel</label>
+        <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
+        <childnode refid="288" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="286">
         <label>myMD.ViewModel.MedicationTabViewModel.MedicineViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model"/>
-        <childnode refid="285" relation="public-inheritance">
+        <childnode refid="287" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="290">
+      <node id="292">
         <label>INotifyPropertyChanged</label>
       </node>
-      <node id="289">
+      <node id="291">
         <label>OverallViewModel::OverallViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model"/>
-        <childnode refid="290" relation="public-inheritance">
+        <childnode refid="292" relation="public-inheritance">
         </childnode>
-        <childnode refid="291" relation="usage">
+        <childnode refid="293" relation="usage">
           <edgelabel>ModelFacade</edgelabel>
         </childnode>
       </node>
-      <node id="288">
+      <node id="290">
         <label>myMD.ViewModel.MedicationTabViewModel.MedicineViewModel</label>
         <link refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model"/>
-        <childnode refid="289" relation="public-inheritance">
+        <childnode refid="291" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="291">
+      <node id="293">
         <label>myMD.ModelInterface.ModelFacadeInterface.IModelFacade</label>
         <link refid="interfacemy_m_d_1_1_model_interface_1_1_model_facade_interface_1_1_i_model_facade"/>
       </node>
     </collaborationgraph>
     <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" line="15" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/MedicationTabViewModel/MedicineViewModel.cs" bodystart="14" bodyend="169"/>
     <listofallmembers>
-      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1acff4179c3cbf2cd35046729e99cd6921" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>BleAdapter</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a52aaba100457ccebc86aa394afe9b222" prot="private" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>calcDuration</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1ae2bbbd81c983dbab025a3ed6a858c535" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>CancelPossible</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a45ae8e7eacf145d650cd97602a93018b" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>MaxStartDate</name></member>
@@ -301,6 +301,7 @@
       <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a31722e22ef4ffb25f9fc2f9629408ed4" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>MedicineViewModel</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1aee4be6017890f4b46f9adf50f0327322" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>MinEndDate</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1ab1b0e7b2ed9ae07614caa1e45b942e3f" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>ModelFacade</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a40cabfa5e7d2f08979a9ba5c3c8eead8" prot="protected" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>myMD_FileTransfer</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_medication_tab_view_model_1_1_medicine_view_model_1a93c6d3fe1297957deadbd1dc0d29475a" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>NameSort</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a0333c153387ba2d38fb31eeb0419bfcf" prot="public" virt="virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>OnPropertyChanged</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_overall_view_model_1_1_overall_view_model_1a1cc6b22c187773cdc72ee92f21ea5aba" prot="public" virt="non-virtual"><scope>myMD::ViewModel::MedicationTabViewModel::MedicineViewModel</scope><name>OverallViewModel</name></member>

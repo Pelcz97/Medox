@@ -3,19 +3,32 @@
   <compounddef id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model" kind="class" language="C#" prot="public">
     <compoundname>myMD::ViewModel::SendDataTabViewModel::ScanResultViewModel</compoundname>
       <sectiondef kind="property">
-      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a46290df9ba85d55980f02b4569ac8649" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
-        <type>IDevice</type>
-        <definition>IDevice myMD.ViewModel.SendDataTabViewModel.ScanResultViewModel.Device</definition>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a4dca1edb74b6b85465047896f464eb98" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>IBlePeripheral</type>
+        <definition>IBlePeripheral myMD.ViewModel.SendDataTabViewModel.ScanResultViewModel.ScanResult</definition>
         <argsstring></argsstring>
-        <name>Device</name>
+        <name>ScanResult</name>
         <briefdescription>
-<para>Das gefundene Gerät </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="16" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="16" bodyend="16"/>
-        <referencedby refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1aa20931acf9e9c3580019a5025d2f1abb" compoundref="_select_device_view_model_8cs" startline="55" endline="84">myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel.StartScan</referencedby>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="34" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="34" bodyend="34"/>
+        <referencedby refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_select_device_view_model_1a9c836594d494df1bfc2483c5ae4514b0" compoundref="_select_device_view_model_8cs" startline="65" endline="85">myMD.ViewModel.SendDataTabViewModel.SelectDeviceViewModel.StartScan</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1aa2d370aaf242496dcf429de8983dd6c3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>IEnumerable&lt; Guid &gt;</type>
+        <definition>IEnumerable&lt;Guid&gt; myMD.ViewModel.SendDataTabViewModel.ScanResultViewModel.services</definition>
+        <argsstring></argsstring>
+        <name>services</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="36" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="36" bodyend="36"/>
       </memberdef>
       <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a5fa7aaa6ca6d8d48917014cf1f99c091" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -28,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="27" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="27" bodyend="27"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="41" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="41" bodyend="41"/>
       </memberdef>
       <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a24eabbd36d43371c325d58b12c64c19f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
         <type>bool</type>
@@ -41,9 +54,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="32" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="32" bodyend="32"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="46" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="46" bodyend="46"/>
       </memberdef>
-      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a85f6973e1fc06fbbf200988d583fdb01" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a85f6973e1fc06fbbf200988d583fdb01" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>Guid</type>
         <definition>Guid myMD.ViewModel.SendDataTabViewModel.ScanResultViewModel.Uuid</definition>
         <argsstring></argsstring>
@@ -54,76 +67,39 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="37" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="37" bodyend="37"/>
-      </memberdef>
-      <memberdef kind="property" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1ad98e9265244511282e9a84855021ab3e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
-        <type>string</type>
-        <definition>string myMD.ViewModel.SendDataTabViewModel.ScanResultViewModel.LocalName</definition>
-        <argsstring></argsstring>
-        <name>LocalName</name>
-        <briefdescription>
-<para>Localer Name des Gerätes </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="42" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="42" bodyend="42"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="51" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="51" bodyend="51"/>
       </memberdef>
       </sectiondef>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a4004cd5c0830db3d00d8ecbedd2f0489" prot="private" static="no" mutable="no">
-        <type>bool</type>
-        <definition>bool myMD.ViewModel.SendDataTabViewModel.ScanResultViewModel.connected</definition>
-        <argsstring></argsstring>
-        <name>connected</name>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a9e78899bcb0d00b169ab62b5fcc115d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>myMD.ViewModel.SendDataTabViewModel.ScanResultViewModel.ScanResultViewModel</definition>
+        <argsstring>(IBlePeripheral scanResult)</argsstring>
+        <name>ScanResultViewModel</name>
+        <param>
+          <type>IBlePeripheral</type>
+          <declname>scanResult</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="18" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="18" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1add9345bb651a383905a0037ff8f0b9b8" prot="private" static="no" mutable="no">
-        <type>Guid</type>
-        <definition>Guid myMD.ViewModel.SendDataTabViewModel.ScanResultViewModel.uuid</definition>
-        <argsstring></argsstring>
-        <name>uuid</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="20" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="20" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a8e5ccc98ea6447cd4ecd0890e9c1174b" prot="private" static="no" mutable="no">
-        <type>string</type>
-        <definition>string myMD.ViewModel.SendDataTabViewModel.ScanResultViewModel.localName</definition>
-        <argsstring></argsstring>
-        <name>localName</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="22" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="22" bodyend="-1"/>
+        <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="29" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="29" bodyend="32"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Klasse die ein gefundenes Gerät modeliert </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="12" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="11" bodyend="43"/>
+    <location file="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" line="13" column="1" bodyfile="D:/Studium/WS17-18/PSE/Implementierung/myMD/myMD/ViewModel/SendDataTabViewModel/ScanResultViewModel.cs" bodystart="12" bodyend="54"/>
     <listofallmembers>
-      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a4004cd5c0830db3d00d8ecbedd2f0489" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::ScanResultViewModel</scope><name>connected</name></member>
-      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a46290df9ba85d55980f02b4569ac8649" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::ScanResultViewModel</scope><name>Device</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a5fa7aaa6ca6d8d48917014cf1f99c091" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::ScanResultViewModel</scope><name>DeviceName</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a24eabbd36d43371c325d58b12c64c19f" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::ScanResultViewModel</scope><name>IsConnected</name></member>
-      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1ad98e9265244511282e9a84855021ab3e" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::ScanResultViewModel</scope><name>LocalName</name></member>
-      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a8e5ccc98ea6447cd4ecd0890e9c1174b" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::ScanResultViewModel</scope><name>localName</name></member>
-      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1add9345bb651a383905a0037ff8f0b9b8" prot="private" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::ScanResultViewModel</scope><name>uuid</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a4dca1edb74b6b85465047896f464eb98" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::ScanResultViewModel</scope><name>ScanResult</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a9e78899bcb0d00b169ab62b5fcc115d7" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::ScanResultViewModel</scope><name>ScanResultViewModel</name></member>
+      <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1aa2d370aaf242496dcf429de8983dd6c3" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::ScanResultViewModel</scope><name>services</name></member>
       <member refid="classmy_m_d_1_1_view_model_1_1_send_data_tab_view_model_1_1_scan_result_view_model_1a85f6973e1fc06fbbf200988d583fdb01" prot="public" virt="non-virtual"><scope>myMD::ViewModel::SendDataTabViewModel::ScanResultViewModel</scope><name>Uuid</name></member>
     </listofallmembers>
   </compounddef>

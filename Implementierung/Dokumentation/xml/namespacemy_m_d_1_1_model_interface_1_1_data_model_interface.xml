@@ -140,6 +140,7 @@
         <name>Sensitivity</name>
         <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a3d0df45e579e37eccbab219eb94860daa28d0edd045e05cf5af64e35ae0c4c6ef" prot="public">
           <name>Low</name>
+          <initializer>= &apos;N&apos;</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -147,6 +148,7 @@
         </enumvalue>
         <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a3d0df45e579e37eccbab219eb94860daa960b44c579bc2f6818d2daaf9e4c16f0" prot="public">
           <name>Normal</name>
+          <initializer>= &apos;R&apos;</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -154,6 +156,7 @@
         </enumvalue>
         <enumvalue id="namespacemy_m_d_1_1_model_interface_1_1_data_model_interface_1a3d0df45e579e37eccbab219eb94860daa655d20c1ca69519ca647684edbb2db35" prot="public">
           <name>High</name>
+          <initializer>= &apos;V&apos;</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
