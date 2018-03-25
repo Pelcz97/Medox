@@ -132,7 +132,7 @@ namespace myMD.ViewModel.SendDataTabViewModel
         public void SetConnectedServer(){
             ModelFacade.SetConnectedServer(ConnectedServer);
             MessagingCenter.Send(this, "SetServer");
-            MessagingCenter.Unsubscribe<SelectDeviceViewModel>(this, "SavedMedication");
+            MessagingCenter.Unsubscribe<SelectDeviceViewModel>(this, "SetServer");
         }
     }
 }
