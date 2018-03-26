@@ -10,7 +10,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Label Text="Suche zunächst das Gerät deines Arztes und verbinde dich mit ihm. &#10; Du kannst die Anzahl an zur Verfügung stehenden Arztbriefen jederzeit aktualisieren. 
+            <Label Text="Suche zunächst das Gerät deines Arztes und verbinde dich. &#10; Du kannst die Anzahl an zur Verfügung stehenden Arztbriefen jederzeit aktualisieren. 
                 &#10;&#10; Entspricht die Versicherungsnummer in einem Arztbrief nicht deiner, wird dieser verworfen."
                    
                    Grid.Row="0"
