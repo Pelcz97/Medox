@@ -8,48 +8,59 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-
-            <Button Clicked="SelectDevice_Clicked"
+            <Label Text="Suche zunächst das Gerät deines Arztes und verbinde dich mit ihm. &#10; Du kannst die Anzahl an zur Verfügung stehenden Arztbriefen jederzeit aktualisieren. 
+                &#10;&#10; Entspricht die Versicherungsnummer in einem Arztbrief nicht deiner, wird dieser verworfen."
+                   
+                   Grid.Row="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   TextColor="White"/>
+            
+            <StackLayout Grid.Row="1">
+                <ActivityIndicator x:Name="LoadingIndicator" 
+                               Color="White" 
+                               IsRunning="true"/>
+                
+                <Button Clicked="SelectDevice_Clicked"
                     IsEnabled="{Binding SearchingPossible}"
                     Text="Geräte suchen"
                     TextColor="White"
                     FontAttributes="Bold"
-                    Grid.Row="0"
-                    BackgroundColor="#00B9B4"
-                    HorizontalOptions="Center"
-                    VerticalOptions="EndAndExpand"
-                    HeightRequest="50"
-                    WidthRequest="400"
-                    BorderRadius="10" />
-            
-            <Button Text="Aktualisieren"
-                    IsEnabled="{Binding ReadingNumberOfFilesPossible}"
-                    Command="{Binding RefreshNumberOfFiles}"
-                    TextColor="White"
-                    FontAttributes="Bold"
-                    Grid.Row="1"
-                    BackgroundColor="#00B9B4"
-                    HorizontalOptions="Center"
-                    VerticalOptions="EndAndExpand"
-                    HeightRequest="50"
-                    WidthRequest="400"
-                    BorderRadius="10" />
-            
-            <Button Clicked="LoadLetters_Clicked"
-                    IsEnabled="{Binding ReadingDataPossible}"
-                    Text="{Binding NumberOfFiles, StringFormat='{0:F0} Arztbriefe laden'}"
-                    TextColor="White"
-                    FontAttributes="Bold"
-                    Grid.Row="2"
                     BackgroundColor="#00B9B4"
                     HorizontalOptions="Center"
                     VerticalOptions="EndAndExpand"
                     HeightRequest="50"
                     WidthRequest="400"
                     BorderRadius="10"/>
+            
+                <Button Text="Aktualisieren"
+                    IsEnabled="{Binding ReadingNumberOfFilesPossible}"
+                    Command="{Binding RefreshNumberOfFiles}"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    BorderColor="White"
+                    BorderWidth="1"
+                    BackgroundColor="#191928"
+                    HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand"
+                    HeightRequest="50"
+                    WidthRequest="400"
+                    BorderRadius="10"/>
+
+                <Button Clicked="LoadLetters_Clicked"
+                    IsEnabled="{Binding ReadingDataPossible}"
+                    Text="{Binding NumberOfFiles, StringFormat='{0:F0} Arztbriefe laden'}"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    BackgroundColor="#00B9B4"
+                    HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand"
+                    HeightRequest="50"
+                    WidthRequest="400"
+                    BorderRadius="10"/>
+            </StackLayout>
             </Grid>
 	</ContentPage.Content>
 </local:CustomContentPage>

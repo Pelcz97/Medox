@@ -24,6 +24,7 @@ namespace myMD.View.SendDataTabPages
         public TransmittingDataPage()
         {
             InitializeComponent();
+            LoadingIndicator.IsVisible = false;
             vm = new TransmittingDataViewModel();
             BindingContext = vm;
         }
@@ -39,7 +40,9 @@ namespace myMD.View.SendDataTabPages
 
         async void LoadLetters_Clicked(object sender, System.EventArgs e)
         {
+            LoadingIndicator.IsVisible = true;
             await vm.ReceiveData();
+            LoadingIndicator.IsVisible = false;
             await DisplayAlert("Übertragung abgeschlossen", "Die neuen Arztbriefe befinden sich nun in der Übersicht.", "Okay");
         }
     }
