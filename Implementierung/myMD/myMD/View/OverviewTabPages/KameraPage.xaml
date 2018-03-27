@@ -1,13 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MediaSample.MediaPage">
-    <ScrollView>
-        <StackLayout Spacing="10" Padding="10">
-            <Button x:Name="takePhoto" Clicked="TakePhotoClicked" Text="Take Photo"/>
-            <Button x:Name="pickPhoto" Clicked="PickPhotoClicked" Text="Pick Photo"/>
+<local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
+    x:Class="myMD.View.OverviewTabPages.KameraPage">
+    <ContentPage.Content>
 
-            <Image x:Name="image"/>
-        </StackLayout>
-    </ScrollView>
-</ContentPage>
+        <ScrollView>
+            <StackLayout Spacing="10" Padding="10">
+                <Button x:Name="takePhoto" Clicked="TakePhoto_Clicked" Text="Take Photo"/>
+                <Button x:Name="pickPhoto" Clicked="PickPhoto_Clicked" Text="Pick Photo"/>
+
+                <Image x:Name="image"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</local:CustomContentPage>

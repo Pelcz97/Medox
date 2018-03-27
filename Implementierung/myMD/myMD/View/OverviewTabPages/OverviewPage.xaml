@@ -10,7 +10,6 @@
         AutomationId="KameraButton"
         Text="Kamera öffnen"
         Order="Primary"
-        Priority="-1"
         Clicked="KameraButton_Clicked"/>
   </ContentPage.ToolbarItems>
     

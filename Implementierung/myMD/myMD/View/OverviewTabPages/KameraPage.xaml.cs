@@ -15,7 +15,6 @@ namespace myMD.View.OverviewTabPages
     [Preserve(AllMembers = true)]
     public partial class KameraPage : CustomContentPage
     {
-        Image image { get; set; }
         public KameraPage()
         {
             InitializeComponent();
@@ -32,12 +31,6 @@ namespace myMD.View.OverviewTabPages
 
             var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
             {
-                Directory = "Test",
-                SaveToAlbum = true,
-                CompressionQuality = 75,
-                CustomPhotoSize = 50,
-                PhotoSize = PhotoSize.MaxWidthHeight,
-                MaxWidthHeight = 2000,
                 DefaultCamera = CameraDevice.Front
             });
 
