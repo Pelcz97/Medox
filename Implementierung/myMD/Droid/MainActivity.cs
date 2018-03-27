@@ -29,6 +29,7 @@ namespace myMD.Droid
             Window.ClearFlags(WindowManagerFlags.TranslucentStatus);
             Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
             Window.SetStatusBarColor(Android.Graphics.Color.Rgb(25, 25, 40));
+            Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity = this;
 
             try
             {
