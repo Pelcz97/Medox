@@ -1,8 +1,10 @@
-﻿using myMD.View.AbstractPages;
+﻿using Android.Media;
+using myMD.View.AbstractPages;
 using myMD.ViewModel.OverviewTabViewModel;
-using System;
+using Plugin.Media;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using static Xamarin.Forms.Image;
 
 namespace myMD.View.OverviewTabPages
 {
@@ -25,6 +27,15 @@ namespace myMD.View.OverviewTabPages
             InitializeComponent();
             vm = new OverviewViewModel();
             BindingContext = vm;
+        }
+
+        async void KameraButton_Clicked(object sender, System.EventArgs e)
+        {
+            var view = new NavigationPage(new KameraPage());
+            view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
+            view.BarTextColor = Color.White;
+            await Navigation.PushModalAsync(view);
+ 
         }
 
         /// <summary>

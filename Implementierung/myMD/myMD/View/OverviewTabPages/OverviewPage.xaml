@@ -4,6 +4,15 @@
     x:Class="myMD.View.OverviewTabPages.OverviewPage"
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
     Title="Übersicht">
+
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Name="Kamera"
+        AutomationId="KameraButton"
+        Text="Kamera öffnen"
+        Order="Primary"
+        Priority="-1"
+        Clicked="KameraButton_Clicked"/>
+  </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
             <ListView x:Name="DoctorsLettersList" 
