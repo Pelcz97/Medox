@@ -1,0 +1,34 @@
+diff a/Implementierung/myMD/myMD/View/OverviewTabPages/KameraPage.xaml.cs b/Implementierung/myMD/myMD/View/OverviewTabPages/KameraPage.xaml.cs	(rejected hunks)
+@@ -57,24 +57,24 @@
+                 await DisplayAlert("Photos Not Supported", ":( Permission not granted to photos.", "OK");
+                 return;
+             }
+-            var file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
++            var file = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
+             {
+-                PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium,
+-
++                PhotoSize = PhotoSize.Medium
+             });
+ 
+-
+             if (file == null)
+                 return;
+ 
+-            vm.File = file;
+-
+-            vm.Image.Source = ImageSource.FromStream(() =>
++            image.Source = ImageSource.FromStream(() =>
+             {
+                 var stream = file.GetStream();
++
+                 file.Dispose();
+                 return stream;
+             });
+         }
++
++
++
+     }
+ }
+\ No newline at end of file
