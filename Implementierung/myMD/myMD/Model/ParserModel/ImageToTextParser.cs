@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using myMD.Model.DependencyService;
 using myMD.Model.FileHelper;
 using Plugin.Media.Abstractions;
+using Xamarin.Forms.Internals;
 
 namespace myMD.Model.ParserModel
 {
@@ -34,7 +36,7 @@ namespace myMD.Model.ParserModel
             /// <summary>
             /// Gets the text visible in the specified image file by using the Computer Vision REST API.
             /// </summary>
-            /// <param name="imageFilePath">The image file.</param>
+            /// <param name="file">The image file.</param>
             static async void MakeOCRRequest(MediaFile file)
             {
                 HttpClient client = new HttpClient();
@@ -156,16 +158,5 @@ namespace myMD.Model.ParserModel
                 }
                 return sb.ToString();
             }
-
-        static class Extensions
-        {
-            public static void ForEach<T>(this IEnumerable<T> ie, Action<T> action)
-            {
-                foreach (var i in ie)
-                {
-                    action(i);
-                }
-            }
-        }
     }
 }
