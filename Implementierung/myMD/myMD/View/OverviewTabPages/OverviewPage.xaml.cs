@@ -1,7 +1,5 @@
-﻿using Android.Media;
-using myMD.View.AbstractPages;
+﻿using myMD.View.AbstractPages;
 using myMD.ViewModel.OverviewTabViewModel;
-using Plugin.Media;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using static Xamarin.Forms.Image;

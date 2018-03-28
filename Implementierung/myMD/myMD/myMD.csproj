@@ -175,6 +175,7 @@
     <Compile Include="ViewModel\ProfileTabViewModel\ProfileEditViewModel.cs" />
     <Compile Include="ViewModel\ProfileTabViewModel\ProfileItemViewModel.cs" />
     <Compile Include="ViewModel\SendDataTabViewModel\SelectDoctorsLettersViewModel.cs" />
+    <Compile Include="Model\ParserModel\ImageToTextParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ble.net, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
