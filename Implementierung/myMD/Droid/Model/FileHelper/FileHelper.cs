@@ -2,6 +2,8 @@ using Xamarin.Forms;
 using System;
 using System.IO;
 using Xamarin.Forms.Internals;
+using System.Threading.Tasks;
+using Android.Graphics;
 
 [assembly: Dependency(typeof(myMD.Model.FileHelper.Droid.FileHelper))]
 namespace myMD.Model.FileHelper.Droid
@@ -39,6 +41,8 @@ namespace myMD.Model.FileHelper.Droid
             File.WriteAllText(path, data);
             return filename;
         }
+
+       
     }
 
 }

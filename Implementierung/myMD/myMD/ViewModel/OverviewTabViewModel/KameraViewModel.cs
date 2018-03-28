@@ -19,18 +19,6 @@ namespace myMD.ViewModel.OverviewTabViewModel
         public Image Image { get; set; }
         public MediaFile File { get; set; }
 
-        public ICommand ScanImageButton
-        {
-            get
-            {
-                return new Command((sender) =>
-                {
-                    Debug.WriteLine("möp");
-                    ModelFacade.GenerateDoctorsLetterFromImage(GetImageAsByteArray(File));
-                });
-            }
-        }
-
         public async Task<ImageSource> TakePhoto(){
             File = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
             {
@@ -55,17 +43,21 @@ namespace myMD.ViewModel.OverviewTabViewModel
         }
 
         ImageSource GenerateImageSource(MediaFile file){
-            if (File == null)
+            if (file == null)
                 return null;
 
             var source = ImageSource.FromStream(() =>
             {
-                var stream = File.GetStream();
-                File.Dispose();
+                var stream = file.GetStream();
+                //file.Dispose();
                 return stream;
             });
 
             return source;
+        }
+
+        public void ScanImage(){
+            ModelFacade.GenerateDoctorsLetterFromImage(GetImageAsByteArray(File));
         }
 
         /// <summary>
@@ -82,6 +74,7 @@ namespace myMD.ViewModel.OverviewTabViewModel
                 return memoryStream.ToArray();
             }
         }
+
 
     }
 }

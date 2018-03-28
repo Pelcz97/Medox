@@ -15,7 +15,7 @@
                  Text="Scannen" 
                  Order="Primary" 
                  Priority="1" 
-                 Command="{Binding ScanImageButton}"/>
+                 Clicked="ScanButton_Clicked"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>

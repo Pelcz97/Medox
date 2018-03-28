@@ -59,7 +59,9 @@ namespace myMD.View.OverviewTabPages
             }
         }
 
-
-
+        void ScanButton_Clicked(object sender, System.EventArgs e)
+        {
+            vm.ScanImage();
+        }
     }
 }

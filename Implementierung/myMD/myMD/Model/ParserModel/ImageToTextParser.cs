@@ -20,7 +20,7 @@ namespace myMD.Model.ParserModel
             // **********************************************
 
             // Replace the subscriptionKey string value with your valid subscription key.
-            const string subscriptionKey = "635e475420a2463fa0c4a767491d56bb";
+            const string subscriptionKey = "ab36f4ca191d43ba827560d037333842";
 
             // Replace or verify the region.
             //
@@ -30,8 +30,8 @@ namespace myMD.Model.ParserModel
             //
             // NOTE: Free trial subscription keys are generated in the westcentralus region, so if you are using
             // a free trial subscription key, you should not need to change this region.
-            const string uriBase = "https://westus.api.cognitive.microsoft.com/vision/v1.0/ocr";
-
+            const string uriBase = "https://westeurope.api.cognitive.microsoft.com/vision/v1.0/ocr";
+            
 
             /// <summary>
             /// Gets the text visible in the specified image file by using the Computer Vision REST API.
