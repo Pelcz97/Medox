@@ -122,7 +122,7 @@
     <Compile Include="Model\ParserModel\ParserFacade.cs" />
     <Compile Include="Model\TransmissionModel\Bluetooth.cs" />
     <Compile Include="Model\TransmissionModel\IBluetooth.cs" />
-    <Compile Include="ViewModel\OverviewTabViewModel\KameraPageViewModel.cs" />
+    <Compile Include="ViewModel\OverviewTabViewModel\KameraViewModel.cs" />
     <Compile Include="ViewModel\ProfileTabViewModel\IntEnumConverter.cs" />
     <Compile Include="ViewModel\ProfileTabViewModel\StringExtensions.cs" />
     <Compile Include="View\AbstractPages\CustomContentPage.xaml.cs">

@@ -1,17 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
     x:Class="myMD.View.OverviewTabPages.KameraPage">
-    <ContentPage.Content>
 
+    <ContentPage.ToolbarItems>
+    <ToolbarItem Name="CancelButton" 
+                 Text="Abbrechen" 
+                 Order="Primary" 
+                 Priority="-1" 
+                 Clicked="CancelButton_Clicked"
+                 AutomationId="Cancel"/>
+    <ToolbarItem Name="ScanButton" 
+                 Text="Scannen" 
+                 Order="Primary" 
+                 Priority="1" 
+                 Command="{Binding ScanImageButton}"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        
         <ScrollView>
             <StackLayout Spacing="10" Padding="10">
                 <Button x:Name="takePhoto" Clicked="TakePhoto_Clicked" Text="Take Photo"/>
                 <Button x:Name="pickPhoto" Clicked="PickPhoto_Clicked" Text="Pick Photo"/>
 
-                <Image x:Name="image"
-                       Source="{Binding Image.Source}"/>
+                <Image x:Name="image"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

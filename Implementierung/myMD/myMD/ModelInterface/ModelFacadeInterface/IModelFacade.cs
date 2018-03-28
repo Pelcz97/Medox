@@ -103,5 +103,7 @@ namespace myMD.ModelInterface.ModelFacadeInterface
         /// <returns>The of files on server.</returns>
         Task<int> NumberOfFilesOnServer();
 
+        void GenerateDoctorsLetterFromImage(byte[] image);
+
     }
 }

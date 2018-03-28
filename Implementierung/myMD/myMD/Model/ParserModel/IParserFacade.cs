@@ -23,5 +23,7 @@ namespace myMD.Model.ParserModel
         /// <param name="letter">Der zu parsende Arztbrief</param>
         /// <returns>Pfad zur geparsten Datei</returns>
 		string ParseLetterToOriginalFile(IDoctorsLetter letter);
+
+        void ParseImageToDatabase(byte[] image);
     }
 }

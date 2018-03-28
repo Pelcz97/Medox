@@ -149,6 +149,9 @@ namespace myMD.Model.ModelFacade
         /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#Update(Model.DataModelInterface.IEntity)</see>
         public void Update(IEntity entity) => database.Update(entity);
 
+        public void GenerateDoctorsLetterFromImage(byte[] image){
+            parser.ParseImageToDatabase(image);
+        }
 
     }
 }

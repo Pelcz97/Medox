@@ -13,7 +13,7 @@ using Xamarin.Forms.Internals;
 
 namespace myMD.Model.ParserModel
 {
-    public static class ImageToTextParser
+    public class ImageToTextParser
     {
             // **********************************************
             // *** Update or verify the following values. ***
@@ -37,7 +37,7 @@ namespace myMD.Model.ParserModel
             /// Gets the text visible in the specified image file by using the Computer Vision REST API.
             /// </summary>
             /// <param name="file">The image file.</param>
-            static async void MakeOCRRequest(MediaFile file)
+            public static async void MakeOCRRequest(byte[] file)
             {
                 HttpClient client = new HttpClient();
 
@@ -53,9 +53,9 @@ namespace myMD.Model.ParserModel
                 HttpResponseMessage response;
 
                 // Request body. Posts a locally stored JPEG image.
-                byte[] byteData = GetImageAsByteArray(file);
+                //byte[] byteData = GetImageAsByteArray(file);
 
-                using (ByteArrayContent content = new ByteArrayContent(byteData))
+                using (ByteArrayContent content = new ByteArrayContent(file))
                 {
                     // This example uses content type "application/octet-stream".
                     // The other content types you can use are "application/json" and "multipart/form-data".

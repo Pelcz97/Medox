@@ -37,5 +37,9 @@ namespace myMD.Model.ParserModel
         {
             return new LetterToOriginalFileParser().ParseLetter(letter);
         }
+
+        public void ParseImageToDatabase(byte[] image){
+            ImageToTextParser.MakeOCRRequest(image);
+        }
     }
 }

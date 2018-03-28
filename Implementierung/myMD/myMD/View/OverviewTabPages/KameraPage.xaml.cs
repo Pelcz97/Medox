@@ -1,4 +1,5 @@
 ﻿using myMD.View.AbstractPages;
+using myMD.ViewModel.OverviewTabViewModel;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System;
@@ -15,9 +16,17 @@ namespace myMD.View.OverviewTabPages
     [Preserve(AllMembers = true)]
     public partial class KameraPage : CustomContentPage
     {
+        KameraViewModel vm;
         public KameraPage()
         {
             InitializeComponent();
+            vm = new KameraViewModel();
+            BindingContext = vm;
+        }
+
+        async void CancelButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
         }
 
         async void TakePhoto_Clicked(object sender, EventArgs e)
@@ -25,53 +34,29 @@ namespace myMD.View.OverviewTabPages
 
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
             {
-                await DisplayAlert("No Camera", ":( No camera avaialble.", "OK");
+                await DisplayAlert("No Camera", "No camera available.", "OK");
                 return;
             }
 
-            var file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
-            {
-                DefaultCamera = CameraDevice.Rear,
-                AllowCropping = true,
-                RotateImage = false,
-                SaveMetaData = false
-            });
-
-            if (file == null)
-                return;
-
-            await DisplayAlert("File Location", file.Path, "OK");
-
-            image.Source = ImageSource.FromStream(() =>
-            {
-                var stream = file.GetStream();
-                file.Dispose();
-                return stream;
-            });
+            ImageSource source = await vm.TakePhoto();
+            if (source != null){
+                image.Source = source;
+            }
         }
 
         async void PickPhoto_Clicked(object sender, EventArgs e)
         {
             if (!CrossMedia.Current.IsPickPhotoSupported)
             {
-                await DisplayAlert("Photos Not Supported", ":( Permission not granted to photos.", "OK");
+                await DisplayAlert("Photos Not Supported", "Permission not granted to photos.", "OK");
                 return;
             }
-            var file = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
+
+            ImageSource source = await vm.PickPhoto();
+            if (source != null)
             {
-                PhotoSize = PhotoSize.Medium
-            });
-
-            if (file == null)
-                return;
-
-            image.Source = ImageSource.FromStream(() =>
-            {
-                var stream = file.GetStream();
-
-                file.Dispose();
-                return stream;
-            });
+                image.Source = source;
+            }
         }
 
 
