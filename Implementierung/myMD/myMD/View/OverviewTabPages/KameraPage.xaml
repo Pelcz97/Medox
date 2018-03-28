@@ -10,7 +10,8 @@
                 <Button x:Name="takePhoto" Clicked="TakePhoto_Clicked" Text="Take Photo"/>
                 <Button x:Name="pickPhoto" Clicked="PickPhoto_Clicked" Text="Pick Photo"/>
 
-                <Image x:Name="image"/>
+                <Image x:Name="image"
+                       Source="{Binding Image.Source}"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

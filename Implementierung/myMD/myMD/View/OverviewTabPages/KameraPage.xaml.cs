@@ -1,4 +1,5 @@
 ﻿using myMD.View.AbstractPages;
+using myMD.ViewModel.OverviewTabViewModel;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System;
@@ -15,9 +16,13 @@ namespace myMD.View.OverviewTabPages
     [Preserve(AllMembers = true)]
     public partial class KameraPage : CustomContentPage
     {
+        KameraPageViewModel vm;
+
         public KameraPage()
         {
             InitializeComponent();
+            vm = new KameraPageViewModel();
+            this.BindingContext = vm;
         }
 
         async void TakePhoto_Clicked(object sender, EventArgs e)
@@ -31,7 +36,8 @@ namespace myMD.View.OverviewTabPages
 
             var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
             {
-                DefaultCamera = CameraDevice.Front
+                DefaultCamera = CameraDevice.Rear,
+                AllowCropping = true
             });
 
             if (file == null)
@@ -39,7 +45,8 @@ namespace myMD.View.OverviewTabPages
 
             await DisplayAlert("File Location", file.Path, "OK");
 
-            image.Source = ImageSource.FromStream(() =>
+            vm.File = file;
+            vm.Image.Source = ImageSource.FromStream(() =>
             {
                 var stream = file.GetStream();
                 file.Dispose();
@@ -64,15 +71,14 @@ namespace myMD.View.OverviewTabPages
             if (file == null)
                 return;
 
-            image.Source = ImageSource.FromStream(() =>
+            vm.File = file;
+
+            vm.Image.Source = ImageSource.FromStream(() =>
             {
                 var stream = file.GetStream();
                 file.Dispose();
                 return stream;
             });
         }
-
-
-
     }
 }
