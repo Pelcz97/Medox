@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-using myMD.Model.DependencyService;
-using myMD.Model.FileHelper;
+using Newtonsoft.Json.Linq;
 using Plugin.Media.Abstractions;
 using Xamarin.Forms.Internals;
 
@@ -54,7 +52,7 @@ namespace myMD.Model.ParserModel
 
                 // Request body. Posts a locally stored JPEG image.
                 //byte[] byteData = GetImageAsByteArray(file);
-
+                
                 using (ByteArrayContent content = new ByteArrayContent(file))
                 {
                     // This example uses content type "application/octet-stream".
@@ -66,10 +64,11 @@ namespace myMD.Model.ParserModel
 
                     // Get the JSON response.
                     string contentString = await response.Content.ReadAsStringAsync();
-
+                    
                     // Display the JSON response.
                     Debug.WriteLine("\nResponse:\n");
                     Debug.WriteLine(JsonPrettyPrint(contentString));
+                    Debug.WriteLine(TextOnly(contentString));
                 }
             }
 
@@ -158,5 +157,24 @@ namespace myMD.Model.ParserModel
                 }
                 return sb.ToString();
             }
+
+        static string TextOnly(string json){
+            JObject response = JObject.Parse(json);
+
+            string result = "";
+
+            for (int region = 0; region < response["regions"].Count(); region++) {
+                for (int line = 0; line < response["regions"][region]["lines"].Count(); line++) {
+                    for (int word = 0; word < response["regions"][region]["lines"][line]["words"].Count(); word++){
+                        result += (string)response["regions"][region]["lines"][line]["words"][word]["text"] + " ";
+                    }
+                    result += Environment.NewLine;
+                }
+                result += Environment.NewLine;
+                result += Environment.NewLine;
+            }
+
+            return result;
+        }
     }
 }
