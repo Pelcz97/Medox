@@ -29,9 +29,12 @@ namespace myMD.View.OverviewTabPages
                 return;
             }
 
-            var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
+            var file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
             {
-                DefaultCamera = CameraDevice.Front
+                DefaultCamera = CameraDevice.Rear,
+                AllowCropping = true,
+                RotateImage = false,
+                SaveMetaData = false
             });
 
             if (file == null)
@@ -54,12 +57,10 @@ namespace myMD.View.OverviewTabPages
                 await DisplayAlert("Photos Not Supported", ":( Permission not granted to photos.", "OK");
                 return;
             }
-            var file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
+            var file = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
             {
-                PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium,
-
+                PhotoSize = PhotoSize.Medium
             });
-
 
             if (file == null)
                 return;
@@ -67,6 +68,7 @@ namespace myMD.View.OverviewTabPages
             image.Source = ImageSource.FromStream(() =>
             {
                 var stream = file.GetStream();
+
                 file.Dispose();
                 return stream;
             });
