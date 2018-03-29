@@ -2,6 +2,7 @@ using myMD.ModelInterface.DataModelInterface;
 using System.Collections.Generic;
 using nexus.protocols.ble;
 using System.Threading.Tasks;
+using System;
 
 namespace myMD.ModelInterface.ModelFacadeInterface
 {
@@ -102,6 +103,10 @@ namespace myMD.ModelInterface.ModelFacadeInterface
         /// </summary>
         /// <returns>The of files on server.</returns>
         Task<int> NumberOfFilesOnServer();
+
+        Task<string> GetTextFromImage(byte[] image);
+
+        void GenerateDoctorsLetter(string DoctorsName, string DoctorsField, DateTime LetterDate, string Diagnosis);
 
     }
 }

@@ -55,7 +55,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
         /// <value>The medication start date.</value>
         public DateTime MedicationStartDate
         {
-            get =>Medication.Date;
+            get => Medication.Date;
             set { 
                 Medication.Date = value.Date;
                 MinEndDate = Medication.Date;

@@ -2,6 +2,7 @@ using myMD.Model.DatabaseModel;
 using myMD.ModelInterface.DataModelInterface;
 using System;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace myMD.Model.ParserModel
 {
@@ -36,6 +37,16 @@ namespace myMD.Model.ParserModel
         public string ParseLetterToOriginalFile(IDoctorsLetter letter)
         {
             return new LetterToOriginalFileParser().ParseLetter(letter);
+        }
+
+        public Task<string> ParseImageToDatabase(byte[] image)
+        {
+            return ImageToTextParser.MakeOCRRequest(image);
+        }
+
+        public void CreateDoctorsLetter(string DoctorsName, string DoctorsField, DateTime LetterDate, string Diagnosis, IEntityDatabase db){
+            ImageToTextParser p = new ImageToTextParser();
+            p.GenerateDoctorsLetter(DoctorsName, DoctorsField, LetterDate, Diagnosis, db);
         }
     }
 }

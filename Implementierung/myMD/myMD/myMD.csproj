@@ -74,6 +74,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\OverviewTabPages\ScannedDoctorsLetterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -122,6 +126,7 @@
     <Compile Include="Model\ParserModel\ParserFacade.cs" />
     <Compile Include="Model\TransmissionModel\Bluetooth.cs" />
     <Compile Include="Model\TransmissionModel\IBluetooth.cs" />
+    <Compile Include="ViewModel\OverviewTabViewModel\KameraViewModel.cs" />
     <Compile Include="ViewModel\ProfileTabViewModel\IntEnumConverter.cs" />
     <Compile Include="ViewModel\ProfileTabViewModel\StringExtensions.cs" />
     <Compile Include="View\AbstractPages\CustomContentPage.xaml.cs">
@@ -176,6 +181,10 @@
     <Compile Include="ViewModel\ProfileTabViewModel\ProfileItemViewModel.cs" />
     <Compile Include="ViewModel\SendDataTabViewModel\SelectDoctorsLettersViewModel.cs" />
     <Compile Include="Model\ParserModel\ImageToTextParser.cs" />
+    <Compile Include="View\OverviewTabPages\ScannedDoctorsLetterPage.xaml.cs">
+      <DependentUpon>ScannedDoctorsLetterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\OverviewTabViewModel\ScannedDoctorsLetterViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ble.net, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -207,15 +216,6 @@
     </Reference>
     <Reference Include="SQLitePCLRaw.provider.e_sqlite3">
       <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.net45.1.1.9\lib\net45\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.core">
-      <HintPath>..\packages\SQLitePCLRaw.core.1.1.9\lib\portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.batteries_green">
-      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.9\lib\portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.batteries_green.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.batteries_v2">
-      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.9\lib\portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.Interfaces">
       <HintPath>..\packages\System.Reactive.Interfaces.3.1.1\lib\netstandard1.0\System.Reactive.Interfaces.dll</HintPath>
@@ -249,6 +249,15 @@
     </Reference>
     <Reference Include="nexus.core">
       <HintPath>..\packages\nexus.core.0.32.0\lib\portable45-net45+win8\nexus.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core">
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.10\lib\portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.10\lib\portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.10\lib\portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

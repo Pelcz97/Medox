@@ -7,6 +7,8 @@ using nexus.protocols.ble;
 using System.Diagnostics;
 using nexus.protocols.ble.gatt;
 using System.Text;
+using Newtonsoft.Json.Linq;
+using System.Linq;
 
 namespace myMDTests.Model.TransmissionModel
 {
@@ -45,5 +47,6 @@ namespace myMDTests.Model.TransmissionModel
 
             Assert.AreEqual(result.Length, 0);
         }
+
     }
 }

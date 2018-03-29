@@ -40,7 +40,7 @@ namespace myMD.Model.ParserModel
             IList<Medication> meds = ParseMedications();
             DoctorsLetter letter = ParseLetter();
             db.Insert(letter);
-            //Erstelle Beziehungen zwischen den geparsten Entitäten
+            //Erstelle Beziehungen zwischen den geparsten Entit?ten
             letter.Profile = profile;
             letter.DatabaseDoctor = doctor;
             foreach (Medication med in meds)
@@ -80,5 +80,6 @@ namespace myMD.Model.ParserModel
         /// </summary>
         /// <returns>Das erstellte Profil</returns>
 		protected abstract Profile ParseProfile();
+
     }
 }

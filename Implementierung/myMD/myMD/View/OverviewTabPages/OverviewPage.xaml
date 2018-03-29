@@ -7,15 +7,13 @@
 
   <ContentPage.ToolbarItems>
     <ToolbarItem Name="Kamera"
-        AutomationId="KameraButton"
-        Text="Kamera öffnen"
+        Text="Hinzufügen"
         Order="Primary"
         Clicked="KameraButton_Clicked"/>
   </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
-            <ListView x:Name="DoctorsLettersList" 
-                AutomationId="DoctorsLetterList"
+            <ListView x:Name="DoctorsLettersList"
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
                 ItemsSource="{Binding DoctorsLettersItemsList}" 
