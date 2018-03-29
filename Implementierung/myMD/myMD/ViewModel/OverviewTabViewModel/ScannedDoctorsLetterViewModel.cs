@@ -16,9 +16,9 @@ namespace myMD.ViewModel.OverviewTabViewModel
             }
             set
             {
-                Debug.WriteLine("1Möp");
                 this.NewDoctorsName = value;
-
+                SavingPossible = (NewDoctorsName != null && NewDoctorsField != null);
+                OnPropertyChanged("SavingPossible");
             }
         }
 
@@ -31,9 +31,10 @@ namespace myMD.ViewModel.OverviewTabViewModel
             }
             set
             {
-                Debug.WriteLine("2Möp");
+                
                 NewDoctorsField = value;
-
+                SavingPossible = (NewDoctorsName != null && NewDoctorsField != null);
+                OnPropertyChanged("SavingPossible");
             }
         }
 
@@ -53,16 +54,9 @@ namespace myMD.ViewModel.OverviewTabViewModel
         }
 
         public void SaveNewDoctorsLetter(){
-            Debug.WriteLine("5Möp");
+            
             ModelFacade.GenerateDoctorsLetter(NewDoctorsName, NewDoctorsField, NewLetterDate, Diagnosis);
-            Debug.WriteLine("6Möp");
-        }
 
-        void checkProperty(){
-            Debug.WriteLine("7Möp");
-            SavingPossible = (NewDoctorsName != null && NewDoctorsField != null);
-            OnPropertyChanged("SavingPossible");
-            Debug.WriteLine("8Möp");
         }
     }
 }
