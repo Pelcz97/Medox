@@ -40,7 +40,7 @@
                                 AutomationId="LastNameEntry"
                                 VerticalOptions="CenterAndExpand" 
                                 BackgroundColor="#191928" 
-                                Placeholder="Name" 
+                                Placeholder="Nachname" 
                                 PlaceholderColor="Gray" 
                                 TextColor="White" 
                                 Margin="15,0,15,10" 

@@ -27,14 +27,20 @@
                     </Grid.RowDefinitions>
                     
                     <Entry Text="{Binding DoctorsName}"  
-                           TextColor="#191928" 
+                           TextColor="#191928"
+                           Placeholder="Name des Arztes"
+                           PlaceholderColor="Gray"
+                           BackgroundColor="#00B9B4"
                            FontSize="Large" 
                            FontAttributes="Bold" 
                            HorizontalTextAlignment="Start" 
                            Grid.Row="0" />
                     
                     <Entry Text="{Binding DoctorsField}" 
-                           TextColor="#FFFFFF" 
+                           TextColor="#FFFFFF"
+                           Placeholder="Fachgebiet des Arztes"
+                           PlaceholderColor="Gray"
+                           BackgroundColor="#00B9B4"
                            FontSize="45" 
                            FontAttributes="Bold"
                            HorizontalTextAlignment="Start" 
