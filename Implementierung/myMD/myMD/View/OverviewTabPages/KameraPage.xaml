@@ -5,30 +5,40 @@
     x:Class="myMD.View.OverviewTabPages.KameraPage">
 
     <ContentPage.ToolbarItems>
-    <ToolbarItem Name="CancelButton" 
+
+        <ToolbarItem Name="ScanButton" 
                  Text="Abbrechen" 
                  Order="Primary" 
                  Priority="-1" 
-                 Clicked="CancelButton_Clicked"
-                 AutomationId="Cancel"/>
-        <ToolbarItem Name="PictureButton" 
-                 Text="Photo auswählen" 
-                 Order="Primary" 
-                 Priority="0" 
-                 Clicked="PictureButton_Clicked"/>
+                 Clicked="CancelButton_Clicked"/>
+        
         <ToolbarItem Name="ScanButton" 
-                 Text="Scannen" 
+                 Text="Weiter" 
                  Order="Primary" 
                  Priority="1" 
                  Clicked="ScanButton_Clicked"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
-        
-        <ScrollView>
-            <StackLayout Spacing="10" Padding="10">
-                <Image x:Name="image"/>
-            </StackLayout>
-        </ScrollView>
+        <Grid>
+        <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="image" Grid.Row="0" HorizontalOptions="FillAndExpand"/>
+            
+            <Button Clicked="SelectImage_Clicked"
+                    Text="Aufnahme auswählen"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Grid.Row="1"
+                    BackgroundColor="#00B9B4"
+                    HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand"
+                    HeightRequest="50"
+                    WidthRequest="400"
+                    BorderRadius="10" 
+                    Margin="15,0,15,15"/>
+        </Grid>
     </ContentPage.Content>
 </local:CustomContentPage>

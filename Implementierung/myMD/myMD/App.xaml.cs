@@ -16,6 +16,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.PlatformConfiguration;
 
 namespace myMD
 {
@@ -31,22 +32,22 @@ namespace myMD
             var SendDataPage = new Xamarin.Forms.NavigationPage(new SendDataPage());
             var ProfilePage = new Xamarin.Forms.NavigationPage(new ProfilePage());
 
-            OverviewPage.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersLargeTitles(true);
+            OverviewPage.On<iOS>().SetPrefersLargeTitles(true);
             OverviewPage.SetValue(Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty, Color.White);
             OverviewPage.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             OverviewPage.BarTextColor = Color.FromHex("FFFFFF");
             
-            MedicationPage.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersLargeTitles(true);
+            MedicationPage.On<iOS>().SetPrefersLargeTitles(true);
             MedicationPage.SetValue(Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty, Color.White);
             MedicationPage.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             MedicationPage.BarTextColor = Color.FromHex("FFFFFF");
 
-            SendDataPage.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersLargeTitles(true);
+            SendDataPage.On<iOS>().SetPrefersLargeTitles(true);
             SendDataPage.SetValue(Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty, Color.White);
             SendDataPage.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             SendDataPage.BarTextColor = Color.FromHex("FFFFFF");
-
-            ProfilePage.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersLargeTitles(true);
+            
+            ProfilePage.On<iOS>().SetPrefersLargeTitles(true);
             ProfilePage.SetValue(Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty, Color.White);
             ProfilePage.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             ProfilePage.BarTextColor = Color.FromHex("FFFFFF");

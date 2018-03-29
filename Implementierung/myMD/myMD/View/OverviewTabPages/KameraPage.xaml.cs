@@ -24,26 +24,25 @@ namespace myMD.View.OverviewTabPages
             BindingContext = vm;
         }
 
-        async void CancelButton_Clicked(object sender, EventArgs e)
-        {
+
+        async void CancelButton_Clicked(object sender, EventArgs e){
             await Navigation.PopModalAsync();
         }
 
-        async void PictureButton_Clicked(object sender, EventArgs e)
+        async void SelectImage_Clicked(object sender, EventArgs e)
         {
-            var answer = await DisplayActionSheet("Aktion auswählen", "Abbrechen", null, "Photo auswählen", "Photo aufnehmen");
+            var answer = await DisplayActionSheet(null, "Abbrechen", null, "Foto aufnehmen", "Fotomediathek");
             switch (answer)
             {
-                case "Photo auswählen":
+                case "Fotomediathek":
                     PickPhoto();
                     break;
-                case "Photo aufnehmen":
+                case "Foto aufnehmen":
                     TakePhoto();
                     break;
                 default:
                     break;
             }
-
         }
 
         async void TakePhoto()

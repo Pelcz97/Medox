@@ -3,6 +3,8 @@ using myMD.View.AbstractPages;
 using myMD.ViewModel.SendDataTabViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace myMD.View.SendDataTabPages
 {
@@ -32,12 +34,13 @@ namespace myMD.View.SendDataTabPages
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="e">E.</param>
-        void ReceiveDataButton_Clicked(object sender, EventArgs e)
+        async void ReceiveDataButton_Clicked(object sender, EventArgs e)
         {
             var page = new TransmittingDataPage();
 
-            NavigationPage.SetBackButtonTitle(page, "Senden");
-            Navigation.PushAsync(page);
+            Xamarin.Forms.NavigationPage.SetBackButtonTitle(page, "Senden");
+            page.On<iOS>().SetLargeTitleDisplay(LargeTitleDisplayMode.Never);
+            await Navigation.PushAsync(page);
         }
     }
 }
