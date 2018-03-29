@@ -1,3 +1,5 @@
+using System;
+using System.Threading.Tasks;
 using myMD.Model.DatabaseModel;
 using myMD.ModelInterface.DataModelInterface;
 
@@ -24,6 +26,8 @@ namespace myMD.Model.ParserModel
         /// <returns>Pfad zur geparsten Datei</returns>
 		string ParseLetterToOriginalFile(IDoctorsLetter letter);
 
-        void ParseImageToDatabase(byte[] image);
+        Task<string> ParseImageToDatabase(byte[] image);
+
+        void CreateDoctorsLetter(string DoctorsName, string DoctorsField, DateTime LetterDate, string Diagnosis, IEntityDatabase db);
     }
 }

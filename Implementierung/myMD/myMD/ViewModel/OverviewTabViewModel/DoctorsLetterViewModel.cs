@@ -60,5 +60,10 @@ namespace myMD.ViewModel.OverviewTabViewModel
             DoctorsLetter = letter.DoctorsLetter;
             Debug.WriteLine(letter.DoctorsLetter.Diagnosis);
         }
+
+        public DoctorsLetterViewModel()
+        {
+           
+        }
     }
 }

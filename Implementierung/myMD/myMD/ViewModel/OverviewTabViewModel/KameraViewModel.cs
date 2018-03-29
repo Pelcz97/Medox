@@ -69,8 +69,8 @@ namespace myMD.ViewModel.OverviewTabViewModel
             return source;
         }
 
-        public void ScanImage(){
-            ModelFacade.GenerateDoctorsLetterFromImage(GetImageAsByteArray(File));
+        public Task<string> ScanImage(){
+            return ModelFacade.GetTextFromImage(GetImageAsByteArray(File));
         }
 
         /// <summary>

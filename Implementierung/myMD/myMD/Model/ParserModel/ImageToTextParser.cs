@@ -1,17 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading.Tasks;
+using myMD.Model.DatabaseModel;
+using myMD.Model.DataModel;
+using myMD.ModelInterface.DataModelInterface;
 using Newtonsoft.Json.Linq;
 using Plugin.Media.Abstractions;
 using Xamarin.Forms.Internals;
 
 namespace myMD.Model.ParserModel
 {
-    public class ImageToTextParser
+    public class ImageToTextParser : FileToDatabaseParser
     {
             // **********************************************
             // *** Update or verify the following values. ***
@@ -35,7 +40,7 @@ namespace myMD.Model.ParserModel
             /// Gets the text visible in the specified image file by using the Computer Vision REST API.
             /// </summary>
             /// <param name="file">The image file.</param>
-            public static async void MakeOCRRequest(byte[] file)
+            public static async Task<string> MakeOCRRequest(byte[] file)
             {
                 HttpClient client = new HttpClient();
 
@@ -65,10 +70,7 @@ namespace myMD.Model.ParserModel
                     // Get the JSON response.
                     string contentString = await response.Content.ReadAsStringAsync();
                     
-                    // Display the JSON response.
-                    Debug.WriteLine("\nResponse:\n");
-                    Debug.WriteLine(JsonPrettyPrint(contentString));
-                    Debug.WriteLine(TextOnly(contentString));
+                    return TextOnly(contentString);
                 }
             }
 
@@ -175,6 +177,61 @@ namespace myMD.Model.ParserModel
             }
 
             return result;
+        }
+
+        protected override void Init(string file)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override Doctor ParseDoctor()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override DoctorsLetter ParseLetter()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override IList<Medication> ParseMedications()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override Profile ParseProfile()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GenerateDoctorsLetter(string DoctorsName, string DoctorsField, DateTime LetterDate, string Diagnosis, IEntityDatabase db){
+            Doctor eqDoc = new Doctor();
+            eqDoc.Name = DoctorsName;
+            eqDoc.Field = DoctorsField;
+
+            IDoctor doc = db.GetDoctor(eqDoc);
+            Doctor doctor;
+            //F黦e neuen Arzt in die Datenbank ein, falls dieser dort noch nicht existiert
+            if (doc == null)
+            {
+                doctor = eqDoc;
+                db.Insert(doctor);
+            }
+            else
+            {
+                doctor = doc.ToDoctor();
+            }
+
+            DoctorsLetter letter = new DoctorsLetter();
+            letter.Diagnosis = Diagnosis;
+            letter.Date = LetterDate;
+            db.Insert(letter);
+            //Erstelle Beziehungen zwischen den geparsten Entitäten
+            //letter.Profile = profile;
+            letter.DatabaseDoctor = doctor;
+
+            db.Update(letter);
+
         }
     }
 }

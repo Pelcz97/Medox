@@ -14,6 +14,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Text;
 using System.Diagnostics;
+using System;
 
 namespace myMD.Model.ModelFacade
 {
@@ -149,8 +150,12 @@ namespace myMD.Model.ModelFacade
         /// <see>myMD.ModelInterface.ModelFacadeInterface.IModelFacade#Update(Model.DataModelInterface.IEntity)</see>
         public void Update(IEntity entity) => database.Update(entity);
 
-        public void GenerateDoctorsLetterFromImage(byte[] image){
-            parser.ParseImageToDatabase(image);
+        public Task<string> GetTextFromImage(byte[] image){
+            return parser.ParseImageToDatabase(image);
+        }
+
+        public void GenerateDoctorsLetter(string DoctorsName, string DoctorsField, DateTime LetterDate, string Diagnosis){
+            parser.CreateDoctorsLetter(DoctorsName, DoctorsField, LetterDate, Diagnosis, database);
         }
 
     }

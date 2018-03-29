@@ -4,6 +4,7 @@ using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -75,13 +76,14 @@ namespace myMD.View.OverviewTabPages
             }
         }
 
-        void ScanButton_Clicked(object sender, System.EventArgs e)
+        async void ScanButton_Clicked(object sender, System.EventArgs e)
         {
-            //vm.ScanImage();
+            //string result = await vm.ScanImage();
+            //Debug.WriteLine(result);
             var view = new NavigationPage(new ScannedDoctorsLetterPage());
             view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             view.BarTextColor = Color.White;
-            Navigation.PushAsync(view);
+            await Navigation.PushAsync(view);
 
         }
     }
