@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using myMD.View.AbstractPages;
 using myMD.ViewModel.OverviewTabViewModel;
 using Xamarin.Forms;
@@ -18,10 +19,11 @@ namespace myMD.View.OverviewTabPages
             BindingContext = vm;
         }
 
-
         async void SaveLetter_Clicked(object sender, System.EventArgs e)
         {
+            Debug.WriteLine("Möp");
             vm.SaveNewDoctorsLetter();
+            Debug.WriteLine("2Möp");
             await Navigation.PopModalAsync();
         }
     }

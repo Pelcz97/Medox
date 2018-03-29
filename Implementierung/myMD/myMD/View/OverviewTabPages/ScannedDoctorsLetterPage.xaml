@@ -9,7 +9,8 @@
                      Text="Fertig" 
                      Order="Primary" 
                      Priority="1" 
-                     Clicked="SaveLetter_Clicked" />
+                     Clicked="SaveLetter_Clicked" 
+                     IsEnabled="{Binding SavingPossible}" />
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
@@ -26,7 +27,7 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     
-                    <Entry Text="{Binding DoctorsName}"  
+                    <Entry Text="{Binding newDoctorsName}"  
                            TextColor="#191928"
                            Placeholder="Name des Arztes"
                            PlaceholderColor="Gray"
@@ -36,7 +37,7 @@
                            HorizontalTextAlignment="Start" 
                            Grid.Row="0" />
                     
-                    <Entry Text="{Binding DoctorsField}" 
+                    <Entry Text="{Binding newDoctorsField}" 
                            TextColor="#FFFFFF"
                            Placeholder="Fachgebiet des Arztes"
                            PlaceholderColor="Gray"
@@ -48,7 +49,7 @@
                 </Grid>
             </Frame>
             
-            <Label Text="{Binding DoctorsLetterDate, StringFormat='{0:MMMM dd, yyyy}'}" 
+            <Label Text="{Binding newLetterDate, StringFormat='{0:MMMM dd, yyyy}'}" 
                    TextColor="#FFFFFF" 
                    FontSize="Medium" 
                    FontAttributes="Bold" 
