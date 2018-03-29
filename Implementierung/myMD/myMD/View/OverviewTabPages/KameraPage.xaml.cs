@@ -78,9 +78,9 @@ namespace myMD.View.OverviewTabPages
 
         async void ScanButton_Clicked(object sender, System.EventArgs e)
         {
-            //string result = await vm.ScanImage();
-            //Debug.WriteLine(result);
-            var view = new NavigationPage(new ScannedDoctorsLetterPage());
+            string diagnosis = "Test";
+            Debug.WriteLine(diagnosis);
+            var view = new NavigationPage(new ScannedDoctorsLetterPage(diagnosis));
             view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             view.BarTextColor = Color.White;
             await Navigation.PushAsync(view);

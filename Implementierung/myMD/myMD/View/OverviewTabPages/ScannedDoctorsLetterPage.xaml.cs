@@ -9,13 +9,18 @@ namespace myMD.View.OverviewTabPages
     public partial class ScannedDoctorsLetterPage : CustomContentPage
     {
         ScannedDoctorsLetterViewModel vm;
-        public ScannedDoctorsLetterPage()
+        public ScannedDoctorsLetterPage(string diagnosis)
         {
             InitializeComponent();
-            vm = new ScannedDoctorsLetterViewModel();
+            vm = new ScannedDoctorsLetterViewModel(diagnosis);
             BindingContext = vm;
         }
 
 
+        async void SaveLetter_Clicked(object sender, System.EventArgs e)
+        {
+            vm.SaveNewDoctorsLetter();
+            await Navigation.PopModalAsync();
+        }
     }
 }

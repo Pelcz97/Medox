@@ -73,7 +73,7 @@ namespace myMD.View.OverviewTabPages
         /// </summary>
         /// <param name="sender">Sender der diese Methode aufruft</param>
         /// <param name="e">Event des Senders</param>
-        void DoctorsLetter_Clicked(object sender, SelectedItemChangedEventArgs e)
+        async void DoctorsLetter_Clicked(object sender, SelectedItemChangedEventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             if (selectedItem == null)
@@ -81,7 +81,7 @@ namespace myMD.View.OverviewTabPages
             
             var view = new DetailedDoctorsLetterPage(e.SelectedItem);
 
-            Navigation.PushModalAsync(view);
+            await Navigation.PushModalAsync(view);
             ((ListView)sender).SelectedItem = null;
 
         }

@@ -3,6 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
              x:Class="myMD.View.OverviewTabPages.ScannedDoctorsLetterPage">
+
+             <ContentPage.ToolbarItems>
+        
+        <ToolbarItem Name="SaveMedicationButton" 
+            Text="Fertig" 
+            Order="Primary" 
+            Priority="1" 
+            Clicked="SaveLetter_Clicked"/>
+        
+    </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
         
