@@ -11,7 +11,12 @@
                  Priority="-1" 
                  Clicked="CancelButton_Clicked"
                  AutomationId="Cancel"/>
-    <ToolbarItem Name="ScanButton" 
+        <ToolbarItem Name="PictureButton" 
+                 Text="Photo auswählen" 
+                 Order="Primary" 
+                 Priority="0" 
+                 Clicked="PictureButton_Clicked"/>
+        <ToolbarItem Name="ScanButton" 
                  Text="Scannen" 
                  Order="Primary" 
                  Priority="1" 
@@ -22,9 +27,6 @@
         
         <ScrollView>
             <StackLayout Spacing="10" Padding="10">
-                <Button x:Name="takePhoto" Clicked="TakePhoto_Clicked" Text="Take Photo"/>
-                <Button x:Name="pickPhoto" Clicked="PickPhoto_Clicked" Text="Pick Photo"/>
-
                 <Image x:Name="image"/>
             </StackLayout>
         </ScrollView>

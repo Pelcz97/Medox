@@ -29,7 +29,24 @@ namespace myMD.View.OverviewTabPages
             await Navigation.PopModalAsync();
         }
 
-        async void TakePhoto_Clicked(object sender, EventArgs e)
+        async void PictureButton_Clicked(object sender, EventArgs e)
+        {
+            var answer = await DisplayActionSheet("Aktion auswählen", "Abbrechen", null, "Photo auswählen", "Photo aufnehmen");
+            switch (answer)
+            {
+                case "Photo auswählen":
+                    PickPhoto();
+                    break;
+                case "Photo aufnehmen":
+                    TakePhoto();
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+        async void TakePhoto()
         {
 
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
@@ -44,7 +61,7 @@ namespace myMD.View.OverviewTabPages
             }
         }
 
-        async void PickPhoto_Clicked(object sender, EventArgs e)
+        async void PickPhoto()
         {
             if (!CrossMedia.Current.IsPickPhotoSupported)
             {
