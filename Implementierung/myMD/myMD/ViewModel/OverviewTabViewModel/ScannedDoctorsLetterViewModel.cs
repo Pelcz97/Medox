@@ -8,36 +8,36 @@ namespace myMD.ViewModel.OverviewTabViewModel
     [Preserve(AllMembers = true)]
     public class ScannedDoctorsLetterViewModel : OverallViewModel.OverallViewModel
     {
-        public string newDoctorsName
+        public string NewDoctorsName
         {
             get
             {
-                return newDoctorsName;
+                return NewDoctorsName;
             }
             set
             {
                 Debug.WriteLine("1Möp");
-                this.newDoctorsName = value;
-                checkProperty();
+                this.NewDoctorsName = value;
+
             }
         }
 
 
-        public string newDoctorsField
+        public string NewDoctorsField
         {
             get
             {
-                return newDoctorsField;
+                return NewDoctorsField;
             }
             set
             {
                 Debug.WriteLine("2Möp");
-                newDoctorsField = value;
-                checkProperty();
+                NewDoctorsField = value;
+
             }
         }
 
-        public DateTime newLetterDate { get; set; }
+        public DateTime NewLetterDate { get; set; }
 
         public string Diagnosis { get; set; }
 
@@ -45,23 +45,22 @@ namespace myMD.ViewModel.OverviewTabViewModel
 
         public ScannedDoctorsLetterViewModel(string diagnosis)
         {
-            Debug.WriteLine("3Möp");
-            newLetterDate = DateTime.Today;
+            NewLetterDate = DateTime.Today;
             SavingPossible = false;
             OnPropertyChanged("SavingPossible");
             Diagnosis = diagnosis;
-            Debug.WriteLine("4Möp");
+
         }
 
         public void SaveNewDoctorsLetter(){
             Debug.WriteLine("5Möp");
-            ModelFacade.GenerateDoctorsLetter(newDoctorsName, newDoctorsField, newLetterDate, Diagnosis);
+            ModelFacade.GenerateDoctorsLetter(NewDoctorsName, NewDoctorsField, NewLetterDate, Diagnosis);
             Debug.WriteLine("6Möp");
         }
 
         void checkProperty(){
             Debug.WriteLine("7Möp");
-            SavingPossible = (newDoctorsName != null && newDoctorsField != null);
+            SavingPossible = (NewDoctorsName != null && NewDoctorsField != null);
             OnPropertyChanged("SavingPossible");
             Debug.WriteLine("8Möp");
         }
