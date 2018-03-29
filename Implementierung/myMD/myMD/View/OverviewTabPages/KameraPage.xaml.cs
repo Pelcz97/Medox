@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.Xaml;
 
 namespace myMD.View.OverviewTabPages
@@ -80,10 +82,11 @@ namespace myMD.View.OverviewTabPages
         {
             string diagnosis = "Test";
             Debug.WriteLine(diagnosis);
-            var view = new NavigationPage(new ScannedDoctorsLetterPage(diagnosis));
-            view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
-            view.BarTextColor = Color.White;
-            await Navigation.PushAsync(view);
+
+            var page = new ScannedDoctorsLetterPage(diagnosis);
+            page.On<iOS>().SetLargeTitleDisplay(LargeTitleDisplayMode.Never);
+            Xamarin.Forms.NavigationPage.SetBackButtonTitle(page, "Übersicht");
+            await Navigation.PushAsync(page);
 
         }
     }

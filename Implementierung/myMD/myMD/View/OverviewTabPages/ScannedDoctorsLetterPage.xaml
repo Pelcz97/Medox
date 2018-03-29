@@ -30,13 +30,13 @@
                            TextColor="#191928" 
                            FontSize="Large" 
                            FontAttributes="Bold" 
-                           VerticalTextAlignment="End" HorizontalTextAlignment="Start" 
+                           HorizontalTextAlignment="Start" 
                            Grid.Row="0" />
                     
                     <Entry Text="{Binding DoctorsField}" 
-                           TextColor="#FFFFFF" FontSize="45" 
-                           FontAttributes="Bold" 
-                           VerticalTextAlignment="Center" 
+                           TextColor="#FFFFFF" 
+                           FontSize="45" 
+                           FontAttributes="Bold"
                            HorizontalTextAlignment="Start" 
                            Grid.Row="1" />
                 </Grid>
