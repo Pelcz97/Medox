@@ -77,7 +77,12 @@ namespace myMD.View.OverviewTabPages
 
         void ScanButton_Clicked(object sender, System.EventArgs e)
         {
-            vm.ScanImage();
+            //vm.ScanImage();
+            var view = new NavigationPage(new ScannedDoctorsLetterPage());
+            view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
+            view.BarTextColor = Color.White;
+            Navigation.PushAsync(view);
+
         }
     }
 }

@@ -61,7 +61,7 @@ namespace myMD.View.MedicationTabPages
         /// </summary>
         /// <param name="sender">Sender der diese Methode aufruft</param>
         /// <param name="e">Event des Senders</param>
-        async void CancelButton_Clicked(object sender, System.EventArgs e)
+        async void CancelButton_Clicked(object sender, EventArgs e)
         {
             vm.CancelMedication();
             await Navigation.PopModalAsync();
@@ -72,7 +72,7 @@ namespace myMD.View.MedicationTabPages
         /// </summary>
         /// <param name="sender">Sender der diese Methode aufruft</param>
         /// <param name="e">Event des Senders</param>
-        async void SaveMedication_Clicked(object sender, System.EventArgs e)
+        async void SaveMedication_Clicked(object sender, EventArgs e)
         {
             vm.SaveNewMedication();
             await Navigation.PopModalAsync();

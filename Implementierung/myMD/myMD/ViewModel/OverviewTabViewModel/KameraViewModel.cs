@@ -18,6 +18,13 @@ namespace myMD.ViewModel.OverviewTabViewModel
 
         public Image Image { get; set; }
         public MediaFile File { get; set; }
+        public bool ScanEnabled { get; set; }
+
+        public KameraViewModel(){
+            ScanEnabled = false;
+            OnPropertyChanged("ScanEnabled");
+            Debug.WriteLine(File != null);
+        }
 
         public async Task<ImageSource> TakePhoto(){
             File = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
@@ -43,16 +50,22 @@ namespace myMD.ViewModel.OverviewTabViewModel
         }
 
         ImageSource GenerateImageSource(MediaFile file){
-            if (file == null)
+            
+
+            if (file == null){
+                ScanEnabled = false;
+                OnPropertyChanged("ScanEnabled");
                 return null;
+            }
 
             var source = ImageSource.FromStream(() =>
             {
                 var stream = file.GetStream();
-                //file.Dispose();
                 return stream;
             });
 
+            ScanEnabled = true;
+            OnPropertyChanged("ScanEnabled");
             return source;
         }
 

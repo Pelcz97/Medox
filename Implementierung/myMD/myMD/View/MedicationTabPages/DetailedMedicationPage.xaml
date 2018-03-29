@@ -14,8 +14,8 @@
             Priority="-1" 
             Clicked="CancelButton_Clicked" 
             IsEnabled="{Binding CancelPossible}"/>
+        
         <ToolbarItem Name="SaveMedicationButton" 
-                     AutomationId="Save"
             Text="Fertig" 
             Order="Primary" 
             Priority="1" 

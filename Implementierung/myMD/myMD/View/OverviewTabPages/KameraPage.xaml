@@ -6,7 +6,7 @@
 
     <ContentPage.ToolbarItems>
 
-        <ToolbarItem Name="ScanButton" 
+        <ToolbarItem Name="CancelButton" 
                  Text="Abbrechen" 
                  Order="Primary" 
                  Priority="-1" 
@@ -16,7 +16,8 @@
                  Text="Weiter" 
                  Order="Primary" 
                  Priority="1" 
-                 Clicked="ScanButton_Clicked"/>
+                 Clicked="ScanButton_Clicked"
+                 IsEnabled="{Binding ScanEnabled}"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>

@@ -74,6 +74,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\OverviewTabPages\ScannedDoctorsLetterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -177,6 +181,10 @@
     <Compile Include="ViewModel\ProfileTabViewModel\ProfileItemViewModel.cs" />
     <Compile Include="ViewModel\SendDataTabViewModel\SelectDoctorsLettersViewModel.cs" />
     <Compile Include="Model\ParserModel\ImageToTextParser.cs" />
+    <Compile Include="View\OverviewTabPages\ScannedDoctorsLetterPage.xaml.cs">
+      <DependentUpon>ScannedDoctorsLetterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\OverviewTabViewModel\ScannedDoctorsLetterViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ble.net, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">

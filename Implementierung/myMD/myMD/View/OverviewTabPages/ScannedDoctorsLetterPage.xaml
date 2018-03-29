@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
+             x:Class="myMD.View.OverviewTabPages.ScannedDoctorsLetterPage">
+    
+    <ContentPage.Content>
+        
+    <StackLayout VerticalOptions="StartAndExpand">
+
+      <Frame CornerRadius="0"
+      BackgroundColor="#00B9B4"
+      Margin="0,0,0,0"
+      HorizontalOptions="FillAndExpand"
+      VerticalOptions="Start">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+
+          <Entry Text="{Binding DoctorsName}"
+                    AutomationId="DoctorsName"
+                    TextColor="#191928"
+                    FontSize="Large" 
+                    FontAttributes="Bold"
+                    VerticalTextAlignment="End" 
+                    HorizontalTextAlignment="Start"
+                    Grid.Row="0"/>
+
+          <Entry Text="{Binding DoctorsField}"
+                        AutomationId="DoctorsField"
+                        TextColor="#FFFFFF"
+                        FontSize="45" 
+                        FontAttributes="Bold"
+                        VerticalTextAlignment="Center" 
+                        HorizontalTextAlignment="Start"
+                        Grid.Row="1"/>
+        </Grid>
+      </Frame>
+            
+      <Label Text="{Binding DoctorsLetterDate, StringFormat='{0:MMMM dd, yyyy}'}" 
+                AutomationId="DoctorsLettersDate"
+                TextColor="#FFFFFF"
+                FontSize="Medium" 
+                FontAttributes="Bold"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="End" 
+                Margin="15,0,15,5"/>
+            
+            <TableView x:Name="list" BackgroundColor="#191928" 
+                        Intent="Form" 
+                        VerticalOptions="FillAndExpand" 
+                        HorizontalOptions="FillAndExpand"
+                        HasUnevenRows="true">
+            <TableRoot>
+                <TableSection Title="Diagnose">
+                    <ViewCell>
+                            <StackLayout>
+                            <Label Text="{Binding Diagnosis}"
+                                AutomationId="Diagnosis"
+                                TextColor="#FFFFFF"
+                                FontSize="Small" 
+                                FontAttributes="None"
+                                VerticalTextAlignment="Center" 
+                                HorizontalTextAlignment="Start"
+                                VerticalOptions="StartAndExpand"
+                                HorizontalOptions="StartAndExpand"
+                                Margin="15,3,15,3"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                </TableRoot>
+            </TableView>
+    </StackLayout>
+            
+  </ContentPage.Content>
+</local:CustomContentPage>
