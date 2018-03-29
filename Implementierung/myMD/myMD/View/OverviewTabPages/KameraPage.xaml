@@ -23,9 +23,12 @@
         <Grid>
         <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="80"/>
             </Grid.RowDefinitions>
-            <Image x:Name="image" Grid.Row="0" HorizontalOptions="FillAndExpand"/>
+            <Image x:Name="image" 
+                   Grid.Row="0" 
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="Center"/>
             
             <Button Clicked="SelectImage_Clicked"
                     Text="Aufnahme auswählen"
