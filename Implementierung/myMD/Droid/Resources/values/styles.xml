@@ -8,7 +8,7 @@
         <item name="windowNoTitle">true</item>
         <!--We will be using the toolbar so no need to show ActionBar-->
         <item name="windowActionBar">false</item>
-        <!-- Set theme colors from
+        <!-- Set theme colors from-->
         <!-- colorPrimary is used for the default action bar background -->
         <item name="colorPrimary">#2196F3</item>
         <!-- colorPrimaryDark is used for the status bar -->
