@@ -187,6 +187,7 @@
     <Compile Include="ViewModel\OverviewTabViewModel\ScannedDoctorsLetterViewModel.cs" />
     <Compile Include="Model\MedicationInformation\InteractionChecker.cs" />
     <Compile Include="Model\MedicationInformation\IInteractionChecker.cs" />
+    <Compile Include="Model\MedicationInformation\InteractionPair.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ble.net, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">

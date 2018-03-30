@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using myMD.ModelInterface.DataModelInterface;
 
 namespace myMD.Model.MedicationInformation
 {
     public interface IInteractionChecker
     {
-        IList<string> GetInteractions(IList<IMedication> medications);
+        void GetInteractions(IList<IMedication> medications);
 
-        IList<string> GetRxNormIDs(IList<IMedication> medications);
+        Task<IList<string>> GetRxNormIDs(IList<IMedication> medications);
 
-        void GetRxNormID(IMedication medication);
+        Task<string> GetRxNormID(IMedication medication);
     }
 }

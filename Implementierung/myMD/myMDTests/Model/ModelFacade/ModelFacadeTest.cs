@@ -15,6 +15,7 @@ using myMD.ModelInterface.DataModelInterface;
 using myMDTests.Model.TransmissionModel;
 using myMDTests.Model.EntityFactory;
 using myMD.Model.DataModel;
+using myMD.Model.MedicationInformation;
 
 namespace myMDTests.Model.ModelFacade
 {
@@ -28,6 +29,7 @@ namespace myMDTests.Model.ModelFacade
         private RandomEntityFactory randFac;
         private IParserFacade parser;
         private IDependencyService service;
+        private IInteractionChecker checker;
 
         [OneTimeSetUp]
         public void SetUpBefore()
@@ -41,12 +43,13 @@ namespace myMDTests.Model.ModelFacade
             database.Destroy();
             database.Create();
             randFac = new RandomEntityFactory();
+            checker = new InteractionChecker();
         }
 
         [SetUp]
         public void SetUp()
         {              
-            model = new myMD.Model.ModelFacade.ModelFacade(database, factory, parser, bluetooth);
+            model = new myMD.Model.ModelFacade.ModelFacade(database, factory, parser, bluetooth, checker);
         }
 
         [Test]

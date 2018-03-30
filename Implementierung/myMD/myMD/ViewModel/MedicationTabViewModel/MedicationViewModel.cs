@@ -8,6 +8,8 @@ using System.Linq;
 using System.Diagnostics;
 using Xamarin.Forms.Internals;
 using System;
+using System.Collections.Generic;
+using myMD.Model.DataModel;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
@@ -123,7 +125,17 @@ namespace myMD.ViewModel.MedicationTabViewModel
         }
 
         public void CheckMed(){
-            ModelFacade.GetInteraction();
+            IList<IMedication> medications = new List<IMedication>();
+
+            IMedication med = new Medication();
+            med.Name = "Aspirin";
+            IMedication med2 = new Medication();
+            med2.Name = "Viagra";
+
+            medications.Add(med);
+            medications.Add(med2);
+
+            ModelFacade.GetInteractions(medications);
         }
     }
 }

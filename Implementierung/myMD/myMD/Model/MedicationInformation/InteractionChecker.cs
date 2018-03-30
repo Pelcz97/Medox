@@ -5,7 +5,9 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using myMD.ModelInterface.DataModelInterface;
+using Newtonsoft.Json.Linq;
 using Xamarin.Forms.Internals;
 
 namespace myMD.Model.MedicationInformation
@@ -13,23 +15,19 @@ namespace myMD.Model.MedicationInformation
     public class InteractionChecker : IInteractionChecker
     {
         const string RxCUIbyName = "https://rxnav.nlm.nih.gov/REST/rxcui?name=";
-        
-        public IList<string> GetInteractions(IList<IMedication> medications)
+        const string InteractionsURL = "https://rxnav.nlm.nih.gov/REST/interaction/list.json?rxcuis=";
+
+        public async void GetInteractions(IList<IMedication> medications)
         {
-            return null;
-        }
-
-        public IList<string> GetRxNormIDs(IList<IMedication> medications){
-            return null;
-        }
-
-        public async void GetRxNormID(IMedication medication){
             HttpClient client = new HttpClient();
             HttpResponseMessage response;
 
             // Assemble the URI for the REST API Call.
-            //string uri = RxCUIbyName + medication.Name;
-            string uri = RxCUIbyName + "aspirin";
+            string uri = InteractionsURL;
+            foreach (IMedication med in medications){
+                string rxcui = await GetRxNormID(med);
+                uri += rxcui + "+";
+            }
 
             // Execute the REST API call.
             response = await client.GetAsync(uri);
@@ -37,9 +35,45 @@ namespace myMD.Model.MedicationInformation
             // Get the JSON response.
             string contentString = await response.Content.ReadAsStringAsync();
 
-            Debug.WriteLine(contentString);
-            //return contentString;
+            //Debug.WriteLine(contentString);
+            //Debug.WriteLine(JsonPrettyPrint(contentString));
 
+            var pairs = ResultOnly(contentString);
+
+            foreach (InteractionPair p in pairs){
+                Debug.WriteLine(p.med1, p.med2, p.InteractionDescription);
+            }
+        }
+
+        public async Task<IList<string>> GetRxNormIDs(IList<IMedication> medications){
+            IList<string> resultList = new List<string>();
+
+            foreach (IMedication medication in medications) {
+                resultList.Add(await GetRxNormID(medication));
+            }
+
+            return resultList;
+        }
+
+        public async Task<string> GetRxNormID(IMedication medication){
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response;
+
+            // Assemble the URI for the REST API Call.
+            string uri = RxCUIbyName + medication.Name;
+
+            // Execute the REST API call.
+            response = await client.GetAsync(uri);
+
+            // Get the JSON response.
+            string contentString = await response.Content.ReadAsStringAsync();
+
+            //Parse response
+            XDocument xdoc = XDocument.Parse(contentString);
+
+            var result = xdoc.Element("rxnormdata").Element("idGroup").Element("rxnormId").Value;
+
+            return result;
         }
 
         static string JsonPrettyPrint(string json)
@@ -104,6 +138,29 @@ namespace myMD.Model.MedicationInformation
                 }
             }
             return sb.ToString();
+        }
+
+        static IList<InteractionPair> ResultOnly(string json)
+        {
+            JObject response = JObject.Parse(json);
+
+            IList<InteractionPair> pairs = new List<InteractionPair>();
+
+            for (int group = 0; group < response["fullInteractionTypeGroup"].Count(); group++)
+            {
+
+                var med1 = (string)response["fullInteractionTypeGroup"][group]["minConcept"][0]["name"];
+                var med2 = (string)response["fullInteractionTypeGroup"][group]["minConcept"][1]["name"];
+
+                for (int n = 0; n < response["fullInteractionTypeGroup"][group]["interactionPair"].Count(); n++)
+                {
+                    var description = (string)response["fullInteractionTypeGroup"][group]["interactionPair"][n]["description"];
+                    pairs.Add(new InteractionPair(med1, med2, description));
+                }                
+
+            }
+
+            return pairs;
         }
     }
 }
