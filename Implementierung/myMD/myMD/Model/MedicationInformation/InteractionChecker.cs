@@ -78,7 +78,7 @@ namespace myMD.Model.MedicationInformation
             //Parse response
             XDocument xdoc = XDocument.Parse(contentString);
 
-            if (xdoc.Element("rxnormdata").Element("idGroup").Element("rxnormId").Descendants().Count() == 0){
+            if (xdoc.Element("rxnormdata").Element("idGroup").Descendants().Count() == 1){
                 return null;
             }
 

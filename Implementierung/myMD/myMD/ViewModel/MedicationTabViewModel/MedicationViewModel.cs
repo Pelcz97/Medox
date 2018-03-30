@@ -65,6 +65,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
         {
             MedicationsList = new ObservableCollection<MedicineViewModel>();
             MedicationsItemsList = new ObservableCollection<Grouping<string, MedicineViewModel>>();
+            MedicationInteractions = new List<InteractionPair>();
             GroupList();
 
             MessagingCenter.Subscribe<DetailedMedicineViewModel>(this, "SavedMedication", sender => {
