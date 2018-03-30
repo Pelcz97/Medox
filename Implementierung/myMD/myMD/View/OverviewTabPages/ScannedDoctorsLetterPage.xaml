@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-                         xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD" 
+                         xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
                          x:Class="myMD.View.OverviewTabPages.ScannedDoctorsLetterPage">
     
     <ContentPage.ToolbarItems>
@@ -12,7 +12,7 @@
                      Clicked="SaveLetter_Clicked" 
                      IsEnabled="{Binding SavingPossible}" />
     </ContentPage.ToolbarItems>
-    
+
     <ContentPage.Content>
         <StackLayout VerticalOptions="StartAndExpand">
             <Frame CornerRadius="0" 
@@ -24,10 +24,9 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     
-                    <Entry Text="{Binding newDoctorsName}"  
+                    <Entry Text="{Binding NewDoctorsName}"  
                            TextColor="#191928"
                            Placeholder="Name des Arztes"
                            PlaceholderColor="Gray"
@@ -37,7 +36,7 @@
                            HorizontalTextAlignment="Start" 
                            Grid.Row="0" />
                     
-                    <Entry Text="{Binding newDoctorsField}" 
+                    <Entry Text="{Binding NewDoctorsField}" 
                            TextColor="#FFFFFF"
                            Placeholder="Fachgebiet des Arztes"
                            PlaceholderColor="Gray"
@@ -49,13 +48,12 @@
                 </Grid>
             </Frame>
             
-            <Label Text="{Binding newLetterDate, StringFormat='{0:MMMM dd, yyyy}'}" 
-                   TextColor="#FFFFFF" 
-                   FontSize="Medium" 
-                   FontAttributes="Bold" 
-                   VerticalTextAlignment="Center" 
-                   HorizontalTextAlignment="End" 
-                   Margin="15,0,15,5" />
+            <DatePicker x:Name="LetterDate"
+                   TextColor="White" 
+                   BackgroundColor="#191928"  
+                   Date="{Binding NewLetterDate}"
+                   Margin="15,0,15,5" 
+                   HorizontalOptions="End"/> 
             
             <TableView x:Name="list" 
                        BackgroundColor="#191928" 
@@ -68,7 +66,6 @@
                         <ViewCell>
                             <StackLayout>
                                 <Label Text="{Binding Diagnosis}" 
-                                       AutomationId="Diagnosis" 
                                        TextColor="#FFFFFF" 
                                        FontSize="Small" 
                                        FontAttributes="None" 

@@ -21,9 +21,7 @@ namespace myMD.View.OverviewTabPages
 
         async void SaveLetter_Clicked(object sender, System.EventArgs e)
         {
-            Debug.WriteLine("Möp");
             vm.SaveNewDoctorsLetter();
-            Debug.WriteLine("2Möp");
             await Navigation.PopModalAsync();
         }
     }

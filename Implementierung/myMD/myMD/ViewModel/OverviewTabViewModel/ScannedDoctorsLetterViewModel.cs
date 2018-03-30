@@ -6,19 +6,18 @@ using Xamarin.Forms.Internals;
 namespace myMD.ViewModel.OverviewTabViewModel
 {
     [Preserve(AllMembers = true)]
-    public class ScannedDoctorsLetterViewModel : OverallViewModel.OverallViewModel
+    public class ScannedDoctorsLetterViewModel : DoctorsLetterViewModel
     {
         public string NewDoctorsName
         {
-            get
-            {
+            get {
                 return NewDoctorsName;
             }
-            set
-            {
+            set {
                 this.NewDoctorsName = value;
-                SavingPossible = (NewDoctorsName != null && NewDoctorsField != null);
-                OnPropertyChanged("SavingPossible");
+                Debug.WriteLine(NewDoctorsName);
+                //SavingPossible = (NewDoctorsName.Length > 0 && NewDoctorsField.Length > 0);
+                //OnPropertyChanged("SavingPossible");
             }
         }
 
@@ -33,8 +32,9 @@ namespace myMD.ViewModel.OverviewTabViewModel
             {
                 
                 NewDoctorsField = value;
-                SavingPossible = (NewDoctorsName != null && NewDoctorsField != null);
-                OnPropertyChanged("SavingPossible");
+                Debug.WriteLine(NewDoctorsField);
+                //SavingPossible = (NewDoctorsName.Length != 0 && NewDoctorsField.Length != 0);
+                //OnPropertyChanged("SavingPossible");
             }
         }
 
@@ -47,14 +47,15 @@ namespace myMD.ViewModel.OverviewTabViewModel
         public ScannedDoctorsLetterViewModel(string diagnosis)
         {
             NewLetterDate = DateTime.Today;
-            SavingPossible = false;
+            SavingPossible = true;
             OnPropertyChanged("SavingPossible");
             Diagnosis = diagnosis;
 
         }
 
         public void SaveNewDoctorsLetter(){
-            
+            Debug.WriteLine(NewDoctorsName);
+            Debug.WriteLine(NewDoctorsField);
             ModelFacade.GenerateDoctorsLetter(NewDoctorsName, NewDoctorsField, NewLetterDate, Diagnosis);
 
         }

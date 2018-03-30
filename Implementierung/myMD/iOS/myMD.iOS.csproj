@@ -33,6 +33,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <DeviceSpecificBuild>false</DeviceSpecificBuild>
     <CodesignProvision>VS: com.pse.myMD Development</CodesignProvision>
+    <MtouchSdkVersion>11.3</MtouchSdkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>

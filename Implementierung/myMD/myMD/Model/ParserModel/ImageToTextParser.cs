@@ -208,7 +208,7 @@ namespace myMD.Model.ParserModel
             Doctor eqDoc = new Doctor();
             eqDoc.Name = DoctorsName;
             eqDoc.Field = DoctorsField;
-            Debug.WriteLine("Möp");
+
             IDoctor doc = db.GetDoctor(eqDoc);
             Doctor doctor;
             //F黦e neuen Arzt in die Datenbank ein, falls dieser dort noch nicht existiert
@@ -221,7 +221,7 @@ namespace myMD.Model.ParserModel
             {
                 doctor = doc.ToDoctor();
             }
-            Debug.WriteLine("Möp");
+
             DoctorsLetter letter = new DoctorsLetter();
             letter.Diagnosis = Diagnosis;
             letter.Date = LetterDate;
@@ -229,7 +229,7 @@ namespace myMD.Model.ParserModel
             //Erstelle Beziehungen zwischen den geparsten Entitäten
             //letter.Profile = profile;
             letter.DatabaseDoctor = doctor;
-            Debug.WriteLine("Möp");
+
             db.Update(letter);
 
         }
