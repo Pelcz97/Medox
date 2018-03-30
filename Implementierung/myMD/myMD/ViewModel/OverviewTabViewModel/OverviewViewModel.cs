@@ -40,7 +40,6 @@ namespace myMD.ViewModel.OverviewTabViewModel
         {
             get
             {
-
                 return new Command((sender) =>
                 {
                     DeleteListItemMethod((DoctorsLetterViewModel)sender);
@@ -61,12 +60,13 @@ namespace myMD.ViewModel.OverviewTabViewModel
             MessagingCenter.Subscribe<TransmittingDataViewModel>(this, "UpdateDoctorsLettersList", sender => {
                 Reload();
             });
-
+            MessagingCenter.Subscribe<ScannedDoctorsLetterViewModel>(this, "AddNewLetter", sender => {
+                Reload();
+            });
         }
 
         void GroupList()
         {
-
             foreach (IDoctorsLetter letter in ModelFacade.GetAllDoctorsLetters())
             {
                 DoctorsLettersList.Add(new DoctorsLetterViewModel(letter));

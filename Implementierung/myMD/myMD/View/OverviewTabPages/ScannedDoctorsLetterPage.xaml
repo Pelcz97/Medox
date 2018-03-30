@@ -27,7 +27,7 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     
-                    <Entry Text="Test"  
+                    <Entry Text="{Binding NewDoctorsName}"  
                            TextColor="#191928"
                            Placeholder="Name des Arztes"
                            PlaceholderColor="Gray"
@@ -37,7 +37,7 @@
                            HorizontalTextAlignment="Start" 
                            Grid.Row="0" />
                     
-                    <Entry Text="Test" 
+                    <Entry Text="{Binding NewDoctorsField}" 
                            TextColor="#FFFFFF"
                            Placeholder="Fachgebiet des Arztes"
                            PlaceholderColor="Gray"
@@ -45,7 +45,7 @@
                            FontSize="45" 
                            FontAttributes="Bold"
                            HorizontalTextAlignment="Start" 
-                           Grid.Row="1" />
+                           Grid.Row="1"/>
                 </Grid>
             </Frame>
             
