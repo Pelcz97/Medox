@@ -25,6 +25,7 @@ namespace myMD.View.OverviewTabPages
             InitializeComponent();
             vm = new KameraViewModel();
             BindingContext = vm;
+            LoadingIndicator.IsVisible = false;
         }
 
 
@@ -80,13 +81,18 @@ namespace myMD.View.OverviewTabPages
 
         async void ScanButton_Clicked(object sender, System.EventArgs e)
         {
-            string diagnosis = "Test";
-            Debug.WriteLine(diagnosis);
+            SelectImageButton.IsVisible = false;
+            LoadingIndicator.IsVisible = true;
+            //string diagnosis = await vm.ScanImage();
+            string diagnosis = "Platzhalter";
 
             var page = new ScannedDoctorsLetterPage(diagnosis);
             page.On<iOS>().SetLargeTitleDisplay(LargeTitleDisplayMode.Never);
             Xamarin.Forms.NavigationPage.SetBackButtonTitle(page, "Bild wählen");
             await Navigation.PushAsync(page);
+
+            LoadingIndicator.IsVisible = false;
+            SelectImageButton.IsVisible = true;
 
         }
     }

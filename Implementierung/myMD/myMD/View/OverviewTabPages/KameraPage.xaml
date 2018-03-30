@@ -31,7 +31,8 @@
                    HorizontalOptions="CenterAndExpand" 
                    VerticalOptions="Center"/>
             
-            <Button Clicked="SelectImage_Clicked"
+            <Button x:Name="SelectImageButton"
+                Clicked="SelectImage_Clicked"
                     Text="Aufnahme auswählen"
                     TextColor="White"
                     FontAttributes="Bold"
@@ -43,6 +44,11 @@
                     WidthRequest="400"
                     BorderRadius="10" 
                     Margin="15,0,15,15"/>
+            
+            <ActivityIndicator x:Name="LoadingIndicator" 
+                               Color="White" 
+                               IsRunning="true" 
+                               Grid.Row="1"/>
         </Grid>
     </ContentPage.Content>
 </local:CustomContentPage>
