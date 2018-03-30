@@ -17,7 +17,7 @@ namespace myMD.Model.MedicationInformation
         const string RxCUIbyName = "https://rxnav.nlm.nih.gov/REST/rxcui?name=";
         const string InteractionsURL = "https://rxnav.nlm.nih.gov/REST/interaction/list.json?rxcuis=";
 
-        public async void GetInteractions(IList<IMedication> medications)
+        public async Task<IList<InteractionPair>> GetInteractions(IList<IMedication> medications)
         {
             HttpClient client = new HttpClient();
             HttpResponseMessage response;
@@ -40,12 +40,10 @@ namespace myMD.Model.MedicationInformation
 
             var pairs = ResultOnly(contentString);
 
-            foreach (InteractionPair p in pairs){
-                Debug.WriteLine(p.med1, p.med2, p.InteractionDescription);
-            }
+            return pairs;
         }
 
-        public async Task<IList<string>> GetRxNormIDs(IList<IMedication> medications){
+        public async Task<IList<string>> GetRxNormIDs(IList<IMedication> medications) {
             IList<string> resultList = new List<string>();
 
             foreach (IMedication medication in medications) {
@@ -142,6 +140,8 @@ namespace myMD.Model.MedicationInformation
 
         static IList<InteractionPair> ResultOnly(string json)
         {
+            Debug.WriteLine(JsonPrettyPrint(json));
+
             JObject response = JObject.Parse(json);
 
             IList<InteractionPair> pairs = new List<InteractionPair>();
@@ -149,15 +149,17 @@ namespace myMD.Model.MedicationInformation
             for (int group = 0; group < response["fullInteractionTypeGroup"].Count(); group++)
             {
 
-                var med1 = (string)response["fullInteractionTypeGroup"][group]["minConcept"][0]["name"];
-                var med2 = (string)response["fullInteractionTypeGroup"][group]["minConcept"][1]["name"];
-
-                for (int n = 0; n < response["fullInteractionTypeGroup"][group]["interactionPair"].Count(); n++)
+                for (int type = 0; type < response["fullInteractionTypeGroup"][group]["fullInteractionType"].Count(); type++)
                 {
-                    var description = (string)response["fullInteractionTypeGroup"][group]["interactionPair"][n]["description"];
-                    pairs.Add(new InteractionPair(med1, med2, description));
-                }                
+                    string med1 = (string)response["fullInteractionTypeGroup"][group]["fullInteractionType"][type]["minConcept"][0]["name"];
+                    string med2 = (string)response["fullInteractionTypeGroup"][group]["fullInteractionType"][type]["minConcept"][1]["name"];
 
+                    for (int p = 0; p < response["fullInteractionTypeGroup"][group]["fullInteractionType"][type]["interactionPair"].Count(); p++)
+                    {
+                        var description = (string)response["fullInteractionTypeGroup"][group]["fullInteractionType"][type]["interactionPair"][p]["description"];
+                        pairs.Add(new InteractionPair(med1, med2, description));
+                    }
+                }
             }
 
             return pairs;
