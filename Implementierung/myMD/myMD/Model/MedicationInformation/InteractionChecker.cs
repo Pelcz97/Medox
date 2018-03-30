@@ -26,7 +26,13 @@ namespace myMD.Model.MedicationInformation
             string uri = InteractionsURL;
             foreach (IMedication med in medications){
                 string rxcui = await GetRxNormID(med);
-                uri += rxcui + "+";
+                if (rxcui != null){
+                    uri += rxcui + "+";
+                }
+            }
+
+            if (uri.Length == InteractionsURL.Length){
+                return null;
             }
 
             // Execute the REST API call.
@@ -47,7 +53,10 @@ namespace myMD.Model.MedicationInformation
             IList<string> resultList = new List<string>();
 
             foreach (IMedication medication in medications) {
-                resultList.Add(await GetRxNormID(medication));
+                var val = await GetRxNormID(medication);
+                if (val != null){
+                    resultList.Add(val);
+                }
             }
 
             return resultList;
@@ -69,8 +78,11 @@ namespace myMD.Model.MedicationInformation
             //Parse response
             XDocument xdoc = XDocument.Parse(contentString);
 
-            var result = xdoc.Element("rxnormdata").Element("idGroup").Element("rxnormId").Value;
+            if (xdoc.Element("rxnormdata").Element("idGroup").Element("rxnormId").Descendants().Count() == 0){
+                return null;
+            }
 
+            var result = xdoc.Element("rxnormdata").Element("idGroup").Element("rxnormId").Value;
             return result;
         }
 
@@ -148,7 +160,6 @@ namespace myMD.Model.MedicationInformation
 
             for (int group = 0; group < response["fullInteractionTypeGroup"].Count(); group++)
             {
-
                 for (int type = 0; type < response["fullInteractionTypeGroup"][group]["fullInteractionType"].Count(); type++)
                 {
                     string med1 = (string)response["fullInteractionTypeGroup"][group]["fullInteractionType"][type]["minConcept"][0]["name"];

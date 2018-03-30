@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using nexus.protocols.ble;
 using System.Threading.Tasks;
 using System;
+using myMD.Model.MedicationInformation;
 
 namespace myMD.ModelInterface.ModelFacadeInterface
 {
@@ -108,7 +109,7 @@ namespace myMD.ModelInterface.ModelFacadeInterface
 
         void GenerateDoctorsLetter(string DoctorsName, string DoctorsField, DateTime LetterDate, string Diagnosis);
 
-        void GetInteractions(IList<IMedication> medications);
+        Task<IList<InteractionPair>> GetInteractions(IList<IMedication> medications);
 
     }
 }

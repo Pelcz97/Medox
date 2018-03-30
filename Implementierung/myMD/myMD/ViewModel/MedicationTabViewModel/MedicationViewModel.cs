@@ -10,6 +10,7 @@ using Xamarin.Forms.Internals;
 using System;
 using System.Collections.Generic;
 using myMD.Model.DataModel;
+using myMD.Model.MedicationInformation;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
@@ -23,6 +24,8 @@ namespace myMD.ViewModel.MedicationTabViewModel
         /// </summary>
         /// <value>The medications list.</value>
         public ObservableCollection<MedicineViewModel> MedicationsList { get; }
+
+        public IList<InteractionPair> MedicationInteractions { get; set; }
 
         /// <summary>
         /// Eine ObservableCollection an Groupings, die wiederum die einzelnen 
@@ -66,6 +69,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
 
             MessagingCenter.Subscribe<DetailedMedicineViewModel>(this, "SavedMedication", sender => {
                 Reload();
+                CheckMed();
             });
         }
 
@@ -124,18 +128,27 @@ namespace myMD.ViewModel.MedicationTabViewModel
             GroupList();
         }
 
-        public void CheckMed(){
-            IList<IMedication> medications = new List<IMedication>();
+        public async void CheckMed(){
 
-            IMedication med = new Medication();
-            med.Name = "Aspirin";
-            IMedication med2 = new Medication();
-            med2.Name = "Viagra";
+            IList<IMedication> currentMedications = new List<IMedication>();
 
-            medications.Add(med);
-            medications.Add(med2);
+            foreach (MedicineViewModel med in MedicationsList){
+                if (med.Medication.EndDate >= DateTime.Today && med.Medication.Date <= DateTime.Today){
+                    currentMedications.Add(med.Medication);
+                }
+            }
 
-            ModelFacade.GetInteractions(medications);
+            MedicationInteractions.Clear();
+
+            if (currentMedications.Count() >= 2) {
+                
+                var interactions = await ModelFacade.GetInteractions(currentMedications);
+
+                if (interactions != null){
+                    MedicationInteractions = interactions;
+                    Debug.WriteLine(interactions.Count()); 
+                }
+            }
         }
     }
 }

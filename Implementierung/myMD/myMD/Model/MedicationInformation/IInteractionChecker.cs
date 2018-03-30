@@ -7,7 +7,7 @@ namespace myMD.Model.MedicationInformation
 {
     public interface IInteractionChecker
     {
-        void GetInteractions(IList<IMedication> medications);
+        Task<IList<InteractionPair>> GetInteractions(IList<IMedication> medications);
 
         Task<IList<string>> GetRxNormIDs(IList<IMedication> medications);
 

@@ -162,8 +162,8 @@ namespace myMD.Model.ModelFacade
             parser.CreateDoctorsLetter(DoctorsName, DoctorsField, LetterDate, Diagnosis, database);
         }
 
-        public void GetInteractions(IList<IMedication> medications){
-            interactionChecker.GetInteractions(medications);
+        public Task<IList<InteractionPair>> GetInteractions(IList<IMedication> medications){
+            return interactionChecker.GetInteractions(medications);
         }
 
     }
