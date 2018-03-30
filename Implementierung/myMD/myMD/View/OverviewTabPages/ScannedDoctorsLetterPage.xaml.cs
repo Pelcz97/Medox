@@ -19,7 +19,7 @@ namespace myMD.View.OverviewTabPages
             BindingContext = vm;
         }
 
-        async void SaveLetter_Clicked(object sender, System.EventArgs e)
+        async void SaveLetter_Clicked(object sender, EventArgs e)
         {
             vm.SaveNewDoctorsLetter();
             await Navigation.PopModalAsync();

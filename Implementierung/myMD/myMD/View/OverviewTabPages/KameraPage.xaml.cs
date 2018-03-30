@@ -85,7 +85,7 @@ namespace myMD.View.OverviewTabPages
 
             var page = new ScannedDoctorsLetterPage(diagnosis);
             page.On<iOS>().SetLargeTitleDisplay(LargeTitleDisplayMode.Never);
-            Xamarin.Forms.NavigationPage.SetBackButtonTitle(page, "Übersicht");
+            Xamarin.Forms.NavigationPage.SetBackButtonTitle(page, "Bild wählen");
             await Navigation.PushAsync(page);
 
         }
