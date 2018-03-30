@@ -26,6 +26,11 @@ namespace myMD.Model.FileHelper.Droid
         /// <see>myMD.Model.FileHelper.IFileHelper#GetLocalFilePath(string)</see>
         public string GetLocalFilePath(string filename)
 		{
+
+            if (!Directory.Exists(PATH))
+            {
+                Directory.CreateDirectory(PATH);
+            }
             string path = System.IO.Path.Combine(PATH, filename);
             if (!File.Exists(path))
             {
