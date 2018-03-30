@@ -9,10 +9,34 @@ namespace myMD.ViewModel.OverviewTabViewModel
     [Preserve(AllMembers = true)]
     public class ScannedDoctorsLetterViewModel : DoctorsLetterViewModel
     {
-        public string NewDoctorsName { get; set; }
+        public string NewDoctorsName
+        {
+            get
+            {
+                return NewDoctorsName;
+            }
+            set
+            {
+                NewDoctorsName = value;
+                SavingPossible = (NewDoctorsName.Length != 0 && NewDoctorsField.Length != 0);
+                OnPropertyChanged("SavingPossible");
+            }
+        }
 
+        public string NewDoctorsField
+        {
+            get
+            {
+                return NewDoctorsField;
+            }
 
-        public string NewDoctorsField { get; set; }
+            set
+            {
+                NewDoctorsField = value;
+                SavingPossible = (NewDoctorsName.Length != 0 && NewDoctorsField.Length != 0);
+                OnPropertyChanged("SavingPossible");
+            }
+        }
 
         public DateTime NewLetterDate { get; set; }
 
