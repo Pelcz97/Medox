@@ -108,5 +108,7 @@ namespace myMD.ModelInterface.ModelFacadeInterface
 
         void GenerateDoctorsLetter(string DoctorsName, string DoctorsField, DateTime LetterDate, string Diagnosis);
 
+        void GetInteraction();
+
     }
 }

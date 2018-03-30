@@ -17,6 +17,7 @@ using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Xamarin.Forms.Xaml;
 using Xamarin.Forms.PlatformConfiguration;
+using myMD.Model.MedicationInformation;
 
 namespace myMD
 {
@@ -107,7 +108,7 @@ namespace myMD
         private static IModelFacade CreateModel()
         {
             DependencyServiceWrapper.Service = new XamarinDependencyService();
-            return new ModelFacade(new EntityDatabase(), new EntityFactory(), new ParserFacade(), new Bluetooth());
+            return new ModelFacade(new EntityDatabase(), new EntityFactory(), new ParserFacade(), new Bluetooth(), new InteractionChecker());
         }
     }
 }

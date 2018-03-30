@@ -29,6 +29,10 @@ namespace myMD.View.MedicationTabPages
             BindingContext = vm;
         }
 
+        public void CheckMed_Clicked(object sender, EventArgs e){
+            vm.CheckMed();
+        }
+
         /// <summary>
         /// Methode, wenn der Hinzufügen-Button geklickt wird.
         /// </summary>

@@ -121,6 +121,10 @@ namespace myMD.ViewModel.MedicationTabViewModel
             MedicationsList.Clear();
             GroupList();
         }
+
+        public void CheckMed(){
+            ModelFacade.GetInteraction();
+        }
     }
 }
 

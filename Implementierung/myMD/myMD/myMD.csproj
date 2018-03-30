@@ -185,6 +185,8 @@
       <DependentUpon>ScannedDoctorsLetterPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\OverviewTabViewModel\ScannedDoctorsLetterViewModel.cs" />
+    <Compile Include="Model\MedicationInformation\InteractionChecker.cs" />
+    <Compile Include="Model\MedicationInformation\IInteractionChecker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ble.net, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -274,6 +276,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Model\MedicationInformation\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\OverviewTabPages\KameraPage.xaml">

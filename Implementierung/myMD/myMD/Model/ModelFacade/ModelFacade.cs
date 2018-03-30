@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using System.Text;
 using System.Diagnostics;
 using System;
+using myMD.Model.MedicationInformation;
 
 namespace myMD.Model.ModelFacade
 {
@@ -49,6 +50,8 @@ namespace myMD.Model.ModelFacade
         /// </summary>
         private IParserFacade parser;
 
+        private IInteractionChecker interactionChecker;
+
         /// <summary>
         /// Konstruktor in dem die Schnittstellen, von dem die Klasse abhänig ist injiziert werden können.
         /// </summary>
@@ -56,13 +59,14 @@ namespace myMD.Model.ModelFacade
         /// <param name="factory">Die zu verwendende Fabrik</param>
         /// <param name="parser">Der zu verwendende Parser</param>
         /// <param name="bluetooth">Die zu verwendende Datenübertragungsmöglichkeit</param>
-        public ModelFacade(IEntityDatabase database, IEntityFactory factory, IParserFacade parser, IBluetooth bluetooth)
+        public ModelFacade(IEntityDatabase database, IEntityFactory factory, IParserFacade parser, IBluetooth bluetooth, IInteractionChecker interactionChecker)
         {
             this.database = database;
             this.factory = factory;
             this.parser = parser;
             this.bluetooth = bluetooth;
             this.fileHelper = DependencyServiceWrapper.Get<IFileHelper>();
+            this.interactionChecker = interactionChecker;
             //Create new Profile, if none exists yet
             if (database.GetAllProfiles().Count == 0)
             {
@@ -156,6 +160,10 @@ namespace myMD.Model.ModelFacade
 
         public void GenerateDoctorsLetter(string DoctorsName, string DoctorsField, DateTime LetterDate, string Diagnosis){
             parser.CreateDoctorsLetter(DoctorsName, DoctorsField, LetterDate, Diagnosis, database);
+        }
+
+        public void GetInteraction(){
+            interactionChecker.GetRxNormID(null);
         }
 
     }

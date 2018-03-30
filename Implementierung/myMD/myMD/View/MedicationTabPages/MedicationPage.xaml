@@ -8,6 +8,12 @@
     x:Name="MedicationPage">
 
     <ContentPage.ToolbarItems>
+        <ToolbarItem Name="CheckMedicationButton" 
+            Priority="-1"
+            Text="Check" 
+            Order="Primary" 
+            Clicked="CheckMed_Clicked" />
+        
         <ToolbarItem Name="AddMedicationButton" 
             AutomationId="AddMedication"
             Text="Hinzufügen" 
