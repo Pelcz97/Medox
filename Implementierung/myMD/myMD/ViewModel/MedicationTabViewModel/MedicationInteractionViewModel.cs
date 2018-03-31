@@ -4,9 +4,11 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using myMD.Model.MedicationInformation;
+using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
+    [Preserve(AllMembers = true)]
     public class MedicationInteractionViewModel : OverallViewModel.OverallViewModel
     {
         public ObservableCollection<InteractionPairViewModel> Interactions { get; set; }

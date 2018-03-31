@@ -1,8 +1,10 @@
 ﻿using System;
 using myMD.Model.MedicationInformation;
+using Xamarin.Forms.Internals;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
+    [Preserve(AllMembers = true)]
     public class InteractionPairViewModel : OverallViewModel.OverallViewModel
     {
         public string ConflictingMeds { get; set; }
