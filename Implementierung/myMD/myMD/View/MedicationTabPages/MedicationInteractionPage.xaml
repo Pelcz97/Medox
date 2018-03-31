@@ -6,11 +6,11 @@
              Title="Wechselwirkungen">
     
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="DoneButton" 
+        <!-- <ToolbarItem Name="DoneButton" 
                  Text="Fertig" 
                  Order="Primary" 
                  Priority="1" 
-                 Clicked="DoneButton_Clicked"/>
+                 Clicked="DoneButton_Clicked"/> -->
     </ContentPage.ToolbarItems>
     
     <ListView x:Name="Interactions" 

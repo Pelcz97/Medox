@@ -16,6 +16,13 @@ namespace myMD.View.MedicationTabPages
             BindingContext = vm;
         }
 
+        public MedicationInteractionPage()
+        {
+            InitializeComponent();
+            vm = new MedicationInteractionViewModel(null);
+            BindingContext = vm;
+        }
+
         async void DoneButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();

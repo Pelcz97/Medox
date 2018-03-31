@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Linq;
 using myMD.Model.MedicationInformation;
 
 namespace myMD.ViewModel.MedicationTabViewModel
@@ -12,6 +14,8 @@ namespace myMD.ViewModel.MedicationTabViewModel
         public MedicationInteractionViewModel(object interactionList)
         {
             var list = (IList<InteractionPair>)interactionList;
+
+            Debug.WriteLine(list.Count());
             Interactions = new ObservableCollection<InteractionPairViewModel>();
 
             foreach (InteractionPair pair in list) {
