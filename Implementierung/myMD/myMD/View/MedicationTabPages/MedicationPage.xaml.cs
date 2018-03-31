@@ -52,9 +52,6 @@ namespace myMD.View.MedicationTabPages
 
         }
 
-        public async void CheckMed_Clicked(object sender, EventArgs e){
-            var result = await vm.CheckMed();
-        }
 
         /// <summary>
         /// Methode, wenn der Hinzufügen-Button geklickt wird.
