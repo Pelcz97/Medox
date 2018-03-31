@@ -68,8 +68,6 @@ namespace myMD.ViewModel.MedicationTabViewModel
             MedicationsItemsList = new ObservableCollection<Grouping<string, MedicineViewModel>>();
             MedicationInteractions = new List<InteractionPair>();
             GroupList();
-
-
         }
 
         /// <summary>

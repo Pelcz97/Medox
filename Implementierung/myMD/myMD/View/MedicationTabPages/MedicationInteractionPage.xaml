@@ -33,15 +33,15 @@
                                             FontAttributes="Bold" 
                                             HorizontalTextAlignment="Center" 
                                             VerticalTextAlignment="Start" 
-                                            VerticalOptions="Start" Margin="10,3,10,3"/>
+                                            VerticalOptions="Start" Margin="17,5,17,7"/>
                                             
                                             <Label Text="{Binding Description}"
                                             TextColor="#FFFFFF"
                                             FontSize="Small" 
-                                            HorizontalTextAlignment="Center" 
+                                            HorizontalTextAlignment="Start" 
                                             FontAttributes="None"  
                                             HorizontalOptions="StartAndExpand" 
-                                            Margin="10,0,10,3"/>
+                                            Margin="17,0,17,7"/>
                                     </StackLayout>
                             </ViewCell.View>
                         </ViewCell>
