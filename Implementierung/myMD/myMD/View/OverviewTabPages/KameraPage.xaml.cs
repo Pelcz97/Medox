@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -68,7 +69,7 @@ namespace myMD.View.OverviewTabPages
         {
             if (!CrossMedia.Current.IsPickPhotoSupported)
             {
-                await DisplayAlert("Photos Not Supported", "Permission not granted to photos.", "OK");
+                await DisplayAlert("Photos Not Supported", "Permission not granted to photos.", "Okay");
                 return;
             }
 
@@ -83,16 +84,23 @@ namespace myMD.View.OverviewTabPages
         {
             SelectImageButton.IsVisible = false;
             LoadingIndicator.IsVisible = true;
-            //string diagnosis = await vm.ScanImage();
-            string diagnosis = "Platzhalter";
 
-            var page = new ScannedDoctorsLetterPage(diagnosis);
-            page.On<iOS>().SetLargeTitleDisplay(LargeTitleDisplayMode.Never);
-            Xamarin.Forms.NavigationPage.SetBackButtonTitle(page, "Bild wählen");
-            await Navigation.PushAsync(page);
+            try
+            {
+                //string diagnosis = await vm.ScanImage();
+                string diagnosis = "Platzhalter";
 
-            LoadingIndicator.IsVisible = false;
-            SelectImageButton.IsVisible = true;
+                var page = new ScannedDoctorsLetterPage(diagnosis);
+                Xamarin.Forms.NavigationPage.SetBackButtonTitle(page, "Bild wählen");
+                await Navigation.PushAsync(page);
+
+                LoadingIndicator.IsVisible = false;
+                SelectImageButton.IsVisible = true;
+            } catch (HttpRequestException ex)
+            {
+                Debug.WriteLine(ex);
+                await DisplayAlert("Fehler", "Die Verbindung zum Server ist fehlgeschlagen. Prüfe deine Internetverbindung und probiere es erneut.", "Okay");
+            }
 
         }
     }

@@ -158,6 +158,9 @@ namespace myMD.Model.MedicationInformation
 
             IList<InteractionPair> pairs = new List<InteractionPair>();
 
+            if (!response.ContainsKey("fullInteractionTypeGroup")){
+                return null;
+            }
             for (int group = 0; group < response["fullInteractionTypeGroup"].Count(); group++)
             {
                 for (int type = 0; type < response["fullInteractionTypeGroup"][group]["fullInteractionType"].Count(); type++)

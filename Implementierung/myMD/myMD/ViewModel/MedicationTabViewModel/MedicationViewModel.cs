@@ -149,6 +149,8 @@ namespace myMD.ViewModel.MedicationTabViewModel
                 {
                     MedicationInteractions = interactions;
                     Debug.WriteLine(interactions.Count());
+                } else {
+                    return 0;
                 }
             }
 

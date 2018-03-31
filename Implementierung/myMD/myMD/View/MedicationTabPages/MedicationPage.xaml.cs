@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using myMD.View.AbstractPages;
 using myMD.ViewModel.MedicationTabViewModel;
 using Xamarin.Forms;
@@ -34,19 +35,24 @@ namespace myMD.View.MedicationTabPages
             MessagingCenter.Unsubscribe<DetailedMedicineViewModel>(this, "SavedMedication");
             MessagingCenter.Subscribe<DetailedMedicineViewModel>(this, "SavedMedication", async sender => {
                 vm.Reload();
-                var number = await vm.CheckMed();
 
-                if (number > 0)
-                {
-                    var answer = await DisplayAlert("Warnung", "Die zur Zeit eingenommenen Medikamente könnten Wechselwirkungen hervorrufen.", "Anzeigen", "Egal");
+                try {
+                    var number = await vm.CheckMed();
 
-                    if (answer)
+                    if (number > 0)
                     {
-                        var view = new NavigationPage(new MedicationInteractionPage(vm.MedicationInteractions));
-                        view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
-                        view.BarTextColor = Color.White;
-                        await Navigation.PushModalAsync(view);
+                        var answer = await DisplayAlert("Warnung", "Die zur Zeit eingenommenen Medikamente könnten Wechselwirkungen hervorrufen.", "Anzeigen", "Egal");
+
+                        if (answer)
+                        {
+                            var view = new NavigationPage(new MedicationInteractionPage(vm.MedicationInteractions));
+                            view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
+                            view.BarTextColor = Color.White;
+                            await Navigation.PushModalAsync(view);
+                        }
                     }
+                } catch (HttpRequestException ex) {
+                    Debug.WriteLine(ex);
                 }
             });
 

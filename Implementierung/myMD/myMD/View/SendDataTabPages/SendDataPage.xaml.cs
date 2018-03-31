@@ -39,7 +39,6 @@ namespace myMD.View.SendDataTabPages
             var page = new TransmittingDataPage();
 
             Xamarin.Forms.NavigationPage.SetBackButtonTitle(page, "Senden");
-            page.On<iOS>().SetLargeTitleDisplay(LargeTitleDisplayMode.Never);
             await Navigation.PushAsync(page);
         }
     }
