@@ -31,6 +31,7 @@ namespace myMD.View.MedicationTabPages
 
         protected override void OnAppearing()
         {
+            MessagingCenter.Unsubscribe<DetailedMedicineViewModel>(this, "SavedMedication");
             MessagingCenter.Subscribe<DetailedMedicineViewModel>(this, "SavedMedication", async sender => {
                 vm.Reload();
                 var number = await vm.CheckMed();
@@ -48,6 +49,7 @@ namespace myMD.View.MedicationTabPages
                     }
                 }
             });
+
         }
 
         public async void CheckMed_Clicked(object sender, EventArgs e){
