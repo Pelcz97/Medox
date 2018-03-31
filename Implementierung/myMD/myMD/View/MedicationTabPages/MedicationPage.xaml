@@ -9,10 +9,10 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="CheckMedicationButton" 
-            Priority="-1"
-            Text="Check" 
+            Priority="-1" 
             Order="Primary" 
-            Clicked="CheckMed_Clicked" />
+            Clicked="CheckMed_Clicked" 
+            Icon="interaction.png"/>
         
         <ToolbarItem Name="AddMedicationButton" 
             AutomationId="AddMedication"

@@ -44,8 +44,8 @@ namespace myMD.View.MedicationTabPages
             BindingContext = vm;
         }
 
-        override
-        protected bool OnBackButtonPressed()
+
+        protected override bool OnBackButtonPressed()
         {
             if (vm.CancelPossible)
             {

@@ -78,6 +78,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\MedicationTabPages\MedicationInteractionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -188,6 +192,11 @@
     <Compile Include="Model\MedicationInformation\InteractionChecker.cs" />
     <Compile Include="Model\MedicationInformation\IInteractionChecker.cs" />
     <Compile Include="Model\MedicationInformation\InteractionPair.cs" />
+    <Compile Include="View\MedicationTabPages\MedicationInteractionPage.xaml.cs">
+      <DependentUpon>MedicationInteractionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\MedicationTabViewModel\MedicationInteractionViewModel.cs" />
+    <Compile Include="ViewModel\MedicationTabViewModel\InteractionPairViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ble.net, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">

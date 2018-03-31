@@ -29,8 +29,29 @@ namespace myMD.View.MedicationTabPages
             BindingContext = vm;
         }
 
-        public void CheckMed_Clicked(object sender, EventArgs e){
-            vm.CheckMed();
+        protected override void OnAppearing()
+        {
+            MessagingCenter.Subscribe<DetailedMedicineViewModel>(this, "SavedMedication", async sender => {
+                vm.Reload();
+                var number = await vm.CheckMed();
+
+                if (number > 0)
+                {
+                    var answer = await DisplayAlert("Warnung", "Die zur Zeit eingenommenen Medikamente könnten Wechselwirkungen hervorrufen.", "Anzeigen", "Egal");
+
+                    if (answer)
+                    {
+                        var view = new NavigationPage(new MedicationInteractionPage(vm.MedicationInteractions));
+                        view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
+                        view.BarTextColor = Color.White;
+                        await Navigation.PushModalAsync(view);
+                    }
+                }
+            });
+        }
+
+        public async void CheckMed_Clicked(object sender, EventArgs e){
+            var result = await vm.CheckMed();
         }
 
         /// <summary>

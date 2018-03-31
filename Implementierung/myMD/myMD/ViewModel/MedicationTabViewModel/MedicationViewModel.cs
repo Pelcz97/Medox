@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using myMD.Model.DataModel;
 using myMD.Model.MedicationInformation;
+using System.Threading.Tasks;
 
 namespace myMD.ViewModel.MedicationTabViewModel
 {
@@ -68,10 +69,7 @@ namespace myMD.ViewModel.MedicationTabViewModel
             MedicationInteractions = new List<InteractionPair>();
             GroupList();
 
-            MessagingCenter.Subscribe<DetailedMedicineViewModel>(this, "SavedMedication", sender => {
-                Reload();
-                CheckMed();
-            });
+
         }
 
         /// <summary>
@@ -129,27 +127,35 @@ namespace myMD.ViewModel.MedicationTabViewModel
             GroupList();
         }
 
-        public async void CheckMed(){
+        public async Task<int> CheckMed()
+        {
 
             IList<IMedication> currentMedications = new List<IMedication>();
 
-            foreach (MedicineViewModel med in MedicationsList){
-                if (med.Medication.EndDate >= DateTime.Today && med.Medication.Date <= DateTime.Today){
+            foreach (MedicineViewModel med in MedicationsList)
+            {
+                if (med.Medication.EndDate >= DateTime.Today && med.Medication.Date <= DateTime.Today)
+                {
                     currentMedications.Add(med.Medication);
                 }
             }
 
             MedicationInteractions.Clear();
 
-            if (currentMedications.Count() >= 2) {
-                
+            if (currentMedications.Count() >= 2)
+            {
+
                 var interactions = await ModelFacade.GetInteractions(currentMedications);
 
-                if (interactions != null){
+                if (interactions != null)
+                {
                     MedicationInteractions = interactions;
-                    Debug.WriteLine(interactions.Count()); 
+                    Debug.WriteLine(interactions.Count());
                 }
             }
+
+            return MedicationInteractions.Count();
+
         }
     }
 }
