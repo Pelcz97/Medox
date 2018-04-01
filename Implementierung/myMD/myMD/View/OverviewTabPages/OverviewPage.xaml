@@ -12,7 +12,24 @@
         Clicked="KameraButton_Clicked"/>
   </ContentPage.ToolbarItems>
     
-    <ContentPage.Content>            
+    <ContentPage.Content> 
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Text="Du hast noch keine Arztbriefe gespeichert. &#10;&#10; Lass dir bei deinem nächsten Arztbesuch deine Dokumente übertragen oder scanne gedruckte Arztbriefe manuell ein."
+                   TextColor="White"
+                   FontSize="Medium"
+                   FontAttributes="None"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="CenterAndExpand"
+                   IsVisible="{Binding LabelIsVisible}"
+                   Grid.Row="0" 
+                   Margin="20,0,20,0"/>
+            
             <ListView x:Name="DoctorsLettersList"
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
@@ -21,7 +38,11 @@
                 ItemSelected="DoctorsLetter_Clicked"
                 CachingStrategy="RecycleElement"
                 IsGroupingEnabled = "true"
-                GroupDisplayBinding = "{Binding Key}">
+                GroupDisplayBinding = "{Binding Key}"
+                Grid.Row="0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                IsVisible="{Binding ListIsVisible}">
             
                 <ListView.GroupHeaderTemplate>
                     <DataTemplate>
@@ -101,5 +122,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            </Grid>
     </ContentPage.Content>
 </local:CustomContentPage>

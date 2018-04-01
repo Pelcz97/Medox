@@ -4,8 +4,6 @@
 <dict>
 	<key>CFBundleDisplayName</key>
 	<string>myMD</string>
-	<key>CFBundleName</key>
-	<string>myMD</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.pse.myMD</string>
 	<key>CFBundleShortVersionString</key>
@@ -58,5 +56,7 @@
 	<string>This app needs access to photos.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>This app needs access to the photo gallery.</string>
+	<key>CFBundleName</key>
+	<string>myMD</string>
 </dict>
 </plist>

@@ -32,6 +32,33 @@ namespace myMD.ViewModel.OverviewTabViewModel
         /// <value>The key.</value>
         public string Key { get => DoctorsLettersItemsList.FirstOrDefault().Key; }
 
+        bool _listIsVisible;
+        public bool ListIsVisible
+        {
+            get
+            {
+                return _listIsVisible;
+            }
+            set
+            {
+                _listIsVisible = value;
+                OnPropertyChanged("ListIsVisible");
+            }
+        }
+
+        bool _labelIsVisible;
+        public bool LabelIsVisible
+        {
+            get
+            {
+                return _labelIsVisible;
+            }
+            set
+            {
+                _labelIsVisible = value;
+                OnPropertyChanged("LabelIsVisible");
+            }
+        }
 
         /// <summary>
         /// Command um ein DoctorsLetter aus der Liste zu löschen
@@ -55,12 +82,16 @@ namespace myMD.ViewModel.OverviewTabViewModel
         {
             DoctorsLettersList = new ObservableCollection<DoctorsLetterViewModel>();
             DoctorsLettersItemsList = new ObservableCollection<Grouping<string, DoctorsLetterViewModel>>();
+
+
             GroupList();
 
-            MessagingCenter.Subscribe<TransmittingDataViewModel>(this, "UpdateDoctorsLettersList", sender => {
+            MessagingCenter.Subscribe<TransmittingDataViewModel>(this, "UpdateDoctorsLettersList", sender =>
+            {
                 Reload();
             });
-            MessagingCenter.Subscribe<ScannedDoctorsLetterViewModel>(this, "AddNewLetter", sender => {
+            MessagingCenter.Subscribe<ScannedDoctorsLetterViewModel>(this, "AddNewLetter", sender =>
+            {
                 Reload();
             });
         }
@@ -73,14 +104,16 @@ namespace myMD.ViewModel.OverviewTabViewModel
             }
 
             var sorted = from letterItem in DoctorsLettersList
-                orderby letterItem.DoctorsLetter.Date.Year descending, 
-                        letterItem.DoctorsLetter.Date.Month descending, 
-                        letterItem.DoctorsLetter.Date.Day descending
-            group letterItem by letterItem.DoctorsLetter.Date.ToString("Y") into letterItemGroup
-            select new Grouping<string, DoctorsLetterViewModel>(letterItemGroup.Key, letterItemGroup);
+                         orderby letterItem.DoctorsLetter.Date.Year descending,
+                                 letterItem.DoctorsLetter.Date.Month descending,
+                                 letterItem.DoctorsLetter.Date.Day descending
+                         group letterItem by letterItem.DoctorsLetter.Date.ToString("Y") into letterItemGroup
+                         select new Grouping<string, DoctorsLetterViewModel>(letterItemGroup.Key, letterItemGroup);
 
             DoctorsLettersItemsList = new ObservableCollection<Grouping<string, DoctorsLetterViewModel>>(sorted);
             OnPropertyChanged("DoctorsLettersItemsList");
+            LabelIsVisible = (!DoctorsLettersItemsList.Any());
+            ListIsVisible = (DoctorsLettersItemsList.Any());
         }
 
         void DeleteListItemMethod(DoctorsLetterViewModel item)
@@ -100,6 +133,8 @@ namespace myMD.ViewModel.OverviewTabViewModel
                     }
                 }
             }
+            LabelIsVisible = (!DoctorsLettersItemsList.Any());
+            ListIsVisible = (DoctorsLettersItemsList.Any());
         }
 
         void Reload()

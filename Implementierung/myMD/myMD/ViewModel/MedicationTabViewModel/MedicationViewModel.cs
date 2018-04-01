@@ -57,6 +57,35 @@ namespace myMD.ViewModel.MedicationTabViewModel
             }
         }
 
+
+        bool _listIsVisible;
+        public bool ListIsVisible
+        {
+            get
+            {
+                return _listIsVisible;
+            }
+            set
+            {
+                _listIsVisible = value;
+                OnPropertyChanged("ListIsVisible");
+            }
+        }
+
+        bool _labelIsVisible;
+        public bool LabelIsVisible
+        {
+            get
+            {
+                return _labelIsVisible;
+            }
+            set
+            {
+                _labelIsVisible = value;
+                OnPropertyChanged("LabelIsVisible");
+            }
+        }
+
         /// <summary>
         /// Erstellt ein MedicationViewModel, initialisiert die MedicationsList und -ItemsList, 
         /// füllt beide über GroupList() mit den Einträgen der Datenbank auf. 
@@ -92,6 +121,8 @@ namespace myMD.ViewModel.MedicationTabViewModel
 
             MedicationsItemsList = new ObservableCollection<Grouping<string, MedicineViewModel>>(sorted);
             OnPropertyChanged("MedicationsItemsList");
+            LabelIsVisible = (!MedicationsItemsList.Any());
+            ListIsVisible = (MedicationsItemsList.Any());
         }
 
         /// <summary>
@@ -114,6 +145,8 @@ namespace myMD.ViewModel.MedicationTabViewModel
                     }
                 }
             }
+            LabelIsVisible = (!MedicationsItemsList.Any());
+            ListIsVisible = (MedicationsItemsList.Any());
         }
 
         /// <summary>

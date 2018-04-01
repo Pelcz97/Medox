@@ -17,18 +17,38 @@
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Text="Du hast noch keine Medikationen angelegt."
+                   TextColor="White"
+                   FontSize="Medium"
+                   FontAttributes="None"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="CenterAndExpand"
+                   IsVisible="{Binding LabelIsVisible}"
+                   Grid.Row="0" 
+                   Margin="20,0,20,0"/>
+            
             <ListView x:Name="MedicationList" 
                       AutomationId="MedicationList"
-                HasUnevenRows="true"
-                BackgroundColor="#191928" 
-                ItemsSource="{Binding MedicationsItemsList, Mode=TwoWay}"
-                IsVisible="true" 
-                SeparatorVisibility="None"
-                SeparatorColor="Transparent"
-                ItemSelected="MedicationItem_ItemSelected"
-                CachingStrategy="RecycleElement"
-                IsGroupingEnabled = "true"
-                GroupDisplayBinding = "{Binding Key}">
+                    HasUnevenRows="true"
+                    BackgroundColor="#191928" 
+                    ItemsSource="{Binding MedicationsItemsList, Mode=TwoWay}"
+                    IsVisible="{Binding ListIsVisible}" 
+                    SeparatorVisibility="None"
+                    SeparatorColor="Transparent"
+                    ItemSelected="MedicationItem_ItemSelected"
+                    CachingStrategy="RecycleElement"
+                    IsGroupingEnabled = "true"
+                    GroupDisplayBinding = "{Binding Key}"
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="FillAndExpand"
+                    Grid.Row="0">
 
                 <ListView.GroupHeaderTemplate>
                     <DataTemplate>
@@ -127,5 +147,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            </Grid>
     </ContentPage.Content>
 </local:CustomContentPage>

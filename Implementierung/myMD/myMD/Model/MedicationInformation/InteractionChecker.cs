@@ -41,9 +41,6 @@ namespace myMD.Model.MedicationInformation
             // Get the JSON response.
             string contentString = await response.Content.ReadAsStringAsync();
 
-            //Debug.WriteLine(contentString);
-            //Debug.WriteLine(JsonPrettyPrint(contentString));
-
             var pairs = ResultOnly(contentString);
 
             return pairs;
