@@ -240,18 +240,6 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Spotlight-40%403x Kopie.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\icons8-pill.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\icons8-pill%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\TabBarIcon.imageset\icons8-pill%403x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\TabBarIcon.imageset\" />
@@ -293,6 +281,9 @@
     <BundleResource Include="Resources\profileTab%403x.png" />
     <BundleResource Include="Resources\receiveTab%402x.png" />
     <BundleResource Include="Resources\receiveTab%403x.png" />
+    <BundleResource Include="Resources\myMD%402x.png" />
+    <BundleResource Include="Resources\myMD.png" />
+    <BundleResource Include="Resources\myMD%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />

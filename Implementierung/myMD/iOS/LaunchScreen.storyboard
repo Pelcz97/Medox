@@ -18,8 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" customColorSpace="sRGB" colorSpace="calibratedRGB" red="0.074509803921568626" green="0.070588235294117646" blue="0.11372549019607843" alpha="1"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="197" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="myMDIcon.png">
-                                <rect key="frame" x="87" y="243" width="240" height="250"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="197" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="myMD.png">
+                                <rect key="frame" x="85" y="243" width="250" height="250"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinX="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
                             </imageView>
                         </subviews>
@@ -32,9 +32,11 @@
     </scenes>
     <resources>
         <image name="medicationTab.png" width="30" height="30"/>
-        <image name="TabBarIcon" width="32" height="32"/>
         <image name="profileTab.png" width="28" height="28"/>
         <image name="overviewTab.png" width="27" height="27"/>
         <image name="receiveTab.png" width="28" height="28"/>
+        <image name="interaction.png" width="32" height="32"/>
+        <image name="medicationtab.png" width="30" height="30"/>
+        <image name="myMD.png" width="500" height="500"/>
     </resources>
 </document>
