@@ -10,18 +10,18 @@
         <ToolbarItem Name="EditButton" Text="Bearbeiten" Order="Primary" Clicked="EditProfileButton" AutomationId="EditButton" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <TableView BackgroundColor="#191928" Intent="Form" 
-            VerticalOptions="FillAndExpand" 
-            HorizontalOptions="FillAndExpand"
-            HeightRequest="50"
-            RowHeight="80">
+        <TableView BackgroundColor="#191928" 
+                   Intent="Form" 
+                   VerticalOptions="FillAndExpand" 
+                   HorizontalOptions="FillAndExpand"
+                   RowHeight="80">
             <TableRoot>
                 <TableSection>
                     <ViewCell>
                         <StackLayout Orientation="Vertical" 
                             VerticalOptions="FillAndExpand"
                             HorizontalOptions="FillAndExpand">
-                            <Label Text="Name" 
+                            <Label Text="Nachname" 
                                 HorizontalTextAlignment="Start" 
                                 VerticalTextAlignment="Center" 
                                 TextColor="#929292" 
