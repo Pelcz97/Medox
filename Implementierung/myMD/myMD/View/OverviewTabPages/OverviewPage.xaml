@@ -13,6 +13,14 @@
   </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="SeachMedications" 
+                       BackgroundColor="#191928"
+                       CancelButtonColor="White"
+                       TextColor="#191928"
+                       Placeholder="Suchen" 
+                       PlaceholderColor="Gray"/>
+            
             <ListView x:Name="DoctorsLettersList"
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
@@ -101,5 +109,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            </StackLayout>
     </ContentPage.Content>
 </local:CustomContentPage>

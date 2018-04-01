@@ -55,7 +55,6 @@ namespace myMD.View.MedicationTabPages
                     Debug.WriteLine(ex);
                 }
             });
-
         }
 
 
