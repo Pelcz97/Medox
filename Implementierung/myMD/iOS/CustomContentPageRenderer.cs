@@ -18,7 +18,6 @@ namespace ProjectName.iOS.Renderers
             base.ViewWillAppear(animated);
 
             ConfigureToolbarItems();
-            ConfigureNavBar();
         }
 
         private void ConfigureToolbarItems()
@@ -37,44 +36,6 @@ namespace ProjectName.iOS.Renderers
                 if (navigationItem.LeftBarButtonItems != null)
                     leftItems = navigationItem.LeftBarButtonItems.Union(leftItems).ToArray();
                 navigationItem.SetLeftBarButtonItems(leftItems, false);
-            }
-        }
-
-        private void ConfigureNavBar(){
-            var toolbarPage = this.Element as ToolbarPage;
-            var toolbarView = toolbarPage.ToolbarViewElement as VisualElement;
-
-            var navigationItem = this.NavigationController?.TopViewController?.NavigationItem;
-            if (navigationItem == null)
-            {
-                return;
-            }
-
-            if (toolbarView != null)
-            {
-                if (Platform.GetRenderer(toolbarView) == null)
-                    Platform.SetRenderer(toolbarView, Platform.CreateRenderer(toolbarView));
-                var vRenderer = Platform.GetRenderer(toolbarView);
-
-                var size = new CGRect(0, 0, 200, 30);
-
-                var nativeView = vRenderer.NativeView;
-                var segmentedControl = nativeView as UISegmentedControl;
-                nativeView.Frame = size;
-
-                nativeView.AutoresizingMask = UIViewAutoresizing.All;
-                nativeView.ContentMode = UIViewContentMode.ScaleToFill;
-
-                vRenderer.Element.Layout(size.ToRectangle());
-
-                navigationItem.TitleView = nativeView;
-
-                nativeView.SetNeedsLayout();
-            }
-
-            if (toolbarPage.ToolbarHome != null)
-            {
-                navigationItem.LeftBarButtonItems = new UIBarButtonItem[] { toolbarPage.ToolbarHome.ToUIBarButtonItem() };
             }
         }
     }
