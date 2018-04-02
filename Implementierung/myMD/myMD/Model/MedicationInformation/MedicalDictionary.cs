@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Net.Http;
 using System.Xml.Linq;
 
@@ -26,14 +28,22 @@ namespace myMD.Model.MedicationInformation
             string contentString = await response.Content.ReadAsStringAsync();
 
             //Parse response
-            /*XDocument xdoc = XDocument.Parse(contentString);
+            XDocument xdoc = XDocument.Parse(contentString);
 
-            if (xdoc.Element("rxnormdata").Element("idGroup").Descendants().Count() == 1)
+            IList<DictionaryEntry> entries = new List<DictionaryEntry>();
+
+            if (xdoc.Element("entry_list").Descendants().Count() == 1)
             {
-                return null;
-            }*/
+                foreach (var element in xdoc.Element("entry_list").Descendants()){
+                    string expression = (string)element.Element("ew").Value;
+                    string definition = (string)element.Element("def").Element("sensb").Element("sens").Element("dt").Value;
 
-            Debug.WriteLine(contentString);
+                    Debug.WriteLine("Expression: " + expression);
+                    Debug.WriteLine("Definition: " + definition);
+                    entries.Add(new DictionaryEntry(expression, definition));
+                }
+            }
+            //Debug.WriteLine(contentString);
         }
     }
 }

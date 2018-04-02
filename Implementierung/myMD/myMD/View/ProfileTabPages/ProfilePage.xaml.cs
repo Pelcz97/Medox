@@ -29,14 +29,13 @@ namespace myMD.View.ProfileTabPages
             BindingContext = vm;
         }
 
-        public void DictionaryButton(object sender, System.EventArgs e)
+        public async void DictionaryButton(object sender, System.EventArgs e)
         {
-            /*var view = new NavigationPage(new ProfileEditPage());
+            var view = new NavigationPage(new DictionaryPage());
             view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
             view.BarTextColor = Color.White;
 
-            await Navigation.PushModalAsync(view);*/
-            vm.GetDictionary();
+            await Navigation.PushModalAsync(view);
         }
 
         /// <summary>

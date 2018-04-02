@@ -13,7 +13,7 @@
                      IsEnabled="{Binding SavingPossible}" />
     </ContentPage.ToolbarItems>
 
-    <ContentPage.Content>
+
         <StackLayout VerticalOptions="StartAndExpand">
             <Frame CornerRadius="0" 
                    BackgroundColor="#00B9B4" 
@@ -81,5 +81,7 @@
                 </TableRoot>
             </TableView>
         </StackLayout>
+    
+    <ContentPage.Content>
     </ContentPage.Content>
 </local:CustomContentPage>

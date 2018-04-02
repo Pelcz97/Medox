@@ -206,6 +206,8 @@
     <Compile Include="View\ProfileTabPages\DictionaryPage.xaml.cs">
       <DependentUpon>DictionaryPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\ProfileTabViewModel\DictionaryViewModel.cs" />
+    <Compile Include="Model\MedicationInformation\DictionaryEntry.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ble.net, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">

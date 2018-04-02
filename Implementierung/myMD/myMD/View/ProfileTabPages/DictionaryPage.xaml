@@ -1,5 +1,50 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="myMD.View.ProfileTabPages.DictionaryPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="DoneButton" 
+                 Text="Fertig" 
+                 Order="Primary" 
+                 Priority="1" 
+                 Clicked="DoneButton_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
+    <ListView x:Name="Interactions" 
+                HasUnevenRows="true"
+                BackgroundColor="#191928" 
+                ItemsSource="{Binding Interactions, Mode=TwoWay}"
+                IsVisible="true" 
+                SeparatorVisibility="Default"
+                SeparatorColor="White"
+                CachingStrategy="RecycleElement">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout>
+                                            <Label Text="{Binding ConflictingMeds}"
+                                            TextColor="#D0001E" 
+                                            FontSize="Medium" 
+                                            FontAttributes="Bold" 
+                                            HorizontalTextAlignment="Center" 
+                                            VerticalTextAlignment="Start" 
+                                            VerticalOptions="Start" Margin="17,5,17,7"/>
+                                            
+                                            <Label Text="{Binding Description}"
+                                            TextColor="#FFFFFF"
+                                            FontSize="Small" 
+                                            HorizontalTextAlignment="Start" 
+                                            FontAttributes="None"  
+                                            HorizontalOptions="StartAndExpand" 
+                                            Margin="17,0,17,7"/>
+                                    </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+    
     </ContentPage.Content>
 </ContentPage>

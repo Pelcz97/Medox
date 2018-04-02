@@ -13,6 +13,7 @@
                  Clicked="DoneButton_Clicked"/>
     </ContentPage.ToolbarItems>
     
+    <ContentPage.Content>
     <ListView x:Name="Interactions" 
                 HasUnevenRows="true"
                 BackgroundColor="#191928" 
@@ -49,6 +50,6 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-    <ContentPage.Content>
+    
     </ContentPage.Content>
 </local:CustomContentPage>
