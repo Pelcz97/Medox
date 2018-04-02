@@ -17,6 +17,7 @@
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
+        <ScrollView>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -148,5 +149,6 @@
                 </ListView.ItemTemplate>
             </ListView>
             </Grid>
+            </ScrollView>
     </ContentPage.Content>
 </local:CustomContentPage>

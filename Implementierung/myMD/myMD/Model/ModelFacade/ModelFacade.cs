@@ -52,6 +52,8 @@ namespace myMD.Model.ModelFacade
 
         private IInteractionChecker interactionChecker;
 
+        private IMedicalDictionary dictionary;
+
         /// <summary>
         /// Konstruktor in dem die Schnittstellen, von dem die Klasse abhänig ist injiziert werden können.
         /// </summary>
@@ -59,7 +61,7 @@ namespace myMD.Model.ModelFacade
         /// <param name="factory">Die zu verwendende Fabrik</param>
         /// <param name="parser">Der zu verwendende Parser</param>
         /// <param name="bluetooth">Die zu verwendende Datenübertragungsmöglichkeit</param>
-        public ModelFacade(IEntityDatabase database, IEntityFactory factory, IParserFacade parser, IBluetooth bluetooth, IInteractionChecker interactionChecker)
+        public ModelFacade(IEntityDatabase database, IEntityFactory factory, IParserFacade parser, IBluetooth bluetooth, IInteractionChecker interactionChecker, IMedicalDictionary dictionary)
         {
             this.database = database;
             this.factory = factory;
@@ -67,6 +69,7 @@ namespace myMD.Model.ModelFacade
             this.bluetooth = bluetooth;
             this.fileHelper = DependencyServiceWrapper.Get<IFileHelper>();
             this.interactionChecker = interactionChecker;
+            this.dictionary = dictionary;
             //Create new Profile, if none exists yet
             if (database.GetAllProfiles().Count == 0)
             {
@@ -164,6 +167,10 @@ namespace myMD.Model.ModelFacade
 
         public Task<IList<InteractionPair>> GetInteractions(IList<IMedication> medications){
             return interactionChecker.GetInteractions(medications);
+        }
+
+        public void GetDefinition(string expression){
+            dictionary.GetDefinitions(expression);
         }
 
     }

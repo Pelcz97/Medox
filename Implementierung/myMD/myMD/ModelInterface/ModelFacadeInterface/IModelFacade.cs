@@ -111,5 +111,6 @@ namespace myMD.ModelInterface.ModelFacadeInterface
 
         Task<IList<InteractionPair>> GetInteractions(IList<IMedication> medications);
 
+        void GetDefinition(string expression);
     }
 }

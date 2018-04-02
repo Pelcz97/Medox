@@ -7,6 +7,7 @@
     <ContentPage.ToolbarItems>
         <!--TODO: clicked event hinzufügen, um Bearbeitung zu toggeln
     EntryElemente DataBinden-->
+        <ToolbarItem Name="Dictionary" Text="Suchen" Order="Primary" Clicked="DictionaryButton" Priority="-1" />
         <ToolbarItem Name="EditButton" Text="Bearbeiten" Order="Primary" Clicked="EditProfileButton" AutomationId="EditButton" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
