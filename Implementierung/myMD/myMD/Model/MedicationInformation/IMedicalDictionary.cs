@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace myMD.Model.MedicationInformation
 {
     public interface IMedicalDictionary
     {
-        void GetDefinitions(string term);
+        Task<IList<DictionaryEntry>> GetDefinitions(string term);
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace myMD.Model.MedicationInformation
@@ -14,12 +15,12 @@ namespace myMD.Model.MedicationInformation
         const string url2 = "?key=001a4d6f-43df-42aa-a652-e085ade599dc";
 
 
-        public async void GetDefinitions(string term){
+        public async Task<IList<DictionaryEntry>> GetDefinitions(string term){
             HttpClient client = new HttpClient();
             HttpResponseMessage response;
 
             // Assemble the URI for the REST API Call.
-            string uri = url1 + "antibiotics" + url2;
+            string uri = url1 + term + url2;
 
             // Execute the REST API call.
             response = await client.GetAsync(uri);
@@ -31,10 +32,11 @@ namespace myMD.Model.MedicationInformation
             XDocument xdoc = XDocument.Parse(contentString);
 
             IList<DictionaryEntry> entries = new List<DictionaryEntry>();
+            Debug.WriteLine(contentString);
 
-            if (xdoc.Element("entry_list").Descendants().Count() == 1)
+            if (xdoc.Element("entry_list").Descendants().Any())
             {
-                foreach (var element in xdoc.Element("entry_list").Descendants()){
+                foreach (var element in xdoc.Element("entry_list").Descendants("entry")){
                     string expression = (string)element.Element("ew").Value;
                     string definition = (string)element.Element("def").Element("sensb").Element("sens").Element("dt").Value;
 
@@ -43,7 +45,8 @@ namespace myMD.Model.MedicationInformation
                     entries.Add(new DictionaryEntry(expression, definition));
                 }
             }
-            //Debug.WriteLine(contentString);
+
+            return entries;
         }
     }
 }

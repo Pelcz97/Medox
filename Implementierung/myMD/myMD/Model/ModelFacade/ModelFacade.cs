@@ -169,8 +169,8 @@ namespace myMD.Model.ModelFacade
             return interactionChecker.GetInteractions(medications);
         }
 
-        public void GetDefinition(string expression){
-            dictionary.GetDefinitions(expression);
+        public async Task<IList<DictionaryEntry>> GetDefinition(string expression){
+            return await dictionary.GetDefinitions(expression);
         }
 
     }

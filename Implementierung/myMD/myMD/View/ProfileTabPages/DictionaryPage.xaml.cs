@@ -22,5 +22,14 @@ namespace myMD.View.ProfileTabPages
         {
             await Navigation.PopModalAsync();
         }
+
+        void Handle_SearchButtonPressed(object sender, System.EventArgs e)
+        {
+            var input = SearchBar.Text;
+
+            if(input.Length != 0){
+                vm.GetDefinition(input);
+            }
+        }
     }
 }

@@ -11,8 +11,8 @@ namespace myMD.ViewModel.ProfileTabViewModel
         public string term { get; set; }
 
         public DictionaryEntryViewModel(DictionaryEntry entry){
-            expression = entry.Term;
             term = entry.Term;
+            expression = entry.Definition;
         }
     }
 }
