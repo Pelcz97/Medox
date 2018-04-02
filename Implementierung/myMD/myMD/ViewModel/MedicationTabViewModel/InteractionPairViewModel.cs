@@ -7,9 +7,26 @@ namespace myMD.ViewModel.MedicationTabViewModel
     [Preserve(AllMembers = true)]
     public class InteractionPairViewModel : OverallViewModel.OverallViewModel
     {
-        public string ConflictingMeds { get; set; }
+        string conflict { get; set; }
+        public string ConflictingMeds { get => conflict;
+            set
+            {
+                conflict = value;
+                OnPropertyChanged("ConflictingMeds");
 
-        public string Description { get; set; }
+            }            
+        }
+
+        string description { get; set; }
+        public string Description
+        {
+            get => description;
+            set
+            {
+                description = value;
+                OnPropertyChanged("Description");
+            }
+        }
 
         public InteractionPairViewModel(InteractionPair pair)
         {

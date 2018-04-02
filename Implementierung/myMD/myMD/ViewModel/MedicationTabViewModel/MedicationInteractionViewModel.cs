@@ -36,9 +36,8 @@ namespace myMD.ViewModel.MedicationTabViewModel
 
                 var result = await ModelFacade.TranslateText(texts);
 
-                foreach (string r in result)
-                {
-                    Debug.WriteLine(r);
+                for (int i = 0; i < result.Count; i++){
+                    Interactions[i].Description = result[i];
                 }
             }
         }
