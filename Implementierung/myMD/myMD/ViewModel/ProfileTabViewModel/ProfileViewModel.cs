@@ -40,9 +40,5 @@ namespace myMD.ViewModel.ProfileTabViewModel
             OnPropertyChanged("InsuranceNumber");
             OnPropertyChanged("BloodTypeName");
         }
-
-        public void GetDictionary(){
-            ModelFacade.GetDefinition("Test");
-        }
     }
 }

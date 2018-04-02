@@ -24,7 +24,6 @@ namespace myMD.View.ProfileTabPages
         public ProfilePage()
         {
             InitializeComponent();
-
             vm = new ProfileViewModel();
             BindingContext = vm;
         }

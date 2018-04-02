@@ -3,8 +3,8 @@ using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(ContentPage), typeof(ProjectName.iOS.Renderers.CustomContentPageRenderer))]
-namespace ProjectName.iOS.Renderers
+[assembly: ExportRenderer(typeof(ContentPage), typeof(myMD.iOS.CustomContentPageRenderer))]
+namespace myMD.iOS
 {
     class CustomContentPageRenderer : PageRenderer
     {
