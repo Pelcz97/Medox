@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using myMD.View.AbstractPages;
 using myMD.ViewModel.ProfileTabViewModel;
 using Xamarin.Forms;
@@ -23,12 +24,19 @@ namespace myMD.View.ProfileTabPages
             await Navigation.PopModalAsync();
         }
 
-        void Handle_SearchButtonPressed(object sender, System.EventArgs e)
+        async void Handle_SearchButtonPressed(object sender, System.EventArgs e)
         {
             var input = SearchBar.Text;
 
             if(input.Length != 0){
-                vm.GetDefinition(input);
+                try
+                {
+                    vm.GetDefinition(input);
+
+                } catch (HttpRequestException ex)
+                {
+                    await DisplayAlert("Fehler", "Etwas scheint nicht in Ordnung zu sein. Prüfe deine Internetverbindung oder versuche es später nocheinmal.", "Okay");
+                }
             }
         }
     }

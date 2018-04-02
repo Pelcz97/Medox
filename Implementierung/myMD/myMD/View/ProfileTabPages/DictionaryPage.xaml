@@ -2,7 +2,8 @@
 <local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                          xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD" 
-                         x:Class="myMD.View.ProfileTabPages.DictionaryPage">
+                         x:Class="myMD.View.ProfileTabPages.DictionaryPage"
+                         Title="Nachschlagen">
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="DoneButton" 
                  Text="Fertig" 
@@ -34,8 +35,8 @@
                         <ViewCell>
                             <ViewCell.View>
                                 <StackLayout>
-                                            <Label Text="{Binding expression}"
-                                            TextColor="#D0001E" 
+                                            <Label Text="{Binding term}"
+                                            TextColor="#00B9B4" 
                                             FontSize="Medium" 
                                             FontAttributes="Bold" 
                                             HorizontalTextAlignment="Start" 
@@ -43,13 +44,13 @@
                                             VerticalOptions="Start" 
                                             Margin="17,5,17,7"/>
                                             
-                                            <Label Text="{Binding term}"
+                                            <Label Text="{Binding definition}"
                                             TextColor="#FFFFFF"
                                             FontSize="Small" 
                                             HorizontalTextAlignment="Start" 
-                                            FontAttributes="None"  
+                                            FontAttributes="Italic"  
                                             HorizontalOptions="StartAndExpand" 
-                                            Margin="17,0,17,7"/>
+                                            Margin="22,0,20,17"/>
                                     </StackLayout>
                             </ViewCell.View>
                         </ViewCell>

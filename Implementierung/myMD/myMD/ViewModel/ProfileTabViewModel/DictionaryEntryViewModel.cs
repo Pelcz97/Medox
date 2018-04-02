@@ -7,12 +7,12 @@ namespace myMD.ViewModel.ProfileTabViewModel
     [Preserve(AllMembers = true)]
     public class DictionaryEntryViewModel
     {
-        public string expression { get; set; }
+        public string definition { get; set; }
         public string term { get; set; }
 
         public DictionaryEntryViewModel(DictionaryEntry entry){
             term = entry.Term;
-            expression = entry.Definition;
+            definition = entry.Definition;
         }
     }
 }
