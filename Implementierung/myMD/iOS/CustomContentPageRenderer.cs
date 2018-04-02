@@ -1,10 +1,16 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Foundation;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
+
 [assembly: ExportRenderer(typeof(ContentPage), typeof(myMD.iOS.CustomContentPageRenderer))]
 namespace myMD.iOS
+
 {
     class CustomContentPageRenderer : PageRenderer
     {
@@ -22,21 +28,42 @@ namespace myMD.iOS
 
         private void ConfigureToolbarItems()
         {
-            if (NavigationController != null)
+            List<UIBarButtonItem> LeftNavList = new List<UIBarButtonItem>();
+            List<UIBarButtonItem> RightNavList = new List<UIBarButtonItem>();
+            List<ToolbarItem> ToolbarList = new List<ToolbarItem>();
+
+            UINavigationItem navigationItem = new UINavigationItem();
+            if (this.NavigationController != null)
             {
-                UINavigationItem navigationItem = NavigationController.TopViewController.NavigationItem;
-                var orderedItems = Element.ToolbarItems.OrderBy(x => x.Priority);
+                navigationItem = this.NavigationController.TopViewController.NavigationItem;
+                // Add to new list for sorting
+                foreach (ToolbarItem itm in Element.ToolbarItems)
+                {
+                    ToolbarList.Add(itm);
+                }
 
-                // add right side items
-                var rightItems = orderedItems.Where(x => x.Priority >= 0).Select(x => x.ToUIBarButtonItem()).ToArray();
-                navigationItem.SetRightBarButtonItems(rightItems, false);
+                // Sort the list
+                ToolbarList.Sort((ToolbarItem i1, ToolbarItem i2) =>
+                {
+                    return i1.Priority > i2.Priority ? -1 : 1;
+                });
 
-                // add left side items, keep any already there
-                var leftItems = orderedItems.Where(x => x.Priority < 0).Select(x => x.ToUIBarButtonItem()).ToArray();
-                if (navigationItem.LeftBarButtonItems != null)
-                    leftItems = navigationItem.LeftBarButtonItems.Union(leftItems).ToArray();
-                navigationItem.SetLeftBarButtonItems(leftItems, false);
+                foreach (ToolbarItem itm in ToolbarList)
+                {
+                    if (itm.Priority < 0)
+                    {
+                        LeftNavList.Add(itm.ToUIBarButtonItem());
+                    }
+                    else
+                    {
+                        RightNavList.Add(itm.ToUIBarButtonItem());
+                    }
+                }
+
+                navigationItem.SetLeftBarButtonItems(LeftNavList.ToArray(), false);
+                navigationItem.SetRightBarButtonItems(RightNavList.ToArray(), false);
             }
+
         }
     }
 }
