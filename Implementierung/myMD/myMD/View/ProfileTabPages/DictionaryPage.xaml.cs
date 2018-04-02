@@ -28,15 +28,13 @@ namespace myMD.View.ProfileTabPages
         {
             var input = SearchBar.Text;
 
-            if(input.Length != 0){
-                try
-                {
-                    vm.GetDefinition(input);
+            if (input.Length != 0)
+            {
 
-                } catch (HttpRequestException ex)
-                {
+                var result = await vm.GetDefinition(input);
+                if (result == 0)
                     await DisplayAlert("Fehler", "Etwas scheint nicht in Ordnung zu sein. Prüfe deine Internetverbindung oder versuche es später nocheinmal.", "Okay");
-                }
+
             }
         }
     }

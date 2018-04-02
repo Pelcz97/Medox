@@ -209,6 +209,8 @@
     <Compile Include="ViewModel\ProfileTabViewModel\DictionaryViewModel.cs" />
     <Compile Include="Model\MedicationInformation\DictionaryEntry.cs" />
     <Compile Include="ViewModel\ProfileTabViewModel\DictionaryEntryViewModel.cs" />
+    <Compile Include="Model\MedicationInformation\Translator.cs" />
+    <Compile Include="Model\MedicationInformation\ITranslator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ble.net, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">

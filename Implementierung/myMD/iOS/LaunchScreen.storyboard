@@ -38,5 +38,6 @@
         <image name="interaction.png" width="32" height="32"/>
         <image name="medicationtab.png" width="30" height="30"/>
         <image name="myMD.png" width="500" height="500"/>
+        <image name="search.png" width="20" height="20"/>
     </resources>
 </document>

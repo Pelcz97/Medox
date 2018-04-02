@@ -19,7 +19,8 @@
                        PlaceholderColor="Gray"
                        TextColor="#191928"
                        BackgroundColor="#191928"
-                       CancelButtonColor="White" SearchButtonPressed="Handle_SearchButtonPressed"/>
+                       CancelButtonColor="White" 
+                       SearchButtonPressed="Handle_SearchButtonPressed"/>
             
     <ListView x:Name="Dictionary" 
                 HasUnevenRows="true"
@@ -48,7 +49,7 @@
                                             TextColor="#FFFFFF"
                                             FontSize="Small" 
                                             HorizontalTextAlignment="Start" 
-                                            FontAttributes="Italic"  
+                                            FontAttributes="None"  
                                             HorizontalOptions="StartAndExpand" 
                                             Margin="22,0,20,17"/>
                                     </StackLayout>

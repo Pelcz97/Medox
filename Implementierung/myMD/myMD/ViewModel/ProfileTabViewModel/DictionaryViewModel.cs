@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Net.Http;
+using System.Threading.Tasks;
 using myMD.Model.MedicationInformation;
 using Xamarin.Forms.Internals;
 
@@ -16,17 +18,25 @@ namespace myMD.ViewModel.ProfileTabViewModel
             DictionaryEntries = new ObservableCollection<DictionaryEntryViewModel>();
         }
 
-        public async void GetDefinition(string input)
+        public async Task<int> GetDefinition(string input)
         {
             DictionaryEntries.Clear();
-            var result = await ModelFacade.GetDefinition(input);
 
-            if (result.Count > 0){
-                foreach (DictionaryEntry entry in result)
+            try
+            {
+                var result = await ModelFacade.GetDefinition(input);
+
+                if (result.Count > 0)
                 {
-                    DictionaryEntries.Add(new DictionaryEntryViewModel(entry));
+                    foreach (DictionaryEntry entry in result)
+                    {
+                        DictionaryEntries.Add(new DictionaryEntryViewModel(entry));
+                    }
                 }
-            }            
+                return 1;
+            } catch (HttpRequestException ex) {
+                return 0;
+            }
         }
     }
 }
