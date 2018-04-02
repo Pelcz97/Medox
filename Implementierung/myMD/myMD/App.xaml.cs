@@ -108,7 +108,7 @@ namespace myMD
         private static IModelFacade CreateModel()
         {
             DependencyServiceWrapper.Service = new XamarinDependencyService();
-            return new ModelFacade(new EntityDatabase(), new EntityFactory(), new ParserFacade(), new Bluetooth(), new InteractionChecker(), new MedicalDictionary());
+            return new ModelFacade(new EntityDatabase(), new EntityFactory(), new ParserFacade(), new Bluetooth(), new InteractionChecker(), new MedicalDictionary(), new Translator());
         }
     }
 }

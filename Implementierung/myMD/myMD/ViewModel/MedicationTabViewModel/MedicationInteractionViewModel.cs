@@ -24,5 +24,23 @@ namespace myMD.ViewModel.MedicationTabViewModel
                 Interactions.Add(new InteractionPairViewModel(pair));
             }
         }
+
+        public async void TranslateEntries(){
+            if (Interactions.Any())
+            {
+                IList<string> texts = new List<string>();
+                foreach (InteractionPairViewModel description in Interactions)
+                {
+                    texts.Add(description.Description);
+                }
+
+                var result = await ModelFacade.TranslateText(texts);
+
+                foreach (string r in result)
+                {
+                    Debug.WriteLine(r);
+                }
+            }
+        }
     }
 }

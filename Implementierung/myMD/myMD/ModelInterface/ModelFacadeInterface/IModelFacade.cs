@@ -112,5 +112,7 @@ namespace myMD.ModelInterface.ModelFacadeInterface
         Task<IList<InteractionPair>> GetInteractions(IList<IMedication> medications);
 
         Task<IList<DictionaryEntry>> GetDefinition(string expression);
+
+        Task<IList<string>> TranslateText(IList<string> input);
     }
 }

@@ -6,6 +6,12 @@
              Title="Wechselwirkungen">
     
     <ContentPage.ToolbarItems>
+        <ToolbarItem Name="TranslateButton" 
+                 Text="Übersetzen" 
+                 Order="Primary" 
+                 Priority="-1" 
+                 Clicked="TranslateButton_Clicked"/>
+        
         <ToolbarItem Name="DoneButton" 
                  Text="Fertig" 
                  Order="Primary" 

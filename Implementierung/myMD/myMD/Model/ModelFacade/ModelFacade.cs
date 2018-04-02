@@ -54,6 +54,8 @@ namespace myMD.Model.ModelFacade
 
         private IMedicalDictionary dictionary;
 
+        private ITranslator translator;
+
         /// <summary>
         /// Konstruktor in dem die Schnittstellen, von dem die Klasse abhänig ist injiziert werden können.
         /// </summary>
@@ -61,7 +63,7 @@ namespace myMD.Model.ModelFacade
         /// <param name="factory">Die zu verwendende Fabrik</param>
         /// <param name="parser">Der zu verwendende Parser</param>
         /// <param name="bluetooth">Die zu verwendende Datenübertragungsmöglichkeit</param>
-        public ModelFacade(IEntityDatabase database, IEntityFactory factory, IParserFacade parser, IBluetooth bluetooth, IInteractionChecker interactionChecker, IMedicalDictionary dictionary)
+        public ModelFacade(IEntityDatabase database, IEntityFactory factory, IParserFacade parser, IBluetooth bluetooth, IInteractionChecker interactionChecker, IMedicalDictionary dictionary, ITranslator translator)
         {
             this.database = database;
             this.factory = factory;
@@ -70,6 +72,7 @@ namespace myMD.Model.ModelFacade
             this.fileHelper = DependencyServiceWrapper.Get<IFileHelper>();
             this.interactionChecker = interactionChecker;
             this.dictionary = dictionary;
+            this.translator = translator;
             //Create new Profile, if none exists yet
             if (database.GetAllProfiles().Count == 0)
             {
@@ -171,6 +174,10 @@ namespace myMD.Model.ModelFacade
 
         public async Task<IList<DictionaryEntry>> GetDefinition(string expression){
             return await dictionary.GetDefinitions(expression);
+        }
+
+        public async Task<IList<string>> TranslateText(IList<string> input){
+            return await translator.TranslateText(input);
         }
 
     }

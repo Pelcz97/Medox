@@ -25,6 +25,10 @@ namespace myMD.View.MedicationTabPages
             BindingContext = vm;
         }
 
+        async void TranslateButton_Clicked(object sender, EventArgs e){
+            vm.TranslateEntries();
+        }
+                                           
         async void DoneButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
