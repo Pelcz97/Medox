@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 using myMD.Model.MedicationInformation;
 using Xamarin.Forms.Internals;
 
@@ -13,9 +14,18 @@ namespace myMD.ViewModel.MedicationTabViewModel
     {
         public ObservableCollection<InteractionPairViewModel> Interactions { get; set; }
 
+        bool translateButtonEnabled { get; set; }
+        public bool TranslateButtonEnabled { get => translateButtonEnabled; 
+            set {
+                translateButtonEnabled = value;
+                OnPropertyChanged("TranslateButtonEnabled");
+            }
+        }
+
         public MedicationInteractionViewModel(object interactionList)
         {
             var list = (IList<InteractionPair>)interactionList;
+            TranslateButtonEnabled = true;
 
             Debug.WriteLine(list.Count());
             Interactions = new ObservableCollection<InteractionPairViewModel>();
@@ -39,6 +49,9 @@ namespace myMD.ViewModel.MedicationTabViewModel
                 for (int i = 0; i < result.Count; i++){
                     Interactions[i].Description = result[i];
                 }
+                TranslateButtonEnabled = false;
+            } else {
+                TranslateButtonEnabled = true;
             }
         }
     }

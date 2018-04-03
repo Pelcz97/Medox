@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
 using myMD.View.AbstractPages;
 using myMD.ViewModel.MedicationTabViewModel;
 using Xamarin.Forms;
@@ -26,7 +28,14 @@ namespace myMD.View.MedicationTabPages
         }
 
         async void TranslateButton_Clicked(object sender, EventArgs e){
-            vm.TranslateEntries();
+            try {
+                vm.TranslateEntries();
+            }
+            catch (HttpRequestException ex)
+            {
+                Debug.WriteLine(ex);
+                await DisplayAlert("Fehler", "Die Verbindung zum Server ist fehlgeschlagen. Prüfe deine Internetverbindung und probiere es erneut.", "Okay");
+            }
         }
                                            
         async void DoneButton_Clicked(object sender, EventArgs e)

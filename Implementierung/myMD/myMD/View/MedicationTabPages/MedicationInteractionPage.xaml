@@ -9,7 +9,8 @@
         <ToolbarItem Name="TranslateButton" 
                  Text="Übersetzen" 
                  Order="Primary" 
-                 Priority="-1" 
+                 Priority="-1"
+                 IsEnabled="{Binding TranslateButtonEnabled}"
                  Clicked="TranslateButton_Clicked"/>
         
         <ToolbarItem Name="DoneButton" 
