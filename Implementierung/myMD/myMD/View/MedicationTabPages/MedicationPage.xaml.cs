@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
 using myMD.View.AbstractPages;
+using myMD.View.ProfileTabPages;
 using myMD.ViewModel.MedicationTabViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -57,6 +58,14 @@ namespace myMD.View.MedicationTabPages
             });
         }
 
+        public async void DictionaryButton(object sender, System.EventArgs e)
+        {
+            var view = new NavigationPage(new DictionaryPage());
+            view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
+            view.BarTextColor = Color.White;
+
+            await Navigation.PushModalAsync(view);
+        }
 
         /// <summary>
         /// Methode, wenn der Hinzufügen-Button geklickt wird.

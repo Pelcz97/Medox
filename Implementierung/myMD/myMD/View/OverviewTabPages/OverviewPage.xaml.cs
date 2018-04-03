@@ -1,4 +1,5 @@
 ﻿using myMD.View.AbstractPages;
+using myMD.View.ProfileTabPages;
 using myMD.ViewModel.OverviewTabViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -27,6 +28,15 @@ namespace myMD.View.OverviewTabPages
             InitializeComponent();
             vm = new OverviewViewModel();
             BindingContext = vm;
+        }
+
+        public async void DictionaryButton(object sender, System.EventArgs e)
+        {
+            var view = new Xamarin.Forms.NavigationPage(new DictionaryPage());
+            view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
+            view.BarTextColor = Color.White;
+
+            await Navigation.PushModalAsync(view);
         }
 
         async void KameraButton_Clicked(object sender, System.EventArgs e)

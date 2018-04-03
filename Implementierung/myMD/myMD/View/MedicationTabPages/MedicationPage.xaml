@@ -8,12 +8,17 @@
     x:Name="MedicationPage">
 
     <ContentPage.ToolbarItems>
-        
+        <ToolbarItem Name="Dictionary" 
+                     Text="Suchen" 
+                     Order="Primary" 
+                     Clicked="DictionaryButton" 
+                     Priority="-1" 
+                     Icon="search" />
         <ToolbarItem Name="AddMedicationButton" 
             AutomationId="AddMedication"
             Text="Hinzufügen" 
             Order="Primary" 
-            Clicked="AddMed_Clicked" />
+            Clicked="AddMed_Clicked" Icon="add"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>

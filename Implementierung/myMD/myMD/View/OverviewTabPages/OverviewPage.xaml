@@ -6,10 +6,16 @@
     Title="Übersicht">
 
   <ContentPage.ToolbarItems>
-    <ToolbarItem Name="Kamera"
-        Text="Hinzufügen"
-        Order="Primary"
-        Clicked="KameraButton_Clicked"/>
+        <ToolbarItem Name="Dictionary" 
+                     Text="Suchen" 
+                     Order="Primary" 
+                     Clicked="DictionaryButton" 
+                     Priority="-1" 
+                     Icon="search" />
+        <ToolbarItem Name="Kamera"
+                    Text="Hinzufügen"
+                    Order="Primary"
+                    Clicked="KameraButton_Clicked" Icon="add"/>
   </ContentPage.ToolbarItems>
     
     <ContentPage.Content> 

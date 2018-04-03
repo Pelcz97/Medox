@@ -287,6 +287,9 @@
     <BundleResource Include="Resources\search%403x.png" />
     <BundleResource Include="Resources\search%402x.png" />
     <BundleResource Include="Resources\search.png" />
+    <BundleResource Include="Resources\add%403x.png" />
+    <BundleResource Include="Resources\add%402x.png" />
+    <BundleResource Include="Resources\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />

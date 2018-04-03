@@ -2,7 +2,7 @@
 <local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                          xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD" 
-                         x:Class="myMD.View.ProfileTabPages.DictionaryPage"
+                         x:Class="myMD.View.AbstractPages.DictionaryPage"
                          Title="Nachschlagen">
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="DoneButton" 

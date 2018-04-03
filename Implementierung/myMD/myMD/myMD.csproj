@@ -82,7 +82,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ProfileTabPages\DictionaryPage.xaml">
+    <EmbeddedResource Include="View\AbstractPages\DictionaryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -203,14 +203,14 @@
     <Compile Include="ViewModel\MedicationTabViewModel\InteractionPairViewModel.cs" />
     <Compile Include="Model\MedicationInformation\MedicalDictionary.cs" />
     <Compile Include="Model\MedicationInformation\IMedicalDictionary.cs" />
-    <Compile Include="View\ProfileTabPages\DictionaryPage.xaml.cs">
-      <DependentUpon>DictionaryPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModel\ProfileTabViewModel\DictionaryViewModel.cs" />
     <Compile Include="Model\MedicationInformation\DictionaryEntry.cs" />
-    <Compile Include="ViewModel\ProfileTabViewModel\DictionaryEntryViewModel.cs" />
     <Compile Include="Model\MedicationInformation\Translator.cs" />
     <Compile Include="Model\MedicationInformation\ITranslator.cs" />
+    <Compile Include="ViewModel\OverallViewModel\DictionaryEntryViewModel.cs" />
+    <Compile Include="ViewModel\OverallViewModel\DictionaryViewModel.cs" />
+    <Compile Include="View\AbstractPages\DictionaryPage.xaml.cs">
+      <DependentUpon>DictionaryPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ble.net, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
