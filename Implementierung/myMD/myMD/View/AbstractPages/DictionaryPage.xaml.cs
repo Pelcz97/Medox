@@ -6,7 +6,7 @@ using myMD.ViewModel.ProfileTabViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
-namespace myMD.View.ProfileTabPages
+namespace myMD.View.AbstractPages
 {
     [Preserve(AllMembers = true)]
     public partial class DictionaryPage : CustomContentPage

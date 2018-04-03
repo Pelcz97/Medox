@@ -15,12 +15,15 @@
     <ContentPage.Content>
         <StackLayout>
             <SearchBar x:Name="SearchBar"
-                Placeholder="Suchen" 
+                       Placeholder="Suchen" 
                        PlaceholderColor="Gray"
-                       TextColor="#191928"
                        BackgroundColor="#191928"
-                       CancelButtonColor="White" 
-                       SearchButtonPressed="Handle_SearchButtonPressed"/>
+                       CancelButtonColor="White"
+                       SearchButtonPressed="Handle_SearchButtonPressed">
+                <SearchBar.TextColor>
+                        <OnPlatform x:TypeArguments="Color" Android="White" iOS="#191928"/>
+                </SearchBar.TextColor>
+                </SearchBar>
             
     <ListView x:Name="Dictionary" 
                 HasUnevenRows="true"
