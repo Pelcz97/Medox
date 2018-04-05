@@ -35,6 +35,7 @@ namespace myMD.ViewModel.ProfileTabViewModel
                 }
                 return 1;
             } catch (HttpRequestException ex) {
+                Debug.WriteLine(ex.StackTrace);
                 return 0;
             }
         }
