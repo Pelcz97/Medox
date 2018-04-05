@@ -87,8 +87,8 @@ namespace myMD.View.OverviewTabPages
 
             try
             {
-                //string diagnosis = await vm.ScanImage();
-                string diagnosis = "Platzhalter";
+                string diagnosis = await vm.ScanImage();
+                //string diagnosis = "Platzhalter";
 
                 var page = new ScannedDoctorsLetterPage(diagnosis);
                 Xamarin.Forms.NavigationPage.SetBackButtonTitle(page, "Bild wählen");

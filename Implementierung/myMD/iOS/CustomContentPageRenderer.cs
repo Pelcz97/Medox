@@ -10,7 +10,6 @@ using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(ContentPage), typeof(myMD.iOS.CustomContentPageRenderer))]
 namespace myMD.iOS
-
 {
     class CustomContentPageRenderer : PageRenderer
     {
