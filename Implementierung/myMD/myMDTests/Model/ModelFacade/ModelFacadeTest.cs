@@ -49,7 +49,7 @@ namespace myMDTests.Model.ModelFacade
         [SetUp]
         public void SetUp()
         {              
-            model = new myMD.Model.ModelFacade.ModelFacade(database, factory, parser, bluetooth, checker);
+            //model = new myMD.Model.ModelFacade.ModelFacade(database, factory, parser, bluetooth, checker, translator);
         }
 
         [Test]
