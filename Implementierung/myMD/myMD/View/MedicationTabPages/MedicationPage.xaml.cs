@@ -42,7 +42,7 @@ namespace myMD.View.MedicationTabPages
 
                     if (number > 0)
                     {
-                        var answer = await DisplayAlert("Warnung", "Die zur Zeit eingenommenen Medikamente könnten Wechselwirkungen hervorrufen.", "Anzeigen", "Egal");
+                        var answer = await DisplayAlert("Warnung", "Die zur Zeit eingenommenen Medikamente könnten Wechselwirkungen hervorrufen.", "Anzeigen", "Ignorieren");
 
                         if (answer)
                         {
