@@ -39,6 +39,7 @@
 
           <Button x:Name="QuitButton"
                         AutomationId="QuitButton"
+                  BackgroundColor="#00B9B4"
                         Text="✖️"
                         FontSize="Large"
                         HorizontalOptions="End" 
