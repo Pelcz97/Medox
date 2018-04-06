@@ -7,5 +7,9 @@
   <PropertyGroup>
     <AppIconSource>D:\Studium\WS17-18\PSE\Implementierung\myMD\Droid\obj\Debug\res\drawable\icon.png</AppIconSource>
     <SplashScreenSource>D:\Studium\WS17-18\PSE\Implementierung\myMD\Droid\obj\Debug\res\drawable\mymdicon.png</SplashScreenSource>
+    <AppxPackageIsForStore>False</AppxPackageIsForStore>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxBuildConfigurationSelection>x86|x64|arm</AppxBuildConfigurationSelection>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
   </PropertyGroup>
 </Project>
