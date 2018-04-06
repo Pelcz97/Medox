@@ -19,6 +19,7 @@ namespace myMDesktop.UWP
     {
         public MainPage()
         {
+
             this.InitializeComponent();
 
             LoadApplication(new myMDesktop.App());
