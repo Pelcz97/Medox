@@ -28,7 +28,10 @@ namespace myMD.ViewModel.ProfileTabViewModel
             File = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
             {
                 DefaultCamera = CameraDevice.Rear,
-                AllowCropping = true,
+                PhotoSize = PhotoSize.MaxWidthHeight,
+                MaxWidthHeight = 3000,
+                CompressionQuality = 92,
+                AllowCropping = false,
                 RotateImage = false,
                 SaveMetaData = false
             });
@@ -38,10 +41,13 @@ namespace myMD.ViewModel.ProfileTabViewModel
 
         public async Task<ImageSource> PickPhoto()
         {
+
             File = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
             {
-                PhotoSize = PhotoSize.Full,
-                SaveMetaData = false
+                PhotoSize = PhotoSize.MaxWidthHeight,
+                MaxWidthHeight = 3000,
+                SaveMetaData = false,
+                CompressionQuality = 92
             });
 
             return GenerateImageSource(File);
@@ -70,6 +76,7 @@ namespace myMD.ViewModel.ProfileTabViewModel
 
         public Task<string> ScanImage()
         {
+            
             return ModelFacade.GetTextFromHandwrittenImage(GetImageAsByteArray(File));
         }
 

@@ -33,7 +33,8 @@ namespace myMD.Model.ParserModel
             //
             // NOTE: Free trial subscription keys are generated in the westcentralus region, so if you are using
             // a free trial subscription key, you should not need to change this region.
-            const string uriBase = "https://westeurope.api.cognitive.microsoft.com/vision/v1.0/ocr";
+            const string uriBaseOCR = "https://westeurope.api.cognitive.microsoft.com/vision/v1.0/ocr";
+            const string uriBaseHR = "https://westeurope.api.cognitive.microsoft.com/vision/v1.0/recognizeText";
             
 
             /// <summary>
@@ -51,7 +52,7 @@ namespace myMD.Model.ParserModel
                 string requestParameters = "language=unk&detectOrientation=true";
 
                 // Assemble the URI for the REST API Call.
-                string uri = uriBase + "?" + requestParameters;
+                string uri = uriBaseOCR + "?" + requestParameters;
 
                 HttpResponseMessage response;
 
@@ -89,7 +90,7 @@ namespace myMD.Model.ParserModel
             string requestParameters = "handwriting=true";
 
             // Assemble the URI for the REST API Call.
-            string uri = uriBase + "?" + requestParameters;
+            string uri = uriBaseHR + "?" + requestParameters;
 
             HttpResponseMessage response = null;
 
@@ -149,7 +150,7 @@ namespace myMD.Model.ParserModel
             // Display the JSON response.
             Debug.WriteLine("\nResponse:\n");
             Debug.WriteLine(JsonPrettyPrint(contentString));
-            return contentString;
+            return HandwrittentextOnly(contentString);
         }
 
 
@@ -251,6 +252,21 @@ namespace myMD.Model.ParserModel
                     result += Environment.NewLine;
                 }
                 result += Environment.NewLine;
+                result += Environment.NewLine;
+            }
+
+            return result;
+        }
+
+        static string HandwrittentextOnly(string json)
+        {
+            JObject response = JObject.Parse(json);
+
+            string result = "";
+
+            for (int line = 0; line < response["recognitionResult"]["lines"].Count(); line++)
+            {
+                result += (string)response["recognitionResult"]["lines"][line]["text"];
                 result += Environment.NewLine;
             }
 
