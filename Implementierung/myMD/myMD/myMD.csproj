@@ -86,6 +86,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ProfileTabPages\SelectHandwritingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -211,6 +215,10 @@
     <Compile Include="View\AbstractPages\DictionaryPage.xaml.cs">
       <DependentUpon>DictionaryPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ProfileTabPages\SelectHandwritingPage.xaml.cs">
+      <DependentUpon>SelectHandwritingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\ProfileTabViewModel\SelectHandwritingViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ble.net, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">

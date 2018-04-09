@@ -8,6 +8,7 @@
         <!--TODO: clicked event hinzufügen, um Bearbeitung zu toggeln
     EntryElemente DataBinden-->        
         <ToolbarItem Name="EditButton" Text="Bearbeiten" Order="Primary" Clicked="EditProfileButton"/>
+        <ToolbarItem Name="Handwriting" Text="Handschrift" Order="Primary" Clicked="RecognizeHandwriting" Icon="handwritten" Priority="-1"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <TableView BackgroundColor="#191928" 

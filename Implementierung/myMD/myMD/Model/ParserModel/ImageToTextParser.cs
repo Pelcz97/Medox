@@ -111,7 +111,10 @@ namespace myMD.Model.ParserModel
 
             // The response contains the URI to retrieve the result of the process.
             if (response.IsSuccessStatusCode)
+            {
                 operationLocation = response.Headers.GetValues("Operation-Location").FirstOrDefault();
+                Debug.WriteLine(operationLocation);
+            }
             else
             {
                 // Display the JSON error data.
@@ -131,7 +134,7 @@ namespace myMD.Model.ParserModel
             int i = 0;
             do
             {
-                System.Thread.Sleep(1000);
+                await Task.Delay(1000);
                 response = await client.GetAsync(operationLocation);
                 contentString = await response.Content.ReadAsStringAsync();
                 ++i;
@@ -141,12 +144,12 @@ namespace myMD.Model.ParserModel
             if (i == 10 && contentString.IndexOf("\"status\":\"Succeeded\"") == -1)
             {
                 Debug.WriteLine("\nTimeout error.\n");
-                return;
             }
 
             // Display the JSON response.
             Debug.WriteLine("\nResponse:\n");
             Debug.WriteLine(JsonPrettyPrint(contentString));
+            return contentString;
         }
 
 

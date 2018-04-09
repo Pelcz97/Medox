@@ -43,5 +43,13 @@ namespace myMD.View.ProfileTabPages
 
             await Navigation.PushModalAsync(view);
         }
+
+        public async void RecognizeHandwriting(object sender, System.EventArgs e){
+            var view = new NavigationPage(new SelectHandwritingPage());
+            view.BarBackgroundColor = Color.FromRgb(25, 25, 40);
+            view.BarTextColor = Color.White;
+
+            await Navigation.PushModalAsync(view);
+        }
     }
 }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:myMD.View.AbstractPages;assembly=myMD"
+             x:Class="myMD.View.ProfileTabPages.SelectHandwritingPage">
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Name="CancelButton" 
+                 Text="Abbrechen" 
+                 Order="Primary" 
+                 Priority="-1" 
+                 Clicked="CancelButton_Clicked"/>
+        
+        <ToolbarItem Name="ScanButton" 
+                 Text="Weiter" 
+                 Order="Primary" 
+                 Priority="1" 
+                 Clicked="ScanButton_Clicked"
+                 IsEnabled="{Binding ScanEnabled}"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <Grid>
+        <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="image" 
+                   Grid.Row="0" 
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="Center"/>
+            
+            <Button x:Name="SelectImageButton"
+                Clicked="SelectImage_Clicked"
+                    Text="Aufnahme auswählen"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Grid.Row="1"
+                    BackgroundColor="#00B9B4"
+                    HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand"
+                    HeightRequest="50"
+                    WidthRequest="400"
+                    BorderRadius="10" 
+                    Margin="15,0,15,15"/>
+            
+            <ActivityIndicator x:Name="LoadingIndicator" 
+                               Color="White" 
+                               IsRunning="true" 
+                               Grid.Row="1"/>
+        </Grid>
+    </ContentPage.Content>
+</local:CustomContentPage>
