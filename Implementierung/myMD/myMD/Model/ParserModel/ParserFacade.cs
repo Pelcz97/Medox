@@ -44,6 +44,10 @@ namespace myMD.Model.ParserModel
             return ImageToTextParser.MakeOCRRequest(image);
         }
 
+        public Task<string> ParseHandwrittenImage(byte[] file){
+            return ImageToTextParser.ReadHandwrittenText(file);
+        }
+
         public void CreateDoctorsLetter(string DoctorsName, string DoctorsField, DateTime LetterDate, string Diagnosis, IEntityDatabase db){
             ImageToTextParser p = new ImageToTextParser();
             p.GenerateDoctorsLetter(DoctorsName, DoctorsField, LetterDate, Diagnosis, db);

@@ -40,5 +40,6 @@
         <image name="myMD.png" width="500" height="500"/>
         <image name="search.png" width="20" height="20"/>
         <image name="add.png" width="28" height="28"/>
+        <image name="handwritten.png" width="28" height="28"/>
     </resources>
 </document>

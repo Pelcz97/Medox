@@ -28,6 +28,8 @@ namespace myMD.Model.ParserModel
 
         Task<string> ParseImageToDatabase(byte[] image);
 
+        Task<string> ParseHandwrittenImage(byte[] image);
+
         void CreateDoctorsLetter(string DoctorsName, string DoctorsField, DateTime LetterDate, string Diagnosis, IEntityDatabase db);
     }
 }

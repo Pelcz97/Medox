@@ -74,6 +74,81 @@ namespace myMD.Model.ParserModel
                 }
             }
 
+        /// <summary>
+        /// Gets the handwritten text from the specified image file by using the Computer Vision REST API.
+        /// </summary>
+        /// <param name="imageFilePath">The image file with handwritten text.</param>
+        public static async Task<string> ReadHandwrittenText(byte[] file)
+        {
+            HttpClient client = new HttpClient();
+
+            // Request headers.
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", subscriptionKey);
+
+            // Request parameter. Set "handwriting" to false for printed text.
+            string requestParameters = "handwriting=true";
+
+            // Assemble the URI for the REST API Call.
+            string uri = uriBase + "?" + requestParameters;
+
+            HttpResponseMessage response = null;
+
+            // This operation requrires two REST API calls. One to submit the image for processing,
+            // the other to retrieve the text found in the image. This value stores the REST API
+            // location to call to retrieve the text.
+            string operationLocation = null;
+
+            // Request body. Posts a locally stored JPEG image.
+
+            ByteArrayContent content = new ByteArrayContent(file);
+
+            // This example uses content type "application/octet-stream".
+            // You can also use "application/json" and specify an image URL.
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+
+            // The first REST call starts the async process to analyze the written text in the image.
+            response = await client.PostAsync(uri, content);
+
+            // The response contains the URI to retrieve the result of the process.
+            if (response.IsSuccessStatusCode)
+                operationLocation = response.Headers.GetValues("Operation-Location").FirstOrDefault();
+            else
+            {
+                // Display the JSON error data.
+                Debug.WriteLine("\nError:\n");
+                Debug.WriteLine(JsonPrettyPrint(await response.Content.ReadAsStringAsync()));
+                return (await response.Content.ReadAsStringAsync());
+            }
+
+            // The second REST call retrieves the text written in the image.
+            //
+            // Note: The response may not be immediately available. Handwriting recognition is an
+            // async operation that can take a variable amount of time depending on the length
+            // of the handwritten text. You may need to wait or retry this operation.
+            //
+            // This example checks once per second for ten seconds.
+            string contentString;
+            int i = 0;
+            do
+            {
+                System.Thread.Sleep(1000);
+                response = await client.GetAsync(operationLocation);
+                contentString = await response.Content.ReadAsStringAsync();
+                ++i;
+            }
+            while (i < 10 && contentString.IndexOf("\"status\":\"Succeeded\"") == -1);
+
+            if (i == 10 && contentString.IndexOf("\"status\":\"Succeeded\"") == -1)
+            {
+                Debug.WriteLine("\nTimeout error.\n");
+                return;
+            }
+
+            // Display the JSON response.
+            Debug.WriteLine("\nResponse:\n");
+            Debug.WriteLine(JsonPrettyPrint(contentString));
+        }
+
 
             /// <summary>
             /// Returns the contents of the specified file as a byte array.

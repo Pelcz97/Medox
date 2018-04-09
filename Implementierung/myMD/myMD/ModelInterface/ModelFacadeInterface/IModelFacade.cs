@@ -107,6 +107,8 @@ namespace myMD.ModelInterface.ModelFacadeInterface
 
         Task<string> GetTextFromImage(byte[] image);
 
+        Task<string> GetTextFromHandwrittenImage(byte[] image);
+
         void GenerateDoctorsLetter(string DoctorsName, string DoctorsField, DateTime LetterDate, string Diagnosis);
 
         Task<IList<InteractionPair>> GetInteractions(IList<IMedication> medications);

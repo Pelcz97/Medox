@@ -164,6 +164,11 @@ namespace myMD.Model.ModelFacade
             return parser.ParseImageToDatabase(image);
         }
 
+        public Task<string> GetTextFromHandwrittenImage(byte[] image)
+        {
+            return parser.ParseHandwrittenImage(image);
+        }
+
         public void GenerateDoctorsLetter(string DoctorsName, string DoctorsField, DateTime LetterDate, string Diagnosis){
             parser.CreateDoctorsLetter(DoctorsName, DoctorsField, LetterDate, Diagnosis, database);
         }
