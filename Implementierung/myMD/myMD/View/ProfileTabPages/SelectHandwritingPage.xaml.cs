@@ -20,6 +20,7 @@ namespace myMD.View.ProfileTabPages
             vm = new SelectHandwritingViewModel();
             BindingContext = vm;
             LoadingIndicator.IsVisible = false;
+
         }
 
         async void CancelButton_Clicked(object sender, EventArgs e)
@@ -77,6 +78,7 @@ namespace myMD.View.ProfileTabPages
         async void ScanButton_Clicked(object sender, System.EventArgs e)
         {
             SelectImageButton.IsVisible = false;
+            
             LoadingIndicator.IsVisible = true;
 
             try
