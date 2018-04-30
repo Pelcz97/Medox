@@ -1,0 +1,2 @@
+System.Reactive.PlatformServices, Version=3.0.4000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263
+  System.Reactive.PlatformServices.Strings_PlatformServices.resources

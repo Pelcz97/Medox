@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="Medox" version="1.0" primary="true">
+		<Qualifiers>
+			<AlternateForm>UNPLATED</AlternateForm>
+			<Language>EN-US</Language>
+			<Scale>200</Scale>
+			<TargetSize>256,16,24,32,48</TargetSize>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="App.xbf" uri="ms-resource://Medox/Files/App.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="e_sqlite3.dll" uri="ms-resource://Medox/Files/e_sqlite3.dll">
+				<Candidate type="Path">
+					<Value>e_sqlite3.dll</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MainPage.xbf" uri="ms-resource://Medox/Files/MainPage.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="myMDesktop.UWP.xr.xml" uri="ms-resource://Medox/Files/myMDesktop.UWP.xr.xml">
+				<Candidate type="Path">
+					<Value>myMDesktop.UWP.xr.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="Assets">
+				<NamedResource name="Icon.png" uri="ms-resource://Medox/Files/Assets/Icon.png">
+					<Candidate qualifiers="TargetSize-48, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Icon.altform-unplated_targetsize-48.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-48" isDefault="true" type="Path">
+						<Value>Assets\Icon.targetsize-48.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-32, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Icon.altform-unplated_targetsize-32.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-32" isDefault="true" type="Path">
+						<Value>Assets\Icon.targetsize-32.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-256, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Icon.altform-unplated_targetsize-256.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-256" isDefault="true" type="Path">
+						<Value>Assets\Icon.targetsize-256.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-24, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Icon.altform-unplated_targetsize-24.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-24" isDefault="true" type="Path">
+						<Value>Assets\Icon.targetsize-24.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-16, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Icon.altform-unplated_targetsize-16.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-16" isDefault="true" type="Path">
+						<Value>Assets\Icon.targetsize-16.png</Value>
+					</Candidate>
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Icon.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="LockScreenLogo.png" uri="ms-resource://Medox/Files/Assets/LockScreenLogo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\LockScreenLogo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SplashScreen.png" uri="ms-resource://Medox/Files/Assets/SplashScreen.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\SplashScreen.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square150x150Logo.png" uri="ms-resource://Medox/Files/Assets/Square150x150Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square150x150Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square44x44Logo.png" uri="ms-resource://Medox/Files/Assets/Square44x44Logo.png">
+					<Candidate qualifiers="TargetSize-48, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-48_altform-unplated.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-32, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-32_altform-unplated.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-256, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-256_altform-unplated.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-24, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-16, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-16_altform-unplated.png</Value>
+					</Candidate>
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StoreLogo.png" uri="ms-resource://Medox/Files/Assets/StoreLogo.png">
+					<Candidate type="Path">
+						<Value>Assets\StoreLogo.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://Medox/Files/Assets/Wide310x150Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Wide310x150Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Properties">
+				<NamedResource name="Default.rd.xml" uri="ms-resource://Medox/Files/Properties/Default.rd.xml">
+					<Candidate type="Path">
+						<Value>Properties\Default.rd.xml</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="WinMetadata">
+				<NamedResource name="Windows.winmd" uri="ms-resource://Medox/Files/WinMetadata/Windows.winmd">
+					<Candidate type="Path">
+						<Value>WinMetadata\Windows.winmd</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Xamarin.Forms.Platform.UAP">
+				<NamedResource name="AutoSuggestStyle.xbf" uri="ms-resource://Medox/Files/Xamarin.Forms.Platform.UAP/AutoSuggestStyle.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="FormsCommandBarStyle.xbf" uri="ms-resource://Medox/Files/Xamarin.Forms.Platform.UAP/FormsCommandBarStyle.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="FormsEmbeddedPageWrapper.xbf" uri="ms-resource://Medox/Files/Xamarin.Forms.Platform.UAP/FormsEmbeddedPageWrapper.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="FormsProgressBarStyle.xbf" uri="ms-resource://Medox/Files/Xamarin.Forms.Platform.UAP/FormsProgressBarStyle.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="FormsTextBoxStyle.xbf" uri="ms-resource://Medox/Files/Xamarin.Forms.Platform.UAP/FormsTextBoxStyle.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="MasterDetailControlStyle.xbf" uri="ms-resource://Medox/Files/Xamarin.Forms.Platform.UAP/MasterDetailControlStyle.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="PageControlStyle.xbf" uri="ms-resource://Medox/Files/Xamarin.Forms.Platform.UAP/PageControlStyle.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Resources.xbf" uri="ms-resource://Medox/Files/Xamarin.Forms.Platform.UAP/Resources.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="TabbedPageStyle.xbf" uri="ms-resource://Medox/Files/Xamarin.Forms.Platform.UAP/TabbedPageStyle.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Xamarin.Forms.Platform.UAP.xr.xml" uri="ms-resource://Medox/Files/Xamarin.Forms.Platform.UAP/Xamarin.Forms.Platform.UAP.xr.xml">
+					<Candidate type="Path">
+						<Value>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="System.Reactive.Core.Strings_Core">
+			<NamedResource name="CANT_OBTAIN_SCHEDULER" uri="ms-resource://Medox/System.Reactive.Core.Strings_Core/CANT_OBTAIN_SCHEDULER">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Using the Scheduler.{0} property is no longer supported due to refactoring of the API surface and elimination of platform-specific dependencies. Please include System.Reactive.PlatformServices for your target platform and use the {0}Scheduler type instead. If you're building a Windows Store app, notice some schedulers are no longer supported. Consider using Scheduler.Default instead.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="COMPLETED_NO_VALUE" uri="ms-resource://Medox/System.Reactive.Core.Strings_Core/COMPLETED_NO_VALUE">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>OnCompleted notification doesn't have a value.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DISPOSABLES_CANT_CONTAIN_NULL" uri="ms-resource://Medox/System.Reactive.Core.Strings_Core/DISPOSABLES_CANT_CONTAIN_NULL">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Disposables collection can not contain null values.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DISPOSABLE_ALREADY_ASSIGNED" uri="ms-resource://Medox/System.Reactive.Core.Strings_Core/DISPOSABLE_ALREADY_ASSIGNED">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Disposable has already been assigned.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FAILED_CLOCK_MONITORING" uri="ms-resource://Medox/System.Reactive.Core.Strings_Core/FAILED_CLOCK_MONITORING">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Failed to start monitoring system clock changes.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="HEAP_EMPTY" uri="ms-resource://Medox/System.Reactive.Core.Strings_Core/HEAP_EMPTY">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Heap is empty.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="OBSERVER_TERMINATED" uri="ms-resource://Medox/System.Reactive.Core.Strings_Core/OBSERVER_TERMINATED">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Observer has already terminated.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="REENTRANCY_DETECTED" uri="ms-resource://Medox/System.Reactive.Core.Strings_Core/REENTRANCY_DETECTED">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Reentrancy has been detected.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SCHEDULER_OPERATION_ALREADY_AWAITED" uri="ms-resource://Medox/System.Reactive.Core.Strings_Core/SCHEDULER_OPERATION_ALREADY_AWAITED">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>This scheduler operation has already been awaited.</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="System.Reactive.Linq.Strings_Linq">
+			<NamedResource name="CANT_ADVANCE_WHILE_RUNNING" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/CANT_ADVANCE_WHILE_RUNNING">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>{0} cannot be called when the scheduler is already running. Try using Sleep instead.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="COULD_NOT_FIND_INSTANCE_EVENT" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/COULD_NOT_FIND_INSTANCE_EVENT">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Could not find event '{0}' on object of type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="COULD_NOT_FIND_STATIC_EVENT" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/COULD_NOT_FIND_STATIC_EVENT">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Could not find event '{0}' on type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="EVENT_ADD_METHOD_SHOULD_TAKE_ONE_PARAMETER" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/EVENT_ADD_METHOD_SHOULD_TAKE_ONE_PARAMETER">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Add method should take 1 parameter.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="EVENT_ARGS_NOT_ASSIGNABLE" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/EVENT_ARGS_NOT_ASSIGNABLE">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The second parameter of the event delegate must be assignable to '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="EVENT_MISSING_ADD_METHOD" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/EVENT_MISSING_ADD_METHOD">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Event is missing the add method.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="EVENT_MISSING_REMOVE_METHOD" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/EVENT_MISSING_REMOVE_METHOD">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Event is missing the remove method.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="EVENT_MUST_RETURN_VOID" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/EVENT_MUST_RETURN_VOID">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The event delegate must have a void return type.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="EVENT_PATTERN_REQUIRES_TWO_PARAMETERS" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/EVENT_PATTERN_REQUIRES_TWO_PARAMETERS">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The event delegate must have exactly two parameters.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="EVENT_REMOVE_METHOD_SHOULD_TAKE_ONE_PARAMETER" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/EVENT_REMOVE_METHOD_SHOULD_TAKE_ONE_PARAMETER">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Remove method should take 1 parameter.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="EVENT_SENDER_NOT_ASSIGNABLE" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/EVENT_SENDER_NOT_ASSIGNABLE">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The first parameter of the event delegate must be assignable to '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="EVENT_WINRT_REMOVE_METHOD_SHOULD_TAKE_ERT" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/EVENT_WINRT_REMOVE_METHOD_SHOULD_TAKE_ERT">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Remove method of a WinRT event should take an EventRegistrationToken.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MORE_THAN_ONE_ELEMENT" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/MORE_THAN_ONE_ELEMENT">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Sequence contains more than one element.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MORE_THAN_ONE_MATCHING_ELEMENT" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/MORE_THAN_ONE_MATCHING_ELEMENT">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Sequence contains more than one matching element.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NO_ELEMENTS" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/NO_ELEMENTS">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Sequence contains no elements.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NO_MATCHING_ELEMENTS" uri="ms-resource://Medox/System.Reactive.Linq.Strings_Linq/NO_MATCHING_ELEMENTS">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Sequence contains no matching element.</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="System.Reactive.PlatformServices.Strings_PlatformServices">
+			<NamedResource name="WINRT_NO_SUB1MS_TIMERS" uri="ms-resource://Medox/System.Reactive.PlatformServices.Strings_PlatformServices/WINRT_NO_SUB1MS_TIMERS">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The WinRT thread pool doesn't support creating periodic timers with a period below 1 millisecond.</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="System.Reactive.Windows.Threading.Strings_WindowsThreading">
+			<NamedResource name="NO_DISPATCHER_CURRENT_THREAD" uri="ms-resource://Medox/System.Reactive.Windows.Threading.Strings_WindowsThreading/NO_DISPATCHER_CURRENT_THREAD">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The current thread has no Dispatcher associated with it.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NO_WINDOW_CURRENT" uri="ms-resource://Medox/System.Reactive.Windows.Threading.Strings_WindowsThreading/NO_WINDOW_CURRENT">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>No current Window object found to obtain a CoreDispatcher from.</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

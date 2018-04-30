@@ -1,0 +1,16 @@
+/osver:6.2
+/appcontainer
+"/runtime:mrt100_app"
+/eh:clr
+/pdb
+"/nativeLink:C:\Users\ppelc\.nuget\packages\microsoft.net.native.compiler\2.0.3\tools\x86\ilc\lib\Native\vmath.lib"
+/customImports
+/methodBodyFolding
+"D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x86\Release\ilc\intermediate\MDIL\myMDesktop.UWP.mdilexe"
+"/i:D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x86\Release\ilc\intermediate\MDIL"
+"/out:D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x86\Release\ilc\intermediate\Native\myMDesktop.UWP.exe"
+"/pdbAltPath:D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\bin\x86\Release\ilc"
+"/res:D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x86\Release\ilc\intermediate\Native.res"
+"/i:C:\Program Files (x86)\Microsoft SDKs\NuGetPackagesFallback\microsoft.net.native.sharedlibrary-x86\2.0.0\tools\SharedLibrary\ret\MDIL"
+/shimexe
+"/classlib:SharedLibrary"

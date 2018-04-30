@@ -17171,11 +17171,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
+      "projectUniqueName": "D:\\Studium\\3. WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
       "projectName": "myMDesktop.UWP",
-      "projectPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
+      "projectPath": "D:\\Studium\\3. WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\myMDesktop.UWP.csproj",
       "packagesPath": "C:\\Users\\ppelc\\.nuget\\packages\\",
-      "outputPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\obj\\",
+      "outputPath": "D:\\Studium\\3. WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -17196,8 +17196,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj": {
-              "projectPath": "D:\\Studium\\WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj"
+            "D:\\Studium\\3. WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj": {
+              "projectPath": "D:\\Studium\\3. WS17-18\\PSE\\myMDesktop\\myMDesktop\\myMDesktop\\myMDesktop.csproj"
             }
           }
         }

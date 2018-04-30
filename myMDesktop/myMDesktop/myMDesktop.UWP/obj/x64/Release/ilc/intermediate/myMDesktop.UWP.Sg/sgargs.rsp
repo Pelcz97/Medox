@@ -1,0 +1,12 @@
+/ref:"D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Release\ilc\intermediate\PreMergeILTransformed"
+/ref:"C:\Program Files (x86)\Microsoft SDKs\NuGetPackagesFallback\microsoft.net.native.sharedlibrary-x64\2.0.0\tools\SharedLibrary\ret\AnalysisILToc"
+/ref:"D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Release\ilc\intermediate\PreMergeILTransformed"
+/ref:"D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Release\ilc\in\\"
+/ref:"C:\Users\ppelc\.nuget\packages\microsoft.net.native.compiler\2.0.3\tools\x64\ilc\lib\Private\\"
+/ref:"D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Release\ilc\in"
+/ref:"D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Release\ilc\in\WinMetadata"
+/ca:System.Private.CoreLib
+/cscpath:"C:\Users\ppelc\.nuget\packages\microsoft.net.native.compiler\2.0.3\tools\csc"
+/out:"D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Release\ilc\intermediate\SgGenerated\\"
+/int:"D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Release\ilc\intermediate\myMDesktop.UWP.Sg"
+"@D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop.UWP\obj\x64\Release\ilc\intermediate\myMDesktop.UWP.Sg\ComputedSerializationInput.txt"

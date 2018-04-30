@@ -1,0 +1,2 @@
+System.Reactive.Core, Version=3.0.4000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263
+  System.Reactive.Core.Strings_Core.resources

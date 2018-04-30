@@ -1,0 +1,7 @@
+myMDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  myMDesktop.App.xaml
+  myMDesktop.MainPage.xaml
+  myMDesktop.View.SendDataTabPages.SelectDevicePage.xaml
+  myMDesktop.View.SendDataTabPages.SelectDoctorsLettersPage.xaml
+  myMDesktop.View.SendDataTabPages.SendDataPage.xaml
+  myMDesktop.View.SendDataTabPages.TransmittingDataPage.xaml

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myMDesktop.View.SendDataTabPages.SelectDoctorsLettersPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="CancelSelectDoctorsLetters" Text="Abbrechen" 
+                        Order="Primary" Priority="-1" Clicked="CancelSelectDoctorsLetters_Clicked"/>
+        <ToolbarItem Name="ConfirmSelectDoctorsLetters" Text="Fertig" 
+                        Order="Primary" Priority="1" Clicked="ConfirmSelectDoctorsLetters_Clicked"/>
+        <ToolbarItem Name="PickFile" Text="Dateien auswählen" 
+                        Order="Primary" Priority="1" Clicked="PickFile_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ListView x:Name="DoctorsLettersSendList" 
+                HasUnevenRows="true" 
+                BackgroundColor="#191928" 
+                ItemsSource="{Binding DoctorsLetters}" 
+                SeparatorVisibility="None" 
+                CachingStrategy="RecycleElement">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Frame x:Name="WhiteFrame" CornerRadius="15" 
+                                        BackgroundColor="#FFFFFF" 
+                                        Margin="10,3,10,3"
+                                        HorizontalOptions="FillAndExpand" 
+                                        VerticalOptions="FillAndExpand" 
+                                        HasShadow="true">
+                                <Label Text="{Binding FileName}"
+                                        TextColor="#D0001E" 
+                                        FontSize="Medium" 
+                                        FontAttributes="Bold" 
+                                        HorizontalTextAlignment="Start"/>
+                            </Frame>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

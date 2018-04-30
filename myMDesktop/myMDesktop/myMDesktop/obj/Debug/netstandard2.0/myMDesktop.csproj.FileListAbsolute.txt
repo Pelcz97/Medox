@@ -31,3 +31,20 @@ D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0
 D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csprojResolveAssemblyReference.cache
 D:\Dokumente\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csprojResolveAssemblyReference.cache
 D:\Studium\WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csproj.CopyComplete
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\myMDesktop.deps.json
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\myMDesktop.dll
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\myMDesktop.pdb
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csprojResolveAssemblyReference.cache
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csproj.CoreCompileInputs.cache
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.App.xaml.g.cs
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.MainPage.xaml.g.cs
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.View.SendDataTabPages.SelectDevicePage.xaml.g.cs
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.View.SendDataTabPages.SelectDoctorsLettersPage.xaml.g.cs
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.View.SendDataTabPages.SendDataPage.xaml.g.cs
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.View.SendDataTabPages.TransmittingDataPage.xaml.g.cs
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.AssemblyInfoInputs.cache
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.AssemblyInfo.cs
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.csproj.CopyComplete
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.dll
+D:\Studium\3. WS17-18\PSE\myMDesktop\myMDesktop\myMDesktop\obj\Debug\netstandard2.0\myMDesktop.pdb
