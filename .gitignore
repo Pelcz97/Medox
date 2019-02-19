@@ -1,4 +1,4 @@
-**/.vs/
+﻿**/.vs/
 *.aux
 *.lof
 *.log
@@ -7,6 +7,8 @@
 *.gz
 *.toc
 *.lock
+*.zip
+*.pdb
 !myMD_Abschlusspräsentation.pdf
 !myMD_Abschlusspräsentation2.pdf
 !Kit_Logo.pdf
