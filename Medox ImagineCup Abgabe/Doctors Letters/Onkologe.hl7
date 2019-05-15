@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" classCode="DOCCLIN" moodCode="EVN" xmlns="urn:hl7-org:v3">
+  <realmCode code="UV" />
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+  <effectiveTime value="20171123000000.000+0100" />
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" displayName="normal" />
+  <languageCode code="en-US" />
+  <recordTarget typeCode="RCT" contextControlCode="OP">
+    <patientRole classCode="PAT">
+      <patient classCode="PSN" determinerCode="INSTANCE">
+        <id root="1.2.3.4.5.6" extension="123456" />
+        <name use="L">
+          <family>Vettel</family>
+          <given>Jan-Luca</given>
+        </name>
+        <birthTime value="19980529" />
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author typeCode="AUT" contextControlCode="AP">
+    <time value="20180309000000.000+0100" />
+    <assignedAuthor classCode="ASSIGNED">
+      <id root="1.2.3.4.5.6.1" extension="" />
+      <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+        <name use="L">
+          <family>Dr. James Wilson</family>
+        </name>
+        <name use="ASGN">
+          <family>Onkologe</family>
+        </name>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <component typeCode="COMP" contextConductionInd="true">
+    <structuredBody classCode="DOCBODY" moodCode="EVN">
+      <component typeCode="COMP" contextConductionInd="true">
+        <section classCode="DOCSECT" moodCode="EVN">
+          <title language="de-DE">Routineuntersuchung</title>
+          <text representation="TXT">Hauptdiagnose: Symptomatische Cholezystolithiasis (K 80.20)
+	
+Nebendiagnosen
+Z.n. Nabelherniotomie nach Spitzy 2012
+Adipositas
+
+Therapie: Laparoskopische Cholezystektomie
+	
+Diagnose:
+- Morbus Hodgkin (03/93)
+Lokalisation: Lymphknoten mehrerer Regionen (ICD-O 2: C77.8)
+Klassifikation nach Ann Arbor: 3B
+- Explorative Laparatomie zum Hodgkin-Staging (03/93)
+- Mantelfeldbestrahlung (03/93)
+- COPP (06/93)
+
+Begleiterkrankungen:
+- insulinpflichtiger Diabetes mellitus (ICD-9 250.-) (gebessert)
+
+
+Folgende wichtige Befunde wurden während des
+stationären Aufenthaltes erhoben:
+BSG (1-Stunden-Wert): 50 mm/h
+Körpertemperatur: 39 °C
+Becken-Übersichtsaufnahme: o.B.
+Tumorcharakteristika und Verschlüsselung:
+Tumorlokalisation:
+- Lymphknoten mehrerer Regionen (ICD-O 2: C77.8), 
+
+Hauptlokalisation
+- Ln.Lumbales, Ln.Retroperitoneales (ICD-O 2: C77.29)
+- Lymphknoten des Kopfes und Halses (ICD-O 2: C77.0)
+
+Histologie:
+  - Morbus Hodgkin, NODULÄR-SKLEROSIERENDE FORM, (M-
+    9656/3)
+
+
+
+Klassifikation nach Ann Arbor: Stadium 3 Kategorie B
+(mit Gewichtsverlust, Fieber,Nachtschweiss),
+Extralymphatische Organe Organ nicht befallen, klinische Befunde, 
+Milz Organbefall, mikroskopisch bestaetigt,
+Knochen Organ nicht befallen, mikroskopisch untersucht,        
+Knochenmark Organ nicht befallen, mikroskopisch untersucht, 
+Lunge Organ nicht befallen, mikroskopisch untersucht, 
+Leber Organ nicht befallen, mikroskopisch untersucht, 
+Gehirn Organ nicht befallen, mikroskopisch untersucht, 
+Pleura Organ nicht befallen, mikroskopisch untersucht, 
+Peritoneum Organ nicht befallen, mikroskopisch untersucht, 
+Haut Organ nicht befallen, mikroskopisch untersucht, 
+Andere Organe Organ nicht befallen, mikroskopisch untersucht
+
+Besonderheiten des Verlaufes waren:
+Die Aufnahme des Patienten erfolgte zur Erstbehandlung. Anlaß der
+aktuellen Betreuung war die Tumorsymptomatik. 
+
+Beurteilung des Tumorgeschehens:
+Leistungszustand nach ECOG: 0, normale, uneingeschränkte Aktivität
+wie vor der Erkrankung
+Information über Tumorerkrankung:
+Die Angehörigen des Patienten sind aufgeklärt
+Der Patient ist voll aufgeklärt</text>
+          <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" displayName="normal" />
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>
